@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>计算机科学速成课 - Bezhuang&#39;s Blog</title>
+  
+
+  
+    <meta name="description" content="
+计算机科学速成课程的授课老师是英国树莓派基金会教育部长Carrie Anne，她以入门级大学教材和 AP 计算机科学原理指南为基础，在短短40节课中概述了计算机的历史、设计决策、编程和软件的基本要素、硬件的基本组件及其作用，对新手小白可以说是非常友好了，课程提到的重点已记录在下文中，可供参考。
+">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Bezhuang's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+
+<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+
+
+</head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
+    
+
+<header id="l_header" class="l_header always shadow floatable blur show"  >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Bezhuang's Blog
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div class='cover-bg' style='background-image:url(https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%A3%81%E7%BA%B82.jpg)'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">庄之皓 · Bezhuang</p>
+    
+    
+      <p class="subtitle">欢迎访问我的博客！Welcome to my blog!</p>
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="search here..." />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/photos"
+              
+              
+              id="photos">
+              <p>相册</p>
+            </a>
+          
+            <a href="/projects"
+              
+              
+              id="projects">
+              <p>开源库</p>
+            </a>
+          
+            <a href="/todo"
+              
+              
+              id="todo">
+              <p>计划表</p>
+            </a>
+          
+            <a href="/guestbook"
+              
+              
+              id="guestbook">
+              <p>留言板</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        计算机科学速成课
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%93%E4%B8%9A/">计算机专业</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年3月12日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：5.3k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：19分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av21376839/">计算机科学速成课程</a>的授课老师是英国树莓派基金会教育部长Carrie Anne，她以入门级大学教材和 AP 计算机科学原理指南为基础，在短短40节课中概述了计算机的历史、设计决策、编程和软件的基本要素、硬件的基本组件及其作用，对新手小白可以说是非常友好了，课程提到的重点已记录在下文中，可供参考。</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="计算机的早期历史"><a href="#计算机的早期历史" class="headerlink" title="计算机的早期历史"></a>计算机的早期历史</h3><ul>
+<li>Computer 最初用于指代职业。</li>
+<li>最早的计算设备是算盘，其次是步进计算器，差分机，分析机，打孔卡片制表机</li>
+<li>步进计算器是第一个可以做加减乘除的机器，Charles Babbage 提出了“差分机”，在构造差分机期间，想出了分析机, 分析机是通用计算机</li>
+<li>Ada Lovelace 给分析机写了假想程序，因此成为了第一位程序员，后来 Herman Hollerith 的打孔卡片制表机又大大提升了人口普查效率。</li>
+</ul>
+<h3 id="电子计算机"><a href="#电子计算机" class="headerlink" title="电子计算机"></a>电子计算机</h3><ul>
+<li>电子计算机组成核心最初由继电器组成。继电器一秒最多 50 次开关，bug 原指继电器上的虫子。</li>
+<li>IBM 于 1944 年制造哈佛 Mark I。</li>
+<li>1904 年，热电子管出现成为第一个真空管。改进后和继电器的功能一样，”巨人 1 号” 计算机在英国布莱切利园首次大规模使用真空管，但编程麻烦，还要配置。</li>
+<li>1946 年，宾夕法尼亚大学的 ENIAC 是第一个通用可编程计算机。</li>
+<li>1947 年，贝尔实验室做出了晶体管，晶体管有诸多好处，IBM 很快全面转向晶体管。</li>
+<li>当时，很多晶体管和半导体的开发都是硅谷做的。而生产半导体最常见的材料是硅，著名的有肖克利半导体、仙童半导体和英特尔。</li>
+</ul>
+<h3 id="布尔逻辑、逻辑门和二进制"><a href="#布尔逻辑、逻辑门和二进制" class="headerlink" title="布尔逻辑、逻辑门和二进制"></a>布尔逻辑、逻辑门和二进制</h3><ul>
+<li>George Boole 提出布尔逻辑（真假），也称 Boolean Algebra。基本操作有：NOT，AND，OR，以及异或 XOR。</li>
+<li>存储单位有 MB（Megabyte），GB（Gigabyte），TB（Terabyte），树型单位有正数、负数、整数、浮点数。</li>
+<li>美国信息交换标准代码 ASCII, 用来表示字符。</li>
+<li>1992 年诞生 UNICODE，16 位，是字符编码标准，解决 ASCII 不够表达所有语言的问题。</li>
+</ul>
+<h3 id="算数逻辑单元（ALU）"><a href="#算数逻辑单元（ALU）" class="headerlink" title="算数逻辑单元（ALU）"></a>算数逻辑单元（ALU）</h3><ul>
+<li>ALU（Arithmetic and Logic Unit）有 2 个单元，1 个算术单元和 1 个逻辑单元。</li>
+<li>算术单元分为半加器 （处理 1 个 bit，2 个输入）和全加器（处理 1 个 bit，3 个输入），8 bit 加法就包括（1 个半加器，7 个全加器），溢出为 Overflow。</li>
+<li>逻辑单元是检测数字是否为 0 的电路（一堆 OR 门最后加个 NOT 门）。</li>
+<li>8 位 ALU 抽象成一个 V 符号。</li>
+<li>Flag 标志判断是否相等，是否小于，是否溢出等。</li>
+<li>最早的处理器为英特尔 74181。</li>
+</ul>
+<h3 id="寄存器和内存"><a href="#寄存器和内存" class="headerlink" title="寄存器和内存"></a>寄存器和内存</h3><ul>
+<li>Memory 有存储、内存两种含义：Gated Latch（锁存器）存 1 位字节，Register（寄存器）存 8 位，16x16 的矩阵存 256 位，Opcode 操作码。</li>
+<li>数据选择器/多路复用器 （Multiplexer）用来解码 8 位地址（4 位代表行，4 位代表列），定位到单个锁存器，组合 256 位内存 + 多路复用器 Multiplexer。</li>
+<li>可寻址的 256 字节内存：8 个模块，每个模块有 32 个小方块，每个小方块有 4 个小块，每个小块是 128 位 x 64 位。</li>
+<li>一条 1980 年代的内存有 1M 大小。</li>
+</ul>
+<h3 id="中央处理器（CPU）以及指令和程序"><a href="#中央处理器（CPU）以及指令和程序" class="headerlink" title="中央处理器（CPU）以及指令和程序"></a>中央处理器（CPU）以及指令和程序</h3><ul>
+<li>Instruction Register、Instruction Address Register。</li>
+<li>RAM + 寄存器 + ALU 做个 CPU，取指令 → 解释 → 执行循环。</li>
+<li>时钟 clock：时钟速度和赫兹，超频提升性能, 降频省电。</li>
+<li>”指令集”，LOAD_A，LOAD_B，SUB，JUMP，ADD，HALT 等指令，带条件跳转：JUMP NEGATIVE 是负数才跳转，还有其他类型的 JUMP。</li>
+<li>真正现代 CPU 用更多指令集。位数更长，1971 年的英特尔 4004 处理器，有 46 个指令，如今英特尔酷睿 i7, 有上千条指令。</li>
+<li>CPU 发展早期是加快晶体管切换速度，来提升 CPU 速度，现在给 CPU 专门的除法电路 + 其他电路来做复杂操作，比如游戏，视频解码，或是给 CPU 加缓存，提高数据存取速度，更快喂给 CPU。</li>
+<li>专有名词：脏位（Dirty bit）、流水线设计（pipeline）、并行处理（parallelize）、乱序执行（out-of-order execution）、推测执行（speculative execution）、分支预测（branch prediction）。</li>
+<li>多个 ALU 组成多核放大为多个独立 CPU 放大为超级计算机（中国的神威太湖之光）。</li>
+</ul>
+<h3 id="编程语言发展史"><a href="#编程语言发展史" class="headerlink" title="编程语言发展史"></a>编程语言发展史</h3><ul>
+<li>早期的编程发展从纺织业开始，给机器编程的需求远在计算机出现前就有了，于是有了打孔纸卡（Punched card）和插线板（Plugboard）。</li>
+<li>冯诺依曼架构（Von Neumann Architecture）是编程的鼻祖，在这之上演变出面板编程（Panel programming）。</li>
+<li>第一款取得商业成功的家用计算机是 Altair 8800。</li>
+<li>二进制写程序，先纸上写伪代码，手工转二进制，很快就烦了，于是用助记符（mnemonic）写代码（LOAD_A 14），为了把助记符转二进制，汇编器（Assembler）诞生。</li>
+<li>Grace Hopper 设计了编程语言 A-0，并在 1952 年做了第一个编译器（Compiler），实现 A-0。</li>
+<li>IBM 在 1957 年开发出 FORTRAN，随后 COBOL（Common Business-Oriented Language）诞生。</li>
+<li>新语言<ul>
+<li>1960 年代：ALGOL，LISP，BASIC</li>
+<li>1970 年代：Pascal，C，Smalltalk</li>
+<li>1980 年代：C++，Objective-C，Perl</li>
+<li>1990 年代：Python，Ruby，Java</li>
+<li>New millennium: Swift，C#，Go</li>
+</ul>
+</li>
+</ul>
+<h3 id="函数、算法和数据结构"><a href="#函数、算法和数据结构" class="headerlink" title="函数、算法和数据结构"></a>函数、算法和数据结构</h3><ul>
+<li>最经典的是 Grace Hopper 拍虫子游戏。</li>
+<li>专有名词：变量、赋值语句、if 判断、while 循环、for 循环、函数。</li>
+<li>最简单的算法有：选择排序（Selection sort O(n^2)）、归并排序（Merge sort O(n log n)）、Dijkstra 算法（（graph search algorithms） O(n log n +1)）。</li>
+<li>大 O 表示法（Big O notation）用来表示算法复杂度。</li>
+<li>数据结构要点：数组（Array）、下标（Index）、字符串（String）、矩阵（Matrix）、结构体（Struct）、指针（Pointer）、节点（Node）、链表（Linked List）。</li>
+<li>队列（Queue）(First in first out)，栈（Stack）(Last in first out) push、pop。</li>
+<li>不同数据结构适用不同场景：树（Tree）root/ leaf nodes，二叉树（Binary Tree），图（Graph），红黑树和堆。</li>
+</ul>
+<h3 id="阿兰·图灵"><a href="#阿兰·图灵" class="headerlink" title="阿兰·图灵"></a>阿兰·图灵</h3><ul>
+<li>阿兰·图灵生于 1912，是计算机之父，他首先提出可判定性问题（Entscheidungs problem）和停机问题，阿隆佐·丘奇研究 Lambda 算子。</li>
+<li>图灵机是计算机的蓝本而 Bombe 则破解了德军英格玛加密机。</li>
+<li>图灵测试和图灵奖。</li>
+</ul>
+<h3 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h3><ul>
+<li>对象（Object）以及面向对象编程（Object Oriented Programming）。</li>
+<li>API（Application Programming Interface）和集成开发环境 IDE（Integrated Development Environments）。</li>
+<li>其他专有名词：调试（debugging），文档和注释（readme, comment）版本控制（Version control）质量控制（Quality Assurance testing，QA）。</li>
+</ul>
+<h3 id="集成电路与摩尔定律"><a href="#集成电路与摩尔定律" class="headerlink" title="集成电路与摩尔定律"></a>集成电路与摩尔定律</h3><ul>
+<li>晶圆的制作：光刻（Photolithography）、晶圆（Wafer）、光刻胶（Photoresist）、光掩膜（Photomask）、掺杂（Doping）、分立元件（Discrete components）。</li>
+<li>数字暴政（Tyranny of Numbers）是 1960 年代工程师碰到的问题（如果想加强电脑性能，就要更多部件，这导致更多线路，更复杂。所以很难做）。</li>
+<li>摩尔定律 Moore’s Law。晶体管数量大幅度增长, 1980 年三万个，1990 年一百万个，2000 年三千万个，2010 年十亿个，进一步小型化会碰到 2 个问题：1、光的波长不足以制作更精细的设计，2、量子隧穿效应。</li>
+</ul>
+<h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><ul>
+<li>操作系统（Operating systems）：计算机变便宜变多，有不同配置，写程序处理不同硬件细节很痛苦，因此操作系统负责抽象硬件。</li>
+<li>专有名词：批处理（Batch processing）、外部设备（Peripherals）、设备驱动程序（Device drivers）、多任务处理（Multitasking）、虚拟内存（Virtual Memory）、动态内存分配（Dynamic memory allocation）、内存保护（Memory Protection）。</li>
+<li>1970 年代，计算机足够便宜，大学买了让学生用，多个学生用多个 “终端” 连接到主机。</li>
+<li>多用户分时操作系统，Multics、Unix、MS-DOS。</li>
+</ul>
+<h3 id="内存-amp-文件"><a href="#内存-amp-文件" class="headerlink" title="内存&amp;文件"></a>内存&amp;文件</h3><ul>
+<li>存储技术的发展，首先是纸卡（Paper punch cards），随后发展为延迟线存储器（Delay Line Memory）、磁芯（Magnetic Core Memory）、磁带（Magnetic Tape）、磁鼓（Magnetic Drum Memory）。</li>
+<li>硬盘（Hard Disk Drives）有内存层次结构（Memory Hierarchy）。</li>
+<li>软盘（Floppy Disk）、光盘（Compact Disk）、固态硬盘（Solid State Drives）。</li>
+<li>文件格式：可以随便存文件数据，但按格式存会更方便。</li>
+<li>TXT 文本文件：ASCII。</li>
+<li>WAV 音频文件：每秒上千次的音频采样数字。</li>
+<li>BMP 图片文件：像素的红绿蓝 RGB 值。</li>
+<li>文件系统：很早期时空间小，整个存储器就像一整个文件。后来随容量增长，多文件非常必要。</li>
+<li>目录文件：用来解决多文件问题，存其他文件的信息，比如开头，结尾，创建时间等。</li>
+<li>平面文件系统（Flat File System）：文件都在同一个层次，早期空间小，只有十几个文件，平面系统够用，如果文件紧密的一个个前后排序会造成问题，所以文件系统会： 1. 把空间划分成一块块 2. 文件拆分存在多个块里，文件的增删改查会不可避免的造成文件散落在各个块里，如果是磁带这样的存储介质就会造成问题，所以做碎片整理。</li>
+<li>分层文件系统（Hierarchical File System）：有不同文件夹，文件夹可以层层嵌套。</li>
+<li>压缩的好处是能存更多文件，传输也更快。</li>
+<li>无损压缩（Lossless compression）：游程编码（Run-Length Encoding）和字典编码（Dictionary coders）。</li>
+<li>霍夫曼树 Huffman Tree、消除冗余和用更紧凑的表示方法，这些方法通常会组合使用。</li>
+<li>感知编码（Perceptual coding）、有损压缩，如 jpeg 格式、时间冗余（Temporal redundancy）、MPEG-4 视频编码。</li>
+</ul>
+<h3 id="命令行界面"><a href="#命令行界面" class="headerlink" title="命令行界面"></a>命令行界面</h3><ul>
+<li>最早计算机程序从运行开始直到结束，中间没有人类进行操作，原因是计算机很贵，不能等人类慢慢输入，执行完结果打印到纸上，到 1950 年代，计算机足够便宜+快，人类和计算机交互式操作变得可行，为了让人类输入到计算机，改造之前就有的打字机，变成电传打字机，到 1970 年代末，屏幕成本足够低，屏幕代替电传打字机，屏幕成为标配。</li>
+<li>人机交互（Human-Computer Interaction）：早期输出数据是打印到纸上，而输入是用纸卡/纸带一次性把程序和数据都给进去。</li>
+<li>克里斯托弗·莱瑟姆·肖尔斯于 1868 年发明 QWERTY 打字机，随后诞生电传打字机（Teletype machine），输入指令打印在纸上，电脑会将返回指令打印在纸上完成交互。</li>
+<li>命令行界面（Command line interface）：ls 命令、cd 命令、早期文字游戏 Zork（1977 年）。</li>
+</ul>
+<h3 id="屏幕与-2D-图形显示"><a href="#屏幕与-2D-图形显示" class="headerlink" title="屏幕与 2D 图形显示"></a>屏幕与 2D 图形显示</h3><ul>
+<li>屏幕对于临时值的表现比纸张打印好太多，所以人们把键盘和显示器分开，屏幕显示临时值。（PDP-1 计算机）。</li>
+<li>阴极射线管（Cathode Ray Tube(CRT)），有两种绘图方式：1、矢量扫描（Vector Scanning），2、光栅扫描（Raster Scanning）。</li>
+<li>其他显示有关：液晶显示器（Liquid Crystal Displays (LCD)）、像素（Pixel））、字符生成器（Character generator）、屏幕缓冲区（Screen buffer）、矢量命令画图、Sketchpad、光笔（Light pen）、函数画线、矩形。</li>
+</ul>
+<h3 id="冷战、消费主义和个人计算机发展"><a href="#冷战、消费主义和个人计算机发展" class="headerlink" title="冷战、消费主义和个人计算机发展"></a>冷战、消费主义和个人计算机发展</h3><ul>
+<li>范内瓦·布什预见了计算机的潜力，提出假想机器 Memex，帮助建立国家科学基金会，给科学研究提供资金。</li>
+<li>1950 年代消费者开始买晶体管设备，收音机大卖，日本取得晶体管授权后，索尼做了晶体管收音机，为日本半导体行业崛起埋下种子。</li>
+<li>苏联 1961 年把宇航员加加林送上太空，导致美国提出登月，NASA 预算大大增加，用集成电路来制作登月计算机，集成电路的发展实际上是由军事应用大大推进的，阿波罗登月毕竟只有 17 次，美国造超级计算机进一步推进集成电路。</li>
+<li>美国半导体行业一开始靠政府高利润合同活着，忽略消费者市场，1970 年代冷战渐消，行业开始衰败，很多公司倒闭，英特尔转型处理器，政府和消费者推动了计算机的发展，早期靠政府资金，让技术发展到足够商用，然后消费者购买商用产品继续推动产品发展。</li>
+<li>1970 年代初成本下降，个人计算机变得可行，Altair 8800 大卖。</li>
+<li>比尔·盖茨和保罗·艾伦写了 BASIC 解释器，乔布斯提议卖组装好的计算机，Apple-I 诞生。1977 年出现 3 款开箱即用计算机：Apple-II、TRS-80 Model I、Commodore PET 2001。</li>
+<li>IBM 意识到个人计算机市场，IBM PC 发布，采用开放架构，兼容的机器都叫 IBM Compatible（IBM 兼容），生态系统产生雪球效应：因为用户多，软硬件开发人员更愿意花精力在这个平台，因为软硬件多，用户也更乐意买 “IBM 兼容” 的计算机。</li>
+<li>苹果选封闭架构，一切都自己来，只有苹果在非 “IBM 兼容” 下保持了足够市场份额。</li>
+</ul>
+<h3 id="图形用户界面（GUI）"><a href="#图形用户界面（GUI）" class="headerlink" title="图形用户界面（GUI）"></a>图形用户界面（GUI）</h3><ul>
+<li>图形界面先驱：道格拉斯·恩格尔巴特（Douglas Engelbart），施乐公司则在 1970 年成立 帕洛阿尔托研究中心（Palo Alto Research Center），1973 年完成 Xerox Alto 计算机。</li>
+<li>1981 年的 Xerox Star system，史蒂夫·乔布斯去施乐参观，所见即所得 WYSIWYG，1983 年推出 Apple Lisa，1984 年推出 Macintosh。</li>
+<li>微软则在 1985 年推出 Windows 1.0，之后出到 3.1，1995 年推出 Windows 95 提供图形界面，1995 年微软失败的 Microsoft Bob。</li>
+</ul>
+<h3 id="3D-图形"><a href="#3D-图形" class="headerlink" title="3D 图形"></a>3D 图形</h3><ul>
+<li>3D 投影包括：线框渲染（Wireframe Rendering）、正交投影（Orthographic Projection）、透视投射（Perspective Projection）。</li>
+<li>相对于网格（Mesh），三角形更常用因为能定义唯一的平面，扫描线渲染（Scanline Rendering）。</li>
+<li>为了处理遮挡（Occlusion），使用画家算法（Painter’s Algorithm）、深度缓冲 Z Buffering、Z Fighting 错误出现穿模。</li>
+<li>其他处理：背面剔除（Back Face Culling）、表面法线（Surface Normal）、平面着色（Flat Shading）、高洛德着色（Gouraud shading）, 冯氏着色（Phong Shading）、纹理映射（Texture Mapping）。</li>
+<li>图形处理单元 GPU（Graphics Processing Unit）。</li>
+</ul>
+<h3 id="计算机网络和互联网"><a href="#计算机网络和互联网" class="headerlink" title="计算机网络和互联网"></a>计算机网络和互联网</h3><ul>
+<li>局域网 LAN（Local Area Networks），最著名的是 1970 年代的以太网，需要每个电脑（网卡）有独立的媒体访问控制地址 MAC（Media Access Control address），载波侦听多路访问 CSMA（Carrier Sense Multiple Access）是多电脑共享的传输媒介，传输速度用带宽（bandwidth）表示。</li>
+<li>多线路的冲突使用指数退避（Exponential Backoff），同时分组、引入交换机减少冲突域（Collision Domain）的范围。</li>
+<li>电路交换（Circuit Switching）、报文交换（Message Switching）、分组交换（Packet Switching）、阻塞控制、ICMP、BGP。</li>
+<li>IP 互联网协议（Internet Protocol），负责把数据包送到正确的计算机。UDP 用户数据报协议（User Datagram Protocol）在数据包中跟在 IP 之后，负责把数据包送到正确的程序。UDP 头部包含校验数（Checksum）。</li>
+<li>但是要保证所有数据必须到达，则要使用 TCP 传输控制协议（Transmission Control Protocol），含有序号，发送确认码，调整传输率。</li>
+<li>IP 地址复杂难记，DNS 域名系统（Domain Name System），分为 TLD、二级域名、子域名。</li>
+<li>OSI 开放式系统互联通信参考模型（Open System Interconnection）从下至上：物理层、数据链路层、网络层、传输层、会话层、表示层、应用程序层。</li>
+<li>超链接（Hyperlinks）形成巨大的网络：万维网。</li>
+<li>URL 统一资源定位器（Uniform Resource Locator）、HTTP 超文本传输协议（HyperText Transfer Protocol）定位服务器中的内容。</li>
+<li>HTML 超文本标记语言（HyperText Markup Language）</li>
+<li>第一个浏览器和服务器是 Tim Berners-Lee 花了 2 个月在 CERN 写的，1991 年正式发布，万维网就此诞生。</li>
+<li>Jerry 和 David 的万维网指南 后来改名成 Yahoo，其他搜索引擎：JumpStation、Google</li>
+<li>网络中立性：平等对待所有数据包。</li>
+</ul>
+<h3 id="计算机安全"><a href="#计算机安全" class="headerlink" title="计算机安全"></a>计算机安全</h3><ul>
+<li>计算机安全三大要素：保密性, 完整性, 可用性（Secrecy, Integrity, Availability）。</li>
+<li>使用威胁模型（Threat Model）模拟黑客攻击。</li>
+<li>身份验证（Authentication）的三种方式:What you know、What you have、What you are。</li>
+<li>访问控制（Access Control）：公开、机密/只读、可写、完全控制，例如美国国防部的 Bell LaPadula model 不能向上读取，不能向下写入。</li>
+<li>安全内核、隔离（Isolation）：沙盒（Sandbox）建立在虚拟机上。</li>
+</ul>
+<h3 id="黑客与攻击"><a href="#黑客与攻击" class="headerlink" title="黑客与攻击"></a>黑客与攻击</h3><ul>
+<li>社会工程学（Social Engineering）：钓鱼（Phishing）、假托（Pretexting）、木马（Trojan Horses）。</li>
+<li>NAND 镜像（NAND Mirroring）：物理连接复制内存，覆盖错误</li>
+<li>漏洞利用（Exploit）在远程端：利用缓冲区溢出（Buffer Overflow），通过边界检查（Bounds Checking）可以避免。</li>
+<li>代码注入（Code Injection）植入 bug。</li>
+<li>零日漏洞（Zero Day Vulnerability）是发现后立即被恶意利用的安全漏洞。</li>
+<li>计算机蠕虫（Worms）、僵尸网络（Botnet）、拒绝服务攻击（DDoS）。</li>
+</ul>
+<h3 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h3><ul>
+<li>多层防御（Defence in depth）：加密（Encryption）、解密（Decryption）。</li>
+<li>替换加密（Substitution cipher）、移位加密（Permutation cipher）：如凯撒加密（Caesar cipher）：字母向前移位 3 位。</li>
+<li>列移位加密（Columnar transposition cipher）：读取方向和列表大小。</li>
+<li>德国 Enigma 加密机，利用转子替换加密。</li>
+<li>IBM 和 NSA1977 年制定数据加密标准（Data Encryption Standard (DES)）。</li>
+<li>2001 年出现高级加密标准（Advanced Encryption Standard (AES)）。</li>
+<li>密钥交换（Key exchange）：单向函数和密钥加密、迪菲-赫尔曼密钥交换（Diffie-Hellman Key Exchange）属于对称加密。</li>
+<li>非对称加密（Asymmetric encryption）只能加密不能解密或只能解密不能加密、非对称加密算法（RSA）。</li>
+</ul>
+<h3 id="机器学习与人工智能"><a href="#机器学习与人工智能" class="headerlink" title="机器学习与人工智能"></a>机器学习与人工智能</h3><ul>
+<li>分类（Classification）：使用分类器（Classifier）辨别特征（Feature），再标记数据（Labeled data）记录。</li>
+<li>数据分析会出现决策边界（Decision boundaries）、混淆矩阵（Confusion matrix）、未标签数据（Unlabeled data）。</li>
+<li>决策树（Decision tree）是机器学习算法的一种。还有支持向量机（Support Vector Machines）都源于统计学。</li>
+<li>人工神经网络（Artificial Neural Network）和深度学习（Deep learning）。</li>
+<li>弱 AI/窄 AI（Weak AI/Narrow AI）复杂但只能做一件事，强 AI（Strong AI）接近人类智能。强化学习（Reinforcement Learning）：和人类学习方式类似。</li>
+</ul>
+<h3 id="计算机视觉"><a href="#计算机视觉" class="headerlink" title="计算机视觉"></a>计算机视觉</h3><ul>
+<li>计算机视觉算法：检验颜色/垂直边缘。</li>
+<li>核/过滤器（kernel or filter）包含做像素乘法的数字、卷积（convolution）。</li>
+<li>Prewitt 算子（Prewitt Operators）、维奥拉·琼斯人脸检测（Viola-Jones Face Detection）、卷积神经网络（Convolutional Neural Networks）。</li>
+<li>情感识别算法在识别出脸之后，可以进一步用其他算法定位面部标志，如眼睛和眉毛具体位置，从而判断心情等信息，也可用其他算法跟踪全身的标记点，如肩部，手臂等。</li>
+</ul>
+<h3 id="自然语言处理（NLP）"><a href="#自然语言处理（NLP）" class="headerlink" title="自然语言处理（NLP）"></a>自然语言处理（NLP）</h3><ul>
+<li>把句子分块，区分出词性（Parts of speech）、短语结构规则（Phrase structure rules）。</li>
+<li>分析树（Parse tree）、知识图谱。</li>
+<li>语音识别（Speech recognition）：谱图（Spectrogram）、快速傅立叶变换（Fast Fourier Transform）。</li>
+<li>音素（Phonemes）识别、语音合成（Speech Synthesis）。</li>
+</ul>
+<h3 id="机器人"><a href="#机器人" class="headerlink" title="机器人"></a>机器人</h3><ul>
+<li>机器人早期雏形：法国吃饭鸭（Digesting Duck, Canard Digerateur）、土耳其行棋傀儡下国际象棋。</li>
+<li>第一台计算机控制的机器出现在 1940 年代晚期，叫数控机器（Computer Numerical Control(CNC)）。</li>
+<li>1960 年 Unimate 是第一个商业贩卖的可编程工业机器人。</li>
+<li>简单控制回路（simple control loop）、负反馈回路（negative feedback loop）。</li>
+<li>比例-积分-微分控制器（Proportional–Integral–Derivative controller）即 PID 控制器。</li>
+<li>机器人三定律（Three Laws of Robotics）。</li>
+</ul>
+<h3 id="计算机心理学"><a href="#计算机心理学" class="headerlink" title="计算机心理学"></a>计算机心理学</h3><ul>
+<li>我们需要了解人类心理学，做出更好的计算机。</li>
+<li>易用度（Usability）：颜色强度排序比颜色排序好，分组更好记，电话号码 317-555-3897 比 3175553897 好记。</li>
+<li>直观功能（Affordances）：认出 vs 回想（Recognition vs Recall）、Facebook 研究正面情绪影响。</li>
+<li>用软件修正注视位置，让视频通话时看起来像盯着对方，而不是盯着下方。</li>
+<li>让机器有一定情商，把机器人做的像人，恐怖谷理论。</li>
+<li>计算机心理学有很多开放式的问题，心理学帮助我们明白不同选择可能带来的影响。</li>
+</ul>
+<h3 id="教育科技和计算机的未来"><a href="#教育科技和计算机的未来" class="headerlink" title="教育科技和计算机的未来"></a>教育科技和计算机的未来</h3><ul>
+<li>大型开放式在线课程（Massive Open Online Courses (MOOC)）</li>
+<li>智能辅导系统（Intelligent Tutoring Systems）：判断规则（Production rule）、域模型（Domain Model）、贝叶斯知识追踪（Bayesian knowledge tracing）：学生已经学会的概率、瞎猜的概率、失误的概率、做题过程中学会的概率、教育数据挖掘（Educational Data Mining）。</li>
+<li>普适计算（Ubiquitous Computing）的愿景。</li>
+<li>奇点（Singularity）：冯诺依曼提出，计算机发展爆炸性增长。</li>
+<li>把工作分为 4 个象限，讨论自动化带来的影响。</li>
+<li>机器人的存在时间可能长过人类，可以长时间探索宇宙。</li>
+</ul>
+
+  
+  
+    
+    <div class='footer'>
+      
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>References</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://github.com/1c7/crash-course-computer-science-chinese" rel="external nofollow noopener noreferrer" target="_blank">
+                  计算机科学速成课
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        </div>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/&title=计算机科学速成课 - Bezhuang's Blog&summary=
+计算机科学速成课程的授课老师是英国树莓派基金会教育部长Carrie Anne，她以入门级大学教材和 AP 计算机科学原理指南为基础，在短短40节课中概述了计算机的历史、设计决策、编程和软件的基本要素、硬件的基本组件及其作用，对新手小白可以说是非常友好了，课程提到的重点已记录在下文中，可供参考。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/&title=计算机科学速成课 - Bezhuang's Blog&summary=
+计算机科学速成课程的授课老师是英国树莓派基金会教育部长Carrie Anne，她以入门级大学教材和 AP 计算机科学原理指南为基础，在短短40节课中概述了计算机的历史、设计决策、编程和软件的基本要素、硬件的基本组件及其作用，对新手小白可以说是非常友好了，课程提到的重点已记录在下文中，可供参考。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/&title=计算机科学速成课 - Bezhuang's Blog&summary=
+计算机科学速成课程的授课老师是英国树莓派基金会教育部长Carrie Anne，她以入门级大学教材和 AP 计算机科学原理指南为基础，在短短40节课中概述了计算机的历史、设计决策、编程和软件的基本要素、硬件的基本组件及其作用，对新手小白可以说是非常友好了，课程提到的重点已记录在下文中，可供参考。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFFUlEQVR42u3bQW4jMQwEwPz/09kHLAyLzdbYCEo3x+ORVNKll9yfX+Mj4wcBePAGePAGePBGAf4nHP+98MX3p797udAX73v3/On60/lTL/DgwYMHDx48ePDgm/DHAeAQ8PSA0udOD3j6Of378cGBBw8ePHjw4MGDB38B/nbgaP/99Pv04NNABR48ePDgwYMHDx78X4JPA1FagImDTmmd4MGDBw8ePHjw4MF/M/wp1LRAsW4gKs0DHjx48ODBgwcPHvw3w2+DxjbwpAfYmjdt6Hq8kww8ePDgwYMHDx48+AcCyl/7HHuBBw8ePHjw4MGDB1+Af2pMg1Crger3ywZ48ODBgwcPHjx48A34d4WDtJAwBZsWOm4VPtLgCB48ePDgwYMHDx78J+CnE9QWUt7Y6b62ATAuFIEHDx48ePDgwYMHX4BPCxWnB7KFnjYYnc63BZ2uDzx48ODBgwcPHjz4G/DbF04LHu3/EDENhO3Ad3zBwIMHDx48ePDgwYN/AP42wLaAsT2w6UFtCyzgwYMHDx48ePDgwTfga//AHwalbbBpFV7SAg948ODBgwcPHjx48J+Any50G3zSgHMrOG1hx07gwYMHDx48ePDgwRfhpwEmLXRsg8k2qG0D2/TgwIMHDx48ePDgwYN/Ej5t5Em/b83Ten5bWHl5QODBgwcPHjx48ODBF+GnBYC0IHErQE1h0s9pAxh48ODBgwcPHjx48E34bSBIN5weyBY4HWngexmgwIMHDx48ePDgwYMvwqfBabrAbSGiXYCZBqL0goEHDx48ePDgwYMH34SfFja2DUXtsQZZOhxfEPDgwYMHDx48ePDgC/DTgJQ+l8JMCyZpINru/3h94MGDBw8ePHjw4MEX4FuBZNsY1Co4tAoerYAGHjx48ODBgwcPHvwN+LSBaLqhbZBKg870ve2gBR48ePDgwYMHDx78Dfjpi08DRvv72w1QrUasd+8FDx48ePDgwYMHD74B3ypInAaLVjC6FfTSixh3koEHDx48ePDgwYMHX4BPg8JvOG4VMrbrns5z/Dvw4MGDBw8ePHjw4B+Ab4O1gs8WfFsASgMdePDgwYMHDx48ePAN+G1w2QaMNOhsYdMLl+4PPHjw4MGDBw8ePPgb8NsGphTkdvBJDzANfseFEPDgwYMHDx48ePDgH4RPD2rbuNRa57YQs3YBDx48ePDgwYMHD74IP23QSQsl06C0PdBWYafW6AQePHjw4MGDBw8efAE+Xei2IHHr99sLMoY8fA48ePDgwYMHDx48+Cb8NhCcbngK83QQWoNuK1DgwYMHDx48ePDgwQ/gW6DbQDaFuQW4LXy8LeSABw8ePHjw4MGDB1+E305wPPFy4WmhJm20ah0cePDgwYMHDx48ePBN+BQ2BdgewHZMoafvBQ8ePHjw4MGDBw/+CfjtuB1UphvbFkqmhZ9pwAIPHjx48ODBgwcPvgG/DSJpENse3O2CzLWLBB48ePDgwYMHDx58Ef5WYGoHsrRgsg1g1wIUePDgwYMHDx48ePAF+NPgcQq2DTxPNTC153vpAh48ePDgwYMHDx78F8CfBoj0fekFmAaodB8fC1DgwYMHDx48ePDgwRcDVGvj9eBy+Nx0P+MgBx48ePDgwYMHDx78Bfhpw1HasNQKVNsAt25QagUo8ODBgwcPHjx48OAD+NuNQtMgkwab1j62F+Hl+sGDBw8ePHjw4MGDL8Abzw7w4MEb4MEb4MEbi/EPw0gpCol3QpoAAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/&text=计算机科学速成课 - Bezhuang's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/Git%E7%9F%A5%E8%AF%86%E7%82%B9/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Git 基础知识总结</p>
+          <p class='content'>
+Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，是目前世界上最先进的分布式版本控制系统。Git 与常用的版本控制工具 CVS, ...</p>
+        </a>
+      
+      
+        <a class='next' href='/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86/'>
+          <p class='title'>经济学原理<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+经济学原理是经管类学生的一门基础核心课程，基本理论通常分为微观经济学与宏观经济学两大部分，主要介绍经济学的基本概念、基本理论和基本分析方法。经济学通才保罗·萨缪尔森说过：“在当今社会，谁不学习...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%97%A9%E6%9C%9F%E5%8E%86%E5%8F%B2"><span class="toc-text">计算机的早期历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E5%AD%90%E8%AE%A1%E7%AE%97%E6%9C%BA"><span class="toc-text">电子计算机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E9%80%BB%E8%BE%91%E3%80%81%E9%80%BB%E8%BE%91%E9%97%A8%E5%92%8C%E4%BA%8C%E8%BF%9B%E5%88%B6"><span class="toc-text">布尔逻辑、逻辑门和二进制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%95%B0%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83%EF%BC%88ALU%EF%BC%89"><span class="toc-text">算数逻辑单元（ALU）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%84%E5%AD%98%E5%99%A8%E5%92%8C%E5%86%85%E5%AD%98"><span class="toc-text">寄存器和内存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%88CPU%EF%BC%89%E4%BB%A5%E5%8F%8A%E6%8C%87%E4%BB%A4%E5%92%8C%E7%A8%8B%E5%BA%8F"><span class="toc-text">中央处理器（CPU）以及指令和程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%8F%91%E5%B1%95%E5%8F%B2"><span class="toc-text">编程语言发展史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E3%80%81%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">函数、算法和数据结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BF%E5%85%B0%C2%B7%E5%9B%BE%E7%81%B5"><span class="toc-text">阿兰·图灵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B"><span class="toc-text">软件工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E4%B8%8E%E6%91%A9%E5%B0%94%E5%AE%9A%E5%BE%8B"><span class="toc-text">集成电路与摩尔定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">操作系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98-amp-%E6%96%87%E4%BB%B6"><span class="toc-text">内存&amp;文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%95%8C%E9%9D%A2"><span class="toc-text">命令行界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%8F%E5%B9%95%E4%B8%8E-2D-%E5%9B%BE%E5%BD%A2%E6%98%BE%E7%A4%BA"><span class="toc-text">屏幕与 2D 图形显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B7%E6%88%98%E3%80%81%E6%B6%88%E8%B4%B9%E4%B8%BB%E4%B9%89%E5%92%8C%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%91%E5%B1%95"><span class="toc-text">冷战、消费主义和个人计算机发展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%EF%BC%88GUI%EF%BC%89"><span class="toc-text">图形用户界面（GUI）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3D-%E5%9B%BE%E5%BD%A2"><span class="toc-text">3D 图形</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%92%8C%E4%BA%92%E8%81%94%E7%BD%91"><span class="toc-text">计算机网络和互联网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AE%89%E5%85%A8"><span class="toc-text">计算机安全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BB%91%E5%AE%A2%E4%B8%8E%E6%94%BB%E5%87%BB"><span class="toc-text">黑客与攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A0%E5%AF%86"><span class="toc-text">加密</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD"><span class="toc-text">机器学习与人工智能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89"><span class="toc-text">计算机视觉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%EF%BC%88NLP%EF%BC%89"><span class="toc-text">自然语言处理（NLP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E4%BA%BA"><span class="toc-text">机器人</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BF%83%E7%90%86%E5%AD%A6"><span class="toc-text">计算机心理学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80%E5%92%8C%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E6%9C%AA%E6%9D%A5"><span class="toc-text">教育科技和计算机的未来</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="计算机科学速成课";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        
+          <div><p>Copyright © 2021 Zhihao Zhuang. All rights reserved</p>
+</div>
+        
+      
+    
+      
+        
+          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+</div>
+        
+      
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/********************脚本懒加载函数********************************/
+function loadScript(src, cb) {
+var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+var script = document.createElement('script');
+script.setAttribute('type','text/javascript');
+if (cb) script.onload = cb;
+script.setAttribute('src', src);
+HEAD.appendChild(script);
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://www.zhuangzhihao.top
+        
+        
+        
+        
+          id="https:wwwzhuangzhihaotop"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 返回主页
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/Bezhuang/Hexo-blog
+        
+        
+        
+        
+          id="https:githubcomBezhuangHexo-blog"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('false' == true && ('home,contributors,source_docs,hr,print'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+	
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/issues.min.js');
+	
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+
+
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
+  });
+</script>
+
+
+
+
+
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  pjax_comment=pjax_valine;
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/app.min.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/search/hexo.min.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI',
+    app_key: 'j5I5paEqIfWfOlCg13vU2vNq',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://blog.zhuangzhihao.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+function bindToggleButton() {
+	var btn=$("#wrapper .toggle-mode-btn");
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+document.addEventListener("pjax:success", bindToggleButton);
+
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/tu8j8vmfuovtkhsj4lgr7sub986gd1ku.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#l_cover",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      
+      $("#wrapper .toggle-mode-btn").unbind('click');
+      
+	  
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        if (typeof IssuesAPI == "undefined") {
+          loadIssuesJS();
+        }
+        
+          pjax_initCopyCode();
+        
+		
+          try{pjax_comment();} catch (e) {}
+        
+      } catch (e) {
+        console.log(e);
+      }
+	  
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+<!--浏览器搞笑标题-->
+<!--<script type="text/javascript" src="/js/FunnyTitle.js"></script>-->
+<!-- 数字雨 -->
+<canvas id="canvas" width="1440" height="900" ></canvas>
+<script type="text/javascript" src="/js/DigitalRain.js"></script>

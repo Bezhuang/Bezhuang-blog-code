@@ -1,0 +1,2290 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Python for Data Science, AI &amp; Development - Bezhuang&#39;s Blog</title>
+  
+    <meta name="keywords" content="Python">
+  
+
+  
+    <meta name="description" content="
+This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue t...">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Bezhuang's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+
+<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+
+
+</head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
+    
+
+<header id="l_header" class="l_header always shadow floatable blur show"  >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Bezhuang's Blog
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div class='cover-bg' style='background-image:url(https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%A3%81%E7%BA%B82.jpg)'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">庄之皓 · Bezhuang</p>
+    
+    
+      <p class="subtitle">欢迎访问我的博客！Welcome to my blog!</p>
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="search here..." />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/photos"
+              
+              
+              id="photos">
+              <p>相册</p>
+            </a>
+          
+            <a href="/projects"
+              
+              
+              id="projects">
+              <p>开源库</p>
+            </a>
+          
+            <a href="/todo"
+              
+              
+              id="todo">
+              <p>计划表</p>
+            </a>
+          
+            <a href="/guestbook"
+              
+              
+              id="guestbook">
+              <p>留言板</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Python for Data Science, AI & Development
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE/">人工智能与大数据</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年2月4日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2.7k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：16分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p>This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue to expand Python learning. The following are the notes I took during this course. Since that I’ve learned <a href="/py4e-code">Python for everybody</a> on Coursera before, so this note will only contain the necessary outlines and newly learned content.</p>
+</blockquote>
+<a id="more"></a>
+
+
+
+	<div class="row">
+    <embed src="/pdf/Coursera-Py-for-DS&amp;AI.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<h3 id="Python-Basics"><a href="#Python-Basics" class="headerlink" title="Python Basics"></a>Python Basics</h3><ul>
+<li>Types</li>
+<li><code>int</code>, <code>float</code>, <code>str</code>, <code>True</code>, <code>False</code></li>
+<li>Expressions and Variables</li>
+<li>Mathematical Operations</li>
+<li>String Operations<ul>
+<li><code>Name[1:4]</code>, <code>len()</code>, <code>\n</code></li>
+</ul>
+</li>
+<li><code>try:</code>，<code>except:</code></li>
+</ul>
+<h3 id="Python-Data-Structures"><a href="#Python-Data-Structures" class="headerlink" title="Python Data Structures"></a>Python Data Structures</h3><ul>
+<li>Lists <code>[1, 2, 3]</code> and Tuples <code>(1, 2, 3)</code><ul>
+<li><code>ABC[1]</code>, Tuples are immutable</li>
+<li><code>.extend()</code>, <code>.append()</code>, <code>.split()</code>, <code>.pop()</code>, <code>.del()</code> , <code>.index()</code>, <code>sorted()</code></li>
+<li>Append only adds one element to the list</li>
+</ul>
+</li>
+<li>Sets <code>&#123;q, w, e&#125;</code><ul>
+<li>unordered, unique element, <code>set(list)</code>, <code>.remove()</code></li>
+<li><code>set2 = set1 &amp; set 3</code>, <code>.union</code>, <code>set2.issubset(set1)</code>, <code>.issuperset</code>(), <code>.difference()</code></li>
+</ul>
+</li>
+<li>Dictionaries <code>&#123;&quot;key1&quot;:value1, &quot;key2&quot;: value2&#125;</code><ul>
+<li><code>DICT[&#39;Graduation&#39;]=&#39;2022&#39;</code>, <code>.keys()</code>, <code>.values()</code>, <code>&#39;Graduation&#39; in DICT</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Python-Programming-Fundamentals"><a href="#Python-Programming-Fundamentals" class="headerlink" title="Python Programming Fundamentals"></a>Python Programming Fundamentals</h3><ul>
+<li><p>Conditions and Branching</p>
+<ul>
+<li>Comparison Operators <code>==</code>，Logic Operators<code>or</code> <code>AND</code>，Boolean</li>
+<li><code>if ():</code>， <code>elif:</code></li>
+</ul>
+</li>
+<li><p>Loops：<code>range(10,15)</code>，<code>for a in range():</code>，<code>while():</code></p>
+</li>
+<li><p>Functions: a function can have multiple parameters</p>
+<ul>
+<li><code>def function(input):</code></li>
+<li><code>global [variable]</code> </li>
+</ul>
+</li>
+<li><p>Objects and Classes</p>
+<ul>
+<li><p>Every object has a type, a blueprint and a set of methods.</p>
+</li>
+<li><p>An object is an instance of a particular type.</p>
+</li>
+<li><p>Class includes Data attributes and methods  <code>dir(NameOfObject):</code></p>
+<pre><code class="python">class Circle(object):
+    def __init__(self, radius, color=&#39;red&#39;):
+        self.radius = radius;
+        self.color = color;</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Reading and Writing files with <code>open()</code></p>
+<pre><code class="python">with open(&quot;/example1.txt&quot;, &quot;r&quot;) as File1:  # &quot;r&quot; for reading
+    file_stuff=File1.read()  # file.readlines()can save text to a list
+    print(file_stuff)        # file.readline(3)can only read 1 line
+print(File1.closed)
+
+with open(&quot;/example2.txt&quot;, &quot;a&quot;) as File2:  #&quot;a&quot; for appending
+        File2.write(line)
+
+with open(&quot;example1.txt&quot;, &quot;r&quot;) as readfile:   # copy file
+    with open(&quot;example2.txt&quot;, &quot;w&quot;):     # &quot;w&quot; for writing
+        for line in readfile:
+            writefile.write(line)</code></pre>
+</li>
+</ul>
+<h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><h4 id="Loading-data-with-Pandas"><a href="#Loading-data-with-Pandas" class="headerlink" title="Loading data with Pandas"></a>Loading data with Pandas</h4><pre><code class="python">import pandas as pd
+csv_path=&quot;file1.csv&quot;
+df = pd.read_csv(csv_path)  # Dataframes
+df.head()  # Treat the first row as the column name
+x=df[[&#39;ColumnA&#39;]]</code></pre>
+<h4 id="Select-Data-from-a-data-frame-in-Pandas"><a href="#Select-Data-from-a-data-frame-in-Pandas" class="headerlink" title="Select Data from a data frame in Pandas"></a>Select Data from a data frame in Pandas</h4><ul>
+<li><code>df.loc[&#39;row&#39;, &#39;column&#39;]: &#39;value&#39;</code><ul>
+<li><code>loc</code> is primarily label based; when two arguments are used, you use column headers and row indexes to select the data you want.  </li>
+<li><code>loc</code> can also take an integer as a row or column number.</li>
+<li><code>loc</code> will return a <code>KeyError</code> if the requested items are not found.</li>
+</ul>
+</li>
+<li><code>df.iloc[0,0]:&#39;value&#39;</code><ul>
+<li><code>iloc</code> is integer-based. You use column numbers and row numbers to get rows or columns at particular positions in the data frame.</li>
+<li><code>iloc</code> will return an <code>IndexError</code> if the requested indexer is out-of-bounds.</li>
+</ul>
+</li>
+<li>Use <code>loc</code> and <code>iloc</code> to slice data frames and assign the values to a new data frame.<ul>
+<li><code>z = df.iloc[0:2, 0:3]</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="Working-with-and-Saving-data-with-Pandas"><a href="#Working-with-and-Saving-data-with-Pandas" class="headerlink" title="Working with and Saving data with Pandas"></a>Working with and Saving data with Pandas</h4><ul>
+<li><code>df[&#39;ColumnA&#39;].unique()</code>，``df1=df[df[‘ColumnA’]&gt;=1980]`</li>
+<li>Save as CSV：<code>df1.to_csv(&#39;new.csv&#39;)</code></li>
+</ul>
+<h3 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h3><h4 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h4><pre><code class="python"># Import the libraries
+import time 
+import sys
+import numpy as np 
+import matplotlib.pyplot as plt
+%matplotlib inline  
+
+# Plotting functions
+def Plotvec1(u, z, v):    
+    ax = plt.axes()
+    ax.arrow(0, 0, *u, head_width=0.05, color=&#39;r&#39;, head_length=0.1)
+    plt.text(*(u + 0.1), &#39;u&#39;)    
+    ax.arrow(0, 0, *v, head_width=0.05, color=&#39;b&#39;, head_length=0.1)
+    plt.text(*(v + 0.1), &#39;v&#39;)
+    ax.arrow(0, 0, *z, head_width=0.05, head_length=0.1)
+    plt.text(*(z + 0.1), &#39;z&#39;)
+    plt.ylim(-2, 2)
+    plt.xlim(-2, 2)
+def Plotvec2(a,b):
+    ax = plt.axes()
+    ax.arrow(0, 0, *a, head_width=0.05, color =&#39;r&#39;, head_length=0.1)
+    plt.text(*(a + 0.1), &#39;a&#39;)
+    ax.arrow(0, 0, *b, head_width=0.05, color =&#39;b&#39;, head_length=0.1)
+    plt.text(*(b + 0.1), &#39;b&#39;)
+    plt.ylim(-2, 2)
+    plt.xlim(-2, 2)</code></pre>
+<h4 id="One-Dimensional-Numpy"><a href="#One-Dimensional-Numpy" class="headerlink" title="One Dimensional Numpy"></a>One Dimensional Numpy</h4><ul>
+<li>A numpy array is similar to a list. It’s usually fixed in size and each element is of the same type.</li>
+</ul>
+<pre><code class="python">import numpy as np
+a=np.array([0,1,2,3,4])
+a.size # Get the size of numpy array  5
+a.ndim # Get the number of dimensions of numpy array  1
+a.shape # Get the shape/size of numpy array  (5,)
+a.dtype # Check the type of the values stored in numpy array
+a[0]=20 # Assign value  [20,1,2,3,4]
+b=a[3:5] # Slicing  [3,4]
+mean = a.mean() # Get the mean of numpy array
+standard_deviation=a.std() # Get the standard deviation of numpy array
+max_b = b.max()
+min_b = b.min()</code></pre>
+<ul>
+<li>Numpy Array Operations</li>
+</ul>
+<pre><code class="python">u = np.array([1, 0])
+v = np.array([0, 1])
+z = u + v # Numpy Array Addition
+Plotvec1(u, z, v) # Plot numpy arrays (equivalent to vector addition)
+z = 2 * u # Numpy Array Multiplication
+z = u * v # Calculate the production of two numpy arrays
+np.dot(u, v) # Calculate the dot product  1*0+0*1
+u + 1 # Add the constant to array  [2,1]
+x = np.array([0, np.pi/2 , np.pi]) # Create the numpy array in radians
+y = np.sin(x) # Calculate the sin of each elements</code></pre>
+<ul>
+<li>  A useful function for plotting mathematical functions is <code>linspace</code></li>
+<li>Linspace returns evenly spaced numbers over a specified interval.</li>
+</ul>
+<pre><code class="python">x = np.linspace(0, 2*np.pi, num=100) # Makeup a numpy array within [0, 2π] and 100 elements 
+y = np.sin(x) # Calculate the sine of x list
+plt.plot(x, y) # Plot the result</code></pre>
+<h4 id="Two-Dimensional-Numpy"><a href="#Two-Dimensional-Numpy" class="headerlink" title="Two Dimensional Numpy"></a>Two Dimensional Numpy</h4><pre><code class="python">a=[[11,12,13],[21,22,23],[31,32,33]]
+A = np.array(a) # Convert list to Numpy Array，Every element is the same type
+A.ndim # # Show the numpy array dimensions  2
+A.shape # A.shape  (3,3)
+A.size # # Show the numpy array size  9
+A[1, 2] # Access the element on the second row and third column  23
+A[1][2] # Access the element on the second row and third column
+A[0][0:2] # Access the element on the first row and first and second columns  array([11, 12])
+A[0:2, 2] # Access the element on the first and second rows third column  array([13, 23])
+Z = X + Y # Add X and Y
+Z = 2 * Y # Multiply Y with 2
+Z = X * Y # Multiply X with Y
+Z = np.dot(A,B) # Calculate the dot product
+np.sin(Z) # Calculate the sine of Z
+C.T # Get the transposed of C</code></pre>
+<h3 id="Simple-APIs"><a href="#Simple-APIs" class="headerlink" title="Simple APIs"></a>Simple APIs</h3><h4 id="Create-and-Use-APIs-in-Python"><a href="#Create-and-Use-APIs-in-Python" class="headerlink" title="Create and Use APIs in Python"></a>Create and Use APIs in Python</h4><ul>
+<li><p>An API lets two pieces of software talk to each other. </p>
+</li>
+<li><p>An essential type of API is a REST API (<strong>Re</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer APIs) that allows you to access resources via the internet. </p>
+</li>
+<li><p>Preparation</p>
+<pre><code class="python">!pip install nba_api
+def one_dict(list_dict):
+    keys=list_dict[0].keys()
+    out_dict=&#123;key:[] for key in keys&#125;
+    for dict_ in list_dict:
+        for key, value in dict_.items():
+            out_dict[key].append(value)
+    return out_dict</code></pre>
+</li>
+<li><p>Pandas API</p>
+<pre><code class="python">import pandas as pd
+import matplotlib.pyplot as plt
+dict_=&#123;&#39;a&#39;:[11,21,31],&#39;b&#39;:[12,22,32]&#125; # create a dictionary
+df=pd.DataFrame(dict_) #use the dataframe to communicate with the pandas API
+df.head()
+df.mean()</code></pre>
+</li>
+<li><p>REST APIs</p>
+<ul>
+<li>Use the <a target="_blank" rel="noopener" href="https://pypi.org/project/nba-api/">NBA API</a> to determine how well the Golden State Warriors performed against the Toronto Raptors.</li>
+<li>Use the API do the determined number of points the Golden State Warriors won or lost by for each game.</li>
+</ul>
+<pre><code class="python">from nba_api.stats.static import teams #https://pypi.org/project/nba-api/
+import matplotlib.pyplot as plt
+nba_teams = teams.get_teams() #returns a list of dictionaries 
+#The dictionary key id has a unique identifier for each team as a value
+nba_teams[0:3]
+dict_nba_team=one_dict(nba_teams) #create a dictionary
+df_teams=pd.DataFrame(dict_nba_team)
+df_teams.head()
+df_warriors=df_teams[df_teams[&#39;nickname&#39;]==&#39;Warriors&#39;]
+id_warriors=df_warriors[[&#39;id&#39;]].values[0][0] #we now have an integer that can be used to request the Warriors information
+from nba_api.stats.endpoints import leaguegamefinder
+wget https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%205/Labs/Golden_State.pkl
+file_name = &quot;Golden_State.pkl&quot;
+games = pd.read_pickle(file_name)
+games.head()
+games_home=games [games [&#39;MATCHUP&#39;]==&#39;GSW vs. TOR&#39;] #create two dataframes
+games_away=games [games [&#39;MATCHUP&#39;]==&#39;GSW @ TOR&#39;]   #Home&amp;Away
+games_home.mean()[&#39;PLUS_MINUS&#39;]
+games_away.mean()[&#39;PLUS_MINUS&#39;]
+fig, ax = plt.subplots()  #plot out
+games_away.plot(x=&#39;GAME_DATE&#39;,y=&#39;PLUS_MINUS&#39;, ax=ax)
+games_home.plot(x=&#39;GAME_DATE&#39;,y=&#39;PLUS_MINUS&#39;, ax=ax)
+ax.legend([&quot;away&quot;, &quot;home&quot;])
+plt.show()</code></pre>
+</li>
+</ul>
+<h4 id="Create-Speech-to-Text-Translator"><a href="#Create-Speech-to-Text-Translator" class="headerlink" title="Create Speech to Text Translator"></a>Create Speech to Text Translator</h4><ul>
+<li><p>Convert an audio file of an English speaker to text using a Speech to Text API</p>
+<pre><code class="python">!pip install PyJWT==1.7.1 ibm_watson wget
+from ibm_watson import SpeechToTextV1 
+import json
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+url_s2t = &quot;&quot; #URL
+iam_apikey_s2t = &quot;&quot; #API keys
+authenticator = IAMAuthenticator(iam_apikey_s2t) # create a Speech To Text Adapter object
+s2t = SpeechToTextV1(authenticator=authenticator)
+s2t.set_service_url(url_s2t)
+!wget -O PolynomialRegressionandPipelines.mp3  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/PolynomialRegressionandPipelines.mp3
+filename=&#39;PolynomialRegressionandPipelines.mp3&#39;
+with open(filename, mode=&quot;rb&quot;)  as wav:
+    response = s2t.recognize(audio=wav, content_type=&#39;audio/mp3&#39;)
+response.result
+from pandas.io.json import json_normalize
+json_normalize(response.result[&#39;results&#39;],&quot;alternatives&quot;)
+response
+recognized_text=response.result[&#39;results&#39;][0][&quot;alternatives&quot;][0][&quot;transcript&quot;]
+</code></pre>
+</li>
+<li><p>Translate the English version to a Spanish version using a Language Translator API</p>
+<pre><code class="python">from ibm_watson import LanguageTranslatorV3
+url_lt=&#39;https://gateway.watsonplatform.net/language-translator/api&#39;
+apikey_lt=&#39;&#39;
+version_lt=&#39;2018-05-01&#39;
+authenticator = IAMAuthenticator(apikey_lt)
+language_translator = LanguageTranslatorV3(version=version_lt,authenticator=authenticator)
+language_translator.set_service_url(url_lt)
+language_translator
+from pandas.io.json import json_normalize
+json_normalize(language_translator.list_identifiable_languages().get_result(), &quot;languages&quot;)
+translation_response = language_translator.translate(\
+    text=recognized_text, model_id=&#39;en-es&#39;)
+translation_response
+translation=translation_response.get_result()
+translation
+spanish_translation =translation[&#39;translations&#39;][0][&#39;translation&#39;]
+spanish_translation 
+translation_new = language_translator.translate(text=spanish_translation ,model_id=&#39;es-en&#39;).get_result()
+translation_eng=translation_new[&#39;translations&#39;][0][&#39;translation&#39;]
+translation_eng</code></pre>
+</li>
+</ul>
+<h4 id="HTTP-and-Requests"><a href="#HTTP-and-Requests" class="headerlink" title="HTTP and Requests"></a>HTTP and Requests</h4><ul>
+<li><p>When the client use a web page, browser sends an HTTP request to the server where the page is hosted. The server tries to find the desired resource by default <code>index.html</code>. </p>
+</li>
+<li><p>If request is successful, the server will send the object to the client in an <code>HTTP</code> response, this includes information like the type of the resource, the length of the resource, and other information.</p>
+</li>
+<li><p>The <code>HTTP</code> protocol allows you to send and receive information through the web including webpages, images, and other web resources.</p>
+</li>
+<li><p>Uniform resource locator (URL) is the most popular way to find resources on the web.</p>
+</li>
+<li><p>Request：<code>GET</code>，<code>POST</code>，<code>PUT</code>，<code>DELETE</code> method</p>
+<pre><code class="python">import requests
+import os 
+from PIL import Image
+from IPython.display import IFrame
+url=&#39;https://www.ibm.com/&#39;
+r=requests.get(url)
+r.status_code #view the status code
+print(r.request.headers)
+print(&quot;request body:&quot;, r.request.body)
+header=r.headers #view the HTTP response header
+print(r.headers)
+header[&#39;date&#39;]
+header[&#39;Content-Type&#39;] #Content-Type indicates the type of data
+r.encoding #check the encoding
+r.text[0:100]
+# Use single quotation marks for defining string
+url=&#39;https://gitlab.com/ibm/skills-network/courses/placeholder101/-/raw/master/labs/module%201/images/IDSNlogo.png&#39;
+r=requests.get(url) #make a get request
+print(r.headers)
+r.headers[&#39;Content-Type&#39;]
+# An image is a response object that contains the image as a bytes-like object
+path=os.path.join(os.getcwd(),&#39;image.png&#39;)
+with open(path,&#39;wb&#39;) as f:
+    f.write(r.content)
+Image.open(path)  </code></pre>
+</li>
+<li><p>Write <code>wget</code></p>
+<pre><code>!wget -O /resources/data/Example1.txt https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/Example1.txt</code></pre>
+<p>Is Equal To:</p>
+<pre><code class="python">url=&#39;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/Example1.txt&#39;
+path=os.path.join(os.getcwd(),&#39;example1.txt&#39;)
+r=requests.get(url)
+with open(path,&#39;wb&#39;) as f:
+    f.write(r.content)</code></pre>
+</li>
+<li><p>Get Request with URL Parameters</p>
+<ul>
+<li>We append <code>/get</code> in the Route indicate we would like to preform a <code>GET</code> request</li>
+<li><code>url_get=&#39;http://httpbin.org/get&#39;</code></li>
+<li>A <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Query_string">query string</a> is a part of a uniform resource locator (URL), this sends other information to the web server.</li>
+</ul>
+<pre><code class="python">payload=&#123;&quot;name&quot;:&quot;Joseph&quot;,&quot;ID&quot;:&quot;123&quot;&#125;
+r=requests.get(url_get,params=payload)
+r.url
+print(&quot;request body:&quot;, r.request.body)
+print(r.status_code)
+print(r.text)
+r.headers[&#39;Content-Type&#39;]
+r.json()
+r.json()[&#39;args&#39;]</code></pre>
+</li>
+<li><p> <code>POST</code> is used to send data to a server, but the <code>POST</code> request sends the data in a request body.</p>
+</li>
+<li><p><code>url_post=&#39;http://httpbin.org/post&#39;</code></p>
+</li>
+<li><p>This endpoint will expect data as a file or as a form, a from is convenient way to configure an HTTP request to send data to a server.</p>
+<pre><code class="python"># To make a POST request we use the post() function, the variable payload is passed to the parameter data 
+r_post=requests.post(url_post,data=payload) 
+
+print(&quot;POST request URL:&quot;,r_post.url ) #the POST request has no name or value pairs
+print(&quot;GET request URL:&quot;,r.url)
+print(&quot;POST request body:&quot;,r_post.request.body) #compare the POST and GET 
+print(&quot;GET request body:&quot;,r.request.body)
+r_post.json()[&#39;form&#39;]</code></pre>
+</li>
+</ul>
+<h3 id="Final-Project"><a href="#Final-Project" class="headerlink" title="Final Project"></a>Final Project</h3><h4 id="Analyzing-US-Economic-Data-and-Building-a-Dashboard"><a href="#Analyzing-US-Economic-Data-and-Building-a-Dashboard" class="headerlink" title="Analyzing US Economic Data and Building a Dashboard"></a>Analyzing US Economic Data and Building a Dashboard</h4><ul>
+<li><p><a target="_blank" rel="noopener" href="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/FinalModule_Coursera/PY0101EN_Coursera_FinalAssignment.ipynb">A template notebook is provided in the lab</a></p>
+</li>
+<li><p>Examine how changes in GDP impact the unemployment rate.</p>
+<pre><code class="python">import pandas as pd
+from bokeh.plotting import figure, output_file, show,output_notebook
+output_notebook()
+# Define the function make_dashboard
+def make_dashboard(x, gdp_change, unemployment, title, file_name):
+    output_file(file_name)
+    p = figure(title=title, x_axis_label=&#39;year&#39;, y_axis_label=&#39;%&#39;)
+    p.line(x.squeeze(), gdp_change.squeeze(), color=&quot;firebrick&quot;, line_width=4, legend=&quot;% GDP change&quot;)
+    p.line(x.squeeze(), unemployment.squeeze(), line_width=4, legend=&quot;% unemployed&quot;)
+    show(p)
+# The dictionary links contain the CSV files with all the data.    
+links=&#123;&#39;GDP&#39;:&#39;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/FinalModule_Coursera/data/clean_gdp.csv&#39;,\
+       &#39;unemployment&#39;:&#39;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/FinalModule_Coursera/data/clean_unemployment.csv&#39;&#125;</code></pre>
+</li>
+<li><p>Question 1: Create a dataframe that contains the GDP data and display the first five rows of the dataframe.</p>
+<pre><code class="python">csv_path=links[&#39;GDP&#39;]  # links[&quot;GDP&quot;] contains the path or name of the file.
+df=pd.read_csv(csv_path)
+df.head()</code></pre>
+</li>
+<li><p>Question 2: Create a dataframe that contains the unemployment data. Display the first five rows of the dataframe.</p>
+<pre><code class="python">csv_path=links[&#39;unemployment&#39;]
+df=pd.read_csv(csv_path)
+df.head()</code></pre>
+</li>
+<li><p>Question 3: Display a dataframe where unemployment was greater than 8.5%.</p>
+<pre><code class="python">csv_path=links[&#39;unemployment&#39;]
+df=pd.read_csv(csv_path)
+df1=df[df[&#39;unemployment&#39;]&gt;8.5]
+df1</code></pre>
+</li>
+<li><p>Question 4: Use the function make_dashboard to make a dashboard</p>
+<pre><code class="python"># Create your dataframe with column date
+csv_path=links[&#39;GDP&#39;]
+gdp_dataframe=pd.read_csv(csv_path)
+x = pd.DataFrame(gdp_dataframe, columns=[&#39;date&#39;])
+x.head()
+# Create your dataframe with column change-current
+gdp_change = pd.DataFrame(gdp_dataframe, columns=[&#39;change-current&#39;])
+gdp_change.head()
+# Create your dataframe with column unemployment
+csv_path=links[&#39;unemployment&#39;]
+unemploy_dataframe= pd.read_csv(csv_path)
+unemployment = pd.DataFrame(unemploy_dataframe, columns=[&#39;unemployment&#39;])
+unemployment.head()
+# Give your dashboard a string title
+title = &quot;Unemployement stats &amp; GDP&quot;
+file_name = &quot;index.html&quot;
+# Fill up the parameters in the following function:
+make_dashboard(x=x, gdp_change=gdp_change, unemployment=unemployment, title=title, file_name=file_name)</code></pre>
+</li>
+</ul>
+<h4 id="My-Work"><a href="#My-Work" class="headerlink" title="My Work"></a>My Work</h4><ul>
+<li><p><a target="_blank" rel="noopener" href="https://jp-tok.dataplatform.cloud.ibm.com/analytics/notebooks/v2/86e30bef-41d8-4b38-a8f3-b0be3f7ca27d/view?access_token=7c7aa7dd80dcca2762f88c50a413cdaed865b0d218dded9d0afcf730680a7cf1">Final Assignment Notebook Url</a> (May not be accessible from Mainland China)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/Python-for-DS&AI.png" alt="Unemployment stats &amp; GDP"></p>
+</li>
+</ul>
+<h3 id="Assignments"><a href="#Assignments" class="headerlink" title="Assignments"></a>Assignments</h3><ul>
+<li>Visit my <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/LearnCS/tree/main/IBM%20Professional%20Certificates/Python%20for%20Data%20Science%20and%20AI">Github Repository</a></li>
+</ul>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Python-for-Data-Science/&title=Python for Data Science, AI & Development - Bezhuang's Blog&summary=
+This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue to expand Python learning. The following are the notes I took during this course. Since that I’ve learned Python for everybody on Coursera before, so this note will only contain the necessary outlines and newly learned content.
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Python-for-Data-Science/&title=Python for Data Science, AI & Development - Bezhuang's Blog&summary=
+This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue to expand Python learning. The following are the notes I took during this course. Since that I’ve learned Python for everybody on Coursera before, so this note will only contain the necessary outlines and newly learned content.
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Python-for-Data-Science/&title=Python for Data Science, AI & Development - Bezhuang's Blog&summary=
+This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue to expand Python learning. The following are the notes I took during this course. Since that I’ve learned Python for everybody on Coursera before, so this note will only contain the necessary outlines and newly learned content.
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADrklEQVR42u3aQZLbMAwEQP//07v3pFQiBpANJ82bZYkimz5MAX79GNF4IQAHDhw4Axy4JXCvcPw14R/Xr+67eu5q/urn9H2n+wUHDhw4cODAgdsGV33x6fd3IKdg6YGkz1/uBxw4cODAgQMHbilcGkinA2w3eKf3364XHDhw4MCBAwfuH4O72/hpIbEaYE+BwYEDBw4cOHDgwNUCcVoI7cKn6wUHDhw4cODAgftWuHKDttmAPg2+aeGzOv/bOvngwIEDBw4cOHBDcNWRNpy3fI73Cw4cOHDgwIEDtwSuO54KntVgetoQb78XHDhw4MCBAwduCVwaEKcaydWDmArs1f2BAwcOHDhw4MBthZtqFE9tMA28U9cvvwcHDhw4cODAgVsCd/xAM2hObeSpIHzqAQ4cOHDgwIED961w3QB8N2/3vvTgToM1OHDgwIEDBw7cFrh0onSDaQHxqYJpHIDBgQMHDhw4cOA+DNcFOV3QVKGyG5zTHww4cODAgQMHDtw2uOrC0vu6BcZ2AbLZmAYHDhw4cODAgftWuHSB038A7Dawq/sCBw4cOHDgwIHbDpcWGKsB9m6eNABXG9rxZ3DgwIEDBw4cuGVw00GzHCzDxvNUo/r4OXDgwIEDBw4cuC+F6zaOTwNwen264DkWgMGBAwcOHDhw4B6CSzeYBtypwme1Id4ufIIDBw4cOHDgwC2BOx1TDenq56ehygcKDhw4cODAgQO3BO70xU9BlguJxQLoVCMdHDhw4MCBAwduK1xaSEw3XA247wrOt/OAAwcOHDhw4MAtg+s2bKfg0gJr9b7qDwIcOHDgwIEDB24b3OlCuoXFqYM4HdX1HwdjcODAgQMHDhy4JXBTjeO0IZwG2OqBv60hDQ4cOHDgwIED92G4KlQVbDp4d4PtWAAGBw4cOHDgwIH7ENxUofKpwJw2oqvPX64DHDhw4MCBAwduOVy18ft0AJ46sHZjGxw4cODAgQMHbglcd5w2lquN76cPqnoA4MCBAwcOHDhw2+CmgmG64G5hsTpvGpDBgQMHDhw4cOC2wlUDbxog0yCdBuFqAL69Dg4cOHDgwIEDtxQuLSCWC4LNQP16eFy+Fxw4cODAgQMH7j+FS6+fvj+dL25IgwMHDhw4cODAfTnc1IKrfxScamQfB29w4MCBAwcOHLilcOkfBquN3/T+auGzW0gFBw4cOHDgwIHbDjfVsK0CnBYi03mm5wMHDhw4cODAgdsCZxQLmwjAgQMHzgAH7rPjFyMTiB/CnYubAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Python-for-Data-Science/&text=Python for Data Science, AI & Development - Bezhuang's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>2021阿里Java训练营第一期</p>
+          <p class='content'>
+在阿里云开发者社区中看到有Java新手训练营（5天突破Java面向对象编程）的课程，采用直播授课的形式，希望能在侠客大佬的指导下有更好的学习效果吧。当然，直播时间有限，所以这篇日志并不是对Ja...</p>
+        </a>
+      
+      
+        <a class='next' href='/Data-Visualization-and-Dashboards/'>
+          <p class='title'>Data Visualization and Dashboards with Excel and Cognos<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+“A picture is worth 1,000 words”. This Course provided by IBM endows me with the ability to effe...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-Basics"><span class="toc-text">Python Basics</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-Data-Structures"><span class="toc-text">Python Data Structures</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-Programming-Fundamentals"><span class="toc-text">Python Programming Fundamentals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pandas"><span class="toc-text">Pandas</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Loading-data-with-Pandas"><span class="toc-text">Loading data with Pandas</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Select-Data-from-a-data-frame-in-Pandas"><span class="toc-text">Select Data from a data frame in Pandas</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Working-with-and-Saving-data-with-Pandas"><span class="toc-text">Working with and Saving data with Pandas</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numpy"><span class="toc-text">Numpy</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Preparation"><span class="toc-text">Preparation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#One-Dimensional-Numpy"><span class="toc-text">One Dimensional Numpy</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Two-Dimensional-Numpy"><span class="toc-text">Two Dimensional Numpy</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Simple-APIs"><span class="toc-text">Simple APIs</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-and-Use-APIs-in-Python"><span class="toc-text">Create and Use APIs in Python</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-Speech-to-Text-Translator"><span class="toc-text">Create Speech to Text Translator</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP-and-Requests"><span class="toc-text">HTTP and Requests</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Final-Project"><span class="toc-text">Final Project</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Analyzing-US-Economic-Data-and-Building-a-Dashboard"><span class="toc-text">Analyzing US Economic Data and Building a Dashboard</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#My-Work"><span class="toc-text">My Work</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assignments"><span class="toc-text">Assignments</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Python for Data Science, AI &amp; Development";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        
+          <div><p>Copyright © 2021 Zhihao Zhuang. All rights reserved</p>
+</div>
+        
+      
+    
+      
+        
+          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+</div>
+        
+      
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/********************脚本懒加载函数********************************/
+function loadScript(src, cb) {
+var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+var script = document.createElement('script');
+script.setAttribute('type','text/javascript');
+if (cb) script.onload = cb;
+script.setAttribute('src', src);
+HEAD.appendChild(script);
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://www.zhuangzhihao.top
+        
+        
+        
+        
+          id="https:wwwzhuangzhihaotop"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 返回主页
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/Bezhuang/Hexo-blog
+        
+        
+        
+        
+          id="https:githubcomBezhuangHexo-blog"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('false' == true && ('home,contributors,source_docs,hr,print'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+	
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/issues.min.js');
+	
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+
+
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
+  });
+</script>
+
+
+
+
+
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  pjax_comment=pjax_valine;
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/app.min.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/search/hexo.min.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI',
+    app_key: 'j5I5paEqIfWfOlCg13vU2vNq',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://blog.zhuangzhihao.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+function bindToggleButton() {
+	var btn=$("#wrapper .toggle-mode-btn");
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+document.addEventListener("pjax:success", bindToggleButton);
+
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/tu8j8vmfuovtkhsj4lgr7sub986gd1ku.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#l_cover",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      
+      $("#wrapper .toggle-mode-btn").unbind('click');
+      
+	  
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        if (typeof IssuesAPI == "undefined") {
+          loadIssuesJS();
+        }
+        
+          pjax_initCopyCode();
+        
+		
+          try{pjax_comment();} catch (e) {}
+        
+      } catch (e) {
+        console.log(e);
+      }
+	  
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+<!--浏览器搞笑标题-->
+<!--<script type="text/javascript" src="/js/FunnyTitle.js"></script>-->
+<!-- 数字雨 -->
+<canvas id="canvas" width="1440" height="900" ></canvas>
+<script type="text/javascript" src="/js/DigitalRain.js"></script>

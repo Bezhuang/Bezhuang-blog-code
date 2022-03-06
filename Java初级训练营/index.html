@@ -1,0 +1,2640 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>2021阿里Java训练营第一期 - Bezhuang&#39;s Blog</title>
+  
+    <meta name="keywords" content="Java">
+  
+
+  
+    <meta name="description" content="
+在阿里云开发者社区中看到有Java新手训练营（5天突破Java面向对象编程）的课程，采用直播授课的形式，希望能在侠客大佬的指导下有更好的学习效果吧。当然，直播时间有限，所以这篇日志并不是对Java知识点完全系统的梳理，主要记录一些开发中常用的语法和概念和在面试时会遇到的问题，以训练和熟悉特性为主。
+">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Bezhuang's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+
+<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+
+
+</head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
+    
+
+<header id="l_header" class="l_header always shadow floatable blur show"  >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Bezhuang's Blog
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div class='cover-bg' style='background-image:url(https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%A3%81%E7%BA%B82.jpg)'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">庄之皓 · Bezhuang</p>
+    
+    
+      <p class="subtitle">欢迎访问我的博客！Welcome to my blog!</p>
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="search here..." />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/photos"
+              
+              
+              id="photos">
+              <p>相册</p>
+            </a>
+          
+            <a href="/projects"
+              
+              
+              id="projects">
+              <p>开源库</p>
+            </a>
+          
+            <a href="/todo"
+              
+              
+              id="todo">
+              <p>计划表</p>
+            </a>
+          
+            <a href="/guestbook"
+              
+              
+              id="guestbook">
+              <p>留言板</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        2021阿里Java训练营第一期
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">程序人生</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年2月4日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：6.8k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：28分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p>在阿里云开发者社区中看到有<a target="_blank" rel="noopener" href="https://developer.aliyun.com/learning/trainingcamp/java/1?spm=a2c6h.21110250.J_3925608520.1.73b63c67PXfMgE">Java新手训练营</a>（5天突破Java面向对象编程）的课程，采用直播授课的形式，希望能在侠客大佬的指导下有更好的学习效果吧。当然，直播时间有限，所以这篇日志并不是对Java知识点完全系统的梳理，主要记录一些开发中常用的语法和概念和在面试时会遇到的问题，以<a target="_blank" rel="noopener" href="https://github.com/Bezhuang/LearnCS/tree/main/Java%E8%AE%AD%E7%BB%83%E8%90%A5">训练</a>和熟悉特性为主。</p>
+</blockquote>
+<a id="more"></a>
+
+<p><img src="https://ucc-image.oss-cn-beijing.aliyuncs.com/credential/22/87e768f5aca640b3ad57813564f6cdb8.png"></p>
+<h3 id="Java知识点"><a href="#Java知识点" class="headerlink" title="Java知识点"></a>Java知识点</h3><ol>
+<li>Java语言的发展历史</li>
+<li>Java语言的优势和特点</li>
+<li>OOP面向对象编程概念：对象、<code>Class</code>类、继承、封装、多态</li>
+<li>基础语法：数据类型、8大基本类型、数据结构</li>
+<li>关键字：<code>int</code> 、<code>class</code></li>
+<li>变量：存储数据</li>
+<li>数据类型: <code>String</code>、<code>int</code>、<code>bool</code>、链表<code>List</code>、数组、哈希表、字典</li>
+<li>控制语句: <code>if else</code>、<code>while</code>、<code>for</code></li>
+<li>文件操作：调用封装好的类库 <code>File</code></li>
+<li>网络编程：Socket TCP IP、SMTP邮件传输协议等</li>
+<li>数据库连接：ADO.NET , JDBC等连接库NoSQL</li>
+<li>网站框架：```PHP`、ASP、JSP、ASP.NET、Spring MVC、Node</li>
+</ol>
+<h4 id="Java语言特性"><a href="#Java语言特性" class="headerlink" title="Java语言特性"></a>Java语言特性</h4><ul>
+<li><p>IDE：Eclipse 或者IntelliJ IDEA、MyEclipse</p>
+</li>
+<li><p>JDK（Java Development Kit）：Java开发工具包，包含JAVA的运行环境和开发工具</p>
+<ul>
+<li>Java虚拟机（JVM+Java系统类库）、Java编译器、Java调试工具、Java分析工具</li>
+<li>安装和配置：JDK环境变量和 classpath</li>
+</ul>
+</li>
+<li><p>Src：源代码文件夹，Source；Bin文件夹：保存编译后的二进制文件</p>
+</li>
+</ul>
+<h4 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h4><pre><code class="java">package come.alibiba;
+public class Test &#123;
+    public static void main(String[] args) &#123;
+        System.out.println(&quot;Hello World&quot;);   //println：输出行
+    &#125;
+&#125;</code></pre>
+<h4 id="Java代码执行顺序"><a href="#Java代码执行顺序" class="headerlink" title="Java代码执行顺序"></a>Java代码执行顺序</h4><ol>
+<li><p>编译原理：Java源代码 词法分析、语法分析</p>
+</li>
+<li><p>编译后的文件 <code>.class</code> 文件， ByteCode 字节码格式</p>
+</li>
+<li><p>JVM 类装载器 ClassLoader 装载执行的类文件</p>
+</li>
+<li><p>代码检验：符合JVM规范和类型安全等</p>
+</li>
+<li><p>Java中间代码 IR（Intermediate Representation）IL</p>
+</li>
+<li><p>准备：准备方法表、静态字段等需要的内存空间</p>
+</li>
+<li><p>JIT 即时编译器执行二次编译 IR 中间代码</p>
+</li>
+<li><p>转换为机器码</p>
+</li>
+<li><p>CPU 以 线程Thread 身份执行机器码</p>
+</li>
+</ol>
+<h4 id="Java-9新特性"><a href="#Java-9新特性" class="headerlink" title="Java 9新特性"></a>Java 9新特性</h4><ol>
+<li>Jigsaw 项目：模块化，包，仿C#的程序集<code>dll</code>概念</li>
+<li>简化了的进程 API</li>
+<li>轻量级的 JSON API</li>
+<li>钱和货币的相关 API</li>
+<li>改善多线程锁争用机制</li>
+<li>代码分段缓存</li>
+<li>改进的 Stream API</li>
+<li>改进的 Javadoc</li>
+<li>HTTP 2.0 客户端 HTTP/2。WebSocket</li>
+<li>多版本兼容JAR</li>
+</ol>
+<h4 id="Java三个版本"><a href="#Java三个版本" class="headerlink" title="Java三个版本"></a>Java三个版本</h4><ol>
+<li>2005年6月，JavaOne大会SUN公司公开Java SE 6（To，Java已经更名以取消其中数字”2“）</li>
+<li>JavaSE（Java 2 Platform Standard Edition，java标准版）</li>
+<li>JavaEE（Java 2 Platform,Enterprise Edition，java企业版）</li>
+<li>JavaME（Java 2 Platform Micro Edition，java平台微型版）</li>
+<li>Enterprise Java Bean（EJB）Java企业开发规范标准，框架重</li>
+<li>Pivotal 公司开发一套 Spring 框架：取代EJB框架，简化Java企业级开发</li>
+</ol>
+<h4 id="JVM-Java虚拟机"><a href="#JVM-Java虚拟机" class="headerlink" title="JVM Java虚拟机"></a>JVM Java虚拟机</h4><ol>
+<li>Java虚拟机： 托管执行Java的中间代码 <code>.class</code>，Java Virtual Machine缩写</li>
+<li>虚拟机：linux系统，Window系统虚拟计算机</li>
+<li>Java编译成中间代码，JIT 即时编译器再次编译为CPU指令</li>
+<li>CPU执行</li>
+<li>JVM把 <code>.class</code> 文件加载内存，C#编译后文件格式 <code>.dll</code></li>
+<li>二次编译 jit（Just in Time）转换为CPU指令执行</li>
+<li>JVM 负责Java代码编译、执行、内存分配、GC回收</li>
+<li>C#等价概念 CLR 公共语言运行时，包含C#、VB、F#等</li>
+<li>Common Language Runtime</li>
+</ol>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><ul>
+<li>8大基本数据类型<ul>
+<li><code>byte</code> 字节 8bit 位，<code>short</code> 短整型 2X8bit，<code>int</code> 整型 4X8bit，<code>long</code> 长整型 8X8bit，<code>float</code> 浮点 4X8bit，<code>double</code> 双精度 8X8bit，<code>char</code> 字符 8bit，<code>boolean</code> 布尔类型 8bit</li>
+</ul>
+</li>
+<li>两大数据类型<ul>
+<li>基本数据类型（Java 8大基本类型，C#中也有）</li>
+<li>引用数据类型（复杂的数据类型，Java，C#中也有）</li>
+<li>C#中还有一种值类型概念</li>
+</ul>
+</li>
+<li>6大包装类（包装一层）：<code>Boolean</code>、<code>Character</code>、<code>Integer</code>、<code>Long</code>、<code>Float</code>、<code>Double</code></li>
+</ul>
+<h4 id="Java的枚举类型"><a href="#Java的枚举类型" class="headerlink" title="Java的枚举类型"></a>Java的枚举类型</h4><ol>
+<li><p>Java 中的枚举是一些常量的集合，Java 1.5 中引入，属于引用类型</p>
+</li>
+<li><p><code>java.lang.Enum</code></p>
+</li>
+<li><p>大写关键字 <code>Enum</code>，小写关键字 <code>enum</code></p>
+</li>
+<li><p><code>Enum</code> 抽象类，所有枚举类型的基类，<code>enum</code> 继承自  <code>Enum</code></p>
+<pre><code class="java">public enum Season &#123; SPRING, SUMMER, AUTUM, WINTER &#125;</code></pre>
+</li>
+</ol>
+<h3 id="条件和循环语句"><a href="#条件和循环语句" class="headerlink" title="条件和循环语句"></a>条件和循环语句</h3><h4 id="if条件"><a href="#if条件" class="headerlink" title="if条件"></a>if条件</h4><pre><code class="java">int num = 10000;
+if (num &gt; 10000000) &#123; System.out.println(&quot;超级富豪程序员&quot;); &#125; 
+else if (num &gt; 1000000) &#123; System.out.println(&quot;富豪程序员&quot;); &#125;
+else &#123; System.out.println(&quot;码畜&quot;); &#125;</code></pre>
+<h4 id="switch条件"><a href="#switch条件" class="headerlink" title="switch条件"></a>switch条件</h4><pre><code class="java">System.out.println(&quot;输入星期查询&quot;);
+Scanner sin = new Scanner(System.in);
+int day = sin.nextInt();
+switch (day)&#123;
+    case 6:
+        System.out.println(&quot;休息&quot;);
+        break;
+    default:
+        System.out.println(&quot;上班&quot;);
+        break;&#125;</code></pre>
+<h4 id="for循环，for-each循环"><a href="#for循环，for-each循环" class="headerlink" title="for循环，for each循环"></a>for循环，for each循环</h4><pre><code class="java">int sum = 0;
+for (int i = 1; i &lt;= 100; i++) &#123; sum = sum + i; &#125; System.out.println(sum);
+for (String s : list)&#123; System.out.println(s); &#125;  //foreach循环</code></pre>
+<h4 id="while循环，do-while循环"><a href="#while循环，do-while循环" class="headerlink" title="while循环，do while循环"></a>while循环，do while循环</h4><pre><code class="java">int age = 18;
+while(age&lt;100) &#123; age=age+1; System.out.println(age); &#125;
+do&#123; age++; System.out.println(age); &#125;while (age&lt;100)</code></pre>
+<h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><ul>
+<li>算数运算符，二进制位运算符（ <code>&amp;</code>  与，<code>|</code>  或，<code>^ </code>异或，<code>〜 </code>按位取反），逻辑运算符（<code>&amp;&amp;</code> and，<code>||</code> or，<code>!</code> not），赋值运算符（<code>/= </code>除和），条件运算符 （三元运算符）<code>(a=1)?1:2</code></li>
+</ul>
+<h3 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h3><ul>
+<li><p>Object Oriented Programming</p>
+</li>
+<li><p>软件工程的发展</p>
+<p><code>面向硬件：CPU指令，汇编</code> -&gt; <code>面向过程PO：C语言、Pascal</code> -&gt; <code>面向对象OO：C++、Java、C#</code> -&gt; <code>面向组件CO：COM</code> -&gt; <code>面向服务SO：Web服务</code></p>
+</li>
+<li><p><code>Class</code>类代码封装的基本单元，<code>Class</code>封装了数据（变量）和行为（函数功能）</p>
+</li>
+<li><p><code>Class</code> 描述抽象事务的类型，万物（<code>Object</code>）皆可归为类，对象是类的具体实体</p>
+</li>
+<li><p>类继承</p>
+</li>
+</ul>
+<h4 id="OOP面向对象的三大特征"><a href="#OOP面向对象的三大特征" class="headerlink" title="OOP面向对象的三大特征"></a>OOP面向对象的三大特征</h4><ul>
+<li>继承 <code>Inheritence</code>：子类继承父类的代码。继承是父类和子类之间共享数据和方法的机制，本质就是代码重用，通常把父类称为基类，子类称为派生类，Java和C#单继承，通过接口来实现多重继承，接口可以从多个基接口继承。</li>
+<li>封装 <code>Encapsulation</code>：<code>Class</code> + 修饰符封装代码。就是用一个<code>Class</code>把数据和行为代码组合在一起，形成一个对象，面向过程封装<code>Function</code>，在Java和C#中类的工具，对象则是封装的基本单元，访问级别修饰符：<code>Public</code>、<code>Protected</code>、<code>Private</code></li>
+<li>多态性 <code>Polymorphism</code>：同一种行为，多种代码实现。就是指同一个操作作用于不同的对象，可以有不同的解释，产生不同的执行结果，多态性有两种，一种是静态多态（编译时多态），一种是动态多态（运行时多态），方法重载和重写实现。</li>
+</ul>
+<h4 id="面向对象OOP核心概念"><a href="#面向对象OOP核心概念" class="headerlink" title="面向对象OOP核心概念"></a>面向对象OOP核心概念</h4><ol>
+<li>面向过程编程（POP），Procedure Oriented Programming</li>
+<li>函数 Function 改名叫 方法 Method</li>
+<li>汇编、C、SQL、C++， Java，JavaScript、C#、Go</li>
+<li>对物品 Object 进行分类 Class，万物分类，抽象，Object物体，编程语言：对象</li>
+<li>Class 代码封装的更大的单位，类包含功能函数和数据变量</li>
+<li>类全局变量：属性、成员，函数外面变量</li>
+<li><code>Class</code> 类：数据 + 行为功能，代码组织更合理，变量+函数， 字段+方法</li>
+</ol>
+<h4 id="封装Encapsulation"><a href="#封装Encapsulation" class="headerlink" title="封装Encapsulation"></a>封装Encapsulation</h4><ul>
+<li>封装 Encapsulation：相比之前Function功能，把数据和行为功能代码打包在一起，形成一个封闭Class类。代码封装单位。</li>
+<li>在C#和Java中，类是支持对象封装的工具，对象则是封装的基本单元。</li>
+</ul>
+<ol start="3">
+<li>类和结构是 .NET 和 Java 中的常规类型系统的基本构造，本质上都属于数据结构，封装着一个逻辑单位的数据和行为。</li>
+</ol>
+<ul>
+<li>数据和行为是该类或结构的“成员”，它们包含各自的方法、属性和事件等。</li>
+<li>Class 默认是 <code>Internal</code>，成员是 <code>Private</code></li>
+</ul>
+<h3 id="OOP原则"><a href="#OOP原则" class="headerlink" title="OOP原则"></a>OOP原则</h3><h4 id="Class类继承"><a href="#Class类继承" class="headerlink" title="Class类继承"></a>Class类继承</h4><ul>
+<li>为了更好的代码重用</li>
+<li>在Java中，子类可以继承父类，所有的方法都是默认 <code>Virtual</code> 的</li>
+</ul>
+<pre><code class="java">public class Dog extends Animal&#123;
+    @Override               //重写
+    public void Run()
+    &#123;System.out.println(&quot;Hello dog run...&quot;);&#125;
+&#125;</code></pre>
+<ul>
+<li>构造函数，创建对象，实例化，构造对象，通过对象，调用行为，功能、方法</li>
+</ul>
+<h4 id="面向对象行为多态"><a href="#面向对象行为多态" class="headerlink" title="面向对象行为多态"></a>面向对象行为多态</h4><ul>
+<li><p>多态是行为（功能、函数、方法）的多态，指为同名的方法提供不同的实现代码，是面向对象编程的最重要特征</p>
+</li>
+<li><p>我们不用关心方法的具体实现而仅仅依靠名称来进行调用操作</p>
+</li>
+<li><p><code>Abstract</code> 抽象方法和 <code>Virtual</code> 虚方法是多态性的基础</p>
+</li>
+<li><p>Java和C#提供三种多态能力：接口多态、继承多态、抽象多态</p>
+</li>
+<li><p>接口：部分约束、合约、约定</p>
+<pre><code class="java">public interface IBike //声明一个接口 叫功能
+&#123;void Call();&#125;  //定义Call方法
+public class Cat : IBike //猫类实现接口
+&#123;public void Call()&#123;     
+    Console.WriteLine(&quot;喵喵喵&quot;);&#125;  //实现Call方法
+&#125;</code></pre>
+</li>
+</ul>
+<h4 id="多态的实现方式"><a href="#多态的实现方式" class="headerlink" title="多态的实现方式"></a>多态的实现方式</h4><ul>
+<li>重载 <code>Overloading</code>：同一个类中，兄弟方法，方法名相同，参数个数、类型、顺序不同</li>
+<li>重写 <code>Override</code>：子类和父类，父子关系，子类重新实现父类中的同名方法</li>
+<li><code>@override</code> 标记到重写的方法上</li>
+</ul>
+<h4 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h4><ul>
+<li><p>抽象的类型，无法具体化接口，约束合约</p>
+<pre><code class="java">package com.frankxulei; //接口表示一种约束，电源接口、USB接口
+    public interface IFly &#123; void Fly(); &#125;
+    public class Dog extends Animal implements IFly &#123; //继承抽象类和接口
+    @Override
+    public void Run() &#123; System.out.println(&quot;Hello dog run...&quot;); &#125;
+    @Override
+    public void Fly() &#123; System.out.println(&quot;Hello dog fly...&quot;); &#125; &#125;</code></pre>
+</li>
+</ul>
+<h4 id="抽象类和接口的区别"><a href="#抽象类和接口的区别" class="headerlink" title="抽象类和接口的区别"></a>抽象类和接口的区别</h4><ol>
+<li><p>实例方法：创建对象才能调用的方法</p>
+</li>
+<li><p>静态方法：<code>Static</code> 修饰的方法，属于类<code>Class</code>，不需要实例化</p>
+</li>
+<li><p>虚方法：<code>virtual</code>，介于抽象和实体方法之间，可以重写</p>
+</li>
+<li><p>除了 <code>static</code>、<code>final</code>、<code>private</code> 修饰的所有方法都是抽象类</p>
+</li>
+<li><p><code>Abstract</code> 抽象类不可以被实例化，<code>interface</code> 接口也不可以</p>
+</li>
+<li><p>抽象类只允许单继承，接口可以多继承</p>
+</li>
+<li><p><code>Abstract</code> 抽象类有具体方法实现，接口只有方法声明</p>
+</li>
+<li><p>抽象类使用关键字 <code>extends</code>，接口继承使用 <code>implements</code></p>
+</li>
+<li><p>抽象类代表同一类别， 接口代表一种部分约束</p>
+</li>
+</ol>
+<h4 id="虚方法，抽象方法和重写"><a href="#虚方法，抽象方法和重写" class="headerlink" title="虚方法，抽象方法和重写"></a>虚方法，抽象方法和重写</h4><ul>
+<li><p>父类不希望子类重写我</p>
+<pre><code class="java">abstract class Car
+    &#123;public void Run()//虚方法
+    &#123;Console.WriteLine(&quot;BaseClass.VirtualMethod&quot;);&#125;
+    public abstract void AddPower();&#125; //抽象方法
+class BMWCar : Car
+    &#123; @override //重写虚方法
+      public void Run()&#123; Console.WriteLine(&quot;SubClass.VirtualMethod&quot;);&#125;
+       @override
+      public void AddPower()&#123; Console.WriteLine(“加油&quot;); &#125;&#125;
+class Test
+&#123; static void Main()&#123;
+Car baseClass = new BMWCar(); //声明类型为基类，实际类型为子类
+//由实际类型决定调用子类还是父类方法，实际是SubClass类的对象：SubClass.VirtualMethod
+baseClass. Run();
+baseClass. AddPower(); &#125;&#125;//重写抽象方法</code></pre>
+</li>
+</ul>
+<h4 id="简易计算器"><a href="#简易计算器" class="headerlink" title="简易计算器"></a>简易计算器</h4><ul>
+<li>用户输入数据：借用 <code>Scanner</code> 类</li>
+<li>选择加减乘除：<code>IF</code> 条件判断</li>
+<li>计算结果：数据类型</li>
+<li>方法重载</li>
+</ul>
+<h3 id="文件编程"><a href="#文件编程" class="headerlink" title="文件编程"></a>文件编程</h3><h4 id="File文件流和IO读写文件工具类"><a href="#File文件流和IO读写文件工具类" class="headerlink" title="File文件流和IO读写文件工具类"></a>File文件流和IO读写文件工具类</h4><ul>
+<li><p><code>Java.io</code> 包几乎包含了所有操作输入、输出需要的类，所有这些流类代表了输入源和输出目标</p>
+</li>
+<li><p><code>Java.io</code> 包，File文件类库的流支持很多格式（基本类型、对象、本地化字符集等）</p>
+</li>
+<li><p>一个流可以理解为一个数据的序列，输入流表示从一个源读取数据，输出流表示向一个目标写数据</p>
+</li>
+<li><p>Java为I/O提供了强大而灵活的支持（类库），使其更广泛地应用到文件传输和网络编程中</p>
+<pre><code class="java">import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;</code></pre>
+</li>
+</ul>
+<h4 id="Java-IO读写文件工具类"><a href="#Java-IO读写文件工具类" class="headerlink" title="Java IO读写文件工具类"></a>Java IO读写文件工具类</h4><ul>
+<li>Java读文件，通常会使用 FileInputStream 和 FileReader（也可以单独使用）读文本内容</li>
+<li>java写文件中，通常会使用 FileOutputStream 和 FileWriter（也可以单独使用），</li>
+<li>FileWriter 只能写文本文件</li>
+</ul>
+<h4 id="Java打开-保存开文件对话框"><a href="#Java打开-保存开文件对话框" class="headerlink" title="Java打开/保存开文件对话框"></a>Java打开/保存开文件对话框</h4><ul>
+<li>AWT：FileDialog 类 + FilenameFilter 类实现本功能</li>
+<li>Swing：JFileChooser 类 + FileFilter 类实现本功能</li>
+</ul>
+<h3 id="复杂数据类型"><a href="#复杂数据类型" class="headerlink" title="复杂数据类型"></a>复杂数据类型</h3><h4 id="数组（Array）"><a href="#数组（Array）" class="headerlink" title="数组（Array）"></a>数组（Array）</h4><ul>
+<li><p>物理上内存空间（数组连续的存储空间）连续，访问速度快，不灵活</p>
+</li>
+<li><p>相同数据类型的元素按一定顺序排列的集合（一组连续的存储空间），就是把有限个类型相同的变量用一个名字命名，然后用编号区分他们的变量的集合，这个名字成为数组名，编号成为下标。也叫索引 Index</p>
+</li>
+<li><p>数组是一种数据结构，它包含若干相同类型的变量。</p>
+</li>
+<li><p>数组元素，通过下标，0开始计数</p>
+<pre><code class="java">int[10] array1 = new int[10];
+int[1]=2;
+int[] array2 = new int[] &#123; 1, 3, 5, 7, 9 &#125;;
+String[] nameArray = &#123;“C”,”Java”,”C++”&#125;;</code></pre>
+</li>
+</ul>
+<h4 id="数组特点"><a href="#数组特点" class="headerlink" title="数组特点"></a>数组特点</h4><ul>
+<li>内存空间连续</li>
+<li>数组可以是一维、多维或交错的。</li>
+<li>数值数组元素的默认值设置为零，而引用元素的默认值设置为 null</li>
+<li>交错数组是数组的数组，因此其元素是引用类型并初始化为 null</li>
+<li>数组的索引从0开始：具有n 个元素的数组的索引是从 0 到 n-1</li>
+<li>数组元素可以是任何类型，包括数组类型。</li>
+<li>C#7.0 元组不限制数组元素类型，数组元素是各种类型</li>
+<li>数组访问效率高，但是删除和插入效率低</li>
+</ul>
+<h4 id="列表（List）"><a href="#列表（List）" class="headerlink" title="列表（List）"></a>列表（List）</h4><ul>
+<li>List 链表：空间节点指针连接，链条节点，可变长度，物理上不连续，插入和删除节点性能高，但是查找性能较低</li>
+<li>内存空间分离，指针指向下一个节点，灵活、空间大</li>
+<li>单链表和双链表</li>
+</ul>
+<h4 id="数据列表（ArrayList）"><a href="#数据列表（ArrayList）" class="headerlink" title="数据列表（ArrayList）"></a>数据列表（ArrayList）</h4><ul>
+<li><p>Array 数组: 一组连续的物理空间，一组元素，不可变长度，查找性能高，但是插入和删除需要移动位置，性能低</p>
+</li>
+<li><p>ArrayList：可变长度的数组</p>
+</li>
+<li><p>使用 <code>ArrayList</code> 类 <code>Add</code>、<code>AddRange</code> 和 <code>ToArray</code> 方法的项代码：</p>
+<pre><code class="java">public static void Main() &#123;
+    ArrayList myAL = new ArrayList();// 创建和初始化ArrayList.
+    myAL.Add(&quot;The&quot;); //添加一个元素
+    myAL.AddRange(new string[] &#123; &quot;the&quot;, &quot;lazy&quot;,&quot;dog&quot; &#125;);//添加一组元素
+&#125;</code></pre>
+</li>
+</ul>
+<h4 id="集合（Set）接口"><a href="#集合（Set）接口" class="headerlink" title="集合（Set）接口"></a>集合（Set）接口</h4><ul>
+<li><p>集合 Set：不包含重复元素的集合，属于 Collection Framework 框架</p>
+</li>
+<li><p><code>public interface Set &lt;E&gt;</code>、<code>extends Collection &lt;E&gt;</code></p>
+</li>
+<li><p>集合提供一种更灵活的方式使用对象组，内存空间灵活</p>
+</li>
+<li><p>与数组不同，处理的对象组可根据程序更改的需要动态地增长和收缩</p>
+</li>
+<li><p>对于某些集合，可以指定键Key，则放入集合中的所有对象，以便可以快速检索对象</p>
+</li>
+<li><p>集合是类，因此必须 <code>new</code> 新集合后，才能添加元素</p>
+<pre><code class="java">Set&lt;Integer&gt; set = new HashSet&lt;Integer&gt;();
+    for(int i = 0; i &lt; 100; i++) &#123;
+    set.add(i);&#125;
+System.out.println(set);
+TreeSet sortedSet = new TreeSet&lt;Integer&gt;(set); //有序集
+System.out.println(sortedSet);</code></pre>
+</li>
+</ul>
+<h4 id="哈希映射（HashMap）"><a href="#哈希映射（HashMap）" class="headerlink" title="哈希映射（HashMap）"></a>哈希映射（HashMap）</h4><ul>
+<li><p>HashMap，存储键值对（Key/Value）数据，类型定义 <code>java.util.HashMap&lt;K,V&gt;</code></p>
+</li>
+<li><p><code>public class HashMap&lt;K,V&gt;</code>、<code>extends AbstractMap&lt;K,V&gt;</code>、<code>implements Map&lt;K,V&gt;, Cloneable, Serializable</code></p>
+</li>
+<li><p>继承了抽象类 AbstractMap，基于哈希表的Map接口的实现，并允许 <code>null</code> 值和 <code>null</code> 键。</p>
+</li>
+<li><p>提供了 <code>get( )</code>  和 <code>put( )</code> 方法，HashMap 是无序的，即不会记录插入的顺序</p>
+</li>
+<li><p>HashMap 与 Hashtable 基本一样，但是不同步，允许为 <code>null</code></p>
+<pre><code class="java">HashMap&lt;Integer, String&gt; hashmap = new HashMap&lt;Integer, String&gt;();
+System.out.println(hashmap.put(1, “C&quot;) ); //添加Key,Value
+System.out.println(hashmap.put(2, “C++&quot;) ); //添加Key,Value
+System.out.println(hashmap.put(3, “Java&quot;) ); //添加Key,Value</code></pre>
+</li>
+</ul>
+<h4 id="哈希表（Hashtable）"><a href="#哈希表（Hashtable）" class="headerlink" title="哈希表（Hashtable）"></a>哈希表（Hashtable）</h4><ul>
+<li><p>Hashtable 类实现一个哈希表，存储键Key映射到值Value，任何非空（Null）对象都可以用作键或值</p>
+</li>
+<li><p>为了成功地从哈希表存储和检索对象，用作键的对象必须实现 <code>hashCode</code> 方法和 <code>equals</code> 方法</p>
+</li>
+<li><p><code>Hashtable</code> 类包含在 <code>java.util</code> 包中，<code>java.util.Hashtable&lt;K,V&gt;</code></p>
+</li>
+<li><p>哈希表（散列表）类似HashMap，但支持多线程安全，哈希表将key/value(键/值对)存储在哈希表中。</p>
+</li>
+<li><p>在Hashtable中，我们指定一个用作键的对象，以及要与该键关联的值，然后对键进行哈希处理，并将生成的哈希码用作将值存储在表中的索引。</p>
+</li>
+<li><p>Hashtable 类的初始默认容量为11，而 loadFactor 为0.75。</p>
+</li>
+<li><p>在Java版本2中，重写了Hashtable类以实现Map接口，并使它成为 Java Collection Framework的成员</p>
+<pre><code class="java">Hashtable&lt;Integer, String&gt; hashtable = new Hashtable&lt;Integer, String&gt;();
+System.out.println( hashtable.put(1, “C&quot;) ); //添加Key,Value
+System.out.println( hashtable.put(2, “C++&quot;) ); //添加Key,Value
+System.out.println( hashtable.put(3, “Java&quot;) ); //添加Key,Value</code></pre>
+</li>
+</ul>
+<h4 id="HashMap-和-HashTable的区别"><a href="#HashMap-和-HashTable的区别" class="headerlink" title="HashMap 和 HashTable的区别"></a>HashMap 和 HashTable的区别</h4><table>
+<thead>
+<tr>
+<th>HashMap</th>
+<th>Hashtable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>非同步synchronized</td>
+<td>同步synchronized</td>
+</tr>
+<tr>
+<td>不是线程安全</td>
+<td>线程安全</td>
+</tr>
+<tr>
+<td>允许1个null key 和多个null 值</td>
+<td>不允许null key 和null value</td>
+</tr>
+<tr>
+<td>JDK 1.2引入</td>
+<td>早期就有</td>
+</tr>
+<tr>
+<td>使用Iterator遍历Hashmap</td>
+<td>使用Iterator或Enumeration遍历Hashtable</td>
+</tr>
+<tr>
+<td>继承AbstractMap类</td>
+<td>继承Dictionary类</td>
+</tr>
+<tr>
+<td>并发高</td>
+<td>并发低</td>
+</tr>
+</tbody></table>
+<h4 id="其他复杂数据类型"><a href="#其他复杂数据类型" class="headerlink" title="其他复杂数据类型"></a>其他复杂数据类型</h4><ul>
+<li>枚举（ Enumeration）</li>
+<li>向量（ Vector）</li>
+<li>栈（ Stack）：先进后出</li>
+<li>字典（Dictionary ）</li>
+<li>队列（Queue）：先进先出</li>
+<li>树（Tree）</li>
+</ul>
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><h4 id="Java-泛型机制"><a href="#Java-泛型机制" class="headerlink" title="Java 泛型机制"></a>Java 泛型机制</h4><ul>
+<li>Java泛型（ generic Type）是JDK 5 2004年中引入的一个新特性。是万能类型，泛型实现代码和算法的重用</li>
+<li>Java泛型方法和泛型类 让类型定义更灵活，以后随意替换具体类型</li>
+<li>早期 <code>List&lt;Object&gt;</code> 来接受更多的参数类型，该机制允许程序员在编译时检测到非法的类型，比如重用排序算法，支持各种类型对象的排序</li>
+<li>泛型方法在调用时可以接收不同类型的参数</li>
+<li>Java泛型使用的机制和C#不同（伪泛型）。编译器会把泛型信息类型擦除。</li>
+<li>实际编译的代码不包含类型信息 <code>type erasure</code></li>
+<li><code>ArrayList&lt;E&gt;</code> 和<code>HashMap&lt;k,v&gt;</code>都是典型的泛型类型</li>
+</ul>
+<h4 id="泛型定义"><a href="#泛型定义" class="headerlink" title="泛型定义"></a>泛型定义</h4><pre><code class="java">// Java泛型定义和C#泛型List定义语法一样
+public class List&lt;T&gt; &#123;
+    private t;
+    public void add(T t) &#123;
+    this.t = t;&#125;
+public T get() &#123;
+    return t;&#125;
+&#125;</code></pre>
+<h4 id="泛型实战"><a href="#泛型实战" class="headerlink" title="泛型实战"></a>泛型实战</h4><pre><code class="java">System.out.println(&quot;Java泛型实战&quot;);
+ArrayList&lt;String&gt; listNames = new ArrayList&lt;String&gt;();
+Class c2 = listNames.getClass();
+listNames.add(“阿里Java训练营&quot;); listNames.add(“阿里云大学&quot;);
+System.out.println(c1 == c2);
+for (String s : listNames) &#123; System.out.println(s); &#125;</code></pre>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><h4 id="ODBC开放数据库连接"><a href="#ODBC开放数据库连接" class="headerlink" title="ODBC开放数据库连接"></a>ODBC开放数据库连接</h4><ul>
+<li>微软提出的数据库接口标准：Open Database Connectivity，简称ODBC</li>
+<li>开放数据库连接技术，解决不同异构数据库连接的问题，主要是Windows系统来用，支持多种数据库</li>
+<li>ODBC 现已成为WOSA（The Windows Open System Architecture）（Windows开放系统体系结构）的主要部分</li>
+<li>ODBC基于Windows系统一种数据库访问接口标准，用ODBC 可以访问各类计算机上的DB文件，也可以访问如Excel 表和 ASCII 数据文件这类非数据库对象</li>
+</ul>
+<h4 id="Java数据库连接驱动-JDBC"><a href="#Java数据库连接驱动-JDBC" class="headerlink" title="Java数据库连接驱动 JDBC"></a>Java数据库连接驱动 JDBC</h4><ul>
+<li>JDBC 框架，Java数据库连接技术（Java Database Connectivity），与<code>.NET</code>中的<code>ADO.NET</code>类似</li>
+<li>JDBC是Java语言编程中与数据库连接的API，封装了各种数据库访问的API 和基础类库，支持多种数据库连接</li>
+<li>NoSQL：Mongodb 公司提供 Java 和 C# 驱动</li>
+<li>JDBC 支持的数据库：Oracle、DB2、Sql Server、Sybase、Informix、MySQL、PostgreSQL、access（直连用ODBC）</li>
+<li>JDBC 很像微软的<code>ADO.NET</code> 和C#的数据库连接技术，可以向数据库传递SQL语句命令，实现各种操作，也可以调用储存过程</li>
+<li>SQLHelper 和 MySQLHelper支持Java和C#工具类</li>
+<li>现在普遍使用 ORM 框架，底层使用了JDBC和ADO.NET</li>
+<li>Hibernate（Entity Framework），mybatis（Dapper）</li>
+</ul>
+<h4 id="JDBC-5大对象-接口和类"><a href="#JDBC-5大对象-接口和类" class="headerlink" title="JDBC 5大对象 接口和类"></a>JDBC 5大对象 接口和类</h4><ul>
+<li>DriverManager：驱动管理器，管理数据库驱动程序列表</li>
+<li>Driver：处理与数据库服务器的通信，可能由多种驱动</li>
+<li>Connection：数据库连接对象。C#的连接对象是 SQLConnection</li>
+<li>Statement：SQL语句对象，将SQL语句提交数据库。SQLCommand</li>
+<li>ResultSet：SQL查询这些对象保存查询结果。DataSet、DataReader</li>
+<li>SQLException：数据库操作异常类型，C#也有</li>
+</ul>
+<h4 id="JDBC编程5大步骤"><a href="#JDBC编程5大步骤" class="headerlink" title="JDBC编程5大步骤"></a>JDBC编程5大步骤</h4><ul>
+<li><p>JDBC 连接MySQL 对应的驱动包，工具类</p>
+<pre><code class="xml">&lt;!--在pom.xml文件中添加驱动dependency--&gt;
+&lt;!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java --&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;mysql&lt;/groupId&gt;
+  &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+  &lt;version&gt;5.1.46&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+</li>
+<li><p>手动引用到项目中，Maven自动化构建工具</p>
+</li>
+</ul>
+<pre><code class="java">package com.alibaba.AlibabaJava07JDBCMySQLDemo;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class Test&#123;
+ public static void main(String[] args) throws ClassNotFoundException, SQLException &#123; 
+  // 1.加载驱动 JSP连接MySQL
+  Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+  // 2.连接数据
+  String url = &quot;jdbc:mysql://localhost:3306/taobao?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&quot;;
+  String username = &quot;root&quot;;
+  String password = &quot;990312&quot;;
+  Connection con = DriverManager.getConnection(url, username, password);
+  // 3.SQL命令
+  String sql = &quot;select * from users order by Id&quot;;
+  java.sql.Statement statement = con.createStatement();
+  // 4.执行SQL命令
+  ResultSet result = statement.executeQuery(sql);
+  // 5.结果处理
+  while (result.next()) &#123;
+   String id = result.getString(&quot;id&quot;);
+   String name = result.getString(&quot;name&quot;);
+   String psw = result.getString(&quot;password&quot;);
+   System.out.println(id+&quot; : &quot;+ name + &quot; : &quot; + psw); &#125;
+  // 6.结束运行
+  result.close();
+  statement.close();
+  con.close();  &#125;  &#125;</code></pre>
+<ul>
+<li>加载（注册）数据库驱动库 -&gt; 建立链接 -&gt; 执行SQL语句 -&gt; 处理结果集RecordSet -&gt; 关闭数据库</li>
+</ul>
+<pre><code class="java">// 3.SQL命令
+String sql = &quot;INSERT INTO `users` (`id`,`name`,`password`) VALUES(?,?,?);&quot;;
+// 4.准备命令
+PreparedStatement statement = connection.prepareStatement(sql);
+// 5.设置参数
+statement.setInt(1, id);
+statement.setString(2, name);
+statement.setString(3, password);
+// 6.执行SQL命令
+statement.execute();
+// 7.关闭连接
+statement.close();
+connection.close();</code></pre>
+<h4 id="JDBC驱动和数据库URL"><a href="#JDBC驱动和数据库URL" class="headerlink" title="JDBC驱动和数据库URL"></a>JDBC驱动和数据库URL</h4><table>
+<thead>
+<tr>
+<th>数据库</th>
+<th>JDBC驱动名称</th>
+<th>URL格式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MySQL</td>
+<td>com.mysql.jdbc.Driver</td>
+<td>jdbc:mysql://hostname/databaseName</td>
+</tr>
+<tr>
+<td>ORACLE</td>
+<td>oracle.jdbc.driver.OracleDriver</td>
+<td>jdbc:oracle:thin:@hostname:portNumber:databaseName</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>org.postgresql.Driver</td>
+<td>jdbc:postgresql://hostname:port/dbname</td>
+</tr>
+<tr>
+<td>DB2</td>
+<td>com.ibm.db2.jdbc.net.DB2Driver</td>
+<td>jdbc:db2:hostname:port Number/databaseName</td>
+</tr>
+<tr>
+<td>Sybase</td>
+<td>com.sybase.jdbc.SybDriver</td>
+<td>jdbc:sybase:Tds:hostname:portNumber/databaseName</td>
+</tr>
+</tbody></table>
+<h4 id="Java三层架构"><a href="#Java三层架构" class="headerlink" title="Java三层架构"></a>Java三层架构</h4><ol>
+<li>UI展示层Presentation Layer：Swing、网页、WP、IOS、安卓</li>
+<li>Services 业务逻辑层</li>
+<li>DAO 数据访问层</li>
+</ol>
+<h3 id="JSP网站开发和Servlet底层原理"><a href="#JSP网站开发和Servlet底层原理" class="headerlink" title="JSP网站开发和Servlet底层原理"></a>JSP网站开发和Servlet底层原理</h3><h4 id="Web网站开发框架"><a href="#Web网站开发框架" class="headerlink" title="Web网站开发框架"></a>Web网站开发框架</h4><ul>
+<li>JQuery、Bootstrap、EasyUI、Angular JS、React.JS、Vue.JS</li>
+<li>HTML5、CSS3、JavaScript、XML、JSON、Flash Silverlight</li>
+<li>PHP、ASP、JSP、ASP.NET MVC、Java Spring MVC、Node.js、Spring Boot</li>
+<li>Web服务器：Tomcat\Nginx\IIS</li>
+<li>ORM数据库连接</li>
+</ul>
+<h4 id="JSP动态网站开发框架"><a href="#JSP动态网站开发框架" class="headerlink" title="JSP动态网站开发框架"></a>JSP动态网站开发框架</h4><ul>
+<li>PHP 脚本语言，1994</li>
+<li>ASP VBScript，1996 Active Server Page</li>
+<li>JSP JavaScript，1999年 网页中嵌入Java语言</li>
+<li>Netscape 网景公司和Sun</li>
+<li>ASP.NET WebForm 2002 拖控件，网页嵌入 C#</li>
+</ul>
+<h4 id="JSP动态网站开发技术"><a href="#JSP动态网站开发技术" class="headerlink" title="JSP动态网站开发技术"></a>JSP动态网站开发技术</h4><ul>
+<li>JSP与PHP、ASP、ASP.NET等类似，是动态网页开发技术。</li>
+<li>JSP（全称Java Server Page）Sun公司，1999发布，由Sun Microsystems公司倡导和许多公司参与共同创建</li>
+<li>JSP 技术是以Java语言作为开发语言的，网页嵌入Java代码</li>
+<li>ASP是以vb脚本作为开发语言， C#嵌入，文件扩展名为 <code>.asp</code></li>
+<li>ASP.NET WebForm 前后分离，嵌入C#，文件扩展名 <code>.aspx</code></li>
+<li>JSP 网页本质上Java代码在服务器端处理客户端的HTTP请求</li>
+<li>HTML：Hypertext Markup Language 超文本标记语言，HTTP：Hypertext Transfer Protocol 超文本传输协议</li>
+<li>JSP文件后缀名为 <code>.jsp</code> ，JSP可以运行在Linux和Windows上</li>
+</ul>
+<h4 id="新建一个JSP网站"><a href="#新建一个JSP网站" class="headerlink" title="新建一个JSP网站"></a>新建一个JSP网站</h4><ol>
+<li>Eclipse新建一个JSP网站</li>
+<li>编写页面内容Hello 阿里巴巴Java训练营</li>
+<li>使用Tomcat运行起来</li>
+</ol>
+<h4 id="Java写网页"><a href="#Java写网页" class="headerlink" title="Java写网页"></a>Java写网页</h4><ul>
+<li><p>内嵌 Java语言代码 <code>&lt;%Java代码%&gt;</code></p>
+<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=utf-8&quot; pageEncoding=&quot;utf-8&quot;%&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
+&lt;title&gt;Java实战训练营&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;img alt=&quot;&quot; src=&quot;Images/mongodb.png&quot;&gt;
+&lt;% out.println(“阿里巴巴Java实战训练营&quot;); %&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</li>
+</ul>
+<h4 id="JSP网页9大内置对象"><a href="#JSP网页9大内置对象" class="headerlink" title="JSP网页9大内置对象"></a>JSP网页9大内置对象</h4><table>
+<thead>
+<tr>
+<th>对象</th>
+<th>名词</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>request</td>
+<td>请求</td>
+<td>HttpServletRequest类的实例，用户请求</td>
+</tr>
+<tr>
+<td>response</td>
+<td>应答</td>
+<td>HttpServletResponse类的实例，返回应答消息</td>
+</tr>
+<tr>
+<td>out</td>
+<td>临时输出</td>
+<td>PrintWriter类的实例，用于把结果输出到网页流中</td>
+</tr>
+<tr>
+<td>session</td>
+<td>会话</td>
+<td>HttpSession类的实例，会话，记录和当前用户相关的数据</td>
+</tr>
+<tr>
+<td>application</td>
+<td>应用程序</td>
+<td>ServletContext类的实例，与应用上下文有关</td>
+</tr>
+<tr>
+<td>config</td>
+<td>配置</td>
+<td>ServletConfig类的实例</td>
+</tr>
+<tr>
+<td>pageContext</td>
+<td>页面上下文</td>
+<td>PageContext类的实例，提供对JSP页面所有对象以及命名空间的访问</td>
+</tr>
+<tr>
+<td>page</td>
+<td>页面</td>
+<td>类似于Java类中的this关键字</td>
+</tr>
+<tr>
+<td>Exception</td>
+<td>异常</td>
+<td>Exception类的对象，代表发生错误的JSP页面中对应的异常对象</td>
+</tr>
+</tbody></table>
+<h4 id="Session跨页面传递数据"><a href="#Session跨页面传递数据" class="headerlink" title="Session跨页面传递数据"></a>Session跨页面传递数据</h4><ul>
+<li>Session会话对象</li>
+<li>用于用户访问网站期间的临时数据的缓存</li>
+<li>购物车</li>
+</ul>
+<h4 id="JSP对象的4大作用范围（4大作用域）"><a href="#JSP对象的4大作用范围（4大作用域）" class="headerlink" title="JSP对象的4大作用范围（4大作用域）"></a>JSP对象的4大作用范围（4大作用域）</h4><ol>
+<li>page scope 页面范围</li>
+<li>request scope 请求范围</li>
+<li>session scope 会话范围</li>
+<li>application scope. 应用程序范围</li>
+</ol>
+<h4 id="JSP查询MySQL"><a href="#JSP查询MySQL" class="headerlink" title="JSP查询MySQL"></a>JSP查询MySQL</h4><ol>
+<li>新建JSP网页</li>
+<li>网页中导入JDBC包</li>
+<li>连接MySQL数据库Alibaba</li>
+<li>查询用户</li>
+<li>显示到页面上</li>
+<li>HTML5：标签语言网页内容</li>
+<li>CSS3：样式，颜色，大小，位置，Bootstrap</li>
+<li>JavaScript：脚本语言，JQuery</li>
+</ol>
+<h4 id="Bootstrap样式"><a href="#Bootstrap样式" class="headerlink" title="Bootstrap样式"></a>Bootstrap样式</h4><ul>
+<li><a target="_blank" rel="noopener" href="http://www.bootcss.com/">http://www.bootcss.com/</a></li>
+<li>Tweeter提供的免费开源样式</li>
+<li>页面直接加入样式引用，在html标签使用样式</li>
+<li><code>&lt;table class=&quot;table&quot;&gt;</code></li>
+</ul>
+<h4 id="JSP访问MySQL数据库"><a href="#JSP访问MySQL数据库" class="headerlink" title="JSP访问MySQL数据库"></a>JSP访问MySQL数据库</h4><ul>
+<li><p>包引用只存入Web目录下就可以了</p>
+</li>
+<li><p>命名空间</p>
+<pre><code class="html">&lt;%@ page import=&quot;java.io.*,java.util.*,java.sql.*&quot;%&gt;
+&lt;%@ page import=&quot;javax.servlet.http.*,javax.servlet.*&quot; %&gt;
+&lt;%@page import=&quot;java.sql.Connection&quot; %&gt;
+&lt;%@page import=&quot;java.sql.DriverManager&quot; %&gt;
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;
+&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/sql&quot; prefix=&quot;sql&quot;%&gt;</code></pre>
+</li>
+</ul>
+<h4 id="JSP连接MYSQL代码"><a href="#JSP连接MYSQL代码" class="headerlink" title="JSP连接MYSQL代码"></a>JSP连接MYSQL代码</h4><pre><code class="html">&lt;table class=&quot;table&quot;&gt;
+&lt;tr&gt;
+  &lt;th&gt;编号&lt;/th&gt;
+  &lt;th&gt;标题&lt;/th&gt;
+  &lt;th&gt;阅读次数&lt;/th&gt;
+&lt;/tr&gt;
+  &lt;%
+    String driverClass=&quot;com.mysql.jdbc.Driver&quot;;
+    String url=&quot;jdbc:mysql://localhost:3306/taobao&quot;;
+    String user=&quot;root&quot;;
+    String password=&quot;1234qwer&quot;;
+    Connection conn;
+    try&#123;
+    Class.forName(driverClass);
+    conn=DriverManager.getConnection(url,user,password);
+    Statement stmt=conn.createStatement();
+    String sql=&quot;select * from news order by Id desc&quot;;
+    ResultSet rs=stmt.executeQuery(sql);
+    while(rs.next())&#123;
+  %&gt;
+  &lt;tr&gt;
+  &lt;td&gt;&lt;%=rs.getString(&quot;Id&quot;) %&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;%=rs.getString(&quot;Title&quot;) %&gt;&lt;/td&gt;
+  &lt;td&gt;&lt;%=rs.getInt(&quot;ViewTimes&quot;) %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;%
+  &#125;
+  &#125;
+  catch(Exception ex)&#123; ex.printStackTrace(); &#125;
+  %&gt;
+&lt;/table&gt;</code></pre>
+<h4 id="JSP实战新闻编辑"><a href="#JSP实战新闻编辑" class="headerlink" title="JSP实战新闻编辑"></a>JSP实战新闻编辑</h4><ol>
+<li>用户选择编辑，id传递</li>
+<li>编辑页面接收id,</li>
+<li>保存到隐藏html元素：hidden</li>
+<li>数据查询：新闻数据</li>
+<li>赋值给控件：从发布新闻页面拷贝，CSS，HTML5</li>
+<li>提交单独页面：独立保存编辑后的信息</li>
+</ol>
+<h4 id="Java-JSP生命周期"><a href="#Java-JSP生命周期" class="headerlink" title="Java JSP生命周期"></a>Java JSP生命周期</h4><ul>
+<li>Servlet：Java中用来处理HTTP请求的类</li>
+<li>JSP生命周期：从创建到销毁的整个过程，Servlet 生命周期，编译、创建、执行、销毁</li>
+<li>JSP生命周期包括：将JSP文件编译成 servlet</li>
+<li>开发阶段： 编写JSP页面代码</li>
+<li>编译阶段：JSP编译成servlet类，生成 servlet 类class</li>
+<li>初始化阶段：加载JSP的servlet类，创建对象，初始化</li>
+<li>执行阶段：调用JSP对应的servlet实例的服务方法</li>
+<li>销毁阶段：调用JSP对应的servlet实例的销毁方法，销毁对象</li>
+</ul>
+<h3 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h3><h4 id="Tomcat9网站Web服务器"><a href="#Tomcat9网站Web服务器" class="headerlink" title="Tomcat9网站Web服务器"></a>Tomcat9网站Web服务器</h4><ul>
+<li>Tomcat开源免费的Java Web服务器软件，最初由Sun的软件构架师詹姆斯·邓肯·戴维森开发的，</li>
+<li>Tomcat是 Apache 软件基金会（Apache Software Foundation）的Jakarta 项目中的一个核心项目，由Apache、Sun 和Oracle其他一些公司及个人共同开发而成</li>
+<li>Tomcat支持Servlet 和JSP 规范规范、WebSocket、微软的IIS Web服务器</li>
+<li>官方网站：<a target="_blank" rel="noopener" href="http://tomcat.apache.org/">http://tomcat.apache.org/</a></li>
+</ul>
+<h4 id="Tomcat的核心组件（架构）"><a href="#Tomcat的核心组件（架构）" class="headerlink" title="Tomcat的核心组件（架构）"></a>Tomcat的核心组件（架构）</h4><ul>
+<li>Web容器—处理静态页面</li>
+<li>catalina — servlet容器—–处理servlet</li>
+<li>JSP容器，它就是把jsp页面翻译成一般的servlet</li>
+</ul>
+<h3 id="课程代码"><a href="#课程代码" class="headerlink" title="课程代码"></a>课程代码</h3><ul>
+<li>课程代码已上传 <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/LearnCS/tree/main/%E9%98%BF%E9%87%8C%E4%BA%91%E5%BC%80%E5%8F%91%E8%80%85%E5%AD%A6%E9%99%A2/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5">Github 仓库</a></li>
+</ul>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/&title=2021阿里Java训练营第一期 - Bezhuang's Blog&summary=
+在阿里云开发者社区中看到有Java新手训练营（5天突破Java面向对象编程）的课程，采用直播授课的形式，希望能在侠客大佬的指导下有更好的学习效果吧。当然，直播时间有限，所以这篇日志并不是对Java知识点完全系统的梳理，主要记录一些开发中常用的语法和概念和在面试时会遇到的问题，以训练和熟悉特性为主。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/&title=2021阿里Java训练营第一期 - Bezhuang's Blog&summary=
+在阿里云开发者社区中看到有Java新手训练营（5天突破Java面向对象编程）的课程，采用直播授课的形式，希望能在侠客大佬的指导下有更好的学习效果吧。当然，直播时间有限，所以这篇日志并不是对Java知识点完全系统的梳理，主要记录一些开发中常用的语法和概念和在面试时会遇到的问题，以训练和熟悉特性为主。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/&title=2021阿里Java训练营第一期 - Bezhuang's Blog&summary=
+在阿里云开发者社区中看到有Java新手训练营（5天突破Java面向对象编程）的课程，采用直播授课的形式，希望能在侠客大佬的指导下有更好的学习效果吧。当然，直播时间有限，所以这篇日志并不是对Java知识点完全系统的梳理，主要记录一些开发中常用的语法和概念和在面试时会遇到的问题，以训练和熟悉特性为主。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEaElEQVR42u3aS3LjMAwFQN//0pkDTKlEPICkk2ru4sj6NLUA4Pf5sbasDwKwYC2wYMFaYI/AfsL13wlfjlv93tPxT39X7696P1UPsGDBggULFixYsGdhlwvgl+OrD1bdsBRi9X67HmDBggULFixYsGDvwFYL/W6B3gVOP+82ImDBggULFixYsGD/Bmz1+6uFeBcULFiwYMGCBQsWLNjJwfB0MGR1oD3VyIAFCxYsWLBgwYL9LthyQGFoIL76oOkG/rokDFiwYMGCBQsWLNgl2LRw/6t/xx5gwYIFCxYsWLBgj8B2V7UAn25M0qBHtwF5vC5YsGDBggULFizYI7BpgVwdNFcL83SjqoP01fMs3x9YsGDBggULFizYK7DdB+qetztg7w6yV8+3/AsCWLBgwYIFCxYs2COw1RN2H/it8O42KOngvno9sGDBggULFixYsHdgywPdcCC8a3C+uzFZfmHAggULFixYsGDBHoWt3kD1uCp4N/gx3WAsXx8sWLBgwYIFCxbsEdjpB5jekF0vQHUtvwhgwYIFCxYsWLBgr8JWbyi98XTAPTVQ757/MbABFixYsGDBggUL9itgqysdXHcDG2lwY7UxAgsWLFiwYMGCBfudsGkQY1fDkQ62p4Mfy+cBCxYsWLBgwYIFexQ2bRTSgXcXLC3o0/Mtv3hgwYIFCxYsWLBgj8BOBRmmAx/Vwr26QavnK79oYMGCBQsWLFiwYI/AdhuD7gNNBS++tvMCCxYsWLBgwYIFewV2LMgQNgjTGz+9wIIFCxYsWLBgwd6FnRoIpw1E9bq3AxuPn4MFCxYsWLBgwYI9AlsNRHQDFKuNQrcxmGo8yoN2sGDBggULFixYsFdhq4Hc3YHhLmx3IN5OdIMFCxYsWLBgwYIdhU0H2tXgxq4gRjc4XF2v1wMLFixYsGDBggV7BDaFTIPEuxqQ7kZ0gx5gwYIFCxYsWLBg78BOP3D1827BPjUYr3q8/oIAFixYsGDBggUL9ghsOvjeDTv1vfQFiZMwYMGCBQsWLFiwYLfCdgvyLvhUMCNtbLqNBFiwYMGCBQsWLNi7sN0bTwv4qetWG59qoOM1kAIWLFiwYMGCBQv2Cmw3ELEryJECV1c6GAcLFixYsGDBggV7F7ZaGO8aOMcF+qbGph3YAAsWLFiwYMGCBXsUtjoAPjXgXm1YukGMcrADLFiwYMGCBQsW7BHYXYPh6nFpQ5K+IN0B+uP5wYIFCxYsWLBgwR6B/YSrWqivNhy7NiZtTMqND1iwYMGCBQsWLNijsGlDkIKmG9MNVHQ37PU5wIIFCxYsWLBgwV6B3VVAd0GmGo80iLK8UWDBggULFixYsGB/FezqjU41Cj/DqxvsAAsWLFiwYMGCBfu7YdMCP/3/FNRUowAWLFiwYMGCBQv2DmwK9HZ8t/CvDtSrG17d2O1JGLBgwYIFCxYsWLBLsNVVbSjSoMdq4T/daKSNAliwYMGCBQsWLNgzsNbsAgsWrAUWLFgL7Nb1D+qMDRAEfb72AAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/&text=2021阿里Java训练营第一期 - Bezhuang's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/Databases-and-SQL-for-Data-Science/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Databases and SQL for Data Science with Python</p>
+          <p class='content'>
+Much of the world’s data resides in databases, A working knowledge of databases and SQL is a mus...</p>
+        </a>
+      
+      
+        <a class='next' href='/Python-for-Data-Science/'>
+          <p class='title'>Python for Data Science, AI & Development<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+This course provided by IBM will not teach everything about Python, but it gives me the tools to...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">Java知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E8%AF%AD%E8%A8%80%E7%89%B9%E6%80%A7"><span class="toc-text">Java语言特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Hello-World"><span class="toc-text">Hello World</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="toc-text">Java代码执行顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-9%E6%96%B0%E7%89%B9%E6%80%A7"><span class="toc-text">Java 9新特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E4%B8%89%E4%B8%AA%E7%89%88%E6%9C%AC"><span class="toc-text">Java三个版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JVM-Java%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">JVM Java虚拟机</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E7%9A%84%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%9E%8B"><span class="toc-text">Java的枚举类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E5%92%8C%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-text">条件和循环语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#if%E6%9D%A1%E4%BB%B6"><span class="toc-text">if条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#switch%E6%9D%A1%E4%BB%B6"><span class="toc-text">switch条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#for%E5%BE%AA%E7%8E%AF%EF%BC%8Cfor-each%E5%BE%AA%E7%8E%AF"><span class="toc-text">for循环，for each循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#while%E5%BE%AA%E7%8E%AF%EF%BC%8Cdo-while%E5%BE%AA%E7%8E%AF"><span class="toc-text">while循环，do while循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B"><span class="toc-text">面向对象编程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#OOP%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E5%BE%81"><span class="toc-text">OOP面向对象的三大特征</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1OOP%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-text">面向对象OOP核心概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%81%E8%A3%85Encapsulation"><span class="toc-text">封装Encapsulation</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OOP%E5%8E%9F%E5%88%99"><span class="toc-text">OOP原则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Class%E7%B1%BB%E7%BB%A7%E6%89%BF"><span class="toc-text">Class类继承</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%A1%8C%E4%B8%BA%E5%A4%9A%E6%80%81"><span class="toc-text">面向对象行为多态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F"><span class="toc-text">多态的实现方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-text">抽象类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">抽象类和接口的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%99%9A%E6%96%B9%E6%B3%95%EF%BC%8C%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95%E5%92%8C%E9%87%8D%E5%86%99"><span class="toc-text">虚方法，抽象方法和重写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E6%98%93%E8%AE%A1%E7%AE%97%E5%99%A8"><span class="toc-text">简易计算器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%BC%96%E7%A8%8B"><span class="toc-text">文件编程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#File%E6%96%87%E4%BB%B6%E6%B5%81%E5%92%8CIO%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="toc-text">File文件流和IO读写文件工具类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-IO%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="toc-text">Java IO读写文件工具类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E6%89%93%E5%BC%80-%E4%BF%9D%E5%AD%98%E5%BC%80%E6%96%87%E4%BB%B6%E5%AF%B9%E8%AF%9D%E6%A1%86"><span class="toc-text">Java打开&#x2F;保存开文件对话框</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">复杂数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%EF%BC%88Array%EF%BC%89"><span class="toc-text">数组（Array）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%89%B9%E7%82%B9"><span class="toc-text">数组特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%EF%BC%88List%EF%BC%89"><span class="toc-text">列表（List）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%88%97%E8%A1%A8%EF%BC%88ArrayList%EF%BC%89"><span class="toc-text">数据列表（ArrayList）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9B%86%E5%90%88%EF%BC%88Set%EF%BC%89%E6%8E%A5%E5%8F%A3"><span class="toc-text">集合（Set）接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E6%98%A0%E5%B0%84%EF%BC%88HashMap%EF%BC%89"><span class="toc-text">哈希映射（HashMap）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8%EF%BC%88Hashtable%EF%BC%89"><span class="toc-text">哈希表（Hashtable）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HashMap-%E5%92%8C-HashTable%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">HashMap 和 HashTable的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">其他复杂数据类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-text">泛型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-%E6%B3%9B%E5%9E%8B%E6%9C%BA%E5%88%B6"><span class="toc-text">Java 泛型机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E5%AE%9A%E4%B9%89"><span class="toc-text">泛型定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E5%AE%9E%E6%88%98"><span class="toc-text">泛型实战</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ODBC%E5%BC%80%E6%94%BE%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5"><span class="toc-text">ODBC开放数据库连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E9%A9%B1%E5%8A%A8-JDBC"><span class="toc-text">Java数据库连接驱动 JDBC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC-5%E5%A4%A7%E5%AF%B9%E8%B1%A1-%E6%8E%A5%E5%8F%A3%E5%92%8C%E7%B1%BB"><span class="toc-text">JDBC 5大对象 接口和类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC%E7%BC%96%E7%A8%8B5%E5%A4%A7%E6%AD%A5%E9%AA%A4"><span class="toc-text">JDBC编程5大步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC%E9%A9%B1%E5%8A%A8%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93URL"><span class="toc-text">JDBC驱动和数据库URL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84"><span class="toc-text">Java三层架构</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSP%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91%E5%92%8CServlet%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="toc-text">JSP网站开发和Servlet底层原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Web%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6"><span class="toc-text">Web网站开发框架</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSP%E5%8A%A8%E6%80%81%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6"><span class="toc-text">JSP动态网站开发框架</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSP%E5%8A%A8%E6%80%81%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF"><span class="toc-text">JSP动态网站开发技术</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AAJSP%E7%BD%91%E7%AB%99"><span class="toc-text">新建一个JSP网站</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java%E5%86%99%E7%BD%91%E9%A1%B5"><span class="toc-text">Java写网页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSP%E7%BD%91%E9%A1%B59%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1"><span class="toc-text">JSP网页9大内置对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Session%E8%B7%A8%E9%A1%B5%E9%9D%A2%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE"><span class="toc-text">Session跨页面传递数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSP%E5%AF%B9%E8%B1%A1%E7%9A%844%E5%A4%A7%E4%BD%9C%E7%94%A8%E8%8C%83%E5%9B%B4%EF%BC%884%E5%A4%A7%E4%BD%9C%E7%94%A8%E5%9F%9F%EF%BC%89"><span class="toc-text">JSP对象的4大作用范围（4大作用域）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSP%E6%9F%A5%E8%AF%A2MySQL"><span class="toc-text">JSP查询MySQL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bootstrap%E6%A0%B7%E5%BC%8F"><span class="toc-text">Bootstrap样式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSP%E8%AE%BF%E9%97%AEMySQL%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">JSP访问MySQL数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSP%E8%BF%9E%E6%8E%A5MYSQL%E4%BB%A3%E7%A0%81"><span class="toc-text">JSP连接MYSQL代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JSP%E5%AE%9E%E6%88%98%E6%96%B0%E9%97%BB%E7%BC%96%E8%BE%91"><span class="toc-text">JSP实战新闻编辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-JSP%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">Java JSP生命周期</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E7%BD%91%E7%AB%99"><span class="toc-text">部署网站</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Tomcat9%E7%BD%91%E7%AB%99Web%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">Tomcat9网站Web服务器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tomcat%E7%9A%84%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6%EF%BC%88%E6%9E%B6%E6%9E%84%EF%BC%89"><span class="toc-text">Tomcat的核心组件（架构）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BE%E7%A8%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">课程代码</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="2021阿里Java训练营第一期";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        
+          <div><p>Copyright © 2021 Zhihao Zhuang. All rights reserved</p>
+</div>
+        
+      
+    
+      
+        
+          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+</div>
+        
+      
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/********************脚本懒加载函数********************************/
+function loadScript(src, cb) {
+var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+var script = document.createElement('script');
+script.setAttribute('type','text/javascript');
+if (cb) script.onload = cb;
+script.setAttribute('src', src);
+HEAD.appendChild(script);
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://www.zhuangzhihao.top
+        
+        
+        
+        
+          id="https:wwwzhuangzhihaotop"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 返回主页
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/Bezhuang/Hexo-blog
+        
+        
+        
+        
+          id="https:githubcomBezhuangHexo-blog"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('false' == true && ('home,contributors,source_docs,hr,print'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+	
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/issues.min.js');
+	
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+
+
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
+  });
+</script>
+
+
+
+
+
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  pjax_comment=pjax_valine;
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/app.min.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/search/hexo.min.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI',
+    app_key: 'j5I5paEqIfWfOlCg13vU2vNq',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://blog.zhuangzhihao.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+function bindToggleButton() {
+	var btn=$("#wrapper .toggle-mode-btn");
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+document.addEventListener("pjax:success", bindToggleButton);
+
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/tu8j8vmfuovtkhsj4lgr7sub986gd1ku.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#l_cover",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      
+      $("#wrapper .toggle-mode-btn").unbind('click');
+      
+	  
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        if (typeof IssuesAPI == "undefined") {
+          loadIssuesJS();
+        }
+        
+          pjax_initCopyCode();
+        
+		
+          try{pjax_comment();} catch (e) {}
+        
+      } catch (e) {
+        console.log(e);
+      }
+	  
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+<!--浏览器搞笑标题-->
+<!--<script type="text/javascript" src="/js/FunnyTitle.js"></script>-->
+<!-- 数字雨 -->
+<canvas id="canvas" width="1440" height="900" ></canvas>
+<script type="text/javascript" src="/js/DigitalRain.js"></script>

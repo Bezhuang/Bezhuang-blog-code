@@ -1,0 +1,2210 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Data Visualization With Python - Bezhuang&#39;s Blog</title>
+  
+    <meta name="keywords" content="Python">
+  
+
+  
+    <meta name="description" content="
+One of the key skills of a data scientist is the ability to tell a compelling story, visualizing data and findings in an approachable and stimulating way. L...">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Bezhuang's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+
+<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+
+
+</head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
+    
+
+<header id="l_header" class="l_header always shadow floatable blur show"  >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Bezhuang's Blog
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div class='cover-bg' style='background-image:url(https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%A3%81%E7%BA%B82.jpg)'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">庄之皓 · Bezhuang</p>
+    
+    
+      <p class="subtitle">欢迎访问我的博客！Welcome to my blog!</p>
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="search here..." />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/photos"
+              
+              
+              id="photos">
+              <p>相册</p>
+            </a>
+          
+            <a href="/projects"
+              
+              
+              id="projects">
+              <p>开源库</p>
+            </a>
+          
+            <a href="/todo"
+              
+              
+              id="todo">
+              <p>计划表</p>
+            </a>
+          
+            <a href="/guestbook"
+              
+              
+              id="guestbook">
+              <p>留言板</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Data Visualization With Python
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE/">人工智能与大数据</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年3月6日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2.1k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：12分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p>One of the key skills of a data scientist is the ability to tell a compelling story, visualizing data and findings in an approachable and stimulating way. Learning how to leverage a software tool to visualize data will helps one understand the data better, and make more effective decisions. The main goal of this Data Visualization with Python course provided by IBM is to use various techniques and several data visualization libraries in Python, namely Matplotlib, Seaborn, and Folium for presenting data visually. The following are the notes I took during this course.</p>
+</blockquote>
+<a id="more"></a>
+
+
+
+	<div class="row">
+    <embed src="/pdf/Coursera-Data-Visualization-with-Py.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<h3 id="Introduction-to-Data-Visualization-Tools"><a href="#Introduction-to-Data-Visualization-Tools" class="headerlink" title="Introduction to Data Visualization Tools"></a>Introduction to Data Visualization Tools</h3><ul>
+<li><p>Why Build Visuals?</p>
+<ul>
+<li>For exploratory data analysis</li>
+<li>Communicate data clearly</li>
+<li>Share unbiased representation of data</li>
+<li>Use them to support recommendations to different stakeholders</li>
+</ul>
+</li>
+<li><p>Less is more (more effective, attractive and impactive)</p>
+</li>
+<li><p>Matplotlib (<a target="_blank" rel="noopener" href="http://www.aosabook.org/en/matplotlib.html">History</a> and Architecture): Created by John Hunter </p>
+<ul>
+<li>Backend Layer has three built-in abstract interface classes: FigureCavas, Renderer, Event</li>
+<li>Artist Layer is comprised of one main object - Artist. Title, lines, tick labels, images all correspond to individual Artist instances.</li>
+<li>Two types of Artist objects: Primitive (Line2D, Rectangle, Circle and Text), Composite (Axis, Tick, Axes and Figure)</li>
+</ul>
+<pre><code class="python">from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas # import FigureCanvas
+frim matplotlib.figure import Figure # import Figure artist
+fig = Figure()
+canvvas = FigureCanvas(fig)
+import numpy as np #create 10000 random numbers using numpy
+x = np.random.randn(10000)
+ax = fig.add_subplot(111) # create an axes artist
+ax.hist(x, 100) # generate a histogram of the 10000 numbers
+ax.set_title(&#39;Normal distribution with $\mu=0, \sigma=1$&#39;) # add a title to the figure and save it
+fig.savefig(&#39;matplotlib_histogram.png&#39;)</code></pre>
+<ul>
+<li>Scripting Layer is comprised mainly of pyplot, ascripting interface that is lighter that the Artist layer.</li>
+</ul>
+<pre><code class="python">import matplotlib.pyplot as plt
+import numpy as np
+x = np.random.randn(10000)
+plt.hist(x, 100)
+plt.title(r&#39;Normal distribution with $\mu=0, \sigma=1$&#39;)         plt.savefig(&#39;matplotlib_histogram.png&#39;)
+plt.show()</code></pre>
+</li>
+<li><p>Basic Plotting with Matplotlib</p>
+<ul>
+<li>Plot Function</li>
+</ul>
+<pre><code class="python">%matplotlib inline # pass in inline as the backend to enforce plots to be rendered within the browser
+import matplotlib.pyplot as plt
+plt.plot(5, 5, &#39;o&#39;)
+plt.ylabel(&quot;Y&quot;)
+plt.xlabel(&quot;x&quot;)
+plt.title(&quot;Plotting Example&quot;)
+plt.show()</code></pre>
+<ul>
+<li>Matplotlib - Pandas</li>
+</ul>
+<pre><code class="python">df.plot(kind=&quot;line&quot;) # create a line plot
+df[&quot;column&quot;].plot(kind=&quot;hist&quot;) # create a histogram</code></pre>
+</li>
+<li><p>Line Plots</p>
+<ul>
+<li>A line plot is a type of plot which displays information as a series of data points called ‘makers’ connected by straight line segments.</li>
+<li>Creating line plots</li>
+</ul>
+<pre><code class="python">import matplotlib as mpl
+import matplotlib.pyplot as plt
+years = list(map(str, range(1980, 2014)))
+df_canada.loc[&#39;Haiti&#39;, years].plot(kind=&#39;line&#39;)
+plt.title(&#39;Immigration from Haiti&#39;)
+plt.ylabel(&quot;Number of immigrants&quot;)
+plt.xlabel(&quot;Years&quot;)
+plt.show()</code></pre>
+</li>
+</ul>
+<h3 id="Basic-and-Specialized-Visualization-Tools"><a href="#Basic-and-Specialized-Visualization-Tools" class="headerlink" title="Basic and Specialized Visualization Tools"></a>Basic and Specialized Visualization Tools</h3><ul>
+<li><p>Area Plots (based on line plot)</p>
+<ul>
+<li>Also known as area chart or area graph, is commonly used to represent cumulated totals using numbers or percentages over time</li>
+<li>Area plots are stacked by default.</li>
+</ul>
+<pre><code class="python">import matplotlib as mpl
+import matplotlib.pyplot as plt
+years=list(map(str,range(1980,2014)))
+df_canada.sort_values([&#39;Total&#39;], ascending=False, axis=0, inplace=True)
+df_top5=df_canada.head()
+df_top5=df_top5[years].transpose()
+df_top5.plot(kind=&#39;area&#39;)
+plt.title(&#39;Immigration trend of top 5 countries&#39;)
+plt.ylabel(&quot;Number of immigrants&quot;)
+plt.xlabel(&quot;Years&quot;)
+plt.show()</code></pre>
+</li>
+<li><p>Histograms</p>
+<ul>
+<li>A histogram is a way of representing the frequency distribution of a numeric dataset.</li>
+</ul>
+<pre><code class="python">import matplotlib as mpl
+import matplotlib.pyplot as plt
+import numpy as np
+count, bin_edges=np.histogram(df_canada[&#39;2013&#39;]) # numpy function
+df_canada[&#39;2013&#39;].plot(kind=&#39;hist&#39;, xticks=bin_edges)
+plt.title(&#39;Histogram of Immigration from 195 countries in 2013&#39;)
+plt.ylabel(&quot;Number of Countries&quot;)
+plt.xlabel(&quot;Number of immigrants&quot;)
+plt.show()</code></pre>
+</li>
+<li><p>Bar Charts</p>
+<ul>
+<li>Unlike a histogram, a bar chart is a type of plot where the length of each bar is proportional to the value of the item that it represents.</li>
+<li>It is commonly used to compare the values of a variable at a given point in time. </li>
+</ul>
+<pre><code class="python">import matplotlib as mpl
+import matplotlib.pyplot as plt
+years=list(map(str,range(1980,2014)))
+df_iceland=df_canada.loc[&#39;Iceland&#39;,years]
+df_iceland.plot(kind=&#39;bar&#39;)
+plt.title(&#39;Icelandic immigrants to Canada from 1980 to 2013&#39;)
+plt.ylabel(&quot;Year&quot;)
+plt.xlabel(&quot;Number of immigrants&quot;)
+plt.show()</code></pre>
+</li>
+<li><p>Pie Charts</p>
+<ul>
+<li>A pie chart is a circular statistical graphic divided into slices to illustrate numerical proportion.</li>
+<li><a target="_blank" rel="noopener" href="http://www.surveygizmo.com/resources/blog/pie-chart-or-bar-graph">Arguments against pie charts</a></li>
+</ul>
+<pre><code class="python">import matplotlib as mpl
+import matplotlib.pyplot as plt
+df_continents=df_canada.groupby(&#39;Continent&#39;, axis=0).sum()
+df_continents[&#39;Total&#39;].plot(kind=&#39;pie&#39;)
+plt.title(&#39;Immigration to Canada by Continent&#39;)
+plt.show()</code></pre>
+</li>
+<li><p>Box Plots</p>
+<ul>
+<li>A boxplot is a way of statistically representing the distribution of given data through 5 main dimensions. </li>
+<li>Minimum, First Quartile, Median, Third Quartile, Maximum, Outliers</li>
+<li>IQR (Inter Quartile Range): between First Quartile and Third Quartile</li>
+<li><code>Function = plot, and Parameter = kind with value = &quot;box&quot;</code></li>
+</ul>
+<pre><code class="python">import matplotlib as mpl
+import matplotlib.pyplot as plt
+df_japan=df_canada.loc(&#39;Japan&#39;, years).transpose()
+df_japan.plot(kind=&#39;box&#39;)
+plt.title(&#39;Box plot of Japanese Immigrants from 1980 to 2013&#39;)
+plt.ylabel(&#39;Number of Immigrants&#39;)
+plt.show()</code></pre>
+</li>
+<li><p>Scatter Plots</p>
+<ul>
+<li>A scatter plot is a type of plot that displays values pertaining to typically two variables against each other. </li>
+<li>Usually it is a dependent variable to be plotted against an independent variable in order to determine if any correlation between the two variables exists.</li>
+</ul>
+<pre><code class="python">import matplotlib as mpl
+import matplotlib.pyplot as plt
+df_total.plot&#123;kind=&#39;scatter&#39;,x=&#39;year&#39;,y=&#39;total&#39;&#125;
+plt.title(&#39;Total immigrant population to Canada from 1980 to 2013&#39;)
+plt.ylabel(&quot;Year&quot;)
+plt.xlabel(&quot;Number of immigrants&quot;)
+plt.show()</code></pre>
+</li>
+<li><p>Bubble Plots</p>
+<ul>
+<li>A bubble plot is a variation of the scatter plot that displays three dimensions of data (x, y, z). </li>
+<li>The data points are replaced with bubbles, and the size of the bubble is determined by the third variable ‘z’, also known as the weight. </li>
+</ul>
+</li>
+</ul>
+<h3 id="Advanced-Visualizations-and-Geospatial-Data"><a href="#Advanced-Visualizations-and-Geospatial-Data" class="headerlink" title="Advanced Visualizations and Geospatial Data"></a>Advanced Visualizations and Geospatial Data</h3><ul>
+<li><p>Waffle Charts</p>
+<ul>
+<li>A waffle chart is an interesting visualization that is normally created to display progress toward goals</li>
+<li>Matplotlib does not have a built-in function to create waffle charts.</li>
+</ul>
+</li>
+<li><p>Word Clouds</p>
+<ul>
+<li>A Word Cloud is a depiction of the frequency of different words in some textual data</li>
+<li>Mueller’s word cloud generator</li>
+</ul>
+</li>
+<li><p>Seaborn and Regression Plots</p>
+<ul>
+<li>Seaborn is a Python visualization library based on Matplotlib</li>
+</ul>
+<pre><code class="python">import seaborn as sns
+ax=sns.regplot(x=&#39;year&#39;,y=&#39;total&#39;,data=df_total,color=&#39;green&#39;,marker=&#39;+&#39;)</code></pre>
+</li>
+<li><p>Introduction to Folium and Map Styles</p>
+<ul>
+<li>Folium is a powerful Python library that helps you create several types of Leaflet maps</li>
+<li>It enables both the binding of data to a map for choropleth visualizations as well as passing visualizations as markers on the map</li>
+</ul>
+<pre><code class="python">word_map=folium.Map() #define the world map
+world_map #display world map</code></pre>
+<ul>
+<li>Define the world map centered around Canada with a low zoom level</li>
+</ul>
+<pre><code class="python">world_map=folium.Map(
+    location=[56.130, -106.35],
+    zoom_start=4,
+    tiles=&#39;Stamen Terrain&#39; #or &#39;Stream Toner&#39;
+)
+world_map #display</code></pre>
+</li>
+<li><p>Maps with Markers</p>
+<pre><code class="python">canada_map=folium.Map(
+    location=[56.130, -106.35],
+    zoom_start=4
+)
+ontario=folium.map.FeatureGroup() #create a feature group
+ontario.add_child(
+  folium.features.CircleMarker([51.25,-85.32],radius=5,color=&#39;red&#39;,fill_color=&#39;Red&#39;)
+) #style the feature group
+canada_map.add_child(ontario) #add the feature group to the map
+folium.Marker([51.25,-85.32],popup=&#39;Ontario&#39;).add_to(canada_map) #label the marker
+canada map</code></pre>
+</li>
+<li><p>Choropleth Maps</p>
+<ul>
+<li>A choropleth map is a thematic map in which areas are shaded or patterned in proportion to the measurement of the statistical variable being displayed on the map, such as population density or per capita income.</li>
+<li>Geojson File</li>
+</ul>
+<pre><code class="python">world_map=folium.Map(
+    zoom_start=2,
+    tiles=&#39;Mapbox Bright&#39;
+)
+world_geo=r&#39;world_countries.json&#39; #geojson file
+world_map.choropleth(
+    geo_path=world_geo,
+    data=df_canada,
+    columns=[&#39;Country&#39;,&#39;Total&#39;],
+    key_on=&#39;feature.properties.name&#39;,
+    fill_color=&#39;YlOrRd&#39;,
+    legend_name=&#39;Immigration to Canada&#39;
+)
+world_map</code></pre>
+</li>
+</ul>
+<h3 id="Creating-Dashboards-with-Plotly-and-Dash"><a href="#Creating-Dashboards-with-Plotly-and-Dash" class="headerlink" title="Creating Dashboards with Plotly and Dash"></a>Creating Dashboards with Plotly and Dash</h3><ul>
+<li><p>Dashboard</p>
+<ul>
+<li>Produce real-time visuals</li>
+<li>Understand business moving parts</li>
+<li>Visually track, analyze and display key performance indicators (KPI)</li>
+<li>Take informed decisions and improve performance. </li>
+<li>Reduced hours of analyzing</li>
+</ul>
+</li>
+<li><p>Best dashboards answer critical business questions.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pyviz.org/dashboarding/">Python dashboarding tools</a>: Dash from Plotly, Panel, voila, Streamlit, Bokeh, ipywidgets, matplotlib, Flask</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://plotly.com/python/getting-started/">Plotly</a></p>
+<ul>
+<li>Interactive, open-source plotting library</li>
+<li>Supports over 40 unique chart types</li>
+<li>Includes chart types like statistical, financial, maps, scientific and 3-dimensional</li>
+<li>Visualizations can be displayed in Jupyter notebook, saved to HTML files, or can be used in developing Python-built web applications using Dash</li>
+</ul>
+</li>
+<li><p>Plotly Graph Objects: Low-level interface to figures, traces, and layout: <code>plotly.gragh_objects.Figure</code></p>
+</li>
+<li><p>Plotly express: High-level wrapper for Plotly </p>
+<pre><code class="python">import plotly.gragh_objects as go
+import plotly.express as px
+import numpy as np
+np.random.seed(10) #set random seed for reproducibility
+x=np.arange(12)
+y=np.random.randint(50, 500, size=12) #create random y values
+fig=go.Figure(data=go.Scatter(x=x,y=y)) #create figure and add trace (scatter)
+fig.update_layout(title=&#39;Simple Line Plot&#39;,xais_title=&#39;Month&#39;,yaxis_title=&#39;Sales&#39;)
+fig.show()
+fig=px.line(x=x,y=y,title=&#39;Simple Line Plot&#39;,labels=dict(x=&#39;Month&#39;,y=&#39;Sales&#39;)) #Entire line chart can be created in a single command
+fig.show()</code></pre>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://images.plot.ly/plotly-documentation/images/plotly_js_cheat_sheet.pdf">Plotly cheatsheet</a></p>
+</li>
+<li><p>Dash</p>
+<ul>
+<li>Open-Source User Interface Python library for creating reactive, web-based applications</li>
+<li>Easy to build GUI</li>
+<li>Declarative and Reactive</li>
+<li>Rendered in web browser and can be deployed to servers</li>
+<li>Inherently cross-platform and mobile ready</li>
+<li>Both enterprise-ready and a first-class member of Plotly’s open-source tools</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://dash.plotly.com/dash-core-components">Dash core components</a>: <code>import dash_core_components as dcc</code></p>
+<ul>
+<li>Describe higher-level components that are interactive and are generated with JavaScript, HTML, and CSS through the React.js library</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://dash.plotly.com/dash-html-components">Dash HTML components</a>: <code>import dash_html_components as html</code></p>
+<ul>
+<li>Component for every HTML tag</li>
+</ul>
+</li>
+<li><p>Callback function is a python function that is automatically called by Dash whenever an input component’s property changes</p>
+</li>
+<li><p>Callback function is decorated with <code>@app.callback</code> decorator</p>
+<pre><code class="python">@app.callback(Output, Input)
+def callback_fuction:
+    ......
+    return some_result</code></pre>
+</li>
+<li><p>Callback decorator function takes two parameters: Input and Output</p>
+<ul>
+<li>Input and Output to the callback function will have component id and component property</li>
+<li>Multiple inputs or outputs should be enclosed inside either a list or tuple. </li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://dash.plotly.com/basic-callbacks">Callbacks with one input</a></p>
+<pre><code class="python">import pandas as pd
+import plotly.express as px
+import dash
+import dash_html_components as html
+import dash_core_components as dcc
+from dash.dependencies import Input, Output
+airline_data=pd.read_csv(&#39;airline.csv&#39;,encoding=&#39;ISO-8859-1&#39;,dtype=&#123;&#39;Airport&#39;:str,&#39;TailNum&#39;:str&#125;) #read the data
+app=dash.Dash()
+# Design dash app layout
+app.layout=html.Div(children=[html.H1(&#39;Airline Dashboard&#39;,style=&#123;&#39;textAlign&#39;:&#39;center&#39;,&#39;color&#39;:colors[&#39;text&#39;],&#39;font-size&#39;:40&#125;),html.Div([&#39;Input:&#39;,dcc.Input(id=&#39;input-yr&#39;,value=&#39;2010&#39;,type=&#39;number&#39;,style=&#123;&#39;height&#39;:&#39;50px&#39;,&#39;font-size&#39;:35&#125;),],style=&#123;&#39;font-size&#39;:40&#125;),html.Br(),html.Br(),html.Div(dcc.Gragh(id=&#39;bar-plot&#39;)),])
+@app.callback(Output(component_id=&#39;bar-plot&#39;,component_property=&#39;figure&#39;),Input(component_id=&#39;input-yr&#39;,component_property=&#39;value&#39;))
+def get_gragh(entered_year):
+    df=airline_data[airline_data[&#39;Year&#39;]==int(entered_year)] #select data
+    g1=df.groupby([&#39;Reporting_Airline&#39;])[&#39;Flights&#39;].sum().nlargest(10).reset_index() #top 10 airline carrier in terms of number of flights
+    fig1=px.bar(g1,x=&#39;Reporting_Airline&#39;,y=&#39;Flights&#39;,title=&#39;Top 10 airline carrier in year &#39;+str(entered_year)+&#39; in terms of number of flights&#39;) #plot the gragh
+    fig1.update_layout()
+    return fig1
+if __name__==&#39;__main__&#39;:
+    app.run_server(port=8002,host=&#39;127.0.0.1&#39;,debug=True)</code></pre>
+</li>
+</ul>
+<h3 id="Assignments"><a href="#Assignments" class="headerlink" title="Assignments"></a>Assignments</h3><ul>
+<li>Visit my <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/LearnCS/tree/main/IBM%20Professional%20Certificates/Data%20Visualization%20With%20Python">Github Repository</a></li>
+</ul>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Data-Visualization-with-Python/&title=Data Visualization With Python - Bezhuang's Blog&summary=
+One of the key skills of a data scientist is the ability to tell a compelling story, visualizing data and findings in an approachable and stimulating way. Learning how to leverage a software tool to visualize data will helps one understand the data better, and make more effective decisions. The main goal of this Data Visualization with Python course provided by IBM is to use various techniques and several data visualization libraries in Python, namely Matplotlib, Seaborn, and Folium for presenting data visually. The following are the notes I took during this course.
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Data-Visualization-with-Python/&title=Data Visualization With Python - Bezhuang's Blog&summary=
+One of the key skills of a data scientist is the ability to tell a compelling story, visualizing data and findings in an approachable and stimulating way. Learning how to leverage a software tool to visualize data will helps one understand the data better, and make more effective decisions. The main goal of this Data Visualization with Python course provided by IBM is to use various techniques and several data visualization libraries in Python, namely Matplotlib, Seaborn, and Folium for presenting data visually. The following are the notes I took during this course.
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Data-Visualization-with-Python/&title=Data Visualization With Python - Bezhuang's Blog&summary=
+One of the key skills of a data scientist is the ability to tell a compelling story, visualizing data and findings in an approachable and stimulating way. Learning how to leverage a software tool to visualize data will helps one understand the data better, and make more effective decisions. The main goal of this Data Visualization with Python course provided by IBM is to use various techniques and several data visualization libraries in Python, namely Matplotlib, Seaborn, and Folium for presenting data visually. The following are the notes I took during this course.
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADsklEQVR42u3ay5LbMAwEQP//Tyf3pFzkAPAKcZo3P2SRrT1MMHn9skrrhQAcOHDgLHDglsC9iuuvH/zj/dvvn753uu72+1PnBQcOHDhw4MCB2wZ3HQDD73d/793BT9e/PXjzvODAgQMHDhw4cFvhjgEw3HgKkQKn+2ufFxw4cODAgQMH7kvhbq+vBunqoBUcOHDgwIEDBw5crXieCq5TRTk4cODAgQMHDty3wcUF7SVk9+DV761t8sGBAwcOHDhw4Ibg0jVdCP/06/J5wYEDBw4cOHDglsB1123AnB6I3hbP1eL77e+CAwcOHDhw4MAtgZsaOKYbrh6sO7Bsnw8cOHDgwIEDB24ZXDoQvC2MbwNtteD+1H3eXgcOHDhw4MCBA7cE7nYwOD2QrBbdaWBPz3e8Hzhw4MCBAwcO3DK4dCPdwnoaNg2+5T8UcODAgQMHDhy4JXDpBlLYNLhOF8rVz48BGBw4cODAgQMHbglcN2DeAo4Vw8OF9HWgBwcOHDhw4MCBWwY3HTDTANsdQFYHr7fnAgcOHDhw4MCB2wZ3GyjTwFgNxF3oqfteN/ngwIEDBw4cOHAPwb2aa3pwmD7ANPi2C2xw4MCBAwcOHLjlcClIvIHi4PE26HaL6refgwMHDhw4cODALYO7DarVYvqnA3B1MBsHYHDgwIEDBw4cuIfgusHydqNpQE0fWAqZ/qGAAwcOHDhw4MBtgzvduFtcp4PJ20Cc3n9qoAoOHDhw4MCBA7cFrjvQTANy9UDd97sDU3DgwIEDBw4cuO1w8WCvGHTHCuImTPwgwIEDBw4cOHDglsF1A+7UxtPiuPsAwIEDBw4cOHDg/nW49ADVoFwN0OmDqAbo42tw4MCBAwcOHLglcN0A+lOBtlwgD+0LHDhw4MCBAwduK9x4cRsG0mrxXB2UlvcBDhw4cODAgQO3FK660e5AsTpY7Q4+44EqOHDgwIEDBw7cUrhqEf3pIrgK/Ni/HMCBAwcOHDhw4D4M111dgOkHNVWkHwMwOHDgwIEDBw7cw3DdQJgG1Nv3pweo3eIaHDhw4MCBAwduK9xU4E0Pmt7vU5+PNfngwIEDBw4cOHAPwVWL5NtgOlVsf3qBAwcOHDhw4MD9L3DVIrt7ffpA26/BgQMHDhw4cOC+DG5qMFkFmrrfER4cOHDgwIEDB24pXPXgt+DVAN39j423+zxeDw4cOHDgwIEDtwyuWth2A3QaZKcgqr8HDhw4cODAgQO3Bc4KB5wIwIEDB84CB+7Z9RtxcP41oXab7AAAAABJRU5ErkJggg==">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Data-Visualization-with-Python/&text=Data Visualization With Python - Bezhuang's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%9F%BA%E7%A1%80/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>51单片机基础知识总结</p>
+          <p class='content'>
+单片机（MCU）是典型的嵌入式微控制器，通过在IC芯片上集成运算器、控制器以及IO接口，也就相当于一个小而完善的微型计算机系统。单片机的学习可以和计算机组成原理、汇编语言、微机原理与接口技术和...</p>
+        </a>
+      
+      
+        <a class='next' href='/Python-Project-for-Data-Science/'>
+          <p class='title'>Python Project for Data Science<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+This Python Project mini-course provided by IBM is intended to demonstrate basic Python skills b...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Introduction-to-Data-Visualization-Tools"><span class="toc-text">Introduction to Data Visualization Tools</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-and-Specialized-Visualization-Tools"><span class="toc-text">Basic and Specialized Visualization Tools</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Advanced-Visualizations-and-Geospatial-Data"><span class="toc-text">Advanced Visualizations and Geospatial Data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Creating-Dashboards-with-Plotly-and-Dash"><span class="toc-text">Creating Dashboards with Plotly and Dash</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assignments"><span class="toc-text">Assignments</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Data Visualization With Python";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        
+          <div><p>Copyright © 2021 Zhihao Zhuang. All rights reserved</p>
+</div>
+        
+      
+    
+      
+        
+          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+</div>
+        
+      
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/********************脚本懒加载函数********************************/
+function loadScript(src, cb) {
+var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+var script = document.createElement('script');
+script.setAttribute('type','text/javascript');
+if (cb) script.onload = cb;
+script.setAttribute('src', src);
+HEAD.appendChild(script);
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://www.zhuangzhihao.top
+        
+        
+        
+        
+          id="https:wwwzhuangzhihaotop"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 返回主页
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/Bezhuang/Hexo-blog
+        
+        
+        
+        
+          id="https:githubcomBezhuangHexo-blog"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('false' == true && ('home,contributors,source_docs,hr,print'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+	
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/issues.min.js');
+	
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+
+
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
+  });
+</script>
+
+
+
+
+
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  pjax_comment=pjax_valine;
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/app.min.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/search/hexo.min.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI',
+    app_key: 'j5I5paEqIfWfOlCg13vU2vNq',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://blog.zhuangzhihao.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+function bindToggleButton() {
+	var btn=$("#wrapper .toggle-mode-btn");
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+document.addEventListener("pjax:success", bindToggleButton);
+
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/tu8j8vmfuovtkhsj4lgr7sub986gd1ku.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#l_cover",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      
+      $("#wrapper .toggle-mode-btn").unbind('click');
+      
+	  
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        if (typeof IssuesAPI == "undefined") {
+          loadIssuesJS();
+        }
+        
+          pjax_initCopyCode();
+        
+		
+          try{pjax_comment();} catch (e) {}
+        
+      } catch (e) {
+        console.log(e);
+      }
+	  
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+<!--浏览器搞笑标题-->
+<!--<script type="text/javascript" src="/js/FunnyTitle.js"></script>-->
+<!-- 数字雨 -->
+<canvas id="canvas" width="1440" height="900" ></canvas>
+<script type="text/javascript" src="/js/DigitalRain.js"></script>

@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Introduction to Data Analytics - Bezhuang&#39;s Blog</title>
+  
+
+  
+    <meta name="description" content="
+The Introduction to Data Analytics course provided by IBM is the first in a series of courses designed to prepare me for a career as a junior data analyst. ...">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Bezhuang's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+
+<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+
+
+</head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
+    
+
+<header id="l_header" class="l_header always shadow floatable blur show"  >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Bezhuang's Blog
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div class='cover-bg' style='background-image:url(https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%A3%81%E7%BA%B82.jpg)'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">庄之皓 · Bezhuang</p>
+    
+    
+      <p class="subtitle">欢迎访问我的博客！Welcome to my blog!</p>
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="search here..." />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/photos"
+              
+              
+              id="photos">
+              <p>相册</p>
+            </a>
+          
+            <a href="/projects"
+              
+              
+              id="projects">
+              <p>开源库</p>
+            </a>
+          
+            <a href="/todo"
+              
+              
+              id="todo">
+              <p>计划表</p>
+            </a>
+          
+            <a href="/guestbook"
+              
+              
+              id="guestbook">
+              <p>留言板</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Introduction to Data Analytics
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE/">人工智能与大数据</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年1月24日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：2.7k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：16分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p>The Introduction to Data Analytics course provided by IBM is the first in a series of courses designed to prepare me for a career as a junior data analyst. The course introduces me to the core concepts, processes, and tools I need to gain entry into data analytics. The following are the notes I took during this course.</p>
+</blockquote>
+<a id="more"></a>
+
+
+
+	<div class="row">
+    <embed src="/pdf/Coursera-Intro-2-DA.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<h3 id="Modern-Data-Ecosystem"><a href="#Modern-Data-Ecosystem" class="headerlink" title="Modern Data Ecosystem"></a>Modern Data Ecosystem</h3><h4 id="Key-Players-in-the-Data-Ecosystem"><a href="#Key-Players-in-the-Data-Ecosystem" class="headerlink" title="Key Players in the Data Ecosystem"></a>Key Players in the Data Ecosystem</h4><ul>
+<li>An Interconnected, Independent and Continually evolving network</li>
+<li>Data Sources &amp; Users</li>
+<li>Emerging technologies shaping the modern data ecosystem</li>
+<li>Organizations are using data to uncover opportunities and applying that knowledge to differentiate themselves from their competition.</li>
+<li>Data engineering converts raw data into usable data. Data analytics uses this data to generate insights. Data scientists use data analytics and data engineering to predict the future using data from the past.</li>
+<li>Business analysts and business intelligence analysts use these insights and predictions to drive decisions that benefit and grow their business.</li>
+</ul>
+<h4 id="Defining-Data-Analysis"><a href="#Defining-Data-Analysis" class="headerlink" title="Defining Data Analysis"></a>Defining Data Analysis</h4><ul>
+<li>Data analysis is the process of gathering, cleaning, analyzing and mining data, interpreting results, and reporting the findings.</li>
+<li>Different Types of Data Analytics<ul>
+<li>Descriptive Analytics</li>
+<li>Diagnostic Analytics</li>
+<li>Predictive Analytics</li>
+<li>Prescriptive Analytics (self-driving)</li>
+</ul>
+</li>
+<li>The Data Analysis Process<ul>
+<li>Understanding the problem and desired result</li>
+<li>Setting a clear metric</li>
+<li>Gathering data</li>
+<li>Cleaning data</li>
+<li>Analyzing and Mining data</li>
+<li>Interpreting results</li>
+<li>Presenting your findings</li>
+</ul>
+</li>
+<li>Data Analytics vs. Data Analysis</li>
+</ul>
+<h3 id="The-Data-Analyst-Role"><a href="#The-Data-Analyst-Role" class="headerlink" title="The Data Analyst Role"></a>The Data Analyst Role</h3><h4 id="Responsibilities-of-a-Data-Analyst"><a href="#Responsibilities-of-a-Data-Analyst" class="headerlink" title="Responsibilities of a Data Analyst"></a>Responsibilities of a Data Analyst</h4><ol>
+<li>Acquiring data</li>
+<li>Creating queries to extract required data</li>
+<li>Filtering, cleaning, standardizing, and reorganizing data</li>
+<li>Using statistical tools</li>
+<li>Using statistical techniques</li>
+<li>Analyzing patterns</li>
+<li>Preparing reports and charts</li>
+<li>Creating appropriate documentation</li>
+</ol>
+<h4 id="Skills-required-for-Data-Analyst"><a href="#Skills-required-for-Data-Analyst" class="headerlink" title="Skills required for Data Analyst"></a>Skills required for Data Analyst</h4><ul>
+<li>Expertise in using spreadsheets (Excel)</li>
+<li>Proficiency in statistical analysis and visualization tools and software (Power BI, SAS, Tableau)</li>
+<li>Proficiency in programming languages (R, Python, C++, Java, MATLAB)</li>
+<li>Good knowledge of SQL, and ability to work with data in relational and NoSQL databases</li>
+<li>The ability to access and extract data from data repositories (Data marts, Data warehouses, Data lakes, Data pipelines)</li>
+<li>Familiarity with Big Data processing tools (Hadoop, Hive, Spark)</li>
+<li>Proficiency in Statistics</li>
+<li>Analytical skills</li>
+<li>Problem-solving skills</li>
+<li>Probing skills</li>
+<li>Data Visualization skills</li>
+<li>Project Management skills</li>
+<li>Collaboration and Communication ability</li>
+<li>Curiosity and Intuition</li>
+</ul>
+<h3 id="Data-Analysts-Ecosystem"><a href="#Data-Analysts-Ecosystem" class="headerlink" title="Data Analysts Ecosystem"></a>Data Analysts Ecosystem</h3><ul>
+<li>A data analyst ecosystem includes the infrastructure, software, tools, frameworks, and processes used to gather, clean, analyze, mine, and visualize data.</li>
+</ul>
+<h4 id="Types-of-Data"><a href="#Types-of-Data" class="headerlink" title="Types of Data"></a>Types of Data</h4><ul>
+<li>Structured data is data that is well organized in formats that can be stored in databases and lends itself to standard data analysis methods and tools</li>
+<li>Semi-structured data is data that is somewhat organized and relies on meta tags for grouping and hierarchy</li>
+<li>Unstructured data is data that is not conventionally organized in the form of rows and columns in a particular format</li>
+</ul>
+<h4 id="Different-Types-of-File-Form"><a href="#Different-Types-of-File-Form" class="headerlink" title="Different Types of File Form"></a>Different Types of File Form</h4><ul>
+<li>Delimited text files: <code>.CSV</code>, <code>.TSV</code></li>
+<li>Microsoft Excel Open XML Spreadsheet: <code>.XLSX</code></li>
+<li>Extensible Markup Language: <code>.XML</code></li>
+<li>JavaScript Object Notation: <code>.JSON</code></li>
+</ul>
+<h4 id="Sources-of-Data"><a href="#Sources-of-Data" class="headerlink" title="Sources of Data"></a>Sources of Data</h4><ul>
+<li>Relational Databases: Store structured data that can be leveraged for analysis</li>
+<li>Flat Files: Store data in plain text format, each line or row is one record, delimited text</li>
+<li>Spreadsheet files: Special type of flat files, organize data in a tabular format (<code>.XLSX</code>)</li>
+<li>XML files: Contain data values that are identified or marked up using tags</li>
+<li>APIs and Web Services</li>
+<li>Web scraping: Extract relevant data from unstructured data</li>
+<li>Data Streams and feeds (RSS feeds)</li>
+</ul>
+<h4 id="Languages-for-Data-Professionals"><a href="#Languages-for-Data-Professionals" class="headerlink" title="Languages for Data Professionals"></a>Languages for Data Professionals</h4><ul>
+<li> Query languages are designed for accessing and manipulating data in a database (SQL)</li>
+<li>Programming languages are designed for developing applications and controlling application behavior (Python, R, and Java)</li>
+<li>Shell and Scripting languages (Unix/Linux Shell, and PowerShell) are ideal for repetitive and time-consuming operational tasks</li>
+<li>SQL: Structured Query Language, Portable and Platform independent</li>
+<li>Python libraries: Pandas, Numpy and Scipy, Beautifulsoup and Scrapy, Matplotlib and Seaborn, Opency</li>
+<li>R libraries: Gggplot2 and Plotly</li>
+</ul>
+<h3 id="Data-Repositories-and-Big-Data-Platforms"><a href="#Data-Repositories-and-Big-Data-Platforms" class="headerlink" title="Data Repositories and Big Data Platforms"></a>Data Repositories and Big Data Platforms</h3><ul>
+<li>A data repository is a general term used to refer to data that has been collected, organized, and isolated so that it can be used for business operations or mined for reporting and data analysis.</li>
+<li>Data repositories help to isolate data and make reporting and analytics more efficient and credible while also serving as a data archive.</li>
+</ul>
+<h4 id="RDBMS"><a href="#RDBMS" class="headerlink" title="RDBMS"></a>RDBMS</h4><ul>
+<li><p>Databases: Collection of data, or information, designed for the input, storage, search and retrieval, and modification of data</p>
+</li>
+<li><p>DBMS: A set of programs that creates and maintains the database</p>
+</li>
+<li><p>RDBMS: Well-defined structure and schema, Optimized for data operations and querying, Use SQL for querying data</p>
+<ul>
+<li>A relational database is a collection of data organized into a table structure, where the tables can be linked, or related, based on data common to each.</li>
+<li>Create meaningful information, Flexibility, Minimize data redundancy, ease of backup and disaster recovery and ACID complaint (reliable)</li>
+</ul>
+</li>
+</ul>
+<h4 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h4><ul>
+<li><p>Built for speed, flexibility and scale, can be stored in a schema-less form, widely used for processing big data</p>
+</li>
+<li><p>A non-relational database design that provides flexible schemas for the storage and retrieval of data.</p>
+</li>
+<li><p>NoSQL allows data to be stored in a schema-less or free-form fashion. </p>
+</li>
+<li><p>Types: Key-value store (Redis), Document-based (Mongo DB), Column-based (Cassandra), and Graph-based (Neo4J)</p>
+</li>
+</ul>
+<h4 id="Key-Differences-Between-RDBMS-amp-NoSQL"><a href="#Key-Differences-Between-RDBMS-amp-NoSQL" class="headerlink" title="Key Differences Between RDBMS &amp; NoSQL"></a>Key Differences Between RDBMS &amp; NoSQL</h4><table>
+<thead>
+<tr>
+<th><strong>Relational Databases</strong></th>
+<th><strong>Non-Relational Data Bases</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RDBMS schemas rigidly define how all data inserted into the database must be typed and composed</td>
+<td>NoSQL databases can be schema-agnostic, allowing unstructured and semi-structured data to be stored and manipulated</td>
+</tr>
+<tr>
+<td>Maintaining high-end,commercial relational database management systems can be expensive</td>
+<td>Specifically designed for low-cost commodity hardware</td>
+</tr>
+<tr>
+<td>Support ACID-compliance, which ensures reliability of transactions and crash recovery</td>
+<td>Most NoSQL databases are not ACID compliant</td>
+</tr>
+<tr>
+<td>A mature and well-documented technology, which means the risks are more or less perceivable</td>
+<td>A relatively newer technology</td>
+</tr>
+</tbody></table>
+<h4 id="Data-Marts-Data-Lakes-ETL-and-Data-Pipelines"><a href="#Data-Marts-Data-Lakes-ETL-and-Data-Pipelines" class="headerlink" title="Data Marts, Data Lakes, ETL and Data Pipelines"></a>Data Marts, Data Lakes, ETL and Data Pipelines</h4><ul>
+<li><p>A data warehouse is a multi-purpose enabler of operational and performance analytics. </p>
+</li>
+<li><p>A data mart is a sub-section of the data warehouse, built specifically for a particular business function, purpose, or community of users. (Business specific reporting and analytics)</p>
+</li>
+<li><p>A Data Lake is a storage repository that can store large amounts of structured, semi-structured, and unstructured data in their native format, classified and tagged with metadata. (Retain all source data without exclusions)</p>
+</li>
+<li><p>Extract, Transform and Load Process (ETL): Gathering raw data -&gt; Extracting the information needed for reporting and analysis -&gt; Cleaning, standardizing, and transforming data into usable format -&gt; Loading data into a data repository</p>
+<ul>
+<li>Batch processing, Stream processing, Load verification</li>
+</ul>
+</li>
+<li><p>A data pipeline is a broader term that encompasses the entire journey of moving data from one system to another, including the ETL process.</p>
+</li>
+</ul>
+<h4 id="Foundations-of-Big-Data"><a href="#Foundations-of-Big-Data" class="headerlink" title="Foundations of Big Data"></a>Foundations of Big Data</h4><ul>
+<li><p>Big data refers to the dynamic, large and disparate volumes of data being created by people, tools and machines. It requires new, innovative and scalable technology to collect, host, and analytically process the vast amount of data gathered in order to drive real-time business insights that relate to consumers, risk, profit, performance, productivity management, and enhanced shareholder value.</p>
+</li>
+<li><p>The V’s of Big Data: Velocity, Volume, Variety, Veracity, Value</p>
+</li>
+<li><p>Big Data Processing Tools</p>
+<ul>
+<li>Apache Hadoop is a collection of tools that provides distributed storage and processing of big data. (Java based, Node&amp;Cluster, HDFS)</li>
+<li>Apache Hive is a data warehouse for data query and analysis built on top of Hadoop. </li>
+<li>Apache Spark is a distributed data analytics framework designed to perform complex data analytics in real-time. </li>
+</ul>
+</li>
+</ul>
+<h3 id="Gathering-Data"><a href="#Gathering-Data" class="headerlink" title="Gathering Data"></a>Gathering Data</h3><h4 id="Identifying-Data-for-Analysis"><a href="#Identifying-Data-for-Analysis" class="headerlink" title="Identifying Data for Analysis"></a>Identifying Data for Analysis</h4><ul>
+<li><p>Process for Identifying data</p>
+<ol>
+<li>Determine the information you want to collect (specific information/possible sources)</li>
+<li>Define a plan for collecting data (establish timeframe/how much is sufficient/dependencies/risks/mitigation plan)</li>
+<li>Determine your data collection methods depending on sources, types, timeframe and volume of data</li>
+</ol>
+</li>
+<li><p>Data identifying has implication for quality, security, and privacy. None of these are one-time considerations but are relevant through the life cycle of the data analysis process.</p>
+</li>
+<li><p>Data Quality: data needs to be free of errors, accurate, complete, relevant, and accessible.</p>
+</li>
+<li><p>Data Governance: Security, Regulation and Compliances (relate to the usability, integrity, and availability of data)</p>
+</li>
+<li><p>Data Privacy: confidentiality, license for use, and compliance to mandated regulations (Checks, validations, and an auditable trail needs to be planned.)</p>
+</li>
+</ul>
+<h4 id="Data-Sources"><a href="#Data-Sources" class="headerlink" title="Data Sources"></a>Data Sources</h4><ul>
+<li>Data sources can be internal or external to the organization</li>
+<li>Primary data refers to information obtained directly from the source.</li>
+<li>Secondary data refers to information retrieved from existing sources, such as external databases, research articles, publications, training material and Internet searches, or financial records available as public data.</li>
+<li>Third party data is data you purchased from aggregators who collect data from various sources and combine it into comprehensive datasets purely for the purpose of selling the data.</li>
+<li>Sources for Gathering Data: Databases, Web, Social media sites and Interactive platforms, Sensor data, Data Exchange, Interviews and Observation studies</li>
+</ul>
+<h4 id="How-to-Gather-and-Import-Data"><a href="#How-to-Gather-and-Import-Data" class="headerlink" title="How to Gather and Import Data"></a>How to Gather and Import Data</h4><ul>
+<li>Using queries to extract data from SQL databases<ul>
+<li>Non-relational databases can be queried using SQL or SQL-like query tools.</li>
+</ul>
+</li>
+<li>Application Programming Interfaces (or APIs) are also popularly used for extracting data from a variety of data sources.<ul>
+<li>APIs are also used for data validation.</li>
+</ul>
+</li>
+<li>Using Web Scraping to extract data from the web (RSS feeds are another source typically used for capturing updated data from online forums and news sites where data is refreshed on an ongoing basis.)</li>
+<li>Data streams are a popular source for aggregating constant streams of data flowing from sources such as instruments, IoT devices and applications, and GPS data from cars.</li>
+<li>Data Exchanges have a set of well-defined exchange standards, protocols, and formats relevant for exchanging data.</li>
+<li>Specific data repositories are optimized for certain types of data. <ul>
+<li>Relational databases store structured data with a well-defined schema.</li>
+<li>Semi-structured can be stored in NoSQL clusters. XML and JSON are commonly used for storing and exchanging semi-structured data. JSON is also the preferred data type for web services.</li>
+<li>NoSQL databases and Data Lakes provide a good option to store and manipulate large volumes of unstructured data. Data lakes can accommodate all data types and schema. ETL tools and data pipelines provide automated functions that facilitate the process of importing data.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Wrangling-Data"><a href="#Wrangling-Data" class="headerlink" title="Wrangling Data"></a>Wrangling Data</h3><h4 id="Data-Wrangling"><a href="#Data-Wrangling" class="headerlink" title="Data Wrangling"></a>Data Wrangling</h4><ul>
+<li>Data wrangling, also known as data munging, is an iterative process that involves data exploration, transformation, validation, and making it available for a credible and meaningful analysis.</li>
+<li>The Data Wrangling Process<ol>
+<li>Discovery: Examine and understand data &amp; create a plan</li>
+<li>Transformation: Structuring, Normalizing and Denormalizing, Cleaning, Enriching Data</li>
+<li>Validation: Check the quality of the data post structuring, normalizing, cleaning and enriching of data.</li>
+<li>Publishing: Delivering the output of the wrangled data for downstream project needs.</li>
+<li>Documentation: It is vital that you document all considerations and actions.</li>
+</ol>
+</li>
+</ul>
+<h4 id="Tools-for-Data-Wrangling"><a href="#Tools-for-Data-Wrangling" class="headerlink" title="Tools for Data Wrangling"></a>Tools for Data Wrangling</h4><ul>
+<li>Spreadsheets / Excel Power Query</li>
+<li>OpenRefine</li>
+<li>Google DataPrep</li>
+<li>Watson Studio Refinery</li>
+<li>Trifacta Wrangler</li>
+<li>Python: Jupyter Notebook, NumPy, pandas</li>
+<li>R: Dplyr, Data.Table, Jsonlite</li>
+</ul>
+<h4 id="Data-Cleaning"><a href="#Data-Cleaning" class="headerlink" title="Data Cleaning"></a>Data Cleaning</h4><ul>
+<li>Poor quality data weakens an organization’s competitive standing and undermines critical business objectives.</li>
+<li>Data Cleaning Workflow<ul>
+<li>Inspection: Detect issues and errors, Validating against rules and constraints, Profiling data, visualizing data</li>
+<li>Cleaning: Imputate missing values, Remove duplicate data, Data type conversion, Standardize data, Rectify syntax errors, Examine outliers……</li>
+<li>Verification: Reinspect data</li>
+<li>It is important to document</li>
+</ul>
+</li>
+</ul>
+<h3 id="Analyzing-and-Mining-Data"><a href="#Analyzing-and-Mining-Data" class="headerlink" title="Analyzing and Mining Data"></a>Analyzing and Mining Data</h3><h4 id="Statistical-Analysis"><a href="#Statistical-Analysis" class="headerlink" title="Statistical Analysis"></a>Statistical Analysis</h4><ul>
+<li>Statistics is a branch of mathematics dealing with the collection, analysis, interpretation, and presentation of numerical or quantitative data.</li>
+<li>Statistical Analysis is the application of statistical methods to a sample of data in order to develop an understanding of what that data represents.</li>
+<li>Descriptive Statistics enables you to present data in a meaningful way allowing simpler interpretation of the data.<ul>
+<li>Central Tendency: Mean(average value), Medium(Middle’s value), Mode(Most popular value)</li>
+<li>Dispersion: Variance, Standard Deviation, Range</li>
+<li>Skewness: Measure of whether the distribution of values is symmetrical around a central value or skewed left or right.</li>
+</ul>
+</li>
+<li>Inferential statistics takes data from a sample to make inferences about the larger population from which the sample was drawn.<ul>
+<li>Hypothesis Testing—For example, for studying the effectiveness of a vaccine by comparing outcomes in a control group</li>
+<li>Confidence Intervals incorporate the uncertainty and sample error to create a range of values the actual population value is like to fall within.</li>
+<li>Regression Analysis incorporates hypothesis tests that help determine whether the relationships observed in the sample data actually exist in the population rather than just the sample.</li>
+</ul>
+</li>
+<li>SAS, SPSS, StatsSoft</li>
+</ul>
+<h4 id="Data-Mining"><a href="#Data-Mining" class="headerlink" title="Data Mining"></a>Data Mining</h4><ul>
+<li>The process of extracting knowledge from data, is the heart of the data analysis process. </li>
+<li>An interdisciplinary field that involves the use of pattern recognition technologies, statistical analysis and mathematical techniques.</li>
+<li>Aims to identify correlations in data, find patterns and variations. understand trends and predict probabilities.</li>
+<li>Pattern recognition is the discovery of regularity’s or commonality’s in data.</li>
+<li>A trend is the general tendency of a set of data to change overtime.</li>
+<li>Data mining has applications across industries and disciplines.</li>
+<li>Data mining techniques<ul>
+<li>Classification: Classifying attributes into target categories</li>
+<li>Clustering: Involves grouping data into clusters so they can be treated as groups</li>
+<li>Anomaly or Outlier Detection: Finding patterns in data that are not normal or unexpected</li>
+<li>Association Rule Mining: Establishing a relationship between two data events</li>
+<li>Sequential Patterns: Tracing a series of events that take place in a sequence</li>
+<li>Affinity Grouping: Discovering co-occurrence in relationships</li>
+<li>Decision trees: Building classification models in the form of a tree structure with multiple branches, where each branch represents a probable occurrence.</li>
+<li>Regression: Identifying the nature of the relationship between two variables, which could be causal or correlational.</li>
+</ul>
+</li>
+</ul>
+<h4 id="Tools-for-Data-Mining"><a href="#Tools-for-Data-Mining" class="headerlink" title="Tools for Data Mining"></a>Tools for Data Mining</h4><ul>
+<li>Spreadsheets: Host data, create pivot table, add-ins(Data Mining Client, XLMiner)</li>
+<li>R-language: tm, twitteP, RStudio</li>
+<li>Python: pandas, NumPy, Jupyter Notebook</li>
+<li>IBM SPSS Statistics (Statistical Process for Social Sciences)</li>
+<li>IBM Watson Studio</li>
+<li>SAS Enterprise Miner: A comprehensive, graphical workbench for data mining.</li>
+</ul>
+<h3 id="Communicating-and-Sharing-Data-Analysis-Findings"><a href="#Communicating-and-Sharing-Data-Analysis-Findings" class="headerlink" title="Communicating and Sharing Data Analysis Findings"></a>Communicating and Sharing Data Analysis Findings</h3><ul>
+<li>The data analysis process ends with communicating the findings in ways that impact decision making.</li>
+<li>Data projects involve<ul>
+<li> A collaborative effort spread across business functions</li>
+<li>People with multi-disciplinary skills</li>
+<li>Findings incorporated into a larger business initiative.</li>
+</ul>
+</li>
+<li>The success of your communication depends on how well others can understand and trust your insights to take further action.</li>
+<li>Understanding the information needs of your audience will help you decide what and how much information is essential to enable a better understanding of your findings.</li>
+</ul>
+<h4 id="Structure-your-presentation"><a href="#Structure-your-presentation" class="headerlink" title="Structure your presentation"></a>Structure your presentation</h4><ul>
+<li>Begin your presentation by demonstrating your understanding of the business problem to your audience. Speak in the language of the organization’s business domain.</li>
+<li>The next step in designing your communication is to structure and organize your presentation for maximum impact.</li>
+</ul>
+<h4 id="The-Role-of-Visuals"><a href="#The-Role-of-Visuals" class="headerlink" title="The Role of Visuals"></a>The Role of Visuals</h4><ul>
+<li>A powerful visualization tells a story through the graphical depiction of facts and figures. (Graphs, Charts, Diagrams)</li>
+<li>Trust, Understanding, Relatability</li>
+</ul>
+<h4 id="Introduction-to-Data-Visualization"><a href="#Introduction-to-Data-Visualization" class="headerlink" title="Introduction to Data Visualization"></a>Introduction to Data Visualization</h4><ul>
+<li>Data visualization is the discipline of communicating information through the use of visual elements such as graphs, charts, and maps. Its goal is to make information easy to comprehend, interpret, and retain.</li>
+<li>Choosing appropriate visualizations</li>
+<li>Common types of graphs<ul>
+<li>Bar Charts are great for comparing related data sets or parts of a whole.</li>
+<li>Column Charts compare values side-by-side. You can use them quite effectively to show change over time.</li>
+<li>Pie Charts show the breakdown of an entity into its sub-parts and the proportion of the sub-parts in relation to one another. Each portion of the pie represents a static value or category, and the sum of all categories is equal to hundred percent.</li>
+<li>Line Charts display trends. They’re great for showing how a data value is changing in relation to a continuous variable.</li>
+</ul>
+</li>
+<li>Dashboards organize and display reports and visualizations coming from multiple data sources into a single graphical interface.<ul>
+<li>Are easy to comprehend by an average user</li>
+<li>Make collaboration easy between teams</li>
+<li>Allow you to generate reports on the go</li>
+</ul>
+</li>
+</ul>
+<h4 id="Introduction-to-Visualization-and-Dashboarding-Software"><a href="#Introduction-to-Visualization-and-Dashboarding-Software" class="headerlink" title="Introduction to Visualization and Dashboarding Software"></a>Introduction to Visualization and Dashboarding Software</h4><ul>
+<li>Spreadsheets</li>
+<li>Jupyter Notebook and Python libraries (Matplotlib, Bokeh, Dash)</li>
+<li>R-Studio and R-Shiny</li>
+<li>IBM Cognos Analytics</li>
+<li>Tableau</li>
+<li>Microsoft Power BI</li>
+</ul>
+<h3 id="Opportunities-and-Learning-Paths"><a href="#Opportunities-and-Learning-Paths" class="headerlink" title="Opportunities and Learning Paths"></a>Opportunities and Learning Paths</h3><ul>
+<li>Data analyst job openings exist across industry, government and academia.</li>
+<li>Banking and Finance, Insurance, Healthcare, Retail and Information Technology</li>
+<li>Roles and Responsibilities<ul>
+<li>Data Analyst Specialist Roles</li>
+<li>Domain Specialist Roles</li>
+<li>Data Engineers &amp; Data Scientists</li>
+</ul>
+</li>
+<li>4 important soft skills<ul>
+<li>Problem-Solving</li>
+<li>Project Management</li>
+<li>Communication</li>
+<li>Storytelling</li>
+</ul>
+</li>
+</ul>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Introduction-to-Data-Analytics/&title=Introduction to Data Analytics - Bezhuang's Blog&summary=
+The Introduction to Data Analytics course provided by IBM is the first in a series of courses designed to prepare me for a career as a junior data analyst. The course introduces me to the core concepts, processes, and tools I need to gain entry into data analytics. The following are the notes I took during this course.
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Introduction-to-Data-Analytics/&title=Introduction to Data Analytics - Bezhuang's Blog&summary=
+The Introduction to Data Analytics course provided by IBM is the first in a series of courses designed to prepare me for a career as a junior data analyst. The course introduces me to the core concepts, processes, and tools I need to gain entry into data analytics. The following are the notes I took during this course.
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Introduction-to-Data-Analytics/&title=Introduction to Data Analytics - Bezhuang's Blog&summary=
+The Introduction to Data Analytics course provided by IBM is the first in a series of courses designed to prepare me for a career as a junior data analyst. The course introduces me to the core concepts, processes, and tools I need to gain entry into data analytics. The following are the notes I took during this course.
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADr0lEQVR42u3ZQXICMQwEQP7/6eQFlK2RqBVJ743KYuz2ZaJ5/Xii54UAHDhw4DzgwC2Be4XP8QfevPduneq6p/VPn9PzggMHDhw4cODAbYO7DoCH97sbTSGmL+jt74EDBw4cOHDgwC2FOwbAoc9TF1aFaZ8XHDhw4MCBAwfuj8JNAd8OMqcCNThw4MCBAwcO3H+Fq264WxDfBunu/sGBAwcOHDhw4L4FrlzQhoPEFCANtuuafHDgwIEDBw4cuCG4NHB+6+f4vODAgQMHDhw4cEvguk81aFYHmmkRfhusy+cFBw4cOHDgwIFbApcGxHTg2T1YGsynzgcOHDhw4MCBA7cNLh1g3v5wGpCnAnEaxMGBAwcOHDhw4LbC3S54vXBYCHcBu0X69YAWHDhw4MCBAwduGVw1KN7+fapQTg+e7vftvsGBAwcOHDhw4JbC3QbNqUL6U4G3e65yAAYHDhw4cODAgXsILg203YN9amA6HYTBgQMHDhw4cOC2wnUDaPd71QFnGuDbFwQOHDhw4MCBA7cULv3hqcK3u69q0C4X2uDAgQMHDhw4cEvgqsH0duPTRXZadFf3cVwHHDhw4MCBAwduGdxtoZwOHrsFdRciDd7gwIEDBw4cOHBb4dKDpkV0d6CYXvRUcAcHDhw4cODAgdsClw4Yrwd/YdDsDlLTiz5eHDhw4MCBAwcO3BK46oaniuV04PjpgH7cJzhw4MCBAwcO3HK46YNXNz41MK1eyNEFHDhw4MCBAwduCVx34/FAMPx+CjM16AQHDhw4cODAgdsKN10oTwXgbpAdWx8cOHDgwIEDB24J3C1g9b1PFdG3gbp6cdfvgwMHDhw4cODALYG7DYDdQWQauKsHrl7cWCENDhw4cODAgQP3EFwVqjqw7A4WpwrvdgEODhw4cODAgQO3FK4agKsBcqrIrq5f/X45AIMDBw4cOHDgwD0M1y1wp9etDka7QbhcSIMDBw4cOHDgwD0E1w6EYYC+LZKrxfVU0H67Hjhw4MCBAwcO3BK4V/hUAaaCcBU6DebX/zmAAwcOHDhw4MA9DNctem9h04K5G8DTwh0cOHDgwIEDB+5b4KaL4/T9Lc9xkAkOHDhw4MCBA/flcOmAMA3C3X3FFw8OHDhw4MCBA/fP4KYHp1ODzPK5wIEDBw4cOHDglsJ1C+C0+D2tnwbm6sXGARgcOHDgwIEDB+4huHTwWB1gphdSHZhOF97gwIEDBw4cOHDb4DzFII8AHDhw4DzgwD37/AI5wv41fV//pgAAAABJRU5ErkJggg==">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Introduction-to-Data-Analytics/&text=Introduction to Data Analytics - Bezhuang's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/Excel-Basics-%20for-Data-Analysis/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Excel Basics for Data Analysis</p>
+          <p class='content'>
+Excel is an essential tool for working with data - whether for business, marketing, data analyti...</p>
+        </a>
+      
+      
+        <a class='next' href='/%E6%99%AE%E9%99%80%E5%B1%B1%E8%A1%8C%E8%AE%B0/'>
+          <p class='title'>2021普陀山行记<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+普陀山，是观世音菩萨教化众生的道场。素有”海天佛国“、”南海圣境“的美誉。这十几年来基本上每年都会去，本没什么稀奇。不过今年出行倒是特别顺利（可能是疫情复发没什么人），天气又好，索性把之前没去...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Modern-Data-Ecosystem"><span class="toc-text">Modern Data Ecosystem</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Key-Players-in-the-Data-Ecosystem"><span class="toc-text">Key Players in the Data Ecosystem</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Defining-Data-Analysis"><span class="toc-text">Defining Data Analysis</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Data-Analyst-Role"><span class="toc-text">The Data Analyst Role</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Responsibilities-of-a-Data-Analyst"><span class="toc-text">Responsibilities of a Data Analyst</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Skills-required-for-Data-Analyst"><span class="toc-text">Skills required for Data Analyst</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Analysts-Ecosystem"><span class="toc-text">Data Analysts Ecosystem</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Types-of-Data"><span class="toc-text">Types of Data</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Different-Types-of-File-Form"><span class="toc-text">Different Types of File Form</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Sources-of-Data"><span class="toc-text">Sources of Data</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Languages-for-Data-Professionals"><span class="toc-text">Languages for Data Professionals</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Repositories-and-Big-Data-Platforms"><span class="toc-text">Data Repositories and Big Data Platforms</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RDBMS"><span class="toc-text">RDBMS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NoSQL"><span class="toc-text">NoSQL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Key-Differences-Between-RDBMS-amp-NoSQL"><span class="toc-text">Key Differences Between RDBMS &amp; NoSQL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Data-Marts-Data-Lakes-ETL-and-Data-Pipelines"><span class="toc-text">Data Marts, Data Lakes, ETL and Data Pipelines</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Foundations-of-Big-Data"><span class="toc-text">Foundations of Big Data</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gathering-Data"><span class="toc-text">Gathering Data</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Identifying-Data-for-Analysis"><span class="toc-text">Identifying Data for Analysis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Data-Sources"><span class="toc-text">Data Sources</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#How-to-Gather-and-Import-Data"><span class="toc-text">How to Gather and Import Data</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Wrangling-Data"><span class="toc-text">Wrangling Data</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Data-Wrangling"><span class="toc-text">Data Wrangling</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tools-for-Data-Wrangling"><span class="toc-text">Tools for Data Wrangling</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Data-Cleaning"><span class="toc-text">Data Cleaning</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Analyzing-and-Mining-Data"><span class="toc-text">Analyzing and Mining Data</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Statistical-Analysis"><span class="toc-text">Statistical Analysis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Data-Mining"><span class="toc-text">Data Mining</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tools-for-Data-Mining"><span class="toc-text">Tools for Data Mining</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Communicating-and-Sharing-Data-Analysis-Findings"><span class="toc-text">Communicating and Sharing Data Analysis Findings</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Structure-your-presentation"><span class="toc-text">Structure your presentation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#The-Role-of-Visuals"><span class="toc-text">The Role of Visuals</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Introduction-to-Data-Visualization"><span class="toc-text">Introduction to Data Visualization</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Introduction-to-Visualization-and-Dashboarding-Software"><span class="toc-text">Introduction to Visualization and Dashboarding Software</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Opportunities-and-Learning-Paths"><span class="toc-text">Opportunities and Learning Paths</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Introduction to Data Analytics";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        
+          <div><p>Copyright © 2021 Zhihao Zhuang. All rights reserved</p>
+</div>
+        
+      
+    
+      
+        
+          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+</div>
+        
+      
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/********************脚本懒加载函数********************************/
+function loadScript(src, cb) {
+var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+var script = document.createElement('script');
+script.setAttribute('type','text/javascript');
+if (cb) script.onload = cb;
+script.setAttribute('src', src);
+HEAD.appendChild(script);
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://www.zhuangzhihao.top
+        
+        
+        
+        
+          id="https:wwwzhuangzhihaotop"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 返回主页
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/Bezhuang/Hexo-blog
+        
+        
+        
+        
+          id="https:githubcomBezhuangHexo-blog"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('false' == true && ('home,contributors,source_docs,hr,print'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+	
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/issues.min.js');
+	
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+
+
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
+  });
+</script>
+
+
+
+
+
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  pjax_comment=pjax_valine;
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/app.min.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/search/hexo.min.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI',
+    app_key: 'j5I5paEqIfWfOlCg13vU2vNq',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://blog.zhuangzhihao.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+function bindToggleButton() {
+	var btn=$("#wrapper .toggle-mode-btn");
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+document.addEventListener("pjax:success", bindToggleButton);
+
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/tu8j8vmfuovtkhsj4lgr7sub986gd1ku.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#l_cover",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      
+      $("#wrapper .toggle-mode-btn").unbind('click');
+      
+	  
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        if (typeof IssuesAPI == "undefined") {
+          loadIssuesJS();
+        }
+        
+          pjax_initCopyCode();
+        
+		
+          try{pjax_comment();} catch (e) {}
+        
+      } catch (e) {
+        console.log(e);
+      }
+	  
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+<!--浏览器搞笑标题-->
+<!--<script type="text/javascript" src="/js/FunnyTitle.js"></script>-->
+<!-- 数字雨 -->
+<canvas id="canvas" width="1440" height="900" ></canvas>
+<script type="text/javascript" src="/js/DigitalRain.js"></script>

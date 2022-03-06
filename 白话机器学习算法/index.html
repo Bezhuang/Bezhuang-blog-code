@@ -1,0 +1,2347 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>白话机器学习算法 - Bezhuang&#39;s Blog</title>
+  
+
+  
+    <meta name="description" content="
+机器学习算法是数据科学的力量之源，它和数据一起产生极其宝贵的知识并且帮助我们以新的方式利用已有信息。白话机器学习算法一书用通俗易懂的语言以及大量有趣的示例和插图讲解10多种前沿的机器学习算法。内容涵盖k均值聚类、主成分分析、关联规则、社会网络分析等无监督学习算法，以及回归分析、k最近邻、支持向量机、决策树、随机...">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Bezhuang's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+
+<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+
+
+</head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
+    
+
+<header id="l_header" class="l_header always shadow floatable blur show"  >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Bezhuang's Blog
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div class='cover-bg' style='background-image:url(https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%A3%81%E7%BA%B82.jpg)'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">庄之皓 · Bezhuang</p>
+    
+    
+      <p class="subtitle">欢迎访问我的博客！Welcome to my blog!</p>
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="search here..." />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/photos"
+              
+              
+              id="photos">
+              <p>相册</p>
+            </a>
+          
+            <a href="/projects"
+              
+              
+              id="projects">
+              <p>开源库</p>
+            </a>
+          
+            <a href="/todo"
+              
+              
+              id="todo">
+              <p>计划表</p>
+            </a>
+          
+            <a href="/guestbook"
+              
+              
+              id="guestbook">
+              <p>留言板</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        白话机器学习算法
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年10月31日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：11.9k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：40分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p>机器学习算法是数据科学的力量之源，它和数据一起产生极其宝贵的知识并且帮助我们以新的方式利用已有信息。<a target="_blank" rel="noopener" href="https://book.douban.com/subject/30442187/">白话机器学习算法</a>一书用通俗易懂的语言以及大量有趣的示例和插图讲解10多种前沿的机器学习算法。内容涵盖k均值聚类、主成分分析、关联规则、社会网络分析等无监督学习算法，以及回归分析、k最近邻、支持向量机、决策树、随机森林、神经网络等监督学习算法，并概述强化学习算法的思想。以下为阅读过程中所作的读书笔记，可供参考。</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="为何需要数据科学"><a href="#为何需要数据科学" class="headerlink" title="为何需要数据科学"></a>为何需要数据科学</h3><ul>
+<li>借助现代计算机和高级算法，我们能够做到以下几点：<ol>
+<li>从大型数据集中发现隐藏的趋势</li>
+<li> 充分利用发现的趋势做预测</li>
+<li>计算每种结果出现的概率</li>
+<li>快速获取准确结果</li>
+</ol>
+</li>
+</ul>
+<h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><h4 id="准备数据"><a href="#准备数据" class="headerlink" title="准备数据"></a>准备数据</h4><ul>
+<li>数据格式：数据点、数据集</li>
+<li>变量（variable）：用于描述数据点，又叫属性、特征或维度<ul>
+<li>二值变量（binary variable）：最简单的变量类型，只有2个可选值</li>
+<li>分类变量（categorical variable）：用来表示有2个以上选择的情况</li>
+<li>整型变量（integer variable）：用来表示整数</li>
+<li>连续变量（continuous variable）：用来表示小数</li>
+</ul>
+</li>
+<li>变量选择是一个试错的过程，需要根据反馈结果不断更换变量，选取那些最有希望的变量，以待进一步分析</li>
+<li>特征工程（feature engineering）是将原始数据转化成更好的表达问题本质的特征的过程，使得将这些特征运用到预测模型中能提高对不可见数据的模型预测精度</li>
+<li>解决数据缺失：近似、计算、移除</li>
+</ul>
+<h4 id="选择算法"><a href="#选择算法" class="headerlink" title="选择算法"></a>选择算法</h4><ul>
+<li>无监督学习（unsupervised learning）：依靠算法从数据中找出隐藏的模式<ul>
+<li>k 均值聚类、主成分分析、关联规则、社会网络分析</li>
+<li>通过间接手段，可以对无监督学习模型输出的结果进行验证</li>
+</ul>
+</li>
+<li>监督学习（supervised learning）：基于数据中已有的模式做预测<ul>
+<li>回归分析、k 最近邻、支持向量机、决策树、随机森林（random forest）、神经网络</li>
+</ul>
+</li>
+<li>强化学习（reinforcement learning）：使用数据中的模式做预测，并根据越来越多的反馈结果不断改进</li>
+<li>除了要了解算法使用的任务类型外，还要了解各种算法对不同数据类型的分析能力，以及结果的本质</li>
+</ul>
+<h4 id="参数调优（parameter-tuning）"><a href="#参数调优（parameter-tuning）" class="headerlink" title="参数调优（parameter tuning）"></a>参数调优（parameter tuning）</h4><ul>
+<li>不同的算法有不同的调节参数，即便是同一个算法，如果参数调的不一样，所产生的结果也各不相同</li>
+<li>过拟合模型：过度敏感，把数据中的随机波动当成持久模式，对当前数据有着很高的预测准确度，但是对未知数据的预测准确度较差（泛化能力不强）</li>
+<li>欠拟合模型（underfitting）：过于愚钝，很可能会忽视数据中的重要趋势，这会导致模型对当前数据和未知数据的预测准确度下降</li>
+<li>理想拟合：算法能在识别主要趋势和忽视微小变化之间找到平衡，使最终得到的模型非常适合做预测</li>
+<li>对于大多数模型而言，过拟合（overfitting）是常见问题，所以增加预测模型的复杂度能最大限度的减少预测误差，但容易出现预测边界过度复杂</li>
+<li>通过正则化（regularization）引入惩罚参数，通过人为增大预测误差，对模型复杂度的增加进行惩罚，从而使算法同时考虑复杂度和准确度使模型保持简单，有助于提高模型的泛化能力</li>
+</ul>
+<h4 id="评价模型"><a href="#评价模型" class="headerlink" title="评价模型"></a>评价模型</h4><ul>
+<li>使用一些评价指标来比较模型的预测准确度：预测准确率、混淆矩阵和均方根误差（root mean squared error）</li>
+<li>分类指标（classification）<ul>
+<li>预测准确率：正确预测所占的比率，无法通过预测准确率得知预测误差是如何产生的</li>
+<li>混淆矩阵（confusion matrix）：在预测准确率的基础上添加假正类型和假负类型，辨别预测误差数</li>
+</ul>
+</li>
+<li>回归指标<ul>
+<li>由于回归预测使用连续值，因此误差一般被量化成预测值和实际值之差，惩罚随误差大小而不同</li>
+<li>均方根误差：将每个误差都取平方，放大大误差，这使得均方根误差对异常值极其敏感，对这些值的惩罚力度也更大，避免较大的误差</li>
+</ul>
+</li>
+<li>验证：评估模型对新数据的预测准确度，避免过拟合模型在面对当前数据表现良好而面对新数据时可能表现糟糕的情况</li>
+<li>在评估模型时并不一定非要使用新数据，而是可以把当前的数据集划分成训练集（training dataset）和测试集（test dataset）<ul>
+<li>训练集用来生成和调整预测模型，测试集用来充当新数据并评估模型的预测准确度</li>
+<li>最好的模型针对测试集所做的预测一定是最准确的</li>
+<li>为了使验证（validation）过程行之有效，需要不带偏差的把数据点随机分派到数据集和测试集中</li>
+</ul>
+</li>
+<li>交叉验证（cross-validation）：使用同一个数据集进行训练和测试，避免因为原始数据集很小而无法留出足够的数据形成测试集的情况<ul>
+<li>把数据集划分成若干组用来对模型进行反复测试</li>
+<li>在单次迭代中除了某一组外其他各组都被用来训练预测模型，然后留下来的那组被用来测试模型</li>
+<li>这个过程重复进行直到每一个组都测试过模型，并且只测试过一次</li>
+</ul>
+</li>
+</ul>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>数据科学研究的 4 个主要步骤：<ol>
+<li>准备待分析的数据</li>
+<li>根据研究需求挑选合适的算法，为数据建立模型</li>
+<li>对算法的参数进行调优，优化模型</li>
+<li>根据准确度评价模型</li>
+</ol>
+</li>
+</ul>
+<h3 id="k-均值聚类（k-means-clustering）"><a href="#k-均值聚类（k-means-clustering）" class="headerlink" title="k 均值聚类（k-means clustering）"></a>k 均值聚类（k-means clustering）</h3><h4 id="定义群组"><a href="#定义群组" class="headerlink" title="定义群组"></a>定义群组</h4><ul>
+<li>群组数量要足够大，以便提取有意义的模式用作商业决策参考，还要足够小，能够确保各个群组之间有明显的区别</li>
+<li>使用陡坡图（scree plot）确定合适的群组数量<ul>
+<li>陡坡图可以展现群组内散度随群组数量增加而降低的过程</li>
+<li>陡坡图曲线的拐弯处表示最佳群组数量，此处的群组内散度较为合理</li>
+</ul>
+</li>
+<li>通过检查群组成员与群组中心点的距离判断该群组的有效性（群组最好由密集的数据点组成）<ol>
+<li>猜测每个群组的中心点，因为暂时不能确定通过猜测得到的中心点是否正确，所以称它们为伪中心点</li>
+<li>把每个数据点分配给最近的伪中心点</li>
+<li>根据群组成员的分布调整为中心点的位置</li>
+<li>重复步骤 2 和步骤 3 直至群组成员不再发生变化</li>
+</ol>
+</li>
+<li>聚类也可以在更多的维度上进行，虽然多维度分析很难进行可视化，但是可以借助程序计算数据点和群组中心点在多维度情形下的距离</li>
+</ul>
+<h4 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h4><ul>
+<li>每个数据点只能属于一个群组：恰好位于两个群组中间的数据点无法确定应属于哪个群组</li>
+<li>群组被假定是正圆形的：若群组的实际形状是椭圆形，那么位于椭圆两端的数据点可能被划入邻近的其他群组</li>
+<li>群组被假定是离散的：k 均值聚类既不允许群组重叠，也不允许它们相互嵌套</li>
+<li>弥补局限性的方法：先用 k 均值聚类方法大致了解数据结构，再综合运用其他更高级的方法进行深入分析</li>
+</ul>
+<h4 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>k 均值聚类用于把相似的数据点划入同一个群组，群组数量 k 必须事先指定</li>
+<li>给数据点分组时，首先把各个数据点分配到距离最近的群组中，然后调整群组中心点的位置，重复这2个步骤直到群组中的成员不再发生变化</li>
+<li>k 均值聚类最适用于正圆形、非重叠的群组</li>
+</ul>
+<h3 id="主成分分析（principal-component-analysis）"><a href="#主成分分析（principal-component-analysis）" class="headerlink" title="主成分分析（principal component analysis）"></a>主成分分析（principal component analysis）</h3><h4 id="主成分"><a href="#主成分" class="headerlink" title="主成分"></a>主成分</h4><ul>
+<li>主成分分析用于找出最能区分数据点的变量，这种变量被称为主成分，数据点会沿着主成分的维度最大限度地分散开</li>
+<li>主成分可以用已有的一个或多个变量表示</li>
+<li>标准化（standardization）类似于使用百分位数表示每个变量，以此将所有变量统一到一个标准尺度上</li>
+<li>采用主成分分析之后，可以不再通过试错法组合变量，而是通过精确计算各个变量的权重来获得最优变量组合</li>
+</ul>
+<h4 id="确定主成分数量"><a href="#确定主成分数量" class="headerlink" title="确定主成分数量"></a>确定主成分数量</h4><ul>
+<li>由于主成分来源于原始变量，因此用来区分数据点的可用信息会受到原始变量个数的制约</li>
+<li>为了让结果更简单、更通用，应该只选择前几个主成分进行可视化和后续分析<ul>
+<li>将主成分按照其对数据点的区分效果进行排列</li>
+<li>随着主成分个数增多，区分数据点的效果会变差</li>
+<li>陡坡图曲线的拐弯处往往体现了最佳主成分数量</li>
+</ul>
+</li>
+<li>对当前的数据样本进行解释时，使用的主成分越少，泛化能力就越强</li>
+</ul>
+<h4 id="局限性-1"><a href="#局限性-1" class="headerlink" title="局限性"></a>局限性</h4><ul>
+<li>散度最大化：主成分分析有个重要假设，即数据点最分散的维度是最有用的</li>
+<li>解释成分：主成分分析必须对其产生的成分进行解释，但有时可能很难解释变量按某种方式进行组合的原因</li>
+<li>正交成分：主成分分析算法成分之间存在正交关系，然而真实信息维度之间可能不存在正交关系</li>
+<li>弥补局限性的方法：独立成分分析（不需要假设正交关系，在确定成分时还无需考虑数据的散度）</li>
+</ul>
+<h4 id="小结-2"><a href="#小结-2" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>主成分分析是一种降维技巧，它使得我们可以使用较小的变量来描述数据，这些变量即为主成分</li>
+<li>每个主成分都是原始变量的某种加权组合，最好的主成分可以用来改进数据分析和可视化</li>
+<li>当信息最丰富的几个维度拥有最大的数据散度，并且彼此正交时，主成分分析能有最佳效果</li>
+</ul>
+<h3 id="关联规则（association-rule）"><a href="#关联规则（association-rule）" class="headerlink" title="关联规则（association rule）"></a>关联规则（association rule）</h3><h4 id="支持度、置信度和提升度"><a href="#支持度、置信度和提升度" class="headerlink" title="支持度、置信度和提升度"></a>支持度、置信度和提升度</h4><ul>
+<li>识别关联规则的常用指标有3个：支持度、置信度和提升度</li>
+<li>支持度：某个项集出现的频率，可以人为设定一个支持度阈值，当某个项集的支持度高于这个阈值时，就把它称为频繁项集</li>
+<li>置信度：当 X 项出现时 Y 项同时出现的频率，记为 {X-&gt;Y} ，但它可能会错估某个关联规则的重要性</li>
+<li>提升度：X 项和 Y 项一同出现的频率，同时考虑这两项各自出现的频率</li>
+<li>{X-&gt;Y} 的提升度 = {X-&gt;Y} 的置信度 / {Y} 的支持度</li>
+</ul>
+<h4 id="先验原则（apriori-principal）"><a href="#先验原则（apriori-principal）" class="headerlink" title="先验原则（apriori principal）"></a>先验原则（apriori principal）</h4><ul>
+<li>先验原则是指如果某个项集出现的不频繁那么包含它的任何更大的项集必定也出现的不频繁</li>
+<li>寻找具有高支持度的项集<ol>
+<li>列出只包含一个元素的项集</li>
+<li>计算每个项集的支持度，保留那些满足最小支持度阈值条件的项集，淘汰不满足的项集</li>
+<li>项候选项集中增加一个元素，并利用在步骤2中保留下来的项集产生所有可能的组合</li>
+<li>重复步骤2和步骤3，为越来越大的项集确定支持度，直到没有待检查的新项集</li>
+</ol>
+</li>
+<li>寻找具有高置信度或高提升度的关联规则<ul>
+<li>因为置信度和提升度都是基于支持度计算出来的，因此一旦识别出具有高支持度的项集，寻找关联规则就不会那么费劲了</li>
+</ul>
+</li>
+</ul>
+<h4 id="局限性-2"><a href="#局限性-2" class="headerlink" title="局限性"></a>局限性</h4><ul>
+<li>计算成本高：当库存量很大或者支持度阈值很低时，候选项集仍然会很多</li>
+<li>假关联：当元素的数量很大时，偶尔会出现假关联，为了确保所发现的关联规则具有普遍性，应该对他们进行验证</li>
+<li>弥补局限性的方法：使用高级数据结构对候选项集进行更高效的分类，从而减少比较的次数</li>
+</ul>
+<h4 id="小结-3"><a href="#小结-3" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>关联规则用于揭示某一元素出现的频率以及它与其他元素的关系</li>
+<li>识别关联规则的常用指标有3个<ol>
+<li>{X} 的支持度表示 X 项出现的频率</li>
+<li>{X-&gt;Y} 的置信度表示当 X 项出现时，Y 项同时出现的频率</li>
+<li>{X-&gt;Y} 的提升度表示 X 项和 Y 项一同出现的频率，并且考虑每项各自出现的频率</li>
+<li>利用先验原则可以淘汰一大部分非频繁项集，从而大大地加快搜索频繁相机的速度</li>
+</ol>
+</li>
+</ul>
+<h3 id="社会网络分析"><a href="#社会网络分析" class="headerlink" title="社会网络分析"></a>社会网络分析</h3><h4 id="Louvain-方法（Louvain-method）"><a href="#Louvain-方法（Louvain-method）" class="headerlink" title="Louvain 方法（Louvain method）"></a>Louvain 方法（Louvain method）</h4><ul>
+<li>通过对节点分组可以找出网络中存在的群组，研究这些群组有助于理解网络各部分的区别和联系</li>
+<li>Louvain 方法用来在网络中找出群组，它会尝试使用不同的聚类配置来做如下两种事：<ol>
+<li>同一群组中各个节点间的边数和强度最大化</li>
+<li>把属于不同群组的节点间的边数和强度最小化</li>
+</ol>
+</li>
+<li>模块度用于表示上述两件事的完成程度，模块度越高，群组越理想</li>
+<li>为了获得理想的聚类配置，Louvain 方法会不断迭代<ol>
+<li>把每个节点看作一个群组，即一开始群组数和节点数相同</li>
+<li>把一个节点重新分配给对提高模块度有最大帮助的群组，如果无法进一步提高，模块度节点保持不动，针对每个节点重复这个过程直到不能再分配</li>
+<li>把步骤2中发现的每个群组作为一个节点构建出一个粗粒度网络，并且把以前的群间边合并成连接新结点且带权重的边</li>
+<li>重复步骤2和步骤3直到无法再重新分配和合并</li>
+</ol>
+</li>
+<li>Louvain 方法先发现小群组，然后在适当的情况下合并它们，帮助我们找出更重要的群组，但它有一定的局限性<ul>
+<li>重要但较小的群组可能会被合并：需要检查在中间迭代阶段被发现的群组，如果有必要就把它们保留下来</li>
+<li>有多种可能的聚类配置：若网络中包含重叠或嵌套的群组，需要依据其他信息源对群组予以验证</li>
+</ul>
+</li>
+</ul>
+<h4 id="PageRank-算法（PageRank-algorithm）"><a href="#PageRank-算法（PageRank-algorithm）" class="headerlink" title="PageRank 算法（PageRank algorithm）"></a>PageRank 算法（PageRank algorithm）</h4><ul>
+<li>虽然群组可以反映出相互作用高度集中的区域，但是这些相互作用可能受占主导地位的节点支配，群组则围绕着这些主导节点形成，为了找出占主导地位的节点，需要对节点进行排序</li>
+<li>PageRank 算法是谷歌公司最初用来为网页排名的算法之一，以 Larry Page 的姓氏命名</li>
+<li>在PageRank 算法中，决定一个网页排名的因素有如下3个：<ol>
+<li>链接数量：被其他网页链接的次数越多，该网页的访问者可能就越多</li>
+<li>链接强度：这些链接被访问的次数越多，该网页的流量就越大</li>
+<li>链接来源：如果被其他有较高排名的网页链接，那么该网页的排名也会升高</li>
+</ol>
+</li>
+<li>尽管 PageRank 算法易于使用，但它有偏向于旧节点的局限性：如果一个新网页包含非常棒的内容但一开始访问者人数很少，那么它的排名就比较低</li>
+<li>可以定期更新 PageRank 值，让新网页随着自身知名度的提高获得提高排名的机会</li>
+</ul>
+<h4 id="小结-4"><a href="#小结-4" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>社会网络分析可用于绘制和分析多个实体之间的关系</li>
+<li>Louvain 方法用于在一个网络中找出群组，具体做法是将群组内部的相互作用最大化，同时把群组之间的相互作用最小化，当群组大小相同且相互分离时，该方法的效果最佳</li>
+<li>PageRank 算法根据链接的数量强度以及来源对网络中的节点进行排序，这个算法有助于找出网络中占主导地位的节点，但对链接数不太多的新节点并不友好</li>
+</ul>
+<h3 id="回归分析（regression-analysis）"><a href="#回归分析（regression-analysis）" class="headerlink" title="回归分析（regression analysis）"></a>回归分析（regression analysis）</h3><h4 id="趋势线"><a href="#趋势线" class="headerlink" title="趋势线"></a>趋势线</h4><ul>
+<li>趋势线是做预测时常用的工具，他们很容易生成，也很容易理解</li>
+<li>一般的趋势往往只涉及单个预测变量，这个变量用来产生预测结果，不过通过添加更多预测变量可以改善预测结果</li>
+<li>回归分析不但可以通过考虑更多预测变量改善预测结果，还可以比较各个预测变量的强弱</li>
+</ul>
+<h4 id="梯度下降法（gradient-decent）"><a href="#梯度下降法（gradient-decent）" class="headerlink" title="梯度下降法（gradient decent）"></a>梯度下降法（gradient decent）</h4><ul>
+<li>在回归分析中预测变量的权重是主要参数，通过解方程可以求得最优权重</li>
+<li>梯度下降法先初步猜测合适的权重组合，再通过一个迭代过程，把这些权重应用于每个数据点做预测，然后调整权重以减少整体预测误差</li>
+<li>这个过程类似于一步步走到山底下，每走一步梯度下降法都要判断从哪个方向下是最陡峭的，然后朝着那个方向重新校准权重，最终到达最低点，这个点的预测误差最小（经过优化的回归趋势线与梯度上的最低点相对应）</li>
+<li>除了回归之外，梯度下降法也能用来优化其他模型中的参数，比如支持向量机和神经网络</li>
+<li>梯度下降法的结果可能会受到初始参数值（下山起点）的影响，若起点下方恰好有一个小凹坑，那么梯度下降法可能会将其误认为是最优点</li>
+<li>为了降低陷入这种凹坑的风险，可以使用随机梯度下降法，每次迭代并不是采用所有的数据点，而是只从其中选取一个来调整参数，引入多变性，有助于算法逃离凹坑</li>
+</ul>
+<h4 id="回归系数"><a href="#回归系数" class="headerlink" title="回归系数"></a>回归系数</h4><ul>
+<li>在为回归预测变量求得最佳权重之后，需要对它们进行解释</li>
+<li>回归系数：回归预测变量权重，它表示某个预测变量相比于其他预测变量的影响大小</li>
+<li>预测变量的度量单位不同也会影响对回归系数的解释，因此应该在做回归分析之前先对预测变量的度量单位进行标准化，经过标准化之后预测变量的系数被称为标准化回归系数</li>
+</ul>
+<h4 id="相关系数（correlation-coefficient）"><a href="#相关系数（correlation-coefficient）" class="headerlink" title="相关系数（correlation coefficient）"></a>相关系数（correlation coefficient）</h4><ul>
+<li>相关系数：当只存在一个预测变量时，该预测变量的标准化回归系数</li>
+<li>关联方向：相关系数为正表示预测变量和结果变化的方向一致，为负则表示两者变化方向相反</li>
+<li>关联强度：r 值越接近于 -1 或 1，预测变量的作用就越大，若值为 0 则表示预测变量和结果之间不存在关系</li>
+<li>因为相关系数表示单个预测变量的绝对强度，所以相比于回归系数，相关系数在对预测变量进行排序时更可靠</li>
+</ul>
+<h4 id="局限性-3"><a href="#局限性-3" class="headerlink" title="局限性"></a>局限性</h4><ul>
+<li>对异常值敏感：回归分析平等地对待所有的数据点，只要存在几个有异常值的数据点，就会给趋势线造成很大的影响，因此在做进一步分析之前，可以先使用散点图找出异常值</li>
+<li>多重共线性问题（multicollinearity）：如果回归模型包含高度相关的预测变量，就会造成相关预测变量权重失真，因此可以使用更高级的技术，如套索回归或岭回归</li>
+<li>弯曲的趋势：需要对预测变量的值进行转换，或使用支持向量机等其他算法</li>
+<li>并不说明存在因果关系</li>
+</ul>
+<h4 id="小结-5"><a href="#小结-5" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>回归分析用于寻找最佳拟合线（best-fit line），使得尽可能多的数据点位于这条线上或附近</li>
+<li>趋势线由带权重的组合预测变量得到，这些权重被称为回归系数，表示某个预测变量相对于其他预测变量的影响强度</li>
+<li>以下情况下，回归分析的效果最好：<ol>
+<li>预测变量之间的关系不强</li>
+<li>无异常值</li>
+<li>趋势可以用直线表示</li>
+</ol>
+</li>
+</ul>
+<h3 id="k-最近邻算法（k-Nearest-Neighbors）和异常检测"><a href="#k-最近邻算法（k-Nearest-Neighbors）和异常检测" class="headerlink" title="k 最近邻算法（k-Nearest Neighbors）和异常检测"></a>k 最近邻算法（k-Nearest Neighbors）和异常检测</h3><h4 id="k-最近邻算法"><a href="#k-最近邻算法" class="headerlink" title="k 最近邻算法"></a>k 最近邻算法</h4><ul>
+<li>k 最近邻算法根据周围数据点的类型对某个数据点进行分类（物以类聚，人以群分）</li>
+<li>在 k 最近邻算法中，参数 k 表示周围数据点的个数，选择 k 值的过程叫做参数调优，它对预测的准确度起着至关重要的作用</li>
+<li>使用不同的 k 值进行拟合：<ul>
+<li>如果 k 值太小，数据点只与最近的邻居匹配，并且随机造成所产生的误差也会被放大</li>
+<li>如果 k 值太大，数据点会尝试与更远的邻居匹配，其中隐含的模式会被忽略</li>
+<li>只有当 k 值恰到好处时，数据点才会参考合适数量的邻居，使得误差相互抵消，有利于揭示数据中隐藏的趋势</li>
+</ul>
+</li>
+<li>为实现理想拟合并把误差降到最低，可以使用交叉验证法对参数 k 进行调优</li>
+<li>对于二分类问题，可以把 k 设置成一个奇数，以避免出现平局的情况</li>
+<li>除了用来为数据点分类，k 最近邻算法还可以通过合计周围数据点的值来预测连续值</li>
+<li>通过使用加权平均值，能够进一步改善预测结果，离数据点越近的邻居，其值越能反映该数据点的真实值，因此赋给它的权重应该更大</li>
+</ul>
+<h4 id="异常检测"><a href="#异常检测" class="headerlink" title="异常检测"></a>异常检测</h4><ul>
+<li>k 最近邻算法不仅可以用来预测数据点的类别和取值，还可以用来识别异常，比如检测欺诈行为</li>
+<li>在异常检测的过程中还可能会有新发现，比如发现之前被忽略的预测变量</li>
+<li>事实上任何能够产生预测模型的算法都可以用来检测异常，比如在回归分析中，如果某个数据点明显偏离最佳拟合线，那么就会被识别为异常点</li>
+<li>异常数据点既可能因缺失预测变量所致，也可能因预测模型缺少足够的训练数据所致</li>
+<li>一旦找到异常数据点，就要将它们从数据集中移除，然后再训练预测模型，减少数据中包含的噪声，进而提高模型的准确度</li>
+</ul>
+<h4 id="局限性-4"><a href="#局限性-4" class="headerlink" title="局限性"></a>局限性</h4><ul>
+<li>类别不平衡：可以使用加权投票法来取代少数服从多数原则，确保较近数据点类别的权重比较远的更大</li>
+<li>预测变量过多：在多个维度上识别和处理近邻会导致你计算量大增，需要降维（dimension reduction）</li>
+</ul>
+<h4 id="小结-6"><a href="#小结-6" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>k 最近邻算法根据周围数据点的类型对某个数据点进行分类</li>
+<li>k 表示用作参考的数据点的个数，可以使用交叉验证法来确定</li>
+<li>当预测变量数目不多，并且类别大小差别不大时，k 最近邻算法才能产生非常好的效果</li>
+<li>不准确的分类可能会被标记为潜在异常</li>
+</ul>
+<h3 id="支持向量机（support-vector-machine）"><a href="#支持向量机（support-vector-machine）" class="headerlink" title="支持向量机（support vector machine）"></a>支持向量机（support vector machine）</h3><h4 id="勾画最佳分界线"><a href="#勾画最佳分界线" class="headerlink" title="勾画最佳分界线"></a>勾画最佳分界线</h4><ul>
+<li>支持向量机的主要目标是得到一条能用于分组的最佳分界线，需要注意的是，能用于分组的分界线可能有很多条</li>
+<li>为了找出最佳分界线，首先需要从一组中找出距离另一组最近的外围数据点，然后在两组的外围数据点之间画出最佳分界线，由于这些外围数据点在寻找最佳分界线的过程中起了支持作用，因此叫做支持向量</li>
+<li>支持向量机的一个优点是计算速度很快，仅依靠外围数据点就能找到决策边界</li>
+<li>这种对数据点子集的依赖也有缺点，这是因为决策边界对支持向量的位置比较敏感，选取不同的数据点作为训练数据，相应支持向量的位置也不同</li>
+<li>支持向量机算法有一个关键特征——缓冲带<ul>
+<li>缓冲带允许一定数量的训练数据点位于错误的一边，由此得到一条更软的分界线</li>
+<li>缓冲带对异常值有更强的耐扰性，因此对新数据有更强的泛化能力</li>
+<li>缓冲带通过调整惩罚参数得到，这个参数决定了对分类误差的宽容度，惩罚参数越大，宽容度就越大，缓冲带也就越宽</li>
+<li>为了让模型对当前数据和新数据有较高的预测准确度，可以使用交叉验证法求得最佳惩罚参数</li>
+</ul>
+</li>
+<li>支持向量机的另一个强项是找到决策边界的凸弧，它在发现错综复杂的凸弧时有着更出众的计算效率<ul>
+<li>支持向量机的秘诀是核技巧（kernel trick）</li>
+<li>支持向量机不会直接在在数据平面上绘制有凸弧的分界线，而是会首先把数据映射到高维空间，然后在高维空间中将数据点用直线分开，这些直线容易计算，并且当映射回低维空间时，也很容易转化成曲线</li>
+</ul>
+</li>
+<li>支持向量机具备在高维空间操纵数据的能力，使得它在分析有多个变量的数据集时大受欢迎</li>
+<li>支持向量机的常见应用场景包括遗传信息破译以及文本情感分析</li>
+</ul>
+<h4 id="局限性-5"><a href="#局限性-5" class="headerlink" title="局限性"></a>局限性</h4><ul>
+<li>小数据集：由于支持向量机依靠支持向量确定决策边界，因此样本量少，用来对分界线进行准确定位的数据也少</li>
+<li>多组数据：支持向量机每次只能对两组进行分类，如果存在2个以上的组，则需要对每一组都应用支持向量机（多类支持向量机）</li>
+<li>两组之间存在大量重叠：靠近边界的数据点可能更容易发生分类错误，而且支持向量机没有给出每个数据点遭遇错误分类的概率，但可以通过数据点到决策边界的距离来估计其被正确分类的可能性</li>
+</ul>
+<h4 id="小结-7"><a href="#小结-7" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>支持向量机用来把数据点分为两组，其方法是在两组的外围数据点（支持向量）的中间画一条分界线</li>
+<li>支持向量机对异常值有较好的容忍度，它通过一个缓冲带允许少量数据点位于错误的一边，此外他还通过核技巧高效地求得带凸弧的决策边界</li>
+<li>当需要把大样本中的数据点分为两组时，支持向量机能够发挥最佳作用</li>
+</ul>
+<h3 id="决策树（decision-tree）"><a href="#决策树（decision-tree）" class="headerlink" title="决策树（decision tree）"></a>决策树（decision tree）</h3><h4 id="生成决策树"><a href="#生成决策树" class="headerlink" title="生成决策树"></a>生成决策树</h4><ul>
+<li>递归拆分（recursive partitioning）<ol>
+<li>确定一个二元选择题，它能够把数据点拆分成两组，并最大限度地提高每组数据点的同质性</li>
+<li>针对每个叶结点重复步骤1，直到满足终止条件</li>
+</ol>
+</li>
+<li>终止条件可能有多个，可以使用交叉验证法进行选取<ul>
+<li>每个叶节点的数据全属于同一类或有相同的值</li>
+<li>叶节点包含的数据点少于5个</li>
+<li>进一步分支会超出阈值并且不能提高同质性</li>
+</ul>
+</li>
+<li>由于递归拆分只用最佳二元选择题来生成决策树，因此不显著的变量并不会影响结果</li>
+<li>而且二元选择题往往围绕着最重要的值划分数据点，所以决策树对异常值有较强的耐扰性</li>
+<li>决策树易于可视化，使我们更容易评估预测变量及其相互作用</li>
+</ul>
+<h4 id="局限性-6"><a href="#局限性-6" class="headerlink" title="局限性"></a>局限性</h4><ul>
+<li>不稳定：决策树是通过把数据点分组生成的，数据中的细微变化可能影响拆分结果，并导致生成的决策树截然不同</li>
+<li>容易产生过拟合：决策树每次拆分数据点时都力求找到最佳拆分方式</li>
+<li>不准确：一开始就是用最佳二元选择题拆分数据点并不能保证结果最准确</li>
+<li>弥补局限性的方法：每次拆分时可以不采用最佳拆分方式，而是尽量让决策树多样化，然后综合不同的决策树产生的预测结果，让最终预测结果具有更好的稳定性和准确性</li>
+</ul>
+<h4 id="决策树的多样化方法"><a href="#决策树的多样化方法" class="headerlink" title="决策树的多样化方法"></a>决策树的多样化方法</h4><ul>
+<li>随机森林：随机选择不同的二元选择题，生成多棵决策树，然后综合这些决策树的预测结果</li>
+<li>梯度提升（gradient boosting）：有策略地选择二元选择题，以逐步提高决策树的预测准确度，然后将所有的预测结果的加权平均数作为最终结果</li>
+</ul>
+<p>虽然随机森林的和梯度提升能够产生更准确的预测结果，但是它们往往比较复杂并且很难进行可视化（黑盒）</p>
+<h4 id="小结-8"><a href="#小结-8" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>决策树通过询问一系列二元选择题来做预测</li>
+<li>若想生成决策树，就要不断拆分数据样本以获得同质组，直到满足终止条件，这个过程被称为递归拆分</li>
+<li>虽然决策树易于使用和理解，但是容易造成过拟合问题，导致出现不一致的结果，为了尽量避免出现这种情况，可以采用随机森林等替代方法</li>
+</ul>
+<h3 id="随机森林"><a href="#随机森林" class="headerlink" title="随机森林"></a>随机森林</h3><h4 id="集成模型"><a href="#集成模型" class="headerlink" title="集成模型"></a>集成模型</h4><ul>
+<li>集成方法（ensembling）：通过组合有不同优缺点的模型来提高预测准确度的方法</li>
+<li>集成模型：通过组合许多模型的预测结果得到的预测模型，在组合模型时，既可以遵循少数服从多数的原则，也可以取平均值</li>
+<li>随机森林是决策树的集成模型</li>
+<li>相比于子模型，集成模型的预测准确度更高，这是因为准确的预测模型会彼此强化，错误的则会彼此抵消<ul>
+<li>为了达到这种效果，集成模型的子模型一定不能犯同类错误，换言之，子模型必须是不相关的</li>
+</ul>
+</li>
+<li>自助聚集法：用来生成不相关的决策树的系统化方法</li>
+</ul>
+<h4 id="自助聚集法（bootstrap-aggregating）"><a href="#自助聚集法（bootstrap-aggregating）" class="headerlink" title="自助聚集法（bootstrap aggregating）"></a>自助聚集法（bootstrap aggregating）</h4><ul>
+<li>自助聚集法用来生成数千棵决策树，这些树彼此有明显的不同</li>
+<li>为使决策树之间的关联度最小化，每棵树都由训练数据集的一个随机子集产生，并且使用的是预测变量的一个随机子集，这让生成的决策树各不相同，但仍然保留了一定的预测能力</li>
+<li>通过限制每次拆分时所用的预测变量，能够生成各不相同的决策树，从而避免发生过拟合问题</li>
+<li>为进一步降低发生过拟合问题的可能性，可以增加随机森林中决策树的数量，使模型更通用、更准确</li>
+</ul>
+<h4 id="局限性-7"><a href="#局限性-7" class="headerlink" title="局限性"></a>局限性</h4><ul>
+<li>随机森林由随机生成的决策树组成，并不存在明确的预测规则，这种不可解释性可能会带来一些伦理问题</li>
+<li>因此随机森林适用于那些预测准确度比可解释性更重要的场合</li>
+</ul>
+<h4 id="小结-9"><a href="#小结-9" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>随机森林的预测结果往往比单棵决策树更准确，这是因为它充分利用了两种技术：自助聚集法和集成方法</li>
+<li>自助聚集法通过随机限制数据拆分过程所用的变量来生成一系列不相关的决策树</li>
+<li>集成方法则把决策树的预测结果组合在一起</li>
+<li>虽然随机森林的预测结果不具有可解释性，但仍然可以根据对预测结果的贡献度大小对各个预测变量进行排序</li>
+</ul>
+<h3 id="神经网络（neural-network）"><a href="#神经网络（neural-network）" class="headerlink" title="神经网络（neural network）"></a>神经网络（neural network）</h3><h4 id="神经网络的诞生"><a href="#神经网络的诞生" class="headerlink" title="神经网络的诞生"></a>神经网络的诞生</h4><ul>
+<li>数据存储和共享技术取得进步：为训练神经网络提供了海量数据，有助于改善神经网络的性能</li>
+<li>计算能力越来越强大：GPU的运行速度最快能达到CPU的150倍，能为在大数据集上训练神经网络提供强大的支持</li>
+<li>算法获得改进</li>
+</ul>
+<h4 id="神经网络的构成"><a href="#神经网络的构成" class="headerlink" title="神经网络的构成"></a>神经网络的构成</h4><ul>
+<li>输入层：该层处理输入图像的每个像素<ul>
+<li>为提高预测准确度，可以使用卷积层</li>
+<li>卷积层并不处理单个像素，而是识别像素组合的特征，这种分析只关注特征是否出现而不关注出现的位置</li>
+<li>所以即使某些关键特征偏离了中心，神经网络仍然能够正确识别，这种特性叫做平移不变性（translational invariance）</li>
+</ul>
+</li>
+<li>隐藏层：在像素进入神经网络之后，通过层层转换不断提高和那些标签已知的图像的相似度<ul>
+<li>标签已知是指神经网络以前见过这些图像</li>
+<li>虽然转换得越多，预测准确度就会越高，但是处理时间就会明显增加，一般来说几个隐藏层就足够了</li>
+<li>每层的神经元数量要和图像的像素数成比例</li>
+</ul>
+</li>
+<li>输出层：该层产生最终预测结果，在这一层中神经元可以只有一个，也可以和结果一样多</li>
+<li>损失层：该层通常位于最后，并提供有关输入是否识别正确的反馈，如果不正确则给出误差量<ul>
+<li>在训练神经网络的过程中，损失层至关重要，若预测准确，来自于损失层的反馈会强化产生该预测结果的激活路径</li>
+<li>若预测错误，则错误会沿着路径逆向返回，这条路径上的神经元的激活条件就会被重新调整，以减少错误，这个过程称为反向传播（back propagation）</li>
+</ul>
+</li>
+<li>通过不断重复这个训练过程，神经网络会学习输入信号和正确输出标签之间的联系，并且把这些联系作为激活规则（activation rule）编入每个神经元，因此为了提高神经网络的预测准确度，需要调整管理激活规则的部件</li>
+</ul>
+<h4 id="激活规则"><a href="#激活规则" class="headerlink" title="激活规则"></a>激活规则</h4><ul>
+<li>为了产生预测结果，需要沿着一条路径依次激活神经元，每个神经元的激活过程都由其激活规则所控制，激活规则指定了输入信号的来源和强度，在神经网络的训练过程中激活规则会不断调整</li>
+<li>良好的激活规则有助于产生准确的预测结果，其关键在于确定合适的权重和阈值</li>
+<li>另外神经网络的其他参数也需要调整，比如隐藏层的数量、每层的神经元数量等。可以使用梯度下降法优化这些参数</li>
+</ul>
+<h4 id="局限性-8"><a href="#局限性-8" class="headerlink" title="局限性"></a>局限性</h4><ul>
+<li>需要大样本：神经网络的复杂性使之能够识别带有复杂特征的输入，但前提是我们能为他提供大量训练数据，如果训练集太小就会出现过拟合问题</li>
+<li>降低过拟合风险：<ul>
+<li>二次取样（subsampling）：为了降低神经元对噪声的敏感度，需要对神经网络的输入进行平滑化处理，即针对信号样本取平均值</li>
+<li>畸变：当缺少训练数据时，可以通过向每幅图像引入畸变，来产生更多数据，每幅畸变图像都可以作为新的输入，以此扩大训练数据的规模，畸变应该能够反映原数据集的特征（弹性变形）</li>
+<li>丢弃（dropout）：为解决小的神经元集群之间彼此产生过度依赖，可以在训练期间随机丢弃一半的神经元，这些遭丢弃的神经元将处于未激活的状态，剩下的神经元则正常工作，下一次训练丢弃一组不同的神经元，迫使不同的神经元协同工作，从而揭示训练样本所包含的更多特征</li>
+</ul>
+</li>
+<li>计算成本高：训练一个由几千个神经元组成的神经网络可能需要很长时间，一个简单的解决方法是升级硬件</li>
+<li>另一个解决方法是调整算法，用稍低一些的预测准确度换取更快的处理速度<ul>
+<li>随机梯度下降法：为了更新某一个参数，经典的梯度下降法在一次迭代中使用所有的训练样本，当数据集很大时这样做会耗时，随机梯度下降法是在每次迭代中只用一个训练样本来更新参数，虽然使用这个方法得到的最终参数可能不是最优的，但是准确度不会太低</li>
+<li>小批次梯度下降法：虽然使用随机梯度下降法能够提升速度，但最终参数可能不准确，算法也可能无法收敛，导致某个参数上下波动，小批次梯度下降法是每次迭代使用训练样本的一个子集</li>
+<li>全连接层：随着加入的神经元越来越多，路径的数量呈指数增长，为避免查看所有可能的组合，可以使初始层（处理更小、更低级的特征）的神经元部分连接，只有最后几层（处理更大、更高级的特征）才对相邻层的神经元进行全连接</li>
+</ul>
+</li>
+<li>不可解释：神经网络由多层组成，每层都有几百个神经元，这些神经元有不同的激活规则控制，这使得我们很难准确地找到产生正确预测结果的输入信号组合<ul>
+<li>但和回归分析不同，回归分析能明确地识别重要的预测变量，并比较它们的强度，神经网络的特性使之难以证明其使用得当，在涉及伦理问题时尤其如此</li>
+</ul>
+</li>
+<li>尽管存在上述局限性，但是神经网络本身拥有的强大能力，使之得以应用于虚拟助手、自动驾驶等前沿领域，随着算法不断改进以及计算能力不断提升，神经网络将在物联网时代发挥关键作用</li>
+</ul>
+<h4 id="小结-10"><a href="#小结-10" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>神经网络由多个神经元组成，训练期间，第1层的神经元首先被输入数据激活，然后将激活状态传播到后续各层的神经元，最终在输出层产生预测结果</li>
+<li>一个神经元是否被激活取决于输入信号的来源和强度，这由其激活规则指定，激活规则会根据预测结果的反馈不断调整，这个过程被称为反向传播</li>
+<li>在大数据集和先进的计算硬件可用的情况下，神经网络的表现最好，然而预测结果在大部分的时候都是无法解释的</li>
+</ul>
+<h3 id="A-B-测试（A-B-testing）和多臂老虎机（multi-arm-bandit-problem）"><a href="#A-B-测试（A-B-testing）和多臂老虎机（multi-arm-bandit-problem）" class="headerlink" title="A/B 测试（A/B testing）和多臂老虎机（multi-arm bandit problem）"></a>A/B 测试（A/B testing）和多臂老虎机（multi-arm bandit problem）</h3><h4 id="A-B-测试的局限性"><a href="#A-B-测试的局限性" class="headerlink" title="A/B 测试的局限性"></a>A/B 测试的局限性</h4><ul>
+<li>测试结果具有偶然性：为提高测试结果的可信度可以增加受测人数，但是会导致另一个问题</li>
+<li>潜在的收入损失：如果把受测顾客增加一倍，那么看到糟糕广告的人数也会增加一倍，这有流失的顾客的风险</li>
+<li>这两个问题体现了 A/B 测试中的两个权衡因素：探索和利用</li>
+</ul>
+<h4 id="epsilon-递减策略（epsilon-decreasing-strategy）"><a href="#epsilon-递减策略（epsilon-decreasing-strategy）" class="headerlink" title="epsilon 递减策略（epsilon-decreasing strategy）"></a>epsilon 递减策略（epsilon-decreasing strategy）</h4><ul>
+<li>epsilon 指的是探索时间与总时间的比例，随着对效果较好的广告越来越有信心，我们使 epsilon 值递减，这个方法属于强化学习的范畴</li>
+<li>A/B 测试由探索和利用前后两个阶段组成，而在 epsilon 递减策略中，探索阶段和利用阶段是分散的，并且一开始时探索得多一些，越接近尾声，探索得越少</li>
+</ul>
+<h4 id="多臂老虎机"><a href="#多臂老虎机" class="headerlink" title="多臂老虎机"></a>多臂老虎机</h4><ul>
+<li>假设有两台老虎机 A 和 B 可供选择，玩2000个回合，每个回合要么赢1美元，要么没有收益，老虎机 A 的返还率为50%，老虎机 B 的则为40%，但我们事先并不知道这些信息，问要怎么玩才能多赢钱？<ul>
+<li>全探索：如果随机选择老虎机，平均会赢900美元</li>
+<li>A/B 测试：用前200个回合探索哪台老虎机的返还率更高，然后在剩下的1800个回合中选择这台老虎机，平均会赢976美元，但由于两台老虎机的返还率接近，由此存在误判的可能性（误判概率8%）</li>
+<li>为降低误判的风险，可以把A/B 测试的探索范围扩大到500个回合，这样做可以把误判概率降到1%，但是平均中奖金额也会减少到963美元</li>
+<li>epsilon 递减策略：如果采用 epsilon 递减策略边探索边利用，平均会赢984美元，并且误判概率为4%，通过增加探索比例（增加 epsilon 值）能够降低误判概率，但仍会减少平均中奖金额</li>
+<li>全利用：如果一开始就掌握内部消息并选择返还率最高的老虎机 A，平均会赢1000美元，但这个假设不现实</li>
+</ul>
+</li>
+<li>由此看到，在不掌握内部消息的情况下，采用 epsilon 递减策略的收益最高，而且由于存在收敛性这一数学特征，由此 epsilon 递减策略能确保在回合数足够多的情况下找出返还率最高的老虎机</li>
+<li>胜者为先：范加尔在曼联采用了一个非常规策略来决定罚点球的球员，第一个被指定罚点球的球员会负责到底，除非他没有打进球，接下来新换的球员继续负责罚点球，如果没有罚进就再换一名球员，依此类推<ul>
+<li>频繁地换老虎机，会导致探索过多而利用过少，只比随机选择老虎机稍好一些，而且胜者为先策略只根据上一次的结果来评估老虎机，这忽略了老虎机之前的表现</li>
+</ul>
+</li>
+</ul>
+<h4 id="epsilon-递减策略的局限性"><a href="#epsilon-递减策略的局限性" class="headerlink" title="epsilon 递减策略的局限性"></a>epsilon 递减策略的局限性</h4><ul>
+<li>采用 epsilon 递减策略的关键在于控制好 epsilon 值，如果 epsilon 值递减的过慢，就会失去利用老虎机的机会，而如果递减得过快，就可能会选错老虎机</li>
+<li>epsilon 值的最佳递减速度主要取决于两台老虎机返还率的相似程度，采用汤普森取样方法，可以计算 epsilon 值</li>
+<li>epsilon 递减策略还依赖于如下假设：<ul>
+<li>返还率恒定不变</li>
+<li>返还率与上一次游戏无关</li>
+<li>玩游戏和观察返还率之间的延迟极小</li>
+</ul>
+</li>
+</ul>
+<h4 id="小结-11"><a href="#小结-11" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>多臂老虎机问题的实质是如何以最佳方式分配资源</li>
+<li>一种策略是先探索可用选项，然后把所有剩余资源分配给表现最佳的选项，这个策略叫做 A/B 测试</li>
+<li>另一个策略是给表现最佳的选项，逐渐分配更多的资源，这个策略叫做 epsilon 递减策略</li>
+<li>虽然 epsilon 递减策略在大多数情况下能够提供比 A/B 测试更高的回报，但是确定资源分配的最佳更新速度并非易事</li>
+</ul>
+<h3 id="更多评价指标"><a href="#更多评价指标" class="headerlink" title="更多评价指标"></a>更多评价指标</h3><h4 id="分类指标"><a href="#分类指标" class="headerlink" title="分类指标"></a>分类指标</h4><ul>
+<li>接受者操作特征曲线下面积（曲线下面积）：这个指标允许我们在最大化正例率和最小化假正例率之间做权衡<ul>
+<li>正例率：被模型正确预测为正类别的样本所占的比例</li>
+<li>正例率 = 正例数 / ( 正例数 + 假负例数 )</li>
+<li>假正例率：被模型错误预测为正类别的样本所占的比例</li>
+<li>假正例率 = 假正例数 / ( 假正例数 + 负例数 )</li>
+<li>在极端情况下，可以把所有样本全部预测为正类别，以此实现正例率最大化（正例率为1），虽然这样做可以避免出现假负例但会明显增加假正例</li>
+<li>接受者操作特征曲线（ROC 曲线）体现了最大化正例率和最小化假正例率之间的权衡</li>
+<li>模型性能通过 ROC 曲线下方的面积来衡量，所以该指标被称为曲线下面积，模型的准确度越高，曲线越靠近左上角</li>
+<li>完美的预测模型会产生一条曲线下面积为1的曲线（曲线下面积等于整个图形的面积）</li>
+</ul>
+</li>
+<li>对数损失指标利用置信度来校正其对预测误差的惩罚，具体来说，模型对错误预测的置信度越高，惩罚就越重<ul>
+<li>由于对数损失指标根据对预测结果的置信度来调整惩罚程度，因此它通常用于错误预测极其有害的情况</li>
+</ul>
+</li>
+</ul>
+<h4 id="回归指标"><a href="#回归指标" class="headerlink" title="回归指标"></a>回归指标</h4><ul>
+<li>平均绝对误差：平等的惩罚所有预测误差，具体做法是对所有数据点的预测值和实际值之差取平均值</li>
+<li>除了考虑误差大小之外，还可以通过均方根对数误差把误差方向纳入考虑范围</li>
+</ul>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E7%99%BD%E8%AF%9D%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/&title=白话机器学习算法 - Bezhuang's Blog&summary=
+机器学习算法是数据科学的力量之源，它和数据一起产生极其宝贵的知识并且帮助我们以新的方式利用已有信息。白话机器学习算法一书用通俗易懂的语言以及大量有趣的示例和插图讲解10多种前沿的机器学习算法。内容涵盖k均值聚类、主成分分析、关联规则、社会网络分析等无监督学习算法，以及回归分析、k最近邻、支持向量机、决策树、随机森林、神经网络等监督学习算法，并概述强化学习算法的思想。以下为阅读过程中所作的读书笔记，可供参考。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E7%99%BD%E8%AF%9D%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/&title=白话机器学习算法 - Bezhuang's Blog&summary=
+机器学习算法是数据科学的力量之源，它和数据一起产生极其宝贵的知识并且帮助我们以新的方式利用已有信息。白话机器学习算法一书用通俗易懂的语言以及大量有趣的示例和插图讲解10多种前沿的机器学习算法。内容涵盖k均值聚类、主成分分析、关联规则、社会网络分析等无监督学习算法，以及回归分析、k最近邻、支持向量机、决策树、随机森林、神经网络等监督学习算法，并概述强化学习算法的思想。以下为阅读过程中所作的读书笔记，可供参考。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E7%99%BD%E8%AF%9D%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/&title=白话机器学习算法 - Bezhuang's Blog&summary=
+机器学习算法是数据科学的力量之源，它和数据一起产生极其宝贵的知识并且帮助我们以新的方式利用已有信息。白话机器学习算法一书用通俗易懂的语言以及大量有趣的示例和插图讲解10多种前沿的机器学习算法。内容涵盖k均值聚类、主成分分析、关联规则、社会网络分析等无监督学习算法，以及回归分析、k最近邻、支持向量机、决策树、随机森林、神经网络等监督学习算法，并概述强化学习算法的思想。以下为阅读过程中所作的读书笔记，可供参考。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFJElEQVR42u3aS3bcMBADwLn/pZ0TzBMbDY4/Ke7sOBJZ1AYP/fqyvmW9EIAHb4EHb4EHbxXgX+GqbeTweU9/d/rv7/7u9PdbL/DgwYMHDx48ePDgm/BtqKeNnx7kCW57ca3fH58fPHjw4MGDBw8ePPgL8KcApz+nAWcamF6l1QpU4MGDBw8ePHjw4MH/BvhTuC1o6znTc4EHDx48ePDgwYMH/xfhU8DT56QXnO4DPHjw4MGDBw8ePPjfBJ8OKN0KVtOgtB2suj7QBR48ePDgwYMHDx58Eb41+PO//Bx7gQcPHjx48ODBgwdfgN+utIjYPn8L8/S8078fe4EHDx48ePDgwYMHX4Bvb7wN3N7P9IOoXyx48ODBgwcPHjx48EX4beBID5Be2Cnk6e9PA2BaiIAHDx48ePDgwYMH34SfAqUHTZ+33d90X9MLHe8fPHjw4MGDBw8ePPgL8NPBpDRgpIFmG6DSgaltMAQPHjx48ODBgwcPvgm/DRanxcl04+1iYztoNQV+ez7w4MGDBw8ePHjw4Avw7eDQDk7TfY0hhoXHNCCOkyt48ODBgwcPHjx48AH8dCCpHTRaANPgdvq8tJgBDx48ePDgwYMHD74Jf2ujaZCaDhi1Bqqm7wEPHjx48ODBgwcP/jvhU8B0A1Ow7Xu2QasVBMGDBw8ePHjw4MGDb8KfBpdtEZAWC+nfpUVL6nL8AYAHDx48ePDgwYMH/wH402AyDRLTg2xXu1hJzwsePHjw4MGDBw8efAM+BWwHjO3zWgXH9sOKGyjw4MGDBw8ePHjw4IO5mlZwOX1uOzi1Lrgd1B6LEPDgwYMHDx48ePDgF/Cn/3EbjLYbv1VkxMXG9MMADx48ePDgwYMHD/4i/DQYnR5kWjC03n/rvOPiBTx48ODBgwcPHjz4AvwpxBS0VZSk729d5DZAgQcPHjx48ODBgwf/Cfi00Jge9FMDRa1iJXUADx48ePDgwYMHD/4mfHsAqL3iwPKhgHQc0MCDBw8ePHjw4MGDL8LfCj4p2PYDSAestsFsXYSABw8ePHjw4MGDBz+A3xYH8UbCguO7LjgtQMCDBw8ePHjw4MGDb8JPi4LTwuFW0TC92GmAml7MOGiBBw8ePHjw4MGDB1+An75gWzBMg0ttkGgbfFoDVODBgwcPHjx48ODBF+HTYqFVPGwHib6Wa3ohaZACDx48ePDgwYMHD74J3wpG0yDTCirpvrcDU+PABx48ePDgwYMHDx58AT4dBEqLifTC2h/KNqDFg1/gwYMHDx48ePDgwRfgT4uJtECYFivbgmL6nvTDi98HHjx48ODBgwcPHnwRfhpETl+YFijT4uH071uFSBzswIMHDx48ePDgwYMvwqcBagu3LTq2F7I993hf4MGDBw8ePHjw4MEX4NsFRKvAmAa07b7SQmV8HvDgwYMHDx48ePDgC/C3gsx08GcazKYfwmmxc6tQAQ8ePHjw4MGDBw++Cf8KV6t4mMKkA0xpMGrvBzx48ODBgwcPHjz4JnwrgGwLg3XRUP6Q2vsGDx48ePDgwYMHD/4GfBogphtsXWR7kOm1XI8FC3jw4MGDBw8ePHjwPwh+W0y0glp6YfXC4917wIMHDx48ePDgwYP/gfDb4LJ9brrf0wtM3cCDBw8ePHjw4MGDvwk/DTYp9DSItILY9P9N9/XoAx48ePDgwYMHDx58Eb49uPN0kOnBToNPO9BNC5bH/YIHDx48ePDgwYMHX4C3PrvAgwdvgQdvgQdvLdY/vfwr3Xgzy2EAAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E7%99%BD%E8%AF%9D%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/&text=白话机器学习算法 - Bezhuang's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>数据结构</p>
+          <p class='content'>
+数据结构是指数据的存储结构，是带有结构特性的数据元素的集合。精心选择的数据结构可以带来更好的运行或者存储效率。数据结构是计算机科学与技术专业、软件工程专业甚至于其它电气信息类专业的重要专业基础...</p>
+        </a>
+      
+      
+        <a class='next' href='/%E5%BC%80%E5%8F%91%E5%9B%A2%E9%98%9F%E8%B0%83%E5%BA%A6%E8%BD%AF%E4%BB%B6/'>
+          <p class='title'>开发团队调度软件实战<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+在学习完 Java 基础编程的全部知识点后，为了更加熟悉 Java 面向对象的高级特性，进一步掌握编程技巧和调试技巧，实现模拟一个基于文本界面的开发团队调度软件，并以文档的形式记录软件设计结构...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BD%95%E9%9C%80%E8%A6%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6"><span class="toc-text">为何需要数据科学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE"><span class="toc-text">准备数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E7%AE%97%E6%B3%95"><span class="toc-text">选择算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E8%B0%83%E4%BC%98%EF%BC%88parameter-tuning%EF%BC%89"><span class="toc-text">参数调优（parameter tuning）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%84%E4%BB%B7%E6%A8%A1%E5%9E%8B"><span class="toc-text">评价模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#k-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB%EF%BC%88k-means-clustering%EF%BC%89"><span class="toc-text">k 均值聚类（k-means clustering）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E7%BE%A4%E7%BB%84"><span class="toc-text">定义群组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-text">局限性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-1"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90%EF%BC%88principal-component-analysis%EF%BC%89"><span class="toc-text">主成分分析（principal component analysis）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E6%88%90%E5%88%86"><span class="toc-text">主成分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%AE%E5%AE%9A%E4%B8%BB%E6%88%90%E5%88%86%E6%95%B0%E9%87%8F"><span class="toc-text">确定主成分数量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%99%90%E6%80%A7-1"><span class="toc-text">局限性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-2"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99%EF%BC%88association-rule%EF%BC%89"><span class="toc-text">关联规则（association rule）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E5%BA%A6%E3%80%81%E7%BD%AE%E4%BF%A1%E5%BA%A6%E5%92%8C%E6%8F%90%E5%8D%87%E5%BA%A6"><span class="toc-text">支持度、置信度和提升度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%88%E9%AA%8C%E5%8E%9F%E5%88%99%EF%BC%88apriori-principal%EF%BC%89"><span class="toc-text">先验原则（apriori principal）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%99%90%E6%80%A7-2"><span class="toc-text">局限性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-3"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BE%E4%BC%9A%E7%BD%91%E7%BB%9C%E5%88%86%E6%9E%90"><span class="toc-text">社会网络分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Louvain-%E6%96%B9%E6%B3%95%EF%BC%88Louvain-method%EF%BC%89"><span class="toc-text">Louvain 方法（Louvain method）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PageRank-%E7%AE%97%E6%B3%95%EF%BC%88PageRank-algorithm%EF%BC%89"><span class="toc-text">PageRank 算法（PageRank algorithm）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-4"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90%EF%BC%88regression-analysis%EF%BC%89"><span class="toc-text">回归分析（regression analysis）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%8B%E5%8A%BF%E7%BA%BF"><span class="toc-text">趋势线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%EF%BC%88gradient-decent%EF%BC%89"><span class="toc-text">梯度下降法（gradient decent）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9E%E5%BD%92%E7%B3%BB%E6%95%B0"><span class="toc-text">回归系数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0%EF%BC%88correlation-coefficient%EF%BC%89"><span class="toc-text">相关系数（correlation coefficient）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%99%90%E6%80%A7-3"><span class="toc-text">局限性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-5"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#k-%E6%9C%80%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95%EF%BC%88k-Nearest-Neighbors%EF%BC%89%E5%92%8C%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B"><span class="toc-text">k 最近邻算法（k-Nearest Neighbors）和异常检测</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#k-%E6%9C%80%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95"><span class="toc-text">k 最近邻算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B"><span class="toc-text">异常检测</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%99%90%E6%80%A7-4"><span class="toc-text">局限性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-6"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA%EF%BC%88support-vector-machine%EF%BC%89"><span class="toc-text">支持向量机（support vector machine）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8B%BE%E7%94%BB%E6%9C%80%E4%BD%B3%E5%88%86%E7%95%8C%E7%BA%BF"><span class="toc-text">勾画最佳分界线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%99%90%E6%80%A7-5"><span class="toc-text">局限性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-7"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91%EF%BC%88decision-tree%EF%BC%89"><span class="toc-text">决策树（decision tree）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-text">生成决策树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%99%90%E6%80%A7-6"><span class="toc-text">局限性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91%E7%9A%84%E5%A4%9A%E6%A0%B7%E5%8C%96%E6%96%B9%E6%B3%95"><span class="toc-text">决策树的多样化方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-8"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97"><span class="toc-text">随机森林</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E6%A8%A1%E5%9E%8B"><span class="toc-text">集成模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%8A%A9%E8%81%9A%E9%9B%86%E6%B3%95%EF%BC%88bootstrap-aggregating%EF%BC%89"><span class="toc-text">自助聚集法（bootstrap aggregating）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%99%90%E6%80%A7-7"><span class="toc-text">局限性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-9"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%88neural-network%EF%BC%89"><span class="toc-text">神经网络（neural network）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E8%AF%9E%E7%94%9F"><span class="toc-text">神经网络的诞生</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E6%9E%84%E6%88%90"><span class="toc-text">神经网络的构成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BF%80%E6%B4%BB%E8%A7%84%E5%88%99"><span class="toc-text">激活规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%80%E9%99%90%E6%80%A7-8"><span class="toc-text">局限性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-10"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-B-%E6%B5%8B%E8%AF%95%EF%BC%88A-B-testing%EF%BC%89%E5%92%8C%E5%A4%9A%E8%87%82%E8%80%81%E8%99%8E%E6%9C%BA%EF%BC%88multi-arm-bandit-problem%EF%BC%89"><span class="toc-text">A&#x2F;B 测试（A&#x2F;B testing）和多臂老虎机（multi-arm bandit problem）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#A-B-%E6%B5%8B%E8%AF%95%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-text">A&#x2F;B 测试的局限性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#epsilon-%E9%80%92%E5%87%8F%E7%AD%96%E7%95%A5%EF%BC%88epsilon-decreasing-strategy%EF%BC%89"><span class="toc-text">epsilon 递减策略（epsilon-decreasing strategy）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E8%87%82%E8%80%81%E8%99%8E%E6%9C%BA"><span class="toc-text">多臂老虎机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#epsilon-%E9%80%92%E5%87%8F%E7%AD%96%E7%95%A5%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-text">epsilon 递减策略的局限性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93-11"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E5%A4%9A%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87"><span class="toc-text">更多评价指标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E6%8C%87%E6%A0%87"><span class="toc-text">分类指标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9E%E5%BD%92%E6%8C%87%E6%A0%87"><span class="toc-text">回归指标</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="白话机器学习算法";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        
+          <div><p>Copyright © 2021 Zhihao Zhuang. All rights reserved</p>
+</div>
+        
+      
+    
+      
+        
+          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+</div>
+        
+      
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/********************脚本懒加载函数********************************/
+function loadScript(src, cb) {
+var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+var script = document.createElement('script');
+script.setAttribute('type','text/javascript');
+if (cb) script.onload = cb;
+script.setAttribute('src', src);
+HEAD.appendChild(script);
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://www.zhuangzhihao.top
+        
+        
+        
+        
+          id="https:wwwzhuangzhihaotop"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 返回主页
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/Bezhuang/Hexo-blog
+        
+        
+        
+        
+          id="https:githubcomBezhuangHexo-blog"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('false' == true && ('home,contributors,source_docs,hr,print'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+	
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/issues.min.js');
+	
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+
+
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
+  });
+</script>
+
+
+
+
+
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  pjax_comment=pjax_valine;
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/app.min.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/search/hexo.min.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI',
+    app_key: 'j5I5paEqIfWfOlCg13vU2vNq',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://blog.zhuangzhihao.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+function bindToggleButton() {
+	var btn=$("#wrapper .toggle-mode-btn");
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+document.addEventListener("pjax:success", bindToggleButton);
+
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/tu8j8vmfuovtkhsj4lgr7sub986gd1ku.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#l_cover",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      
+      $("#wrapper .toggle-mode-btn").unbind('click');
+      
+	  
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        if (typeof IssuesAPI == "undefined") {
+          loadIssuesJS();
+        }
+        
+          pjax_initCopyCode();
+        
+		
+          try{pjax_comment();} catch (e) {}
+        
+      } catch (e) {
+        console.log(e);
+      }
+	  
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+<!--浏览器搞笑标题-->
+<!--<script type="text/javascript" src="/js/FunnyTitle.js"></script>-->
+<!-- 数字雨 -->
+<canvas id="canvas" width="1440" height="900" ></canvas>
+<script type="text/javascript" src="/js/DigitalRain.js"></script>
