@@ -22,14 +22,12 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
-  
-    <meta name="keywords" content="云服务器,MacOS">
+  <title>Introduction to Data Analytics - Bezhuang&#39;s Blog</title>
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+The Introduction to Data Analytics course provided by IBM is the first in a series of courses designed to prepare me for a career as a junior data analyst. ...">
   
 
   <!-- feed -->
@@ -459,7 +457,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        Introduction to Data Analytics
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +466,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE/">人工智能与大数据</a>
     </a>
   </div>
 
@@ -479,7 +477,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2021年1月24日</p>
   </a>
 </div>
 
@@ -490,13 +488,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：2.7k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：16分钟</p>
     </a>
   </div>
 
@@ -511,152 +509,366 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>The Introduction to Data Analytics course provided by IBM is the first in a series of courses designed to prepare me for a career as a junior data analyst. The course introduces me to the core concepts, processes, and tools I need to gain entry into data analytics. The following are the notes I took during this course.</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
+
+
+	<div class="row">
+    <embed src="/pdf/Coursera-Intro-2-DA.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<h3 id="Modern-Data-Ecosystem"><a href="#Modern-Data-Ecosystem" class="headerlink" title="Modern Data Ecosystem"></a>Modern Data Ecosystem</h3><h4 id="Key-Players-in-the-Data-Ecosystem"><a href="#Key-Players-in-the-Data-Ecosystem" class="headerlink" title="Key Players in the Data Ecosystem"></a>Key Players in the Data Ecosystem</h4><ul>
+<li>An Interconnected, Independent and Continually evolving network</li>
+<li>Data Sources &amp; Users</li>
+<li>Emerging technologies shaping the modern data ecosystem</li>
+<li>Organizations are using data to uncover opportunities and applying that knowledge to differentiate themselves from their competition.</li>
+<li>Data engineering converts raw data into usable data. Data analytics uses this data to generate insights. Data scientists use data analytics and data engineering to predict the future using data from the past.</li>
+<li>Business analysts and business intelligence analysts use these insights and predictions to drive decisions that benefit and grow their business.</li>
+</ul>
+<h4 id="Defining-Data-Analysis"><a href="#Defining-Data-Analysis" class="headerlink" title="Defining Data Analysis"></a>Defining Data Analysis</h4><ul>
+<li>Data analysis is the process of gathering, cleaning, analyzing and mining data, interpreting results, and reporting the findings.</li>
+<li>Different Types of Data Analytics<ul>
+<li>Descriptive Analytics</li>
+<li>Diagnostic Analytics</li>
+<li>Predictive Analytics</li>
+<li>Prescriptive Analytics (self-driving)</li>
+</ul>
 </li>
-<li><p>应用程序安装信息</p>
+<li>The Data Analysis Process<ul>
+<li>Understanding the problem and desired result</li>
+<li>Setting a clear metric</li>
+<li>Gathering data</li>
+<li>Cleaning data</li>
+<li>Analyzing and Mining data</li>
+<li>Interpreting results</li>
+<li>Presenting your findings</li>
+</ul>
+</li>
+<li>Data Analytics vs. Data Analysis</li>
+</ul>
+<h3 id="The-Data-Analyst-Role"><a href="#The-Data-Analyst-Role" class="headerlink" title="The Data Analyst Role"></a>The Data Analyst Role</h3><h4 id="Responsibilities-of-a-Data-Analyst"><a href="#Responsibilities-of-a-Data-Analyst" class="headerlink" title="Responsibilities of a Data Analyst"></a>Responsibilities of a Data Analyst</h4><ol>
+<li>Acquiring data</li>
+<li>Creating queries to extract required data</li>
+<li>Filtering, cleaning, standardizing, and reorganizing data</li>
+<li>Using statistical tools</li>
+<li>Using statistical techniques</li>
+<li>Analyzing patterns</li>
+<li>Preparing reports and charts</li>
+<li>Creating appropriate documentation</li>
+</ol>
+<h4 id="Skills-required-for-Data-Analyst"><a href="#Skills-required-for-Data-Analyst" class="headerlink" title="Skills required for Data Analyst"></a>Skills required for Data Analyst</h4><ul>
+<li>Expertise in using spreadsheets (Excel)</li>
+<li>Proficiency in statistical analysis and visualization tools and software (Power BI, SAS, Tableau)</li>
+<li>Proficiency in programming languages (R, Python, C++, Java, MATLAB)</li>
+<li>Good knowledge of SQL, and ability to work with data in relational and NoSQL databases</li>
+<li>The ability to access and extract data from data repositories (Data marts, Data warehouses, Data lakes, Data pipelines)</li>
+<li>Familiarity with Big Data processing tools (Hadoop, Hive, Spark)</li>
+<li>Proficiency in Statistics</li>
+<li>Analytical skills</li>
+<li>Problem-solving skills</li>
+<li>Probing skills</li>
+<li>Data Visualization skills</li>
+<li>Project Management skills</li>
+<li>Collaboration and Communication ability</li>
+<li>Curiosity and Intuition</li>
+</ul>
+<h3 id="Data-Analysts-Ecosystem"><a href="#Data-Analysts-Ecosystem" class="headerlink" title="Data Analysts Ecosystem"></a>Data Analysts Ecosystem</h3><ul>
+<li>A data analyst ecosystem includes the infrastructure, software, tools, frameworks, and processes used to gather, clean, analyze, mine, and visualize data.</li>
+</ul>
+<h4 id="Types-of-Data"><a href="#Types-of-Data" class="headerlink" title="Types of Data"></a>Types of Data</h4><ul>
+<li>Structured data is data that is well organized in formats that can be stored in databases and lends itself to standard data analysis methods and tools</li>
+<li>Semi-structured data is data that is somewhat organized and relies on meta tags for grouping and hierarchy</li>
+<li>Unstructured data is data that is not conventionally organized in the form of rows and columns in a particular format</li>
+</ul>
+<h4 id="Different-Types-of-File-Form"><a href="#Different-Types-of-File-Form" class="headerlink" title="Different Types of File Form"></a>Different Types of File Form</h4><ul>
+<li>Delimited text files: <code>.CSV</code>, <code>.TSV</code></li>
+<li>Microsoft Excel Open XML Spreadsheet: <code>.XLSX</code></li>
+<li>Extensible Markup Language: <code>.XML</code></li>
+<li>JavaScript Object Notation: <code>.JSON</code></li>
+</ul>
+<h4 id="Sources-of-Data"><a href="#Sources-of-Data" class="headerlink" title="Sources of Data"></a>Sources of Data</h4><ul>
+<li>Relational Databases: Store structured data that can be leveraged for analysis</li>
+<li>Flat Files: Store data in plain text format, each line or row is one record, delimited text</li>
+<li>Spreadsheet files: Special type of flat files, organize data in a tabular format (<code>.XLSX</code>)</li>
+<li>XML files: Contain data values that are identified or marked up using tags</li>
+<li>APIs and Web Services</li>
+<li>Web scraping: Extract relevant data from unstructured data</li>
+<li>Data Streams and feeds (RSS feeds)</li>
+</ul>
+<h4 id="Languages-for-Data-Professionals"><a href="#Languages-for-Data-Professionals" class="headerlink" title="Languages for Data Professionals"></a>Languages for Data Professionals</h4><ul>
+<li> Query languages are designed for accessing and manipulating data in a database (SQL)</li>
+<li>Programming languages are designed for developing applications and controlling application behavior (Python, R, and Java)</li>
+<li>Shell and Scripting languages (Unix/Linux Shell, and PowerShell) are ideal for repetitive and time-consuming operational tasks</li>
+<li>SQL: Structured Query Language, Portable and Platform independent</li>
+<li>Python libraries: Pandas, Numpy and Scipy, Beautifulsoup and Scrapy, Matplotlib and Seaborn, Opency</li>
+<li>R libraries: Gggplot2 and Plotly</li>
+</ul>
+<h3 id="Data-Repositories-and-Big-Data-Platforms"><a href="#Data-Repositories-and-Big-Data-Platforms" class="headerlink" title="Data Repositories and Big Data Platforms"></a>Data Repositories and Big Data Platforms</h3><ul>
+<li>A data repository is a general term used to refer to data that has been collected, organized, and isolated so that it can be used for business operations or mined for reporting and data analysis.</li>
+<li>Data repositories help to isolate data and make reporting and analytics more efficient and credible while also serving as a data archive.</li>
+</ul>
+<h4 id="RDBMS"><a href="#RDBMS" class="headerlink" title="RDBMS"></a>RDBMS</h4><ul>
+<li><p>Databases: Collection of data, or information, designed for the input, storage, search and retrieval, and modification of data</p>
+</li>
+<li><p>DBMS: A set of programs that creates and maintains the database</p>
+</li>
+<li><p>RDBMS: Well-defined structure and schema, Optimized for data operations and querying, Use SQL for querying data</p>
 <ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
+<li>A relational database is a collection of data organized into a table structure, where the tables can be linked, or related, based on data common to each.</li>
+<li>Create meaningful information, Flexibility, Minimize data redundancy, ease of backup and disaster recovery and ACID complaint (reliable)</li>
 </ul>
 </li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
+</ul>
+<h4 id="NoSQL"><a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL</h4><ul>
+<li><p>Built for speed, flexibility and scale, can be stored in a schema-less form, widely used for processing big data</p>
 </li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
+<li><p>A non-relational database design that provides flexible schemas for the storage and retrieval of data.</p>
 </li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
+<li><p>NoSQL allows data to be stored in a schema-less or free-form fashion. </p>
+</li>
+<li><p>Types: Key-value store (Redis), Document-based (Mongo DB), Column-based (Cassandra), and Graph-based (Neo4J)</p>
 </li>
 </ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
+<h4 id="Key-Differences-Between-RDBMS-amp-NoSQL"><a href="#Key-Differences-Between-RDBMS-amp-NoSQL" class="headerlink" title="Key Differences Between RDBMS &amp; NoSQL"></a>Key Differences Between RDBMS &amp; NoSQL</h4><table>
+<thead>
+<tr>
+<th><strong>Relational Databases</strong></th>
+<th><strong>Non-Relational Data Bases</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RDBMS schemas rigidly define how all data inserted into the database must be typed and composed</td>
+<td>NoSQL databases can be schema-agnostic, allowing unstructured and semi-structured data to be stored and manipulated</td>
+</tr>
+<tr>
+<td>Maintaining high-end,commercial relational database management systems can be expensive</td>
+<td>Specifically designed for low-cost commodity hardware</td>
+</tr>
+<tr>
+<td>Support ACID-compliance, which ensures reliability of transactions and crash recovery</td>
+<td>Most NoSQL databases are not ACID compliant</td>
+</tr>
+<tr>
+<td>A mature and well-documented technology, which means the risks are more or less perceivable</td>
+<td>A relatively newer technology</td>
+</tr>
+</tbody></table>
+<h4 id="Data-Marts-Data-Lakes-ETL-and-Data-Pipelines"><a href="#Data-Marts-Data-Lakes-ETL-and-Data-Pipelines" class="headerlink" title="Data Marts, Data Lakes, ETL and Data Pipelines"></a>Data Marts, Data Lakes, ETL and Data Pipelines</h4><ul>
+<li><p>A data warehouse is a multi-purpose enabler of operational and performance analytics. </p>
 </li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
+<li><p>A data mart is a sub-section of the data warehouse, built specifically for a particular business function, purpose, or community of users. (Business specific reporting and analytics)</p>
 </li>
-</ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
+<li><p>A Data Lake is a storage repository that can store large amounts of structured, semi-structured, and unstructured data in their native format, classified and tagged with metadata. (Retain all source data without exclusions)</p>
 </li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
+<li><p>Extract, Transform and Load Process (ETL): Gathering raw data -&gt; Extracting the information needed for reporting and analysis -&gt; Cleaning, standardizing, and transforming data into usable format -&gt; Loading data into a data repository</p>
 <ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<li>Batch processing, Stream processing, Load verification</li>
 </ul>
 </li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
+<li><p>A data pipeline is a broader term that encompasses the entire journey of moving data from one system to another, including the ETL process.</p>
+</li>
+</ul>
+<h4 id="Foundations-of-Big-Data"><a href="#Foundations-of-Big-Data" class="headerlink" title="Foundations of Big Data"></a>Foundations of Big Data</h4><ul>
+<li><p>Big data refers to the dynamic, large and disparate volumes of data being created by people, tools and machines. It requires new, innovative and scalable technology to collect, host, and analytically process the vast amount of data gathered in order to drive real-time business insights that relate to consumers, risk, profit, performance, productivity management, and enhanced shareholder value.</p>
+</li>
+<li><p>The V’s of Big Data: Velocity, Volume, Variety, Veracity, Value</p>
+</li>
+<li><p>Big Data Processing Tools</p>
 <ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<li>Apache Hadoop is a collection of tools that provides distributed storage and processing of big data. (Java based, Node&amp;Cluster, HDFS)</li>
+<li>Apache Hive is a data warehouse for data query and analysis built on top of Hadoop. </li>
+<li>Apache Spark is a distributed data analytics framework designed to perform complex data analytics in real-time. </li>
 </ul>
 </li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
+<h3 id="Gathering-Data"><a href="#Gathering-Data" class="headerlink" title="Gathering Data"></a>Gathering Data</h3><h4 id="Identifying-Data-for-Analysis"><a href="#Identifying-Data-for-Analysis" class="headerlink" title="Identifying Data for Analysis"></a>Identifying Data for Analysis</h4><ul>
+<li><p>Process for Identifying data</p>
+<ol>
+<li>Determine the information you want to collect (specific information/possible sources)</li>
+<li>Define a plan for collecting data (establish timeframe/how much is sufficient/dependencies/risks/mitigation plan)</li>
+<li>Determine your data collection methods depending on sources, types, timeframe and volume of data</li>
+</ol>
 </li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
+<li><p>Data identifying has implication for quality, security, and privacy. None of these are one-time considerations but are relevant through the life cycle of the data analysis process.</p>
 </li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
+<li><p>Data Quality: data needs to be free of errors, accurate, complete, relevant, and accessible.</p>
 </li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
+<li><p>Data Governance: Security, Regulation and Compliances (relate to the usability, integrity, and availability of data)</p>
 </li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
+<li><p>Data Privacy: confidentiality, license for use, and compliance to mandated regulations (Checks, validations, and an auditable trail needs to be planned.)</p>
 </li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
+<h4 id="Data-Sources"><a href="#Data-Sources" class="headerlink" title="Data Sources"></a>Data Sources</h4><ul>
+<li>Data sources can be internal or external to the organization</li>
+<li>Primary data refers to information obtained directly from the source.</li>
+<li>Secondary data refers to information retrieved from existing sources, such as external databases, research articles, publications, training material and Internet searches, or financial records available as public data.</li>
+<li>Third party data is data you purchased from aggregators who collect data from various sources and combine it into comprehensive datasets purely for the purpose of selling the data.</li>
+<li>Sources for Gathering Data: Databases, Web, Social media sites and Interactive platforms, Sensor data, Data Exchange, Interviews and Observation studies</li>
+</ul>
+<h4 id="How-to-Gather-and-Import-Data"><a href="#How-to-Gather-and-Import-Data" class="headerlink" title="How to Gather and Import Data"></a>How to Gather and Import Data</h4><ul>
+<li>Using queries to extract data from SQL databases<ul>
+<li>Non-relational databases can be queried using SQL or SQL-like query tools.</li>
+</ul>
 </li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
+<li>Application Programming Interfaces (or APIs) are also popularly used for extracting data from a variety of data sources.<ul>
+<li>APIs are also used for data validation.</li>
+</ul>
+</li>
+<li>Using Web Scraping to extract data from the web (RSS feeds are another source typically used for capturing updated data from online forums and news sites where data is refreshed on an ongoing basis.)</li>
+<li>Data streams are a popular source for aggregating constant streams of data flowing from sources such as instruments, IoT devices and applications, and GPS data from cars.</li>
+<li>Data Exchanges have a set of well-defined exchange standards, protocols, and formats relevant for exchanging data.</li>
+<li>Specific data repositories are optimized for certain types of data. <ul>
+<li>Relational databases store structured data with a well-defined schema.</li>
+<li>Semi-structured can be stored in NoSQL clusters. XML and JSON are commonly used for storing and exchanging semi-structured data. JSON is also the preferred data type for web services.</li>
+<li>NoSQL databases and Data Lakes provide a good option to store and manipulate large volumes of unstructured data. Data lakes can accommodate all data types and schema. ETL tools and data pipelines provide automated functions that facilitate the process of importing data.</li>
+</ul>
 </li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h3 id="Wrangling-Data"><a href="#Wrangling-Data" class="headerlink" title="Wrangling Data"></a>Wrangling Data</h3><h4 id="Data-Wrangling"><a href="#Data-Wrangling" class="headerlink" title="Data Wrangling"></a>Data Wrangling</h4><ul>
+<li>Data wrangling, also known as data munging, is an iterative process that involves data exploration, transformation, validation, and making it available for a credible and meaningful analysis.</li>
+<li>The Data Wrangling Process<ol>
+<li>Discovery: Examine and understand data &amp; create a plan</li>
+<li>Transformation: Structuring, Normalizing and Denormalizing, Cleaning, Enriching Data</li>
+<li>Validation: Check the quality of the data post structuring, normalizing, cleaning and enriching of data.</li>
+<li>Publishing: Delivering the output of the wrangled data for downstream project needs.</li>
+<li>Documentation: It is vital that you document all considerations and actions.</li>
+</ol>
+</li>
+</ul>
+<h4 id="Tools-for-Data-Wrangling"><a href="#Tools-for-Data-Wrangling" class="headerlink" title="Tools for Data Wrangling"></a>Tools for Data Wrangling</h4><ul>
+<li>Spreadsheets / Excel Power Query</li>
+<li>OpenRefine</li>
+<li>Google DataPrep</li>
+<li>Watson Studio Refinery</li>
+<li>Trifacta Wrangler</li>
+<li>Python: Jupyter Notebook, NumPy, pandas</li>
+<li>R: Dplyr, Data.Table, Jsonlite</li>
+</ul>
+<h4 id="Data-Cleaning"><a href="#Data-Cleaning" class="headerlink" title="Data Cleaning"></a>Data Cleaning</h4><ul>
+<li>Poor quality data weakens an organization’s competitive standing and undermines critical business objectives.</li>
+<li>Data Cleaning Workflow<ul>
+<li>Inspection: Detect issues and errors, Validating against rules and constraints, Profiling data, visualizing data</li>
+<li>Cleaning: Imputate missing values, Remove duplicate data, Data type conversion, Standardize data, Rectify syntax errors, Examine outliers……</li>
+<li>Verification: Reinspect data</li>
+<li>It is important to document</li>
+</ul>
+</li>
+</ul>
+<h3 id="Analyzing-and-Mining-Data"><a href="#Analyzing-and-Mining-Data" class="headerlink" title="Analyzing and Mining Data"></a>Analyzing and Mining Data</h3><h4 id="Statistical-Analysis"><a href="#Statistical-Analysis" class="headerlink" title="Statistical Analysis"></a>Statistical Analysis</h4><ul>
+<li>Statistics is a branch of mathematics dealing with the collection, analysis, interpretation, and presentation of numerical or quantitative data.</li>
+<li>Statistical Analysis is the application of statistical methods to a sample of data in order to develop an understanding of what that data represents.</li>
+<li>Descriptive Statistics enables you to present data in a meaningful way allowing simpler interpretation of the data.<ul>
+<li>Central Tendency: Mean(average value), Medium(Middle’s value), Mode(Most popular value)</li>
+<li>Dispersion: Variance, Standard Deviation, Range</li>
+<li>Skewness: Measure of whether the distribution of values is symmetrical around a central value or skewed left or right.</li>
+</ul>
+</li>
+<li>Inferential statistics takes data from a sample to make inferences about the larger population from which the sample was drawn.<ul>
+<li>Hypothesis Testing—For example, for studying the effectiveness of a vaccine by comparing outcomes in a control group</li>
+<li>Confidence Intervals incorporate the uncertainty and sample error to create a range of values the actual population value is like to fall within.</li>
+<li>Regression Analysis incorporates hypothesis tests that help determine whether the relationships observed in the sample data actually exist in the population rather than just the sample.</li>
+</ul>
+</li>
+<li>SAS, SPSS, StatsSoft</li>
+</ul>
+<h4 id="Data-Mining"><a href="#Data-Mining" class="headerlink" title="Data Mining"></a>Data Mining</h4><ul>
+<li>The process of extracting knowledge from data, is the heart of the data analysis process. </li>
+<li>An interdisciplinary field that involves the use of pattern recognition technologies, statistical analysis and mathematical techniques.</li>
+<li>Aims to identify correlations in data, find patterns and variations. understand trends and predict probabilities.</li>
+<li>Pattern recognition is the discovery of regularity’s or commonality’s in data.</li>
+<li>A trend is the general tendency of a set of data to change overtime.</li>
+<li>Data mining has applications across industries and disciplines.</li>
+<li>Data mining techniques<ul>
+<li>Classification: Classifying attributes into target categories</li>
+<li>Clustering: Involves grouping data into clusters so they can be treated as groups</li>
+<li>Anomaly or Outlier Detection: Finding patterns in data that are not normal or unexpected</li>
+<li>Association Rule Mining: Establishing a relationship between two data events</li>
+<li>Sequential Patterns: Tracing a series of events that take place in a sequence</li>
+<li>Affinity Grouping: Discovering co-occurrence in relationships</li>
+<li>Decision trees: Building classification models in the form of a tree structure with multiple branches, where each branch represents a probable occurrence.</li>
+<li>Regression: Identifying the nature of the relationship between two variables, which could be causal or correlational.</li>
+</ul>
+</li>
+</ul>
+<h4 id="Tools-for-Data-Mining"><a href="#Tools-for-Data-Mining" class="headerlink" title="Tools for Data Mining"></a>Tools for Data Mining</h4><ul>
+<li>Spreadsheets: Host data, create pivot table, add-ins(Data Mining Client, XLMiner)</li>
+<li>R-language: tm, twitteP, RStudio</li>
+<li>Python: pandas, NumPy, Jupyter Notebook</li>
+<li>IBM SPSS Statistics (Statistical Process for Social Sciences)</li>
+<li>IBM Watson Studio</li>
+<li>SAS Enterprise Miner: A comprehensive, graphical workbench for data mining.</li>
+</ul>
+<h3 id="Communicating-and-Sharing-Data-Analysis-Findings"><a href="#Communicating-and-Sharing-Data-Analysis-Findings" class="headerlink" title="Communicating and Sharing Data Analysis Findings"></a>Communicating and Sharing Data Analysis Findings</h3><ul>
+<li>The data analysis process ends with communicating the findings in ways that impact decision making.</li>
+<li>Data projects involve<ul>
+<li> A collaborative effort spread across business functions</li>
+<li>People with multi-disciplinary skills</li>
+<li>Findings incorporated into a larger business initiative.</li>
+</ul>
+</li>
+<li>The success of your communication depends on how well others can understand and trust your insights to take further action.</li>
+<li>Understanding the information needs of your audience will help you decide what and how much information is essential to enable a better understanding of your findings.</li>
+</ul>
+<h4 id="Structure-your-presentation"><a href="#Structure-your-presentation" class="headerlink" title="Structure your presentation"></a>Structure your presentation</h4><ul>
+<li>Begin your presentation by demonstrating your understanding of the business problem to your audience. Speak in the language of the organization’s business domain.</li>
+<li>The next step in designing your communication is to structure and organize your presentation for maximum impact.</li>
+</ul>
+<h4 id="The-Role-of-Visuals"><a href="#The-Role-of-Visuals" class="headerlink" title="The Role of Visuals"></a>The Role of Visuals</h4><ul>
+<li>A powerful visualization tells a story through the graphical depiction of facts and figures. (Graphs, Charts, Diagrams)</li>
+<li>Trust, Understanding, Relatability</li>
+</ul>
+<h4 id="Introduction-to-Data-Visualization"><a href="#Introduction-to-Data-Visualization" class="headerlink" title="Introduction to Data Visualization"></a>Introduction to Data Visualization</h4><ul>
+<li>Data visualization is the discipline of communicating information through the use of visual elements such as graphs, charts, and maps. Its goal is to make information easy to comprehend, interpret, and retain.</li>
+<li>Choosing appropriate visualizations</li>
+<li>Common types of graphs<ul>
+<li>Bar Charts are great for comparing related data sets or parts of a whole.</li>
+<li>Column Charts compare values side-by-side. You can use them quite effectively to show change over time.</li>
+<li>Pie Charts show the breakdown of an entity into its sub-parts and the proportion of the sub-parts in relation to one another. Each portion of the pie represents a static value or category, and the sum of all categories is equal to hundred percent.</li>
+<li>Line Charts display trends. They’re great for showing how a data value is changing in relation to a continuous variable.</li>
+</ul>
+</li>
+<li>Dashboards organize and display reports and visualizations coming from multiple data sources into a single graphical interface.<ul>
+<li>Are easy to comprehend by an average user</li>
+<li>Make collaboration easy between teams</li>
+<li>Allow you to generate reports on the go</li>
+</ul>
+</li>
+</ul>
+<h4 id="Introduction-to-Visualization-and-Dashboarding-Software"><a href="#Introduction-to-Visualization-and-Dashboarding-Software" class="headerlink" title="Introduction to Visualization and Dashboarding Software"></a>Introduction to Visualization and Dashboarding Software</h4><ul>
+<li>Spreadsheets</li>
+<li>Jupyter Notebook and Python libraries (Matplotlib, Bokeh, Dash)</li>
+<li>R-Studio and R-Shiny</li>
+<li>IBM Cognos Analytics</li>
+<li>Tableau</li>
+<li>Microsoft Power BI</li>
+</ul>
+<h3 id="Opportunities-and-Learning-Paths"><a href="#Opportunities-and-Learning-Paths" class="headerlink" title="Opportunities and Learning Paths"></a>Opportunities and Learning Paths</h3><ul>
+<li>Data analyst job openings exist across industry, government and academia.</li>
+<li>Banking and Finance, Insurance, Healthcare, Retail and Information Technology</li>
+<li>Roles and Responsibilities<ul>
+<li>Data Analyst Specialist Roles</li>
+<li>Domain Specialist Roles</li>
+<li>Data Engineers &amp; Data Scientists</li>
+</ul>
+</li>
+<li>4 important soft skills<ul>
+<li>Problem-Solving</li>
+<li>Project Management</li>
+<li>Communication</li>
+<li>Storytelling</li>
+</ul>
+</li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -694,9 +906,6 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
-
 
         
       
@@ -708,8 +917,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Introduction-to-Data-Analytics/&title=Introduction to Data Analytics - Bezhuang's Blog&summary=
+The Introduction to Data Analytics course provided by IBM is the first in a series of courses designed to prepare me for a career as a junior data analyst. The course introduces me to the core concepts, processes, and tools I need to gain entry into data analytics. The following are the notes I took during this course.
 "
           
           >
@@ -722,8 +931,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Introduction-to-Data-Analytics/&title=Introduction to Data Analytics - Bezhuang's Blog&summary=
+The Introduction to Data Analytics course provided by IBM is the first in a series of courses designed to prepare me for a career as a junior data analyst. The course introduces me to the core concepts, processes, and tools I need to gain entry into data analytics. The following are the notes I took during this course.
 "
           
           >
@@ -736,8 +945,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Introduction-to-Data-Analytics/&title=Introduction to Data Analytics - Bezhuang's Blog&summary=
+The Introduction to Data Analytics course provided by IBM is the first in a series of courses designed to prepare me for a career as a junior data analyst. The course introduces me to the core concepts, processes, and tools I need to gain entry into data analytics. The following are the notes I took during this course.
 "
           
           >
@@ -752,7 +961,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADr0lEQVR42u3ZQXICMQwEQP7/6eQFlK2RqBVJ743KYuz2ZaJ5/Xii54UAHDhw4DzgwC2Be4XP8QfevPduneq6p/VPn9PzggMHDhw4cODAbYO7DoCH97sbTSGmL+jt74EDBw4cOHDgwC2FOwbAoc9TF1aFaZ8XHDhw4MCBAwfuj8JNAd8OMqcCNThw4MCBAwcO3H+Fq264WxDfBunu/sGBAwcOHDhw4L4FrlzQhoPEFCANtuuafHDgwIEDBw4cuCG4NHB+6+f4vODAgQMHDhw4cEvguk81aFYHmmkRfhusy+cFBw4cOHDgwIFbApcGxHTg2T1YGsynzgcOHDhw4MCBA7cNLh1g3v5wGpCnAnEaxMGBAwcOHDhw4LbC3S54vXBYCHcBu0X69YAWHDhw4MCBAwduGVw1KN7+fapQTg+e7vftvsGBAwcOHDhw4JbC3QbNqUL6U4G3e65yAAYHDhw4cODAgXsILg203YN9amA6HYTBgQMHDhw4cOC2wnUDaPd71QFnGuDbFwQOHDhw4MCBA7cULv3hqcK3u69q0C4X2uDAgQMHDhw4cEvgqsH0duPTRXZadFf3cVwHHDhw4MCBAwduGdxtoZwOHrsFdRciDd7gwIEDBw4cOHBb4dKDpkV0d6CYXvRUcAcHDhw4cODAgdsClw4Yrwd/YdDsDlLTiz5eHDhw4MCBAwcO3BK46oaniuV04PjpgH7cJzhw4MCBAwcO3HK46YNXNz41MK1eyNEFHDhw4MCBAwduCVx34/FAMPx+CjM16AQHDhw4cODAgdsKN10oTwXgbpAdWx8cOHDgwIEDB24J3C1g9b1PFdG3gbp6cdfvgwMHDhw4cODALYG7DYDdQWQauKsHrl7cWCENDhw4cODAgQP3EFwVqjqw7A4WpwrvdgEODhw4cODAgQO3FK4agKsBcqrIrq5f/X45AIMDBw4cOHDgwD0M1y1wp9etDka7QbhcSIMDBw4cOHDgwD0E1w6EYYC+LZKrxfVU0H67Hjhw4MCBAwcO3BK4V/hUAaaCcBU6DebX/zmAAwcOHDhw4MA9DNctem9h04K5G8DTwh0cOHDgwIEDB+5b4KaL4/T9Lc9xkAkOHDhw4MCBA/flcOmAMA3C3X3FFw8OHDhw4MCBA/fP4KYHp1ODzPK5wIEDBw4cOHDglsJ1C+C0+D2tnwbm6sXGARgcOHDgwIEDB+4huHTwWB1gphdSHZhOF97gwIEDBw4cOHDb4DzFII8AHDhw4DzgwD37/AI5wv41fV//pgAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -760,7 +969,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Introduction-to-Data-Analytics/&text=Introduction to Data Analytics - Bezhuang's Blog"
           
           >
           
@@ -786,11 +995,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/Excel-Basics-%20for-Data-Analysis/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Excel Basics for Data Analysis</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+Excel is an essential tool for working with data - whether for business, marketing, data analyti...</p>
+        </a>
+      
+      
+        <a class='next' href='/%E6%99%AE%E9%99%80%E5%B1%B1%E8%A1%8C%E8%AE%B0/'>
+          <p class='title'>2021普陀山行记<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+普陀山，是观世音菩萨教化众生的道场。素有”海天佛国“、”南海圣境“的美誉。这十几年来基本上每年都会去，本没什么稀奇。不过今年出行倒是特别顺利（可能是疫情复发没什么人），天气又好，索性把之前没去...</p>
         </a>
       
     </div>
@@ -833,7 +1048,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Modern-Data-Ecosystem"><span class="toc-text">Modern Data Ecosystem</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Key-Players-in-the-Data-Ecosystem"><span class="toc-text">Key Players in the Data Ecosystem</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Defining-Data-Analysis"><span class="toc-text">Defining Data Analysis</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Data-Analyst-Role"><span class="toc-text">The Data Analyst Role</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Responsibilities-of-a-Data-Analyst"><span class="toc-text">Responsibilities of a Data Analyst</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Skills-required-for-Data-Analyst"><span class="toc-text">Skills required for Data Analyst</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Analysts-Ecosystem"><span class="toc-text">Data Analysts Ecosystem</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Types-of-Data"><span class="toc-text">Types of Data</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Different-Types-of-File-Form"><span class="toc-text">Different Types of File Form</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Sources-of-Data"><span class="toc-text">Sources of Data</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Languages-for-Data-Professionals"><span class="toc-text">Languages for Data Professionals</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Repositories-and-Big-Data-Platforms"><span class="toc-text">Data Repositories and Big Data Platforms</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RDBMS"><span class="toc-text">RDBMS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NoSQL"><span class="toc-text">NoSQL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Key-Differences-Between-RDBMS-amp-NoSQL"><span class="toc-text">Key Differences Between RDBMS &amp; NoSQL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Data-Marts-Data-Lakes-ETL-and-Data-Pipelines"><span class="toc-text">Data Marts, Data Lakes, ETL and Data Pipelines</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Foundations-of-Big-Data"><span class="toc-text">Foundations of Big Data</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Gathering-Data"><span class="toc-text">Gathering Data</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Identifying-Data-for-Analysis"><span class="toc-text">Identifying Data for Analysis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Data-Sources"><span class="toc-text">Data Sources</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#How-to-Gather-and-Import-Data"><span class="toc-text">How to Gather and Import Data</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Wrangling-Data"><span class="toc-text">Wrangling Data</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Data-Wrangling"><span class="toc-text">Data Wrangling</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tools-for-Data-Wrangling"><span class="toc-text">Tools for Data Wrangling</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Data-Cleaning"><span class="toc-text">Data Cleaning</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Analyzing-and-Mining-Data"><span class="toc-text">Analyzing and Mining Data</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Statistical-Analysis"><span class="toc-text">Statistical Analysis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Data-Mining"><span class="toc-text">Data Mining</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tools-for-Data-Mining"><span class="toc-text">Tools for Data Mining</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Communicating-and-Sharing-Data-Analysis-Findings"><span class="toc-text">Communicating and Sharing Data Analysis Findings</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Structure-your-presentation"><span class="toc-text">Structure your presentation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#The-Role-of-Visuals"><span class="toc-text">The Role of Visuals</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Introduction-to-Data-Visualization"><span class="toc-text">Introduction to Data Visualization</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Introduction-to-Visualization-and-Dashboarding-Software"><span class="toc-text">Introduction to Visualization and Dashboarding Software</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Opportunities-and-Learning-Paths"><span class="toc-text">Opportunities and Learning Paths</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +1067,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="Introduction to Data Analytics";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

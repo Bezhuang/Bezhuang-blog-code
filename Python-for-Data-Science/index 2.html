@@ -22,14 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
+  <title>Python for Data Science, AI &amp; Development - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="云服务器,MacOS">
+    <meta name="keywords" content="Python">
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue t...">
   
 
   <!-- feed -->
@@ -459,7 +459,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        Python for Data Science, AI & Development
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +468,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE/">人工智能与大数据</a>
     </a>
   </div>
 
@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2021年2月4日</p>
   </a>
 </div>
 
@@ -490,13 +490,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：2.7k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：16分钟</p>
     </a>
   </div>
 
@@ -511,152 +511,436 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue to expand Python learning. The following are the notes I took during this course. Since that I’ve learned <a href="/py4e-code">Python for everybody</a> on Coursera before, so this note will only contain the necessary outlines and newly learned content.</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
+
+
+	<div class="row">
+    <embed src="/pdf/Coursera-Py-for-DS&amp;AI.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<h3 id="Python-Basics"><a href="#Python-Basics" class="headerlink" title="Python Basics"></a>Python Basics</h3><ul>
+<li>Types</li>
+<li><code>int</code>, <code>float</code>, <code>str</code>, <code>True</code>, <code>False</code></li>
+<li>Expressions and Variables</li>
+<li>Mathematical Operations</li>
+<li>String Operations<ul>
+<li><code>Name[1:4]</code>, <code>len()</code>, <code>\n</code></li>
+</ul>
 </li>
-<li><p>应用程序安装信息</p>
+<li><code>try:</code>，<code>except:</code></li>
+</ul>
+<h3 id="Python-Data-Structures"><a href="#Python-Data-Structures" class="headerlink" title="Python Data Structures"></a>Python Data Structures</h3><ul>
+<li>Lists <code>[1, 2, 3]</code> and Tuples <code>(1, 2, 3)</code><ul>
+<li><code>ABC[1]</code>, Tuples are immutable</li>
+<li><code>.extend()</code>, <code>.append()</code>, <code>.split()</code>, <code>.pop()</code>, <code>.del()</code> , <code>.index()</code>, <code>sorted()</code></li>
+<li>Append only adds one element to the list</li>
+</ul>
+</li>
+<li>Sets <code>&#123;q, w, e&#125;</code><ul>
+<li>unordered, unique element, <code>set(list)</code>, <code>.remove()</code></li>
+<li><code>set2 = set1 &amp; set 3</code>, <code>.union</code>, <code>set2.issubset(set1)</code>, <code>.issuperset</code>(), <code>.difference()</code></li>
+</ul>
+</li>
+<li>Dictionaries <code>&#123;&quot;key1&quot;:value1, &quot;key2&quot;: value2&#125;</code><ul>
+<li><code>DICT[&#39;Graduation&#39;]=&#39;2022&#39;</code>, <code>.keys()</code>, <code>.values()</code>, <code>&#39;Graduation&#39; in DICT</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Python-Programming-Fundamentals"><a href="#Python-Programming-Fundamentals" class="headerlink" title="Python Programming Fundamentals"></a>Python Programming Fundamentals</h3><ul>
+<li><p>Conditions and Branching</p>
 <ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
+<li>Comparison Operators <code>==</code>，Logic Operators<code>or</code> <code>AND</code>，Boolean</li>
+<li><code>if ():</code>， <code>elif:</code></li>
 </ul>
 </li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
+<li><p>Loops：<code>range(10,15)</code>，<code>for a in range():</code>，<code>while():</code></p>
 </li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
-</li>
-</ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
+<li><p>Functions: a function can have multiple parameters</p>
 <ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<li><code>def function(input):</code></li>
+<li><code>global [variable]</code> </li>
 </ul>
 </li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
+<li><p>Objects and Classes</p>
 <ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<li><p>Every object has a type, a blueprint and a set of methods.</p>
+</li>
+<li><p>An object is an instance of a particular type.</p>
+</li>
+<li><p>Class includes Data attributes and methods  <code>dir(NameOfObject):</code></p>
+<pre><code class="python">class Circle(object):
+    def __init__(self, radius, color=&#39;red&#39;):
+        self.radius = radius;
+        self.color = color;</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Reading and Writing files with <code>open()</code></p>
+<pre><code class="python">with open(&quot;/example1.txt&quot;, &quot;r&quot;) as File1:  # &quot;r&quot; for reading
+    file_stuff=File1.read()  # file.readlines()can save text to a list
+    print(file_stuff)        # file.readline(3)can only read 1 line
+print(File1.closed)
+
+with open(&quot;/example2.txt&quot;, &quot;a&quot;) as File2:  #&quot;a&quot; for appending
+        File2.write(line)
+
+with open(&quot;example1.txt&quot;, &quot;r&quot;) as readfile:   # copy file
+    with open(&quot;example2.txt&quot;, &quot;w&quot;):     # &quot;w&quot; for writing
+        for line in readfile:
+            writefile.write(line)</code></pre>
+</li>
+</ul>
+<h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><h4 id="Loading-data-with-Pandas"><a href="#Loading-data-with-Pandas" class="headerlink" title="Loading data with Pandas"></a>Loading data with Pandas</h4><pre><code class="python">import pandas as pd
+csv_path=&quot;file1.csv&quot;
+df = pd.read_csv(csv_path)  # Dataframes
+df.head()  # Treat the first row as the column name
+x=df[[&#39;ColumnA&#39;]]</code></pre>
+<h4 id="Select-Data-from-a-data-frame-in-Pandas"><a href="#Select-Data-from-a-data-frame-in-Pandas" class="headerlink" title="Select Data from a data frame in Pandas"></a>Select Data from a data frame in Pandas</h4><ul>
+<li><code>df.loc[&#39;row&#39;, &#39;column&#39;]: &#39;value&#39;</code><ul>
+<li><code>loc</code> is primarily label based; when two arguments are used, you use column headers and row indexes to select the data you want.  </li>
+<li><code>loc</code> can also take an integer as a row or column number.</li>
+<li><code>loc</code> will return a <code>KeyError</code> if the requested items are not found.</li>
+</ul>
+</li>
+<li><code>df.iloc[0,0]:&#39;value&#39;</code><ul>
+<li><code>iloc</code> is integer-based. You use column numbers and row numbers to get rows or columns at particular positions in the data frame.</li>
+<li><code>iloc</code> will return an <code>IndexError</code> if the requested indexer is out-of-bounds.</li>
+</ul>
+</li>
+<li>Use <code>loc</code> and <code>iloc</code> to slice data frames and assign the values to a new data frame.<ul>
+<li><code>z = df.iloc[0:2, 0:3]</code></li>
 </ul>
 </li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
+<h4 id="Working-with-and-Saving-data-with-Pandas"><a href="#Working-with-and-Saving-data-with-Pandas" class="headerlink" title="Working with and Saving data with Pandas"></a>Working with and Saving data with Pandas</h4><ul>
+<li><code>df[&#39;ColumnA&#39;].unique()</code>，``df1=df[df[‘ColumnA’]&gt;=1980]`</li>
+<li>Save as CSV：<code>df1.to_csv(&#39;new.csv&#39;)</code></li>
+</ul>
+<h3 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h3><h4 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h4><pre><code class="python"># Import the libraries
+import time 
+import sys
+import numpy as np 
+import matplotlib.pyplot as plt
+%matplotlib inline  
+
+# Plotting functions
+def Plotvec1(u, z, v):    
+    ax = plt.axes()
+    ax.arrow(0, 0, *u, head_width=0.05, color=&#39;r&#39;, head_length=0.1)
+    plt.text(*(u + 0.1), &#39;u&#39;)    
+    ax.arrow(0, 0, *v, head_width=0.05, color=&#39;b&#39;, head_length=0.1)
+    plt.text(*(v + 0.1), &#39;v&#39;)
+    ax.arrow(0, 0, *z, head_width=0.05, head_length=0.1)
+    plt.text(*(z + 0.1), &#39;z&#39;)
+    plt.ylim(-2, 2)
+    plt.xlim(-2, 2)
+def Plotvec2(a,b):
+    ax = plt.axes()
+    ax.arrow(0, 0, *a, head_width=0.05, color =&#39;r&#39;, head_length=0.1)
+    plt.text(*(a + 0.1), &#39;a&#39;)
+    ax.arrow(0, 0, *b, head_width=0.05, color =&#39;b&#39;, head_length=0.1)
+    plt.text(*(b + 0.1), &#39;b&#39;)
+    plt.ylim(-2, 2)
+    plt.xlim(-2, 2)</code></pre>
+<h4 id="One-Dimensional-Numpy"><a href="#One-Dimensional-Numpy" class="headerlink" title="One Dimensional Numpy"></a>One Dimensional Numpy</h4><ul>
+<li>A numpy array is similar to a list. It’s usually fixed in size and each element is of the same type.</li>
+</ul>
+<pre><code class="python">import numpy as np
+a=np.array([0,1,2,3,4])
+a.size # Get the size of numpy array  5
+a.ndim # Get the number of dimensions of numpy array  1
+a.shape # Get the shape/size of numpy array  (5,)
+a.dtype # Check the type of the values stored in numpy array
+a[0]=20 # Assign value  [20,1,2,3,4]
+b=a[3:5] # Slicing  [3,4]
+mean = a.mean() # Get the mean of numpy array
+standard_deviation=a.std() # Get the standard deviation of numpy array
+max_b = b.max()
+min_b = b.min()</code></pre>
+<ul>
+<li>Numpy Array Operations</li>
+</ul>
+<pre><code class="python">u = np.array([1, 0])
+v = np.array([0, 1])
+z = u + v # Numpy Array Addition
+Plotvec1(u, z, v) # Plot numpy arrays (equivalent to vector addition)
+z = 2 * u # Numpy Array Multiplication
+z = u * v # Calculate the production of two numpy arrays
+np.dot(u, v) # Calculate the dot product  1*0+0*1
+u + 1 # Add the constant to array  [2,1]
+x = np.array([0, np.pi/2 , np.pi]) # Create the numpy array in radians
+y = np.sin(x) # Calculate the sin of each elements</code></pre>
+<ul>
+<li>  A useful function for plotting mathematical functions is <code>linspace</code></li>
+<li>Linspace returns evenly spaced numbers over a specified interval.</li>
+</ul>
+<pre><code class="python">x = np.linspace(0, 2*np.pi, num=100) # Makeup a numpy array within [0, 2π] and 100 elements 
+y = np.sin(x) # Calculate the sine of x list
+plt.plot(x, y) # Plot the result</code></pre>
+<h4 id="Two-Dimensional-Numpy"><a href="#Two-Dimensional-Numpy" class="headerlink" title="Two Dimensional Numpy"></a>Two Dimensional Numpy</h4><pre><code class="python">a=[[11,12,13],[21,22,23],[31,32,33]]
+A = np.array(a) # Convert list to Numpy Array，Every element is the same type
+A.ndim # # Show the numpy array dimensions  2
+A.shape # A.shape  (3,3)
+A.size # # Show the numpy array size  9
+A[1, 2] # Access the element on the second row and third column  23
+A[1][2] # Access the element on the second row and third column
+A[0][0:2] # Access the element on the first row and first and second columns  array([11, 12])
+A[0:2, 2] # Access the element on the first and second rows third column  array([13, 23])
+Z = X + Y # Add X and Y
+Z = 2 * Y # Multiply Y with 2
+Z = X * Y # Multiply X with Y
+Z = np.dot(A,B) # Calculate the dot product
+np.sin(Z) # Calculate the sine of Z
+C.T # Get the transposed of C</code></pre>
+<h3 id="Simple-APIs"><a href="#Simple-APIs" class="headerlink" title="Simple APIs"></a>Simple APIs</h3><h4 id="Create-and-Use-APIs-in-Python"><a href="#Create-and-Use-APIs-in-Python" class="headerlink" title="Create and Use APIs in Python"></a>Create and Use APIs in Python</h4><ul>
+<li><p>An API lets two pieces of software talk to each other. </p>
 </li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
+<li><p>An essential type of API is a REST API (<strong>Re</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer APIs) that allows you to access resources via the internet. </p>
 </li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
+<li><p>Preparation</p>
+<pre><code class="python">!pip install nba_api
+def one_dict(list_dict):
+    keys=list_dict[0].keys()
+    out_dict=&#123;key:[] for key in keys&#125;
+    for dict_ in list_dict:
+        for key, value in dict_.items():
+            out_dict[key].append(value)
+    return out_dict</code></pre>
 </li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
+<li><p>Pandas API</p>
+<pre><code class="python">import pandas as pd
+import matplotlib.pyplot as plt
+dict_=&#123;&#39;a&#39;:[11,21,31],&#39;b&#39;:[12,22,32]&#125; # create a dictionary
+df=pd.DataFrame(dict_) #use the dataframe to communicate with the pandas API
+df.head()
+df.mean()</code></pre>
 </li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
+<li><p>REST APIs</p>
+<ul>
+<li>Use the <a target="_blank" rel="noopener" href="https://pypi.org/project/nba-api/">NBA API</a> to determine how well the Golden State Warriors performed against the Toronto Raptors.</li>
+<li>Use the API do the determined number of points the Golden State Warriors won or lost by for each game.</li>
+</ul>
+<pre><code class="python">from nba_api.stats.static import teams #https://pypi.org/project/nba-api/
+import matplotlib.pyplot as plt
+nba_teams = teams.get_teams() #returns a list of dictionaries 
+#The dictionary key id has a unique identifier for each team as a value
+nba_teams[0:3]
+dict_nba_team=one_dict(nba_teams) #create a dictionary
+df_teams=pd.DataFrame(dict_nba_team)
+df_teams.head()
+df_warriors=df_teams[df_teams[&#39;nickname&#39;]==&#39;Warriors&#39;]
+id_warriors=df_warriors[[&#39;id&#39;]].values[0][0] #we now have an integer that can be used to request the Warriors information
+from nba_api.stats.endpoints import leaguegamefinder
+wget https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%205/Labs/Golden_State.pkl
+file_name = &quot;Golden_State.pkl&quot;
+games = pd.read_pickle(file_name)
+games.head()
+games_home=games [games [&#39;MATCHUP&#39;]==&#39;GSW vs. TOR&#39;] #create two dataframes
+games_away=games [games [&#39;MATCHUP&#39;]==&#39;GSW @ TOR&#39;]   #Home&amp;Away
+games_home.mean()[&#39;PLUS_MINUS&#39;]
+games_away.mean()[&#39;PLUS_MINUS&#39;]
+fig, ax = plt.subplots()  #plot out
+games_away.plot(x=&#39;GAME_DATE&#39;,y=&#39;PLUS_MINUS&#39;, ax=ax)
+games_home.plot(x=&#39;GAME_DATE&#39;,y=&#39;PLUS_MINUS&#39;, ax=ax)
+ax.legend([&quot;away&quot;, &quot;home&quot;])
+plt.show()</code></pre>
 </li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
+<h4 id="Create-Speech-to-Text-Translator"><a href="#Create-Speech-to-Text-Translator" class="headerlink" title="Create Speech to Text Translator"></a>Create Speech to Text Translator</h4><ul>
+<li><p>Convert an audio file of an English speaker to text using a Speech to Text API</p>
+<pre><code class="python">!pip install PyJWT==1.7.1 ibm_watson wget
+from ibm_watson import SpeechToTextV1 
+import json
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+url_s2t = &quot;&quot; #URL
+iam_apikey_s2t = &quot;&quot; #API keys
+authenticator = IAMAuthenticator(iam_apikey_s2t) # create a Speech To Text Adapter object
+s2t = SpeechToTextV1(authenticator=authenticator)
+s2t.set_service_url(url_s2t)
+!wget -O PolynomialRegressionandPipelines.mp3  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/PolynomialRegressionandPipelines.mp3
+filename=&#39;PolynomialRegressionandPipelines.mp3&#39;
+with open(filename, mode=&quot;rb&quot;)  as wav:
+    response = s2t.recognize(audio=wav, content_type=&#39;audio/mp3&#39;)
+response.result
+from pandas.io.json import json_normalize
+json_normalize(response.result[&#39;results&#39;],&quot;alternatives&quot;)
+response
+recognized_text=response.result[&#39;results&#39;][0][&quot;alternatives&quot;][0][&quot;transcript&quot;]
+</code></pre>
 </li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
+<li><p>Translate the English version to a Spanish version using a Language Translator API</p>
+<pre><code class="python">from ibm_watson import LanguageTranslatorV3
+url_lt=&#39;https://gateway.watsonplatform.net/language-translator/api&#39;
+apikey_lt=&#39;&#39;
+version_lt=&#39;2018-05-01&#39;
+authenticator = IAMAuthenticator(apikey_lt)
+language_translator = LanguageTranslatorV3(version=version_lt,authenticator=authenticator)
+language_translator.set_service_url(url_lt)
+language_translator
+from pandas.io.json import json_normalize
+json_normalize(language_translator.list_identifiable_languages().get_result(), &quot;languages&quot;)
+translation_response = language_translator.translate(\
+    text=recognized_text, model_id=&#39;en-es&#39;)
+translation_response
+translation=translation_response.get_result()
+translation
+spanish_translation =translation[&#39;translations&#39;][0][&#39;translation&#39;]
+spanish_translation 
+translation_new = language_translator.translate(text=spanish_translation ,model_id=&#39;es-en&#39;).get_result()
+translation_eng=translation_new[&#39;translations&#39;][0][&#39;translation&#39;]
+translation_eng</code></pre>
 </li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h4 id="HTTP-and-Requests"><a href="#HTTP-and-Requests" class="headerlink" title="HTTP and Requests"></a>HTTP and Requests</h4><ul>
+<li><p>When the client use a web page, browser sends an HTTP request to the server where the page is hosted. The server tries to find the desired resource by default <code>index.html</code>. </p>
+</li>
+<li><p>If request is successful, the server will send the object to the client in an <code>HTTP</code> response, this includes information like the type of the resource, the length of the resource, and other information.</p>
+</li>
+<li><p>The <code>HTTP</code> protocol allows you to send and receive information through the web including webpages, images, and other web resources.</p>
+</li>
+<li><p>Uniform resource locator (URL) is the most popular way to find resources on the web.</p>
+</li>
+<li><p>Request：<code>GET</code>，<code>POST</code>，<code>PUT</code>，<code>DELETE</code> method</p>
+<pre><code class="python">import requests
+import os 
+from PIL import Image
+from IPython.display import IFrame
+url=&#39;https://www.ibm.com/&#39;
+r=requests.get(url)
+r.status_code #view the status code
+print(r.request.headers)
+print(&quot;request body:&quot;, r.request.body)
+header=r.headers #view the HTTP response header
+print(r.headers)
+header[&#39;date&#39;]
+header[&#39;Content-Type&#39;] #Content-Type indicates the type of data
+r.encoding #check the encoding
+r.text[0:100]
+# Use single quotation marks for defining string
+url=&#39;https://gitlab.com/ibm/skills-network/courses/placeholder101/-/raw/master/labs/module%201/images/IDSNlogo.png&#39;
+r=requests.get(url) #make a get request
+print(r.headers)
+r.headers[&#39;Content-Type&#39;]
+# An image is a response object that contains the image as a bytes-like object
+path=os.path.join(os.getcwd(),&#39;image.png&#39;)
+with open(path,&#39;wb&#39;) as f:
+    f.write(r.content)
+Image.open(path)  </code></pre>
+</li>
+<li><p>Write <code>wget</code></p>
+<pre><code>!wget -O /resources/data/Example1.txt https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/Example1.txt</code></pre>
+<p>Is Equal To:</p>
+<pre><code class="python">url=&#39;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/Example1.txt&#39;
+path=os.path.join(os.getcwd(),&#39;example1.txt&#39;)
+r=requests.get(url)
+with open(path,&#39;wb&#39;) as f:
+    f.write(r.content)</code></pre>
+</li>
+<li><p>Get Request with URL Parameters</p>
+<ul>
+<li>We append <code>/get</code> in the Route indicate we would like to preform a <code>GET</code> request</li>
+<li><code>url_get=&#39;http://httpbin.org/get&#39;</code></li>
+<li>A <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Query_string">query string</a> is a part of a uniform resource locator (URL), this sends other information to the web server.</li>
+</ul>
+<pre><code class="python">payload=&#123;&quot;name&quot;:&quot;Joseph&quot;,&quot;ID&quot;:&quot;123&quot;&#125;
+r=requests.get(url_get,params=payload)
+r.url
+print(&quot;request body:&quot;, r.request.body)
+print(r.status_code)
+print(r.text)
+r.headers[&#39;Content-Type&#39;]
+r.json()
+r.json()[&#39;args&#39;]</code></pre>
+</li>
+<li><p> <code>POST</code> is used to send data to a server, but the <code>POST</code> request sends the data in a request body.</p>
+</li>
+<li><p><code>url_post=&#39;http://httpbin.org/post&#39;</code></p>
+</li>
+<li><p>This endpoint will expect data as a file or as a form, a from is convenient way to configure an HTTP request to send data to a server.</p>
+<pre><code class="python"># To make a POST request we use the post() function, the variable payload is passed to the parameter data 
+r_post=requests.post(url_post,data=payload) 
+
+print(&quot;POST request URL:&quot;,r_post.url ) #the POST request has no name or value pairs
+print(&quot;GET request URL:&quot;,r.url)
+print(&quot;POST request body:&quot;,r_post.request.body) #compare the POST and GET 
+print(&quot;GET request body:&quot;,r.request.body)
+r_post.json()[&#39;form&#39;]</code></pre>
+</li>
+</ul>
+<h3 id="Final-Project"><a href="#Final-Project" class="headerlink" title="Final Project"></a>Final Project</h3><h4 id="Analyzing-US-Economic-Data-and-Building-a-Dashboard"><a href="#Analyzing-US-Economic-Data-and-Building-a-Dashboard" class="headerlink" title="Analyzing US Economic Data and Building a Dashboard"></a>Analyzing US Economic Data and Building a Dashboard</h4><ul>
+<li><p><a target="_blank" rel="noopener" href="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/FinalModule_Coursera/PY0101EN_Coursera_FinalAssignment.ipynb">A template notebook is provided in the lab</a></p>
+</li>
+<li><p>Examine how changes in GDP impact the unemployment rate.</p>
+<pre><code class="python">import pandas as pd
+from bokeh.plotting import figure, output_file, show,output_notebook
+output_notebook()
+# Define the function make_dashboard
+def make_dashboard(x, gdp_change, unemployment, title, file_name):
+    output_file(file_name)
+    p = figure(title=title, x_axis_label=&#39;year&#39;, y_axis_label=&#39;%&#39;)
+    p.line(x.squeeze(), gdp_change.squeeze(), color=&quot;firebrick&quot;, line_width=4, legend=&quot;% GDP change&quot;)
+    p.line(x.squeeze(), unemployment.squeeze(), line_width=4, legend=&quot;% unemployed&quot;)
+    show(p)
+# The dictionary links contain the CSV files with all the data.    
+links=&#123;&#39;GDP&#39;:&#39;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/FinalModule_Coursera/data/clean_gdp.csv&#39;,\
+       &#39;unemployment&#39;:&#39;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/FinalModule_Coursera/data/clean_unemployment.csv&#39;&#125;</code></pre>
+</li>
+<li><p>Question 1: Create a dataframe that contains the GDP data and display the first five rows of the dataframe.</p>
+<pre><code class="python">csv_path=links[&#39;GDP&#39;]  # links[&quot;GDP&quot;] contains the path or name of the file.
+df=pd.read_csv(csv_path)
+df.head()</code></pre>
+</li>
+<li><p>Question 2: Create a dataframe that contains the unemployment data. Display the first five rows of the dataframe.</p>
+<pre><code class="python">csv_path=links[&#39;unemployment&#39;]
+df=pd.read_csv(csv_path)
+df.head()</code></pre>
+</li>
+<li><p>Question 3: Display a dataframe where unemployment was greater than 8.5%.</p>
+<pre><code class="python">csv_path=links[&#39;unemployment&#39;]
+df=pd.read_csv(csv_path)
+df1=df[df[&#39;unemployment&#39;]&gt;8.5]
+df1</code></pre>
+</li>
+<li><p>Question 4: Use the function make_dashboard to make a dashboard</p>
+<pre><code class="python"># Create your dataframe with column date
+csv_path=links[&#39;GDP&#39;]
+gdp_dataframe=pd.read_csv(csv_path)
+x = pd.DataFrame(gdp_dataframe, columns=[&#39;date&#39;])
+x.head()
+# Create your dataframe with column change-current
+gdp_change = pd.DataFrame(gdp_dataframe, columns=[&#39;change-current&#39;])
+gdp_change.head()
+# Create your dataframe with column unemployment
+csv_path=links[&#39;unemployment&#39;]
+unemploy_dataframe= pd.read_csv(csv_path)
+unemployment = pd.DataFrame(unemploy_dataframe, columns=[&#39;unemployment&#39;])
+unemployment.head()
+# Give your dashboard a string title
+title = &quot;Unemployement stats &amp; GDP&quot;
+file_name = &quot;index.html&quot;
+# Fill up the parameters in the following function:
+make_dashboard(x=x, gdp_change=gdp_change, unemployment=unemployment, title=title, file_name=file_name)</code></pre>
+</li>
+</ul>
+<h4 id="My-Work"><a href="#My-Work" class="headerlink" title="My Work"></a>My Work</h4><ul>
+<li><p><a target="_blank" rel="noopener" href="https://jp-tok.dataplatform.cloud.ibm.com/analytics/notebooks/v2/86e30bef-41d8-4b38-a8f3-b0be3f7ca27d/view?access_token=7c7aa7dd80dcca2762f88c50a413cdaed865b0d218dded9d0afcf730680a7cf1">Final Assignment Notebook Url</a> (May not be accessible from Mainland China)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/Python-for-DS&AI.png" alt="Unemployment stats &amp; GDP"></p>
+</li>
+</ul>
+<h3 id="Assignments"><a href="#Assignments" class="headerlink" title="Assignments"></a>Assignments</h3><ul>
+<li>Visit my <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/LearnCS/tree/main/IBM%20Professional%20Certificates/Python%20for%20Data%20Science%20and%20AI">Github Repository</a></li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -695,7 +979,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div>
 
 
         
@@ -708,8 +992,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Python-for-Data-Science/&title=Python for Data Science, AI & Development - Bezhuang's Blog&summary=
+This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue to expand Python learning. The following are the notes I took during this course. Since that I’ve learned Python for everybody on Coursera before, so this note will only contain the necessary outlines and newly learned content.
 "
           
           >
@@ -722,8 +1006,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Python-for-Data-Science/&title=Python for Data Science, AI & Development - Bezhuang's Blog&summary=
+This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue to expand Python learning. The following are the notes I took during this course. Since that I’ve learned Python for everybody on Coursera before, so this note will only contain the necessary outlines and newly learned content.
 "
           
           >
@@ -736,8 +1020,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Python-for-Data-Science/&title=Python for Data Science, AI & Development - Bezhuang's Blog&summary=
+This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue to expand Python learning. The following are the notes I took during this course. Since that I’ve learned Python for everybody on Coursera before, so this note will only contain the necessary outlines and newly learned content.
 "
           
           >
@@ -752,7 +1036,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADrklEQVR42u3aQZLbMAwEQP//07v3pFQiBpANJ82bZYkimz5MAX79GNF4IQAHDhw4Axy4JXCvcPw14R/Xr+67eu5q/urn9H2n+wUHDhw4cODAgdsGV33x6fd3IKdg6YGkz1/uBxw4cODAgQMHbilcGkinA2w3eKf3364XHDhw4MCBAwfuH4O72/hpIbEaYE+BwYEDBw4cOHDgwNUCcVoI7cKn6wUHDhw4cODAgftWuHKDttmAPg2+aeGzOv/bOvngwIEDBw4cOHBDcNWRNpy3fI73Cw4cOHDgwIEDtwSuO54KntVgetoQb78XHDhw4MCBAwduCVwaEKcaydWDmArs1f2BAwcOHDhw4MBthZtqFE9tMA28U9cvvwcHDhw4cODAgVsCd/xAM2hObeSpIHzqAQ4cOHDgwIED961w3QB8N2/3vvTgToM1OHDgwIEDBw7cFrh0onSDaQHxqYJpHIDBgQMHDhw4cOA+DNcFOV3QVKGyG5zTHww4cODAgQMHDtw2uOrC0vu6BcZ2AbLZmAYHDhw4cODAgftWuHSB038A7Dawq/sCBw4cOHDgwIHbDpcWGKsB9m6eNABXG9rxZ3DgwIEDBw4cuGVw00GzHCzDxvNUo/r4OXDgwIEDBw4cuC+F6zaOTwNwen264DkWgMGBAwcOHDhw4B6CSzeYBtypwme1Id4ufIIDBw4cOHDgwC2BOx1TDenq56ehygcKDhw4cODAgQO3BO70xU9BlguJxQLoVCMdHDhw4MCBAwduK1xaSEw3XA247wrOt/OAAwcOHDhw4MAtg+s2bKfg0gJr9b7qDwIcOHDgwIEDB24b3OlCuoXFqYM4HdX1HwdjcODAgQMHDhy4JXBTjeO0IZwG2OqBv60hDQ4cOHDgwIED92G4KlQVbDp4d4PtWAAGBw4cOHDgwIH7ENxUofKpwJw2oqvPX64DHDhw4MCBAwduOVy18ft0AJ46sHZjGxw4cODAgQMHbglcd5w2lquN76cPqnoA4MCBAwcOHDhw2+CmgmG64G5hsTpvGpDBgQMHDhw4cOC2wlUDbxog0yCdBuFqAL69Dg4cOHDgwIEDtxQuLSCWC4LNQP16eFy+Fxw4cODAgQMH7j+FS6+fvj+dL25IgwMHDhw4cODAfTnc1IKrfxScamQfB29w4MCBAwcOHLilcOkfBquN3/T+auGzW0gFBw4cOHDgwIHbDjfVsK0CnBYi03mm5wMHDhw4cODAgdsCZxQLmwjAgQMHzgAH7rPjFyMTiB/CnYubAAAAAElFTkSuQmCC">
           </div>
         </div>
       
@@ -760,7 +1044,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Python-for-Data-Science/&text=Python for Data Science, AI & Development - Bezhuang's Blog"
           
           >
           
@@ -786,11 +1070,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>2021阿里Java训练营第一期</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+在阿里云开发者社区中看到有Java新手训练营（5天突破Java面向对象编程）的课程，采用直播授课的形式，希望能在侠客大佬的指导下有更好的学习效果吧。当然，直播时间有限，所以这篇日志并不是对Ja...</p>
+        </a>
+      
+      
+        <a class='next' href='/Data-Visualization-and-Dashboards/'>
+          <p class='title'>Data Visualization and Dashboards with Excel and Cognos<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+“A picture is worth 1,000 words”. This Course provided by IBM endows me with the ability to effe...</p>
         </a>
       
     </div>
@@ -833,7 +1123,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-Basics"><span class="toc-text">Python Basics</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-Data-Structures"><span class="toc-text">Python Data Structures</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-Programming-Fundamentals"><span class="toc-text">Python Programming Fundamentals</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pandas"><span class="toc-text">Pandas</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Loading-data-with-Pandas"><span class="toc-text">Loading data with Pandas</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Select-Data-from-a-data-frame-in-Pandas"><span class="toc-text">Select Data from a data frame in Pandas</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Working-with-and-Saving-data-with-Pandas"><span class="toc-text">Working with and Saving data with Pandas</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numpy"><span class="toc-text">Numpy</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Preparation"><span class="toc-text">Preparation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#One-Dimensional-Numpy"><span class="toc-text">One Dimensional Numpy</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Two-Dimensional-Numpy"><span class="toc-text">Two Dimensional Numpy</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Simple-APIs"><span class="toc-text">Simple APIs</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-and-Use-APIs-in-Python"><span class="toc-text">Create and Use APIs in Python</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-Speech-to-Text-Translator"><span class="toc-text">Create Speech to Text Translator</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTTP-and-Requests"><span class="toc-text">HTTP and Requests</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Final-Project"><span class="toc-text">Final Project</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Analyzing-US-Economic-Data-and-Building-a-Dashboard"><span class="toc-text">Analyzing US Economic Data and Building a Dashboard</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#My-Work"><span class="toc-text">My Work</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assignments"><span class="toc-text">Assignments</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +1142,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="Python for Data Science, AI &amp; Development";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

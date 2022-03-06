@@ -22,14 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
+  <title>Data Analysis With Python - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="云服务器,MacOS">
+    <meta name="keywords" content="Python">
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+This Data Analysis with Python course provided by IBM is designed to teach future data analysts how to prepare data for analysis, perform simple statistical...">
   
 
   <!-- feed -->
@@ -459,7 +459,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        Data Analysis With Python
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +468,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE/">人工智能与大数据</a>
     </a>
   </div>
 
@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2021年3月27日</p>
   </a>
 </div>
 
@@ -490,13 +490,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：2.2k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：13分钟</p>
     </a>
   </div>
 
@@ -511,152 +511,382 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>This Data Analysis with Python course provided by IBM is designed to teach future data analysts how to prepare data for analysis, perform simple statistical analysis, create meaningful data visualizations, predict future trends from data through a number of lecture, lab, and assignments using Python libraries. The following are the notes I took during this course.</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
+
+
+	<div class="row">
+    <embed src="/pdf/Coursera-Data-Analysis-with-py.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<h3 id="Importing-Datasets"><a href="#Importing-Datasets" class="headerlink" title="Importing Datasets"></a>Importing Datasets</h3><ul>
+<li><p>Data, Dataset &amp; Attributes in the dataset</p>
 </li>
-<li><p>应用程序安装信息</p>
+<li><p>Python Packages for Data Science</p>
 <ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
+<li>Scientifics Computing Libraries: Pandas, NumPy, SciPy</li>
+<li>Visualization Libraries: Matplotlib, Seaborn</li>
+<li>Algorithmic Libraries: Scikit-learn, Statsmodels</li>
 </ul>
 </li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
+<li><p>Importing Data: Format &amp; File Path of dataset</p>
+<pre><code class="python">import pandas as pd
+url = &quot;&quot;
+df = pd.read_csv(url, header = None)  #create dataframe
+df.head(n) #shows the first n rows while df.tail(n) shows the bottom n rows
+path = &quot;&quot;
+df.to_csv(path) #exporting dataframe, you can also use df.to_json() / df.to_excel() / df.to_sql()</code></pre>
 </li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
-</li>
-</ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
+<li><p>Data Types</p>
 <ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<li><code>df.dtypes</code> Checks datatypes</li>
+<li><code>df.describe(include=&quot;all&quot;)</code> Returns a statistical summary</li>
+<li><code>df.info()</code> Provides a concise summary of dataframe</li>
 </ul>
 </li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
+<li><p><a href="/Databases&SQL4Data-Science/#Accessing%20databases%20using%20Python">Accessing Databases with Python</a> (DB-API)</p>
+</li>
+</ul>
+<h3 id="Data-Wrangling"><a href="#Data-Wrangling" class="headerlink" title="Data Wrangling"></a>Data Wrangling</h3><ul>
+<li><p>Pre-processing Data in Python = Data Cleaning = Data Wrangling</p>
+</li>
+<li><p>Dealing with Missing Values</p>
 <ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<li>Drop: <code>df.dropna(subset=[&quot;column_name&quot;], axis=0, inplace=True)</code></li>
+<li>Replace: <code>df.replace(missing_value, new_value)</code> </li>
+<li>Mean: <code>df[&quot;column_name&quot;].mean()</code></li>
+</ul>
+</li>
+<li><p>Data Formatting</p>
+<pre><code class="python">df[&quot;city-mpg&quot;] = 235/df[&quot;city-mpg&quot;]
+df.rename(columns=(&quot;city_mpg&quot;: &quot;city-L/100km&quot;), inplace=True)
+df[&quot;city-L/100km&quot;]=df[&quot;city-L/100km&quot;].astype(&quot;float&quot;) </code></pre>
+<ul>
+<li><code>dataframe.astype()</code> Converts data type</li>
+</ul>
+</li>
+<li><p>Data Normalization</p>
+<ul>
+<li>Simple Feature scaling:  $x_{new}=\dfrac{x_{old}}{x_{max}}$</li>
+</ul>
+<pre><code class="python">df[&quot;length&quot;]=df[&quot;length&quot;]/df[&quot;length&quot;].max()</code></pre>
+<ul>
+<li>Min - Max:  $x_{new}=\dfrac{x_{old}-x_{min}}{x_{max}-x_{min}}$</li>
+</ul>
+<pre><code class="python">df[&quot;length&quot;]=(df[&quot;length&quot;]-df[&quot;length&quot;].min())/(df[&quot;length&quot;].max()-df[&quot;length&quot;].min())</code></pre>
+<ul>
+<li>Z-score (Standard Score):  $x_{new}=\dfrac{x_{old}-\mu}{\sigma }$</li>
+<li>z-score values typically range between [-3,3]</li>
 </ul>
 </li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
+<pre><code class="python">df[&quot;length&quot;]=(df[&quot;length&quot;]-df[&quot;length&quot;].mean())/df[&quot;length&quot;].std()</code></pre>
+<ul>
+<li><p>Binning: Converts numeric into categorical variables by Grouping them in a set of “bins”</p>
+<pre><code class="python">bins=np.linspace(min(df[&quot;price&quot;]),max(df[&quot;price&quot;]),4)
+group_names=[&quot;Low&quot;,&quot;Medium&quot;,&quot;High&quot;]
+df[&quot;price-binned&quot;]=pd.cut(df[&quot;price&quot;],bins,labels=group_names,include_lowest=True)</code></pre>
 </li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
+<li><p>Turning categorical variables into quantitative variables</p>
+<ul>
+<li>Convert categorical variables into dummy variables (0 or 1)</li>
+<li><code>pd.get_dummies(df[&#39;fuel&#39;])</code></li>
+</ul>
 </li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
+<h3 id="Exploratory-Data-Analysis-EDA"><a href="#Exploratory-Data-Analysis-EDA" class="headerlink" title="Exploratory Data Analysis (EDA)"></a>Exploratory Data Analysis (EDA)</h3><ul>
+<li><p>EDA is preliminary step in data analysis to summarize main characteristics of the data, gain better understanding of the data set, uncover relationships between different variables, and extract important variables for the problem we’re trying to solve.</p>
 </li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
+<li><p>Descriptive Statistics</p>
+<ul>
+<li>Describe basic features of data</li>
+<li>Giving short summaries about the sample and measures of the data</li>
+<li><code>df.describe</code> Summarize statistics, <code>value_counts()</code> Summarize the categorical data</li>
+</ul>
+<pre><code class="python">wheels_counts=df[&quot;wheels&quot;].value_counts().to_frame()</code></pre>
+<ul>
+<li>Box Plot</li>
+</ul>
+<pre><code class="python">sns.boxplot(x=&quot;wheels&quot;,y=&quot;price&quot;,data=df)</code></pre>
+<ul>
+<li>Scatter Plot</li>
+</ul>
+<pre><code class="python">y=df[&quot;price&quot;]
+x=df[&quot;engine-size&quot;]
+plt.scatter(x,y)
+plt.title(&quot;Scatterplot of Engine Size vs Price&quot;)
+plt.xlabel(&quot;Engine Size&quot;)
+plt.ylabel(&quot;Price&quot;)</code></pre>
+</li>
+<li><p>GroupBy</p>
+<ul>
+<li>The groupby method is used on categorical variables, groups the data into subsets according to the different categories of that variable.</li>
+</ul>
+<pre><code class="python">df_test=df[[&#39;drive-wheels&#39;,&#39;body-style&#39;,&#39;price&#39;]]
+df_grp=df_test.grop[by([&#39;drive-wheels&#39;,&#39;body-style&#39;], as_index= False).mean()
+df_grp</code></pre>
+<ul>
+<li>Pivot table</li>
+</ul>
+<pre><code class="python">df_pivot=df_grp.pivot(index=&#39;drive-wheels&#39;,columns=&#39;body-style&#39;)</code></pre>
+<ul>
+<li>Heatmap</li>
+</ul>
+<pre><code class="python">plt.pcolor(df_pivot,cmap=&#39;RdBu&#39;)
+plt.colorbar()
+plt.show()</code></pre>
+</li>
+<li><p>Correlation</p>
+<ul>
+<li>Correlation measures to what extent different variables are interdependent</li>
+<li>Correlation doesn’t imply causation</li>
+<li>Linear Relationship</li>
+</ul>
+<pre><code class="python">import seaborn as sns
+sns.regplot(x=&quot;engine-size&quot;,y=&quot;price&quot;,data=df)
+plt.ylim(0,)</code></pre>
+</li>
+<li><p>Correlation - Statistics</p>
+<ul>
+<li>Pearson Correlation: Measure the strength of the correlation between two features (Correlation coefficient &amp; P-value)</li>
+<li>Correlation coefficient close to +1: Large Positive relationship, close to -1: Large Negative relationship, close to 0: No relationship</li>
+<li>P-value &lt; 0.001: Strong certainty in the result, &lt; 0.05: Moderate certainty in the result, &lt; 0.1: Weak certainty in the result, &gt; 0.1: No certainty in the result</li>
+</ul>
+<pre><code class="python">pearson_coef, p_value=stats.pearsonr(df[&#39;horsepower&#39;],df[&#39;price&#39;])</code></pre>
+<ul>
+<li>Correlation-Heatmap</li>
+</ul>
+</li>
+<li><p>Chi-Square: Test for Association</p>
+<ul>
+<li>The Chi-square test is intended to test how likely it is that an observed distribution is due to chance. </li>
+<li>It measures how well the observed distribution of data fits with the distribution that is expected if the variables are independent.</li>
+<li>The Chi-square does not tell you the type of relationship that exists between both variables only that a relationship exists.</li>
+<li>$X^{2}=\sum^{n}<em>{i=1}\dfrac{\left(O</em>{i}-E_{i}\right)^{2}}{E_{i}}$</li>
+<li>Degree of freedom = (row-1) * (column-1)</li>
+</ul>
+<pre><code class="python">scipy.stats.chi2_contingency(cont_table, correction = True)</code></pre>
 </li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h3 id="Model-Development"><a href="#Model-Development" class="headerlink" title="Model Development"></a>Model Development</h3><ul>
+<li><p>A model can be thought of as a mathematical equation used to predict a value given one or more other values, relating one or more independent variables to dependent variables</p>
+</li>
+<li><p>Usually the more relevant data you have the more accurate your model is</p>
+</li>
+<li><p>Linear regression will refer to one independent variable to make a prediction</p>
+</li>
+<li><p>Multiple Linear Regression will refer to multiple independent variables to make a prediction</p>
+</li>
+<li><p>Simple Linear Regression (SLR)</p>
+<ul>
+<li>The predictor (independent) variable - x, The target (dependent) variable - y</li>
+<li>$b_{0}$: the intercept, $b_{1}$: the slope</li>
+<li>$y=b_{0}+b_{1}x$</li>
+<li>Fit: $\left( b_{0},b_{1}\right)$</li>
+</ul>
+<pre><code class="python">from sklearn.linear_model import LinearRegression
+lm=LinearRegression() #create a linear regression object using the constructor
+x=df[[&#39;highway-mpg&#39;]] #define the predictor variable and target variable
+y=df[&#39;price&#39;]
+lm.fit(x,y) #fit the model
+Yhat=lm.predict(X) #obtain a prediction
+lm.intercept_ #view the intercept
+lm.coef_ #view the slope</code></pre>
+</li>
+<li><p>Multiple Linear Regression (MLR)</p>
+<ul>
+<li>One continuous target (Y) variables, Two or more predictor (X) variables</li>
+<li>$\widehat{Y}=b_{0}+b_{1}x_{1}+b_{2}x_{2}+b_{3}x_{3}+b_{4}x_{4}$</li>
+<li>$b_{0}$: interception (x=0), $b_{1}$: the coefficient or parameter of $x_{1}$, $b_{2}$: the coefficient of parameter $x_{2}$ and so on</li>
+</ul>
+<pre><code class="python">Z=df[[&#39;horsepower&#39;,&#39;curb-weight&#39;,&#39;engine-size&#39;,&#39;highway-mpg&#39;]] #extract predictor variables and store them in the variable Z (dataframe)
+lm.fit(Z, df[&#39;price&#39;]) #train the model
+Yhat=lm.predict(X) #obtain a prediction
+lm.intercept_ #view the intercept
+lm.coef_ #view the slope</code></pre>
+</li>
+<li><p>Model Evaluation using Visualization</p>
+<ul>
+<li>Regression plots are a good estimate of the relationship between two variables, the strength of the correlation, and the direction of the relationship (positive or negative)</li>
+<li>Regression plot shows a combination of scatterplot and the fitted linear regression line ($\widehat{Y}$)</li>
+</ul>
+<pre><code class="python">import seaborn as sns
+sns.regplot(x=&quot;highway-mpg&quot;,y=&quot;price&quot;,data=df)
+plt.ylim(0,)</code></pre>
+<ul>
+<li>Residual plot represents the error between the actual value</li>
+</ul>
+<pre><code class="python">import seaborn as sns
+sns.resifplot(df[&#39;highway-mpg&#39;],df[&#39;price&#39;])</code></pre>
+<ul>
+<li>Distribution plot counts the predicted value versus the actual value</li>
+<li>MLR - Distribution plots</li>
+</ul>
+<pre><code class="python">import seaborn as sns
+ax1=sns.displot(df[&#39;price&#39;],hist=False,color=&#39;r&#39;,label=&#39;Actual Value&#39;)
+sns.distplot(Yhat,hist=False,color=&#39;b&#39;,label=&#39;Fitted Values&#39;,ax=axl)</code></pre>
+</li>
+<li><p>Polynomial Regression and Pipelines</p>
+<ul>
+<li>Polynomial regression is a special case of the general linear regression model, useful for describing curvilinear relationships</li>
+<li>Curvilinear relationship: By squaring or setting higher order terms of the predictor variables</li>
+<li>Quadrac - 2nd order: $\widehat{Y}=b_{0}+b_{1}x_{1}+b_{2}(x_{1})^2$</li>
+<li>Cubic - 3rd order: $\widehat{Y}=b_{0}+b_{1}x_{1}+b_{2}(x_{1})^2+b_{3}(x_{1})^3$</li>
+</ul>
+<pre><code class="python">f=np.polyfit(x,y,3) #calculate polynomial of 3rd order
+p=np.polyld(f)
+print(p) #print out the model</code></pre>
+<ul>
+<li>We could also have multi-dimensional polynomial linear regression: $\widehat{Y}=b_{0}+b_{1}x_{1}+b_{2}x_{2}+b_{3}x_{1}x_{2}+b_{4}(x_{1})^2+b_{5}(x_{3})^2+..$</li>
+</ul>
+<pre><code class="python">from sklearn.preprocessing import PolynomialFeatures
+pr=PolynomialFeatures(degree=2,include_bias=False)
+x_polly=pr.fit_transform(x[[&#39;horsepower&#39;,&#39;curb-weight&#39;]])</code></pre>
+<ul>
+<li>Pre-processing</li>
+</ul>
+<pre><code class="python">from sklearn.preprocessing import StandardScaler
+SCALE=StandardScaler()
+SCALE.fit(x_data[[&#39;horsepower&#39;,&#39;curb-weight&#39;]])
+x_scale=SCALE.transform(x_data[[&#39;horsepower&#39;,&#39;curb-weight&#39;]])</code></pre>
+<ul>
+<li>Pipelines: transform -&gt; prediction</li>
+</ul>
+<pre><code class="python">from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+Input=[(&#39;Scale&#39;,StandardScaler()),(&#39;polynomial&#39;,PolynomialFeatures(degree=2),(&#39;mode&#39;,LinearRegression()))]
+Pipe.fit(df[[&#39;horsepower&#39;,&#39;curb-weight&#39;,&#39;engine-size&#39;,&#39;highway-mpg&#39;]],y) #train the pipeline object
+yhat=Pipe.predict(X[[&#39;horsepower&#39;,&#39;curb-weight&#39;,&#39;engine-size&#39;,&#39;highway-mpg&#39;]])</code></pre>
+</li>
+<li><p>Measures for In-Sample Evaluation</p>
+<ul>
+<li>A way to numerically determine how good the model fits on our data</li>
+<li>Mean Squared Error (MSE)</li>
+</ul>
+<pre><code class="python">from sklearn.metrics import mean_squared_error
+mean_squared_error(df[&#39;price&#39;],Y_predict_simple_fit)</code></pre>
+<ul>
+<li>R-squared: The coefficient of determination</li>
+<li>R-squared is a measure to determine how close the data is to the fitted regression line</li>
+<li>R^2: the percentage of variation of the target variable (Y) that is explained by the linear model</li>
+<li>$R^{2}=\left( 1-\dfrac{MSE-of-regression-line}{MSE-of-the-average-of-the-data}\right)$</li>
+</ul>
+<pre><code class="python">lm.fit(X,Y)
+lm.score(X,y)</code></pre>
+<ul>
+<li>Generally the values of the MSE are between 0 and 1</li>
+<li>R^2 = 0 indicates your model performs worst</li>
+</ul>
+</li>
+<li><p>Prediction and Decision Making</p>
+<pre><code class="python">lm.fit(df[&#39;highway-mpg&#39;],df[&#39;prices&#39;])  #Train the model
+lm.predict(np.array(30.0).reshape(-1,1))  #Predict the price
+lm.coef_  #Value of the Slope</code></pre>
+<ul>
+<li>Residual Plot</li>
+</ul>
+<pre><code class="python">import numpy as np
+new_input=np.arrange(1,101,1).reshape(-1,1)  #Arrange to generate sequence
+yhat=lm.predict(new_input)  #Predict new values</code></pre>
+<ul>
+<li>Numerical measures for Evaluation</li>
+<li>Comparing MLR and SLR: A lower Mean Square Error does not necessarily imply better fit</li>
+<li>Mean Square Error for a Multiple Linear Regression Model will be smaller than the Mean Square Error for a Simple Linear Regression model, since the errors of the data will decrease when more variables are included in the model</li>
+<li>Polynomial regression will also have a smaller Mean Square Error than the linear regular regression</li>
+</ul>
+</li>
+</ul>
+<h3 id="Model-Evaluation-and-Refinement"><a href="#Model-Evaluation-and-Refinement" class="headerlink" title="Model Evaluation and Refinement"></a>Model Evaluation and Refinement</h3><ul>
+<li><p>In-sample evaluation tells us how well our model will fit the data used to train it</p>
+</li>
+<li><p>Build and train the model with a training set (70% dataset)</p>
+</li>
+<li><p>Use testing set to access the performance of a predictive model (30% dataset)</p>
+</li>
+<li><p>Function <code>train_test_split()</code>: Split data into random train and test subsets</p>
+<ul>
+<li>x_data: features or independent variables, y_data: dataset target (<code>df[&#39;price&#39;]</code>)</li>
+<li>x_train, y_train: parts of available data as training set</li>
+</ul>
+<pre><code class="python">from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test=train_test_split(x_data,y_data,test_size=0.3,random_state=0)</code></pre>
+</li>
+<li><p>Generalization error is measure of how well our data does at predicting previously unseen data, the error we obtain using our testing data is an approximation of this error.</p>
+</li>
+<li><p> Lots of training data</p>
+</li>
+<li><p>Cross Validation</p>
+<ul>
+<li>Most common out-of-sample evaluation metrics</li>
+<li>More effective use of data (each observation is used for both training and testing)</li>
+</ul>
+</li>
+<li><p>Function <code>cross_val_score()</code></p>
+<pre><code class="python">from sklearn.model_selection import cross_val_score
+scores=cross_val_score(lr,x_data,y_data,cv=3)
+np.mean(scores)</code></pre>
+</li>
+<li><p>Function <code>cross_val_predict()</code></p>
+<ul>
+<li>It returns the prediction that was obtained for each element when it was in the test set</li>
+</ul>
+<pre><code class="python">from sklearn.model_selection import cross_val_score  #Has a similar interface to cross_cal_score()
+scores=cross_val_score(lr,x_data,y_data,cv=3)</code></pre>
+</li>
+<li><p>Model Selection: y(x)+noise</p>
+</li>
+<li><p>Underfitting: Where the model is too simple to fit the data.</p>
+</li>
+<li><p>Overfitting: Where the model is too flexible and fits the noise rather than the function</p>
+</li>
+<li><p>Ridge regression</p>
+<ul>
+<li>A regression that is employed in a Multiple regression model when Multicollinearity occurs</li>
+<li>Multicollinearity is when there is a strong relationship among the independent variables</li>
+<li>Ridge regression is very common with polynomial regression</li>
+</ul>
+<pre><code class="python">from sklearn.linear_model import Ridge
+RidgeModel=Ridge(alpha=0.1)
+RidgeModel.fit(X,y)
+Yhat=RidgeModel.predict(X)</code></pre>
+</li>
+<li><p>Grid Search allows us to scan through multiple free parameters with few lines of code.</p>
+<ul>
+<li>Hyperparameters: Parameters that are not part of the fitting or training process. (eg. Ridge regression)</li>
+<li>Scikit-learn has a means of automatically iterating over these hyperparameters using cross-validation called Grid Search</li>
+<li>Training data、Validation data、Test data</li>
+</ul>
+<pre><code class="python">from sklearn.linear_model import Ridge
+from sklearn.model_selection import GridSearchCV
+parameters1=[&#123;&#39;alpha&#39;:[0.001,0.1,1,10,100,1000,10000,100000,1000000]&#125;]
+parameters2=[&#123;&#39;alpha&#39;:[0.001,0.1,1,10,100],&#39;normalize&#39;:[True,False]&#125;]
+RR=Ridge()
+Grid1=GridSearchCV(rr,parameters1,cv=4)
+Grid1.fit(x_data[[&#39;horsepower&#39;,&#39;curb-weight&#39;,&#39;engine-size&#39;,&#39;highway-mpg&#39;]],y_data)
+Grid.best_estimator_
+scores=Grid.cv_results_
+scores[&#39;mean_test_score&#39;]</code></pre>
+</li>
+</ul>
+<h3 id="Project-Case"><a href="#Project-Case" class="headerlink" title="Project Case"></a>Project Case</h3><ul>
+<li>Determining the market price of a house given a set of features</li>
+<li><a target="_blank" rel="noopener" href="https://dataplatform.cloud.ibm.com/analytics/notebooks/v2/178b3007-1e92-4946-97ed-f22763f254d2/view?access_token=6f0d33f3dd579324e58eac3e6416508d2f47372218c970f98d418bc68133d33c">Final Assignment Notebook Url</a> (May not be accessible from Mainland China)</li>
+</ul>
+<h3 id="Assignments"><a href="#Assignments" class="headerlink" title="Assignments"></a>Assignments</h3><ul>
+<li>Visit my <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/LearnCS/tree/main/IBM%20Professional%20Certificates/Data%20Analysis%20with%20Python">Github Repository</a></li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -695,7 +925,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div>
 
 
         
@@ -708,8 +938,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Data-Analysis-with-Python/&title=Data Analysis With Python - Bezhuang's Blog&summary=
+This Data Analysis with Python course provided by IBM is designed to teach future data analysts how to prepare data for analysis, perform simple statistical analysis, create meaningful data visualizations, predict future trends from data through a number of lecture, lab, and assignments using Python libraries. The following are the notes I took during this course.
 "
           
           >
@@ -722,8 +952,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Data-Analysis-with-Python/&title=Data Analysis With Python - Bezhuang's Blog&summary=
+This Data Analysis with Python course provided by IBM is designed to teach future data analysts how to prepare data for analysis, perform simple statistical analysis, create meaningful data visualizations, predict future trends from data through a number of lecture, lab, and assignments using Python libraries. The following are the notes I took during this course.
 "
           
           >
@@ -736,8 +966,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Data-Analysis-with-Python/&title=Data Analysis With Python - Bezhuang's Blog&summary=
+This Data Analysis with Python course provided by IBM is designed to teach future data analysts how to prepare data for analysis, perform simple statistical analysis, create meaningful data visualizations, predict future trends from data through a number of lecture, lab, and assignments using Python libraries. The following are the notes I took during this course.
 "
           
           >
@@ -752,7 +982,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADrklEQVR42u3awXIiMQwE0Pz/T2fv2aJQSzaI5PkGzIzt50sjzde30RpfCMCBAwfOAAduCdxXc/z3wB/fp9c9en76uTtfdb/gwIEDBw4cOHDb4MoB8AlIFXo6z+37H8KDAwcOHDhw4MAthesG0i5UehC3AnX5enDgwIEDBw4cuF8K1y0gdgPsqYIrOHDgwIEDBw7cX4V7FnDTAuQ0GKcNbXDgwIEDBw4cuE+Hixu0hzaQbrQKn97/sk4+OHDgwIEDBw7cIbh0dDe65XN7v+DAgQMHDhw4cEvgpiMtLHaDaNqwTtdTnhccOHDgwIEDB24JXDcgdjfSLWROg+t0f+DAgQMHDhw4cFvhug3laYP6VGC+dUDgwIEDBw4cOHCfAjcOiId/PxWA04Lm9U4+OHDgwIEDBw7cEC4t9E0bwt0Nnb6vfT84cODAgQMHDtxyuPT3UwXENJhWDyo9yHYABgcOHDhw4MCBezHcqcA7DaTdAF49qG5hExw4cODAgQMHbitcdUHdBd5udHevrwZncODAgQMHDhy4rXCnNlS9v7zQYTCfgrb/OYADBw4cOHDgwL0IrhsIu0H62EbCAx43sMGBAwcOHDhw4JbBTWG6Abn6fXog0wNr/3MABw4cOHDgwIFbCner0NkNzLdeTDwegMGBAwcOHDhw4C7BpYXNKcT0RcRuIXYahMGBAwcOHDhw4LbBpRtOA2p6XdowTg+4HejBgQMHDhw4cOCWwB17YAicFiZPNbSnjW5w4MCBAwcOHLgtcNVC5jSYTgP36QZ3+4DAgQMHDhw4cOCWwaUTTxvW34dG9XngwIEDBw4cOHC/DS4NkNXC5PQg0gZ09wDjhjs4cODAgQMHDtxyuGrQ7AbaNBC3G8jNA3q4DnDgwIEDBw4cuGVwU6g0kE4b4NPg3G68gwMHDhw4cODALYW7DVad79VBGxw4cODAgQMH7tPhpgXEU0EzBak2mNOGNjhw4MCBAwcO3Fa46ZhCHNtQs2GeFl7BgQMHDhw4cOC2wE0D4hS2W2iczl+Fe/rPARw4cODAgQMH7s1wtxYybgCHG5sG4KeBGhw4cODAgQMHbilct4DYfUFwet+tEQdgcODAgQMHDhy4D4XrBs80iKZBOV0/OHDgwIEDBw7cX4WbNoDTA7ndyAYHDhw4cODAgfsUuLSg+GzCLkw10HbX0W6cgwMHDhw4cODALYObNmynjezbBcxqwI0DMDhw4MCBAwcO3JvgjLDAiQAcOHDgDHDg3jv+AQOo/FNCG48fAAAAAElFTkSuQmCC">
           </div>
         </div>
       
@@ -760,7 +990,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Data-Analysis-with-Python/&text=Data Analysis With Python - Bezhuang's Blog"
           
           >
           
@@ -786,11 +1016,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/IBM-Data-Analyst-Capstone-Project/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>IBM Data Analyst Capstone Project</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+In this course provided by IBM, I will assume the role of an Associate Data Analyst who has rece...</p>
+        </a>
+      
+      
+        <a class='next' href='/Java%E9%AB%98%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/'>
+          <p class='title'>2021阿里Java训练营第三期<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+本期训练营是阿里云开发者社区Java训练营的第3期，主要基于最流行的Java Spring Cloud, 结合阿里巴巴淘宝微服务案例，实战模拟淘宝Order微服务，实战演练微服务开发，扩展学习...</p>
         </a>
       
     </div>
@@ -813,6 +1049,59 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
 
+  <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
 
 </div>
 <aside class='l_side'>
@@ -833,7 +1122,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Importing-Datasets"><span class="toc-text">Importing Datasets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Wrangling"><span class="toc-text">Data Wrangling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exploratory-Data-Analysis-EDA"><span class="toc-text">Exploratory Data Analysis (EDA)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Model-Development"><span class="toc-text">Model Development</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Model-Evaluation-and-Refinement"><span class="toc-text">Model Evaluation and Refinement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Project-Case"><span class="toc-text">Project Case</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assignments"><span class="toc-text">Assignments</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +1141,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="Data Analysis With Python";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

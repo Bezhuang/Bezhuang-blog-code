@@ -22,14 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
+  <title>Tools for Data Science - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="云服务器,MacOS">
+    <meta name="keywords" content="Python,R Language">
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, RStudio IDE, Git, GitHub, and Watson Studio, what each tool is used for, what...">
   
 
   <!-- feed -->
@@ -459,7 +459,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        Tools for Data Science
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +468,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE/">人工智能与大数据</a>
     </a>
   </div>
 
@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2021年5月15日</p>
   </a>
 </div>
 
@@ -490,13 +490,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：2.4k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：15分钟</p>
     </a>
   </div>
 
@@ -511,152 +511,354 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, RStudio IDE, Git, GitHub, and Watson Studio, what each tool is used for, what programming languages they can execute, their features and limitations. With the tools hosted in the cloud on Skills Network Labs, I can now run simple code in Python, R or Scala. The following are the notes I took during this course.</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
+
+
+	<div class="row">
+    <embed src="/pdf/Tools-for-Data-Science.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<h3 id="Languages-of-Data-Science"><a href="#Languages-of-Data-Science" class="headerlink" title="Languages of Data Science"></a>Languages of Data Science</h3><ul>
+<li>Python<ul>
+<li>General Purpose language with Large standard library</li>
+<li>Scientific computing libraries like Pandas, NumPy, SciPy and Matplotlib</li>
+<li>For artificial intelligence it has PyTorch, TensorFlow, Keras and Scikit-learn</li>
+<li>Python can be used for Natural Language Processing (NLP) using the Natural Language Toolkit (NLTK)</li>
+</ul>
 </li>
-<li><p>应用程序安装信息</p>
+<li>R Language<ul>
+<li>Python is Open Source, R is Free Software</li>
+<li>Open Source Initiative (OSI) champions open source while the Free Software Foundation (FSF) defines free software</li>
+<li>Open Source is more business focused while Free Software is more focused on a set of values</li>
+<li>R is most often used by statisticians, mathematicians and data miners for developing statistical software, graphing and data analysis</li>
+<li>The array-oriented syntax makes it easier to translate from math to code</li>
+<li>R has become the world’s largest repository of statistical knowledge</li>
+<li>Common mathematical operations like matrix multiplication work straight out of the box</li>
+<li>R has stronger object-oriented programming facilities than most statistical computing languages </li>
+</ul>
+</li>
+<li>SQL (Structured Query Language)<ul>
+<li>SQL = </li>
+<li>SQL was initially developed at IBM, first appeared in 1974</li>
+<li>Useful in handling structured data, i.e. data incorporating relations among entities and variables</li>
+<li>The SQL language is subdivided into several language elements, including clauses, expressions, predicates, queries, and statements</li>
+<li>Knowing SQL will help you do many different jobs in data science, including business and data analyst, and it’s a must in data engineering. </li>
+<li>When performing operations with SQL, you access the data directly ( without any need to copy it beforehand). This can speed up workflow executions considerably.</li>
+<li>SQL is the interpreter between you and the database</li>
+<li>SQL is an American National Standards Institute, or “ANSI,” standard, which means if you learn SQL and use it with one database, you will be able to easily apply that SQL knowledge to many other databases.</li>
+<li>MySQL, IBM Db2, PostgreSQL, Apache OpenOffice Base, SQLite, Oracle, MariaDB, Microsoft SQL Server</li>
+</ul>
+</li>
+<li>Java<ul>
+<li>Java is a tried and true general purpose object oriented programming language</li>
+<li>Huge adoption in the enterprise space, designed to be fast and scalable</li>
+<li>Java applications are compiled to bytecode and run on JVM</li>
+<li>Tools include Weka (data mining), Java-ML (ml library), Apache MLlib (scalable ml) and Deeplearning4j</li>
+<li>Hadoop manages data processing and storage for big data applications running in clustered systems</li>
+</ul>
+</li>
+<li>Scala<ul>
+<li>Scala is a general purpose programming language that provides support for functional programming</li>
+<li>Designed as an extension to Java, it is inter-operable with Java as it also runs on JVM</li>
+<li>The name Scala comes from “Scalable Language”</li>
+<li>Apache Spark is a fast and general-purpose cluster computing system. It provides APIs that make parallel jobs easy to write, and an optimized engine that supports general computation graphs.</li>
+<li>Spark includes Shark, which is a query engine; MLlib, for machine learning; GraphX, for graph processing; and Spark Streaming. </li>
+<li>Apache Spark was designed to be faster than Hadoop</li>
+</ul>
+</li>
+<li>C++<ul>
+<li>Another general purpose language, C++ is an extension of C</li>
+<li>Improve processing speed, enables system programming and gives you broader control over the application</li>
+<li>Many organizations rely on C++ to develop programs that feed data to customers in real-time</li>
+<li>TensorFlow is a deep learning library</li>
+<li>MongoDB is a NoSQL database for big data management</li>
+<li>Caffe is a deep learning algorithm repository</li>
+</ul>
+</li>
+<li>Javascript<ul>
+<li>A core technology for the WWW, A general purpose language that extended beyond the browser with Node.js and other server side approaches</li>
+<li>TensorFlow.js makes machine learning and deep learning possible in Node.js and in the browser, It is adopted by other open source libraries including brain.js and machinelearn.js</li>
+<li>R-js makes linear algebra possible in Typescript</li>
+</ul>
+</li>
+<li>Julia<ul>
+<li>Designed at MIT for high-performance numerical analysis and computational science</li>
+<li>Same speedy development like Python or R while producing programs that run as fast as C or Fortran programs would</li>
+<li>It’s compiled, calls C, Go, Java, MATLAB, R, Fortran and Python libraries and has refined parallelism</li>
+<li>A young language with a lot of promise in the data science industry</li>
+<li>JuliaDB is a particularly useful application of Julia for data science. It’s a package for working with large persistent data sets.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Data-Science-Tools"><a href="#Data-Science-Tools" class="headerlink" title="Data Science Tools"></a>Data Science Tools</h3><ul>
+<li>Data Management tools: persisting and retrieving data<ul>
+<li>Open Source: MySQL, PostgreSQL, MongoDB, Apache CouchDB, Apache Cassandra, Hadoop File System, Ceph(Cloud File systems), Elasticsearch</li>
+<li>Commercial: Oracle Database, Microsoft SQL Server, IBM Db2</li>
+<li>SaaS(cloud based): Amazon DynamoDB, Cloudant(based on CouchDB), Db2</li>
+</ul>
+</li>
+<li>Data Integration and Transformation tools: ETL(extract, transform, load)<ul>
+<li>Open Source: Apache AirFlow, KubeFlow, Apache Kafka, Apache Nifi, Apache SparkSQL, NodeRED</li>
+<li>Commercial: Informatica, IBM InfoSphere DataStage, Talend</li>
+<li>Cloud Based(ELT): Informatica, IBM Data Refinery</li>
+</ul>
+</li>
+<li>Data Visualization tools<ul>
+<li>Open Source: Hue, Kibana, Apache Superset</li>
+<li>Commercial: Tableau, Microsoft Power BI, IBM Cognos Analytics</li>
+<li>Cloud Based: Datameer, IBM Cognos Analytics</li>
+</ul>
+</li>
+<li>Model Building: creating a machine learning or deep learning model using an appropriate algorithm<ul>
+<li>Commercial: SPSS Modeler, SAS Enterprise Miner</li>
+<li>Cloud Based: IBM Watson Machine Learning, Google Cloud</li>
+</ul>
+</li>
+<li>Model Deployment tools: make machine learning or deep learning model consumable<ul>
+<li>Open Source: Apache PredictionIO, Seldon, Mleap, TensorFlow Service, TensorFlow lite</li>
+<li>Commercial: SPSS Collaboration and Deployment Service</li>
+</ul>
+</li>
+<li>Model Monitoring and Assessment tools: keep track of prediction performance<ul>
+<li>Open Source: ModelDB, Prometheus, IBM AI Fairness 360 open source toolkit, IBM Adversarial Robustness 360 Toolbox, IBM AI Explainability 360 Toolkit</li>
+<li>Cloud Based: Amazon SageMaker Model Monitor, Watson OpenScale</li>
+</ul>
+</li>
+<li>Code Asset Management tools: versioning and other collaborative features to facilitate teamwork<ul>
+<li>Open Source: git, Github, GitLab, Bitbucket</li>
+</ul>
+</li>
+<li>Data Asset Management tools: supports replication, backup, and access right management<ul>
+<li>Open Source: Apache Atlas, ODPi Egeria, Kylo</li>
+<li>Commercial: Informatica, IBM InfoSphere Information Governance</li>
+</ul>
+</li>
+<li>Development Environments (IDE): help data scientistd to implement, execute, test and deploy their work<ul>
+<li>Open Source: Jupyter notebook, Jupyter lab, Apache Zeppelin, R Studio, Spyder</li>
+</ul>
+</li>
+<li>Execution Environments: where data processing, model training and deployment take place<ul>
+<li>Open Source: Apache Spark, Apache Flink, Ray</li>
+</ul>
+</li>
+<li>Fully Integrated Visual Tools<ul>
+<li>Open Source: KNIME, Orange</li>
+<li>Cloud Based: Watson Studio, Open Scale, Azure Machine Learning, H2O Driverless AI</li>
+</ul>
+</li>
+</ul>
+<h3 id="Packages-APIs-Data-Sets-and-Models"><a href="#Packages-APIs-Data-Sets-and-Models" class="headerlink" title="Packages, APIs, Data Sets and Models"></a>Packages, APIs, Data Sets and Models</h3><ul>
+<li>Libraries for Data Science<ul>
+<li>Scientifics Computing Libraries: Pandas, NumPy</li>
+<li>Visualization Libraries: Matplotlib, Seaborn</li>
+<li>Machine Learning and Deep Learning: Scikit-learn, Keras</li>
+<li>Deep Learning Libraries: TensorFlow, PyTorch</li>
+<li>Apache Spark</li>
+<li>Scala-Libraries: Vegas(statistical data visualization), BigDL</li>
+<li>R-Libraries: Ggplot2</li>
+</ul>
+</li>
+<li>Application Programming Interfaces (API)<ul>
+<li>REST APIs (Representational, State, Transfer): used to interact with web services</li>
+<li>REST APIs have a set of rules regarding communication, input or request, output or response</li>
+</ul>
+</li>
+<li>Data Sets<ul>
+<li>A data set is a structured collection of data</li>
+<li>Tabular data: CSV (comma separated values)</li>
+<li>Hierarchical data, Network data</li>
+<li>Raw files: images and audio</li>
+</ul>
+</li>
+<li>Data Ownership<ul>
+<li>Private data: Confidential, Private or personal information, Commercially sensitive</li>
+<li>Open data: Scientific institutions, Governments, Organizations, Companies, Publicly available</li>
+<li>Kaggle, datacatalogs.org, Google data set search</li>
+<li>CDLA: Community Data License Agreement</li>
+</ul>
+</li>
+<li>Data Asset eXchange<ul>
+<li>Curated collection of data sets</li>
+<li>Data Science friendly licences</li>
+</ul>
+</li>
+<li>Machine Learning Models<ul>
+<li>Data can contain a wealth of information, Machine learning (ML) models identify patterns in data </li>
+<li>A model must be trained on data before it can be used to make predictions </li>
+<li>Supervised, unsupervised and reinforcement learning are types of ML</li>
+<li>Supervised Learning: Data is labeled and model trained to make correct predictions <ul>
+<li>Regression: Predict real numerical values </li>
+<li>Classification: Classify things into categories </li>
+</ul>
+</li>
+<li>Unsupervised Learning: Data us not labeled, model tries to identify patterns without external help<ul>
+<li>Common learning problems: clustering and anomaly detection </li>
+</ul>
+</li>
+<li>Reinforcement Learning: Conceptually similar to human learning processes</li>
+<li>Deep Learning: Tries to loosely emulate how the human brain works<ul>
+<li>Applications in: Natural Language Processing, Image, audio and video analysis, Time series forecasting</li>
+<li>Requires typically very large datasets of labeled data and is compute intensive</li>
+<li>TensorFlow, Pytorch, Keras, ONNX model zoo</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The Model Asset Exchange<ul>
+<li>MAX use pre-trained or custom-trainable state-of-the-art models reduces time to value</li>
+<li>Model-serving microservices expose standardized REST API</li>
+</ul>
+</li>
+</ul>
+<h3 id="Jupyter-Notebook-and-JupyterLab"><a href="#Jupyter-Notebook-and-JupyterLab" class="headerlink" title="Jupyter Notebook and JupyterLab"></a>Jupyter Notebook and JupyterLab</h3><ul>
+<li>Jupyter Notebook is a tool for recording Data Science experiments, it allows data scientist to combine text and code block in a single file, it generates plots and tables within the file</li>
+<li>JupyterLab is an interactive environment for Jupyter Notebooks, it allows for real time editing and is compatible with several file formats. It is open source</li>
+<li>A notebook kernel is a computational engine that executes the code contained in a Notebook file</li>
+<li>Jupyter implements a two-process model, with a kernel and a client<ul>
+<li>The client is the interface offering the user the ability to send the code to a kernel. The client is the browser when using a Jupyter notebook.</li>
+<li>The kernel executes the code and returns the result to the client for display</li>
+</ul>
+</li>
+</ul>
+<h3 id="RStudio-IDE"><a href="#RStudio-IDE" class="headerlink" title="RStudio IDE"></a>RStudio IDE</h3><ul>
+<li><p>R is a statistical programming language. It is a powerful tool for data processing and manipulation, statistical inference, data analysis, and Machine Learning algorithms.</p>
+</li>
+<li><p>R supports importing data from different sources: Flat files, Databases, Web, Statistical software</p>
+</li>
+<li><p>Rstudio is an integrated development environment that helps improve and increase productivity with the R language</p>
+<pre><code class="R">library (datasets)
+data(iris)
+View(iris) 
+unique(iris$Species)</code></pre>
+</li>
+<li><p>Popular R Libraries for Data Science</p>
 <ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
+<li><code>dplyr</code> : Data Manipulation</li>
+<li><code>stringr</code> : String Manipulation </li>
+<li><code>ggplot</code> : Data Visualization </li>
+<li><code>caret</code> : Machine Learning</li>
+<li><code>install.packages(&quot;package name&quot;, repos = &quot;https://cran.r-project.org&quot;, type= &quot;source&quot;)</code> : install packages </li>
 </ul>
 </li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
-</li>
-</ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
+<li><p>Data Visualization in R</p>
 <ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<li><code>ggplot</code> - used for data visualizations such as histograms, bar charts, scatterplots etc. It allows adding layers and components on a single visualization</li>
+<li><code>Plotly</code> - an R package can be used to create web-based data visualizations that can be displayed or saved as individual HTML files</li>
+<li><code>Lattice</code> - a data visualization tool that is used to implement complex, multi-variable data sets, a high-level data visualization library; it can handle many of the typical graphics without needing many customizations</li>
+<li><code>Leaflet</code> - very useful in creating interactive plots</li>
 </ul>
 </li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
+<li><p>Using the plot function</p>
+<pre><code class="R"># Define the cars vector with 5 values
+cars &lt;- c(1,4,6,5,10)
+# Gragh the cars vector with all defaults
+plot(caars, type=&quot;o&quot;)
+# Create a title
+title(main=&quot;Cars vs Index&quot;)</code></pre>
+</li>
+<li><p>Using ggplot</p>
+<pre><code class="R">library(datasets)
+# Load Data
+data(mtcars)
+# View first 5 rows
+head(mtcars, 5)
+#load ggplot package
+library(ggplot2)
+# create a scatterplot of displacement (disp) and miles per gallon (mpg)
+ggplot(aes(x=disp,y=mpg,),data=mtcars)+geom_point()
+# Add a title
+ggplot(aes(x=disp,y=mpg,),data=mtcars)+geom_point()+ggtitle(&quot;displacement vs miles per gallon&quot;)
+# change axis name
+ggplot(aes(x=disp,y=mpg,),data=mtcars)+geom_point()+ggtitle(&quot;displacement vs miles per gallon&quot;) + labs(x = &quot;Displacement&quot;, y = &quot;Miles per Gallon&quot;)
+#make vs a factor
+mtcars$vs &lt;- as.factor(mtcars$vs)
+# create boxplot of the distribution for v-shaped and straight Engine
+ggplot(aes(x=vs, y=mpg), data = mtcars) + geom_boxplot()
+# Add color to the boxplots to help differentiate
+ggplot(aes(x=vs, y=mpg, fill = vs), data = mtcars) + 
+  geom_boxplot(alpha=0.3) +
+  theme(legend.position=&quot;none&quot;)
+# reate the histogram of weight wt
+ggplot(aes(x=wt),data=mtcars) + geom_histogram(binwidth=0.5)
+# GGally is an extension of ggplot2
+library(GGally)
+ggpairs(iris, mapping=ggplot2::aes(colour = Species))</code></pre>
+</li>
+</ul>
+<h3 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h3><ul>
+<li><p>A version control system allows you to keep track of changes to your documents</p>
+</li>
+<li><p>Git is free and open source software distributed under the GNU General Public License</p>
+</li>
+<li><p>Git is a distributed version control system and is accessible anywhere in the world</p>
+</li>
+<li><p>SSH protocol is a method for secure remote login from one computer to another</p>
+</li>
+<li><p>Repository contains project folders that are set up for version control</p>
+</li>
+<li><p>Fork is a copy of a repository</p>
+</li>
+<li><p>Pull request is the way you request that someone reviews and approves your changes before they become final</p>
+</li>
+<li><p>Working directory contains the files and subdirectories on your computer that are associated with a Git repository</p>
+</li>
+<li><p>Basic Git Commands</p>
+<pre><code class="bash">git init
+git add *
+git status
+git commit
+git reset
+git log
+git branch
+git checkout
+git merge</code></pre>
+</li>
+<li><p>Working with Branches</p>
 <ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<li>A branch is a snapshot of your repository to which you can make changes</li>
+<li>Master Branch is the official version of the project, The child branch creates a copy of the master branch</li>
+<li>Edits and changes are made in the child branch. Tests are done to ensure quality before merging to the Master Branch</li>
+<li>Branches allow for simultaneous development and testing by multiple team members </li>
 </ul>
 </li>
-</ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
-</li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
+<li><p>Pull Requests (PR) are a way of proposing changes to the main branch. Ideally, another team member reviews the changes and approves it to be merged to the Master branch</p>
 </li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
-</li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
-</li>
+<h3 id="IBM-Tools-for-Data-Science"><a href="#IBM-Tools-for-Data-Science" class="headerlink" title="IBM Tools for Data Science"></a>IBM Tools for Data Science</h3><ul>
+<li>Watson Studio is an integrated platform of tools, services, and data that helps companies accelerate their shift to become data-driven organizations</li>
+<li>Watson Knowledge Catalog unites all information assets into a single metadata-rich catalog, based on Watson’s understanding of relationships between assets and how they’re being used and socialized among users in existing projects<ul>
+<li>Main features: Find data, Catalog data, Govern data, Understand data, Power data Science, Prepare data, Connect data, Deploy anywhere</li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+</li>
+<li>Data refinery simplifies data cleansing, shaping and preparation tasks by providing graphical tools for analyzing and preparing data</li>
+<li>SPSS based products include easy to use graphical interfaces for wide varieties of statistical and machine learning algorithms and data transformations<ul>
+<li>SPSS Modeler flows include some data management capabilities, as well as tools for data preparation, visualization, and model building</li>
+<li>SPSS Modeler is a data mining and text analytics software application used to build predictive models and conduct other analytics tasks. It has a visual interface that enables users to leverage statistical and data mining algorithms without programming</li>
+<li>SPSS Statistics is a statistical and machine learning software application and is widely used in academia, government agencies, and large enterprises used to build predictive models, perform statistical analysis of data, and conduct other analytic tasks. It has a visual interface, which enables users to leverage statistical and data mining algorithms without programming, although the interface is very different from Modeler</li>
+</ul>
+</li>
+<li>Model Deployment with Watson Machine Learning<ul>
+<li>Open standards for model deployment: PMML(Predictive Model Markup Language), PFA(Portable Format for Analytics from DMG)</li>
+<li>ONNX: Open Neural Network eXchange</li>
+</ul>
+</li>
+<li>Auto AI help simplify an AI lifecycle management, it provides a graphical interface to create and deploy machine learning models with real time visualizations</li>
+<li>IBM Watson Openscale is a product that includes several important features<ul>
+<li>Fairness, Explainability, Model Monitoring, Business Impact</li>
+</ul>
+</li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -695,7 +897,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/R-Language/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>R Language</p></a></div>
 
 
         
@@ -708,8 +910,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Tools-for-Data-Science/&title=Tools for Data Science - Bezhuang's Blog&summary=
+In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, RStudio IDE, Git, GitHub, and Watson Studio, what each tool is used for, what programming languages they can execute, their features and limitations. With the tools hosted in the cloud on Skills Network Labs, I can now run simple code in Python, R or Scala. The following are the notes I took during this course.
 "
           
           >
@@ -722,8 +924,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Tools-for-Data-Science/&title=Tools for Data Science - Bezhuang's Blog&summary=
+In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, RStudio IDE, Git, GitHub, and Watson Studio, what each tool is used for, what programming languages they can execute, their features and limitations. With the tools hosted in the cloud on Skills Network Labs, I can now run simple code in Python, R or Scala. The following are the notes I took during this course.
 "
           
           >
@@ -736,8 +938,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Tools-for-Data-Science/&title=Tools for Data Science - Bezhuang's Blog&summary=
+In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, RStudio IDE, Git, GitHub, and Watson Studio, what each tool is used for, what programming languages they can execute, their features and limitations. With the tools hosted in the cloud on Skills Network Labs, I can now run simple code in Python, R or Scala. The following are the notes I took during this course.
 "
           
           >
@@ -752,7 +954,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADAElEQVR42u3aSXKEQAwEQP7/afsDJkYbGA3ZtzG4l+RSIfXxY/w5DgRgwIABAwbMGpijOE4nPnl+DI2r1gEDBgwYMGDA7IUJB6AgTHbjZ/NnP0T3PGDAgAEDBgyYvTDVjWcDWPYg1eCXfh8MGDBgwIAB83qYavDLFqKi84ABAwYMGDBgwGTf7wa3duEJDBgwYMCAAfMamOrC0SDWDWjdhuBtnUgwYMCAAQMGzG0w2RGF+q/f5fOAAQMGDBgwYNbAdEd249kAWC1Ylc8DBgwYMGDAgFkDUw1I0QLRVFDMFrqqwGDAgAEDBgyYPTBTDa8q3FSBaewDgQEDBgwYMGDWwGQv5EQPmIWuFqKqwfEUEAwYMGDAgAGzDqba4KoecCqgdf8PDBgwYMCAAbMfpltQmmqMTTfwos/BgAEDBgwYMN8Dky0cdQtN2ULWdOMNDBgwYMCAAbMXZmpDUwWpaqGpHSDBgAEDBgwYMGtgogWgqYBVbcxdHfzAgAEDBgwYMPtgqg23qcLS1EWl6rzjnUgwYMCAAQMGzG0w2UD16f3q8+z66QtB0Q8IBgwYMGDAgFkDUw102UJStABWLWxV4cOFKjBgwIABAwbM42CmGm5TB86uV23Yna4DBgwYMGDAgPkamOmGV3bedmDL7g8MGDBgwIABswYmGuSqQaraYKvuq/t3MGDAgAEDBsw+mOmG23Twiz7P7u/2TiQYMGDAgAED5t9guoWrqy78VIPnWMADAwYMGDBgwDwGJjxRE7a7XvUCU7jhBgYMGDBgwIB5LEx3ZDfUbcBNBdCPAQ8MGDBgwIAB83iYozi6UN0LSVOB8GPDDQwYMGDAgAHzeJhsoIs2tLINsOoHm9ovGDBgwIABA2YvTDVAdRthVxW2ovsDAwYMGDBgwLwXJguVPXC1kZYGAwMGDBgwYMC8DqYK2G3AZZ9/nB8MGDBgwIABsxYmWyiaAp6+eFRu0IEBAwYMGDBg1sGMN66aBawpuOiHBAMGDBgwYMDsgzHAgAEDBgwYMMvGLy4R5vDjS5bfAAAAAElFTkSuQmCC">
           </div>
         </div>
       
@@ -760,7 +962,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Tools-for-Data-Science/&text=Tools for Data Science - Bezhuang's Blog"
           
           >
           
@@ -786,11 +988,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/IDEA%E9%85%8D%E7%BD%AE/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>IntelliJ IDEA 的配置与使用总结</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+IntelliJ IDEA 被公认为是最好的 Java 开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE 支持、Ant、JUnit、CVS 整合、代码审查、创新的GUI 设计等方...</p>
+        </a>
+      
+      
+        <a class='next' href='/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAJupyter%20Notebook/'>
+          <p class='title'>云上搭建基于 Anaconda 的 Jupyter 数据科学环境<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+Jupyter Notebook是基于浏览器网页的用于交互计算的应用程序，支持Python、R、Julia和Scala等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab是基于...</p>
         </a>
       
     </div>
@@ -833,7 +1041,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Languages-of-Data-Science"><span class="toc-text">Languages of Data Science</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Science-Tools"><span class="toc-text">Data Science Tools</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Packages-APIs-Data-Sets-and-Models"><span class="toc-text">Packages, APIs, Data Sets and Models</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Jupyter-Notebook-and-JupyterLab"><span class="toc-text">Jupyter Notebook and JupyterLab</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RStudio-IDE"><span class="toc-text">RStudio IDE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Github"><span class="toc-text">Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IBM-Tools-for-Data-Science"><span class="toc-text">IBM Tools for Data Science</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +1060,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="Tools for Data Science";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

@@ -22,14 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
+  <title>HTML/CSS 基础知识总结 - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="云服务器,MacOS">
+    <meta name="keywords" content="HTML/CSS">
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+对于前端开发来说，最基本的知识肯定是HTML, CSS, JavaScript三剑客了。前端技术更新快，因此对于文档的阅读和实际操练十分重要，基础阶段一定要打好，才能向更高峰攀登。本篇笔记是对一些我认为的 HTML5 和 CSS3 相关常用知识的总结。至于想看最全和最权威文档的朋友还是移步MDN web doc...">
   
 
   <!-- feed -->
@@ -459,7 +459,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        HTML/CSS 基础知识总结
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +468,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E4%B8%8E%E5%BC%80%E5%8F%91/">编程与开发</a>
     </a>
   </div>
 
@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2020年9月10日</p>
   </a>
 </div>
 
@@ -490,13 +490,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：3.3k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：13分钟</p>
     </a>
   </div>
 
@@ -511,126 +511,575 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>对于前端开发来说，最基本的知识肯定是<code>HTML</code>, <code>CSS</code>, <code>JavaScript</code>三剑客了。前端技术更新快，因此对于文档的阅读和<a target="_blank" rel="noopener" href="https://learn.freecodecamp.one/">实际操练</a>十分重要，基础阶段一定要打好，才能向更高峰攀登。本篇笔记是对一些我认为的 HTML5 和 CSS3 相关常用知识的总结。至于想看最全和最权威文档的朋友还是移步<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/">MDN web docs</a>吧。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
+<h3 id="HTML简介"><a href="#HTML简介" class="headerlink" title="HTML简介"></a>HTML简介</h3><ul>
+<li>HTML 指的是超文本标记语言 (<strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage)</li>
+<li>HTML 不是一种编程语言，而是一种标记语言 (markup language)，标记语言是一套标记标签 (markup tag)，HTML 使用标记标签来描述网页。</li>
+</ul>
+<h3 id="HTML基础"><a href="#HTML基础" class="headerlink" title="HTML基础"></a>HTML基础</h3><ul>
+<li><p><code>&lt;!DOCTYPE html&gt;</code> 声明为 HTML5 文档</p>
 </li>
-<li><p>应用程序安装信息</p>
+<li><p><code>&lt;html&gt;&lt;/html&gt;</code> 之间的文本描述网页，<code>&lt;main&gt;&lt;/main&gt;</code> 元素让搜索引擎和开发者瞬间就能找到网页的主要内容。</p>
+</li>
+<li><p><code>&lt;body&gt;&lt;/body&gt;</code> 之间的文本是可见的页面内容</p>
+</li>
+<li><p><code>&lt;h1&gt;&lt;/h1&gt;</code> 之间的文本被显示为标题，<code>&lt;p&gt;&lt;/p&gt;</code> 之间的文本被显示为段落</p>
+</li>
+<li><p><code>&lt;a href=&quot;url&quot;&gt;text&lt;/a&gt;</code> 定义HTML链接</p>
+</li>
+<li><p><code>&lt;img src=&quot;url&quot; alt=&quot;替换文本&quot;&gt;</code>添加图片，<code>&lt;map&gt;</code> /<code>&lt;area&gt;</code> 定义地图和可点击部分</p>
+</li>
+<li><p><code>&lt;br&gt;&lt;/br&gt;</code> 表示空元素，<code>&amp;nbsp;</code> 表示空格占位符，<code>&amp;lt;</code> 表示小于号</p>
+</li>
+<li><p><code>&lt;head&gt;&lt;/head&gt;</code>包含了文档的元（meta）数据，如<code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> 定义网页编码格式为 <code>utf-8</code>；<code>&lt;title&gt;&lt;/title&gt;</code>描述了文档的标题；<code>&lt;base&gt;</code>标签为页面上的所有链接规定默认地址或目标；<code>&lt;link&gt;</code> 标签定义文档与外部资源之间的关系</p>
+</li>
+<li><p><code>lorem ipsum text</code>是占位符。<code>&lt;!--more--&gt;</code>是注释，<code>&lt;!--[if IE 8]&gt;&lt;![endif]--&gt;</code>条件注释只有IE8执行</p>
+</li>
+<li><p><code>id</code> 或 <code>name</code> 属性规定元素唯一id：<code>&lt;a name=&quot;label&quot;&gt;文本&lt;/a&gt;</code>，<code>href</code> 属性值为井号<code>#</code>加上想跳转区域对应的<code>id</code>属性值创建内部跳转</p>
+</li>
+<li><p><code>target=&quot;_blank&quot;</code> 属性在空白页打开标签</p>
+</li>
+<li><p><code>class</code> 属性规定元素类名，<code>style</code> 属性规定元素行内样式</p>
+</li>
+<li><p><code>&lt;hr /&gt;</code> 标签在 HTML 页面中创建水平线，<code>&lt;br /</code> 标签在不产生新段落的情况下换行</p>
+</li>
+<li><p><code>&lt;b&gt;&lt;/b&gt;</code> 定义粗体文本，<code>&lt;em&gt;&lt;/em&gt;</code> 定义着重文字</p>
+</li>
+<li><p><code>&lt;code&gt;&lt;/code&gt;</code> 定义计算机代码，<code>&lt;kbd&gt;&lt;/kbd&gt;</code> 定义键盘文本，<code>&lt;pre&gt;&lt;/pre&gt;</code> 定义预格式文本，<code>&lt;var&gt;&lt;/var&gt;</code> 定义变量</p>
+</li>
+<li><p><code>&lt;q&gt;&lt;/q&gt;</code> 定义短引用，<code>&lt;blockquote cite=&quot;/link&quot;&gt;&lt;/blockquote&gt;</code> 定义长引用，<code>&lt;dfn abbr title=&quot;&quot;&gt;&lt;/dfn&gt;</code> 定义项目定义</p>
+</li>
+<li><p><code>&lt;bdo dir=&quot;rtl&quot;&gt;&lt;/bdo&gt;</code> 定义文本方向</p>
+</li>
+<li><p><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt;</code> 放在在<code>&lt;head&gt;&lt;/head&gt;</code> 标签中使用外部样式表，也可以通过<code> &lt;style&gt;&lt;/style&gt;</code> 标签定义内部样式表。</p>
+</li>
+<li><p><code>&lt;table border=&#39;1&#39;&gt;&lt;/table&gt;</code> 定义表格，其中<code>&lt;tr&gt;&lt;/tr&gt;</code> 定义行，再其中<code>&lt;td&gt;&lt;/td&gt;</code> 定义行中每个单元格，<code>&lt;th&gt;&lt;/th&gt;</code> 放在<code>&lt;tr&gt;&lt;/tr&gt;</code> 下表示表头</p>
+</li>
+<li><p><code>&lt;ol&gt;&lt;/ol&gt;</code> 定义有序列表，<code> &lt;ul&gt;&lt;/ul&gt;</code> 定义无序列表，<code>&lt;li&gt;&lt;/li&gt;</code> 定义列表项，<code>&lt;dl&gt;&lt;/dl&gt;</code> 定义定义列表，<code>&lt;dt&gt;&lt;/dt&gt;</code> 定义定义项目， <code>&lt;dd&gt;&lt;/dd&gt;</code> 定义定义的描述。</p>
+</li>
+<li><p><code>&lt;div&gt;&lt;/div&gt;</code> 定义文档中的分区或节(division/section)。 <code>&lt;span&gt;&lt;/span&gt;</code> 定义span,用来组合文档中行内的元素</p>
+</li>
+<li><p><code>&lt;frameset cols=&quot;25%,75%&quot;&gt;&lt;/frameset&gt;</code> 定义HTML框架，<code>&lt;iframe src=&quot;URL&quot;&gt;&lt;/iframe&gt;</code>定义内连标签</p>
+</li>
+<li><p><code>&lt;body&gt;&lt;/body&gt;</code> 拥有两个配置背景的标签，<code>Bgcolor</code>颜色或者<code>Background</code>图像</p>
+</li>
+<li><p><code>&lt;script type=&quot;&quot;&gt;&lt;/script</code> 标签用于定义客户端脚本，也可通过<code>src</code> 属性指向外部脚本文件，比如 JavaScript</p>
+</li>
+<li><p><code>&lt;noscript&gt;&lt;/noscript&gt;</code> 标签提供无法使用脚本时的替代内容</p>
+</li>
+<li><p>颜色由红色、绿色、蓝色混合而成，每种颜色的最小值是0（十六进制：#00），最大值是255（十六进制：#FF），如黑色<code>#000000</code></p>
+</li>
+<li><p>从 Web 诞生早期至今，已经发展出多个 HTML 版本：</p>
+<table>
+<thead>
+<tr>
+<th align="left">版本</th>
+<th align="left">年份</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">HTML</td>
+<td align="left">1991</td>
+</tr>
+<tr>
+<td align="left">HTML+</td>
+<td align="left">1993</td>
+</tr>
+<tr>
+<td align="left">HTML 2.0</td>
+<td align="left">1995</td>
+</tr>
+<tr>
+<td align="left">HTML 3.2</td>
+<td align="left">1997</td>
+</tr>
+<tr>
+<td align="left">HTML 4.01</td>
+<td align="left">1999</td>
+</tr>
+<tr>
+<td align="left">XHTML 1.0</td>
+<td align="left">2000</td>
+</tr>
+<tr>
+<td align="left">HTML5</td>
+<td align="left">2012</td>
+</tr>
+<tr>
+<td align="left">XHTML5</td>
+<td align="left">2013</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="XHTML"><a href="#XHTML" class="headerlink" title="XHTML"></a>XHTML</h3><ul>
+<li><p>XHTML 指的是可扩展超文本标记语言，是以 XML 应用的方式定义的 HTML，是更严格更纯净的 HTML 版本</p>
+</li>
+<li><p>XHTML文档结构</p>
 <ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
+<li><code>XHTML DOCTYPE</code> 是强制性的</li>
+<li><code>&lt;html&gt;&lt;/html&gt;</code> 中的 <code>XML namespace</code> 属性是强制性的</li>
+<li><code>&lt;html&gt;&lt;/html&gt;</code>、<code>&lt;head&gt;&lt;/head&gt;</code>、<code>&lt;title&gt;&lt;/title&gt;</code> 以及 <code>&lt;body&gt;&lt;/body&gt; </code>也是强制性的</li>
 </ul>
 </li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
-</li>
-</ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
+<li><p>XHTML元素语法</p>
 <ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<li>XHTML 元素必须正确嵌套</li>
+<li>XHTML 元素必须始终关闭，包括空元素</li>
+<li>XHTML 元素必须小写</li>
+<li>XHTML 文档必须有一个根元素</li>
 </ul>
 </li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
+<li><p>XHTML属性语法</p>
 <ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<li>XHTML 属性必须使用小写</li>
+<li>XHTML 属性值必须用引号包围</li>
+<li>XHTML 属性最小化也是禁止的</li>
 </ul>
 </li>
-</ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
-</li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
+<li><p>从 HTML 转换到 XHTML</p>
+<ol>
+<li>向每张页面的第一行添加 XHTML &lt;!DOCTYPE&gt;</li>
+<li>向每张页面的 html 元素添加 <code>xmlns</code> 属性</li>
+<li>把所有元素名改为小写</li>
+<li>关闭所有空元素</li>
+<li>把所有属性名改为小写</li>
+<li>为所有属性值加引号</li>
+</ol>
 </li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
+<h3 id="HTML表单"><a href="#HTML表单" class="headerlink" title="HTML表单"></a>HTML表单</h3><ul>
+<li><code>&lt;form&gt;&lt;/form&gt;</code> 元素定义 HTML 表单搜集输入</li>
+<li><code>&lt;input type=&#39;text&#39; name=&quot;描述字&quot; value=&quot;占位字&quot;&gt;</code>  是最重要的表单元素</li>
+<li><code>&lt;input type=&quot;radio&quot;&gt; </code>定义单选按钮，<code>checkbox</code> 定义复选框，<code>submit</code> 定义提交</li>
+<li><code>action</code> 属性定义在提交表单时执行的动作，默认刷新页面</li>
+<li><code>method</code> 属性规定在提交表单时所用的 HTTP 方法（GET 或 POST）</li>
+<li><code>&lt;fieldset&gt;&lt;/fieldset&gt;</code> 元素组合表单中的相关数据，<code>&lt;legend&gt;&lt;/legend&gt;</code> 元素为其定义标题</li>
+<li><code>&lt;select&gt;&lt;/select&gt;</code> 元素定义下拉列表，<code>&lt;option&gt;&lt;/option&gt;</code> 元素定义待选择的选项（ <code>selected</code> 属性定义预定义选项）</li>
+<li><code>&lt;textarea&gt;&lt;/textarea&gt;</code> 元素定义多行输入字段（文本域），<code>&lt;button&gt;&lt;/button&gt;</code> 元素定义可点击的按钮</li>
+<li><code>&lt;datalist&gt;&lt;/datalist&gt;</code> 元素为 <code>&lt;input&gt;&lt;/input&gt;</code> 元素规定预定义选项列表</li>
+<li>value 属性规定输入字段的初始值，readonly 属性规定输入字段为只读，size 属性规定输入字段的尺寸，maxlength 属性规定输入字段允许的最大长度，autocomplete 属性规定表单或输入字段是否应该自动完成，novalidate 属性规定在提交表单时不对表单数据进行验证。。。。。。</li>
+</ul>
+<h3 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h3><ul>
+<li><p>HTML5 是最新的 HTML 标准，是专门为承载丰富的 web 内容而设计的，并且无需额外插件，拥有新的语义、图形以及多媒体元素，提供的新元素和新的 API 简化了 web 应用程序的搭建，是跨平台的，被设计为在不同类型的硬件（PC、平板、手机、电视机等等）之上运行。</p>
 </li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
+<li><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/html/html5_browsers.asp">帮助老版本浏览器处理 HTML5</a></p>
+</li>
+<li><p>HTML5 提供的新元素：</p>
+<table>
+<thead>
+<tr>
+<th align="left">标签</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&lt;article&gt;</code></td>
+<td align="left">定义文档内的文章。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;aside&gt;</code></td>
+<td align="left">定义页面内容之外的内容。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;bdi&gt;</code></td>
+<td align="left">定义与其他文本不同的文本方向。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;details&gt;</code></td>
+<td align="left">定义用户可查看或隐藏的额外细节。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;dialog&gt;</code></td>
+<td align="left">定义对话框或窗口。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;figcaption&gt;</code></td>
+<td align="left">定义 <code>&lt;figure&gt; </code>元素的标题。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;figure&gt;</code></td>
+<td align="left">定义自包含内容，比如图示、图表、照片、代码清单等等。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;footer&gt;</code></td>
+<td align="left">定义文档或节的页脚。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;header&gt;</code></td>
+<td align="left">定义文档或节的页眉。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;main&gt;</code></td>
+<td align="left">定义文档的主内容。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;mark&gt;</code></td>
+<td align="left">定义重要或强调的内容。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;menuitem&gt;</code></td>
+<td align="left">定义用户能够从弹出菜单调用的命令/菜单项目。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;meter&gt;</code></td>
+<td align="left">定义已知范围（尺度）内的标量测量。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;nav&gt;</code></td>
+<td align="left">定义文档内的导航链接。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;progress&gt;</code></td>
+<td align="left">定义任务进度。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;rp&gt;</code></td>
+<td align="left">定义在不支持 ruby 注释的浏览器中显示什么。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;rt&gt;</code></td>
+<td align="left">定义关于字符的解释/发音（用于东亚字体）。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;ruby&gt;</code></td>
+<td align="left">定义 ruby 注释（用于东亚字体）。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;section&gt;</code></td>
+<td align="left">定义文档中的节。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;summary&gt;</code></td>
+<td align="left">定义 <code>&lt;details&gt;</code> 元素的可见标题。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;time&gt;</code></td>
+<td align="left">定义日期/时间。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;wbr&gt;</code></td>
+<td align="left">定义可能的折行（line-break）。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;datalist&gt;</code></td>
+<td align="left">定义输入控件的预定义选项。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;keygen&gt;</code></td>
+<td align="left">定义键对生成器字段（用于表单）。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;output&gt;</code></td>
+<td align="left">定义计算结果。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;canvas&gt;</code></td>
+<td align="left">定义使用 JavaScript 的图像绘制。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;svg&gt;</code></td>
+<td align="left">定义使用 SVG 的图像绘制。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;audio&gt;</code></td>
+<td align="left">定义声音或音乐内容。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;embed&gt;</code></td>
+<td align="left">定义外部应用程序的容器（比如插件）。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;source&gt;</code></td>
+<td align="left">定义 <code>&lt;video&gt; </code>和<code>&lt;audio&gt;</code>的来源。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;track&gt;</code></td>
+<td align="left">定义 <code>&lt;video&gt;</code> 和 <code>&lt;audio&gt;</code> 的轨道。</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;video&gt;</code></td>
+<td align="left">定义视频或影片内容。</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>详细内容和用法见：<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tags/index.asp">HTML5参考手册</a></p>
 </li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h3 id="CSS基础"><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h3><ul>
+<li><p>CSS 指层叠样式表 (Cascading <em>S</em>tyle <em>S</em>heets)，样式定义如何显示 HTML 元素，样式通常存储在样式表中</p>
+</li>
+<li><p>外部样式表可以极大提高工作效率，外部样式表通常存储在 CSS 文件中，多个样式定义可层叠为一</p>
+</li>
+<li><p>CSS 规则：<code>selector &#123;property1: value1; property2: value2, value2sub;&#125;</code></p>
+</li>
+<li><p>派生选择器：<code>li strong &#123;font-style: italic;&#125;</code></p>
+</li>
+<li><p>id 选择器以 “#” 来定义：<code>#id-red &#123;color:red;&#125;</code></p>
+</li>
+<li><p>CSS 类选择器：<code>.center &#123;text-align: center&#125;</code>（前提：<code>class=center</code>）</p>
+</li>
+<li><p>CSS 属性选择器：<code>[attribute=value]&#123;&#125;</code></p>
+</li>
+<li><p>CSS 基本样式属性</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">background</td>
+<td align="left">简写属性，作用是将背景属性设置在一个声明中。</td>
+</tr>
+<tr>
+<td align="left">background-attachment</td>
+<td align="left">背景图像是否固定或者随着页面的其余部分滚动。</td>
+</tr>
+<tr>
+<td align="left">background-color</td>
+<td align="left">设置元素的背景颜色。</td>
+</tr>
+<tr>
+<td align="left">background-image</td>
+<td align="left">把图像设置为背景。</td>
+</tr>
+<tr>
+<td align="left">background-position</td>
+<td align="left">设置背景图像的起始位置。</td>
+</tr>
+<tr>
+<td align="left">background-repeat</td>
+<td align="left">设置背景图像是否及如何重复。</td>
+</tr>
+<tr>
+<td align="left">color</td>
+<td align="left">设置文本颜色</td>
+</tr>
+<tr>
+<td align="left">direction</td>
+<td align="left">设置文本方向。</td>
+</tr>
+<tr>
+<td align="left">line-height</td>
+<td align="left">设置行高。</td>
+</tr>
+<tr>
+<td align="left">letter-spacing</td>
+<td align="left">设置字符间距。</td>
+</tr>
+<tr>
+<td align="left">text-align</td>
+<td align="left">对齐元素中的文本。</td>
+</tr>
+<tr>
+<td align="left">text-decoration</td>
+<td align="left">向文本添加修饰。</td>
+</tr>
+<tr>
+<td align="left">text-indent</td>
+<td align="left">缩进元素中文本的首行。</td>
+</tr>
+<tr>
+<td align="left">text-shadow</td>
+<td align="left">设置文本阴影。CSS2 包含该属性，但是 CSS2.1 没有保留该属性。</td>
+</tr>
+<tr>
+<td align="left">text-transform</td>
+<td align="left">控制元素中的字母。</td>
+</tr>
+<tr>
+<td align="left">unicode-bidi</td>
+<td align="left">设置文本方向。</td>
+</tr>
+<tr>
+<td align="left">white-space</td>
+<td align="left">设置元素中空白的处理方式。</td>
+</tr>
+<tr>
+<td align="left">word-spacing</td>
+<td align="left">设置字间距。</td>
+</tr>
+<tr>
+<td align="left">font</td>
+<td align="left">简写属性。作用是把所有针对字体的属性设置在一个声明中。</td>
+</tr>
+<tr>
+<td align="left">font-family</td>
+<td align="left">设置字体系列。</td>
+</tr>
+<tr>
+<td align="left">font-size</td>
+<td align="left">设置字体的尺寸。</td>
+</tr>
+<tr>
+<td align="left">font-size-adjust</td>
+<td align="left">当首选字体不可用时，对替换字体进行智能缩放。（CSS2.1 已删除该属性。）</td>
+</tr>
+<tr>
+<td align="left">font-style</td>
+<td align="left">设置字体风格。</td>
+</tr>
+<tr>
+<td align="left">font-variant</td>
+<td align="left">以小型大写字体或者正常字体显示文本。</td>
+</tr>
+<tr>
+<td align="left">font-weight</td>
+<td align="left">设置字体的粗细。</td>
+</tr>
+<tr>
+<td align="left">list-style</td>
+<td align="left">简写属性。用于把所有用于列表的属性设置于一个声明中。</td>
+</tr>
+<tr>
+<td align="left">list-style-image</td>
+<td align="left">将图象设置为列表项标志。</td>
+</tr>
+<tr>
+<td align="left">list-style-position</td>
+<td align="left">设置列表中列表项标志的位置。</td>
+</tr>
+<tr>
+<td align="left">list-style-type</td>
+<td align="left">设置列表项标志的类型。</td>
+</tr>
+<tr>
+<td align="left">marker-offset</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">border-collapse</td>
+<td align="left">设置是否把表格边框合并为单一的边框。</td>
+</tr>
+<tr>
+<td align="left">border-spacing</td>
+<td align="left">设置分隔单元格边框的距离。</td>
+</tr>
+<tr>
+<td align="left">caption-side</td>
+<td align="left">设置表格标题的位置。</td>
+</tr>
+<tr>
+<td align="left">empty-cells</td>
+<td align="left">设置是否显示表格中的空单元格。</td>
+</tr>
+<tr>
+<td align="left">table-layout</td>
+<td align="left">设置显示单元、行和列的算法。</td>
+</tr>
+<tr>
+<td align="left">outline</td>
+<td align="left">在一个声明中设置所有的轮廓属性。</td>
+</tr>
+<tr>
+<td align="left">outline-color</td>
+<td align="left">设置轮廓的颜色。</td>
+</tr>
+<tr>
+<td align="left">outline-style</td>
+<td align="left">设置轮廓的样式。</td>
+</tr>
+<tr>
+<td align="left">outline-width</td>
+<td align="left">设置轮廓的宽度。</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>CSS链接的四种状态：</p>
+<ul>
+<li><code>a:link &#123;&#125;</code>- 普通的、未被访问的链接</li>
+<li><code>a:visited &#123;&#125;</code>- 用户已访问的链接</li>
+<li><code>a:hover &#123;&#125;</code>- 鼠标指针位于链接的上方</li>
+<li><code>a:active &#123;&#125;</code>- 链接被点击的时刻</li>
+</ul>
+</li>
+<li><p>CSS框模型：element : 元素，padding : 内边距，border : 边框，margin : 外边距</p>
+</li>
+<li><p>CSS定位（position属性）</p>
+<ul>
+<li>static：元素框正常生成</li>
+<li>relative：元素框偏移某个距离</li>
+<li>absolute：元素框从文档流完全删除，并相对于其包含块定位。</li>
+<li>fixed：元素框的表现类似于将 position 设置为 absolute，不过其包含块是视窗本身。</li>
+</ul>
+</li>
+<li><p>CSS浮动定位（float属性）</p>
+</li>
+<li><p>伪类和伪元素</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css/css_mediatypes.asp">@media</a> 规则使你有能力在相同的样式表中，使用不同的样式规则来针对不同的媒介。</p>
+</li>
+<li><p>更多关于 CSS 的信息，请参阅 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/example/csse_examples.asp">CSS 实例</a>、<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/index.asp">CSS 参考手册</a></p>
+</li>
+</ul>
+<h3 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h3><ul>
+<li><p>CSS3 完全向后兼容，浏览器通常支持 CSS2，因此您不必改变现有的设计。</p>
+</li>
+<li><p>选择器</p>
+</li>
+<li><p>框模型</p>
+<ul>
+<li>border-radius</li>
+<li>box-shadow</li>
+<li>border-image</li>
+</ul>
+</li>
+<li><p>背景和边框</p>
+<ul>
+<li>background-size</li>
+<li>background-origin</li>
+</ul>
+</li>
+<li><p>文本效果</p>
+<ul>
+<li>text-shadow</li>
+<li>word-wrap</li>
+</ul>
+</li>
+<li><p>2D/3D 转换</p>
+<ul>
+<li>translate()</li>
+<li>rotate()</li>
+<li>scale()</li>
+<li>skew()</li>
+<li>matrix()</li>
+<li>rotateX()</li>
+<li>rotateY()</li>
+</ul>
+</li>
+<li><p>动画</p>
+<ul>
+<li>transition</li>
+<li>transition-property</li>
+<li>transition-duration</li>
+</ul>
+</li>
+<li><p>transition-timing-function</p>
+<ul>
+<li>animation</li>
+</ul>
+</li>
+<li><p>多列布局</p>
+<ul>
+<li>column-count</li>
+<li>column-gap</li>
+<li>column-rule</li>
+</ul>
+</li>
+<li><p>用户界面</p>
+<ul>
+<li>resize</li>
+<li>box-sizing</li>
+<li>outline-offset</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/index.asp">CSS3参考手册</a></p>
+</li>
 </ul>
 
   
@@ -649,8 +1098,14 @@ cat /root/.ssh/id_rsa.pub</code></pre>
             <ul>
               
                 <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
+                  <a href="https://github.com/kamranahmedse/developer-roadmap" rel="external nofollow noopener noreferrer" target="_blank">
+                  前端学习路线图
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="https://www.w3school.com.cn/h.asp" rel="external nofollow noopener noreferrer" target="_blank">
+                  W3school
                   </a>
                 </li>
               
@@ -695,7 +1150,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML-CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML/CSS</p></a></div>
 
 
         
@@ -708,8 +1163,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/HTML%E5%92%8CCSS%E5%9F%BA%E7%A1%80/&title=HTML/CSS 基础知识总结 - Bezhuang's Blog&summary=
+对于前端开发来说，最基本的知识肯定是HTML, CSS, JavaScript三剑客了。前端技术更新快，因此对于文档的阅读和实际操练十分重要，基础阶段一定要打好，才能向更高峰攀登。本篇笔记是对一些我认为的 HTML5 和 CSS3 相关常用知识的总结。至于想看最全和最权威文档的朋友还是移步MDN web docs吧。
 "
           
           >
@@ -722,8 +1177,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/HTML%E5%92%8CCSS%E5%9F%BA%E7%A1%80/&title=HTML/CSS 基础知识总结 - Bezhuang's Blog&summary=
+对于前端开发来说，最基本的知识肯定是HTML, CSS, JavaScript三剑客了。前端技术更新快，因此对于文档的阅读和实际操练十分重要，基础阶段一定要打好，才能向更高峰攀登。本篇笔记是对一些我认为的 HTML5 和 CSS3 相关常用知识的总结。至于想看最全和最权威文档的朋友还是移步MDN web docs吧。
 "
           
           >
@@ -736,8 +1191,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/HTML%E5%92%8CCSS%E5%9F%BA%E7%A1%80/&title=HTML/CSS 基础知识总结 - Bezhuang's Blog&summary=
+对于前端开发来说，最基本的知识肯定是HTML, CSS, JavaScript三剑客了。前端技术更新快，因此对于文档的阅读和实际操练十分重要，基础阶段一定要打好，才能向更高峰攀登。本篇笔记是对一些我认为的 HTML5 和 CSS3 相关常用知识的总结。至于想看最全和最权威文档的朋友还是移步MDN web docs吧。
 "
           
           >
@@ -752,7 +1207,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADoElEQVR42u3aQY4CMQwEQP7/afa+EsLueAaDKjdWzCSuXHptHk8rWg8E4MCBA2eBA7cE7hGu/8+/+lzdp13Am+fenTeuFxw4cODAgQMHbhlceuAuSPX5Knz1/WP1ggMHDhw4cODALYXrBt5q4Ox+noafqhccOHDgwIEDB+5X4LoB87SReXcABwcOHDhw4MCB+1W4qUFvGqi7FwMOHDhw4MCBA/ercN0A2i18qiFZ3Sc9Pzhw4MCBAwcO3LfApcH1Wz/H9YIDBw4cOHDgwC2BO11pg3IskDb3O64XHDhw4MCBAwduCdy7gHgKlA62p8DTfcv/OYADBw4cOHDgwC2Fmw6oU4Pq7nvHgMGBAwcOHDhw4JbAXRVc0x8GpkCn5yoHe3DgwIEDBw4cuCVw3YZi9wB3/zDwdBANDhw4cODAgQP3rXDdg6aNxbSB+hhacQAHBw4cOHDgwIFbApcG3umg2oWeuujuIBscOHDgwIEDB24rXBpouxDpgDgN2t3B9sv3gQMHDhw4cODALYNLA+90g7P7g78pkPKFggMHDhw4cODALYGbCrTVA51ezGnjtDvgBgcOHDhw4MCB2wpXLeR4w8PAe3fQfvlecODAgQMHDhy4L4GbDqbPw1UdPHfPWb5AcODAgQMHDhy4pXDVDboFpAV2B9RpsC9/Dxw4cODAgQMHbglcGmjbDcChQJoCdP/+8jM4cODAgQMHDtwSuLRxeDpATgN4d/Cdfq/cyAQHDhw4cODAgfsQ3PTBpp5PL+A0QL99Dzhw4MCBAwcO3FK4auPxtIF41fNXNWbBgQMHDhw4cOC+Ba47SE4H0GmQTS/2GBYcOHDgwIEDB24JXPeg3cKrMGmjMR10p/WBAwcOHDhw4MBtg0sbhN2VBtwp4HRfcODAgQMHDhy4bXDdF141gD7d/7YLAAcOHDhw4MCBWwI3HXifQyuFuirAgwMHDhw4cODAbYdLC3wXiLuB+fTCpgfm4MCBAwcOHDhw2+COA2EzCFcLPi2wGqTjAAwOHDhw4MCBA7cE7uqDVN9zOtBOL7JcLzhw4MCBAwcO3FK4auDtNjhPg+30OdJBOjhw4MCBAwcO3K/AtQNk2CCdbrx+PACDAwcOHDhw4MAtgTse9DYbk+n3q+e/LQCDAwcOHDhw4MANwXUbilOD7HSgfNe5wIEDBw4cOHDgtsJNNwarhafB9rQxGtcLDhw4cODAgQO3BM5qBmYE4MCBA2eBA/fZ9QcnD3+mzeiVYQAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -760,7 +1215,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/HTML%E5%92%8CCSS%E5%9F%BA%E7%A1%80/&text=HTML/CSS 基础知识总结 - Bezhuang's Blog"
           
           >
           
@@ -786,11 +1241,20 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/JavaScript%E5%9F%BA%E7%A1%80/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>JavaScript 基础知识总结</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+JavaScript 是一门跨平台、面向对象的脚本语言，它能使网页可交互，可以让你在网页上添加更多功能，另外还有高级的服务端 JavaScript 版本，在web浏览器中，JavaScript...</p>
+        </a>
+      
+      
+        <a class='next' href='/MySQL%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/'>
+          <p class='title'>MySQL 的安装和使用<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+MySQL 是目前应用最广泛的开源关系数据库，在学习完 SQL 语言基础后，需要使用 MySQL 进行学习、开发、测试，部署，本篇笔记是对 MySQL 的安装和使用的记录，可供参考。
+
+下载
+...</p>
         </a>
       
     </div>
@@ -833,7 +1297,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E7%AE%80%E4%BB%8B"><span class="toc-text">HTML简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E5%9F%BA%E7%A1%80"><span class="toc-text">HTML基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XHTML"><span class="toc-text">XHTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E8%A1%A8%E5%8D%95"><span class="toc-text">HTML表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5"><span class="toc-text">HTML5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS%E5%9F%BA%E7%A1%80"><span class="toc-text">CSS基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS3"><span class="toc-text">CSS3</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +1316,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="HTML/CSS 基础知识总结";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

@@ -22,14 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
-  
-    <meta name="keywords" content="云服务器,MacOS">
+  <title>考研政治小抄 - Bezhuang&#39;s Blog</title>
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+“思想政治理论”是研究生招生考试必考科目之一（为什么！┗|｀O′|┛），分为马原、毛中特、史纲、思修和时政5个大类。政治内容众多且杂，如果对基础概念和知识进行具体总结，篇幅非常长，本篇笔记只是以一个“Cheat-sheet”的形式尽可能包含所有考试重点，至于系统的归纳梳理则以肖精讲精练为准。
+">
   
 
   <!-- feed -->
@@ -459,7 +458,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        考研政治小抄
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +467,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/">学习生活</a>
     </a>
   </div>
 
@@ -479,7 +478,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2021年9月1日</p>
   </a>
 </div>
 
@@ -490,13 +489,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：3.7k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：12分钟</p>
     </a>
   </div>
 
@@ -511,152 +510,343 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>“思想政治理论”是研究生招生考试必考科目之一（为什么！┗|｀O′|┛），分为马原、毛中特、史纲、思修和时政5个大类。政治内容众多且杂，如果对基础概念和知识进行具体总结，篇幅非常长，本篇笔记只是以一个“Cheat-sheet”的形式尽可能包含所有考试重点，至于系统的归纳梳理则以肖精讲精练为准。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
-</li>
-<li><p>应用程序安装信息</p>
-<ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
+<h3 id="马克思主义基本原理概论"><a href="#马克思主义基本原理概论" class="headerlink" title="马克思主义基本原理概论"></a>马克思主义基本原理概论</h3><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><ul>
+<li>马克思主义哲学（科学方法）<ul>
+<li>哲学的基本问题哲学的基本问题，不同的哲学流派</li>
+<li>马哲</li>
+<li>唯物论——世界的本源是什么</li>
+<li>辩证法——世界是怎样的</li>
+<li>认识论——如何认知世界</li>
+<li>唯物史观——人类历史发展规律</li>
 </ul>
 </li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
-</li>
-</ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
-<ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<li>马克思主义政治经济学（主体）<ul>
+<li>简单商品经济时期（资本主义以前的商品经济就叫简单经济时期）</li>
+<li>发达商品经济时期</li>
+<li>自由竞争资本主义（考试重点）</li>
+<li>垄断竞争资本主义</li>
 </ul>
 </li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
-<ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<li>科学社会主义理论（目的和归宿）<ul>
+<li>社会主义：从空想到实</li>
+<li>共产主义：社会的终极形态</li>
+</ul>
+</li>
+<li>恩格斯的《反杜林论》把马原分为哲学、政经、科社</li>
+</ul>
+<h4 id="唯物论"><a href="#唯物论" class="headerlink" title="唯物论"></a>唯物论</h4><ul>
+<li>世界的本原<ul>
+<li>主观唯心：世界的本原在我心里（王阳明心学）</li>
+<li>客观唯心：世界的本原是脱离物质世界、不依赖于个人意识而独立存在的精神（佛教中的“缘”、道教中的“道”）</li>
+<li>马克思主义哲学认为世界的本原是一切客观实在</li>
+<li>客观实在：不以人的意志为转移</li>
+</ul>
+</li>
+<li>物质决定意识，物质派生出意识</li>
+</ul>
+<h4 id="辩证法"><a href="#辩证法" class="headerlink" title="辩证法"></a>辩证法</h4><ul>
+<li>物质世界是联系和发展的</li>
+<li>辩证法的两大总特征：联系、发展<ul>
+<li>联系：世界上的万事万物都与其他事物发生某种关联、产生某种联系，这个世界是联系的统一体，不存在完全孤立的事物</li>
+<li>发展：任何事物都有它的过去、现在与将来，要立足于过去，展望将来</li>
+</ul>
+</li>
+<li>事物是一对一对联系的<ul>
+<li>一个事物与另一个事物发生联系，而另一个事物又与另一个事物发生联系，如此循环往复</li>
+<li>世界就是靠一对一对相互交织的联系，构建出一张普遍交织的大网，这就是联系的普遍性</li>
+</ul>
+</li>
+<li>辩证法的三大规律：对立统一、量变质变、否定之否定<ul>
+<li>对立统一：是世间万事万物发展的原因和动力</li>
+<li>量变质变：不断地进行星的积累，最终实现质的突破，不断地积累与突破</li>
+<li>否定之否定：波浪式地上升、螺旋式的前进，是事物发展的方向与归宿</li>
 </ul>
 </li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
+<h4 id="认识论"><a href="#认识论" class="headerlink" title="认识论"></a>认识论</h4><ul>
+<li>认识的本质是人类头脑对外部世界的能动反映</li>
+<li>实践是认识的来源</li>
+<li>没有人类的实践，就不会有人类的认识<ul>
+<li>感性认识（浅显）：外部世界直接作用于感官而形成的认识</li>
+<li>理性认识（深刻）：基于感性素材，对其概括、抽象、提炼、加工、思考，获得理性认识</li>
+</ul>
 </li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
+<li>真理：脑子里面的东西与外部世界相致</li>
+<li>谬误：脑子里面的东西与外部世界不一致</li>
+<li>真理的绝对性与相对性：任何一个真理既是绝对的,又是相对的（从不同角度来看）<ul>
+<li>真理的绝对性（通俗）：我既然是真理，我肯定是对的</li>
+<li>真理的相对性（通俗）：我虽然是对的，但我未来有可能不对</li>
+</ul>
 </li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
+<h4 id="唯物史观"><a href="#唯物史观" class="headerlink" title="唯物史观"></a>唯物史观</h4><ul>
+<li>历史进程中的决定性力量<ul>
+<li>唯心史观:由精神力量所决定</li>
+<li>唯物史观:由物质力量所决定（社会生产劳动及其生产力水平的提高决定历史发展）</li>
+</ul>
 </li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
+<li>历史是什么人创造的<ul>
+<li>唯心史观：历史是由英雄人物创造</li>
+<li>唯物史观：历史是由人民群众创造</li>
+</ul>
+</li>
+<li>历史向前发展是统一性和多样性的统一<ul>
+<li>自然界：不以人的意志为转移的客观规律</li>
+<li>人类社会：历史发展规律（取决定性作用）+ 人的主观能动性（对其选择）</li>
+<li>规律使得人类社会的发展具有统一性，能动使得人类社会的发展具有多样性</li>
+</ul>
 </li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h4 id="马克思主义政治经济学"><a href="#马克思主义政治经济学" class="headerlink" title="马克思主义政治经济学"></a>马克思主义政治经济学</h4><ul>
+<li>商品价值的本质是劳动者通过劳动创造的价值</li>
+<li>商品的价值：隐藏在商品里面、用作交换的、人的劳动</li>
+<li>资本主社会以前：劳动的过程以及劳动的成果都归劳动者本人所有</li>
+<li>资本主义社会以后：劳动的过程以及劳动的成果都归资本家所有</li>
+<li>为什么资本主义社会存在剥削<ul>
+<li>劳动创造价值，其中一部分价值通过工资的形式给了劳动者，多出来的部分（剩余价值）被资本家无偿占有</li>
+</ul>
+</li>
+</ul>
+<h4 id="科学社会主义发展进程"><a href="#科学社会主义发展进程" class="headerlink" title="科学社会主义发展进程"></a>科学社会主义发展进程</h4><ul>
+<li>社会主义的发展进程<ul>
+<li>空想 -&gt; 科学</li>
+<li>理论 -&gt; 实践</li>
+</ul>
+</li>
+<li>共产主义的基本特征<ul>
+<li>物质财富极大丰富（产品）</li>
+<li>精神境界极大提高</li>
+<li>每个人自由而全面的发展</li>
+</ul>
+</li>
+</ul>
+<h3 id="思想道德修养与法律基础"><a href="#思想道德修养与法律基础" class="headerlink" title="思想道德修养与法律基础"></a>思想道德修养与法律基础</h3><h4 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h4><ul>
+<li>思想修养<ul>
+<li>人生观：如何树立正确的人生观</li>
+<li>理想信念：如何树立远大的理想，理想和现实是怎样的关系</li>
+<li>中国精神：什么是中国精神，如何去弘扬中国精神</li>
+<li>社会主义核心价值观：当代中国人的思想标准</li>
+</ul>
+</li>
+<li>道德修养<ul>
+<li>道德的基本问题：概念、本质、特征、功能、历史发展脉络</li>
+<li>两个维度<ul>
+<li>不同时期的道德：古代的道德、近代的道德、今天的道德</li>
+<li>不同领域的道德：社会工作中的道德提倡、职场工作中的道德提倡、自身修养的道德报倡、家庭生活中的道德提倡</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>法律基础：基础常识</li>
+</ul>
+<h4 id="思想修养"><a href="#思想修养" class="headerlink" title="思想修养"></a>思想修养</h4><ul>
+<li>人生价值<ul>
+<li>人生观：指我们对自己的人生的整体看法和整体观点</li>
+<li>人生观属于世界观，世界观包含人生观</li>
+<li>人生目的：在人生观中居于核心地位</li>
+<li>人生目的是人生观的核心，可以决定人生态度和人生价值</li>
+</ul>
+</li>
+<li>理想信念<ul>
+<li>理想通过实践实现现实</li>
+<li>实践是理想变成现实的根本途径</li>
+<li>理想 -&gt; 信念 -&gt; 信仰 -&gt; 科学/非科学的信仰</li>
+<li>信仰一般不会改变,但是不是不能改变</li>
+<li>个人理想服从于社会理想，社会理想为个人理想提供保障</li>
+</ul>
+</li>
+<li>中国精神<ul>
+<li>以爱国主义为核心的民族精神</li>
+<li>以改革创新为核心的时代精神</li>
+</ul>
+</li>
+<li>社会主义核心价值观</li>
+</ul>
+<h4 id="道德修养"><a href="#道德修养" class="headerlink" title="道德修养"></a>道德修养</h4><ul>
+<li>道德是上层建筑，由经济基础决定<ul>
+<li>社会主义国家的经济基础：公有制（集体利益大于个人利益）</li>
+<li>资本主义国家的经济基础：私有制（个人利益至上）</li>
+</ul>
+</li>
+<li>道德的功能<ul>
+<li>行为前：认识功能</li>
+<li>行为中：规范功能</li>
+<li>行为后：调节功能</li>
+</ul>
+</li>
+<li>不同时期的道德<ul>
+<li>古代的道德：传统美德</li>
+<li>近代的道德：革命道德</li>
+<li>现代的的道德：社会主义道德</li>
+</ul>
+</li>
+<li>不同领域的道德<ul>
+<li>社会公德</li>
+<li>职业道德</li>
+<li>家庭美德</li>
+<li>个人品德</li>
+</ul>
+</li>
+</ul>
+<h4 id="法律基础"><a href="#法律基础" class="headerlink" title="法律基础"></a>法律基础</h4><ul>
+<li>法律的基本问题<ul>
+<li>法律的概念、功能、历史发展的脉络</li>
+<li>法律是统治阶级的整体意志的体现，是统治阶级进行阶级统治的工具</li>
+</ul>
+</li>
+<li>法律的运行：立法 -&gt; 执法 -&gt; 司法 -&gt; 守法</li>
+<li>法律体系<ul>
+<li>实体法律部门：宪法、民法等</li>
+<li>程序法律部门：诉讼法、非诉讼法等</li>
+</ul>
+</li>
+<li>法治体系：法律体系、法律实施体系、法律监督体系</li>
+<li>法治思维：坚持法治思维，就要批判人治思维</li>
+<li>法律权威：外在（强制性）和内在（合理性）</li>
+<li>法律权利和义务</li>
+</ul>
+<h3 id="中国近代史纲要"><a href="#中国近代史纲要" class="headerlink" title="中国近代史纲要"></a>中国近代史纲要</h3><h4 id="概述-2"><a href="#概述-2" class="headerlink" title="概述"></a>概述</h4><ul>
+<li>不考历史的细节，而考历史背后的政治逻辑</li>
+<li>1840年鸦片战争：中国近代史开端</li>
+<li>1911年辛亥革命：清朝政府结束，北洋政府开始</li>
+<li>1919年五四运动：新旧民主主义革命分界线</li>
+<li>1928年东北易帜：北洋政府结束，国民政府开始</li>
+<li>1949年新中国成立：中国现代史开端</li>
+</ul>
+<h4 id="国情（从实际出发）"><a href="#国情（从实际出发）" class="headerlink" title="国情（从实际出发）"></a>国情（从实际出发）</h4><ul>
+<li>国情是一切历史理论研究的起点</li>
+<li>近代中国的国情：半殖民地半封建社会（1840年—1949年）</li>
+</ul>
+<h4 id="二、矛盾"><a href="#二、矛盾" class="headerlink" title="二、矛盾"></a>二、矛盾</h4><ul>
+<li>近代中国主要矛盾<ul>
+<li>半殖民：帝国主义与中华民族之间的矛盾</li>
+<li>半封建：封建主义与人民大众之间的矛盾</li>
+</ul>
+</li>
+</ul>
+<h4 id="任务和对象"><a href="#任务和对象" class="headerlink" title="任务和对象"></a>任务和对象</h4><ul>
+<li>近中国的任务<ul>
+<li>帝国主义与中华民族之间的矛盾的任务：反帝</li>
+<li>封建主义与人民大众之间的矛盾的任务：反封建</li>
+</ul>
+</li>
+</ul>
+<h4 id="中国革命的性质"><a href="#中国革命的性质" class="headerlink" title="中国革命的性质"></a>中国革命的性质</h4><ul>
+<li>中国的革命是一场以反帝反封建为任务为对象的革命</li>
+<li>革命的性质：资产阶级民族革命</li>
+<li>新民主义革命是由无产阶级领导，但性质却是资产阶级革命<ul>
+<li>决定革命性肤的不是革命的领导者，而是革命的任务和对象</li>
+</ul>
+</li>
+<li>革命：推翻旧制度、确立新制度、确立新的生产关系的行为</li>
+<li>奴隶社会：封建地主推翻奴隶主，奴隶主居于统治地位，奴隶处于被统治地位</li>
+<li>封建社会：资产阶级推翻封建地主，封建地主居于统治地位，农民处于被统治地位</li>
+<li>资本主义社会：无产阶级推翻资产阶级，资本主义居于统治地位，无产阶级处于被统治地位</li>
+<li>因为中国革命的任务是反帝反封建，所以中国革命的性质就是资产阶级革命，无论谁来<br>做</li>
+</ul>
+<h4 id="史纲总结"><a href="#史纲总结" class="headerlink" title="史纲总结"></a>史纲总结</h4><ul>
+<li>近代中国我们要做反帝反封建的任务，这件事情理应由资产阶级去做，是资产阶级的历<br>史使命</li>
+<li>但是因为资产阶级的软弱本身没有实力去完成反帝反封建的历史使命，于是就由中国的无产阶级替资产阶级去完成本该由资产阶级完成的反帝反封建的历史使命</li>
+<li>中国的革命也因此变成了由无产阶级领导的、资产阶级性质的、反帝反封建的、新式的<br>民主主义革命</li>
+</ul>
+<h3 id="毛泽东思想和中国特色社会主义理论体系概论"><a href="#毛泽东思想和中国特色社会主义理论体系概论" class="headerlink" title="毛泽东思想和中国特色社会主义理论体系概论"></a>毛泽东思想和中国特色社会主义理论体系概论</h3><h4 id="毛泽东思想"><a href="#毛泽东思想" class="headerlink" title="毛泽东思想"></a>毛泽东思想</h4><ul>
+<li>理论的形成</li>
+<li>理论内容<ul>
+<li>新民主主义革命理论：1949年之前</li>
+<li>社会主义改造理论：1949—1956年</li>
+<li>社会主义建设道路的初步探索：1956—1976年</li>
+</ul>
+</li>
+</ul>
+<h4 id="中国特色主义理论体系"><a href="#中国特色主义理论体系" class="headerlink" title="中国特色主义理论体系"></a>中国特色主义理论体系</h4><ul>
+<li>社会主义应该具有先进的、发达的生产力</li>
+<li>怎样建设社会主义<ul>
+<li>解放生产力，发展生产力</li>
+<li>消灭剥削，消灭两极分化</li>
+<li>最终达到共同富裕</li>
+</ul>
+</li>
+<li>邓小平理论</li>
+<li>“三个代表”重要思想<ul>
+<li>建设什么样的党？怎样建设党？</li>
+<li>要始终代表先进生产力的发展方向</li>
+<li>要始终代表先进文化的发展方向</li>
+<li>要始终代表广大人民的根本利益</li>
+</ul>
+</li>
+<li>科学发展观<ul>
+<li>实现什么样的发展？怎样发展？</li>
+</ul>
+</li>
+<li>习近平新时代中国特色社会主义思想<ul>
+<li>新时代、新思想</li>
+<li>全面小康社会</li>
+<li>建党一百年全面脱贫</li>
+<li>2035年基本实现社会主义现代化</li>
+<li>21世界中叶，建成社会主义现代化强国，实现中华民族伟大复兴</li>
+<li>总任务：实现社会主义现代化，中华民族伟大复兴</li>
+<li>布局理论：五位一体总体布局、四个全面战略布局</li>
+<li>内外条件：国防军队建设、中国的外交问题、党的建设</li>
+</ul>
+</li>
+</ul>
+<h4 id="马克思主义中国化"><a href="#马克思主义中国化" class="headerlink" title="马克思主义中国化"></a>马克思主义中国化</h4><ul>
+<li>新文化运动：学习西方资产阶级民族思想，来改造中国人的思想文化</li>
+<li>十月革命：给中国送来了马克思列宁主义</li>
+<li>五四运动：马克思列宁主义得到广泛传播</li>
+<li>中共一大：以无产阶级革命推翻资产阶级，应联合资产阶级一起反帝反封建</li>
+<li>六届六中全会：首次提出“马克思主义中国话”的命题</li>
+<li>中共七大：实现了第一次飞跃，成果即为毛泽东思想</li>
+<li>1956年《论十大关系》：第二次马克思主义中国化开始</li>
+<li>改革开放：实现了马克思主义中国化的第二次飞跃，成果即为中国特色社会主义理论体系</li>
+</ul>
+<h4 id="新民主主义理论"><a href="#新民主主义理论" class="headerlink" title="新民主主义理论"></a>新民主主义理论</h4><ul>
+<li>革命路线：无产阶级领导的人民大众的反帝反封建反官资的革命</li>
+<li>革命纲领<ul>
+<li>政治上：各革命阶级联合专政</li>
+<li>经济上：没收地主、官资，保护民资</li>
+<li>文化上：民族的、科学的、大众的</li>
+</ul>
+</li>
+<li>革命道路：农村包围城市，武装夺取政权</li>
+<li>革命经验（三大法宝）：统战线、武装斗争、党的建设</li>
+</ul>
+<h4 id="社会主义建设初步探索理论"><a href="#社会主义建设初步探索理论" class="headerlink" title="社会主义建设初步探索理论"></a>社会主义建设初步探索理论</h4><ul>
+<li>《论十大关系》<ul>
+<li>第二次马克思主义中国化开始</li>
+<li>方针：调动一切积极因素为社会主义建设服务</li>
+<li>指导思想：独立自主的符合中国特点的社会主义建设道路</li>
+</ul>
+</li>
+<li>《关于正确处理人民内部矛盾的问题》<ul>
+<li>基本矛盾：生产力和生产关系、经济基础和上层建筑</li>
+<li>主要矛盾：作为一个落后的农业国与先进的工业国需求之间存在的矛盾、人民日益增长的物质文化需要同当前的发展不满足人民需要状况之间的矛盾</li>
+<li>两类矛盾：敌我矛盾、人民内部矛盾</li>
+</ul>
+</li>
+<li>中国工业化道路：农轻重</li>
+</ul>
+<h3 id="当代世界经济与政治"><a href="#当代世界经济与政治" class="headerlink" title="当代世界经济与政治"></a>当代世界经济与政治</h3><h4 id="当代世界政治与经济"><a href="#当代世界政治与经济" class="headerlink" title="当代世界政治与经济"></a>当代世界政治与经济</h4><ul>
+<li>当今世界形势：百年未有之大变局，机遇与挑战并存</li>
+<li>国际行为体：大国、欧盟</li>
+<li>地区热点问题：朝韩问题，伊朗问题，叙利亚问题等</li>
+<li>中国对外战略：和平发展道路、合作共赢的新型国际关系、人类命运共同体、一带一路</li>
+</ul>
+<h4 id="时事政治"><a href="#时事政治" class="headerlink" title="时事政治"></a>时事政治</h4><ul>
+<li>重大会议：国际、国内（两会）</li>
+<li>重大改革举措：雄安新区、深圳、粤港澳大湾区</li>
+<li>科技创新：神舟、天宫、嫦娥</li>
+<li>中国对外战略：事件、人物、政策</li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -694,9 +884,6 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
-
 
         
       
@@ -708,8 +895,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB%E5%B0%8F%E6%8A%84/&title=考研政治小抄 - Bezhuang's Blog&summary=
+“思想政治理论”是研究生招生考试必考科目之一（为什么！┗|｀O′|┛），分为马原、毛中特、史纲、思修和时政5个大类。政治内容众多且杂，如果对基础概念和知识进行具体总结，篇幅非常长，本篇笔记只是以一个“Cheat-sheet”的形式尽可能包含所有考试重点，至于系统的归纳梳理则以肖精讲精练为准。
 "
           
           >
@@ -722,8 +909,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB%E5%B0%8F%E6%8A%84/&title=考研政治小抄 - Bezhuang's Blog&summary=
+“思想政治理论”是研究生招生考试必考科目之一（为什么！┗|｀O′|┛），分为马原、毛中特、史纲、思修和时政5个大类。政治内容众多且杂，如果对基础概念和知识进行具体总结，篇幅非常长，本篇笔记只是以一个“Cheat-sheet”的形式尽可能包含所有考试重点，至于系统的归纳梳理则以肖精讲精练为准。
 "
           
           >
@@ -736,8 +923,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB%E5%B0%8F%E6%8A%84/&title=考研政治小抄 - Bezhuang's Blog&summary=
+“思想政治理论”是研究生招生考试必考科目之一（为什么！┗|｀O′|┛），分为马原、毛中特、史纲、思修和时政5个大类。政治内容众多且杂，如果对基础概念和知识进行具体总结，篇幅非常长，本篇笔记只是以一个“Cheat-sheet”的形式尽可能包含所有考试重点，至于系统的归纳梳理则以肖精讲精练为准。
 "
           
           >
@@ -752,7 +939,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEaUlEQVR42u3aQY7jMAwEwPz/07v3BYKwSUpOFqXbIGNbLuVAdvj6Yx1ZLwRgwVpgwYK1wF6BfTXXv9e/fVDxuun9q5+n+4g9wIIFCxYsWLBgwV6FLRfAb/7/0wOrL7Z1QNvvVz44sGDBggULFixYsI/Apg1BCnkauPr5tGEACxYsWLBgwYIF+9uw1YC4ehBxQd4M2tP7gwULFixYsGDBgv2/YacDGFsDF9t/gwULFixYsGDBgv1u2NMvmjYU6YFuNRSPT8KABQsWLFiwYMGCLcGm69sK+NMNQdkDLFiwYMGCBQsW7BXYrTVtFKrB8rRBOL3AggULFixYsGDB3oHdGuTdDqK7wfenfaafx18gsGDBggULFixYsFdh08K8+4Ip3KeDnB5MtyEZ/4IAFixYsGDBggUL9gjsVvA8vW66j9MHABYsWLBgwYIFC/Y7YLcHN6bAW41DGtS3B1DAggULFixYsGDBXoFNC+FyoRwOdmzDdRuW9Av2tkEACxYsWLBgwYIFewU23eD2C20F3NOBjmmjBBYsWLBgwYIFC/YZ2K0NlYPh4cDEVlCdPj9uEMCCBQsWLFiwYMEegZ0G09MXmDYE28DdwRKwYMGCBQsWLFiwz8KmhXjaAKQH2b1++z0+7gssWLBgwYIFCxbsFdgqaDcA7t5n2phsHWD8gwBYsGDBggULFizYK7BpgJw++NT13YK++8Vod15gwYIFCxYsWLBgj8JuBdzpgEU34O5e391n+f3BggULFixYsGDBXoHtBsppYV1d3QZhOoCxFtyDBQsWLFiwYMGCfQR2WvB3A+0u7Nb9pwcCFixYsGDBggUL9i7sNPDeDqa3G4TT4GDBggULFixYsGCfhU03ng5edAv9rcGKW/sDCxYsWLBgwYIF+yxs+uBuI9ANzLeeu/WFAgsWLFiwYMGCBftdsFtg3YGMKWw6SDx1AAsWLFiwYMGCBXsHdruQ7gbN3fumn3eD+/K+wIIFCxYsWLBgwV6B3Q6Oq9dtB9TpwMW0QXh7X7BgwYIFCxYsWLBXYG8HzN2DqAbk3YB97WDAggULFixYsGDBXoGdFvLVwjkNkLcakGlAHjcOYMGCBQsWLFiwYK/AdgviLsD2/adAaUMy7rzAggULFixYsGDBrsCmAGnwvNUIdBuUKtzW/sCCBQsWLFiwYMHege0ObEwbgPSA0kA+DbS7X4T1SRiwYMGCBQsWLFiwJdjpmhbqaQGfXnfq+WDBggULFixYsGCfhZ0WyqeD8W5APX0fsGDBggULFixYsL8BmzYE3UJ7Cj8N3Lv/1x7YAAsWLFiwYMGCBXsFNi2gu41Ct9DfajSuTcKABQsWLFiwYMGC/WnY7gDFqX10g/SPzwcLFixYsGDBggX7E7DVB6ZQ3X11B0jSRuJ4gwAWLFiwYMGCBQs2gt0e2EghTh1cNxBPF1iwYMGCBQsWLNi7sFuDE/FGhoMSWweaBu3lBgEsWLBgwYIFCxbsEVhrd4EFC9YCCxasBfbo+gs0P9AU+wEtgwAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -760,7 +947,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB%E5%B0%8F%E6%8A%84/&text=考研政治小抄 - Bezhuang's Blog"
           
           >
           
@@ -786,11 +973,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B9/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>微积分重点</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要...</p>
+        </a>
+      
+      
+        <a class='next' href='/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/'>
+          <p class='title'>基于Python和OpenCV实现人脸识别<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++...</p>
         </a>
       
     </div>
@@ -833,7 +1026,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E6%A6%82%E8%AE%BA"><span class="toc-text">马克思主义基本原理概论</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%94%AF%E7%89%A9%E8%AE%BA"><span class="toc-text">唯物论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%A9%E8%AF%81%E6%B3%95"><span class="toc-text">辩证法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86%E8%AE%BA"><span class="toc-text">认识论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%94%AF%E7%89%A9%E5%8F%B2%E8%A7%82"><span class="toc-text">唯物史观</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E6%94%BF%E6%B2%BB%E7%BB%8F%E6%B5%8E%E5%AD%A6"><span class="toc-text">马克思主义政治经济学</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A7%91%E5%AD%A6%E7%A4%BE%E4%BC%9A%E4%B8%BB%E4%B9%89%E5%8F%91%E5%B1%95%E8%BF%9B%E7%A8%8B"><span class="toc-text">科学社会主义发展进程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%BF%AE%E5%85%BB%E4%B8%8E%E6%B3%95%E5%BE%8B%E5%9F%BA%E7%A1%80"><span class="toc-text">思想道德修养与法律基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0-1"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E6%83%B3%E4%BF%AE%E5%85%BB"><span class="toc-text">思想修养</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%81%93%E5%BE%B7%E4%BF%AE%E5%85%BB"><span class="toc-text">道德修养</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%95%E5%BE%8B%E5%9F%BA%E7%A1%80"><span class="toc-text">法律基础</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E5%9B%BD%E8%BF%91%E4%BB%A3%E5%8F%B2%E7%BA%B2%E8%A6%81"><span class="toc-text">中国近代史纲要</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0-2"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BD%E6%83%85%EF%BC%88%E4%BB%8E%E5%AE%9E%E9%99%85%E5%87%BA%E5%8F%91%EF%BC%89"><span class="toc-text">国情（从实际出发）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%9F%9B%E7%9B%BE"><span class="toc-text">二、矛盾</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="toc-text">任务和对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%AD%E5%9B%BD%E9%9D%A9%E5%91%BD%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="toc-text">中国革命的性质</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%B2%E7%BA%B2%E6%80%BB%E7%BB%93"><span class="toc-text">史纲总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%9B%E6%B3%BD%E4%B8%9C%E6%80%9D%E6%83%B3%E5%92%8C%E4%B8%AD%E5%9B%BD%E7%89%B9%E8%89%B2%E7%A4%BE%E4%BC%9A%E4%B8%BB%E4%B9%89%E7%90%86%E8%AE%BA%E4%BD%93%E7%B3%BB%E6%A6%82%E8%AE%BA"><span class="toc-text">毛泽东思想和中国特色社会主义理论体系概论</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AF%9B%E6%B3%BD%E4%B8%9C%E6%80%9D%E6%83%B3"><span class="toc-text">毛泽东思想</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%AD%E5%9B%BD%E7%89%B9%E8%89%B2%E4%B8%BB%E4%B9%89%E7%90%86%E8%AE%BA%E4%BD%93%E7%B3%BB"><span class="toc-text">中国特色主义理论体系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E4%B8%AD%E5%9B%BD%E5%8C%96"><span class="toc-text">马克思主义中国化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B0%E6%B0%91%E4%B8%BB%E4%B8%BB%E4%B9%89%E7%90%86%E8%AE%BA"><span class="toc-text">新民主主义理论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BE%E4%BC%9A%E4%B8%BB%E4%B9%89%E5%BB%BA%E8%AE%BE%E5%88%9D%E6%AD%A5%E6%8E%A2%E7%B4%A2%E7%90%86%E8%AE%BA"><span class="toc-text">社会主义建设初步探索理论</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%93%E4%BB%A3%E4%B8%96%E7%95%8C%E7%BB%8F%E6%B5%8E%E4%B8%8E%E6%94%BF%E6%B2%BB"><span class="toc-text">当代世界经济与政治</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BD%93%E4%BB%A3%E4%B8%96%E7%95%8C%E6%94%BF%E6%B2%BB%E4%B8%8E%E7%BB%8F%E6%B5%8E"><span class="toc-text">当代世界政治与经济</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%B6%E4%BA%8B%E6%94%BF%E6%B2%BB"><span class="toc-text">时事政治</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -852,7 +1045,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="考研政治小抄";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

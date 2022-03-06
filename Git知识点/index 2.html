@@ -22,14 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
+  <title>Git 基础知识总结 - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="云服务器,MacOS">
+    <meta name="keywords" content="Git">
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，是目前世界上最先进的分布式版本控制系统。Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。由于Git指令操作简单易上手，所以我选择...">
   
 
   <!-- feed -->
@@ -459,7 +459,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        Git 基础知识总结
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +468,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E4%B8%8E%E5%BC%80%E5%8F%91/">编程与开发</a>
     </a>
   </div>
 
@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2020年4月13日</p>
   </a>
 </div>
 
@@ -490,13 +490,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：1.9k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：7分钟</p>
     </a>
   </div>
 
@@ -511,126 +511,129 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，是目前世界上最先进的分布式版本控制系统。Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。由于Git指令操作简单易上手，所以我选择的是廖雪峰老师的<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/"> Git 教程</a>，本篇笔记是对 Git 使用方法的一些整理。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
-</li>
-<li><p>应用程序安装信息</p>
-<ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
+<h3 id="Git-基本概念"><a href="#Git-基本概念" class="headerlink" title="Git 基本概念"></a>Git 基本概念</h3><h4 id="Git-操作指令"><a href="#Git-操作指令" class="headerlink" title="Git 操作指令"></a>Git 操作指令</h4><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/Git.png"></p>
+<h4 id="集中式（SVN）-VS-分布式（Git）"><a href="#集中式（SVN）-VS-分布式（Git）" class="headerlink" title="集中式（SVN） VS 分布式（Git）"></a>集中式（SVN） VS 分布式（Git）</h4><ol>
+<li>SVN 和 Git 主要的区别在于历史版本维护的位置;</li>
+<li>Git 本地仓库包含代码库还有历史库，在本地的环境开发就可以记录历史而 SVN 的历史库存在于中央仓库，每次对比与提交代码都必须连接到中央仓库才能进行;</li>
+<li>这样的好处在于：自己可以在脱机环境查看开发的版本历史。并且多人开发时如果充当中央仓库的 Git 仓库挂了，可以随时创建一个新的中央仓库然后同步就立刻恢复了中央库。</li>
+</ol>
+<h4 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h4><ul>
+<li><code>git init</code>初始化一个 Git 仓库。</li>
+<li><code>git add ‘&lt;name&gt;’</code>or <code>git add .</code> 暂存文件</li>
+<li><code>git commit -m ‘&lt;name&gt;’</code> 提交到Git仓库</li>
 </ul>
-</li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
+<h4 id="文件状态"><a href="#文件状态" class="headerlink" title="文件状态"></a>文件状态</h4><ul>
+<li><code>git status</code> 随时掌握工作区的状态</li>
+<li><code>git diff</code> 比较工作区与缓存区，查看修改内容</li>
+<li><code>git diff -- cached</code> 比较缓存区与本地库最近一次commit内容</li>
+<li><code>git diff HEAD</code>比较工作区与本地最近一次commit内容</li>
 </ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
-</li>
+<h4 id="配置命令"><a href="#配置命令" class="headerlink" title="配置命令"></a>配置命令</h4><ul>
+<li><code>git config --list</code> 列出当前配置</li>
+<li><code>git config --local --list</code> 列出Repository配置</li>
+<li><code>git config --global --list</code> 列出全局配置</li>
+<li><code>git config --system --list</code>  列出系统配置</li>
+<li><code>git config --global user.name &quot;your name&quot;</code> 配置用户名</li>
+<li><code>git config --global user.email &quot;youremail@github.com&quot;</code>  配置用户邮箱</li>
+<li>配置 Git 的时候，加上<code>--global</code> 是针对当前用户起作用的；如果不加，那只针对当前的仓库起作用</li>
+<li>每个仓库的 Git 配置文件都放在<code>.git/config</code> 文件中</li>
 </ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
-<ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<h4 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h4><ul>
+<li><code>HEAD</code>指向的版本就是当前版本</li>
+<li><code>git log</code> 可以查看提交历史，以便确定要回退到哪个版本</li>
+<li><code>git reflog</code> 查看命令历史，以便确定要回到未来的哪个版本</li>
+<li><code>git reset --hard commit_id</code> 在版本的历史之间穿梭</li>
+<li>工作区和暂存区（Working Directory and Repository）</li>
 </ul>
-</li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
-<ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<h4 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h4><ul>
+<li><code>git add</code> 实际上是把文件添加到暂存区</li>
+<li><code>git commit</code> 实际上是把暂存区的所有内容提交到当前分支</li>
+<li>每次修改，如果不用<code>git add</code>到暂存区，那就不会加入到<code>commit</code>中</li>
 </ul>
-</li>
+<h4 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h4><ul>
+<li>当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code></li>
+<li>当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，用命令<code>git reset HEAD &#39;&lt;name&gt;&#39;</code> 回到上一步</li>
+<li>已经提交了不合适的修改到版本库时，想要撤销本次提交，参考’’版本回退’’，不过前提是没有推送到远程库</li>
+<li><code>git rm</code> 删除一个文件</li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
-</li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
-</li>
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><h4 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h4><ul>
+<li><code>git remote add origin git@server-name:path/repo-name.git</code> 关联一个远程库</li>
+<li><code>git push -u origin main</code> 第一次推送 main 分支的所有内容</li>
+<li><code>git push origin main</code> 推送最新修改</li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
-</li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
-</li>
+<h4 id="从远程库克隆"><a href="#从远程库克隆" class="headerlink" title="从远程库克隆"></a>从远程库克隆</h4><ul>
+<li><code>git clone</code> 命令克隆克隆一个仓库</li>
+<li>Git 支持多种协议，包括 https，但 ssh 协议速度最快</li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h4 id="远程库操作"><a href="#远程库操作" class="headerlink" title="远程库操作"></a>远程库操作</h4><ul>
+<li><code>git push origin -d &lt;branch-name&gt;</code> 删除远程分支</li>
+<li><code>git branch -m &lt;oldbranch-name&gt; &lt;newbranch-name&gt;</code> 重命名分支</li>
+<li><code>git checkout -b 本地分支名x origin/远程分支名x</code> 拉取远程分支并创建本地分支</li>
+<li><code>git fetch origin &lt;branch-name&gt;:&lt;local-branch-name&gt;</code> 将远程仓库内容更新到本地</li>
+</ul>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><h4 id="创建与合并分支"><a href="#创建与合并分支" class="headerlink" title="创建与合并分支"></a>创建与合并分支</h4><ul>
+<li><code>git branch</code> 查看分支</li>
+<li><code>git branch &lt;name&gt;</code> 创建分支</li>
+<li><code>git checkout &lt;name&gt;</code> 或者<code>git switch &lt;name&gt;</code> 切换分支</li>
+<li><code>git branch -r</code> 查看远程分支或者 <code>git branch -a</code> 查看本地和远程分支</li>
+<li><code>git checkout -b &lt;name&gt;</code> 或者<code>git switch -c &lt;name&gt;</code> 创建+切换分支</li>
+<li><code>git merge &lt;name&gt;</code> 合并某分支到当前分支</li>
+<li><code>git branch --merged</code> 查看哪些分支已经合并到当前分支</li>
+<li><code>git branch --no-merged</code> 查看哪些分支没有合并到当前分支</li>
+<li><code>git branch -v</code> 查看各个分支最后一个提交对象的信息</li>
+<li><code>git branch -d &lt;name&gt;</code> 删除分支</li>
+</ul>
+<h4 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h4><ul>
+<li>当 Git 无法自动合并分支时，就必须首先解决冲突，解决冲突后，再提交，合并完成</li>
+<li>解决冲突就是把 Git 合并失败的文件手动编辑为我们希望的内容，再提交</li>
+<li><code>git log --graph</code> 查看分支合并图</li>
+<li>合并分支时，加上 <code>--no-ff</code> 参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，<code>fast forward</code> 合并就看不出来曾经做过合并。</li>
+<li>修复 bug 时，我们会通过创建新的 bug 分支进行修复，然后合并，最后删除</li>
+<li>当手头工作没有完成时，先把工作现场<code>git stash</code> 一下（文件暂存），然后去修复 bug</li>
+<li><code>git stash save -a “message”</code> 添加改动到stash</li>
+<li><code>git stash drop &lt;stash@&#123;ID&#125;&gt;</code> 删除暂存，<code>git stash clear</code> 删除全部缓存</li>
+<li><code>git stash list</code> 查看stash列表</li>
+<li>修复后，再<code>git stash pop</code>，回到工作现场</li>
+<li>在 main 分支上修复的 bug，想要合并到当前 dev 分支，可以用<code>git cherry-pick &lt;commit&gt;</code> 命令，把 bug 提交的修改“复制”到当前分支，避免重复劳动</li>
+<li>开发一个新 feature，最好新建一个分支</li>
+<li>如果要丢弃一个没有被合并过的分支，可以通过<code>git branch -D &lt;name&gt;</code>强行删除</li>
+</ul>
+<h4 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h4><ul>
+<li><code>git remote -v</code> 查看远程库信息。</li>
+<li>本地新建的分支如果不推送到远程，对其他人就是不可见的。</li>
+<li><code>git pull</code> 抓取远程的分支，如果有冲突，要先处理冲突。</li>
+<li><code>git push origin branch-name</code> 从本地推送分支。</li>
+<li><code>git checkout -b branch-name origin/branch-name</code> 在本地创建和远程分支对应的分支。</li>
+<li><code>git branch --set-upstream branch-name origin/branch-name</code> 建立本地分支和远程分支的关联。 </li>
+</ul>
+<h4 id="Rebase"><a href="#Rebase" class="headerlink" title="Rebase"></a>Rebase</h4><ul>
+<li>rebase 操作可以把本地未 push 的分叉提交历史整理成直线</li>
+<li>rebase 的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。</li>
+</ul>
+<h3 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h3><h4 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h4><ul>
+<li><code>git tag &lt;tagname&gt;</code> 用于新建一个标签，默认为 HEAD，也可以指定一个 commit id</li>
+<li><code>git tag -a &lt;tagname&gt; -m &quot;  &quot;</code>可以指定标签信息</li>
+<li><code>git tag</code> 查看所有标签。</li>
+</ul>
+<h4 id="操作标签"><a href="#操作标签" class="headerlink" title="操作标签"></a>操作标签</h4><ul>
+<li><code>git push origin &lt;tagname&gt;</code> 可以推送一个本地标签</li>
+<li><code>git push origin --tags</code> 可以推送全部未推送过的本地标签</li>
+<li><code>git tag -d &lt;tagname&gt;</code> 可以删除一个本地标签</li>
+<li><code>git push origin :refs/tags/&lt;tagname&gt;</code> 可以删除一个远程标签</li>
+</ul>
+<h3 id="自定义-Git"><a href="#自定义-Git" class="headerlink" title="自定义 Git"></a>自定义 Git</h3><h4 id="忽略特殊文件"><a href="#忽略特殊文件" class="headerlink" title="忽略特殊文件"></a>忽略特殊文件</h4><ul>
+<li>忽略某些文件时，需要编写<code>.gitignore</code></li>
+<li><code>.gitignore</code> 文件本身要放到版本库里，并且可以对<code>.gitignore</code> 做版本管理</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/github/gitignore">gitgonore</a></li>
+</ul>
+<h4 id="搭建-Git-服务器"><a href="#搭建-Git-服务器" class="headerlink" title="搭建 Git 服务器"></a>搭建 Git 服务器</h4><ul>
+<li>要方便管理公钥，用<a target="_blank" rel="noopener" href="https://github.com/sitaramc/gitolite">Gitosis</a></li>
+<li>要像 SVN 那样变态地控制权限，用<a target="_blank" rel="noopener" href="https://github.com/sitaramc/gitolite">Gitolite</a></li>
+<li><a target="_blank" rel="noopener" href="http://git-scm.com/">Git 官方</a></li>
 </ul>
 
   
@@ -649,8 +652,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
             <ul>
               
                 <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
+                  <a href="https://www.runoob.com/manual/git-guide/" rel="external nofollow noopener noreferrer" target="_blank">
+                  简明Git指南
                   </a>
                 </li>
               
@@ -695,7 +698,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Git/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Git</p></a></div>
 
 
         
@@ -708,8 +711,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Git%E7%9F%A5%E8%AF%86%E7%82%B9/&title=Git 基础知识总结 - Bezhuang's Blog&summary=
+Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，是目前世界上最先进的分布式版本控制系统。Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。由于Git指令操作简单易上手，所以我选择的是廖雪峰老师的 Git 教程，本篇笔记是对 Git 使用方法的一些整理。
 "
           
           >
@@ -722,8 +725,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Git%E7%9F%A5%E8%AF%86%E7%82%B9/&title=Git 基础知识总结 - Bezhuang's Blog&summary=
+Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，是目前世界上最先进的分布式版本控制系统。Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。由于Git指令操作简单易上手，所以我选择的是廖雪峰老师的 Git 教程，本篇笔记是对 Git 使用方法的一些整理。
 "
           
           >
@@ -736,8 +739,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Git%E7%9F%A5%E8%AF%86%E7%82%B9/&title=Git 基础知识总结 - Bezhuang's Blog&summary=
+Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，是目前世界上最先进的分布式版本控制系统。Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。由于Git指令操作简单易上手，所以我选择的是廖雪峰老师的 Git 教程，本篇笔记是对 Git 使用方法的一些整理。
 "
           
           >
@@ -752,7 +755,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADpElEQVR42u3aQXKDQAwEQP//08kDUi4k7WAUV+8tMQbU68Mg8fqxRuuFABw4cOAscOCWwL2G6+r7fy5YPM+74y8LurhurF5w4MCBAwcOHLhlcOUAuKTg7sbF6gUHDhw4cODAgVsKd1dQrZ4vDde9/8vjwYEDBw4cOHDgvgQuBVSFmTZQwYEDBw4cOHDgwGVBug3Fr3tyAAcOHDhw4MCBC8GdDpCnn58OrE/P9/FJPjhw4MCBAwcOXAiuu7oBc9vf43rBgQMHDhw4cOCWwKVWepBdPf6uoPz2uuDAgQMHDhw4cEvgugPlKdApzGnjtPviYfnJARw4cODAgQMHbgnc1Ymq/58G4ylYd0O6Pwhw4MCBAwcOHLhtcFOwuxqe6UF59fzlhik4cODAgQMHDtwSuNOGXxXqroCdHpi3G5ngwIEDBw4cOHBL4FID4O6A+rSx2f3/uDELDhw4cODAgQO3BK56wWnATQXt9HW6Pxxw4MCBAwcOHLhtcNML/RyuVJBODbKPnxzAgQMHDhw4cOA+DDeFaV+wGTRPN+B0EA0OHDhw4MCBA/df4LoD59MbmcJW72PasLx0AAcOHDhw4MCBWwI3HRSnG53TgroN0eP7AAcOHDhw4MCBWwLXDabpFw+nA+huYK8CxRqZ4MCBAwcOHDhwN8N1B8qpBuP08yl8ChgcOHDgwIEDB24L3GnDsTuovhv+FVrlRiY4cODAgQMHDtxDcNMXAbuQVahuAzQV2Mv1ggMHDhw4cODALYFLD4BTGzINyLc3SMGBAwcOHDhw4JbAVSFOG5x3BddUAC/fHzhw4MCBAwcO3DK4aTA8DcbVDewG5m6AL/8gwIEDBw4cOHDglsGlg2a34OnxU6DphoADBw4cOHDgwG2Dmw6kp43Q7vfSA+zYQBocOHDgwIEDB+5huGmjMj2gTm/IFLz95AAOHDhw4MCBA7cELt1grBZYLXj6AuFxMAYHDhw4cODAgVsCd7rSkN3CToNvt3EKDhw4cODAgQO3BS4VENs38M+CNjhw4MCBAwcO3Fa49KA5NWDuBtXUBrRfLAQHDhw4cODAgXsYrj2gbQbk0+OrwfquYA8OHDhw4MCBA/dtcNNgezqovn0ADQ4cOHDgwIED96Vw00LTkKmB83ggDQ4cOHDgwIED9zDcdDA8DazdADst+LTxCg4cOHDgwIEDtxUuPbjtFpJuXE4DfDsAgwMHDhw4cODAPQRnNRupCMCBAwfOAgfu2fULeRd74hxT1CcAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -760,7 +763,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Git%E7%9F%A5%E8%AF%86%E7%82%B9/&text=Git 基础知识总结 - Bezhuang's Blog"
           
           >
           
@@ -786,11 +789,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/Sport-Related-Concussion-Training/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Sport-Related Concussion Training</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+Some common sports injuries can occur when engaging in confrontational sports like basketball, t...</p>
+        </a>
+      
+      
+        <a class='next' href='/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/'>
+          <p class='title'>计算机科学速成课<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+计算机科学速成课程的授课老师是英国树莓派基金会教育部长Carrie Anne，她以入门级大学教材和 AP 计算机科学原理指南为基础，在短短40节课中概述了计算机的历史、设计决策、编程和软件的基...</p>
         </a>
       
     </div>
@@ -833,7 +842,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">Git 基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-%E6%93%8D%E4%BD%9C%E6%8C%87%E4%BB%A4"><span class="toc-text">Git 操作指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9B%86%E4%B8%AD%E5%BC%8F%EF%BC%88SVN%EF%BC%89-VS-%E5%88%86%E5%B8%83%E5%BC%8F%EF%BC%88Git%EF%BC%89"><span class="toc-text">集中式（SVN） VS 分布式（Git）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93"><span class="toc-text">创建版本库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%8A%B6%E6%80%81"><span class="toc-text">文件状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4"><span class="toc-text">配置命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80"><span class="toc-text">版本回退</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E4%BF%AE%E6%94%B9"><span class="toc-text">管理修改</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9"><span class="toc-text">撤销修改</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-text">远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%BF%9C%E7%A8%8B%E5%BA%93"><span class="toc-text">添加远程库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%85%8B%E9%9A%86"><span class="toc-text">从远程库克隆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E5%BA%93%E6%93%8D%E4%BD%9C"><span class="toc-text">远程库操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86"><span class="toc-text">分支管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF"><span class="toc-text">创建与合并分支</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%86%B2%E7%AA%81"><span class="toc-text">解决冲突</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C"><span class="toc-text">多人协作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Rebase"><span class="toc-text">Rebase</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86"><span class="toc-text">标签管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%A0%87%E7%AD%BE"><span class="toc-text">创建标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E6%A0%87%E7%AD%BE"><span class="toc-text">操作标签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89-Git"><span class="toc-text">自定义 Git</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%BD%E7%95%A5%E7%89%B9%E6%AE%8A%E6%96%87%E4%BB%B6"><span class="toc-text">忽略特殊文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA-Git-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">搭建 Git 服务器</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -852,7 +861,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="Git 基础知识总结";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

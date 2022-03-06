@@ -22,14 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
+  <title>C语言基础知识总结 - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="云服务器,MacOS">
+    <meta name="keywords" content="C/C++">
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+1972 年，为了移植与开发 UNIX 操作系统，丹尼斯·里奇在贝尔电话实验室设计开发了 C 语言。C 语言是一种通用的、面向过程式的计算机程序设计语言，它与 Java 编程语言一样普及，二者在现代软件程序员之间都得到广泛使用。强烈推荐郝斌老师的C语言自学教程，在入门C语言时给了我很大的启发和帮助，以下是对于C...">
   
 
   <!-- feed -->
@@ -459,7 +459,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        C语言基础知识总结
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +468,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E4%B8%8E%E5%BC%80%E5%8F%91/">编程与开发</a>
     </a>
   </div>
 
@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2020年8月20日</p>
   </a>
 </div>
 
@@ -490,13 +490,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：4.6k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：16分钟</p>
     </a>
   </div>
 
@@ -511,126 +511,484 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>1972 年，为了移植与开发 UNIX 操作系统，丹尼斯·里奇在贝尔电话实验室设计开发了 C 语言。C 语言是一种通用的、面向过程式的计算机程序设计语言，它与 Java 编程语言一样普及，二者在现代软件程序员之间都得到广泛使用。强烈推荐郝斌老师的<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1os411h77o">C语言自学教程</a>，在入门C语言时给了我很大的启发和帮助，以下是对于C语言重要知识点的归纳，附带我在学习过程中练习的<a target="_blank" rel="noopener" href="https://github.com/Bezhuang/LearnCS/tree/main/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/C%E8%AF%AD%E8%A8%80%E6%95%99%E7%A8%8B">代码</a></p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
+<h3 id="C编程预备"><a href="#C编程预备" class="headerlink" title="C编程预备"></a>C编程预备</h3><ul>
+<li>整数 <code>int</code>，<code>short int</code>，<code>long int</code></li>
+<li>浮点数（实数），<code>float</code>，<code> double</code></li>
+<li>字符 <code>char</code></li>
+<li>结构体、枚举、共用体</li>
+<li>变量：本质就是内存中一段存储空间，变量必须的初始化。</li>
+<li>定义变量： <code>数据类型变量名 = 要赋的值;</code></li>
+<li>常量的表示：<ul>
+<li>整数：十进制传统写法，十六进制前面加Ox或0X，八进制前面加0</li>
+<li>浮点数：<code>float x = 3.2</code> or <code>float x = 123.45e-2;</code></li>
+<li>字符：单个字符用单引号括起来，字符串用双引号括起来。</li>
+</ul>
 </li>
-<li><p>应用程序安装信息</p>
+<li>整数是以补码的形式转化为二进制代码存储在计算机中的。</li>
+<li>实数是以IEEE754标准转化为二进制代码存储在计算机中的。</li>
+<li>字符的本质实际也是与整数的存储方式相同。</li>
+<li>代码规范化</li>
+<li>字节就是存储数据的单位，并且是硬件所能访问的最小单位，1字节 = 8位</li>
+<li>不同类型数据之间相互赋值：<code>(数据类型)(表达式)</code></li>
+<li>变量不能被重复定义</li>
+<li>字符的存储本质上与整数的存储方式相同</li>
+</ul>
+<h3 id="输入和输出函数"><a href="#输入和输出函数" class="headerlink" title="输入和输出函数"></a>输入和输出函数</h3><ul>
+<li><code>printf(&quot;输出控制符&quot;, 输出参数);</code></li>
+<li>逻辑运算符：<code>!=</code>  <code>==</code>  <code>&amp;&amp;</code></li>
+<li>输出控制符：<code>%d </code>, <code>%ld</code>, <code>%c </code>, <code>%lf</code>, <code>%x</code>, <code>%o</code>, <code>%s</code></li>
+<li><code>scanf(&quot;输入控制符&quot;, 输入参数);</code></li>
+<li>处理非法输入<pre><code class="C">char ch;
+while ( (ch=getchar0) != ’\n’）
+continue;</code></pre>
+</li>
+</ul>
+<h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><ul>
+<li>流程控制：程序代码执行的顺序</li>
+<li>流程控制的分类：顺序、选择、定义</li>
+<li>if语句：<code>if...else...</code><ul>
+<li>C语言对真假的处理：非零是真，真用1表示，假用零表示。</li>
+<li><code>else</code>后不跟判断句</li>
+</ul>
+</li>
+<li><code>switch</code>：电梯程序</li>
+<li>循环：某些代码会被重复执行</li>
+<li><code>for</code>语句<ul>
+<li>单个for循环的使用</li>
+<li>多个for循环的嵌套使用</li>
+</ul>
+</li>
+<li>三目运算符 (A? B: C)</li>
+<li><code>while</code>语句<ul>
+<li>for和whi1e可以相互转换，但for的逻辑性更强，更不容易出错。</li>
+</ul>
+</li>
+<li><code>do...while</code><ul>
+<li>do…while…并不等价于for,当然也不等价于while，主要用于人机交互。</li>
+</ul>
+</li>
+<li>break用来终止循环。</li>
+<li>continue用于跳过本次循环佘下的语句。</li>
+</ul>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><ul>
+<li>数组：为了解决大量同类型数据的存储和使用间题，为了模拟现实世界。</li>
+<li>一维数组：为n个变量连续分配存储空间，所有的变量数据类型必须相同，所有变量所占的字节大小必须相等，<code>int a[5];</code></li>
+<li>一维数组名不代表数组中所有的元素，一维数组名代表数组第一个元素的地址。</li>
+<li>二维数组，<code>int a[3][4];</code>总共是12个元素， 可以当做3行4列看待。</li>
+<li><code>a[i][j]</code> 表示第i+1行第j+1列的元素。</li>
+<li><code>int a[m][n];</code> 该二维数组右下角位置的元素只能是<code>a[m-l][n-l]</code></li>
+<li>不存在多维数组，因为内存是线性一维的，n维数组可以当做每个元素是n-1维数组的一维数组。</li>
+</ul>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ul>
+<li>函数：避免了重复性操作，有利于程序的模块化。</li>
+<li>逻辑上：函数是能够完成特定功能的独立的代码块。</li>
+<li>物理上：函数能够接收数据，能够对接受的数据进行处理能够将数据处理的结果返回</li>
+<li>定义函数</li>
+<li>函数定义的本质是详细描述函数之所以能够实现某个特定功能。</li>
+<li>return 表达式：终止被调函数， 向主调函数返回表达式的值。</li>
+<li>break是用来终止循环和switch的， return是用来终止函数的。</li>
+<li>函数返回值的类型也称为函数的类型。</li>
+<li>函数的分类<ul>
+<li>有参函数和无参函数</li>
+<li>有返回值函数和无返回值函数</li>
+<li>库函数和用户自定函数</li>
+<li>值传递函数和地址传递函数</li>
+<li>普通函数和主函数(main函数）</li>
+</ul>
+</li>
+<li>一个程序必须有且只能有一个主函数。</li>
+<li>主函数可以调用普通函数普通函数不能调用主函数。</li>
+<li>普通函数可以相互调用。</li>
+<li>主函数是程序的入口，也是程序的出口。</li>
+<li>函数调用和函数定义的顺序如果函数调用写在了函数定义的前面， 则必须加函数前置声明。</li>
+<li>函数是C语言的基本单位，类是Java, C#, C++的基本单位。</li>
+<li>常用的系统函数：<ul>
+<li><code>double sqrt(double x);</code>求的x的平方根</li>
+<li><code>int abs(int x)</code> or <code>double fabs(double x)</code>求x的绝对值</li>
+</ul>
+</li>
+<li>递归和栈</li>
+</ul>
+<h3 id="变量的作用域和存储方式"><a href="#变量的作用域和存储方式" class="headerlink" title="变量的作用域和存储方式"></a>变量的作用域和存储方式</h3><ul>
+<li>全局变量：在所有函数外部定义的变量叫全局变量。</li>
+<li>全局变量使用范围：从定义位置开始到整个程序结束。</li>
+<li>局部变量：在一个函数内部定义的变量或者函数的形参都统称为局部变量</li>
+<li>局部变量使用范围： 只能在本函数内部使用</li>
+<li>在一个函数内部如果定义的局部变量的名字和全局变量名一样时， 局部变量会屏蔽掉全局变量。</li>
+<li>静态变量</li>
+<li>自动变量</li>
+<li>寄存器变量</li>
+</ul>
+<h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><ul>
+<li><p>指针：表示一些复杂的数据结构，快速的传递数据，减少内存的耗用，使函数返回一个以上的值，能直接访问硬件，能够方便的处理字符串，是理解面向对象语言中引用的基础，是C语言的灵魂。</p>
+<pre><code class="c">typedef int (*fun_ptr)(int,int); // 声明一个指向同样参数、返回值的函数指针类型</code></pre>
+</li>
+<li><p>地址：内存单元的编号，从零开始的非负整数，范围: <code>4G [0—4G-1]</code></p>
+</li>
+<li><p>指针就是地址， 地址就是指针。</p>
+</li>
+<li><p>指针变量就是存放内存单元编号的变量，或者说指针变量就是存放地址的变量。</p>
+</li>
+<li><p>指针和指针变量是两个不同的概念。</p>
+</li>
+<li><p>指针的本质就是一个操作受限的非负整数。</p>
+</li>
+<li><p>基本类型指针：<code>int * p;</code></p>
+</li>
+<li><p>指针运算符：放在已经定义好的指针变量的前面。</p>
+</li>
+<li><p>如果P是一个已经定义好的指针变量，则 *p表示以p的内容为地址的变量。</p>
+</li>
+<li><p>如何通过被调函数修改主调函数普通变量的值</p>
+<ol>
+<li>实参必须为该普通变量的地址</li>
+<li>形参必须为指针变量</li>
+<li>在被调函数中通过</li>
+</ol>
+</li>
+<li><p><code>*形参名 = </code> 的方式就可以修改主调函数相关变量的值</p>
+</li>
+<li><p>指针和一维数组</p>
+</li>
+<li><p>a[0] </p>
+</li>
+<li><p>一维数组名是个指针常量，存放的是一维数组第一个元素的地址。</p>
+</li>
+<li><p>下标和指针的关系：如果P是个指针变量， 则p[i]永远等价于 *(P+i)</p>
+</li>
+<li><p>确定一个一维数组需要两个参数：数组第一个元素的地址和数组的长度。</p>
+</li>
+<li><p>指针变量不能相加不能相乘也不能相除。</p>
+</li>
+<li><p>如果两个指针变量指向的是同一块连续空间中的不同存储单元，则这两个指针变量才可以相减。</p>
+</li>
+<li><p><code>sizeof(数据类型)</code>：返回值就是该数据类型所占的字节数。</p>
+</li>
+<li><p>个指针变量，无论它指向的变量占几个字节，该指针变量本身只占四个字节。</p>
+</li>
+<li><p>一个变量的地址是用该变量首字节的地址来表示。</p>
+</li>
+<li><p>指针和二维数组</p>
+<ol>
+<li>指针和函数</li>
+<li>指针和结构体</li>
+<li>多级指针</li>
+</ol>
+</li>
+</ul>
+<h3 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h3><ul>
+<li>传统数组的缺点：数组长度必须事先制定，且只能是常整数，不能是变量，一旦定义， 其长度就不能在更改。</li>
+<li>传统数组的内存程序员无法手动释放，在一个函数运行期间，系统为该函数中数组所分配的空间会一直存在，直到该函数运行完毕时，数组的空间才会被系统释放。</li>
+<li>传统方式定义的数组不能跨函数使用。</li>
+<li>传统数组也叫静态数组</li>
+<li>int类动态数组：<code>int *p = (int *)malloc(int len);</code><ul>
+<li>本语句分配了两块内存， 一块内存是动态分配的，总共len个字节， 另一块是静态分配的，并且这块静态内存是P变量本身所占的内存， 总共4个字节。</li>
+</ul>
+</li>
+<li>malloc只有一个int型的形参， 表示要求系统分配的字节数。</li>
+<li>malloc函数的功能是请求系统len个字节的内存空间， 如果请求分配成功，则返回第一个字节的地址， 如果分配不成功， 则返回NULL</li>
+<li>malloc函数能且只能返回第一个字节的地址， 所以我们需要把这个无任何实际意义的第一个字节的地址（俗称干地址）转化为一个有实际意义的地址，因此malloc前面必须加（数据类型 *)， 表示把这个无实际意义的第一个字节的地址转化为相应类型的地址。</li>
+<li><code>int *p = (int *)malloc(50);</code>表示将系统分配好的50个字节的第一个字节的地址转化为int *型的地址。<ul>
+<li>更准确的说是把第一个字节的地址转化为四个字节的地址，这样P就指向了第一个的四个字节，P+1就指向了第2个的四个字节，p+i就指向了第i+1个的4个字节。p[0]就是第一个元素，p[i]就是第i+1个元素。</li>
+</ul>
+</li>
+<li><code>free(p)</code>表示把P所指向的内存给释放掉。</li>
+<li>静态内存是由系统自动分配，由系统自动释放，静态内存是在栈分配的。</li>
+<li>动态内存是由程序员手动分配，手动释放，动态内存是在堆分配的。</li>
+<li>静态内存不可以跨函数使用</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>void *calloc(int num, int size);</strong></td>
+<td align="left">在内存中动态地分配 num 个长度为 size 的连续空间，并将每一个字节都初始化为 0。所以它的结果是分配了 num*size 个字节长度的内存空间，并且每个字节的值都是0。</td>
+</tr>
+<tr>
+<td align="left"><strong>void free(void *address);</strong></td>
+<td align="left">释放 address 所指向的内存块,释放的是动态分配的内存空间。</td>
+</tr>
+<tr>
+<td align="left"><strong>void *malloc(int num);</strong></td>
+<td align="left">在堆区分配一块指定大小的内存空间，用来存放数据。这块内存空间在函数执行完成后不会被初始化，它们的值是未知的。</td>
+</tr>
+<tr>
+<td align="left"><strong>void *realloc(void *address, int newsize);</strong></td>
+<td align="left">重新分配内存，把内存扩展到 <strong>newsize</strong>。</td>
+</tr>
+</tbody></table>
+<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><ul>
+<li><p>结构体：为了表示一些复杂的事物，而普通的基本类型无法满足实际要求。</p>
+<pre><code class="c">struct tag &#123; 
+    member-list
+    member-list 
+    member-list  
+    ...
+&#125; variable-list ;</code></pre>
+</li>
+<li><p>把一些基本类型数据组合在一起形成的一个新的复合数据类型，这个叫做结构体。</p>
+</li>
+<li><p>定义结构体</p>
+</li>
+<li><p>结构体变量定义的同时可以整体赋初值，如果定义完之后， 则只能单个的赋初值。</p>
+</li>
+<li><p>取出结构体变量中的每一个成员</p>
+<ol>
+<li><code>结构体变量名.成员名</code></li>
+<li><code>指针变量名-&gt;成员名</code></li>
+</ol>
+</li>
+<li><p>使用结构体指针变量作为函数参数来传递</p>
+</li>
+<li><p>结构体变量不能相加减乘除，但结构体变量可以相互赋值。</p>
+</li>
+<li><p>共用体</p>
+<pre><code class="C">union [union tag]
+&#123;
+   member definition;
+   member definition;
+   ...
+   member definition;
+&#125; [one or more union variables];</code></pre>
+</li>
+<li><p>位域声明</p>
+<pre><code class="c">struct
+&#123;
+  type [member_name] : width ;
+&#125;;</code></pre>
+</li>
+<li><p>typedef</p>
+<pre><code class="C">typedef unsigned char byte;</code></pre>
+</li>
+</ul>
+<h3 id="枚举和补码"><a href="#枚举和补码" class="headerlink" title="枚举和补码"></a>枚举和补码</h3><ul>
+<li><p>枚举：把一个事物所有可能的取值一一列举出来</p>
+<pre><code class="c">enum　枚举名　&#123;枚举元素1,枚举元素2,……&#125;;</code></pre>
+</li>
+<li><p>原码：也叫符号-绝对值码，最髙位0表示正，1表示负，其余二进制位是该数字的绝对值的二进制位。</p>
+</li>
+<li><p>原码简单易懂，加减运算复杂，存在加减乘除四种运算，增加了CPU的复杂度，零的表示不唯一。</p>
+</li>
+<li><p>反码：反码运算不便，没有在计算机中应用。</p>
+</li>
+<li><p>移码：移码表示数值平移n位，n称为移码量。</p>
+</li>
+<li><p>移码主要用于浮点数的阶码的存储。</p>
+</li>
+<li><p>补码</p>
+</li>
+<li><p>求正整数的二进制：除2取余，直至商为零，余数倒叙排序。</p>
+</li>
+<li><p>求负整数的二进制：先求与该负数相对应的正整数的二进制代码，然后将所有位取反，末尾加1，不够位数时， 左边补1。</p>
+</li>
+<li><p>零的二进制全是零</p>
+</li>
+<li><p>如果首位是0，表明是正整数， 按普通方法来求。</p>
+</li>
+<li><p>如果首位是1， 则表明是负整数，将所有位取反，末尾加1，所得数字就是该负数的绝对值。</p>
+</li>
+<li><p>int类型变量所能存储的最大正数用十六进制表示是：7FFFFFFF</p>
+</li>
+<li><p>int类型变量所能存储的绝对值最大的负整数用十六进制表示是：80000000</p>
+</li>
+<li><p>进制转化</p>
+</li>
+<li><p>字符串的处理</p>
+</li>
+</ul>
+<h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><ul>
+<li>算法：对存储数据的操作，对不同的存储结构，要完成某一个功能所执行的操作是不一样的。</li>
+<li>算法是依附于存储结构的，不同的存储结构， 所执行的算法是不一样的。</li>
+<li>广义的算法也叫泛型，无论数据是如何存储的，对该数据的操作都是一样的。</li>
+<li>数组查找快，增删慢；链表查找慢，增删快，占位小。</li>
+<li>首节点：存放第一个有效数据的节点。</li>
+<li>尾节点：存放最后一个有效数据的节点。</li>
+<li>头结点：首节点前面的那个节点。</li>
+<li>头结点的数据类型和首节点的类型是一摸一样的。</li>
+<li>头结点并不存放有效数据设置头结点的目的是为了方便对链表的操作。</li>
+<li>头指针：存放头结点地址的指针变量。</li>
+<li>确定一个链表需要一个参数：头指针</li>
+<li>二进制全部为零的含义 <code>—0000000000000</code> 的含义<ol>
+<li>数值零</li>
+<li>字符串结束标记符 <code> \0</code></li>
+<li>空指针<code>NULL</code></li>
+</ol>
+</li>
+<li><code>NULL</code> 本质也是零，但这个零不代表数字零，而表示的是内存单元的编号零。</li>
+<li>以零为编号的存储单元的内容不可读，不可写。</li>
+<li>位运算符 <ul>
+<li>按位与 <code>&amp;</code> </li>
+<li>按位或 <code>|</code> </li>
+<li>按位取反 <code>~</code> </li>
+<li>按位异或 <code>^</code> </li>
+<li>按位左移 <code>&lt;&lt;</code> </li>
+<li>按位右移 <code>&gt;&gt;</code> </li>
+</ul>
+</li>
+<li>宏</li>
+</ul>
+<h3 id="C输入输出"><a href="#C输入输出" class="headerlink" title="C输入输出"></a>C输入输出</h3><table>
+<thead>
+<tr>
+<th align="left">标准文件</th>
+<th align="left">文件指针</th>
+<th align="left">设备</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">标准输入</td>
+<td align="left">stdin</td>
+<td align="left">键盘</td>
+</tr>
+<tr>
+<td align="left">标准输出</td>
+<td align="left">stdout</td>
+<td align="left">屏幕</td>
+</tr>
+<tr>
+<td align="left">标准错误</td>
+<td align="left">stderr</td>
+<td align="left">您的屏幕</td>
+</tr>
+</tbody></table>
 <ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
+<li><code>getchar()</code> &amp; <code>putchar()</code> 函数</li>
+<li><code>gets()</code> &amp; <code>puts()</code> 函数</li>
+<li><code>scanf()</code> 和 <code>printf()</code> 函数</li>
+</ul>
+<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><ul>
+<li><p>文件指针<code>fp</code></p>
 </li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
+<li><p><code>fopen(文件名, 使用方式);</code>、<code>fclose(文件名, 使用方式);</code></p>
 </li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
+<li><p><code>fgets(str,n,fp)</code>、<code>fputs(str,fp)</code></p>
+</li>
+<li><p><code>fprintf(文件指针,格式字符串,输出表列)</code>、<code>fscanf(文件指针,格式字符串,输入表列)</code></p>
+</li>
+<li><p><code>fread(buffer,size,count,fp)</code>、<code>fwrite(buffer,size,count,fp)</code></p>
+</li>
+<li><p><code>ferror(fp);</code>、<code>clearerr(fp)</code></p>
+</li>
+<li><p><code>fopen()</code>函数原型</p>
+<pre><code class="c">FILE *fopen( const char * filename, const char * mode );</code></pre>
 </li>
 </ul>
+<h3 id="C-预处理器（C-Preprocessor）"><a href="#C-预处理器（C-Preprocessor）" class="headerlink" title="C 预处理器（C Preprocessor）"></a>C 预处理器（C Preprocessor）</h3><ul>
+<li><p>C 预处理器不是编译器的组成部分，但是它是编译过程中一个单独的步骤，它们会指示编译器在实际编译之前完成所需的预处理。</p>
 </li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
-</li>
-</ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
-<ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
-</ul>
-</li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
-<ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
-</ul>
+<li><p>所有的预处理器命令都是以井号（#）开头。它必须是第一个非空字符，为了增强可读性，预处理器指令应从第一列开始。</p>
+<table>
+<thead>
+<tr>
+<th align="left">指令</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">#define</td>
+<td align="left">定义宏</td>
+</tr>
+<tr>
+<td align="left">#include</td>
+<td align="left">包含一个源代码文件</td>
+</tr>
+<tr>
+<td align="left">#undef</td>
+<td align="left">取消已定义的宏</td>
+</tr>
+<tr>
+<td align="left">#ifdef</td>
+<td align="left">如果宏已经定义，则返回真</td>
+</tr>
+<tr>
+<td align="left">#ifndef</td>
+<td align="left">如果宏没有定义，则返回真</td>
+</tr>
+<tr>
+<td align="left">#if</td>
+<td align="left">如果给定条件为真，则编译下面代码</td>
+</tr>
+<tr>
+<td align="left">#else</td>
+<td align="left">#if 的替代方案</td>
+</tr>
+<tr>
+<td align="left">#elif</td>
+<td align="left">如果前面的 #if 给定条件不为真，当前条件为真，则编译下面代码</td>
+</tr>
+<tr>
+<td align="left">#endif</td>
+<td align="left">结束一个 #if……#else 条件编译块</td>
+</tr>
+<tr>
+<td align="left">#error</td>
+<td align="left">当遇到标准错误时，输出错误消息</td>
+</tr>
+<tr>
+<td align="left">#pragma</td>
+<td align="left">使用标准化方法，向编译器发布特殊的命令到编译器中</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
-</li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
+<h3 id="C错误处理"><a href="#C错误处理" class="headerlink" title="C错误处理"></a>C错误处理</h3><ul>
+<li>C 语言不提供对错误处理的直接支持，但是作为一种系统编程语言，它以返回值的形式允许您访问底层数据。</li>
+<li>在发生错误时，大多数的 C 或 UNIX 函数调用返回 1 或 NULL，同时会设置一个错误代码 <code>errno</code>，该错误代码是全局变量，表示在函数调用期间发生了错误。您可以在 <code>errno.h</code> 头文件中找到各种各样的错误代码。</li>
+<li>C 语言提供了 <code>perror()</code> 和 <code>strerror()</code> 函数来显示与 <code>errno</code> 相关的文本消息。</li>
+</ul>
+<h3 id="C命令行参数"><a href="#C命令行参数" class="headerlink" title="C命令行参数"></a>C命令行参数</h3><ul>
+<li>执行程序时，可以从命令行传值给 C 程序，这些值被称为命令行参数，它们对程序很重要，特别是当您想从外部控制程序，而不是在代码内对这些值进行硬编码时，就显得尤为重要了。</li>
+<li>命令行参数是使用 main() 函数参数来处理的，其中，<code>argc</code> 是指传入参数的个数，<code>argv[]</code> 是一个指针数组，指向传递给程序的每个参数。</li>
+<li>对命令行参数解析<pre><code class="C">int main(int argc, char *argv[])
+&#123;
+    char *optstr = &quot;p:n:m:c:&quot;;
+    struct option opts[] = &#123;
+        &#123;&quot;path&quot;, 1, NULL, &#39;p&#39;&#125;,
+        &#123;&quot;name&quot;, 1, NULL, &#39;n&#39;&#125;,
+        &#123;&quot;mtime&quot;, 1, NULL, &#39;m&#39;&#125;,
+        &#123;&quot;ctime&quot;, 1, NULL, &#39;c&#39;&#125;,
+        &#123;0, 0, 0, 0&#125;,
+    &#125;;
+    int opt;
+    while((opt = getopt_long(argc, argv, optstr, opts, NULL)) != -1)&#123;
+        switch(opt) &#123;
+            case &#39;p&#39;:
+                strcpy(path, optarg);
+                break;
+            case &#39;n&#39;:
+                strcpy(targetname, optarg);
+                break;
+            case &#39;m&#39;:
+                modifiedtime = atoi(optarg);
+                break;
+            case &#39;c&#39;:
+                changetime = atoi(optarg);
+                break;
+            case &#39;?&#39;:
+                if(strchr(optstr, optopt) == NULL)&#123;
+                    fprintf(stderr, &quot;unknown option &#39;-%c&#39;\n&quot;, optopt);
+                &#125;else&#123;
+                    fprintf(stderr, &quot;option requires an argument &#39;-%c&#39;\n&quot;, optopt);
+                &#125;
+                return 1;
+        &#125;
+    &#125;
+    findInDir(path);
+    return 0;
+&#125;</code></pre>
 </li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
-</li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
-</li>
-</ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h3 id="C库函数"><a href="#C库函数" class="headerlink" title="C库函数"></a>C库函数</h3><ul>
+<li>C 标准库是一组 C 内置函数、常量和头文件，比如 <code>&lt;stdio.h&gt;</code>、<code>&lt;stdlib.h&gt;</code>、<code>&lt;math.h&gt;</code>，等等。</li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-standard-library.html">C标准库参考手册</a></li>
 </ul>
 
   
@@ -649,8 +1007,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
             <ul>
               
                 <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
+                  <a href="https://www.runoob.com/cprogramming/c-tutorial.html" rel="external nofollow noopener noreferrer" target="_blank">
+                  C语言教程
                   </a>
                 </li>
               
@@ -695,7 +1053,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C-C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C/C++</p></a></div>
 
 
         
@@ -708,8 +1066,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/&title=C语言基础知识总结 - Bezhuang's Blog&summary=
+1972 年，为了移植与开发 UNIX 操作系统，丹尼斯·里奇在贝尔电话实验室设计开发了 C 语言。C 语言是一种通用的、面向过程式的计算机程序设计语言，它与 Java 编程语言一样普及，二者在现代软件程序员之间都得到广泛使用。强烈推荐郝斌老师的C语言自学教程，在入门C语言时给了我很大的启发和帮助，以下是对于C语言重要知识点的归纳，附带我在学习过程中练习的代码
 "
           
           >
@@ -722,8 +1080,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/&title=C语言基础知识总结 - Bezhuang's Blog&summary=
+1972 年，为了移植与开发 UNIX 操作系统，丹尼斯·里奇在贝尔电话实验室设计开发了 C 语言。C 语言是一种通用的、面向过程式的计算机程序设计语言，它与 Java 编程语言一样普及，二者在现代软件程序员之间都得到广泛使用。强烈推荐郝斌老师的C语言自学教程，在入门C语言时给了我很大的启发和帮助，以下是对于C语言重要知识点的归纳，附带我在学习过程中练习的代码
 "
           
           >
@@ -736,8 +1094,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/&title=C语言基础知识总结 - Bezhuang's Blog&summary=
+1972 年，为了移植与开发 UNIX 操作系统，丹尼斯·里奇在贝尔电话实验室设计开发了 C 语言。C 语言是一种通用的、面向过程式的计算机程序设计语言，它与 Java 编程语言一样普及，二者在现代软件程序员之间都得到广泛使用。强烈推荐郝斌老师的C语言自学教程，在入门C语言时给了我很大的启发和帮助，以下是对于C语言重要知识点的归纳，附带我在学习过程中练习的代码
 "
           
           >
@@ -752,7 +1110,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADpUlEQVR42u3ZQXbCMAwEUO5/6fYEvFgjBZT2e0dJg/3DYhi9fqxovRCAAwcOnAUO3BK4V7im///d69PrqveP9wsOHDhw4MCBA7cM7jgAXlzffb8Kk8Kl5wUHDhw4cODAgdsKVw2sadCsHjwNuOk+wYEDBw4cOHDg/jpcdePVQrEaVLvQ4MCBAwcOHDhw/xXuroN2Fzhw4MCBAwcO3F+HmxoUTw2C0wH2+kk+OHDgwIEDBw7cENx0oNz+Oj4vOHDgwIEDBw7cErjuqg6Uq39PA25asF6eFxw4cODAgQMHbglcdcNVoGqRmAbWU+DugwYHDhw4cODAgdsKVx04n0JMD67ToN09Fzhw4MCBAwcO3Ba4qeKwe780GE8H88t9gAMHDhw4cODALYXrBtDuQLpaZE4H7zgAgwMHDhw4cODAfQmuuvFusC0PgpsD7jQgvx1IgwMHDhw4cODALYHrDqTTgJoG6ruC8uUXAhw4cODAgQMHbincdIGZBudqwJ4uPMGBAwcOHDhw4LbDpYVjdcPVA91VRJ5+3tv3wYEDBw4cOHDglsFNDaanNprevzroLhem4MCBAwcOHDhwy+C6ENOBN73/9Beh/MsBHDhw4MCBAwfuQ3DVIvD0dbyx4QdV/UIcF5ngwIEDBw4cOHBfhrvrgN0B9un9qtd1B+bgwIEDBw4cOHBb4KqD4+mDpgdKC9JucQsOHDhw4MCBA7cNLg3CaQCuXjd9nzjIgwMHDhw4cODALYE73eBx0dccKKdQ1X3HhSo4cODAgQMHDtwSuNON3l1spkXm1AMBBw4cOHDgwIF7Gly1OJwqGKsPpFq0poPty88BBw4cOHDgwIF7KFx3sNsddHcfVPvBggMHDhw4cODALYGbKhyr0N2AXQ3Ep+cEBw4cOHDgwIF7Klw6cG4PeoeKxuogGhw4cODAgQMH7qlwabBMIasFZgp02wMBBw4cOHDgwIFbAtddV7CnB64Cn35uWmjGvxzAgQMHDhw4cOA+BNcNhukAu3q/uHhs3h8cOHDgwIEDB247XBp4q9dNH7gdaLsNMDhw4MCBAwcO3BK4NPB2A253kJwWnO0iExw4cODAgQMH7qFwaZDuDri7QToN8uDAgQMHDhw4cP8NLg3CpwVk9/rjBwEOHDhw4MCBA7cUrjuQrhaGx4PgcNCc7vPjk3xw4MCBAwcOHLgQrjsATovFtNicLlCPfwCAAwcOHDhw4MAtgbOKsAjAgQMHzgIH7rvrF1z6/yYUBV7aAAAAAElFTkSuQmCC">
           </div>
         </div>
       
@@ -760,7 +1118,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/&text=C语言基础知识总结 - Bezhuang's Blog"
           
           >
           
@@ -786,11 +1144,20 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/MySQL%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>MySQL 的安装和使用</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+MySQL 是目前应用最广泛的开源关系数据库，在学习完 SQL 语言基础后，需要使用 MySQL 进行学习、开发、测试，部署，本篇笔记是对 MySQL 的安装和使用的记录，可供参考。
+
+下载
+...</p>
+        </a>
+      
+      
+        <a class='next' href='/%E4%BD%99%E5%A7%9A%E6%B8%B8%E8%AE%B0/'>
+          <p class='title'>余姚两日自驾游<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+“全球绿色城市”，宁波余姚，位于浙东盆地山区和浙北平原交叉地区，是十分小众的旅游目的地，余姚的四明山盘山公路，号称“浙江最美的盘山公路”、“中国秋名山”，一直深受广大自驾爱好者的喜爱。上半年因...</p>
         </a>
       
     </div>
@@ -833,7 +1200,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#C%E7%BC%96%E7%A8%8B%E9%A2%84%E5%A4%87"><span class="toc-text">C编程预备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA%E5%87%BD%E6%95%B0"><span class="toc-text">输入和输出函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="toc-text">流程控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-text">数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-text">函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E5%AD%98%E5%82%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">变量的作用域和存储方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E9%92%88"><span class="toc-text">指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="toc-text">动态内存分配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-text">结构体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE%E5%92%8C%E8%A1%A5%E7%A0%81"><span class="toc-text">枚举和补码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E8%A1%A8"><span class="toc-text">链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-text">C输入输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6"><span class="toc-text">文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%88C-Preprocessor%EF%BC%89"><span class="toc-text">C 预处理器（C Preprocessor）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="toc-text">C错误处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><span class="toc-text">C命令行参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C%E5%BA%93%E5%87%BD%E6%95%B0"><span class="toc-text">C库函数</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +1219,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="C语言基础知识总结";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

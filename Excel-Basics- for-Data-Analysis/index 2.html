@@ -22,14 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
+  <title>Excel Basics for Data Analysis - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="云服务器,MacOS">
+    <meta name="keywords" content="Excel">
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+Excel is an essential tool for working with data - whether for business, marketing, data analytics, or research. Throughout this course provided by IBM, I’v...">
   
 
   <!-- feed -->
@@ -459,7 +459,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        Excel Basics for Data Analysis
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +468,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE/">人工智能与大数据</a>
     </a>
   </div>
 
@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2021年1月31日</p>
   </a>
 </div>
 
@@ -490,13 +490,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：1.4k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：8分钟</p>
     </a>
   </div>
 
@@ -511,152 +511,282 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>Excel is an essential tool for working with data - whether for business, marketing, data analytics, or research. Throughout this course provided by IBM, I’ve gained valuable experience in cleansing and wrangling data using functions and then analyze data using techniques like filtering, sorting and creating pivot tables. The following are the notes I took during this course. </p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
+
+
+	<div class="row">
+    <embed src="/pdf/Coursera-Excel-Basics.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<h3 id="Introduction-to-Spreadsheets-for-Data-Analysis"><a href="#Introduction-to-Spreadsheets-for-Data-Analysis" class="headerlink" title="Introduction to Spreadsheets for Data Analysis"></a>Introduction to Spreadsheets for Data Analysis</h3><ul>
+<li><p>There are several spreadsheet applications available in the marketplace, the most commonly used and fully-featured spreadsheet application is Microsoft Excel. </p>
 </li>
-<li><p>应用程序安装信息</p>
+<li><p>Spreadsheets provide several advantages over manual calculation methods and they help you keep data organized and easily accessible. </p>
+</li>
+<li><p>As a Data Analyst, you can use spreadsheets as a tool for your data analysis tasks. </p>
+</li>
+<li><p>There are several elements that make up a workbook in a spreadsheet application. </p>
+</li>
+<li><p>The ribbon provides access to all the features and tools required to view, enter, edit, manipulate, clean, and analyze data in Excel. </p>
+</li>
+<li><p>There are several ways to navigate around a worksheet and workbook in Excel. </p>
+</li>
+<li><p>How a Data Analyst Uses Spreadsheets: Collecting Data -&gt; Cleaning Data -&gt; Analyzing Data -&gt; Visualizing Data</p>
+</li>
+<li><p>Workbooks are represented as a <code>.XLSX</code> file (Includes Data, Calculations, Functions and other Underlying Elements)</p>
+</li>
+<li><p>Cells contains Text, Numbers, Formulas or Calculation Results</p>
+</li>
+<li><p>Cells are organized in Rows and Columns</p>
+</li>
+</ul>
+<h3 id="Excel-Keyboard-Shortcuts"><a href="#Excel-Keyboard-Shortcuts" class="headerlink" title="Excel Keyboard Shortcuts"></a>Excel Keyboard Shortcuts</h3><table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Close a workbook</td>
+<td>Ctrl+W</td>
+</tr>
+<tr>
+<td>Open a workbook</td>
+<td>Ctrl+O</td>
+</tr>
+<tr>
+<td>Save a workbook</td>
+<td>Ctrl+S</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Ctrl+C</td>
+</tr>
+<tr>
+<td>Cut</td>
+<td>Ctrl+X</td>
+</tr>
+<tr>
+<td>Paste</td>
+<td>Ctrl+V</td>
+</tr>
+<tr>
+<td>Undo</td>
+<td>Ctrl+Z</td>
+</tr>
+<tr>
+<td>Remove cell contents</td>
+<td>Delete</td>
+</tr>
+<tr>
+<td>Bold</td>
+<td>Ctrl+B</td>
+</tr>
+<tr>
+<td>Open context menu</td>
+<td>Shift+F10</td>
+</tr>
+<tr>
+<td>Expand or collapse the ribbon</td>
+<td>Ctrl+F1</td>
+</tr>
+<tr>
+<td>Move up one cell in the worksheet</td>
+<td>Up arrow key</td>
+</tr>
+<tr>
+<td>Move down one cell in the worksheet</td>
+<td>Down arrow key</td>
+</tr>
+<tr>
+<td>Move one cell left in the worksheet</td>
+<td>Left arrow key</td>
+</tr>
+<tr>
+<td>Move one cell right in the worksheet</td>
+<td>Right arrow key</td>
+</tr>
+<tr>
+<td>Move to the edge of the current data region in the worksheet (e.g. end of column)</td>
+<td>Ctrl+Arrow key (e.g. Ctrl+Down arrow)</td>
+</tr>
+<tr>
+<td>Move to the last cell on a worksheet</td>
+<td>Ctrl+End</td>
+</tr>
+<tr>
+<td>Move to the beginning of a worksheet</td>
+<td>Ctrl+Home</td>
+</tr>
+<tr>
+<td>Extend the selection of cells to the last used cell on a worksheet (lower right corner)</td>
+<td>Ctrl+Shift+End</td>
+</tr>
+<tr>
+<td>Move to the cell in the upper-left corner of the window (when Scroll Lock is On)</td>
+<td>Home+Scroll Lock</td>
+</tr>
+<tr>
+<td>Move one screen down in a worksheet</td>
+<td>Page Down</td>
+</tr>
+<tr>
+<td>Move one screen up in a worksheet</td>
+<td>Page Up</td>
+</tr>
+<tr>
+<td>Move one screen to the right in a worksheet</td>
+<td>Alt+Page Down</td>
+</tr>
+<tr>
+<td>Move one screen to the left in a worksheet</td>
+<td>Alt+Page Up</td>
+</tr>
+<tr>
+<td>Move to the next sheet in a workbook</td>
+<td>Ctrl+Page Down</td>
+</tr>
+<tr>
+<td>Move to the previous sheet in a workbook</td>
+<td>Ctrl+Page Up</td>
+</tr>
+<tr>
+<td>Edit the active cell and put the cursor at the end of the cell’s contents</td>
+<td>F2</td>
+</tr>
+<tr>
+<td>Enter the current time</td>
+<td>Ctrl+Shift+colon (:)</td>
+</tr>
+<tr>
+<td>Enter the current date</td>
+<td>Ctrl+semi-colon (;)</td>
+</tr>
+</tbody></table>
+<h3 id="Getting-Started-Using-Spreadsheets"><a href="#Getting-Started-Using-Spreadsheets" class="headerlink" title="Getting Started Using Spreadsheets"></a>Getting Started Using Spreadsheets</h3><ul>
+<li>There are several features to modify views in Excel, and it is very straightforward to enter and edit data in a spreadsheet. </li>
+<li>You can move or copy data within a worksheet or between worksheets, and you can use AutoFill to automatically enter data that is in a series or that fits a pattern. </li>
+<li>You can format both cells and data in Excel. </li>
+<li>A formula is made up of several component parts, and formulas can perform calculations using numbers directly or by using references to data in the worksheet. </li>
+<li>Basic formulas: <code>=SUM()</code>, <code>=AVERAGE(</code>), <code>=MIN()</code>, <code>=MAX()</code>, <code>=COUNT()</code>, <code>=MEDIUM()</code></li>
+<li>More functions<ul>
+<li>Financial : ACCRINT, INTRATE</li>
+<li>Logical : AND, IF, OR, NOT</li>
+<li>Text : CONCAT, FIND, SEARCH</li>
+<li>Date &amp; Time : NETWORKDAYS, WEEKDAY</li>
+<li>Lookup &amp; Reference : AREAS, SORTBY, VLOOKUP, HLOOKUP</li>
+<li>Math &amp; Trig : POWER, SUMIF, SUMPRODUCT</li>
+<li>Statistical : AVERAGE, COUNTIF, MAX, MEDIAN, MIN</li>
+</ul>
+</li>
+<li>You can use the Fill Handle in Excel to quickly copy formulas to other cells. </li>
+<li>There are several different categories of function you can use for different purposes, and you can search for a function by name, or by category. </li>
+<li>You can reference cells in the worksheet in your formulas by using relative, absolute, or mixed references. </li>
+<li>You can make a formula absolute by adding a dollar symbol ($) to a cell reference. </li>
+<li>If you get errors in your formulas, you can use the error-checking capabilities of Excel to resolve them. </li>
+</ul>
+<h3 id="Basics-of-Data-Quality-and-Privacy"><a href="#Basics-of-Data-Quality-and-Privacy" class="headerlink" title="Basics of Data Quality and Privacy"></a>Basics of Data Quality and Privacy</h3><ul>
+<li><p>The Five Traits of Data Quality: </p>
 <ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
+<li>Accuracy </li>
+<li>Completeness </li>
+<li>Reliability </li>
+<li>Relevance </li>
+<li>Timeliness </li>
 </ul>
 </li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
+<li><p>Importing Text: You can use the ‘Text Import Wizard’ to import data from other formats, such as plain text, or comma-separated value files. </p>
 </li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
+<li><p>The Three Fundamentals of Data Privacy: Confidentiality, Collection and Use, Compliance </p>
 </li>
 </ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
+<h3 id="Cleaning-Data"><a href="#Cleaning-Data" class="headerlink" title="Cleaning Data"></a>Cleaning Data</h3><ul>
+<li><p>It’s important to remove any duplicated or inaccurate data, and it’s important to remove any empty rows in your dataset. </p>
 </li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
+<li><p>There are several other types of data inconsistency that you may need to resolve, in order to properly clean your data: </p>
+<ol>
+<li>Change the case of text</li>
+<li>Fix date formatting errors</li>
+<li>Trim whitespace from your data </li>
+</ol>
+</li>
+<li><p>You can use the Flash Fill and Text to Columns features in Excel to manipulate and standardize your data, and functions can also be used to help manipulate and standardize your data. </p>
 </li>
 </ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
+<h3 id="Data-Analysis-Basics-Filtering-and-Sorting-Data"><a href="#Data-Analysis-Basics-Filtering-and-Sorting-Data" class="headerlink" title="Data Analysis Basics, Filtering and Sorting Data"></a>Data Analysis Basics, Filtering and Sorting Data</h3><ul>
+<li>Before shaping your data, you need to visualize the final output, and ask yourself the following questions: <ul>
+<li>How big is the dataset? </li>
+<li>What type of filtering is required to find the necessary information? </li>
+<li>How should the data be sorted? </li>
+<li>What type of calculations are needed? </li>
+</ul>
 </li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
+<li>There are several advantages to formatting your data as a table: <ul>
+<li>Automatic calculations even when filtering </li>
+<li>Column headings never disappear </li>
+<li>Banded rows to make reading easier </li>
+<li>Tables will automatically expand when adding new rows </li>
+</ul>
 </li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
+<li>The most basic way of shaping your data is to sort and filter it:<ul>
+<li>Sorting data helps you to organize it by a specified criteria, such as numerically, alphabetically, or chronologically. </li>
+<li>Filtering our data makes it easier to control what data is displayed and what is hidden, based on filtered fields. </li>
+</ul>
 </li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
+<li>Functions in Excel are arranged into multiple categories; including mathematical, statistical, logical, financial, and date and time-based. </li>
+<li>Common functions for a data analyst include:  <code>IF</code>, <code>IFS</code>(alternative for nested IF), <code>COUNTIF</code>, <code>SUMIF</code>, <code>VLOOKUP</code>(vertical lookup), <code>HLOOKUP</code>(horizontal lookup), <code>XLOOKUP</code><ul>
+<li><code>=IF(AD2&gt;300,&quot;Large&quot;,IF(AD2&gt;100,&quot;Medium&quot;,IF(AD2&gt;0,&quot;Small&quot;)))</code></li>
+<li><code>=IFS(AD2&gt;300,&quot;Large&quot;,AD2&gt;100,&quot;Medium&quot;,AD2&gt;0,&quot;Small&quot;)</code></li>
+<li><code>=COUNTIF(N2:N195,&quot;VISA&quot;)</code></li>
+<li><code>=SUMIF(range, criteria, [sum range])</code></li>
+<li><code>=SUMIFS ([sum range], range1, criteria1, range2, criteria2, ...)</code></li>
+<li><code>=VLOOKUP (value, table, col_index, [range_lookup])</code></li>
+<li><code>=HLOOKUP (value, table, row_index, [range_lookup])</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Using-Pivot-Tables"><a href="#Using-Pivot-Tables" class="headerlink" title="Using Pivot Tables"></a>Using Pivot Tables</h3><ul>
+<li><p>Pivot Tables:</p>
 <ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<li>To obtain usable and presentable insights into your data you need to use Pivot Tables. </li>
+<li>Pivot tables provide a simple and quick way to summarize and analyze data, to observe trends and patterns in your data and to make comparisons of your data. </li>
+<li>Pivot tables are dynamic, so as you change and add data to the original dataset on which the pivot table is based, the analysis and summary information changes too. </li>
+<li>A Data Analyst can use pivot tables to draw useful and relevant conclusions about, and create insights into, an organization’s data in order to present those insights to interested parties within the company. </li>
 </ul>
 </li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
+<li><p>Use this Pivot Table checklist to ensure your data is in a fit state to make a Pivot Table: </p>
 <ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<li>Format your data as a table for best results.</li>
+<li>Ensure column headings are correct, and there is only one header row, as these column headings become the field names in a Pivot Table.</li>
+<li>Remove any blank rows and columns, and try to eliminate blank cells also.</li>
+<li>Ensure value fields are formatted as numbers, and not text, and ensure date fields are formatted as dates, and not text.</li>
 </ul>
 </li>
+<li><p>Arranging Pivot Tables with Filters and Recommended Tables:</p>
+<ul>
+<li>You use the Pivot Table Fields pane to add and arrange data fields in your pivot table. </li>
+<li>Recommended Pivot Tables are a list of suggested different combinations of data that could be used when creating a Pivot Table, based on the data selected in the worksheet. </li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
 </li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
-</li>
+<li><p>Filters and Slicers:</p>
+<ul>
+<li>Slicers are on-screen graphical filter objects that enable you to filter your data using buttons, which makes it easier to perform quick filtering of your pivot table data. </li>
+<li>Timelines are another type of filter tool that enable you to filter specifically on date-related data in your pivot table. This is a much quicker and more effective way of dynamically filtering by date, rather than having to create and adjust filters on your date columns. </li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
 </li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
-</li>
-</ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -695,7 +825,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Excel/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Excel</p></a></div>
 
 
         
@@ -708,8 +838,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Excel-Basics-%20for-Data-Analysis/&title=Excel Basics for Data Analysis - Bezhuang's Blog&summary=
+Excel is an essential tool for working with data - whether for business, marketing, data analytics, or research. Throughout this course provided by IBM, I’ve gained valuable experience in cleansing and wrangling data using functions and then analyze data using techniques like filtering, sorting and creating pivot tables. The following are the notes I took during this course. 
 "
           
           >
@@ -722,8 +852,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Excel-Basics-%20for-Data-Analysis/&title=Excel Basics for Data Analysis - Bezhuang's Blog&summary=
+Excel is an essential tool for working with data - whether for business, marketing, data analytics, or research. Throughout this course provided by IBM, I’ve gained valuable experience in cleansing and wrangling data using functions and then analyze data using techniques like filtering, sorting and creating pivot tables. The following are the notes I took during this course. 
 "
           
           >
@@ -736,8 +866,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Excel-Basics-%20for-Data-Analysis/&title=Excel Basics for Data Analysis - Bezhuang's Blog&summary=
+Excel is an essential tool for working with data - whether for business, marketing, data analytics, or research. Throughout this course provided by IBM, I’ve gained valuable experience in cleansing and wrangling data using functions and then analyze data using techniques like filtering, sorting and creating pivot tables. The following are the notes I took during this course. 
 "
           
           >
@@ -752,7 +882,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADpklEQVR42u3aMULDQAwEwPz/09BD4dNKdkSY6wiJfTemWLR5fVnReiEABw4cOAscuCVwr3D9uuCP168+V3398kCH7++eFxw4cODAgQMHbhtcusErgNONp/cpB9juecGBAwcOHDhw4JbCnQbX9EDV66XXT/d/+X5w4MCBAwcOHLgPhesCpgPUNJiDAwcOHDhw4MD9V7jTg6QH7gZkcODAgQMHDhy4/wKXFrpTD6D6oLqD07c1+eDAgQMHDhw4cENw1VUNmNt+js8LDhw4cODAgQO3BK67qoPL09fTz00H6F/XBwcOHDhw4MCBWwLXHuwVv/jXLZCrQba7T3DgwIEDBw4cuK1w1Q+mA8S7iu6pgeYxMDhw4MCBAwcO3DK40wHl6evV4Hu6j6n7xrDgwIEDBw4cOHDL4NKB49QX+b4eWu2CGxw4cODAgQMHbhncVHGbFs7dArkKUS2+wYEDBw4cOHDg/ipcupG7gvJpYV59gJfnBQcOHDhw4MCBWwL3dOA9vW75QGnBXL0/OHDgwIEDBw7cErjTC1QL7DTgpsH5tICuBvXL/xzAgQMHDhw4cODeDJde+K7gPLW/6oD28mdw4MCBAwcOHLglcHcfPA3WaUH+eCENDhw4cODAgQP3ZrhuIdwtjNP3Tf3+tiYfHDhw4MCBAwfuZrjT4rhaUHcDc/U608U2OHDgwIEDBw7cVringmwKVIVJC+njBwsOHDhw4MCBA7cULi2OuwVztYBOA20VEhw4cODAgQMHbitc94t/1WDaDb5Tr9/e5IMDBw4cOHDgwD0EFw/2hgJuuk7vPzb4BAcOHDhw4MCBWwLXHfylBXY3EHeL7/gPAxw4cODAgQMHbgncFFh1cFgttu8KuNVgDg4cOHDgwIEDtxXuNby6g8k0CKf7u3zQ4MCBAwcOHDhwy+GmNz5VSF/tt7qPaoAGBw4cOHDgwIHbCle9cHXwODVYvCuotyfA4MCBAwcOHDhwD8F1VzUwVw/QDeRpcAcHDhw4cODAgdsON1U0VyG6B6oG6amBKzhw4MCBAwcO3Da4buCdOnA5kA4/IHDgwIEDBw4cuL8Klxa2aeGbPrg0cLeDPjhw4MCBAwcO3IfBTQXcdBDaDbzHAR4cOHDgwIEDB+7D4KoHeTowjwVrcODAgQMHDhy4pXB3FdLV+0xfbyowgwMHDhw4cODAbYNLi9rjIrdY/FaDdDqYLAd7cODAgQMHDhy4JXBWMZAjAAcOHDgLHLj3rm+ZJz0TKHiutAAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -760,7 +890,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Excel-Basics-%20for-Data-Analysis/&text=Excel Basics for Data Analysis - Bezhuang's Blog"
           
           >
           
@@ -786,11 +916,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/Data-Visualization-and-Dashboards/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Data Visualization and Dashboards with Excel and Cognos</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+“A picture is worth 1,000 words”. This Course provided by IBM endows me with the ability to effe...</p>
+        </a>
+      
+      
+        <a class='next' href='/Introduction-to-Data-Analytics/'>
+          <p class='title'>Introduction to Data Analytics<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+The Introduction to Data Analytics course provided by IBM is the first in a series of courses de...</p>
         </a>
       
     </div>
@@ -833,7 +969,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Introduction-to-Spreadsheets-for-Data-Analysis"><span class="toc-text">Introduction to Spreadsheets for Data Analysis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Excel-Keyboard-Shortcuts"><span class="toc-text">Excel Keyboard Shortcuts</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting-Started-Using-Spreadsheets"><span class="toc-text">Getting Started Using Spreadsheets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Basics-of-Data-Quality-and-Privacy"><span class="toc-text">Basics of Data Quality and Privacy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cleaning-Data"><span class="toc-text">Cleaning Data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Analysis-Basics-Filtering-and-Sorting-Data"><span class="toc-text">Data Analysis Basics, Filtering and Sorting Data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-Pivot-Tables"><span class="toc-text">Using Pivot Tables</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +988,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="Excel Basics for Data Analysis";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

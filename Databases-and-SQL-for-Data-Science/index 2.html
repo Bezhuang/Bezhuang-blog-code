@@ -22,14 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
+  <title>Databases and SQL for Data Science with Python - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="云服务器,MacOS">
+    <meta name="keywords" content="Python,SQL">
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+Much of the world’s data resides in databases, A working knowledge of databases and SQL is a must to become a data scientist. The emphasis in this course pr...">
   
 
   <!-- feed -->
@@ -459,7 +459,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        Databases and SQL for Data Science with Python
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +468,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE/">人工智能与大数据</a>
     </a>
   </div>
 
@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2021年2月15日</p>
   </a>
 </div>
 
@@ -490,13 +490,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：2.1k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：13分钟</p>
     </a>
   </div>
 
@@ -511,152 +511,380 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>Much of the world’s data resides in databases, A working knowledge of databases and SQL is a must to become a data scientist. The emphasis in this course provided by IBM is on hands-on and practical learning. So, I’ll try to record how I work with real databases, real data science tools, real-world datasets and eventually, how I create a database instance in the cloud on the following notes I took during this course.</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
+
+
+	<div class="row">
+    <embed src="/pdf/Databases&amp;SQL4Data-Science.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<h3 id="Introduction-to-Databases"><a href="#Introduction-to-Databases" class="headerlink" title="Introduction to Databases"></a>Introduction to Databases</h3><ul>
+<li><p>Structured Query Language (or SQL) is a powerful language which is used for communicating with and extracting data from databases.</p>
 </li>
-<li><p>应用程序安装信息</p>
+<li><p>SQL is among the top 3 skills for a Data Scientist or Data Analysts</p>
+</li>
+<li><p>A database is a repository of data, it provides the functionality for adding, modifying and querying data</p>
+</li>
+<li><p>RDBMS = Relational database management system</p>
+</li>
+<li><p>5 Basic SQL commands: Create, Insert, Select, Update, Delete</p>
+</li>
+<li><p>Cloud databases: Ease of use and access, Scalability &amp; Economics, Disaster recovery</p>
 <ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
+<li>IBM Db2, PostgreSQL, Oracle Cloud, Microsoft Azure, Amazon RDS</li>
 </ul>
 </li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
+<li><p>DBaaS (Database-as-a-Service) provides users with access to database resources in Cloud without the need for setting up hardware and installing software.</p>
 </li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
+<li><p>Relational Model allows for data independence (key advantage)</p>
 </li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
-</li>
-</ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
+<li><p>Entities are independent objects which have Attributes</p>
 <ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<li>Entity-Relationship Model (ER-Model): used as a tool to design RDBMS</li>
+<li>Mapping Entity Diagrams to Tables: Entities become tables, Attributes get translated into columns</li>
 </ul>
 </li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
+<li><p>Primary Keys and Foreign Keys: A primary key uniquely identifies a specific row in a table and prevents duplication of data.</p>
+</li>
+</ul>
+<h3 id="Basic-SQL"><a href="#Basic-SQL" class="headerlink" title="Basic SQL"></a>Basic SQL</h3><ul>
+<li><p>Data Definition Language statements (DDL) and Data Manipulation Language statements (DML)</p>
+</li>
+<li><p>Data Definition Language (DDL) statements are used to define, change, or drop database objects. </p>
 <ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<li>Common DDL statement types include: <code>CREATE</code>, <code>ALTER</code>, <code>TRUNCATE</code> and <code>DROP</code></li>
+</ul>
+</li>
+<li><p>Data Manipulation Language (DML) statements are used to read and modify data in tables.</p>
+<ul>
+<li>CRUD operations: Create, Read, Update and Delete</li>
+<li>Common DML statement types include: <code>INSERT</code>, <code>SELECT</code>, <code>UPDATE</code> and <code>DELETE</code></li>
+</ul>
+</li>
+<li><p><code>CREATE</code> and <code>DROP</code> tables in the database</p>
+<ul>
+<li>It is quite common to issue a <code>DROP</code> before doing a <code>CREATE</code> in test and development scenarios, but if the table does not already exist and you try to drop it, you will see an error like <code>XXX.YYY</code> is an undefined name.</li>
+</ul>
+<pre><code class="mysql">drop table COUNTRY;  ## If table already exists
+create table COUNTRY(
+    ID int PRIMARY KEY NOT NULL,
+    CCODE char(2) NOT NULL,
+    NAME varchar(60)
+);</code></pre>
+</li>
+<li><p>Use <code>SELECT</code> queries to retrieve data from the database</p>
+<pre><code class="mysql">select COLUMN1, COLUMN2, ... from TABLE1 ;
+##  or
+select * from COUNTRY ;
+## or
+select * from COUNTRY where ID &lt; 5 ;
+## or
+select * from COUNTRY where CCODE = &#39;CA&#39;;</code></pre>
+</li>
+<li><p>Use <code>COUNT</code>, <code>DISTINCT</code>, <code>LIMIT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code> to compose and run basic queries</p>
+<pre><code class="mysql">-- 0. Drop table INSTRUCTOR in case it already exists
+drop table INSTRUCTOR;
+-- 1. Create table INSTRUCTOR
+CREATE TABLE INSTRUCTOR
+  (ins_id INTEGER PRIMARY KEY NOT NULL, 
+   lastname VARCHAR(15) NOT NULL, 
+   firstname VARCHAR(15) NOT NULL, 
+   city VARCHAR(15), 
+   country CHAR(2)
+  );
+-- 2A. Insert single row for Rav Ahuja
+INSERT INTO INSTRUCTOR
+  (ins_id, lastname, firstname, city, country)
+  VALUES 
+  (1, &#39;Ahuja&#39;, &#39;Rav&#39;, &#39;Toronto&#39;, &#39;CA&#39;);
+-- 2B. Insert the two rows for Raul and Hima
+INSERT INTO INSTRUCTOR
+  VALUES
+  (2, &#39;Chong&#39;, &#39;Raul&#39;, &#39;Toronto&#39;, &#39;CA&#39;),
+  (3, &#39;Vasudevan&#39;, &#39;Hima&#39;, &#39;Chicago&#39;, &#39;US&#39;);
+-- 3. Select all rows in the table
+SELECT * FROM INSTRUCTOR;
+-- 3b. Select firstname, lastname and country where city is Toronto
+SELECT firstname, lastname, country from INSTRUCTOR where city=&#39;Toronto&#39;;
+-- 4. Change the city for Rav to Markham
+UPDATE INSTRUCTOR SET city=&#39;Markham&#39; where ins_id=1;
+-- 5. Delete the row for Raul Chong
+DELETE FROM INSTRUCTOR where ins_id=2;
+-- 5b. Retrieve all rows from the table
+SELECT * FROM INSTRUCTOR ;</code></pre>
+</li>
+</ul>
+<h3 id="String-Patterns-Ranges-Sorting-and-Grouping"><a href="#String-Patterns-Ranges-Sorting-and-Grouping" class="headerlink" title="String Patterns, Ranges, Sorting and Grouping"></a>String Patterns, Ranges, Sorting and Grouping</h3><ul>
+<li><p>Using String Patterns and Ranges</p>
+<ul>
+<li>The <code>WHERE</code> clause always requires a predicate, which is a condition that evaluates to true, false or unknown.</li>
+<li>Use the <code>LIKE</code> predicate with string patterns for the search：<code>WHERE &lt;columnname&gt; LIKE &lt;string pattern&gt;</code></li>
+</ul>
+<pre><code class="mysql">select F_NAME , L_NAME
+from EMPLOYEES
+where ADDRESS LIKE &#39;%Elgin,IL%&#39; ;</code></pre>
+</li>
+<li><p>Sorting Result Sets</p>
+<ul>
+<li><p><code>ORDER BY</code>: Descending order，Specifying Column Sequence Number</p>
+<pre><code class="mysql">select F_NAME, L_NAME, DEP_ID 
+from EMPLOYEES
+order by DEP_ID desc, L_NAME desc;</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Grouping Result Sets</p>
+<ul>
+<li><code>SELECT DISTINCT()</code> : Eliminating Duplicates</li>
+<li><code>GROUP BY</code></li>
+<li><code>HAVING</code>: Restricting the result set</li>
+</ul>
+<pre><code class="mysql">select DEP_ID, COUNT(*) AS &quot;NUM_EMPLOYEES&quot;, AVG(SALARY) AS &quot;AVG_SALARY&quot;
+from EMPLOYEES
+group by DEP_ID
+having count(*) &lt; 4
+order by AVG_SALARY;</code></pre>
+</li>
+</ul>
+<h3 id="Functions-Sub-Queries-Multiple-Tables"><a href="#Functions-Sub-Queries-Multiple-Tables" class="headerlink" title="Functions, Sub-Queries, Multiple Tables"></a>Functions, Sub-Queries, Multiple Tables</h3><ul>
+<li><p>Built-in Database Functions: Using database functions can significantly reduce the amount of data that needs to be retrieved from the database.</p>
+</li>
+<li><p>Aggregate or Column Functions</p>
+<ul>
+<li>INPUT: Collection of values (e.g. entire column), OUTPUT: Single value</li>
+<li><code>SUM()</code>, <code>MIN()</code>, <code>MAX()</code>, <code>AVG()</code></li>
+</ul>
+<pre><code class="mysql">select AVG( COST / QUANTITY ) from PETRESCUE where ANIMAL = &#39;Dog&#39;;</code></pre>
+</li>
+<li><p><code>SCALAR</code> and <code>STRING</code> functions</p>
+<ul>
+<li>Perform operations on every input value</li>
+<li><code>ROUND()</code>, <code>LENGTH()</code>, <code>UCASE</code>, <code>LCASE</code></li>
+</ul>
+<pre><code class="mysql">select DISTINCT(UCASE(ANIMAL)) from PETRESCUE;
+select * from PETRESCUE where LCASE(ANIMAL) = &#39;cat&#39;;</code></pre>
+</li>
+<li><p>Date and Time Built-in Functions</p>
+<ul>
+<li><code>YEAR()</code>, <code>MONTH()</code>, <code>DAY()</code>, <code>DAYOFWEEK()</code>, <code>DAYOFYEAR()</code>, <code>WEEK()</code>, <code>HOUR()</code>, <code>MINUTE()</code>, <code>SECOND()</code></li>
+<li>Date or Time Arithmetic</li>
+</ul>
+<pre><code class="mysql">select SUM(QUANTITY) from PETRESCUE where DAY(RESCUEDATE)=&#39;14&#39;;
+select (RESCUEDATE + 3 DAYS) from PETRESCUE;
+select (CURRENT DATE - RESCUEDATE) from PETRESCUE;</code></pre>
+</li>
+<li><p>Sub-Queries and Nested Selects</p>
+<ul>
+<li>Sub-Queries cannot evaluate Aggregate functions like <code>AVG()</code> in the <code>WHERE</code> clause,therefore,use a sub-Select expression</li>
+<li>Sub-queries in <code>FROM</code> clause substitute the <code>TABLE</code> name with a sub-query called Derived Tables or Table Expressions.</li>
+</ul>
+<pre><code class="mysql">select * from employees where salary &gt; AVG(salary)
+select EMP_ID, F_NAME, L_NAME, SALARY from employees where SALARY &gt; (select AVG(SALARY) from employees);
+select EMP_ID, SALARY, ( select AVG(SALARY) from employees ) AS AVG_SALARY from employees ;</code></pre>
+</li>
+<li><p>Working with Multiple Tables</p>
+<ul>
+<li>Sub-queries</li>
+</ul>
+<pre><code class="mysql">select * from employees where DEP_ID IN ( select DEPT_ID_DEP from departments where LOC_ID = &#39;L0002&#39; );
+select DEPT_ID_DEP, DEP_NAME from departments where DEPT_ID_DEP IN ( select DEP_ID from employees where SALARY &gt; 70000 ) ;</code></pre>
+<ul>
+<li>Implicit <code>JOIN</code></li>
+</ul>
+<pre><code class="mysql">select * from employees E, departments D where E.DEP_ID = D.DEPT_ID_DEP;
+select E.EMP_ID, D.DEP_NAME from employees E, departments D where E.DEP_ID = D.DEPT_ID_DEP</code></pre>
+<ul>
+<li><code>JOIN</code> operators（<code>INNER JOIN</code>, <code>OUTER JOIN</code>…）</li>
 </ul>
 </li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
+<h3 id="Accessing-databases-using-Python"><a href="#Accessing-databases-using-Python" class="headerlink" title="Accessing databases using Python"></a>Accessing databases using Python</h3><ul>
+<li><p>Python ecosystem: NumPy, pandas, matplotlib, SciPy</p>
 </li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
+<li><p>DB-API (Python Database API): Python’s standard API for accessing relational databases.</p>
+<ul>
+<li>Connection Objects: Database connections, Manage transactions</li>
+<li>Cursor Objects: Database queries, Scroll through result set, Retrieve results</li>
+<li>Connection methods: <code>.cursor()</code>, <code>.commit()</code>, <code>.rollback()</code>, <code>.close()</code></li>
+<li>Cursor methods: <code>.callproc()</code>, <code>.execute()</code>, <code>.executemany()</code>, <code>.fetchone()</code>, <code>.fetchmany()</code>, <code>.fetchall()</code>, <code>.nextset()</code>, <code>.arraysize()</code>, <code>.close()</code></li>
+</ul>
+<pre><code class="python">from dbmodule import connect
+#Create connection object
+Connection = connect(&#39;databasename&#39;, &#39;username&#39;, &#39;pswd&#39;)
+#Create a cursor object
+Cursor=connection.cursor()
+#Run Queries
+Cursor.execute(&#39;select * from mytable&#39;)
+Results = cursor.fetchall()
+#Free resources
+Cursor.close()
+Connection.close()</code></pre>
 </li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
+<li><p>Connect to Db2 database (ibm_db API)</p>
+<pre><code class="python">import ibm_db
+#Replace the placeholder values with your actual Db2 hostname, username, and password:
+dsn_hostname = &quot;YourDb2Hostname&quot;   # e.g.: &quot;dashdb-txn-sbox-yp-dal09-04.services.dal.bluemix.net&quot;
+dsn_uid = &quot;YourDb2Username&quot;        # e.g. &quot;abc12345&quot;
+dsn_pwd = &quot;YoueDb2Password&quot;      # e.g. &quot;7dBZ3wWt9XN6$o0J&quot;
+dsn_driver = &quot;&#123;IBM DB2 ODBC DRIVER&#125;&quot;
+dsn_database = &quot;BLUDB&quot;            # e.g. &quot;BLUDB&quot;
+dsn_port = &quot;50000&quot;                # e.g. &quot;50000&quot; 
+dsn_protocol = &quot;TCPIP&quot;            # i.e. &quot;TCPIP&quot;
+#Create the dsn connection string
+dsn = (
+    &quot;DRIVER=&#123;0&#125;;&quot;
+    &quot;DATABASE=&#123;1&#125;;&quot;
+    &quot;HOSTNAME=&#123;2&#125;;&quot;
+    &quot;PORT=&#123;3&#125;;&quot;
+    &quot;PROTOCOL=&#123;4&#125;;&quot;
+    &quot;UID=&#123;5&#125;;&quot;
+    &quot;PWD=&#123;6&#125;;&quot;).format(dsn_driver, dsn_database, dsn_hostname, dsn_port, dsn_protocol, dsn_uid, dsn_pwd)
+#Create database connection
+try:
+    conn = ibm_db.connect(dsn, &quot;&quot;, &quot;&quot;)
+    print (&quot;Connected to database: &quot;, dsn_database, &quot;as user: &quot;, dsn_uid, &quot;on host: &quot;, dsn_hostname)
+except:
+    print (&quot;Unable to connect: &quot;, ibm_db.conn_errormsg() )</code></pre>
 </li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
+<li><p>Close the connection</p>
+<pre><code class="python">ibm_db.close(conn)</code></pre>
 </li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
+<li><p>Creating tables, loading data and querying data</p>
+<pre><code class="python">#Lets first drop the table INSTRUCTOR in case it exists from a previous attempt
+dropQuery = &quot;drop table INSTRUCTOR&quot;
+#Now execute the drop statment
+dropStmt = ibm_db.exec_immediate(conn, dropQuery)
+#Construct the Create Table DDL statement - replace the ... with rest of the statement
+createQuery = &quot;create table INSTRUCTOR(id INTEGER PRIMARY KEY NOT NULL, fname ...)&quot;
+#Now fill in the name of the method and execute the statement
+createStmt = ibm_db.replace_with_name_of_execution_method(conn, createQuery)
+#Construct the query - replace ... with the insert statement
+insertQuery = &quot;...&quot;
+#execute the insert statement
+insertStmt = ibm_db.exec_immediate(conn, insertQuery)
+#replace ... with the insert statement that inerts the remaining two rows of data
+insertQuery2 = &quot;...&quot;
+#execute the statement
+insertStmt2 = ibm_db.exec_immediate(conn, insertQuery2)
+#Construct the query that retrieves all rows from the INSTRUCTOR table
+selectQuery = &quot;select * from INSTRUCTOR&quot;
+#Execute the statement
+selectStmt = ibm_db.exec_immediate(conn, selectQuery)
+#Fetch the Dictionary (for the first row only) - replace ... with your code
+...
+#Fetch the rest of the rows and print the ID and FNAME for those rows
+while ibm_db.fetch_row(selectStmt) != False:
+   print (&quot; ID:&quot;,  ibm_db.result(selectStmt, 0), &quot; FNAME:&quot;,  ibm_db.result(selectStmt, &quot;FNAME&quot;))
+updateQuery = &quot;update INSTRUCTOR set CITY=&#39;MOOSETOWN&#39; where FNAME=&#39;Rav&#39;&quot;
+updateStmt = ibm_db.exec_immediate(conn, updateQuery))</code></pre>
 </li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
+<li><p>Retrieve data into Pandas</p>
+<pre><code class="python">import pandas
+import ibm_db_dbi
+#connection for pandas
+pconn = ibm_db_dbi.Connection(conn)
+#query statement to retrieve all rows in INSTRUCTOR table
+selectQuery = &quot;select * from INSTRUCTOR&quot;
+#retrieve the query results into a pandas dataframe
+pdf = pandas.read_sql(selectQuery, pconn)
+#print just the LNAME for first row in the pandas data frame
+pdf.LNAME[0]
+#print the entire data frame
+pdf
+pdf.shape</code></pre>
+</li>
+<li><p>SQL Magic</p>
+<ul>
+<li>Cell magics: start with a double <code>%%</code> sign and apply to the entire cell</li>
+<li>Line magics: start with a single <code>%</code>  sign and apply to a particular line in a cell</li>
+<li><code>%magicname arguments</code></li>
+<li><code>%sql select * from tablename</code></li>
+</ul>
 </li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
+<h3 id="Analyzing-data-with-Python"><a href="#Analyzing-data-with-Python" class="headerlink" title="Analyzing data with Python"></a>Analyzing data with Python</h3><pre><code class="python">#Connect to the database
+%load_ext sql
+%sql ibm_db_sa://
+#Store the dataset in a Table
+import pandas
+chicago_socioeconomic_data = pandas.read_csv(&#39;https://data.cityofchicago.org/resource/jcxq-k9xf.csv&#39;)
+%sql PERSIST chicago_socioeconomic_data
+%sql SELECT * FROM chicago_socioeconomic_data limit 5;
+#How many rows are in the dataset
+%sql SELECT COUNT(*) FROM chicago_socioeconomic_data;
+#How many community areas in Chicago have a hardship index greater than 50.0
+%sql SELECT COUNT(*) FROM chicago_socioeconomic_data WHERE hardship_index &gt; 50.0;
+#What is the maximum value of hardship index in this dataset
+%sql SELECT MAX(hardship_index) FROM chicago_socioeconomic_data;
+#Which community area which has the highest hardship index
+%sql select community_area_name from chicago_socioeconomic_data where hardship_index = ( select max(hardship_index) from chicago_socioeconomic_data )
+#Create a scatter plot using the variables per_capita_income_ and hardship_index
+!pip install seaborn
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+income_vs_hardship = %sql SELECT per_capita_income_, hardship_index FROM chicago_socioeconomic_data;
+plot = sns.jointplot(x=&#39;per_capita_income_&#39;,y=&#39;hardship_index&#39;, data=income_vs_hardship.DataFrame())</code></pre>
+<h3 id="Using-JOIN-operations-to-work-with-multiple-tables"><a href="#Using-JOIN-operations-to-work-with-multiple-tables" class="headerlink" title="Using JOIN operations to work with multiple tables"></a>Using JOIN operations to work with multiple tables</h3><ul>
+<li><p>Inner Join</p>
 </li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
+<li><p>Outer Join</p>
+<ul>
+<li>Left Outer Join</li>
+<li>Right Outer Join</li>
+<li>Full Outer Join</li>
+</ul>
+</li>
+<li><p>HR Database example</p>
+<pre><code class="sql">--- Select the names, job start dates, and job titles of all employees who work for the department number 5 ---    
+select E.F_NAME,E.L_NAME, JH.START_DATE, J.JOB_TITLE 
+    from EMPLOYEES as E 
+    INNER JOIN JOB_HISTORY as JH on E.EMP_ID=JH.EMPL_ID 
+    INNER JOIN JOBS as J on E.JOB_ID=J.JOB_IDENT
+    where E.DEP_ID =&#39;5&#39;
+;
+--- Perform a Left Outer Join on the EMPLOYEES and DEPARTMENT tables and select employee id, last name, department id and department name for all employees ---
+select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
+    from EMPLOYEES AS E 
+    LEFT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP
+;    
+--- Re-write the query to have the result set include all the employees but department names for only the employees who were born before 1980. ---
+select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
+    from EMPLOYEES AS E 
+    LEFT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP 
+    AND YEAR(E.B_DATE) &lt; 1980
+;
+--- Perform a Full Join on the EMPLOYEES and DEPARTMENT tables and select the First name, Last name and Department name of all employees. ---
+select E.F_NAME,E.L_NAME,D.DEP_NAME
+    from EMPLOYEES AS E 
+    FULL OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP
+;
+--- Re-write Query to have the result set include all employee names but department id and department names only for male employees. ---
+select E.F_NAME,E.L_NAME,D.DEPT_ID_DEP, D.DEP_NAME
+    from EMPLOYEES AS E 
+    FULL OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP AND E.SEX = &#39;M&#39;
+;</code></pre>
 </li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h3 id="Working-with-Real-World-Datasets"><a href="#Working-with-Real-World-Datasets" class="headerlink" title="Working with Real World Datasets"></a>Working with Real World Datasets</h3><ul>
+<li>Understand 3 Chicago datasets</li>
+<li>Load the 3 datasets into 3 tables in a Db2 database</li>
+<li>Execute SQL queries to answer assignment questions</li>
+</ul>
+<h3 id="Assignments"><a href="#Assignments" class="headerlink" title="Assignments"></a>Assignments</h3><ul>
+<li>Visit my <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/LearnCS/tree/main/IBM%20Professional%20Certificates/Databases%20and%20SQL%20for%20Data%20Science%20with%20Python">Github Repository</a></li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -695,7 +923,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL</p></a></div>
 
 
         
@@ -708,8 +936,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Databases-and-SQL-for-Data-Science/&title=Databases and SQL for Data Science with Python - Bezhuang's Blog&summary=
+Much of the world’s data resides in databases, A working knowledge of databases and SQL is a must to become a data scientist. The emphasis in this course provided by IBM is on hands-on and practical learning. So, I’ll try to record how I work with real databases, real data science tools, real-world datasets and eventually, how I create a database instance in the cloud on the following notes I took during this course.
 "
           
           >
@@ -722,8 +950,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Databases-and-SQL-for-Data-Science/&title=Databases and SQL for Data Science with Python - Bezhuang's Blog&summary=
+Much of the world’s data resides in databases, A working knowledge of databases and SQL is a must to become a data scientist. The emphasis in this course provided by IBM is on hands-on and practical learning. So, I’ll try to record how I work with real databases, real data science tools, real-world datasets and eventually, how I create a database instance in the cloud on the following notes I took during this course.
 "
           
           >
@@ -736,8 +964,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Databases-and-SQL-for-Data-Science/&title=Databases and SQL for Data Science with Python - Bezhuang's Blog&summary=
+Much of the world’s data resides in databases, A working knowledge of databases and SQL is a must to become a data scientist. The emphasis in this course provided by IBM is on hands-on and practical learning. So, I’ll try to record how I work with real databases, real data science tools, real-world datasets and eventually, how I create a database instance in the cloud on the following notes I took during this course.
 "
           
           >
@@ -752,7 +980,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADoUlEQVR42u3awZLqMAwEQP7/p3fvr4rCkiYbhde+QYhjty+DlNeP0RovBODAgQNngAO3BO7VHP/e/2m+d9ffLjD03OrvPt4PDhw4cODAgQO3DO44ABY3nD6g7kGl9gsOHDhw4MCBA7cVrrqQ6YKmgbgKNYYHBw4cOHDgwIH7ErhqUE0dwLSQCQ4cOHDgwIEDB+4syP51oxocOHDgwIEDB+5/g+sGz3Qgrgbkx3XywYEDBw4cOHDgQnDVMYW8+3N7v+DAgQMHDhw4cEvgpuM0qKaDaDVwx/YLDhw4cODAgQO3BO60AZxu+HYb2Kf3d+eLVYDBgQMHDhw4cOAuhjsFqS7oNMCeNpa71+ONb3DgwIEDBw4cuCVw5QBYDLzVYJ1uNHfhjwuZ4MCBAwcOHDhwN8F1C33TFw2no1qIra5//M8BHDhw4MCBAwfuYrhpw/m4ANgMntOGdOo+cODAgQMHDhy4p8Klgm214JkK1rGADA4cOHDgwIEDtwRuGmDThctpkE3Ne9yQBgcOHDhw4MCBWwLXDYjVAuX0Od3C5zhogwMHDhw4cODALYVLFza70NODSRVWwYEDBw4cOHDgtsJ1G8WnG5nO022IX/XCIjhw4MCBAwcO3Da4aQGxOl+10Bnb+LSBDQ4cOHDgwIEDtwSuGjyrQbkahNPBNhW4wYEDBw4cOHDgtsFNA+4UpAt7VdBt/3MABw4cOHDgwIG7Ca4bWKdQ3cDdPbDxPsCBAwcOHDhw4JbAdQuK1VFdcPd3p+toN9zBgQMHDhw4cOCWwF1VYKxu9LShnWqEgwMHDhw4cODAPR2uOlE38HYDbipgpwql4MCBAwcOHDhwW+BOobobSzW60w3xdqMbHDhw4MCBAwduCVy1cNht/FYb3tMgXC3AHt8HDhw4cODAgQO3FO4qkG5wTgX06nxvr4MDBw4cOHDgwC2BS2841ajuBuZpwbVdAQYHDhw4cODAgftjuOmoPri68dPnpA4MHDhw4MCBAwfuKXCphvOnhaYbyNXnTguw4MCBAwcOHDhwW+G6gfeqA+gG2/SBgAMHDhw4cODAPQWuGlSnUOkDSDWk314HBw4cOHDgwIH7ErirALtBNV64BAcOHDhw4MCB+3K40xcGu3CpFxNP13X8YiE4cODAgQMHDtwSuFRDOnW9+v30gG/v5IMDBw4cOHDgwBXhUoXI1IKnz0uBfixkggMHDhw4cODA3QRnFAuoCMCBAwfOAAfu3vELxyWK8rZrz8oAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -760,7 +988,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Databases-and-SQL-for-Data-Science/&text=Databases and SQL for Data Science with Python - Bezhuang's Blog"
           
           >
           
@@ -786,11 +1014,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/Pikachu-rainbow-fart/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>皮卡丘彩虹屁语音包</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+VSCode Rainbow Fart 是一个在你编程时持续夸你写的牛逼的扩展，可以根据代码关键字播放贴近代码意义的真人语音。皮卡丘彩虹屁语音包（Pikachu-rainbow-fart） 是...</p>
+        </a>
+      
+      
+        <a class='next' href='/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/'>
+          <p class='title'>2021阿里Java训练营第一期<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+在阿里云开发者社区中看到有Java新手训练营（5天突破Java面向对象编程）的课程，采用直播授课的形式，希望能在侠客大佬的指导下有更好的学习效果吧。当然，直播时间有限，所以这篇日志并不是对Ja...</p>
         </a>
       
     </div>
@@ -833,7 +1067,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Introduction-to-Databases"><span class="toc-text">Introduction to Databases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-SQL"><span class="toc-text">Basic SQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-Patterns-Ranges-Sorting-and-Grouping"><span class="toc-text">String Patterns, Ranges, Sorting and Grouping</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Functions-Sub-Queries-Multiple-Tables"><span class="toc-text">Functions, Sub-Queries, Multiple Tables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Accessing-databases-using-Python"><span class="toc-text">Accessing databases using Python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Analyzing-data-with-Python"><span class="toc-text">Analyzing data with Python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-JOIN-operations-to-work-with-multiple-tables"><span class="toc-text">Using JOIN operations to work with multiple tables</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Working-with-Real-World-Datasets"><span class="toc-text">Working with Real World Datasets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assignments"><span class="toc-text">Assignments</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +1086,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="Databases and SQL for Data Science with Python";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

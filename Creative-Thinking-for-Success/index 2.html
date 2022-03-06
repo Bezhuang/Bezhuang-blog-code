@@ -22,14 +22,12 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
-  
-    <meta name="keywords" content="云服务器,MacOS">
+  <title>Creative Thinking：Techniques and Tools for Success - Bezhuang&#39;s Blog</title>
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+In this ever-growing and changing world, being able to think creatively and innovatively are essential skills. This course provided by IMPERIAL COLLEGE LOND...">
   
 
   <!-- feed -->
@@ -459,7 +457,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        Creative Thinking：Techniques and Tools for Success
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +466,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E7%BB%8F%E6%B5%8E%E4%B8%8E%E5%95%86%E4%B8%9A/">经济与商业</a>
     </a>
   </div>
 
@@ -479,7 +477,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2020年7月10日</p>
   </a>
 </div>
 
@@ -490,13 +488,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：331字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：2分钟</p>
     </a>
   </div>
 
@@ -511,152 +509,104 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>In this ever-growing and changing world, being able to think creatively and innovatively are essential skills. This course provided by IMPERIAL COLLEGE LONDON equips us with a tool-box, introducing us to a selection of behaviors and techniques that augments our innate creativity. The following are the notes I took during this course. </p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
-</li>
-<li><p>应用程序安装信息</p>
-<ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
-</ul>
-</li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+	<div class="row">
+    <embed src="/pdf/creative-thinking.pdf" width="100%" height="550" type="application/pdf">
+	</div>
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
+
+
+<h3 id="Principle-of-Creativity"><a href="#Principle-of-Creativity" class="headerlink" title="Principle of Creativity"></a>Principle of Creativity</h3><ul>
+<li>Necessity is the mother of invention.</li>
+<li>Opportunity is the father of invention.</li>
+<li>Creativity is imagination with responsibility.</li>
+<li>Creativity is the ability to imagine or invent something new of value.</li>
+</ul>
+<h4 id="Levels-of-Creativity"><a href="#Levels-of-Creativity" class="headerlink" title="Levels of Creativity"></a>Levels of Creativity</h4><ul>
+<li>Big C vs Little C</li>
+<li>Eminent vs Everyday</li>
+<li>The value of patronage</li>
+<li>The Renaissance→Industrial Revolution→Neuroscience→Data and AI</li>
+</ul>
+<h4 id="Creative-Environments"><a href="#Creative-Environments" class="headerlink" title="Creative Environments"></a>Creative Environments</h4><ul>
+<li>Create a low stress environment</li>
+<li>Reassurance and high trust</li>
+<li>Relaxation aids production and realization of ideas</li>
+</ul>
+<h3 id="Creativity-Tools"><a href="#Creativity-Tools" class="headerlink" title="Creativity Tools"></a>Creativity Tools</h3><ul>
+<li>Various Types of Brainstorming</li>
+<li>Morphological Analysis</li>
+<li>Six Hats</li>
+<li>TRIZ</li>
+<li>SCAMPER</li>
+</ul>
+<h4 id="Creativity-Tools-to-Enhance"><a href="#Creativity-Tools-to-Enhance" class="headerlink" title="Creativity Tools to Enhance"></a>Creativity Tools to Enhance</h4><ul>
+<li>Fluency</li>
+<li>Flexibility</li>
+<li>Originality</li>
+</ul>
+<h4 id="Top-6-Brainstorming-Techniques"><a href="#Top-6-Brainstorming-Techniques" class="headerlink" title="Top 6 Brainstorming Techniques"></a>Top 6 Brainstorming Techniques</h4><ul>
+<li>Flipchart</li>
+<li>Post-its</li>
+<li>Brainwriting</li>
+<li>Alphabet</li>
+<li>Grid</li>
+<li>Circle brainstorming</li>
+</ul>
+<h3 id="Six-Thinking-Hats"><a href="#Six-Thinking-Hats" class="headerlink" title="Six Thinking Hats"></a>Six Thinking Hats</h3><ul>
+<li>The Value of Diversity</li>
+<li>The six thinking hat technique aids and augments creativity.<ul>
+<li>White Hat (facts, figures, information)</li>
+<li>Red Hat (intuition, gut reaction, emotion)</li>
+<li>Black Hat (critically, cautiously, defensively)</li>
+<li>Yellow Hat (optimistic viewpoint)</li>
+<li>Green Hat (creativity)</li>
+<li>Blue Hat (control and organization)</li>
+</ul>
 </li>
 </ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
-<ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<h3 id="Morphological-Analysis"><a href="#Morphological-Analysis" class="headerlink" title="Morphological Analysis"></a>Morphological Analysis</h3><ul>
+<li>Morphological Analysis is a creative tool that helps generate ideas that would not normally spring to mind</li>
+<li>Generic morphological analysis chart</li>
+<li>Subsystems and Means</li>
+<li>Explore the design space systematically or experimentally</li>
+<li>Sketching synthesises the subsystems</li>
+<li>Small variation in selection = Substantial difference in outcome</li>
+<li>The sub-functions and potential means of fulfilling each of these sub-functions can be arranged in a grid</li>
+<li>Morphological Analysis applied to Plot Line</li>
 </ul>
-</li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
-<ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<h3 id="TRIZ"><a href="#TRIZ" class="headerlink" title="TRIZ"></a>TRIZ</h3><ul>
+<li>TRIZ = Theory of intensive problem solving</li>
+<li>Invented by Genrich Altshuller</li>
+<li>Specific Problem –Abstraction-&gt; General Problem -&gt; General Solutions –Analogy-&gt; Solution to Specific Problem</li>
+<li>39 Parameters</li>
+<li>40 principles</li>
+<li>The concept of contradiction</li>
 </ul>
-</li>
+<h3 id="Scamper"><a href="#Scamper" class="headerlink" title="Scamper"></a>Scamper</h3><ul>
+<li>Substitute</li>
+<li>Combine</li>
+<li>Adapt</li>
+<li>Magnify/ Minify/ Modify</li>
+<li>Put to other uses</li>
+<li>Eliminate</li>
+<li>Reverse/ Rearrange</li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
-</li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
-</li>
-</ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
-</li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
-</li>
-</ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h3 id="Using-the-Tools-in-Combination"><a href="#Using-the-Tools-in-Combination" class="headerlink" title="Using the Tools in Combination"></a>Using the Tools in Combination</h3><ul>
+<li>The Double Diamond Model</li>
+<li>Circle Brainstorming</li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -694,9 +644,6 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
-
 
         
       
@@ -708,8 +655,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Creative-Thinking-for-Success/&title=Creative Thinking：Techniques and Tools for Success - Bezhuang's Blog&summary=
+In this ever-growing and changing world, being able to think creatively and innovatively are essential skills. This course provided by IMPERIAL COLLEGE LONDON equips us with a tool-box, introducing us to a selection of behaviors and techniques that augments our innate creativity. The following are the notes I took during this course. 
 "
           
           >
@@ -722,8 +669,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Creative-Thinking-for-Success/&title=Creative Thinking：Techniques and Tools for Success - Bezhuang's Blog&summary=
+In this ever-growing and changing world, being able to think creatively and innovatively are essential skills. This course provided by IMPERIAL COLLEGE LONDON equips us with a tool-box, introducing us to a selection of behaviors and techniques that augments our innate creativity. The following are the notes I took during this course. 
 "
           
           >
@@ -736,8 +683,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Creative-Thinking-for-Success/&title=Creative Thinking：Techniques and Tools for Success - Bezhuang's Blog&summary=
+In this ever-growing and changing world, being able to think creatively and innovatively are essential skills. This course provided by IMPERIAL COLLEGE LONDON equips us with a tool-box, introducing us to a selection of behaviors and techniques that augments our innate creativity. The following are the notes I took during this course. 
 "
           
           >
@@ -752,7 +699,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADp0lEQVR42u3aQXLjMAwEQP//08l9q1TiAJANZ5u32JZItHKYAvT6sUrrhQAcOHDgLHDglsC9iuvf66/ud3mAcJ+r/e72vTtfXC84cODAgQMHDtwyuOMAWDzI3fUpcPr9WL3gwIEDBw4cOHBL4bqBNwWs3r8bgMv1ggMHDhw4cODA/RG400bjacBNg2va+AQHDhw4cODAgQN3FoC7jdDq9eDAgQMHDhw4cP8bXDqgTV8YrP4uBZwO6ODAgQMHDhw4cFvhuoPlb/u7XC84cODAgQMHDtwSuKlVDaTVQXU1KLfrBAcOHDhw4MCBWwJ3t+F0IE5hUpDphmjcAQYHDhw4cODAgfsQXBpkuy/uTQ2euwPwY2hw4MCBAwcOHLglcKcNvxRgKrh2C6/e7/LBgQMHDhw4cODALYGbblh2g3I6qJ5qxB7XDQ4cOHDgwIEDtxSuetDu79NAXH2hsD2wBgcOHDhw4MCBWwI3tVH1+irQUw/6NoCDAwcOHDhw4MAtgTstqBuAU/gp2Gp9x41McODAgQMHDhy4D8GlG1U/f6rx2Q244MCBAwcOHDhw3wpXLbD6+xS62wgdhwYHDhw4cODAgVsCV11TjcjThmf1waX13MKCAwcOHDhw4MAtgXsqAFcD7ylAGnyrsG9vZIIDBw4cOHDgwIVw6QGmXiCsFnx63+7gHBw4cODAgQMHbjtctWFZbYBWG5QpSLpu9wUHDhw4cODAgVsGlwbF19CqBtypoB1fBw4cOHDgwIEDtwQuDagpyGmDNAXr7ls+Jzhw4MCBAwcO3FK47qC6C9EFqwb3dgAGBw4cOHDgwIH7EFx6oOoA+6lAOz1Qv9wPHDhw4MCBAwduCdz0AVP4NMB2A2713ODAgQMHDhw4cFvhTgPoaSHdQL1t4A0OHDhw4MCBA7cVLm3olRuBh0Hz3Y3R4+vAgQMHDhw4cOCWwnUhn/6+29BMgzo4cODAgQMHDtxWuO6qDp7TBmYKmw6kjz8HBw4cOHDgwIFbAjcVENMBdPUFxKnB9ClweZIPDhw4cODAgQP3Jrhq4J26Ph0cpw9+rHEKDhw4cODAgQO3FG6qkGqjsHqupwfR4MCBAwcOHDhwfxWuO/itNjafOkfcyAQHDhw4cODAgfsyuOmAelpIdZCdnhscOHDgwIEDB+5b4NKBcnqfp4BO9203OMGBAwcOHDhw4JbBTQ1uu43ItMFYbVxW/yHAgQMHDhw4cOC2wFnZAgcOHDhwFjhwH16/AvuCeWoOfYQAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -760,7 +707,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Creative-Thinking-for-Success/&text=Creative Thinking：Techniques and Tools for Success - Bezhuang's Blog"
           
           >
           
@@ -786,11 +733,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/SQL%E5%9F%BA%E7%A1%80/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>SQL 基础知识总结</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+现代程序离不开关系数据库，要使用关系数据库就必须掌握 SQL 语言。SQL 是用于访问和处理数据库的标准的计算机语言。本文是在学习完 SQL 教程 后针对关系型数据库的一般语法进行的总结，常见...</p>
+        </a>
+      
+      
+        <a class='next' href='/Marketing-Analytics/'>
+          <p class='title'>Marketing Analytics<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+Marketing analytics enables marketers to measure, manage and analyze marketing performance to ma...</p>
         </a>
       
     </div>
@@ -833,7 +786,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Principle-of-Creativity"><span class="toc-text">Principle of Creativity</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Levels-of-Creativity"><span class="toc-text">Levels of Creativity</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Creative-Environments"><span class="toc-text">Creative Environments</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Creativity-Tools"><span class="toc-text">Creativity Tools</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Creativity-Tools-to-Enhance"><span class="toc-text">Creativity Tools to Enhance</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Top-6-Brainstorming-Techniques"><span class="toc-text">Top 6 Brainstorming Techniques</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Six-Thinking-Hats"><span class="toc-text">Six Thinking Hats</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Morphological-Analysis"><span class="toc-text">Morphological Analysis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TRIZ"><span class="toc-text">TRIZ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scamper"><span class="toc-text">Scamper</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-the-Tools-in-Combination"><span class="toc-text">Using the Tools in Combination</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +805,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="Creative Thinking：Techniques and Tools for Success";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

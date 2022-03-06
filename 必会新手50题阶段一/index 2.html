@@ -22,14 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
+  <title>必会新手50题阶段一思路记录 - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="云服务器,MacOS">
+    <meta name="keywords" content="LintCode">
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+在线评测平台 LintCode整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握，以下是...">
   
 
   <!-- feed -->
@@ -459,7 +459,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        必会新手50题阶段一思路记录
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +468,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构</a>
     </a>
   </div>
 
@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2020年10月28日</p>
   </a>
 </div>
 
@@ -490,7 +490,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：906字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -511,152 +511,77 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>在线评测平台 LintCode整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握，以下是刷题过程中的思路和方法的记录，也包含成功通过的代码。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
-</li>
-<li><p>应用程序安装信息</p>
-<ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
+<h3 id="37-反转一个3位整数"><a href="#37-反转一个3位整数" class="headerlink" title="37.反转一个3位整数"></a>37.反转一个3位整数</h3><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><ul>
+<li>反转一个只有3位数的整数</li>
 </ul>
-</li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
+<h4 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h4><ul>
+<li>获得个位数并将它变成百位数，获得十位数并将它变成十位数，获得百位数并将它变成个数位</li>
 </ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
-</li>
+<h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;
+public:
+    int reverseInteger(int number) &#123;
+        return number % 10 * 100 + number / 10 % 10 * 10 + number / 100;
+    &#125;
+&#125;;</code></pre>
+<h3 id="1-A-B问题"><a href="#1-A-B问题" class="headerlink" title="1.A+B问题"></a>1.A+B问题</h3><h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><ul>
+<li>给出两个整数a和b，求他们的和并以整数（int）的形式返回</li>
 </ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
-<ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<h4 id="问题分析-1"><a href="#问题分析-1" class="headerlink" title="问题分析"></a>问题分析</h4><ul>
+<li>不需要从标准输入流读入数据，只需要根据<code>aplusb</code>传入的两个参数a和b，计算他们的和并返回就行</li>
 </ul>
-</li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
-<ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<h4 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;
+public:
+    int aplusb(int a, int b) &#123;
+        return a + b;
+    &#125;
+&#125;;</code></pre>
+<h3 id="1300-巴什博弈"><a href="#1300-巴什博弈" class="headerlink" title="1300.巴什博弈"></a>1300.巴什博弈</h3><h4 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h4><ul>
+<li>你正在和朋友玩一个游戏：桌子上有一堆石头，每一次你们都会从中拿出1到3个石头。拿走最后一个石头的人赢得游戏</li>
+<li>游戏开始时，你是先手。假设两个人都绝对理性，都会做出最优决策。给定石头的数量，判断你是否会赢得比赛</li>
+<li>举例：有四个石头，那么你永远不会赢得游戏。不管拿几个，最后一个石头一定会被你的朋友拿走</li>
 </ul>
-</li>
+<h4 id="问题分析-2"><a href="#问题分析-2" class="headerlink" title="问题分析"></a>问题分析</h4><ul>
+<li>巴什博弈：n个物品，两个人轮流从这堆物品中取物，规定每次至少取一个，最多取m个，最后取光者得胜</li>
+<li>如果物品数量 n 不能被 m+1 整除，则 n=k(m+1)+x（k为自然数，0&lt;x&lt;m+1），那么只要先手者第一次拿走 x 个物品，剩余物品数量变为 k(m+1)，接下来无论后手者怎么拿，先手者都可以让物品数量变 k(m+1) ，k逐渐变小直到最后变为 1，此时剩余物品为 m+1，接下来无论后手者拿多少都拿不完 ，并且会使剩余物品数量小于 m+1 ，而先手者则可以直接把剩下的拿完，先手者必胜</li>
+<li>如果物品数量为 k(m+1)，即 n 可被 (m+1) 整除，此时先手者就会面临上面的后手者的问题，先手者必输</li>
+<li>由题可知，m=3，所以物品数量不能被4整除，即n若是4的倍数则输出False，否则输出True</li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
-</li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
-</li>
+<h4 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;
+public:
+    bool canWinBash(int n) &#123;
+        if(n%4 == 0)
+        &#123;
+            return false;
+        &#125;
+        else return true;
+    &#125;
+&#125;;</code></pre>
+<h3 id="764-计算圆周长和面积"><a href="#764-计算圆周长和面积" class="headerlink" title="764.计算圆周长和面积"></a>764.计算圆周长和面积</h3><h4 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h4><ul>
+<li>给定一个整数<code>r</code>代表一个圆的半径，返回一个数组，其中数组的第一个元素代表圆的周长，数组的第二个元素代表圆的面积</li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
-</li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
-</li>
+<h4 id="问题分析-3"><a href="#问题分析-3" class="headerlink" title="问题分析"></a>问题分析</h4><ul>
+<li>PI = 3.14</li>
+<li>向量（Vector）是一个封装了动态大小数组的顺序容器（Sequence Container），是一个能够存放任意类型的动态数组</li>
+<li><code>#include&lt;vector&gt;;</code></li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
-</ul>
+<h4 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;
+public:
+    vector&lt;double&gt; calculate(int r) &#123;
+        vector&lt;double&gt;ans;
+        ans.push_back(2 * 3.14 * r);
+        ans.push_back(3.14 * r * r);
+        return ans;
+    &#125;
+&#125;;</code></pre>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -695,7 +620,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/LintCode/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>LintCode</p></a></div>
 
 
         
@@ -708,8 +633,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/&title=必会新手50题阶段一思路记录 - Bezhuang's Blog&summary=
+在线评测平台 LintCode整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握，以下是刷题过程中的思路和方法的记录，也包含成功通过的代码。
 "
           
           >
@@ -722,8 +647,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/&title=必会新手50题阶段一思路记录 - Bezhuang's Blog&summary=
+在线评测平台 LintCode整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握，以下是刷题过程中的思路和方法的记录，也包含成功通过的代码。
 "
           
           >
@@ -736,8 +661,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/&title=必会新手50题阶段一思路记录 - Bezhuang's Blog&summary=
+在线评测平台 LintCode整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握，以下是刷题过程中的思路和方法的记录，也包含成功通过的代码。
 "
           
           >
@@ -752,7 +677,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFHUlEQVR42u3aQXLjMAwEwPz/07sPSLlEzIB2XNW82bEoqqHLBPj5Z31k/SAAD94CD94CD95agP8J168NX/z91e/HBy73OT3/0/etF3jw4MGDBw8ePHjwm/AtwBP804NPHzSFSMG3vMCDBw8ePHjw4MGDvwF/+qBtIZ5+P73vtCDtOeNzgwcPHjx48ODBgwf/B+HThsX0freCWHse8ODBgwcPHjx48OC/EX4rSLWNjvbFAQ8ePHjw4MGDBw/+m+DHAzqXQKaFbQvaDnS9fZIMPHjw4MGDBw8ePPhgtYNG3/459gIPHjx48ODBgwcPfgG+XWnAOQ0i7f5PgSq9PvYCDx48ePDgwYMHD34Bvm1sPIFMA8nTPi1M2nDZOg948ODBgwcPHjx48Bvw043TADO9PgWYBqS2UGuNEPDgwYMHDx48ePDgg4Gm7Ru2ASaFSc8zHeBKHcCDBw8ePHjw4MGD34S/3WiYBqCt608h2wKf7gcePHjw4MGDBw8e/AZ8GgzShsc00EwD3daL0QK/LBh48ODBgwcPHjx48Bfhp98/HSw9eBvQthoe7f7gwYMHDx48ePDgwW/Ct4M/W2BpALvVyLkWEMGDBw8ePHjw4MGDfwP8dmHSwaNpAdOglz738Wfw4MGDBw8ePHjw4C/Cbw8QTRsm6e/SArQNmWMP8ODBgwcPHjx48OAvwMcblo2DaeHb891+wcYBCjx48ODBgwcPHjz4AXwaPNKgk+6f3j8FO/UZN07AgwcPHjx48ODBg1+cj28bE20jY6vBMi3E9MVIvwcPHjx48ODBgwcPfhP+VpBpB4O2g1TbeEmf+7ERAh48ePDgwYMHDx78RfhbQWZ68LgBURYqfX7w4MGDBw8ePHjw4G/Abzc0TgPSNlBayNufjztQ4MGDBw8ePHjw4MEvwG8FmOnfb0G2DZQ2QIIHDx48ePDgwYMH/w74rYGiNHBtD1TFA0hLA1XgwYMHDx48ePDgwW/CT2+cNkq2A85xYAkLtdUQ+vUZPHjw4MGDBw8ePPgF+PYBTx9gqzDT/aeQKXTcCAEPHjx48ODBgwcPvoBPwbYO2v6uBUkbJ3WAAg8ePHjw4MGDBw/+InzbAJl+nxby9NzTINg+N3jw4MGDBw8ePHjwN+DTg00Hi24Hta0glj7n4/OBBw8ePHjw4MGDB78APw04aTBqGx9tMNoKSLUTePDgwYMHDx48ePAL8NODnYK1wWRa6K2Bp+n14yAJHjx48ODBgwcPHvwH4FvIFDx9MdYbGWHBwYMHDx48ePDgwYP/JPytADNtuKSFSRslbaAEDx48ePDgwYMHD34TfusG7XVt4yMdwJq+UHXABA8ePHjw4MGDBw9+ET4dSNqCToPN1iBU3eAADx48ePDgwYMHD/6N8GnASB94Cp3eL73/tLDjBhF48ODBgwcPHjx48Avw7WobG9PAM/17GrjaAFd3oMCDBw8ePHjw4MGDP/h//HRNIbb2Ow0+bQHigPT0IoEHDx48ePDgwYMHvwg/PfD0+rbxMN03hdwKUODBgwcPHjx48ODBvxN+O0CkA0/tfrcg64KCBw8ePHjw4MGDB/+H4dPBpjSond63/V0a4MCDBw8ePHjw4MGD/yb4W9BbhZ8GuPRFAA8ePHjw4MGDBw/+Jvz0QVvQ04CVFmD6fFuDUy/3AQ8ePHjw4MGDBw9+EX59cGdpcKhtRJy+IOmLNt0fPHjw4MGDBw8ePPgNeOu9Czx48BZ48BZ48Fax/gNw8LEDkA98RAAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -760,7 +685,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/&text=必会新手50题阶段一思路记录 - Bezhuang's Blog"
           
           >
           
@@ -786,11 +711,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/Cpp%E5%9F%BA%E7%A1%80/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C++基础知识总结</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+Object Oriented Programming，面向对象的编程的思想是一种对现实世界理解和抽象的方法，其有的封装、继承、多态性的特性，可以设计出低耦合的系统，使系统更灵活和易于维护，对...</p>
+        </a>
+      
+      
+        <a class='next' href='/Python%E5%9F%BA%E7%A1%80/'>
+          <p class='title'>Python 基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+Python 是由 Guido van Rossum 在八十年代末和九十年代初，在荷兰国家数学和计算机科学研究所设计的一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。Python...</p>
         </a>
       
     </div>
@@ -833,7 +764,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#37-%E5%8F%8D%E8%BD%AC%E4%B8%80%E4%B8%AA3%E4%BD%8D%E6%95%B4%E6%95%B0"><span class="toc-text">37.反转一个3位整数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-A-B%E9%97%AE%E9%A2%98"><span class="toc-text">1.A+B问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-1"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90-1"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-1"><span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1300-%E5%B7%B4%E4%BB%80%E5%8D%9A%E5%BC%88"><span class="toc-text">1300.巴什博弈</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-2"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90-2"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#764-%E8%AE%A1%E7%AE%97%E5%9C%86%E5%91%A8%E9%95%BF%E5%92%8C%E9%9D%A2%E7%A7%AF"><span class="toc-text">764.计算圆周长和面积</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-3"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90-3"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="toc-text">题解</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -852,7 +783,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="必会新手50题阶段一思路记录";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

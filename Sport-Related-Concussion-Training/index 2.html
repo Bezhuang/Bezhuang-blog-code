@@ -22,14 +22,12 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
-  
-    <meta name="keywords" content="云服务器,MacOS">
+  <title>Sport-Related Concussion Training - Bezhuang&#39;s Blog</title>
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+Some common sports injuries can occur when engaging in confrontational sports like basketball, therefore it’s important to have some knowledge of avoiding a...">
   
 
   <!-- feed -->
@@ -459,7 +457,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        Sport-Related Concussion Training
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +466,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%94%9F%E6%B4%BB/">学习生活</a>
     </a>
   </div>
 
@@ -479,7 +477,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2020年4月20日</p>
   </a>
 </div>
 
@@ -490,13 +488,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：688字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：4分钟</p>
     </a>
   </div>
 
@@ -511,152 +509,106 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>Some common sports injuries can occur when engaging in confrontational sports like basketball, therefore it’s important to have some knowledge of avoiding and dealing with them. The Michigan Sport-Related Concussion Training Certification satisfies the state-mandated requirement for concussion training in the state of Michigan and can be helpful under certain circumstances. The following are the notes I took during this course.</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
-</li>
-<li><p>应用程序安装信息</p>
-<ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
-</ul>
-</li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+	<div class="row">
+    <embed src="/pdf/michigan-sport-related-concussion-training-certificate.pdf" width="100%" height="550" type="application/pdf">
+	</div>
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
-</li>
+
+
+<h3 id="Identifying-a-Concussion"><a href="#Identifying-a-Concussion" class="headerlink" title="Identifying a Concussion"></a>Identifying a Concussion</h3><ul>
+<li>A concussion, sometimes called a mild traumatic brain injury, can occur from a sudden fall, a blow from another person or a hit from the piece of equipment that causes the brain to move quickly within the skull. This motion changes the way the brain communicates which can lead to changes in how someone thinks or behaves.</li>
 </ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
-<ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<h4 id="On-field-Signs"><a href="#On-field-Signs" class="headerlink" title="On-field Signs"></a>On-field Signs</h4><ul>
+<li>Dazed or stunned</li>
+<li>Displaying the motions that are uncharacteristic of the athlete</li>
+<li>Slowly responding to play calls</li>
+<li>Holding their head</li>
+<li>Difficulty recalling events</li>
 </ul>
-</li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
-<ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<h4 id="Concussion-symptoms"><a href="#Concussion-symptoms" class="headerlink" title="Concussion symptoms"></a>Concussion symptoms</h4><ul>
+<li>Physical</li>
+<li>Cognitive</li>
+<li>Emotional</li>
+<li>Sleep-related</li>
 </ul>
-</li>
+<h4 id="Emergency-“Red-Flags”"><a href="#Emergency-“Red-Flags”" class="headerlink" title="Emergency “Red Flags”"></a>Emergency “Red Flags”</h4><ul>
+<li>Severe or increasing headache</li>
+<li>Intense neck pain particularly down the middle with weakness or burning into both arms or legs</li>
+<li>Athlete reporting double vision</li>
+<li>Seizing or convulsing body movements</li>
+<li>Loss of consciousness for greater than one minute</li>
+<li>A deteriorating mental state such as going in and out of consciousness</li>
+<li>Repetitive vomiting</li>
+<li>Increasingly combative</li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
-</li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
-</li>
+<h4 id="Michigan’s-Youth-Concussion-Law"><a href="#Michigan’s-Youth-Concussion-Law" class="headerlink" title="Michigan’s Youth Concussion Law"></a>Michigan’s Youth Concussion Law</h4><ol>
+<li>Every athlete and their parent or guardian must provide written informed consent of concussion education materials</li>
+<li>Each coach, employee or volunteer is required to complete a concussion awareness training program once every three years</li>
+<li>Any athlete who is suspected of having concussion must be immediately removed from participation</li>
+<li>Any athlete removed from participation because of a possible concussion cannot return to full sport participation until an appropriate health professional has provided written clearance for the athlete to return to full sport participation</li>
+</ol>
+<h3 id="Remove-from-Play"><a href="#Remove-from-Play" class="headerlink" title="Remove from Play"></a>Remove from Play</h3><ul>
+<li>Do not attempt to diagnose a concussion yourself.</li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
-</li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
-</li>
+<h4 id="Goal-of-Removal"><a href="#Goal-of-Removal" class="headerlink" title="Goal of Removal"></a>Goal of Removal</h4><ul>
+<li>The goal is not to diagnose a concussion on the sideline, but to remove the athlete from risk, risk of another concussion, or risk of a more serious brain injury.</li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h4 id="For-Athletes"><a href="#For-Athletes" class="headerlink" title="For Athletes"></a>For Athletes</h4><ul>
+<li>It’s important to know that you don’t need to be able to diagnose concussion.</li>
+<li>What we want you to be able to do is recognize signs and symptoms of concussion, so that when a suspected concussion occurs, you’ll be able to manage it, and feel calm, and safe during that situation.</li>
+</ul>
+<h4 id="Responsibilities-of-Coaches-and-Parents"><a href="#Responsibilities-of-Coaches-and-Parents" class="headerlink" title="Responsibilities of Coaches and Parents"></a>Responsibilities of Coaches and Parents</h4><ol>
+<li>Make sure they’re not participating anymore</li>
+<li>You need to get him to a medical professional</li>
+<li>You need to keep them quiet</li>
+<li>The law in Michigan requires immediate removal of student-athlete whenever there is concern for concussion</li>
+<li>Before return to full participation, a written authorization from a healthcare provider must be obtained</li>
+<li>Forms must be kept on file at the school for seven years following the students graduation</li>
+</ol>
+<h3 id="Rest-and-Rehabilitation"><a href="#Rest-and-Rehabilitation" class="headerlink" title="Rest and Rehabilitation"></a>Rest and Rehabilitation</h3><h4 id="The-first-few-Days"><a href="#The-first-few-Days" class="headerlink" title="The first few Days"></a>The first few Days</h4><ol>
+<li>If red flags symptoms should develop, medical care should be sought immediately</li>
+<li>Activities that makes symptoms worse should be avoided</li>
+<li>Activities that put one at an increased risk for concussion should be avoided</li>
+</ol>
+<h4 id="Reintroduction-of-Physical-School-and-Work-Activities"><a href="#Reintroduction-of-Physical-School-and-Work-Activities" class="headerlink" title="Reintroduction of Physical School and Work Activities"></a>Reintroduction of Physical School and Work Activities</h4><ul>
+<li>Getting restful sleep</li>
+<li>Adequate hydration of 60-80 ounces</li>
+<li>A healthy diet</li>
+<li>Use of electronic devices during recovery from concussion can be undertaken as long as it doesn’t markedly worsen symptoms</li>
+</ul>
+<h3 id="Return-to-Learn-and-Activity"><a href="#Return-to-Learn-and-Activity" class="headerlink" title="Return to Learn and Activity"></a>Return to Learn and Activity</h3><h4 id="Return-to-Learn"><a href="#Return-to-Learn" class="headerlink" title="Return to Learn"></a>Return to Learn</h4><ol>
+<li>Daily activities</li>
+<li>School activities</li>
+<li>Return to school Part-time</li>
+<li>Return to school Full-time</li>
+</ol>
+<h4 id="Return-to-Athletic-Activity-Stages"><a href="#Return-to-Athletic-Activity-Stages" class="headerlink" title="Return to Athletic Activity Stages"></a>Return to Athletic Activity Stages</h4><ol>
+<li>Symptom-limited activity</li>
+<li>Light aerobic exercise</li>
+<li>Sport-specific exercise</li>
+<li>Non-contact training drills</li>
+<li>Full contact practice</li>
+<li>Return to sport</li>
+</ol>
+<h3 id="Long-Term-Effects"><a href="#Long-Term-Effects" class="headerlink" title="Long-Term Effects"></a>Long-Term Effects</h3><ul>
+<li>It’s important to remember that most people have a normal recovery within 30 days of injury</li>
+<li>When prolonged recovery occurs, it’s very important to identify the factors that cause the symptoms and to initiate treatment immediately</li>
+<li>Care at a healthcare facility with expertise in concussion can aid in this process</li>
+<li>Management of prolonged recovery should be individualized, and best takes place by those with expertise in concussion care</li>
+<li>Studies do not suggest that there’s an increased risk of dementia, depression, or suicide later in life</li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -694,9 +646,6 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
-
 
         
       
@@ -708,8 +657,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Sport-Related-Concussion-Training/&title=Sport-Related Concussion Training - Bezhuang's Blog&summary=
+Some common sports injuries can occur when engaging in confrontational sports like basketball, therefore it’s important to have some knowledge of avoiding and dealing with them. The Michigan Sport-Related Concussion Training Certification satisfies the state-mandated requirement for concussion training in the state of Michigan and can be helpful under certain circumstances. The following are the notes I took during this course.
 "
           
           >
@@ -722,8 +671,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Sport-Related-Concussion-Training/&title=Sport-Related Concussion Training - Bezhuang's Blog&summary=
+Some common sports injuries can occur when engaging in confrontational sports like basketball, therefore it’s important to have some knowledge of avoiding and dealing with them. The Michigan Sport-Related Concussion Training Certification satisfies the state-mandated requirement for concussion training in the state of Michigan and can be helpful under certain circumstances. The following are the notes I took during this course.
 "
           
           >
@@ -736,8 +685,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Sport-Related-Concussion-Training/&title=Sport-Related Concussion Training - Bezhuang's Blog&summary=
+Some common sports injuries can occur when engaging in confrontational sports like basketball, therefore it’s important to have some knowledge of avoiding and dealing with them. The Michigan Sport-Related Concussion Training Certification satisfies the state-mandated requirement for concussion training in the state of Michigan and can be helpful under certain circumstances. The following are the notes I took during this course.
 "
           
           >
@@ -752,7 +701,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADpklEQVR42u3aS3LCQAwFQO5/6WSfqpSlJxkPVM8O45/aLB6SXz9WtF4IwIEDB84CB+4QuFe4ro7/7/u/26vnuSyoeNy4XnDgwIEDBw4cuMPgujd4dfxVIdNCq+er3m+5XnDgwIEDBw4cuEPhqoG2C9cFmMJtBW9w4MCBAwcOHLhvhZtuTwuuBl9w4MCBAwcOHDhwtf27jco06G4FdnDgwIEDBw4cuG+B6w5o08C7NaBOj398kg8OHDhw4MCBA7cE113dgHna57hecODAgQMHDhy4Q+C2VhW4OmjuDrrT87frBAcOHDhw4MCBOwRu+uLf3S8Ebn2/NuAGBw4cOHDgwIE7DC4NrtMB8XbQTQfb5QcODhw4cODAgQN3GFw3oKb7pS/8pcF7qz5w4MCBAwcOHLjT4LYAxw3CZlBO9+82PsGBAwcOHDhw4L4FbgqZBugu4NYPARw4cODAgQMH7lS47iB4ul/1QWxfZy1QgwMHDhw4cODAHQJ3V2CdQqQNy+0G5uU/B3DgwIEDBw4cuIfguhfobt8Ornc1PMvXBwcOHDhw4MCBOwRuGii7gbh7fPc83bq6DxAcOHDgwIEDB+5T4aaBtH2jS0DTxis4cODAgQMHDtynwaUD6bhRGJ63+301GL99kg8OHDhw4MCBA1eES2+gu70biNMH2v3cfpDgwIEDBw4cOHCHwXUbi1sNzxQ6HViPB9rgwIEDBw4cOHAfCrc1wE4D99aAOb4OOHDgwIEDBw7c4XBbgbIaOKfbU7jxQBocOHDgwIEDB+4huLsHxekLfNXrVIN094GAAwcOHDhw4MCdDndXkE0H0t1Gagr+Ey5w4MCBAwcOHLjT4LYuNB1kp43NdKDerg8cOHDgwIEDB+4wuLTQdGA8Dcxpw7Mb2MuNTHDgwIEDBw4cuIfgpgPfuwbQVdD0eu1GLThw4MCBAwcO3OFwaZDsBt7tFw2nA+/L+wcHDhw4cODAgTsEbrqqDcI0WFeh3xXQwYEDBw4cOHDgToF7heuuAfW0YZmep7wdHDhw4MCBAwfuMLjpQHgaXO86Lg3A/9YLDhw4cODAgQN3KFwaeNOAOS2o2xCdDqbBgQMHDhw4cOC+DS5tPKaFbAfech3gwIEDBw4cOHBfAjcNnNWCu8E33f9tjUxw4MCBAwcOHLiHB9JduOpx6f3d1egEBw4cOHDgwIE7FW5rcDsd+KYPrBxghz8UcODAgQMHDhy4U+CsZrBGAA4cOHAWOHDPrl/ghQL5yV1WtAAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -760,7 +709,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Sport-Related-Concussion-Training/&text=Sport-Related Concussion Training - Bezhuang's Blog"
           
           >
           
@@ -786,11 +735,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/Python-for-Everybody/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Python for everybody</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+The Python for Everybody Specialization provided by UNIVERSITY OF MICHIGAN introduces fundamenta...</p>
+        </a>
+      
+      
+        <a class='next' href='/Git%E7%9F%A5%E8%AF%86%E7%82%B9/'>
+          <p class='title'>Git 基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件，是目前世界上最先进的分布式版本控制系统。Git 与常用的版本控制工具 CVS, ...</p>
         </a>
       
     </div>
@@ -833,7 +788,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Identifying-a-Concussion"><span class="toc-text">Identifying a Concussion</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#On-field-Signs"><span class="toc-text">On-field Signs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Concussion-symptoms"><span class="toc-text">Concussion symptoms</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Emergency-%E2%80%9CRed-Flags%E2%80%9D"><span class="toc-text">Emergency “Red Flags”</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Michigan%E2%80%99s-Youth-Concussion-Law"><span class="toc-text">Michigan’s Youth Concussion Law</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Remove-from-Play"><span class="toc-text">Remove from Play</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Goal-of-Removal"><span class="toc-text">Goal of Removal</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#For-Athletes"><span class="toc-text">For Athletes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Responsibilities-of-Coaches-and-Parents"><span class="toc-text">Responsibilities of Coaches and Parents</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rest-and-Rehabilitation"><span class="toc-text">Rest and Rehabilitation</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#The-first-few-Days"><span class="toc-text">The first few Days</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Reintroduction-of-Physical-School-and-Work-Activities"><span class="toc-text">Reintroduction of Physical School and Work Activities</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Return-to-Learn-and-Activity"><span class="toc-text">Return to Learn and Activity</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Return-to-Learn"><span class="toc-text">Return to Learn</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Return-to-Athletic-Activity-Stages"><span class="toc-text">Return to Athletic Activity Stages</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Long-Term-Effects"><span class="toc-text">Long-Term Effects</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +807,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="Sport-Related Concussion Training";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

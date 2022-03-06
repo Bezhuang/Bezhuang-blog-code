@@ -22,14 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
+  <title>IBM Data Analyst Capstone Project - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="云服务器,MacOS">
+    <meta name="keywords" content="Python,SQL">
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+In this course provided by IBM, I will assume the role of an Associate Data Analyst who has recently joined the organization and be presented with a busines...">
   
 
   <!-- feed -->
@@ -459,7 +459,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        IBM Data Analyst Capstone Project
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +468,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE/">人工智能与大数据</a>
     </a>
   </div>
 
@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2021年4月3日</p>
   </a>
 </div>
 
@@ -490,13 +490,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：2.1k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：13分钟</p>
     </a>
   </div>
 
@@ -511,152 +511,363 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>In this course provided by IBM, I will assume the role of an Associate Data Analyst who has recently joined the organization and be presented with a business challenge that requires data analysis to be performed on real-world datasets. The capstone project will culminate with a presentation of your data analysis report, with an executive summary for the various stakeholders in the organization. I believe this project is a great opportunity to showcase Data Analytics skills, and demonstrate proficiency to potential employers. The following are the notes I took during this course.</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
+
+
+	<div class="row">
+    <embed src="/pdf/IBM-Data-Analyst.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+
+	<div class="row">
+    <embed src="/pdf/Coursera-Data-Analyst-Capstone-Project.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<h3 id="Data-Collection"><a href="#Data-Collection" class="headerlink" title="Data Collection"></a>Data Collection</h3><h4 id="Collecting-Data-Using-APIs"><a href="#Collecting-Data-Using-APIs" class="headerlink" title="Collecting Data Using APIs"></a>Collecting Data Using APIs</h4><ul>
+<li><p>The <code>HTTP</code> protocol allows you to send and receive information through the web including webpages, images, and other web resources.</p>
 </li>
-<li><p>应用程序安装信息</p>
+<li><p>Uniform resource locator(URL): the most popular way to find resources on the web</p>
 <ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
+<li>Scheme: <code>http://</code></li>
+<li>Internet address or Base URL: <code>www.ibm.com</code> </li>
+<li>Route location on the web server: <code>/images/IDSNlogo.png</code></li>
 </ul>
 </li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
-</li>
-</ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
+<li><p>Request</p>
 <ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<li>Request start line = <code>GET</code> method + location of the resource <code>/index.html</code> + <code>HTTP</code> version</li>
+<li>Request header passes additional information with an <code>HTTP</code> request</li>
 </ul>
 </li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
+<li><p>Response</p>
 <ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<li>Response start line = version number <code>HTTP/1.0</code> + a status code (200) meaning success, + a descriptive phrase (OK). </li>
+<li>Response header contains useful information</li>
+<li>Response body containing the requested file an <code>HTML</code> document</li>
 </ul>
 </li>
+<li><p>Requests in Python</p>
+<pre><code class="python">import requests
+import os 
+from PIL import Image
+from IPython.display import IFrame
+#GET request //# Use single quotation marks for defining string
+url=&#39;https://www.ibm.com/&#39;  
+r=requests.get(url)
+#status of the request
+r.status_code  
+#view request headers //r.request.body
+print(r.request.headers)  
+#HTTP response header
+header=r.headers  
+#obtain the date
+header[&#39;date&#39;]  
+#obtain the type of data
+header[&#39;Content-Type&#39;]  
+r.encoding
+#view text
+r.text[0:100]  
+#write content(image)
+path=os.path.join(os.getcwd(),&#39;image.png&#39;)
+with open(path,&#39;wb&#39;) as f:
+    f.write(r.content)
+Image.open(path)</code></pre>
+</li>
+<li><p>Get Request with URL Parameters</p>
+<ul>
+<li>You can use the <code>GET</code> method to modify the results of your query</li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
+<pre><code class="python">url_get=&#39;http://httpbin.org/get&#39;
+#To create a Query string, add a dictionary.
+payload=&#123;&quot;name&quot;:&quot;Joseph&quot;,&quot;ID&quot;:&quot;123&quot;&#125;  
+r=requests.get(url_get,params=payload)
+r.url  #&#39;http://httpbin.org/get?name=Joseph&amp;ID=123&#39;
+#key args in JSON format
+r.json()[&#39;args&#39;]  </code></pre>
 </li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
+<li><p>Post Requests</p>
+<ul>
+<li>the <code>POST</code> request sends the data in a request body</li>
+</ul>
+<pre><code class="python">url_post=&#39;http://httpbin.org/post&#39;
+r_post=requests.post(url_post,data=payload)
+r_post.url 
+r_post.request.body
+r_post.json()[&#39;form&#39;]</code></pre>
 </li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
+<h4 id="Collecting-Data-Using-Webscraping"><a href="#Collecting-Data-Using-Webscraping" class="headerlink" title="Collecting Data Using Webscraping"></a>Collecting Data Using Webscraping</h4><ul>
+<li><p>Review of Webscraping</p>
+<pre><code class="python">from bs4 import BeautifulSoup  # this module helps in web scrapping.
+import requests  # this module helps us to download a web page
+url = &quot;http://www.ibm.com&quot;
+# get the contents of the webpage in text format and store in a variable called data
+data  = requests.get(url).text  
+# create a soup object using the variable &#39;data&#39;
+soup = BeautifulSoup(data,&quot;html5lib&quot;)  
+# in html anchor/link is represented by the tag &lt;a&gt;
+for link in soup.find_all(&#39;a&#39;):  
+    print(link.get(&#39;href&#39;))
+# in html image is represented by the tag &lt;img&gt;
+for link in soup.find_all(&#39;img&#39;):
+    print(link.get(&#39;src&#39;))</code></pre>
 </li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
+<li><p>Scrape data from html table</p>
+<pre><code class="python">url = &quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/datasets/HTMLColorCodes.html&quot;
+# get the contents of the webpage in text format and store in a variable called data
+data  = requests.get(url).text  
+soup = BeautifulSoup(data,&quot;html5lib&quot;)
+# in html table is represented by the tag &lt;table&gt;
+table = soup.find(&#39;table&#39;) 
+# in html table row is represented by the tag &lt;tr&gt;
+for row in table.find_all(&#39;tr&#39;): 
+    # in html a column is represented by the tag &lt;td&gt;
+    cols = row.find_all(&#39;td&#39;) 
+    # store the value in column 3 as color_name
+    color_name = cols[2].getText() 
+    # store the value in column 4 as color_code
+    color_code = cols[3].getText() 
+    print(&quot;&#123;&#125;---&gt;&#123;&#125;&quot;.format(color_name,color_code))</code></pre>
 </li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h4 id="Exploring-Data"><a href="#Exploring-Data" class="headerlink" title="Exploring Data"></a>Exploring Data</h4><ul>
+<li><p>Load the dataset</p>
+<pre><code class="python">import pandas as pd
+dataset_url = &quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m1_survey_data.csv&quot;
+df = pd.read_csv(dataset_url)</code></pre>
+</li>
+<li><p>Explore the dataset</p>
+<pre><code class="python">#Display the top &amp; bottom 5 rows and columns from your dataset
+df.head()  
+df.tail()
+#The number of rows in the dataset.
+df.shape[0]  
+#The number of columns in the dataset.
+df.shape[1]  
+#Print the datatype of all columns.
+df.dtypes  
+#Print the mean age of the survey participants.
+df[&quot;Age&quot;].mean()
+#Print how many unique countries are there in the Country column.
+df[&quot;Country&quot;].nunique()  </code></pre>
+</li>
+</ul>
+<h3 id="Data-Wrangling"><a href="#Data-Wrangling" class="headerlink" title="Data Wrangling"></a>Data Wrangling</h3><ul>
+<li><p>Load the dataset</p>
+<pre><code class="python">import pandas as pd
+df = pd.read_csv(&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m1_survey_data.csv&quot;)</code></pre>
+</li>
+<li><p>Finding Duplicates</p>
+<pre><code class="python">#Find how many duplicate rows exist in the dataframe.
+df.duplicated(keep=&#39;first&#39;).sum()  
+#Show duplicated rows
+duplicateRows = df[df.duplicated()]  
+duplicateRows  
+#numbers of duplicate values in the column Respondent
+df[&quot;Respondent&quot;].duplicated(keep=&#39;first&#39;).sum()  </code></pre>
+</li>
+<li><p>Removing Duplicates</p>
+<pre><code class="python">#Remove the duplicate rows from the dataframe.
+df.drop_duplicates(ignore_index=True, inplace=True)  
+#Verify if duplicates were actually dropped.
+df.duplicated(keep=&#39;first&#39;).sum()  
+#number of rows and columns left
+df.shape  
+#numbers of unique rows left in the column Respondent
+df[&quot;Respondent&quot;].nunique  </code></pre>
+</li>
+<li><p>Finding Missing Values</p>
+<pre><code class="python">#Find the missing values for all columns.
+df.isnull().sum()  
+#Find out how many rows are missing in the column EdLevel
+df[&quot;EdLevel&quot;].isnull().sum()  </code></pre>
+</li>
+<li><p>Determine Missing Values</p>
+<pre><code class="python">#Find the value counts for the column WorkLoc.
+df[&quot;WorkLoc&quot;].value_counts()  
+#Impute (replace) all the empty rows in the column WorkLoc with the value that you have identified as majority.
+df[&quot;WorkLoc&quot;].fillna(value=&quot;Office&quot;,inplace=True)  
+#After imputation there should ideally not be any empty rows in the WorkLoc column.
+df[&quot;WorkLoc&quot;].isnull().sum()  </code></pre>
+</li>
+<li><p>Normalizing Data</p>
+<pre><code class="python">#List out the various categories in the column &#39;CompFreq&#39;
+df[&quot;CompFreq&quot;].unique()  
+#If the CompFreq is Yearly then use the exising value in CompTotal
+df[&quot;CompFreq&quot;].replace(to_replace=&quot;Yearly&quot;,value=1,inplace=True)  
+#If the CompFreq is Monthly then multiply the value in CompTotal with 12 (months in an year)
+df[&quot;CompFreq&quot;].replace(to_replace=&quot;Monthly&quot;,value=12,inplace=True)  
+#If the CompFreq is Weekly then multiply the value in CompTotal with 52 (weeks in an year)
+df[&quot;CompFreq&quot;].replace(to_replace=&quot;Weekly&quot;,value=52,inplace=True)  
+df[&quot;CompFreq&quot;].unique()
+df[&quot;CompFreq&quot;].value_counts()
+#it makes comparison of salaries easy.
+df[&#39;NormalizedAnnualCompensation&#39;] = df[&quot;CompTotal&quot;] * df[&quot;CompFreq&quot;]  
+df[&quot;Respondent&quot;].nunique()
+df[&quot;ConvertedComp&quot;].describe()
+df[&quot;ConvertedComp&quot;].hist(figsize=(15,4))
+df[&#39;NormalizedAnnualCompensation&#39;].median()</code></pre>
+</li>
+</ul>
+<h3 id="Exploratory-Data-Analysis"><a href="#Exploratory-Data-Analysis" class="headerlink" title="Exploratory Data Analysis"></a>Exploratory Data Analysis</h3><ul>
+<li><p>Import necessary modules</p>
+<pre><code class="python">import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+%matplotlib inline
+df = pd.read_csv(&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m2_survey_data.csv&quot;)</code></pre>
+</li>
+<li><p>Distribution: Determine how the data is distributed</p>
+<pre><code class="python">  #Plot the distribution curve for the column ConvertedComp
+  plt.figure(figsize=(10,5))
+  sns.distplot(a=df[&quot;ConvertedComp&quot;],bins=20,hist=False)
+  plt.show()
+  #Plot the histogram for the column ConvertedComp
+  plt.figure(figsize=(10,5))
+  sns.distplot(a=df[&quot;ConvertedComp&quot;],bins=20,kde=False)
+  plt.show()
+  #the median of the column ConvertedComp
+  df[&quot;ConvertedComp&quot;].median()
+  #number of responders identified themselves only as a Man
+  df[&quot;Gender&quot;].value_counts()
+  #the median number of ConvertedComp of responders identified themselves only as a Woman
+  woman = df[df[&quot;Gender&quot;] == &quot;Woman&quot;]
+  woman[&quot;ConvertedComp&quot;].median()
+  #five number summary for the column Age
+  df[&quot;Age&quot;].describe()</code></pre>
+</li>
+<li><p>Outliers</p>
+<pre><code class="python">#Find out if outliers exist in the column ConvertedComp using a box plot
+plt.figure(figsize=(10,5))
+sns.boxplot(x=df.ConvertedComp, data=df)
+plt.show()
+#Find out the Inter Quartile Range for the column ConvertedComp
+df[&quot;ConvertedComp&quot;].describe()
+#Find out the upper and lower bounds.
+Q1 = df[&quot;ConvertedComp&quot;].quantile(0.25)
+Q3 = df[&quot;ConvertedComp&quot;].quantile(0.75)
+IQR = Q3 - Q1
+print(IQR)
+#Identify how many outliers are there in the ConvertedComp column
+outliers = (df[&quot;ConvertedComp&quot;] &lt; (Q1 - 1.5 * IQR)) | (df[&quot;ConvertedComp&quot;] &gt; (Q3 + 1.5 * IQR))
+outliers.value_counts()
+less = (df[&quot;ConvertedComp&quot;] &lt; (Q1 - 1.5 * IQR))
+less.value_counts()
+more = (df[&quot;ConvertedComp&quot;] &gt; (Q3 + 1.5 * IQR))
+more.value_counts()
+#Create a new dataframe by removing the outliers from the ConvertedComp column
+RemoveConvertedcomp = df[~(df[&quot;ConvertedComp&quot;] &gt; (Q3 + 1.5 * IQR))]
+RemoveConvertedcomp.head()
+RemoveConvertedcomp[&quot;ConvertedComp&quot;].median()
+RemoveConvertedcomp[&quot;ConvertedComp&quot;].mean()</code></pre>
+</li>
+<li><p>Correlation: Find the correlation between all numerical columns</p>
+<pre><code class="python">df.corr()</code></pre>
+</li>
+</ul>
+<h3 id="Data-Visualization"><a href="#Data-Visualization" class="headerlink" title="Data Visualization"></a>Data Visualization</h3><ul>
+<li><p>Work with Database</p>
+<pre><code class="python">!wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m4_survey_data.sqlite
+import sqlite3
+import pandas as pd
+# open a database connection
+conn = sqlite3.connect(&quot;m4_survey_data.sqlite&quot;) 
+# print how many rows are there in the table named &#39;master&#39;
+QUERY = &quot;&quot;&quot;
+SELECT COUNT(*)
+FROM master
+&quot;&quot;&quot;
+# the read_sql_query runs the sql query and returns the data as a dataframe
+df = pd.read_sql_query(QUERY,conn)
+df.head()
+# print all the tables names in the database
+QUERY = &quot;&quot;&quot;
+SELECT name as Table_Name FROM
+sqlite_master WHERE
+type = &#39;table&#39;
+&quot;&quot;&quot;
+# the read_sql_query runs the sql query and returns the data as a dataframe
+pd.read_sql_query(QUERY,conn)
+#run a group by query
+QUERY = &quot;&quot;&quot;
+SELECT Age,COUNT(*) as count
+FROM master
+group by age
+order by age
+&quot;&quot;&quot;
+pd.read_sql_query(QUERY,conn)
+#Describe a table
+table_name = &#39;master&#39;  # the table you wish to describe
+QUERY = &quot;&quot;&quot;
+SELECT sql FROM sqlite_master
+WHERE name= &#39;&#123;&#125;&#39;
+&quot;&quot;&quot;.format(table_name)
+df = pd.read_sql_query(QUERY,conn)
+print(df.iat[0,0])</code></pre>
+</li>
+<li><p>Visualizing Distribution of Data</p>
+</li>
+<li><p>Relationship</p>
+</li>
+<li><p>Composition</p>
+</li>
+<li><p>Comparison</p>
+</li>
+</ul>
+<h3 id="Dashboard-Creation"><a href="#Dashboard-Creation" class="headerlink" title="Dashboard Creation"></a>Dashboard Creation</h3><ul>
+<li>IBM Cognos Dashboard Embedded (CDE) is an AI-fueled business intelligence service that supports the entire data analytics cycle, from discovery to operationalization. It provides users with data discovery capabilities to visually explore and interact with their data to identify the key insights for improving data driven decisions. Users can perform data discovery and then quickly assemble that information into interactive, visually appealing dashboards; all without the need of formal training.</li>
+<li>Add a Cognos Dashboard Embedded (CDE) service and upload external data files to your project (supports CSV file only)</li>
+<li>General navigation around the CDE user interface (UI), start a new dashboard with a template in CDE, populate it with a data visualization as well as save the dashboard.</li>
+</ul>
+<h3 id="Presentation-of-Findings"><a href="#Presentation-of-Findings" class="headerlink" title="Presentation of Findings"></a>Presentation of Findings</h3><ul>
+<li><p>Data collected, cleaned and organized -&gt; Report (paper style report or slideshow presentation)</p>
+</li>
+<li><p>Elements Of A Successful Data Findings Report</p>
+<ul>
+<li>Outline</li>
+<li>Cover Page</li>
+<li>Executive Summary: briefly explain the details of the project and should be considered a stand-alone document</li>
+<li>Table of Contents</li>
+<li>Introduction: explains the nature of the analysis, states the problem, and gives the questions that were to be answered by performing the analysis</li>
+<li>Methodology: explains the data sources that were used in the analysis and outlines the plan for the collected data</li>
+<li>Results: goes into the detail of the data collection, how it was organized, and how it was analyzed,  also contain the charts and graphs that would substantiate the results and call attention to the more complex or crucial findings</li>
+<li>Discussion: engage the audience with a discussion of your implications that were drawn from the research</li>
+<li>Conclusion: reiterate the problem given in the introduction and gives an overall summary of the findings, also state the outcome of the analysis and if any other steps would be taken in the future</li>
+<li>Appendix: contain information that really didn’t fit in the main body of the report, but you deemed it was still important enough to include</li>
+</ul>
+</li>
+<li><p>Factors to remember in accurately conveying your message</p>
+<ul>
+<li>Make sure charts and graphs are not too small and are clearly labeled</li>
+<li>Use the data only as supporting evidence</li>
+<li>Share only one point from each chart</li>
+<li>Eliminate data that does not support the key message</li>
+</ul>
+</li>
+<li><p>Final Presentation</p>
+<iframe src="https://onedrive.live.com/embed?resid=5B712C0081A6168C%21873&amp;authkey=%21ALfYamiV2mOnskw&amp;em=2&amp;wdAr=1.7777777777777777" width="1186px" height="691px" frameborder="0">这是嵌入 <a target="_blank" href="https://office.com">Microsoft Office</a> 演示文稿，由 <a target="_blank" href="https://office.com/webapps">Office</a> 提供支持。</iframe>
+
+</li>
+</ul>
+<h3 id="Assignments"><a href="#Assignments" class="headerlink" title="Assignments"></a>Assignments</h3><ul>
+<li>Visit my <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/LearnCS/tree/main/IBM%20Professional%20Certificates/Data%20Analyst%20Capstone%20Project">Github Repository</a></li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -695,7 +906,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL</p></a></div>
 
 
         
@@ -708,8 +919,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/IBM-Data-Analyst-Capstone-Project/&title=IBM Data Analyst Capstone Project - Bezhuang's Blog&summary=
+In this course provided by IBM, I will assume the role of an Associate Data Analyst who has recently joined the organization and be presented with a business challenge that requires data analysis to be performed on real-world datasets. The capstone project will culminate with a presentation of your data analysis report, with an executive summary for the various stakeholders in the organization. I believe this project is a great opportunity to showcase Data Analytics skills, and demonstrate proficiency to potential employers. The following are the notes I took during this course.
 "
           
           >
@@ -722,8 +933,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/IBM-Data-Analyst-Capstone-Project/&title=IBM Data Analyst Capstone Project - Bezhuang's Blog&summary=
+In this course provided by IBM, I will assume the role of an Associate Data Analyst who has recently joined the organization and be presented with a business challenge that requires data analysis to be performed on real-world datasets. The capstone project will culminate with a presentation of your data analysis report, with an executive summary for the various stakeholders in the organization. I believe this project is a great opportunity to showcase Data Analytics skills, and demonstrate proficiency to potential employers. The following are the notes I took during this course.
 "
           
           >
@@ -736,8 +947,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/IBM-Data-Analyst-Capstone-Project/&title=IBM Data Analyst Capstone Project - Bezhuang's Blog&summary=
+In this course provided by IBM, I will assume the role of an Associate Data Analyst who has recently joined the organization and be presented with a business challenge that requires data analysis to be performed on real-world datasets. The capstone project will culminate with a presentation of your data analysis report, with an executive summary for the various stakeholders in the organization. I believe this project is a great opportunity to showcase Data Analytics skills, and demonstrate proficiency to potential employers. The following are the notes I took during this course.
 "
           
           >
@@ -752,7 +963,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADr0lEQVR42u3aS3LcMAwFQN//0sk+VS4SD5AGdpq7+UgEW5tXgL7+WNH6QgAOHDhwFjhwS+C+wnW90eG6f7+//Xxbx+n66nnBgQMHDhw4cOC2wVUhTkDHAg773kJXH1j3vODAgQMHDhw4cFvhqgeuBtRbsDR4d+s9/h8cOHDgwIEDB+6XwcWNwWJQrdbbvR4cOHDgwIEDB+63w3Vhp+6XBmJw4MCBAwcOHLifDjf1ol46eK42RqvXrZnkgwMHDhw4cODADcF1G5E/7XN8XnDgwIEDBw4cuCVw3dUNvLf3T/ep7nesBxw4cODAgQMHbglcd4B829BMD1zd76nrwIEDBw4cOHDgtsGlATUFqhaaNizT74/XgQMHDhw4cODALYNLX/C7Beo2Rk/7P/WC43EgDQ4cOHDgwIED9yG4qcFu9cBp4J4aoKcBGhw4cODAgQMHbhtcuqqNxakGarf+6vXgwIEDBw4cOHBb4cpB8LLxFzcMw4HxawNpcODAgQMHDhy4D8OlG1YblVONzrTx2q0PHDhw4MCBAwduO1wK0x1QV7+fDtTtAAwOHDhw4MCBA/dhuOlgmTY+n3og3cE6OHDgwIEDBw7cVrhuwd0XD9P/TQ2kjw8UHDhw4MCBAwduGdxUkKwOjJ8KwFMB/BiAwYEDBw4cOHDgPgRXbQxWA2c3gKYD8u5A+tjIBAcOHDhw4MCBWwL3VkNy6r5p3dUg/G0jExw4cODAgQMH7sNw3WCbwt2CTe1b/V95kg8OHDhw4MCBA7cEbqoBOX3/tHGZBvLjJB8cOHDgwIEDB24pXHcAPN0ITf9XPR84cODAgQMHDtxPhbsdAHcHxbdBtztATwfucQcYHDhw4MCBAwfuYbj0Bt3BdfmFvibQWHAGBw4cOHDgwIFbBlctsFpIFSgNxink9fnBgQMHDhw4cOCWwqUNxhSsepAqdDVoXw+kwYEDBw4cOHDglsF1P08Pmt8elJcH0uDAgQMHDhw4cB+C665qAE0bp28/sG/PBQ4cOHDgwIEDtwRuKiB2XxCcakimAf76QYMDBw4cOHDgwC2DSwNveuDboHu7z1sDb3DgwIEDBw4cuK1w3QOnQfitBmk76IMDBw4cOHDgwP1ncN2GYvd+U8EbHDhw4MCBAwfut8FNHSxtnKaNzGpABwcOHDhw4MCB2wqXFvJWw7MKnjYsH5/kgwMHDhw4cODADcGlG00VdPsgnq7z+Ds4cODAgQMHDtwSOKvY4EQADhw4cBY4cJ9dfwFEgf1EonFgeQAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -760,7 +971,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/IBM-Data-Analyst-Capstone-Project/&text=IBM Data Analyst Capstone Project - Bezhuang's Blog"
           
           >
           
@@ -786,11 +997,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>搭建LAMP环境安装部署Wordpress</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，打算再系统...</p>
+        </a>
+      
+      
+        <a class='next' href='/Data-Analysis-with-Python/'>
+          <p class='title'>Data Analysis With Python<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+This Data Analysis with Python course provided by IBM is designed to teach future data analysts ...</p>
         </a>
       
     </div>
@@ -833,7 +1050,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Collection"><span class="toc-text">Data Collection</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Collecting-Data-Using-APIs"><span class="toc-text">Collecting Data Using APIs</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Collecting-Data-Using-Webscraping"><span class="toc-text">Collecting Data Using Webscraping</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Exploring-Data"><span class="toc-text">Exploring Data</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Wrangling"><span class="toc-text">Data Wrangling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exploratory-Data-Analysis"><span class="toc-text">Exploratory Data Analysis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Visualization"><span class="toc-text">Data Visualization</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dashboard-Creation"><span class="toc-text">Dashboard Creation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Presentation-of-Findings"><span class="toc-text">Presentation of Findings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Assignments"><span class="toc-text">Assignments</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +1069,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="IBM Data Analyst Capstone Project";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

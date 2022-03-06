@@ -22,14 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
+  <title>Accenture Coding Virtual Experience Program - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="云服务器,MacOS">
+    <meta name="keywords" content="Java,Spring,Spring Boot,Gradle,Jenkins">
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+The Accenture Know-the-Code Virtual Experience Program covers the fundamentals of software development, including object-oriented programming, code refactor...">
   
 
   <!-- feed -->
@@ -459,7 +459,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        Accenture Coding Virtual Experience Program
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +468,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">程序人生</a>
     </a>
   </div>
 
@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2022年1月16日</p>
   </a>
 </div>
 
@@ -490,13 +490,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：990字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：6分钟</p>
     </a>
   </div>
 
@@ -511,152 +511,126 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>The Accenture Know-the-Code Virtual Experience Program covers the fundamentals of software development, including object-oriented programming, code refactoring, and agile delivery. It empowers me to explore what a career in software development could look like at Accenture while practicing my coding skills. The following are the notes I took during this virtual experience.</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
-</li>
-<li><p>应用程序安装信息</p>
-<ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
-</ul>
-</li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+	<div class="row">
+    <embed src="/pdf/Accenture-Coding-Virtual-Experience.pdf" width="100%" height="550" type="application/pdf">
+	</div>
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
+
+
+<h3 id="Task-1-Object-Oriented-Programming"><a href="#Task-1-Object-Oriented-Programming" class="headerlink" title="Task 1: Object Oriented Programming"></a>Task 1: Object Oriented Programming</h3><h4 id="Background-Information"><a href="#Background-Information" class="headerlink" title="Background Information"></a>Background Information</h4><ul>
+<li>Recently, a company has brought on Accenture to help with the development of its e-commerce website written in Java using the Spring Boot framework. The first task they need help with is searching for products</li>
+<li>One of the UX designers at Accenture has already implemented the new search capability in the UI</li>
+<li>My responsibility is to implement the search capability in our backend Java app</li>
+</ul>
+<h4 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h4><ul>
+<li>Expose an HTTP GET request on the path <code>/api/products/search</code></li>
+<li>The request should take a single parameter named “<code>query</code>” which will be the text that was entered in the search bar</li>
+<li>The request will return a Collection of <code>ProductItem</code> which are the matching products for the search</li>
+</ul>
+<h4 id="Implement-a-new-controller-to-handle-searching"><a href="#Implement-a-new-controller-to-handle-searching" class="headerlink" title="Implement a new controller to handle searching"></a>Implement a new controller to handle searching</h4><ol>
+<li>Download and unzip the mock-company-webapp codebase</li>
+<li>Open the application in IDEA with Gradle support</li>
+<li>Follow the README.md instructions for setting up the development environment</li>
+<li>Implement the “<code>search</code>” method of the class <code>SearchController</code>, the relevant code is outlined with a TODO comment</li>
+<li>The controller should use the “<code>productItemRepository</code>” to interface with the product database</li>
+<li>Review the tests and implement the controller to the spec</li>
+</ol>
+<h4 id="Practical-skills-gained"><a href="#Practical-skills-gained" class="headerlink" title="Practical skills gained"></a>Practical skills gained</h4><ul>
+<li>Object Oriented Programming</li>
+<li>Java</li>
+<li>Spring</li>
+</ul>
+<h3 id="Task-2-Code-Refactoring"><a href="#Task-2-Code-Refactoring" class="headerlink" title="Task 2: Code Refactoring"></a>Task 2: Code Refactoring</h3><h4 id="Background-Information-1"><a href="#Background-Information-1" class="headerlink" title="Background Information"></a>Background Information</h4><ul>
+<li>Now we’ve identified some code in the <code>ReportController</code> class that seems to be doing similar product searching</li>
+<li>I need to refactor the <code>SearchController</code> logic into a new <code>SearchService</code> class that can be used in the <code>SearchController</code> as well as in the <code>ReportController</code></li>
+</ul>
+<h4 id="Requirements-1"><a href="#Requirements-1" class="headerlink" title="Requirements"></a>Requirements</h4><ul>
+<li>Logic moved from <code>SearchController</code> to <code>SearchService</code></li>
+<li><code>SearchController</code> and <code>ReportController</code> both updated to use the <code>SearchService</code></li>
+<li>All unit tests pass</li>
+</ul>
+<h4 id="Refactor-controllers-to-a-shared-service"><a href="#Refactor-controllers-to-a-shared-service" class="headerlink" title="Refactor controllers to a shared service"></a>Refactor controllers to a shared service</h4><ol>
+<li>Follow the README.md instructions for setting up the development environment</li>
+<li>Create the new <code>SearchService</code> class in the “<code>services</code>” package. All of the search logic from the <code>SearchController</code> should be moved into a function in this class for reusability. The relevant code is outlined with a TODO comment</li>
+<li>Using <code>@Autowired</code>, inject the <code>SearchService</code> into the <code>SearchController</code> and <code>ReportController</code></li>
+<li>Refactor both controller classes to use the service by rewriting their functions to use the new service</li>
+<li>Ensure unit tests all pass</li>
+</ol>
+<h4 id="Practical-skills-gained-1"><a href="#Practical-skills-gained-1" class="headerlink" title="Practical skills gained"></a>Practical skills gained</h4><ul>
+<li>Java</li>
+<li>Spring</li>
+</ul>
+<h3 id="Task-3-Continuous-Integration"><a href="#Task-3-Continuous-Integration" class="headerlink" title="Task 3: Continuous Integration"></a>Task 3: Continuous Integration</h3><h4 id="Background-Information-2"><a href="#Background-Information-2" class="headerlink" title="Background Information"></a>Background Information</h4><ul>
+<li>Continuous Integration is the practice of automating the integration of code changes from multiple contributors into a single software project</li>
+<li>It’s a primary DevOps best practice, allowing developers to frequently merge code changes into a central repository where building and test runs can occur</li>
+<li>Use the most popular Continuous Integration tool, Jenkins</li>
+<li>Creating a <code>Jenkinsfile</code> that will build and test the application on all branches of the repository</li>
+</ul>
+<h4 id="Requirements-2"><a href="#Requirements-2" class="headerlink" title="Requirements"></a>Requirements</h4><ul>
+<li>GitHub account created, Git CLI setup, mock-company-webapp repository forked and cloned</li>
+<li><code>Jenkinsfile</code> defined with stages setting it up to run on commit to any branch in the repository</li>
+<li>Continuous Integration server runs <code>build/test</code> and succeeds</li>
+<li>Change made to code that breaks test</li>
+<li>Continuous Integration server runs <code>build/test</code> and fails</li>
+</ul>
+<h4 id="Simulating-Jenkins-using-the-Jenkinsfile-Runner-Action-in-a-GitHub-Workflow"><a href="#Simulating-Jenkins-using-the-Jenkinsfile-Runner-Action-in-a-GitHub-Workflow" class="headerlink" title="Simulating Jenkins using the Jenkinsfile Runner Action in a GitHub Workflow"></a>Simulating Jenkins using the <code>Jenkinsfile</code> Runner Action in a GitHub Workflow</h4><ol>
+<li>Create an account with GitHub and fork the mock-company-webapp repository</li>
+<li>Setup the Git CLI on workstation and “<code>clone</code>” the repository you forked to workstation</li>
+<li>Install the Pipelines application from the GitHub marketplace to use Jenkins directly</li>
+<li>use the Simulated Jenkins for GitHub link to add a <code>.github/workflows/workflow.yml</code> to the repository.</li>
+<li>Add the following stages to the <code>Jenkinsfile</code>, the relevant code is outlined with a TODO comment.<ul>
+<li>Build: <code>./gradlew assemble</code></li>
+<li>Test: <code>./gradlew test</code></li>
+</ul>
 </li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
+<li>Continue to tweak the <code>Jenkinsfile</code> until the build is successful</li>
+<li>Change the <code>SearchService</code> to always return <code>Collections.emptyList()</code> in order to break the tests.</li>
+<li>Commit the change and validate the Continuous Integration build fails which proves that we’ve properly set up Continuous Integration guard rails, that will catch failing tests each time a commit is made by a developer</li>
+</ol>
+<h4 id="Practical-skills-gained-2"><a href="#Practical-skills-gained-2" class="headerlink" title="Practical skills gained"></a>Practical skills gained</h4><ul>
+<li>Continuous Integration</li>
+<li>Jenkins</li>
+<li>DevOps</li>
+</ul>
+<h3 id="Task-4-Agile-Planning"><a href="#Task-4-Agile-Planning" class="headerlink" title="Task 4: Agile Planning"></a>Task 4: Agile Planning</h3><h4 id="Background-Information-3"><a href="#Background-Information-3" class="headerlink" title="Background Information"></a>Background Information</h4><ul>
+<li>In an Agile planning session, developers are given a set of large software features that they then must break up into smaller units of work, called stories, that can be completed within a one to three week period, called a sprint</li>
+<li>A story is an informal, general explanation of a software feature written from the perspective of the end user or customer and is made up of the following components:<ul>
+<li>Who the feature is for</li>
+<li>What they need</li>
+<li>Why they need it</li>
+<li>What shows it’s done</li>
+</ul>
 </li>
 </ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
-<ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<h4 id="Requirements-3"><a href="#Requirements-3" class="headerlink" title="Requirements"></a>Requirements</h4><ul>
+<li>Stories are written in the following format: As a <code>&lt;who the feature is for&gt;</code>, I need to be able to <code>&lt;what they need&gt;</code> so I can <code>&lt;why they need it&gt;</code></li>
+<li>The “<code>what shows it’s done</code>”, called acceptance criteria, must be provided with the story as well</li>
+<li>Stories are then pointed or sized which means to assign some kind of value indicating the difficulty of implementing the story</li>
+<li>Use a T-Shirt size strategy assigning a value of small/medium/large to each story</li>
+<li>It’s very important that stories are broken down as small as they can be so try and keep them either small or medium</li>
+<li>This allows for better concurrency throughout the sprint and easier completion within a single sprint</li>
 </ul>
-</li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
-<ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<h4 id="planning-a-sprint-to-implement-the-checkout-feature-of-the-site"><a href="#planning-a-sprint-to-implement-the-checkout-feature-of-the-site" class="headerlink" title="planning a sprint to implement the checkout feature of the site"></a>planning a sprint to implement the checkout feature of the site</h4><ul>
+<li>Create a document that defines around 10 to 20 stories around the checkout feature</li>
+<li>Pull in a subset of these stories based on our capacity to work on in the next sprint</li>
+<li>Make sure the stories are broken up as small as possible, and the acceptance criteria is testable</li>
 </ul>
-</li>
-</ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
-</li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
-</li>
-</ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
-</li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
-</li>
-</ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h4 id="Practical-skills-gained-3"><a href="#Practical-skills-gained-3" class="headerlink" title="Practical skills gained"></a>Practical skills gained</h4><ul>
+<li>Agile Methodology</li>
+<li>Software Development Lifecycle (SDLC)</li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -695,7 +669,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Spring/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Spring</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Spring-Boot/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Spring Boot</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Gradle/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Gradle</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Jenkins/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Jenkins</p></a></div>
 
 
         
@@ -708,8 +682,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Accenture-Coding-Virtual-Experience/&title=Accenture Coding Virtual Experience Program - Bezhuang's Blog&summary=
+The Accenture Know-the-Code Virtual Experience Program covers the fundamentals of software development, including object-oriented programming, code refactoring, and agile delivery. It empowers me to explore what a career in software development could look like at Accenture while practicing my coding skills. The following are the notes I took during this virtual experience.
 "
           
           >
@@ -722,8 +696,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Accenture-Coding-Virtual-Experience/&title=Accenture Coding Virtual Experience Program - Bezhuang's Blog&summary=
+The Accenture Know-the-Code Virtual Experience Program covers the fundamentals of software development, including object-oriented programming, code refactoring, and agile delivery. It empowers me to explore what a career in software development could look like at Accenture while practicing my coding skills. The following are the notes I took during this virtual experience.
 "
           
           >
@@ -736,8 +710,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Accenture-Coding-Virtual-Experience/&title=Accenture Coding Virtual Experience Program - Bezhuang's Blog&summary=
+The Accenture Know-the-Code Virtual Experience Program covers the fundamentals of software development, including object-oriented programming, code refactoring, and agile delivery. It empowers me to explore what a career in software development could look like at Accenture while practicing my coding skills. The following are the notes I took during this virtual experience.
 "
           
           >
@@ -752,7 +726,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADoElEQVR42u3aUXIrIQwEQN//0u8dIJVaRhKxnDR/drEYmnxMpH39M0rjhQAcOHDgDHDglsC9iuPLguFz331+mpd+//Q78b7BgQMHDhw4cOCWwR0HwHD+6XpVsNOLnDovOHDgwIEDBw7cVrip4No9WLqPqf0/zgcHDhw4cODAgfulcKfPn65bLZimARocOHDgwIEDB+6vwlWD6C2gboMaHDhw4MCBAwfu0+DiBu1w0E0PVt3X2zv54MCBAwcOHDhwQ3DVwPmpn8vnBQcOHDhw4MCBWwLXHdVC4mkQrQbZ9HeOzwsOHDhw4MCBA7cErhoQ042mjexTkO4+4wY3OHDgwIEDBw7cErhuUE3BukF46iLS4A4OHDhw4MCBA7cNbvoHu/O7F1RtnB+vAw4cOHDgwIEDtwSuG1R/+kXA7gWnDW5w4MCBAwcOHLitcNMFy+6LgNWAWm1Ux/PBgQMHDhw4cOCWwU0dZKpAOV2YnCqwggMHDhw4cODAbYE7LSCeHnAKJp1XBUvPBQ4cOHDgwIEDtwWuWgBMg221MJk2kqsXXP7PARw4cODAgQMH7k1waWFvOrhWLyQteI4FenDgwIEDBw4cuGVwaaN3qpCZgt8qaIIDBw4cOHDgwH0aXPdA0wXL6kWeglcLseDAgQMHDhw4cNvh4gbtJbDq82njOi6cggMHDhw4cODALYObepGv++LfVBDvFlS/hQQHDhw4cODAgVsC1wU8bfh2G9Pd3+023sGBAwcOHDhw4LbBdQNtCjYVmKcCdvwHAw4cOHDgwIEDtwTuFCBtGFfXux1k0wsEBw4cOHDgwIHbCtdeKAROIaYAxgI+OHDgwIEDBw7cMrhpiKkC5elFpheRBnJw4MCBAwcOHLjtcNWgOVW4rB40bYSXG+bgwIEDBw4cOHBL4U5huhueCsrdRnl68eDAgQMHDhw4cNvhqjDVhm+5sHhptCvA4MCBAwcOHDhwl+G64zSwdi8gDc7dQi04cODAgQMHDtx2uKmAmBYgbwHdCvTgwIEDBw4cOHBb4aYD7+mBqoBpwD0NwI/nBQcOHDhw4MCBWwqXNpTjQuBhoJ1uiE81qMGBAwcOHDhw4H4r3GmAvl3gnLp4cODAgQMHDhy4vwZ3uk63kDo9//Fc4MCBAwcOHDhwS+GqG6k2qqsHuRWQf6yTDw4cOHDgwIEDNwRXbtBe+n7quRQ+bkiDAwcOHDhw4MC9Cc4IC5wIwIEDB84AB+694z/r7YCXJwGMPQAAAABJRU5ErkJggg==">
           </div>
         </div>
       
@@ -760,7 +734,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Accenture-Coding-Virtual-Experience/&text=Accenture Coding Virtual Experience Program - Bezhuang's Blog"
           
           >
           
@@ -786,11 +760,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/ATM%E7%B3%BB%E7%BB%9F/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>银行 ATM 系统实现</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+2022年寒假二刷复习完 Java SE 的全部知识点后，为了更加熟练掌握 Java 面向对象的特性，进一步掌握编程技巧和调试技巧，根据黑马程序员项目指导模拟实现一个银行 ATM 系统软件，以...</p>
+        </a>
+      
+      
+        <a class='next' href='/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/'>
+          <p class='title'>计算机网络<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+计算机网络是计算机专业必修的重要课程之一，与现实世界结合得相当紧密，也是考研408计算机学科专业基础综合考试中的一门课程。计算机网络学习的核心内容就是网络协议的学习。网络协议是为计算机网络中进...</p>
         </a>
       
     </div>
@@ -833,7 +813,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Task-1-Object-Oriented-Programming"><span class="toc-text">Task 1: Object Oriented Programming</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Background-Information"><span class="toc-text">Background Information</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Requirements"><span class="toc-text">Requirements</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Implement-a-new-controller-to-handle-searching"><span class="toc-text">Implement a new controller to handle searching</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Practical-skills-gained"><span class="toc-text">Practical skills gained</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Task-2-Code-Refactoring"><span class="toc-text">Task 2: Code Refactoring</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Background-Information-1"><span class="toc-text">Background Information</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Requirements-1"><span class="toc-text">Requirements</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Refactor-controllers-to-a-shared-service"><span class="toc-text">Refactor controllers to a shared service</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Practical-skills-gained-1"><span class="toc-text">Practical skills gained</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Task-3-Continuous-Integration"><span class="toc-text">Task 3: Continuous Integration</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Background-Information-2"><span class="toc-text">Background Information</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Requirements-2"><span class="toc-text">Requirements</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Simulating-Jenkins-using-the-Jenkinsfile-Runner-Action-in-a-GitHub-Workflow"><span class="toc-text">Simulating Jenkins using the Jenkinsfile Runner Action in a GitHub Workflow</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Practical-skills-gained-2"><span class="toc-text">Practical skills gained</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Task-4-Agile-Planning"><span class="toc-text">Task 4: Agile Planning</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Background-Information-3"><span class="toc-text">Background Information</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Requirements-3"><span class="toc-text">Requirements</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#planning-a-sprint-to-implement-the-checkout-feature-of-the-site"><span class="toc-text">planning a sprint to implement the checkout feature of the site</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Practical-skills-gained-3"><span class="toc-text">Practical skills gained</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -852,7 +832,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="Accenture Coding Virtual Experience Program";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

@@ -22,14 +22,14 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
+  <title>2021阿里Java训练营第二期 - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="云服务器,MacOS">
+    <meta name="keywords" content="Java,MySQL,Spring Boot,MongoDB,Redis">
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+本期训练营是继Java新手训练营后的第2期，课程由阿里云开发者社区提供，同样采用5天不间断直播授课的形式，主要内容为Spring Boot 2.5自动化配置原理、实战开发REST API、MySQL数据库、Redis高并发缓存、MQ消息队列Kafka、安全机制、Docker容器等，本篇日志主要记录实战Sprin...">
   
 
   <!-- feed -->
@@ -459,7 +459,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        2021阿里Java训练营第二期
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +468,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E7%A8%8B%E5%BA%8F%E4%BA%BA%E7%94%9F/">程序人生</a>
     </a>
   </div>
 
@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2021年3月12日</p>
   </a>
 </div>
 
@@ -490,13 +490,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：2k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：8分钟</p>
     </a>
   </div>
 
@@ -511,126 +511,200 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>本期训练营是继<a href="/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5">Java新手训练营</a>后的第2期，课程由阿里云开发者社区提供，同样采用5天不间断直播授课的形式，主要内容为Spring Boot 2.5自动化配置原理、实战开发REST API、MySQL数据库、Redis高并发缓存、MQ消息队列Kafka、安全机制、Docker容器等，本篇日志主要记录实战Spring Boot2.5开发中的一些常用知识点，附<a target="_blank" rel="noopener" href="https://github.com/Bezhuang/LearnCS/tree/main/Java%E4%B8%AD%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5">实战代码</a>。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
+<p><img src="https://ucc-image.oss-cn-beijing.aliyuncs.com/credential/26/f6c8aefac0a44ad78108e5a9935fb5a9.png"></p>
+<h3 id="Java-Spring-企业级开发平台"><a href="#Java-Spring-企业级开发平台" class="headerlink" title="Java Spring 企业级开发平台"></a>Java Spring 企业级开发平台</h3><ul>
+<li>最初来自2002年Rod Jahnson所著书《Expert One-on-One J2EE Design and Development》,最早名字为：Interface21</li>
+<li>2003年6月诞生轻量级Java企业级开发工具类库<a target="_blank" rel="noopener" href="http://www.springsource.org/">Spring</a>，现在已经发展成为包括开发工具、MVC框架、类库、微服务架构的完整平台（体系）</li>
+<li>一个轻量级控制反转（IoC）和面向切面（AOP）的容器框架，一个分层的JavaSE/EE full-stack（一站式）轻量级开源框架</li>
+<li>Spring提供IOC、AOP、日志、安全、加密等工具类库，用于解决企业应用开发的复杂性</li>
+<li>Spring Framework：Spring工具类框架，其他Spring项目如Spring Boot也依赖于此框架</li>
+<li>Spring MVC：Java MVC网站开发框架</li>
+<li>Spring Boot：简化Spring应用开发。简化配置文件，使用嵌入式web服务器，含有诸多开箱即用微服务功能，可以和Spring Cloud联合部署</li>
+<li>Spring Cloud：微服务框架，为开发者提供分布式系统的配置管理、服务发现、路器、智能路由、微代理、控制总线等开发工具包</li>
+<li>Spring Data：数据访问框架，封装了很多种数据及数据库的访问相关技术，包括JDBC、Redis、MongoDB、Neo4J等</li>
+<li>Spring REST Shell：可以调用Rest服务的命令行工具，命令行操作Rest服务</li>
+</ul>
+<h3 id="Spring-Boot发展历史"><a href="#Spring-Boot发展历史" class="headerlink" title="Spring Boot发展历史"></a>Spring Boot发展历史</h3><ul>
+<li>联合创始人：Rod Jahnson、Juergen Hoeller、Yann Caroff</li>
+<li>Thomas Risberg&amp;Spring JDBC、Keith Donald&amp;Spring MVC、Adrain Coyler&amp;Spring AOP</li>
+<li>2014年4月开始发布Spring Boot2.0的1.0.0版本</li>
+<li>配合模板和框架来简化Spring项目开发，轻松创建具有最小或零配置的独立应用程序的方式，它提供默认的代码和注释配置，只需要非常少的配置就能进行Java Spring应用开发</li>
+<li>Spring Boot = Auto-Dependency Resolution + Auto-Configuration ＋Management Endpoints + Embedded HTTP Servers (Tomcat, Jetty)</li>
+<li>Spring Boot 2.5.0加入startup endpoint支持GET请求、info endpoint安全改进、支持Java16等新特性</li>
+</ul>
+<h3 id="实战Spring-Boot-2-4"><a href="#实战Spring-Boot-2-4" class="headerlink" title="实战Spring Boot 2.4"></a>实战Spring Boot 2.4</h3><ul>
+<li><p><a href="start.spring.io">在线创建Spring项目</a></p>
 </li>
-<li><p>应用程序安装信息</p>
+<li><p>开发环境：Open JDK，Eclipse需要添加Spring Tools 4插件，IDEA自带</p>
 <ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
+<li><code>start.spring.io</code> 连接失败可使用 <code>start.alibaba.com</code> 源替代</li>
+<li>Spring Web（Tomcat）：<a target="_blank" rel="noopener" href="http://localhost:8080/hello">http://localhost:8080/hello</a></li>
 </ul>
 </li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
+<li><p>REST API</p>
+<pre><code class="java">@RestController
+@SpringBootApplication
+public class JavaSpringBoot01HelloWorldDemoApplication &#123;
+    public static void main(String[] args)&#123;SpringApplication.run(JavaSpringBoot01HelloWorldDemoApplication.class, args);&#125;    
+    @RequestMapping(&quot;/hello&quot;)  //公开http接口，默认端口8080，可在application.properties中修改
+    public String hello() &#123;    
+        String s = &quot;Hello Spring Boot&quot;;
+        return s;&#125;
+&#125;</code></pre>
 </li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
+<li><p>修改端口和context path（<code>appilcation.properties</code>文件）</p>
+<pre><code class="properties">spring.application.name=&#39;JavaSpringBoot212&#39;
+server.servlet.contextPath=/SpringBoot
+server.host=&#39;localhost&#39;
+server.port=&#39;8080&#39;</code></pre>
 </li>
 </ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
+<h3 id="自动化配置Autoconfig底层原理"><a href="#自动化配置Autoconfig底层原理" class="headerlink" title="自动化配置Autoconfig底层原理"></a>自动化配置Autoconfig底层原理</h3><ul>
+<li><p>Spring Boot auto configuration根据<code>classpath</code>的jar依赖自动配置Spring应用</p>
 </li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
+<li><p>@SpringBootApplication注解</p>
 <ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<li>等于三大注解：<code>@EnableAutoConfiguration</code> + <code>@ComponentScan</code> + <code>@Configuration</code>之和</li>
+<li><code>@Configuration</code>将该注解类标记为应用程序上下文的bean来源</li>
+<li><code>@EnableAutoConfiguration</code>告诉Spring Boot自动配置添加bean</li>
+<li>通常手动为Spring MVC应用程序添加<code>@EnableWebMvc</code>，但Spring Boot会在类路径上看到spring-webmvc时自动添加该注解，为Web应用添加并启用关键特性，例如设置DispatcherServlet</li>
+<li><code>@ComponentScan</code>告诉Spring扫描组件，配置和服务，控制器</li>
 </ul>
 </li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
+<li><p>Auto-configuration is non-invasive 非侵入式</p>
+</li>
+<li><p>自动配置也可以被禁用</p>
+</li>
+<li><p>自动化配置机制核心：<code>spring-boot-autoconfigure.jar</code> + <code>spring.factories</code></p>
+</li>
+<li><p>Springboot启动（依赖、配置）-&gt; 自动化依赖（解析、加载）-&gt; 自动化配置（工厂模式创建Bean、依赖注入）-&gt; 自动化服务器（内置Web Server、监听）</p>
+</li>
+<li><p><code>AutoConfigurationPackages.Registrar</code> 注册存储客户端配置包列表的bean，可通过<code>AutoConfigurationPackages.get</code>（BeanFactory）静态方法访问</p>
+</li>
+<li><p>ImportSelector导入选择器负责引导自动配置机制：<code>@Import(EnableAutoConfigurationImportSelector.class)</code></p>
+</li>
+<li><p><code>spring.autoconfigure.exclude</code> 属性控制要排除的自动配置类列表</p>
+</li>
+<li><p>监控自动注入的Bean</p>
+<pre><code class="java">@Bean
+    public CommandLineRunner commandLineRunner(ApplicationContext ctx)&#123;
+        return args -&gt; &#123;
+            System.out.println(&quot;监控Spring Boot 2.0自动注入的Bean:&quot;);
+            String[] beanNames =ctx.getBeanDefinitionNames();
+            Arrays.sort(beanNames);
+            for (String beanName : beanNames)&#123;
+                System.out.println(&quot;Spring自动注入Bean:&quot;+beanName);&#125;
+        &#125;;&#125;</code></pre>
+</li>
+</ul>
+<h3 id="使用Spring-Data连接MySQL数据库"><a href="#使用Spring-Data连接MySQL数据库" class="headerlink" title="使用Spring Data连接MySQL数据库"></a>使用Spring Data连接MySQL数据库</h3><ul>
+<li><p>Spring Data快速数据访问框架、强大的repository仓储和自定义对象映射ORM抽象，提供统一的编程模型</p>
+</li>
+<li><p>通过JavaConfig和自定义XML命名空间轻松实现Spring集成与Spring MVC控制器的高级集成，实验支持跨库持久性</p>
+</li>
+<li><p>Spring Boot实战MySQL</p>
 <ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<li>Spring JDBC and JdbcTemplate</li>
+<li>Spring Data简化连接不同的数据库</li>
+<li>Spring Data JPA连接MySQL，默认底层使用Hibernate framework，支持Repository仓储模式</li>
+<li>引入最重要的两个包：<code>spring-boot-starter-data-jpa</code>和<code>mysql-connector-jave</code></li>
+</ul>
+</li>
+<li><p>Spring Data JPA框架</p>
+<ul>
+<li>Spring Data JPA简化数据访问层的开发工作，基于Spring和JPA构建存储库的完美支持</li>
+<li>支持Querydsl谓词，从而支持类型安全的JPA查询，在引导时验证<code>@Query</code>带注释的查询</li>
+<li>支持Domain类的透明审核，分页支持，动态查询执行，集成自定义数据访问代码的能力</li>
+<li>支持基于XML的实体映射，引入<code>@EnableJpaRepositories</code>，基于<code>JavaConfig</code>的存储库配置</li>
 </ul>
 </li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
+<h3 id="MongoDB-4-0数据库"><a href="#MongoDB-4-0数据库" class="headerlink" title="MongoDB 4.0数据库"></a>MongoDB 4.0数据库</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://edu.aliyun.com/workshop/3/course/1044">阿里巴巴MongoDB高级实战</a></p>
 </li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
+<li><p>NoSQL排名第一的分布式数据库，由C++语言编写，特点是高性能、高并发、易部署、易使用、存储数据非常方便（灵活的数据模型），旨在为Web应用提供可扩展的高性能数据存储解决方案</p>
 </li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
+<li><p>MongoDB开源、跨平台，支持Windows、Linux、OS X和Solaris系统，集成内存缓存，自动分片储存，支持分布式查询和跨文档事务，便于横向扩展</p>
 </li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
+<li><p>Repository仓储层代码</p>
+<pre><code class="java">public interface BlogRepository extends MongoRepository&lt;Blog, ObjectId&gt;&#123;
+    public Blog findById(ObjextId id);
+    public void delete(ObjectId id);
+    public List&lt;Blog&gt; findAll();&#125;</code></pre>
 </li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
+<li><p>启动命令：<code>.\mongod.exe --port 27017 --dbpath=&quot;../data&quot; --logpath=&quot;../log/mongo.log&quot;</code></p>
 </li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
+<li><p>命令行控制</p>
+<pre><code class="bash">show dbs
+use database
+db.users.insert(&#123;&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;&#125;)
+db.users.find()</code></pre>
 </li>
-</ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
-</li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
+<li><p>可视化管理工具：Compass、Robo 3T（Robomongo）</p>
 </li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+<h3 id="Redis分布式缓存6-0"><a href="#Redis分布式缓存6-0" class="headerlink" title="Redis分布式缓存6.0"></a>Redis分布式缓存6.0</h3><ul>
+<li>三层架构+高并发缓存：前端（UI界面）-&gt; 后台（API接口+Services业务逻辑+DAO数据访问）-&gt; 数据（MongoDB+MySQL/Oracle/SQLServer+Redis）</li>
+<li>Redis API：<code>org.springframework.data.redis.connection</code>包，<code>RedisConnection</code>，<code>RedisConnectionFactory Interface</code></li>
+<li>RedisConnection解析为Redis通信提供核心组件，处理与Redis服务器后端的通信</li>
+<li>配置参数：RedisConnectionFactory工厂模式，RedisTemplate：RedisConnection对象，Repository：Connection Pool</li>
+<li>RedisTemplate Interface：GeoOperations，HashOperations，HyperLogLogOperations，ListOperations，SetOperations，ValueOperations，ZSetOperations</li>
+<li>Redis默认接口：6379（最好安装在Linux系统）</li>
+<li>Redis6.0配置文件<code>redis.conf</code>里默认的IP配置，要改掉才能远程链接（改成 bind 0.0.0.0）</li>
+</ul>
+<h3 id="安全机制"><a href="#安全机制" class="headerlink" title="安全机制"></a>安全机制</h3><ul>
+<li>自定义实现安全验证</li>
+<li>Spring Security开源框架<ul>
+<li>专注于身份验证和授权，保护Spring应用系统的安全标准</li>
+<li>提供安全认证服务的框架</li>
+<li>Authetication验证和Authorization收起</li>
+</ul>
+</li>
+<li>Apache Shiro开源框架<ul>
+<li>简单易用的开源Java安全框架，可应用于Web和非Web环境</li>
+</ul>
+</li>
+<li>Basic、Form、OAuth、LDAP、Kerberos、X509、Token验证</li>
+<li>WebSecurityConfig：配置安全规则，默认启用basic验证</li>
+<li>全站安全验证配置</li>
+</ul>
+<h3 id="REST-API帮助文档Swagger"><a href="#REST-API帮助文档Swagger" class="headerlink" title="REST API帮助文档Swagger"></a>REST API帮助文档Swagger</h3><ul>
+<li><p>Spring REST Docs（离线，不好用）</p>
+</li>
+<li><p>Swagger自动化文档工具</p>
+<ul>
+<li>一个完整的API生态，工具，规范，代码规范</li>
+</ul>
+</li>
+<li><p>Swagger依赖：springfox-swagger2，</p>
+</li>
+</ul>
+<h3 id="应用程序性能监控（Admin-amp-Actuator）"><a href="#应用程序性能监控（Admin-amp-Actuator）" class="headerlink" title="应用程序性能监控（Admin&amp;Actuator）"></a>应用程序性能监控（Admin&amp;Actuator）</h3><ul>
+<li>环境、bean、版本、内存、日志、指标、配置、JVM、GC</li>
+<li>性能监控和管理组件Actuator<ul>
+<li>使用HTTP Endpoint或JMX，运行状态指标数据收集</li>
+<li>默认监控EndPoint：<a target="_blank" rel="noopener" href="http://localhost:8080/Actuator">http://localhost:8080/Actuator</a></li>
+<li><code>management.endpoints.web.exposure.include=*</code></li>
+</ul>
+</li>
+<li>Micrometer：多维度指标收集器，语言中立的API（可采集数据图形）</li>
+<li>Spring Boot Admin Server：开发监控服务端<ul>
+<li><code>management.endpoints.health.show-details</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Docker容器"><a href="#Docker容器" class="headerlink" title="Docker容器"></a>Docker容器</h3><ul>
+<li>Spring Boot Docker Hub</li>
+<li>阿里云Docker镜像仓库（国内第一）提供Docker Images镜像加速</li>
+<li>DockerFIle：Docker镜像配置文件</li>
+<li>Build Docker Image with Maven：<code>mvn clean package dockerfile:build</code> </li>
+</ul>
+<h3 id="课程代码"><a href="#课程代码" class="headerlink" title="课程代码"></a>课程代码</h3><ul>
+<li>课程代码已上传 <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/LearnCS/tree/main/%E9%98%BF%E9%87%8C%E4%BA%91%E5%BC%80%E5%8F%91%E8%80%85%E5%AD%A6%E9%99%A2/Java%E4%B8%AD%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5">Github 仓库</a></li>
 </ul>
 
   
@@ -649,8 +723,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
             <ul>
               
                 <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
+                  <a href="https://developer.aliyun.com/learning/course/71" rel="external nofollow noopener noreferrer" target="_blank">
+                  Spring Boot 2.5.x开发实战
                   </a>
                 </li>
               
@@ -695,7 +769,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MySQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MySQL</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Spring-Boot/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Spring Boot</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MongoDB/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MongoDB</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Redis/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Redis</p></a></div>
 
 
         
@@ -708,8 +782,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Java%E4%B8%AD%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/&title=2021阿里Java训练营第二期 - Bezhuang's Blog&summary=
+本期训练营是继Java新手训练营后的第2期，课程由阿里云开发者社区提供，同样采用5天不间断直播授课的形式，主要内容为Spring Boot 2.5自动化配置原理、实战开发REST API、MySQL数据库、Redis高并发缓存、MQ消息队列Kafka、安全机制、Docker容器等，本篇日志主要记录实战Spring Boot2.5开发中的一些常用知识点，附实战代码。
 "
           
           >
@@ -722,8 +796,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Java%E4%B8%AD%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/&title=2021阿里Java训练营第二期 - Bezhuang's Blog&summary=
+本期训练营是继Java新手训练营后的第2期，课程由阿里云开发者社区提供，同样采用5天不间断直播授课的形式，主要内容为Spring Boot 2.5自动化配置原理、实战开发REST API、MySQL数据库、Redis高并发缓存、MQ消息队列Kafka、安全机制、Docker容器等，本篇日志主要记录实战Spring Boot2.5开发中的一些常用知识点，附实战代码。
 "
           
           >
@@ -736,8 +810,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Java%E4%B8%AD%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/&title=2021阿里Java训练营第二期 - Bezhuang's Blog&summary=
+本期训练营是继Java新手训练营后的第2期，课程由阿里云开发者社区提供，同样采用5天不间断直播授课的形式，主要内容为Spring Boot 2.5自动化配置原理、实战开发REST API、MySQL数据库、Redis高并发缓存、MQ消息队列Kafka、安全机制、Docker容器等，本篇日志主要记录实战Spring Boot2.5开发中的一些常用知识点，附实战代码。
 "
           
           >
@@ -752,7 +826,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEZ0lEQVR42u3aQWIbIQwFUN//0u0J0uFLQrbTx85xZoAHC0nW649xZbwQgAVrgAUL1gC7Avsqjp+ef5z48P+e1nf6vvT7tgdYsGDBggULFizYVdh0o08Ap/BduNP5q59TD7BgwYIFCxYsWLDvgU03moJUodN5032NeYAFCxYsWLBgwYL9CtiphacBe/r3tNANFixYsGDBggUL9v+ATQP8qcJztbAOFixYsGDBggUL9nfBdgPq7oa7ULcSkvVOGLBgwYIFCxYsWLBHsOmYWvinfi57gAULFixYsGDBgl2BnRrdQDt97ilxqCYQbQewYMGCBQsWLFiwK7Ddhoyn76cbJG6t8/T97U4YsGDBggULFixYsCOw3YC/C9zdePdgwIIFCxYsWLBgwX4nbLrxFDIFTROJ0/m76zhOeMCCBQsWLFiwYMGuwKYTVQP0auF7OvFIL0icMIAFCxYsWLBgwYJdga0WhtODqAb63caObsCfDrBgwYIFCxYsWLCfCdsteHcPppvYVAv8xxcFLFiwYMGCBQsW7Ars7QA6PYDpg6wmKuXCPViwYMGCBQsWLNgV2Cpg9QBuN2xMFdrHC91gwYIFCxYsWLBgR2GnAvqnhXYbQ24d+HihHyxYsGDBggULFuxHwVYPohvYdw+mm7Cc7gcsWLBgwYIFCxbsLmzckHA6QbFhottwUQ34uwkGWLBgwYIFCxYs2F3YWxubbqBoB+7vyrzAggULFixYsGDBrtRjbxWe0/dMNV48Pd/9+48NG2DBggULFixYsGBXYLuBfjchqG70XQ0bx78ggAULFixYsGDBgr0KWw3kuwutFpZvF8jLiQpYsGDBggULFizYFdjTQHgKJi4cFxtHphpN4oQDLFiwYMGCBQsW7CpsmiDc2kh3w2nBvVpYBwsWLFiwYMGCBfsZsFXQqcL26bxT8OnBxA0bYMGCBQsWLFiwYK/CTm00DcyriUTaSNEO+LudMGDBggULFixYsGCvwE4VpG8nGFMJQJqAjP+CABYsWLBgwYIFC3YE9tUcVeip57oXZPxCgQULFixYsGDBgl2BTReYFrSrCUQVtpvAtAvsYMGCBQsWLFiwYFdg04aGqcaN6gFNBfzVhOXxvWDBggULFixYsGBXYKcWlh5Q9QDTDU/NV+6EAQsWLFiwYMGCBXsFtlrwTQvj1QSjC1+9GOWLAxYsWLBgwYIFC3YFdroQfVwQDj+ncGlCMfU9WLBgwYIFCxYs2B3YqQA5hakWrKee7xbiwYIFCxYsWLBgwX4GbJoQTCcUU4XvbkG+ehHAggULFixYsGDBvhe227CRFp6nGyrSfV3vhAELFixYsGDBggX7VbCnicXUAXTnSy/Kj+8HCxYsWLBgwYIF+xWwpwDTiUSaAFQL2WMNG2DBggULFixYsGCvwlYbNtINdCG6B9ttFFnrhAELFixYsGDBggX7T9huw8J0YTpNNE6/7yZAj+sGCxYsWLBgwYIFuwJrzA6wYMEaYMGCNcBeHX8BY05SduoIJZ4AAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -760,7 +834,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Java%E4%B8%AD%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/&text=2021阿里Java训练营第二期 - Bezhuang's Blog"
           
           >
           
@@ -786,11 +860,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/Java%E9%AB%98%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>2021阿里Java训练营第三期</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+本期训练营是阿里云开发者社区Java训练营的第3期，主要基于最流行的Java Spring Cloud, 结合阿里巴巴淘宝微服务案例，实战模拟淘宝Order微服务，实战演练微服务开发，扩展学习...</p>
+        </a>
+      
+      
+        <a class='next' href='/Linux%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E6%83%B3/'>
+          <p class='title'>听林纳斯大神聊聊 Linux 背后的思想<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+Linus Torvalds，一个任何极客都不会陌生的名字，Linux之父、Git之父，大神在计算机领域的影响力可以说是划时代的。那么在这些传奇的背后蕴藏着怎样的思想呢？下面这个Linus20...</p>
         </a>
       
     </div>
@@ -833,7 +913,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-Spring-%E4%BC%81%E4%B8%9A%E7%BA%A7%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0"><span class="toc-text">Java Spring 企业级开发平台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-Boot%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2"><span class="toc-text">Spring Boot发展历史</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%88%98Spring-Boot-2-4"><span class="toc-text">实战Spring Boot 2.4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E9%85%8D%E7%BD%AEAutoconfig%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86"><span class="toc-text">自动化配置Autoconfig底层原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Spring-Data%E8%BF%9E%E6%8E%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">使用Spring Data连接MySQL数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MongoDB-4-0%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">MongoDB 4.0数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis%E5%88%86%E5%B8%83%E5%BC%8F%E7%BC%93%E5%AD%986-0"><span class="toc-text">Redis分布式缓存6.0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E6%9C%BA%E5%88%B6"><span class="toc-text">安全机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#REST-API%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3Swagger"><span class="toc-text">REST API帮助文档Swagger</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7%EF%BC%88Admin-amp-Actuator%EF%BC%89"><span class="toc-text">应用程序性能监控（Admin&amp;Actuator）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker%E5%AE%B9%E5%99%A8"><span class="toc-text">Docker容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%BE%E7%A8%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">课程代码</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +932,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="2021阿里Java训练营第二期";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

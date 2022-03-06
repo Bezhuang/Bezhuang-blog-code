@@ -22,14 +22,12 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
-  
-    <meta name="keywords" content="云服务器,MacOS">
+  <title>Data Science Math Skills - Bezhuang&#39;s Blog</title>
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+Data Science Math Skills course provided by DUKE UNIVERSITY is designed to teach the vocabulary, notation, concepts, and algebra rules that all data scienti...">
   
 
   <!-- feed -->
@@ -459,7 +457,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        Data Science Math Skills
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +466,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
     </a>
   </div>
 
@@ -479,7 +477,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2020年5月25日</p>
   </a>
 </div>
 
@@ -490,13 +488,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：808字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：5分钟</p>
     </a>
   </div>
 
@@ -511,152 +509,163 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>Data Science Math Skills course provided by DUKE UNIVERSITY is designed to teach the vocabulary, notation, concepts, and algebra rules that all data scientists must know before moving on to more advanced material. The following are the notes I took during this course.</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
-</li>
-<li><p>应用程序安装信息</p>
-<ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
-</li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
-</ul>
-</li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+	<div class="row">
+    <embed src="/pdf/Coursera-DSMS.pdf" width="100%" height="550" type="application/pdf">
+	</div>
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
 
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
+
+
+<h3 id="Sets"><a href="#Sets" class="headerlink" title="Sets"></a>Sets</h3><h4 id="What-is-a-set"><a href="#What-is-a-set" class="headerlink" title="What is a set?"></a>What is a set?</h4><ul>
+<li>A set is made up of elements.</li>
+</ul>
+<h4 id="Cardinality"><a href="#Cardinality" class="headerlink" title="Cardinality"></a>Cardinality</h4><ul>
+<li><p>The cardinality (size) of a set is the number of elements in it.</p>
 </li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
+<li><p>$|A| = 4$ (there are 4 elements in A, so the cardinality is 4)</p>
 </li>
 </ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
+<h4 id="Intersections"><a href="#Intersections" class="headerlink" title="Intersections"></a>Intersections</h4><ul>
+<li><p>The intersection is defined as elements that are in both sets. Symbol $∩$: “intersects” (and)</p>
 </li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
+<li><p>$A ∩ B = {x : x ∈ A and x ∈ B}$</p>
 </li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
-<ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
+<li><p>If there are no elements in common, the answer is the empty set ∅. The cardinality of the empty set $|∅| = 0$</p>
 </li>
 </ul>
+<h4 id="Unions"><a href="#Unions" class="headerlink" title="Unions"></a>Unions</h4><ul>
+<li><p>The union is defined as elements that are in either set. Symbol ∪: “union” (or)</p>
 </li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
-<ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<li><p>$A ∪ B = {x ∈ A or x ∈ B}$</p>
+</li>
+</ul>
+<h4 id="Visualizing-sets"><a href="#Visualizing-sets" class="headerlink" title="Visualizing sets"></a>Visualizing sets</h4><ul>
+<li>Venn diagrams</li>
+</ul>
+<h4 id="Inclusion-exclusion-formula"><a href="#Inclusion-exclusion-formula" class="headerlink" title="Inclusion-exclusion formula"></a>Inclusion-exclusion formula</h4><ul>
+<li>Inclusion-exclusion formula: $|A ∪ B| = |A| + |B| − |A ∩ B|$</li>
+</ul>
+<h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><h4 id="Integers-and-rational-numbers"><a href="#Integers-and-rational-numbers" class="headerlink" title="Integers and rational numbers"></a>Integers and rational numbers</h4><ul>
+<li>Some real numbers terminate, and some do not. The number π = 3.14159… is irrational, it does not repeat after the decimal point.</li>
+</ul>
+<h4 id="Absolute-value"><a href="#Absolute-value" class="headerlink" title="Absolute value"></a>Absolute value</h4><ul>
+<li>The absolute value of a number x, |x|, is the distance from x to 0.</li>
+</ul>
+<h4 id="Intervals-and-Interval-Notation"><a href="#Intervals-and-Interval-Notation" class="headerlink" title="Intervals and Interval Notation"></a>Intervals and Interval Notation</h4><ul>
+<li><p>Closed intervals $[2, 3.1]$</p>
+</li>
+<li><p>Open intervals $(5, 8)$</p>
+</li>
+<li><p>Half-open intervals $(2, 3], [20, 20.3)$</p>
+</li>
+</ul>
+<h3 id="Sigma-Notation"><a href="#Sigma-Notation" class="headerlink" title="Sigma Notation"></a>Sigma Notation</h3><h4 id="Sigma-notation-Σ"><a href="#Sigma-notation-Σ" class="headerlink" title="Sigma notation (Σ)"></a>Sigma notation (Σ)</h4><ul>
+<li><p>distributive property: $a(b + c) = ab + ac$</p>
+</li>
+<li><p>commutative property: $a + b = b + a$</p>
+</li>
+</ul>
+<h3 id="Cartesian-Plane"><a href="#Cartesian-Plane" class="headerlink" title="Cartesian Plane"></a>Cartesian Plane</h3><h4 id="Axes-and-quadrants"><a href="#Axes-and-quadrants" class="headerlink" title="Axes and quadrants"></a>Axes and quadrants</h4><ul>
+<li>X−axis</li>
+<li>Y−axis</li>
+<li>first quadrant</li>
+<li>second quadrant</li>
+<li>third quadrant</li>
+<li>fourth quadrant</li>
+</ul>
+<h4 id="Pythagorean-theorem"><a href="#Pythagorean-theorem" class="headerlink" title="Pythagorean theorem"></a>Pythagorean theorem</h4><h4 id="Derivation-using-point-slope-form"><a href="#Derivation-using-point-slope-form" class="headerlink" title="Derivation using point-slope form"></a>Derivation using point-slope form</h4><h4 id="Slope-intercept-form"><a href="#Slope-intercept-form" class="headerlink" title="Slope-intercept form"></a>Slope-intercept form</h4><ul>
+<li>If L has slope m, and hits the y-axis at (0, b), then y = mx + b is an equation for L, where m is the slope and b is the y-intercept.</li>
+</ul>
+<h4 id="Point-Slope-Formula-for-Lines"><a href="#Point-Slope-Formula-for-Lines" class="headerlink" title="Point-Slope Formula for Lines"></a>Point-Slope Formula for Lines</h4><ul>
+<li><p>$y-y_{0}=m\left( x-x_{0}\right)$ Point-slope form</p>
+</li>
+<li><p>$y=mx+b$ Slope-intercept form</p>
+</li>
+</ul>
+<h3 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h3><ul>
+<li>f : A → B</li>
+</ul>
+<h3 id="Tangent-Lines"><a href="#Tangent-Lines" class="headerlink" title="Tangent Lines"></a>Tangent Lines</h3><h4 id="The-Slope-of-a-Graph-at-a-Point"><a href="#The-Slope-of-a-Graph-at-a-Point" class="headerlink" title="The Slope of a Graph at a Point"></a>The Slope of a Graph at a Point</h4><ul>
+<li>The slope of the tangent line gives the instantaneous rate of change. This is also called the derivative of the function at that point, or f(a).</li>
+</ul>
+<h4 id="The-Derivative-Function"><a href="#The-Derivative-Function" class="headerlink" title="The Derivative Function"></a>The Derivative Function</h4><ul>
+<li>Derivative formula: $\lim _{n\rightarrow 0}\dfrac{f\left( a+h\right) -f\left( a\right) }{h}$</li>
+</ul>
+<h3 id="Fast-Growth-Slow-Growth"><a href="#Fast-Growth-Slow-Growth" class="headerlink" title="Fast Growth, Slow Growth"></a>Fast Growth, Slow Growth</h3><h4 id="Integer-Exponents"><a href="#Integer-Exponents" class="headerlink" title="Integer Exponents"></a>Integer Exponents</h4><ol>
+<li><p>Multiplication rule: $x^{n}x^{m}=x^{m+n}$</p>
+</li>
+<li><p>Power to a power: $x^{n^{m}}=x^{nm}$</p>
+</li>
+<li><p>Product to a power: $\left( x\cdot y\right) ^{n}=x^{n}\cdot y^{n}$</p>
+</li>
+<li><p>Fraction to a power: $\left( \dfrac{x}{y}\right) ^{n}=\dfrac{x^{n}}{y^{n}}$</p>
+</li>
+<li><p>Division and negative powers</p>
+</li>
+</ol>
+<h4 id="How-Logarithms-and-Exponents-Are-Related"><a href="#How-Logarithms-and-Exponents-Are-Related" class="headerlink" title="How Logarithms and Exponents Are Related"></a>How Logarithms and Exponents Are Related</h4><ul>
+<li><p>$b^{x}=N$ “exponential form”</p>
+</li>
+<li><p>$x=\log _{b}N$ “logarithmic form”</p>
+</li>
+</ul>
+<ol>
+<li><p>Product rule: $\log(xy) = \log(x) + \log(y)$</p>
+</li>
+<li><p>Quotient rule: $\log ( \dfrac{x}{y}) = \log(x) − \log(y)$</p>
+</li>
+<li><p>Power and root rule: $\log \left( x^{n}\right) =nlog\left( x\right)$</p>
+</li>
+</ol>
+<h3 id="Basic-Probability-Definitions"><a href="#Basic-Probability-Definitions" class="headerlink" title="Basic Probability Definitions"></a>Basic Probability Definitions</h3><ul>
+<li>probability—the degree of belief in the truth or falsity of a statement</li>
+<li>Range of uncertainty from 0 to 1</li>
+<li>P(x) probability of x</li>
+<li>∼x negation of statement x</li>
+<li>joint probability—probability that two separate events with separate probability distributions are both true.</li>
+<li>P(A and B) is written P(A, B), and read “the joint probability of A and B” or “the probability that A is true and B is true.”</li>
+</ul>
+<h3 id="Problem-Solving-Methods"><a href="#Problem-Solving-Methods" class="headerlink" title="Problem Solving Methods"></a>Problem Solving Methods</h3><h4 id="Permutations-and-Combinations"><a href="#Permutations-and-Combinations" class="headerlink" title="Permutations and Combinations"></a>Permutations and Combinations</h4><ul>
+<li>permutation—order matters, $\dfrac{n!}{\left( n-m\right) !}$</li>
+<li>combination—order does not matter, n! / (m! * (n-m)!)</li>
+</ul>
+<h4 id="Using-Factorial-and-“M-Choose-N”"><a href="#Using-Factorial-and-“M-Choose-N”" class="headerlink" title="Using Factorial and “M Choose N”"></a>Using Factorial and “M Choose N”</h4><ul>
+<li>(m n) = m! / ((m − n)! · n!)</li>
+</ul>
+<h4 id="The-Sum-Rule-Conditional-Probability-and-the-Product-Rule"><a href="#The-Sum-Rule-Conditional-Probability-and-the-Product-Rule" class="headerlink" title="The Sum Rule, Conditional Probability, and the Product Rule"></a>The Sum Rule, Conditional Probability, and the Product Rule</h4><ul>
+<li>P(A) = P(A, B1) + P(A, B2) + … + P(A, Bn)</li>
+<li>P(A | B) = (relevant outcomes) / (total outcomes remaining in universe, when B is true)</li>
+<li>P(A | B) = P(A, B) / P(B)</li>
+</ul>
+<h3 id="Bayes’-Theorem"><a href="#Bayes’-Theorem" class="headerlink" title="Bayes’ Theorem"></a>Bayes’ Theorem</h3><ul>
+<li>P(A | B) = P(B | A) * P(A) / P(B)</li>
+<li>Technical vocabulary of Bayesian inverse probability: posterior probability = likelihood * prior probability / marginal probability<ul>
+<li>posterior probability—probability after new data is observed</li>
+<li>prior probability—probability before any data is observed or before new data is observed</li>
+<li>likelihood—standard forward probability of data given parameters</li>
+<li>marginal probability—probability of the data</li>
 </ul>
 </li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
-</li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
-</li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
-</li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
-</li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
-</li>
+<h4 id="The-Binomial-Theorem-and-Bayes’-Theorem"><a href="#The-Binomial-Theorem-and-Bayes’-Theorem" class="headerlink" title="The Binomial Theorem and Bayes’ Theorem"></a>The Binomial Theorem and Bayes’ Theorem</h4><ul>
+<li>Binomial theorem used when there are two possible outcomes—a success or a non-success, for example, flipping a coin—heads are a success, binary outcome.</li>
+<li>Not limited to fair coins, where the probability of success is 0.5. Probability can be any value &gt; 0 and &lt; 1.</li>
+<li>Probability of s successes in n trials, when probability of 1 success is p: (n s) _ p^s _ (1 − p)^(n−s)<ul>
+<li>where n is the number of independent trials (with replacement), s is the number of successes,and p is the probability of one success</li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
 </li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
-</li>
-</ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -694,9 +703,6 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
-
 
         
       
@@ -708,8 +714,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Data-Science-Math-Skills/&title=Data Science Math Skills - Bezhuang's Blog&summary=
+Data Science Math Skills course provided by DUKE UNIVERSITY is designed to teach the vocabulary, notation, concepts, and algebra rules that all data scientists must know before moving on to more advanced material. The following are the notes I took during this course.
 "
           
           >
@@ -722,8 +728,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Data-Science-Math-Skills/&title=Data Science Math Skills - Bezhuang's Blog&summary=
+Data Science Math Skills course provided by DUKE UNIVERSITY is designed to teach the vocabulary, notation, concepts, and algebra rules that all data scientists must know before moving on to more advanced material. The following are the notes I took during this course.
 "
           
           >
@@ -736,8 +742,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Data-Science-Math-Skills/&title=Data Science Math Skills - Bezhuang's Blog&summary=
+Data Science Math Skills course provided by DUKE UNIVERSITY is designed to teach the vocabulary, notation, concepts, and algebra rules that all data scientists must know before moving on to more advanced material. The following are the notes I took during this course.
 "
           
           >
@@ -752,7 +758,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADkklEQVR42u3aQXICMQwEQP7/6eQBqdRaIy1oqfaNBFi7fZnS8PqxovVCAA4cOHAWOHBL4F7hOn7QTd979byr1+m+wIEDBw4cOHDgtsGlG5t+/ynEFfi/B2/uHxw4cODAgQMHbivcZQAM338X4GngHjsvOHDgwIEDBw7cl8F1B4nvGoyCAwcOHDhw4MCBOztI9eDdInmqoAYHDhw4cODAgXsa3NRAMQ2up8Vy9Xnrmnxw4MCBAwcOHLghuHRA+NTX8XnBgQMHDhw4cOCWwHVXNxCfBt1qkZ0G58t9gwMHDhw4cODALYGbLn67g8L0gk4vMD0fOHDgwIEDBw7cNripAncqwKY//Dv9vtNz/fs5cODAgQMHDhy4ZXBpUOxuvFp8pxdThYoLaXDgwIEDBw4cuDfBVX+Ilw4ku4Vy92K6+wAHDhw4cODAgXsaXDW4phDVQnkqqJffDw4cOHDgwIEDtwQuDYZTgXK6uP54kw8OHDhw4MCBA7cErhpU06DZPlD4vdUCHBw4cODAgQMHbgtc9YPV/7+r6J4KvuDAgQMHDhw4cN8CVw2Y6SBy+rnVoHv8Ghw4cODAgQMHbhnc1AO6FzC9pvcFDhw4cODAgQO3Ba764KliefqAU0V6uckHBw4cOHDgwIH7MFw6iExXtyBOB6HtYh0cOHDgwIEDB24JXBpUTz9fhUkL6m4hfTpYBQcOHDhw4MCB2wp3/AVNkLuC9OnFxkEcHDhw4MCBAwduCVwXYiqQTg0aT/8eXwQ4cODAgQMHDtwyuOrBTgPnNFC30G6fDxw4cODAgQMHbhlcWgjHxe7h+9LgnRbqlxcIDhw4cODAgQO3BG7qgN1BY3ohp//v7hccOHDgwIEDB+4pcGODv5u+JwXvDlbBgQMHDhw4cOC2wlUHg1PFcrUQTwef5cALDhw4cODAgQP3ULguTDUYpwPWbhAGBw4cOHDgwIF7Glx3VTfaHZiewnYvABw4cODAgQMHbjvcK1xTgbQ7WKwOMLsBGRw4cODAgQMHbhvcVNFbLZCnoboB+PLv4MCBAwcOHDhwS+HSIrkajKcGo3evP/sDBw4cOHDgwIH7MripgHl3EO8OVsGBAwcOHDhw4L4V7t1A3UFpNbCDAwcOHDhw4MBthUs3cgqdHiwtursBHBw4cODAgQMHbjtcWtSmA8QqYLtIbhbd4MCBAwcOHDhw2+Cs4mAVAThw4MBZ4MB9dv0CTtR/pvTeXlAAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -760,7 +766,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Data-Science-Math-Skills/&text=Data Science Math Skills - Bezhuang's Blog"
           
           >
           
@@ -786,11 +792,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/Python%E7%94%BB%E7%94%BB/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>使用 Python 程序画画</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+turtle 库是 Python 的标准库之一，属于入门级的图形绘制函数库，其原理是让一只海龟在画布上游走，走过的轨迹形成了绘制的图形，海龟由程序控制，可以自由改变颜色、方向宽度等。我们也可以...</p>
+        </a>
+      
+      
+        <a class='next' href='/Python-for-Everybody/'>
+          <p class='title'>Python for everybody<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+The Python for Everybody Specialization provided by UNIVERSITY OF MICHIGAN introduces fundamenta...</p>
         </a>
       
     </div>
@@ -813,6 +825,59 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
 
+  <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
 
 </div>
 <aside class='l_side'>
@@ -833,7 +898,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Sets"><span class="toc-text">Sets</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#What-is-a-set"><span class="toc-text">What is a set?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cardinality"><span class="toc-text">Cardinality</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Intersections"><span class="toc-text">Intersections</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Unions"><span class="toc-text">Unions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Visualizing-sets"><span class="toc-text">Visualizing sets</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Inclusion-exclusion-formula"><span class="toc-text">Inclusion-exclusion formula</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Numbers"><span class="toc-text">Numbers</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Integers-and-rational-numbers"><span class="toc-text">Integers and rational numbers</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Absolute-value"><span class="toc-text">Absolute value</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Intervals-and-Interval-Notation"><span class="toc-text">Intervals and Interval Notation</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sigma-Notation"><span class="toc-text">Sigma Notation</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Sigma-notation-%CE%A3"><span class="toc-text">Sigma notation (Σ)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cartesian-Plane"><span class="toc-text">Cartesian Plane</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Axes-and-quadrants"><span class="toc-text">Axes and quadrants</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Pythagorean-theorem"><span class="toc-text">Pythagorean theorem</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Derivation-using-point-slope-form"><span class="toc-text">Derivation using point-slope form</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Slope-intercept-form"><span class="toc-text">Slope-intercept form</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Point-Slope-Formula-for-Lines"><span class="toc-text">Point-Slope Formula for Lines</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Functions"><span class="toc-text">Functions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tangent-Lines"><span class="toc-text">Tangent Lines</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#The-Slope-of-a-Graph-at-a-Point"><span class="toc-text">The Slope of a Graph at a Point</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#The-Derivative-Function"><span class="toc-text">The Derivative Function</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fast-Growth-Slow-Growth"><span class="toc-text">Fast Growth, Slow Growth</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Integer-Exponents"><span class="toc-text">Integer Exponents</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#How-Logarithms-and-Exponents-Are-Related"><span class="toc-text">How Logarithms and Exponents Are Related</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-Probability-Definitions"><span class="toc-text">Basic Probability Definitions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Problem-Solving-Methods"><span class="toc-text">Problem Solving Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Permutations-and-Combinations"><span class="toc-text">Permutations and Combinations</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Using-Factorial-and-%E2%80%9CM-Choose-N%E2%80%9D"><span class="toc-text">Using Factorial and “M Choose N”</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#The-Sum-Rule-Conditional-Probability-and-the-Product-Rule"><span class="toc-text">The Sum Rule, Conditional Probability, and the Product Rule</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bayes%E2%80%99-Theorem"><span class="toc-text">Bayes’ Theorem</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#The-Binomial-Theorem-and-Bayes%E2%80%99-Theorem"><span class="toc-text">The Binomial Theorem and Bayes’ Theorem</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -852,7 +917,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="Data Science Math Skills";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 

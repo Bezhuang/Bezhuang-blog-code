@@ -22,14 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>macOS + Ubuntu 实现远程开发配置 - Bezhuang&#39;s Blog</title>
-  
-    <meta name="keywords" content="云服务器,MacOS">
+  <title>微积分重点 - Bezhuang&#39;s Blog</title>
   
 
   
     <meta name="description" content="
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔...">
+微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览，以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。
+">
   
 
   <!-- feed -->
@@ -459,7 +458,7 @@
     
     
       <h1 class="title">
-        macOS + Ubuntu 实现远程开发配置
+        微积分重点
       </h1>
       <div class='new-meta-box'>
         
@@ -468,7 +467,7 @@
   <div class='new-meta-item category'>
     <a class='notlink'>
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97%E4%B8%8E%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">云计算与应用开发</a>
+      <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
     </a>
   </div>
 
@@ -479,7 +478,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月6日</p>
+    <p>发布于：2021年9月1日</p>
   </a>
 </div>
 
@@ -490,13 +489,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：740字</p>
+      <p>字数：1.3k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：3分钟</p>
+      <p>时长：5分钟</p>
     </a>
   </div>
 
@@ -511,152 +510,186 @@
   
   
   <blockquote>
-<p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。</p>
+<p>微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览，以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="服务器镜像信息"><a href="#服务器镜像信息" class="headerlink" title="服务器镜像信息"></a>服务器镜像信息</h3><ul>
-<li><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
-</li>
-<li><p>应用程序安装信息</p>
+<h3 id="微积分总览"><a href="#微积分总览" class="headerlink" title="微积分总览"></a>微积分总览</h3><ul>
+<li><p>微积分是函数（1）和函数（2）之间的桥梁</p>
 <ul>
-<li><p>Nginx 1.18：<code>/usr/local/nginx</code></p>
+<li><p>距离 $f\left( t\right)$ 、速度 $\dfrac{df}{dt}$</p>
 </li>
-<li><p>PHP 7.4：<code>/usr/local/php</code></p>
-</li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
+<li><p>高度 $y\left( x\right)$ 、斜率 $\dfrac{dy}{dx}$</p>
 </li>
 </ul>
 </li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
-<li><p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
-</li>
-</ul>
-<h3 id="Ubuntu-系统配置"><a href="#Ubuntu-系统配置" class="headerlink" title="Ubuntu 系统配置"></a>Ubuntu 系统配置</h3><ul>
-<li><p>依赖源设置</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
-</li>
-<li><p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接</p>
-</li>
-</ul>
-<h3 id="搭建开发环境"><a href="#搭建开发环境" class="headerlink" title="搭建开发环境"></a>搭建开发环境</h3><ul>
-<li><p>C/C++ 开发环境</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
-</li>
-<li><p>Python3 开发环境</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
-</li>
-<li><p>Java 开发环境</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
-</li>
-<li><p>Go 开发环境</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
+<li><p>匀速情况下，$速度=\dfrac{距离}{时间}$，即 $斜率=\dfrac{垂直}{水平}$，即 $s=\dfrac{f}{t}$</p>
 <ul>
-<li><p>添加以下内容</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
-</li>
-<li><p>保存</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
-</li>
+<li>若要求中间一段时间或距离的速度，$s=\dfrac{\Delta f}{\Delta t}$</li>
 </ul>
 </li>
-<li><p>Git 安装配置</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
+<li><p>匀变速情况下，函数图像均为曲线</p>
 <ul>
-<li>提交公钥到 Github 或其他 Git 仓库</li>
+<li><p>微分学就是已知 $距离-时间$ 函数求 $速度-时间$ 函数</p>
+</li>
+<li><p>积分学就是已知 $速度-时间$ 函数求 $距离-时间$ 函数</p>
+</li>
+<li><p> $速度-时间$ 函数 $s=at$ 下面积 $\dfrac{1}{2}t\left( at\right)$ 就是 $距离-时间$ 函数 $\dfrac{1}{2}at^{2}$</p>
+</li>
+<li><p>速度 $s=\dfrac{df}{dt}$ 就是 $f=\int s\left( t\right) dt$ 的导数</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="导数总览"><a href="#导数总览" class="headerlink" title="导数总览"></a>导数总览</h3><ul>
+<li><p>已知距离 $f\left( t\right)$  如何求速度 $\dfrac{df}{dt}$，即已知高度 $y\left( x\right)$  如何求斜率 $\dfrac{dy}{dx}$</p>
+</li>
+<li><p>三个重要函数的斜率</p>
+<ul>
+<li><p>幂函数 $y=x^{n}$ ：$\dfrac{dy}{dx}=nx^{n-1}$</p>
+</li>
+<li><p>三角函数 $y=\sin x$ ：$\dfrac{dy}{dx}=\cos x$</p>
+</li>
+<li><p>指数函数 $y=e^{x}$ ：$\dfrac{dy}{dx}=e^{x}$</p>
+</li>
+</ul>
+</li>
+<li><p>$y=x^2$ 斜率的含义</p>
+<ul>
+<li><p>$平均斜率\dfrac{\left( \Delta x\right) ^{2}}{\Delta x}$，即 $\dfrac{\Delta y}{\Delta x}$ $\rightarrow$ $瞬时斜率\dfrac{dy}{dx}$</p>
+</li>
+<li><p>$\dfrac{\Delta y}{\Delta x}=\dfrac{\left( x+\Delta x\right) ^{2}}{\Delta x}\dfrac{-x^{2}}{}=\dfrac{2xax+\left( \Delta x\right) ^{2}}{\Delta x}=2x+\Delta x$</p>
+</li>
+<li><p>求导：$\dfrac{dy}{dx}=\lim\dfrac{\Delta y}{\Delta x}=2x$</p>
+</li>
+</ul>
+</li>
+<li><p>任意 $x$ 处，$y=\sin x 的斜率\rightarrow \dfrac{dy}{dx}=\cos x$</p>
+</li>
+</ul>
+<h3 id="极值及二阶导数"><a href="#极值及二阶导数" class="headerlink" title="极值及二阶导数"></a>极值及二阶导数</h3><ul>
+<li><p>二阶导数：导数的导数</p>
+<ul>
+<li>一阶导数用于确认极值点，二阶导数表明曲线弯曲方向</li>
+</ul>
+</li>
+<li><p>二阶导数的例子：加速度</p>
+<ul>
+<li><p>距离 $f\left( t\right)$ 、速度 $\dfrac{df}{dt}$、加速度 $\dfrac{d^{2}f}{dt^{2}}$</p>
+</li>
+<li><p>高度 $y=x^2$ 、斜率 $\dfrac{dy}{dx}=2x$、弯曲性 $\dfrac{d^{2}f}{dt^{2}}=2$</p>
+</li>
+<li><p>$sinx$ 的二阶导数为 $-sinx$</p>
+</li>
+</ul>
+</li>
+<li><p>凸函数和凹函数：$f’’ &gt;0$ 为凸，表示向上弯曲，相对的凹为 $f’’ &lt;0$</p>
+</li>
+<li><p>拐点：二阶导数为 0 的点，表示弯曲方向改变</p>
+</li>
+<li><p>对于函数 $y=x^{3}-x^{2}$ $\rightarrow$ $y’=3x^{2}-2x$，$y’’=6x-2$</p>
+<ul>
+<li><p>求极值点：令 $y’=3x^{2}-2x=0$，$x= 0或x=\dfrac{2}{3}$</p>
+</li>
+<li><p>$x=0$ 处，二阶导数为负，取局部最大值（极大值）</p>
+</li>
+<li><p>$x=\dfrac{2}{3}$ 处，二阶导数为正，取局部最小值（极小值）</p>
+</li>
+</ul>
+</li>
+<li><p>应用：上班的最短时间</p>
+<ul>
+<li><p>设高速总长 $b$，家垂直上高速距离为 $a$，没走的高速距离为 $x$</p>
+</li>
+<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B901.png" style="zoom: 33%;">
+</li>
+<li><p>$时间t=\dfrac{b-x}{60}+\dfrac{\sqrt{a^{2}+x^{2}}}{30}$</p>
+</li>
+<li><p>取时间方程的导数，然后令导数为 0 来求最小值</p>
+</li>
+<li><p>$f’=-\dfrac{1}{60}+\dfrac{1}{30}\cdot \dfrac{1}{2}\cdot \dfrac{2x}{\sqrt{a^{2}+x^{2}}}=0$ $\rightarrow$ $x=\dfrac{a}{\sqrt{3}}$</p>
+</li>
+</ul>
+</li>
+<li><p>最值的一般求法：比较所有驻点（$f’=0$）处及边界点函数值，得到最大或最小值即函数最值</p>
+</li>
+<li><p>$f’’$ 的符号可通过 $f’$ 的单调性求出：$x&gt;0$ 时，$f’(x)&gt;f’(0)$ ，斜率变化率为正，$f’’&gt;0$</p>
+</li>
+</ul>
+<h3 id="指数函数-e-x"><a href="#指数函数-e-x" class="headerlink" title="指数函数 $e^x$"></a>指数函数 $e^x$</h3><ul>
+<li><p>最简单的微分方程：$y=\dfrac{dy}{dx}$</p>
+</li>
+<li><p>指数函数：通过微积分构造的函数</p>
+<ul>
+<li><p>重要性质一：指数函数的导数就是其自身</p>
+</li>
+<li><p>函数初始点：$y=e^{0}=1$</p>
+</li>
+<li><p>$\dfrac{x^{n}}{n!}$ 斜率的导数为 $\dfrac{x^{n-1}}{\left( n-1\right) !}$</p>
+</li>
+<li><p>指数级数：$e^{x}=1+x+\dfrac{x^{2}}{2!}+\dfrac{x^{3}}{3!}+\ldots +\dfrac{x^{n}}{n!}+\ldots$</p>
+</li>
+<li><p>重要性质二：$e^{x}\cdot e^{X}=e^{x+X}$</p>
+</li>
+<li><p>$e$ 等于 $x=1$ 时指数级数的值：$e=1+1+\dfrac{1}{2}+\dfrac{1}{6}+\ldots \dfrac{1}{n!}+\ldots\approx 2.71828\ldots$</p>
+</li>
+</ul>
+</li>
+<li><p>指数函数的图像</p>
+<ul>
+<li><p>由重要性质二可得：$e^{-x}=\dfrac{1}{e^{x}}$</p>
+</li>
+<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B902.png" style="zoom:50%;">
+</li>
+</ul>
+</li>
+<li><p>应用：计算存款复利</p>
+<ul>
+<li><p>假设利率为 100%，1 美元存一年得到 2 美元或更多</p>
+</li>
+<li><p>将一年分为 n 份付利息，得到 $\left( 1+\dfrac{1}{n}\right) ^{n}$，$n\rightarrow \infty$ 时最终趋近于 $e$</p>
+</li>
+<li><p>解常微分方程：$\dfrac{dy}{dx}=cy$ $\rightarrow$ $y\left( x\right) =e^{cx}$</p>
+</li>
 </ul>
 </li>
 </ul>
-<h3 id="管理服务"><a href="#管理服务" class="headerlink" title="管理服务"></a>管理服务</h3><ul>
-<li><p>Nginx</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
+<h3 id="积分总览"><a href="#积分总览" class="headerlink" title="积分总览"></a>积分总览</h3><ul>
+<li><p>函数二 $\dfrac{dy}{dx}=nx^{n-1}$ 是函数一 $y=x^{n}$ 的导数</p>
 </li>
-<li><p>MySQL</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
+<li><p>函数一 $y=\dfrac{x^{n+1}}{n+1}$ 是函数二 $\dfrac{dy}{dx}=x^{n}$ 的积分</p>
 </li>
-<li><p>PHP</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
+<li><p>求原函数：$y\left( x\right) =\int s\left( x\right) dx$</p>
 </li>
-<li><p>Pure-Ftpd</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
+<li><p>求积分方法A：反过来看什么函数的导数能得到要积分的函数</p>
 </li>
-<li><p>Redis</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
+<li><p>例：通过代数方法求函数一</p>
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B903.png" style="zoom:67%;">
 </li>
-<li><p>Memcached</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
+<li><p>相加求和：$\sum \Delta y=y_{终}-y_{始}$</p>
 </li>
 </ul>
-<h3 id="虚拟主机管理"><a href="#虚拟主机管理" class="headerlink" title="虚拟主机管理"></a>虚拟主机管理</h3><ul>
-<li><p>添加虚拟主机</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
 </li>
-<li><p>删除虚拟主机</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
+<li><p>例：通过微积分方法求函数一</p>
+<ul>
+<li><p>同时乘除 $\Delta x$：$\sum \left( \dfrac{\Delta y}{\Delta x}\right) \Delta x=y_{终}-y_{始}$</p>
+</li>
+<li><p>在 $\Delta x\rightarrow 0$ 的极限情况下，求和转化为积分：$\int \dfrac{dy}{dx}dx$</p>
 </li>
 </ul>
-<h3 id="本地开发环境"><a href="#本地开发环境" class="headerlink" title="本地开发环境"></a>本地开发环境</h3><ul>
-<li>使用 Visual Studio Code 中的 Remote -SSH 插件连接</li>
-<li>使用 Termius 进行 SSH 和 SFTP 连接</li>
-<li>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床</li>
+</li>
+<li><p>求积分方法B：$积分=函数一=函数二图像下的面积$</p>
+<ul>
+<li>斜率为 $s=2-2x$，对应的高度 $y=2x-x^2$</li>
+</ul>
+</li>
 </ul>
 
   
   
     
     <div class='footer'>
-      
-        <div class='references'>
-          <section class='header'>
-            
-              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
-            
-            <span>References</span>
-          </section>
-          <section class='body'>
-            <ul>
-              
-                <li>
-                  <a href="https://oneinstack.com/docs/lnmpstack-image-guide/" rel="external nofollow noopener noreferrer" target="_blank">
-                  《LNMP环境镜像使用手册》
-                  </a>
-                </li>
-              
-            </ul>
-          </section>
-        </div>
       
       
       
@@ -694,9 +727,6 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>云服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MacOS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MacOS</p></a></div>
-
 
         
       
@@ -708,8 +738,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B9/&title=微积分重点 - Bezhuang's Blog&summary=
+微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览，以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。
 "
           
           >
@@ -722,8 +752,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B9/&title=微积分重点 - Bezhuang's Blog&summary=
+微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览，以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。
 "
           
           >
@@ -736,8 +766,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习，以下为搭建环境过程中所记笔记，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B9/&title=微积分重点 - Bezhuang's Blog&summary=
+微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览，以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。
 "
           
           >
@@ -752,7 +782,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
         <div class='hoverbox'>
           <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEZElEQVR42u3aQW7cMAwF0Ln/pdt9i0DiJyV7gqddBrYsPWZBEvz8sY6sDwKwYC2wYMFaYK/AfsL134Y//L77XPc7//7+0z6r73Q9wIIFCxYsWLBgwd6F3U6AF8/vAk3Bb1+4GJD0vGDBggULFixYsGCfgU0POFUwpIXCbsB3C4jUAyxYsGDBggULFux3wVYPOg15umAACxYsWLBgwYIF+7thu43pFL4a4KnAgwULFixYsGDBgn0HbLcxPT2IsXueNFBpgx4sWLBgwYIFCxbsO2C7Cfxv+zv2AAsWLFiwYMGCBXsFdmqlBUDa6K4m+lMFwdIBLFiwYMGCBQsW7BXYdAAjTbBvDVZU4dL3wIIFCxYsWLBgwT4Lmw44dAchdt+rFiDpudJCBSxYsGDBggULFuwzsKf+fksDeqoBvwwUWLBgwYIFCxYs2CuwpwYxqgn81IXThnY14MsCASxYsGDBggULFuxV2CpENSBpozxN9E9BlwsEsGDBggULFixYsKOw6aBF2rieHsxIE/mpwIAFCxYsWLBgwYJ9BvZ24j/eWC4CTt932egGCxYsWLBgwYIFewT21Ae6jeMufLWB3S2UwIIFCxYsWLBgwT4DuwuXAqaQ3X2r92wHGixYsGDBggULFuwjsCl0NwFPG+e75zlVICwb3WDBggULFixYsGCPwKaN5RQkfa47iNEdCNl+HixYsGDBggULFuwV2G5i3R3oSBvu3X2OvQ8WLFiwYMGCBQv2Kmw1IZ6+YPU73XN0B0+2BzbAggULFixYsGDBHoFNE/4qSHcw4nRgpp4HCxYsWLBgwYIF+w7YasFQhasm8NUG+O49xu4HFixYsGDBggUL9ipsmvB3BzaqAdgtOLrnTgMOFixYsGDBggUL9hnYaiLf3ac7mFEd3OgGcPk7WLBgwYIFCxYs2Kuw1Q3SxH2q0ZwOllTPWS4swIIFCxYsWLBgwV6FrTaQpyFODXqkDfG0gQ8WLFiwYMGCBQv2DuzuRdOBi9uDFV3YtOAACxYsWLBgwYIF+wzsdIO6WoBMw6eDJdV9lgUCWLBgwYIFCxYs2COwuwl4OghRHXyoJupTAUtBwYIFCxYsWLBgwT4Dmyb0aUO7GoA08U8HRrqNfrBgwYIFCxYsWLB3YNMDdRvTUwn+VKFTXduVF1iwYMGCBQsWLNgjsFMFwlTCnb7fTfC7AQULFixYsGDBggV7F3Y6Ua42wqcHOKYLh3IjHixYsGDBggULFuwV2E+4UvAqaApZLTzShv6y8gILFixYsGDBggV7FLZ7sDQg1cb3VGO+ux9YsGDBggULFizYd8F2BzS6jerp/dLBjvQfAixYsGDBggULFux3wE4NbKQDFd2GezeQYMGCBQsWLFiwYL8Tdhqg2lif/l71XGDBggULFixYsGDfAds9ULfASBvQn3B177k9sAEWLFiwYMGCBQv2CGx6oLRR3R2kSBP9bmDBggULFixYsGDBvgPWml1gwYK1wIIFa4E9uv4CEHxWOhAzXggAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -760,7 +790,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B9/&text=微积分重点 - Bezhuang's Blog"
           
           >
           
@@ -786,11 +816,17 @@ cat /root/.ssh/id_rsa.pub</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/'>
-          <p class='title'>Go语言基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/%E5%BE%AE%E5%88%86%E5%AD%A6%E9%87%8D%E7%82%B9/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>微分学重点</p>
           <p class='content'>
-Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言，它用批判吸收的眼光，融合 C 语言、Java 等众家之长，将简洁、高效演绎得淋漓尽致。Golan...</p>
+微分学重点的十二章关于导数的课程深入挖掘了微积分的子领域，“微分”。 与微积分重点的课程一样，MIT 数学教授 Gilbert Strang 解释了每个主题如何应用于现实生活中，是对微积分重点...</p>
+        </a>
+      
+      
+        <a class='next' href='/%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB%E5%B0%8F%E6%8A%84/'>
+          <p class='title'>考研政治小抄<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+“思想政治理论”是研究生招生考试必考科目之一（为什么！┗|｀O′|┛），分为马原、毛中特、史纲、思修和时政5个大类。政治内容众多且杂，如果对基础概念和知识进行具体总结，篇幅非常长，本篇笔记只是...</p>
         </a>
       
     </div>
@@ -813,6 +849,59 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
 
+  <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
 
 </div>
 <aside class='l_side'>
@@ -833,7 +922,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%95%9C%E5%83%8F%E4%BF%A1%E6%81%AF"><span class="toc-text">服务器镜像信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ubuntu-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="toc-text">Ubuntu 系统配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">搭建开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1"><span class="toc-text">管理服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA%E7%AE%A1%E7%90%86"><span class="toc-text">虚拟主机管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">本地开发环境</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E7%A7%AF%E5%88%86%E6%80%BB%E8%A7%88"><span class="toc-text">微积分总览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E6%95%B0%E6%80%BB%E8%A7%88"><span class="toc-text">导数总览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%81%E5%80%BC%E5%8F%8A%E4%BA%8C%E9%98%B6%E5%AF%BC%E6%95%B0"><span class="toc-text">极值及二阶导数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0-e-x"><span class="toc-text">指数函数 $e^x$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E6%80%BB%E8%A7%88"><span class="toc-text">积分总览</span></a></li></ol>
     </div>
   </section>
 
@@ -852,7 +941,7 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="macOS + Ubuntu 实现远程开发配置";
+  pdata.postTitle="微积分重点";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
