@@ -13,25 +13,17 @@
       
       <categories>
           
-          <category> 云计算与应用开发 </category>
+          <category> 云服务器与云计算 </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 云服务器 </tag>
-            
-            <tag> MacOS </tag>
-            
-        </tags>
       
     </entry>
     
     
     
     <entry>
-      <title>Go语言基础知识总结</title>
+      <title>Go 语言基础知识总结</title>
       <link href="Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/"/>
       <url>Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/</url>
       
@@ -40,7 +32,7 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -65,7 +57,7 @@
       
       <categories>
           
-          <category> 开源项目 </category>
+          <category> 项目文档与经验 </category>
           
       </categories>
       
@@ -90,7 +82,7 @@
       
       <categories>
           
-          <category> 程序人生 </category>
+          <category> 项目文档与经验 </category>
           
       </categories>
       
@@ -123,7 +115,7 @@
       
       <categories>
           
-          <category> 计算机专业 </category>
+          <category> 计算机基础 </category>
           
       </categories>
       
@@ -142,7 +134,7 @@
       
       <categories>
           
-          <category> 计算机专业 </category>
+          <category> 计算机基础 </category>
           
       </categories>
       
@@ -161,7 +153,7 @@
       
       <categories>
           
-          <category> 计算机专业 </category>
+          <category> 计算机基础 </category>
           
       </categories>
       
@@ -180,7 +172,7 @@
       
       <categories>
           
-          <category> 算法与数据结构 </category>
+          <category> 计算机基础 </category>
           
       </categories>
       
@@ -199,17 +191,23 @@
       
       <categories>
           
-          <category> 读书笔记 </category>
+          <category> 人工智能与机器学习 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 读书笔记 </tag>
+            
+        </tags>
       
     </entry>
     
     
     
     <entry>
-      <title>开发团队调度软件实战</title>
+      <title>开发团队调度软件实现</title>
       <link href="%E5%BC%80%E5%8F%91%E5%9B%A2%E9%98%9F%E8%B0%83%E5%BA%A6%E8%BD%AF%E4%BB%B6/"/>
       <url>%E5%BC%80%E5%8F%91%E5%9B%A2%E9%98%9F%E8%B0%83%E5%BA%A6%E8%BD%AF%E4%BB%B6/</url>
       
@@ -218,7 +216,7 @@
       
       <categories>
           
-          <category> 开源项目 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -234,7 +232,7 @@
     
     
     <entry>
-      <title>从2020的视角看线性代数</title>
+      <title>从 2020 年的视角看线性代数</title>
       <link href="%E4%BB%8E2020%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
       <url>%E4%BB%8E2020%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</url>
       
@@ -247,6 +245,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+        </tags>
       
     </entry>
     
@@ -267,6 +271,12 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> MIT </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -286,12 +296,18 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> MIT </tag>
+            
+        </tags>
+      
     </entry>
     
     
     
     <entry>
-      <title>考研政治小抄</title>
+      <title>考研政治基础笔记</title>
       <link href="%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB%E5%B0%8F%E6%8A%84/"/>
       <url>%E8%80%83%E7%A0%94%E6%94%BF%E6%B2%BB%E5%B0%8F%E6%8A%84/</url>
       
@@ -300,7 +316,7 @@
       
       <categories>
           
-          <category> 学习生活 </category>
+          <category> 生活随记 </category>
           
       </categories>
       
@@ -310,7 +326,7 @@
     
     
     <entry>
-      <title>基于Python和OpenCV实现人脸识别</title>
+      <title>基于 Python 和 OpenCV 实现人脸识别</title>
       <link href="Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/"/>
       <url>Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</url>
       
@@ -319,7 +335,7 @@
       
       <categories>
           
-          <category> 开源项目 </category>
+          <category> 项目文档与经验 </category>
           
       </categories>
       
@@ -353,9 +369,9 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> Python </tag>
+            
+            <tag> Java </tag>
             
         </tags>
       
@@ -364,7 +380,7 @@
     
     
     <entry>
-      <title>双色球系统</title>
+      <title>双色球系统实现</title>
       <link href="%E5%8F%8C%E8%89%B2%E7%90%83/"/>
       <url>%E5%8F%8C%E8%89%B2%E7%90%83/</url>
       
@@ -373,7 +389,7 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -398,7 +414,7 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -423,10 +439,16 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
+          <category> 数据科学与大数据技术 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> IBM </tag>
+            
+        </tags>
       
     </entry>
     
@@ -442,7 +464,7 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -469,7 +491,7 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
+          <category> 数据科学与大数据技术 </category>
           
       </categories>
       
@@ -477,6 +499,8 @@
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> IBM </tag>
             
             <tag> R Language </tag>
             
@@ -496,16 +520,10 @@
       
       <categories>
           
-          <category> 云计算与应用开发 </category>
+          <category> 云服务器与云计算 </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 云服务器 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -521,7 +539,7 @@
       
       <categories>
           
-          <category> 云计算与应用开发 </category>
+          <category> 云服务器与云计算 </category>
           
       </categories>
       
@@ -540,17 +558,23 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
+          <category> 数据科学与大数据技术 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> IBM </tag>
+            
+        </tags>
       
     </entry>
     
     
     
     <entry>
-      <title>搭建LAMP环境安装部署Wordpress</title>
+      <title>搭建 LAMP 环境安装部署 Wordpress</title>
       <link href="%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/"/>
       <url>%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/</url>
       
@@ -559,16 +583,10 @@
       
       <categories>
           
-          <category> 云计算与应用开发 </category>
+          <category> 云服务器与云计算 </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 云服务器 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -584,7 +602,7 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
+          <category> 数据科学与大数据技术 </category>
           
       </categories>
       
@@ -592,6 +610,8 @@
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> IBM </tag>
             
             <tag> SQL </tag>
             
@@ -611,7 +631,7 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
+          <category> 数据科学与大数据技术 </category>
           
       </categories>
       
@@ -620,6 +640,8 @@
             
             <tag> Python </tag>
             
+            <tag> IBM </tag>
+            
         </tags>
       
     </entry>
@@ -627,7 +649,7 @@
     
     
     <entry>
-      <title>2021阿里Java训练营第三期</title>
+      <title>2021 阿里云 Java 训练营第三期</title>
       <link href="Java%E9%AB%98%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/"/>
       <url>Java%E9%AB%98%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/</url>
       
@@ -636,7 +658,7 @@
       
       <categories>
           
-          <category> 程序人生 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -654,32 +676,7 @@
     
     
     <entry>
-      <title>听林纳斯大神聊聊 Linux 背后的思想</title>
-      <link href="Linux%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E6%83%B3/"/>
-      <url>Linux%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E6%83%B3/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>Linus Torvalds，一个任何极客都不会陌生的名字，Linux之父、Git之父，大神在计算机领域的影响力可以说是划时代的。那么在这些传奇的背后蕴藏着怎样的思想呢？下面这个Linus2016年时在TED上接受的一次访谈或许能让我们对Linux背后的思想略窥一二。</p></blockquote><a id="more"></a><h3 id="传奇的诞生"><a href="#传奇的诞生" class="headerlink" title="传奇的诞生"></a>传奇的诞生</h3><p>&emsp;&emsp;1991年的8月25日，一个刚进入赫尔辛基大学不久的21岁学生在学校的邮箱列表中公开了这样一封邮件：“What would you like to see most in minix —— small poll for my new operation system”，在邮件中他这么写道：“我正在开发一个（免费的）操作系统 …… 这只是出于爱好，不会像gnu那样庞大和专业 …… 我现在已经移植了bash和gcc …… 看起来几个月之内就会有实质性的进展”。1991年9月，他通过大学的FTP服务器发布了这个叫Freax的操作系统，随后它被重新命名为我们今天所熟知的名字：Linux。</p><p>&emsp;&emsp;时至今日，我想我们已无需再多去赘述Linux产生的影响和它划时代的意义，我更想来聊聊的是Linus另一个对世界影响至深的理念——开源。</p><p>&emsp;&emsp;Software is like sex, It‘s better when it’s free. —— Linus Torvalds</p><p>&emsp;&emsp;26年后，当Linus描述起一开始建立Linux项目时的工作情况，他说：“Linux最初并不是一个团队合作的产物”，这个操作系统最初只是作为众多为他自己服务的一系列项目中的一个，仅仅是一个因为个人需要而开发的产物。接下来当项目逐渐成长起来，需要获得别人的一些认可和意见，他才逐渐把源码放开，“我已经在这个项目上努力半年了，快来看看我的成果”。在那时，也没有使用什么开源方法或是改进项目的手段，只是不同的人贡献了一些不同的代码，让你觉得，“噢，我从来没有想过可以这样，这样竟然可以让项目获得改进”。不久之后，Linus将其加入了FSF（ 自由软件基金 ）的 GNU 计划中，使用流行的开源许可证，避免了商业或其他的因素参与导致的负面影响，也同时允许用户合法的免费使用、拷贝并且改动程序。今天，Linux 内核是地球上目前为止最活跃的开源项目，是服务器端处于支配地位的操作系统，是 Android 的基础。世界上所有的超级计算机都跑在 Linux 上，包括 NASA 的集群和SpaceX的引擎。</p><h3 id="开源的力量"><a href="#开源的力量" class="headerlink" title="开源的力量"></a>开源的力量</h3><p>&emsp;&emsp;最开始的时候，人们并不是向项目直接贡献代码，人们更多的是贡献自己的想法。Linus原本是不喜欢有人打扰自己的工作的，对他来说，哪怕是电脑主机都不需要性能多强劲，只需要做到绝对的安静就好。所以当人们开始评论、开始对代码提供反馈信息的时候，突然就会让人耳目一新，这是一种崭新的时刻，“I Love Other People”！ </p><p>&emsp;&emsp;不知道为何，好像所有的Geek都不是社交达人，Linus的姐姐（或许是妹妹）说过，他最大的异常特征是从不参与众人的行动，独自沉浸在计算机，沉浸在数学，沉浸在物理学这些他擅长的领域中。不过开源最核心的理念之一就是它非常鼓励不同的人一起合作，不见得需要互相喜欢对方，甚至可能互相都瞧不上，但是大家可以有非常热烈的非常专业的争论，这就是开源的魅力。</p><p>&emsp;&emsp;早期，Linus是担心商业带来的负面影响的，所以他反对软件专利，认为商业人士是来利用你的工作的。但是，他渐渐发现这些商业人士完成了他完全不感兴趣的事情，在完全基于不同的目标，商业使用开源的方式只是专注技术的大神自己刚好不想走的路，“我关心技术，同时有些人关心UI，但我不会去做UI来拯救我的人生。如果我被困在岛屿上，同时唯一的脱困方式是做一个漂亮的UI，那我肯定会死在那儿的”。Linus自己也承认，如果没有全力投入到开源，并且真得放开手，Linux永远也不可能是现在的样子。可能像谷歌这样的公司利用Linus的开源软件赚了好几亿美元，但对他自己来说，他做了正确的选择。</p><p>&emsp;&emsp;时至今日，开源机制能够运转良好，其中很重要的一个缘故是代码可以将所有的事情都转化为黑和白（1和0）。通常这样利于作出决定，代码要么执行，要么不执行，因此意味着更少的争议空间。当然，你也能将同样的原则应用到其它领域的一些地方（比如科研、学术），因为黑色和白色混合在一起不只是变成灰色，而是很多不同的颜色。</p><h3 id="优雅的品味"><a href="#优雅的品味" class="headerlink" title="优雅的品味"></a>优雅的品味</h3><p>&emsp;&emsp;在Coding的领域，你不仅仅只需要打代码，还要对代码有好的品位。我们可以看看下面这个调用单向链表的例子：</p><p>&emsp;&emsp;你是希望用if语句有一个特殊情况处理一个特殊情况，</p><pre><code class="c">void remove_list_entry(entry)&#123;    prev = NULL;    walk = head;    // Walk the list    while (walk != entry)&#123;        prev = walk;        walk = walk-&gt;next;    &#125;    //Remove the entry by updating the head or the previous entry    if(!prev)        head = entry-&gt;next;    else        prev-&gt;next = entry-&gt;next;&#125;</code></pre><p>&emsp;&emsp;还是直接通过指针变量指向next地址？</p><pre><code class="c">void remove_list_entry(entry)&#123;    //The &quot;indirect&quot; pointer points to the address of the thing we&#39;ll update    indirect = &amp;head;    //Walk the list,looking for the thing that points to the entry we want to remove    while ((*indirect) != entry)        indirect = &amp;(*indirect)-&gt;next;        *indirect = entry-&gt;next    // .. and just remove it&#125;</code></pre><p>&emsp;&emsp;CS 101，当碰到一个问题时，可以通过不同的方式被重写，移除一个特殊的情形恢复正常，就是好的代码。</p><p>&emsp;&emsp;”Good taste is much bigger than clever or stupid. Good taste is about really seeing the big patterns and kind of instinctively knowing what’s the right way to do things.” </p><h3 id="脚踏实地"><a href="#脚踏实地" class="headerlink" title="脚踏实地"></a>脚踏实地</h3><p>&emsp;&emsp;人们常常把特斯拉和爱迪生拿来对比。特斯拉是有远见的有疯狂创意的科学家，人们爱特斯拉（不然怎么满大街的毛豆3呢）。爱迪生则是一个常常被批评为乏味的人。但大神更崇尚后者，“Genius is one percent inspiration and 99 percent perspiration”，爱迪生也许不是一个很好的人，但他的努力帮助他完成很多不平凡的事情。</p><p>&emsp;&emsp;“I am not a visionary, I do not have a five-year plan. I’m an engineer. And I’m perfectly happy with all the people who are walking around and just staring at the clouds and looking at the stars and saying, ‘I want to go there’. But I’m looking at the ground, and I want to fix the pothole that’s right in front of me before I fall in. This is the kind of person I am“。</p><h3 id="笔者的其他一些废话"><a href="#笔者的其他一些废话" class="headerlink" title="笔者的其他一些废话"></a>笔者的其他一些废话</h3><p>&emsp;&emsp;“I do code for fun, but I also want to code for something meaningful”，纵观整篇访谈，这是让我印象最深的一句话。技术是为了实现目标、解决问题而存在的，我始终相信，我们创造出的每一个程序都应该有自己存在的价值和意义。大家是不是都听过一种说法，CV工程师，复制–&gt;粘贴，每天重复、机械的劳动，就和10年前的文员一样，整天CRUD，却离自己的初心渐行渐远。这是在尊重技术，还是只是为了名和利呢？</p><p>&emsp;&emsp;在知乎上看到这样一句话，让人感慨良多，它是这么说的：开源让更多人获取到技术，同时也让该技术和会该技术的劳动力变的廉价，以至于在资本家的眼里，那根本不叫技术。可能这的确是事实，大环境也决并非独立个体所能改变的，我们改变不了攫取价值的资本家，所能做的只是尽力向Linus那样去创造价值、贡献价值，To Make Someting Useful and Meaningful。我想，我们努力奋斗是为了更好地实践、创造和分享，这才是我们应有的初衷，这才是我们存在的意义。</p><p>&emsp;&emsp;第一次写长文，难免有些生疏，有些语句不通也请见谅。遗憾自己书读的还是不够多，见识还是不够广，唯有加紧努力让拥有的能力赶上自己的心气。访谈的原视频放在下面了，有什么问题欢迎及时指正。</p><h3 id="TED访谈"><a href="#TED访谈" class="headerlink" title="TED访谈"></a>TED访谈</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">    <iframe src="//player.bilibili.com/player.html?bvid=BV1w7411Z71f" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 程序人生 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2021阿里Java训练营第二期</title>
+      <title>2021 阿里云 Java 训练营第二期</title>
       <link href="Java%E4%B8%AD%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/"/>
       <url>Java%E4%B8%AD%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/</url>
       
@@ -688,7 +685,7 @@
       
       <categories>
           
-          <category> 程序人生 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -697,9 +694,9 @@
             
             <tag> Java </tag>
             
-            <tag> Spring Boot </tag>
-            
             <tag> MySQL </tag>
+            
+            <tag> Spring Boot </tag>
             
             <tag> MongoDB </tag>
             
@@ -712,7 +709,26 @@
     
     
     <entry>
-      <title>51单片机基础知识总结</title>
+      <title>听林纳斯大神聊聊 Linux 背后的思想</title>
+      <link href="Linux%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E6%83%B3/"/>
+      <url>Linux%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E6%83%B3/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Linus Torvalds，一个任何极客都不会陌生的名字，Linux之父、Git之父，大神在计算机领域的影响力可以说是划时代的。那么在这些传奇的背后蕴藏着怎样的思想呢？下面这个Linus2016年时在TED上接受的一次访谈或许能让我们对Linux背后的思想略窥一二。</p></blockquote><a id="more"></a><h3 id="传奇的诞生"><a href="#传奇的诞生" class="headerlink" title="传奇的诞生"></a>传奇的诞生</h3><p>&emsp;&emsp;1991年的8月25日，一个刚进入赫尔辛基大学不久的21岁学生在学校的邮箱列表中公开了这样一封邮件：“What would you like to see most in minix —— small poll for my new operation system”，在邮件中他这么写道：“我正在开发一个（免费的）操作系统 …… 这只是出于爱好，不会像gnu那样庞大和专业 …… 我现在已经移植了bash和gcc …… 看起来几个月之内就会有实质性的进展”。1991年9月，他通过大学的FTP服务器发布了这个叫Freax的操作系统，随后它被重新命名为我们今天所熟知的名字：Linux。</p><p>&emsp;&emsp;时至今日，我想我们已无需再多去赘述Linux产生的影响和它划时代的意义，我更想来聊聊的是Linus另一个对世界影响至深的理念——开源。</p><p>&emsp;&emsp;Software is like sex, It‘s better when it’s free. —— Linus Torvalds</p><p>&emsp;&emsp;26年后，当Linus描述起一开始建立Linux项目时的工作情况，他说：“Linux最初并不是一个团队合作的产物”，这个操作系统最初只是作为众多为他自己服务的一系列项目中的一个，仅仅是一个因为个人需要而开发的产物。接下来当项目逐渐成长起来，需要获得别人的一些认可和意见，他才逐渐把源码放开，“我已经在这个项目上努力半年了，快来看看我的成果”。在那时，也没有使用什么开源方法或是改进项目的手段，只是不同的人贡献了一些不同的代码，让你觉得，“噢，我从来没有想过可以这样，这样竟然可以让项目获得改进”。不久之后，Linus将其加入了FSF（ 自由软件基金 ）的 GNU 计划中，使用流行的开源许可证，避免了商业或其他的因素参与导致的负面影响，也同时允许用户合法的免费使用、拷贝并且改动程序。今天，Linux 内核是地球上目前为止最活跃的开源项目，是服务器端处于支配地位的操作系统，是 Android 的基础。世界上所有的超级计算机都跑在 Linux 上，包括 NASA 的集群和SpaceX的引擎。</p><h3 id="开源的力量"><a href="#开源的力量" class="headerlink" title="开源的力量"></a>开源的力量</h3><p>&emsp;&emsp;最开始的时候，人们并不是向项目直接贡献代码，人们更多的是贡献自己的想法。Linus原本是不喜欢有人打扰自己的工作的，对他来说，哪怕是电脑主机都不需要性能多强劲，只需要做到绝对的安静就好。所以当人们开始评论、开始对代码提供反馈信息的时候，突然就会让人耳目一新，这是一种崭新的时刻，“I Love Other People”！ </p><p>&emsp;&emsp;不知道为何，好像所有的Geek都不是社交达人，Linus的姐姐（或许是妹妹）说过，他最大的异常特征是从不参与众人的行动，独自沉浸在计算机，沉浸在数学，沉浸在物理学这些他擅长的领域中。不过开源最核心的理念之一就是它非常鼓励不同的人一起合作，不见得需要互相喜欢对方，甚至可能互相都瞧不上，但是大家可以有非常热烈的非常专业的争论，这就是开源的魅力。</p><p>&emsp;&emsp;早期，Linus是担心商业带来的负面影响的，所以他反对软件专利，认为商业人士是来利用你的工作的。但是，他渐渐发现这些商业人士完成了他完全不感兴趣的事情，在完全基于不同的目标，商业使用开源的方式只是专注技术的大神自己刚好不想走的路，“我关心技术，同时有些人关心UI，但我不会去做UI来拯救我的人生。如果我被困在岛屿上，同时唯一的脱困方式是做一个漂亮的UI，那我肯定会死在那儿的”。Linus自己也承认，如果没有全力投入到开源，并且真得放开手，Linux永远也不可能是现在的样子。可能像谷歌这样的公司利用Linus的开源软件赚了好几亿美元，但对他自己来说，他做了正确的选择。</p><p>&emsp;&emsp;时至今日，开源机制能够运转良好，其中很重要的一个缘故是代码可以将所有的事情都转化为黑和白（1和0）。通常这样利于作出决定，代码要么执行，要么不执行，因此意味着更少的争议空间。当然，你也能将同样的原则应用到其它领域的一些地方（比如科研、学术），因为黑色和白色混合在一起不只是变成灰色，而是很多不同的颜色。</p><h3 id="优雅的品味"><a href="#优雅的品味" class="headerlink" title="优雅的品味"></a>优雅的品味</h3><p>&emsp;&emsp;在Coding的领域，你不仅仅只需要打代码，还要对代码有好的品位。我们可以看看下面这个调用单向链表的例子：</p><p>&emsp;&emsp;你是希望用if语句有一个特殊情况处理一个特殊情况，</p><pre><code class="c">void remove_list_entry(entry)&#123;    prev = NULL;    walk = head;    // Walk the list    while (walk != entry)&#123;        prev = walk;        walk = walk-&gt;next;    &#125;    //Remove the entry by updating the head or the previous entry    if(!prev)        head = entry-&gt;next;    else        prev-&gt;next = entry-&gt;next;&#125;</code></pre><p>&emsp;&emsp;还是直接通过指针变量指向next地址？</p><pre><code class="c">void remove_list_entry(entry)&#123;    //The &quot;indirect&quot; pointer points to the address of the thing we&#39;ll update    indirect = &amp;head;    //Walk the list,looking for the thing that points to the entry we want to remove    while ((*indirect) != entry)        indirect = &amp;(*indirect)-&gt;next;        *indirect = entry-&gt;next    // .. and just remove it&#125;</code></pre><p>&emsp;&emsp;CS 101，当碰到一个问题时，可以通过不同的方式被重写，移除一个特殊的情形恢复正常，就是好的代码。</p><p>&emsp;&emsp;”Good taste is much bigger than clever or stupid. Good taste is about really seeing the big patterns and kind of instinctively knowing what’s the right way to do things.” </p><h3 id="脚踏实地"><a href="#脚踏实地" class="headerlink" title="脚踏实地"></a>脚踏实地</h3><p>&emsp;&emsp;人们常常把特斯拉和爱迪生拿来对比。特斯拉是有远见的有疯狂创意的科学家，人们爱特斯拉（不然怎么满大街的毛豆3呢）。爱迪生则是一个常常被批评为乏味的人。但大神更崇尚后者，“Genius is one percent inspiration and 99 percent perspiration”，爱迪生也许不是一个很好的人，但他的努力帮助他完成很多不平凡的事情。</p><p>&emsp;&emsp;“I am not a visionary, I do not have a five-year plan. I’m an engineer. And I’m perfectly happy with all the people who are walking around and just staring at the clouds and looking at the stars and saying, ‘I want to go there’. But I’m looking at the ground, and I want to fix the pothole that’s right in front of me before I fall in. This is the kind of person I am“。</p><h3 id="笔者的其他一些废话"><a href="#笔者的其他一些废话" class="headerlink" title="笔者的其他一些废话"></a>笔者的其他一些废话</h3><p>&emsp;&emsp;“I do code for fun, but I also want to code for something meaningful”，纵观整篇访谈，这是让我印象最深的一句话。技术是为了实现目标、解决问题而存在的，我始终相信，我们创造出的每一个程序都应该有自己存在的价值和意义。大家是不是都听过一种说法，CV工程师，复制–&gt;粘贴，每天重复、机械的劳动，就和10年前的文员一样，整天CRUD，却离自己的初心渐行渐远。这是在尊重技术，还是只是为了名和利呢？</p><p>&emsp;&emsp;在知乎上看到这样一句话，让人感慨良多，它是这么说的：开源让更多人获取到技术，同时也让该技术和会该技术的劳动力变的廉价，以至于在资本家的眼里，那根本不叫技术。可能这的确是事实，大环境也决并非独立个体所能改变的，我们改变不了攫取价值的资本家，所能做的只是尽力向Linus那样去创造价值、贡献价值，To Make Someting Useful and Meaningful。我想，我们努力奋斗是为了更好地实践、创造和分享，这才是我们应有的初衷，这才是我们存在的意义。</p><p>&emsp;&emsp;第一次写长文，难免有些生疏，有些语句不通也请见谅。遗憾自己书读的还是不够多，见识还是不够广，唯有加紧努力让拥有的能力赶上自己的心气。访谈的原视频放在下面了，有什么问题欢迎及时指正。</p><h3 id="TED访谈"><a href="#TED访谈" class="headerlink" title="TED访谈"></a>TED访谈</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">    <iframe src="//player.bilibili.com/player.html?bvid=BV1w7411Z71f" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活随记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>51 单片机基础知识总结</title>
       <link href="51%E5%8D%95%E7%89%87%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
       <url>51%E5%8D%95%E7%89%87%E6%9C%BA%E5%9F%BA%E7%A1%80/</url>
       
@@ -721,16 +737,10 @@
       
       <categories>
           
-          <category> 开源项目 </category>
+          <category> 计算机基础 </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 嵌入式 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -746,7 +756,7 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
+          <category> 数据科学与大数据技术 </category>
           
       </categories>
       
@@ -754,6 +764,8 @@
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> IBM </tag>
             
         </tags>
       
@@ -771,7 +783,7 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
+          <category> 数据科学与大数据技术 </category>
           
       </categories>
       
@@ -779,6 +791,8 @@
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> IBM </tag>
             
         </tags>
       
@@ -796,7 +810,7 @@
       
       <categories>
           
-          <category> 开源项目 </category>
+          <category> 项目文档与经验 </category>
           
       </categories>
       
@@ -815,7 +829,7 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
+          <category> 数据科学与大数据技术 </category>
           
       </categories>
       
@@ -823,6 +837,8 @@
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> IBM </tag>
             
             <tag> SQL </tag>
             
@@ -833,7 +849,7 @@
     
     
     <entry>
-      <title>2021阿里Java训练营第一期</title>
+      <title>2021 阿里云 Java 训练营第一期</title>
       <link href="Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/"/>
       <url>Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/</url>
       
@@ -842,7 +858,7 @@
       
       <categories>
           
-          <category> 程序人生 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -867,7 +883,7 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
+          <category> 数据科学与大数据技术 </category>
           
       </categories>
       
@@ -875,6 +891,8 @@
         <tags>
             
             <tag> Python </tag>
+            
+            <tag> IBM </tag>
             
         </tags>
       
@@ -892,14 +910,14 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
+          <category> 数据科学与大数据技术 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Excel </tag>
+            <tag> IBM </tag>
             
         </tags>
       
@@ -917,14 +935,14 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
+          <category> 数据科学与大数据技术 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Excel </tag>
+            <tag> IBM </tag>
             
         </tags>
       
@@ -942,33 +960,14 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2021普陀山行记</title>
-      <link href="%E6%99%AE%E9%99%80%E5%B1%B1%E8%A1%8C%E8%AE%B0/"/>
-      <url>%E6%99%AE%E9%99%80%E5%B1%B1%E8%A1%8C%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>普陀山，是观世音菩萨教化众生的道场。素有”海天佛国“、”南海圣境“的美誉。这十几年来基本上每年都会去，本没什么稀奇。不过今年出行倒是特别顺利（可能是疫情复发没什么人），天气又好，索性把之前没去过的景点都走了个遍，也正好开了博客，就记录一下。</p></blockquote><a id="more"></a><h4 id="2021-牛转乾坤"><a href="#2021-牛转乾坤" class="headerlink" title="2021 牛转乾坤"></a>2021 牛转乾坤</h4><ul><li>2021年，希望也能像这次出行一样那样顺利。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%801.jpg"></p><h3 id="西天景区"><a href="#西天景区" class="headerlink" title="西天景区"></a>西天景区</h3><h4 id="心字石"><a href="#心字石" class="headerlink" title="心字石"></a>心字石</h4><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%802.jpg"></p><h4 id="磐陀石"><a href="#磐陀石" class="headerlink" title="磐陀石"></a>磐陀石</h4><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%803.jpg"></p><ul><li>牛背要靠一靠的</li></ul><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%804.jpg"></p><h3 id="佛顶山"><a href="#佛顶山" class="headerlink" title="佛顶山"></a>佛顶山</h3><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%805.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%806.jpg"></p><h3 id="梵音洞"><a href="#梵音洞" class="headerlink" title="梵音洞"></a>梵音洞</h3><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%807.jpg"></p><h3 id="潮音洞"><a href="#潮音洞" class="headerlink" title="潮音洞"></a>潮音洞</h3><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%808.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%809.jpg"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 学习生活 </category>
+          <category> 数据科学与大数据技术 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 旅行 </tag>
+            <tag> IBM </tag>
             
         </tags>
       
@@ -977,7 +976,26 @@
     
     
     <entry>
-      <title>杭电OJ第1000、1001题思路解析</title>
+      <title>2021 年普陀山行记</title>
+      <link href="%E6%99%AE%E9%99%80%E5%B1%B1%E8%A1%8C%E8%AE%B0/"/>
+      <url>%E6%99%AE%E9%99%80%E5%B1%B1%E8%A1%8C%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>普陀山，是观世音菩萨教化众生的道场。素有”海天佛国“、”南海圣境“的美誉。这十几年来基本上每年都会去，本没什么稀奇。不过今年出行倒是特别顺利（可能是疫情复发没什么人），天气又好，索性把之前没去过的景点都走了个遍，也正好开了博客，就记录一下。</p></blockquote><a id="more"></a><h4 id="2021-牛转乾坤"><a href="#2021-牛转乾坤" class="headerlink" title="2021 牛转乾坤"></a>2021 牛转乾坤</h4><ul><li>2021年，希望也能像这次出行一样那样顺利。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%801.jpg"></p><h3 id="西天景区"><a href="#西天景区" class="headerlink" title="西天景区"></a>西天景区</h3><h4 id="心字石"><a href="#心字石" class="headerlink" title="心字石"></a>心字石</h4><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%802.jpg"></p><h4 id="磐陀石"><a href="#磐陀石" class="headerlink" title="磐陀石"></a>磐陀石</h4><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%803.jpg"></p><ul><li>牛背要靠一靠的</li></ul><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%804.jpg"></p><h3 id="佛顶山"><a href="#佛顶山" class="headerlink" title="佛顶山"></a>佛顶山</h3><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%805.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%806.jpg"></p><h3 id="梵音洞"><a href="#梵音洞" class="headerlink" title="梵音洞"></a>梵音洞</h3><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%807.jpg"></p><h3 id="潮音洞"><a href="#潮音洞" class="headerlink" title="潮音洞"></a>潮音洞</h3><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%808.jpg"></p><p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E6%99%AE%E9%99%809.jpg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活随记 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>杭电 OJ 第 1000、1001 题思路解析</title>
       <link href="HODJ1000&amp;1001/"/>
       <url>HODJ1000&amp;1001/</url>
       
@@ -991,12 +1009,18 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> HDOJ </tag>
+            
+        </tags>
+      
     </entry>
     
     
     
     <entry>
-      <title>C++基础知识总结</title>
+      <title>C++ 基础知识总结</title>
       <link href="Cpp%E5%9F%BA%E7%A1%80/"/>
       <url>Cpp%E5%9F%BA%E7%A1%80/</url>
       
@@ -1005,7 +1029,7 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -1021,11 +1045,11 @@
     
     
     <entry>
-      <title>必会新手50题阶段一思路记录</title>
+      <title>LintCode 必会新手 50 题阶段一</title>
       <link href="%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/"/>
       <url>%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>在线评测平台 LintCode整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握，以下是刷题过程中的思路和方法的记录，也包含成功通过的代码。</p></blockquote><a id="more"></a><h3 id="37-反转一个3位整数"><a href="#37-反转一个3位整数" class="headerlink" title="37.反转一个3位整数"></a>37.反转一个3位整数</h3><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><ul><li>反转一个只有3位数的整数</li></ul><h4 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h4><ul><li>获得个位数并将它变成百位数，获得十位数并将它变成十位数，获得百位数并将它变成个数位</li></ul><h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;public:    int reverseInteger(int number) &#123;        return number % 10 * 100 + number / 10 % 10 * 10 + number / 100;    &#125;&#125;;</code></pre><h3 id="1-A-B问题"><a href="#1-A-B问题" class="headerlink" title="1.A+B问题"></a>1.A+B问题</h3><h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><ul><li>给出两个整数a和b，求他们的和并以整数（int）的形式返回</li></ul><h4 id="问题分析-1"><a href="#问题分析-1" class="headerlink" title="问题分析"></a>问题分析</h4><ul><li>不需要从标准输入流读入数据，只需要根据<code>aplusb</code>传入的两个参数a和b，计算他们的和并返回就行</li></ul><h4 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;public:    int aplusb(int a, int b) &#123;        return a + b;    &#125;&#125;;</code></pre><h3 id="1300-巴什博弈"><a href="#1300-巴什博弈" class="headerlink" title="1300.巴什博弈"></a>1300.巴什博弈</h3><h4 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h4><ul><li>你正在和朋友玩一个游戏：桌子上有一堆石头，每一次你们都会从中拿出1到3个石头。拿走最后一个石头的人赢得游戏</li><li>游戏开始时，你是先手。假设两个人都绝对理性，都会做出最优决策。给定石头的数量，判断你是否会赢得比赛</li><li>举例：有四个石头，那么你永远不会赢得游戏。不管拿几个，最后一个石头一定会被你的朋友拿走</li></ul><h4 id="问题分析-2"><a href="#问题分析-2" class="headerlink" title="问题分析"></a>问题分析</h4><ul><li>巴什博弈：n个物品，两个人轮流从这堆物品中取物，规定每次至少取一个，最多取m个，最后取光者得胜</li><li>如果物品数量 n 不能被 m+1 整除，则 n=k(m+1)+x（k为自然数，0&lt;x&lt;m+1），那么只要先手者第一次拿走 x 个物品，剩余物品数量变为 k(m+1)，接下来无论后手者怎么拿，先手者都可以让物品数量变 k(m+1) ，k逐渐变小直到最后变为 1，此时剩余物品为 m+1，接下来无论后手者拿多少都拿不完 ，并且会使剩余物品数量小于 m+1 ，而先手者则可以直接把剩下的拿完，先手者必胜</li><li>如果物品数量为 k(m+1)，即 n 可被 (m+1) 整除，此时先手者就会面临上面的后手者的问题，先手者必输</li><li>由题可知，m=3，所以物品数量不能被4整除，即n若是4的倍数则输出False，否则输出True</li></ul><h4 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;public:    bool canWinBash(int n) &#123;        if(n%4 == 0)        &#123;            return false;        &#125;        else return true;    &#125;&#125;;</code></pre><h3 id="764-计算圆周长和面积"><a href="#764-计算圆周长和面积" class="headerlink" title="764.计算圆周长和面积"></a>764.计算圆周长和面积</h3><h4 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h4><ul><li>给定一个整数<code>r</code>代表一个圆的半径，返回一个数组，其中数组的第一个元素代表圆的周长，数组的第二个元素代表圆的面积</li></ul><h4 id="问题分析-3"><a href="#问题分析-3" class="headerlink" title="问题分析"></a>问题分析</h4><ul><li>PI = 3.14</li><li>向量（Vector）是一个封装了动态大小数组的顺序容器（Sequence Container），是一个能够存放任意类型的动态数组</li><li><code>#include&lt;vector&gt;;</code></li></ul><h4 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;public:    vector&lt;double&gt; calculate(int r) &#123;        vector&lt;double&gt;ans;        ans.push_back(2 * 3.14 * r);        ans.push_back(3.14 * r * r);        return ans;    &#125;&#125;;</code></pre>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>在线评测平台 LintCode 整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握，以下是刷题过程中的思路和方法的记录，也包含成功通过的代码。</p></blockquote><a id="more"></a><h3 id="37-反转一个3位整数"><a href="#37-反转一个3位整数" class="headerlink" title="37.反转一个3位整数"></a>37.反转一个3位整数</h3><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><ul><li>反转一个只有3位数的整数</li></ul><h4 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h4><ul><li>获得个位数并将它变成百位数，获得十位数并将它变成十位数，获得百位数并将它变成个数位</li></ul><h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;public:    int reverseInteger(int number) &#123;        return number % 10 * 100 + number / 10 % 10 * 10 + number / 100;    &#125;&#125;;</code></pre><h3 id="1-A-B问题"><a href="#1-A-B问题" class="headerlink" title="1.A+B问题"></a>1.A+B问题</h3><h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><ul><li>给出两个整数a和b，求他们的和并以整数（int）的形式返回</li></ul><h4 id="问题分析-1"><a href="#问题分析-1" class="headerlink" title="问题分析"></a>问题分析</h4><ul><li>不需要从标准输入流读入数据，只需要根据<code>aplusb</code>传入的两个参数a和b，计算他们的和并返回就行</li></ul><h4 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;public:    int aplusb(int a, int b) &#123;        return a + b;    &#125;&#125;;</code></pre><h3 id="1300-巴什博弈"><a href="#1300-巴什博弈" class="headerlink" title="1300.巴什博弈"></a>1300.巴什博弈</h3><h4 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h4><ul><li>你正在和朋友玩一个游戏：桌子上有一堆石头，每一次你们都会从中拿出1到3个石头。拿走最后一个石头的人赢得游戏</li><li>游戏开始时，你是先手。假设两个人都绝对理性，都会做出最优决策。给定石头的数量，判断你是否会赢得比赛</li><li>举例：有四个石头，那么你永远不会赢得游戏。不管拿几个，最后一个石头一定会被你的朋友拿走</li></ul><h4 id="问题分析-2"><a href="#问题分析-2" class="headerlink" title="问题分析"></a>问题分析</h4><ul><li>巴什博弈：n个物品，两个人轮流从这堆物品中取物，规定每次至少取一个，最多取m个，最后取光者得胜</li><li>如果物品数量 n 不能被 m+1 整除，则 n=k(m+1)+x（k为自然数，0&lt;x&lt;m+1），那么只要先手者第一次拿走 x 个物品，剩余物品数量变为 k(m+1)，接下来无论后手者怎么拿，先手者都可以让物品数量变 k(m+1) ，k逐渐变小直到最后变为 1，此时剩余物品为 m+1，接下来无论后手者拿多少都拿不完 ，并且会使剩余物品数量小于 m+1 ，而先手者则可以直接把剩下的拿完，先手者必胜</li><li>如果物品数量为 k(m+1)，即 n 可被 (m+1) 整除，此时先手者就会面临上面的后手者的问题，先手者必输</li><li>由题可知，m=3，所以物品数量不能被4整除，即n若是4的倍数则输出False，否则输出True</li></ul><h4 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;public:    bool canWinBash(int n) &#123;        if(n%4 == 0)        &#123;            return false;        &#125;        else return true;    &#125;&#125;;</code></pre><h3 id="764-计算圆周长和面积"><a href="#764-计算圆周长和面积" class="headerlink" title="764.计算圆周长和面积"></a>764.计算圆周长和面积</h3><h4 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h4><ul><li>给定一个整数<code>r</code>代表一个圆的半径，返回一个数组，其中数组的第一个元素代表圆的周长，数组的第二个元素代表圆的面积</li></ul><h4 id="问题分析-3"><a href="#问题分析-3" class="headerlink" title="问题分析"></a>问题分析</h4><ul><li>PI = 3.14</li><li>向量（Vector）是一个封装了动态大小数组的顺序容器（Sequence Container），是一个能够存放任意类型的动态数组</li><li><code>#include&lt;vector&gt;;</code></li></ul><h4 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;public:    vector&lt;double&gt; calculate(int r) &#123;        vector&lt;double&gt;ans;        ans.push_back(2 * 3.14 * r);        ans.push_back(3.14 * r * r);        return ans;    &#125;&#125;;</code></pre>]]></content>
       
       
       <categories>
@@ -1055,7 +1079,7 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -1080,7 +1104,7 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> Web前端开发 </category>
           
       </categories>
       
@@ -1096,7 +1120,7 @@
     
     
     <entry>
-      <title>HTML/CSS 基础知识总结</title>
+      <title>HTML 和 CSS 基础知识总结</title>
       <link href="HTML%E5%92%8CCSS%E5%9F%BA%E7%A1%80/"/>
       <url>HTML%E5%92%8CCSS%E5%9F%BA%E7%A1%80/</url>
       
@@ -1105,7 +1129,7 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> Web前端开发 </category>
           
       </categories>
       
@@ -1130,7 +1154,7 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -1146,7 +1170,7 @@
     
     
     <entry>
-      <title>C语言基础知识总结</title>
+      <title>C 语言基础知识总结</title>
       <link href="C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/"/>
       <url>C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</url>
       
@@ -1155,7 +1179,7 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -1180,16 +1204,10 @@
       
       <categories>
           
-          <category> 学习生活 </category>
+          <category> 生活随记 </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 旅行 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -1205,16 +1223,16 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> SQL </tag>
-            
             <tag> MySQL </tag>
+            
+            <tag> SQL </tag>
             
         </tags>
       
@@ -1270,7 +1288,7 @@
       
       <categories>
           
-          <category> 人工智能与大数据 </category>
+          <category> 人工智能与机器学习 </category>
           
       </categories>
       
@@ -1289,7 +1307,7 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> 生活随记 </category>
           
       </categories>
       
@@ -1333,7 +1351,7 @@
       
       <categories>
           
-          <category> 计算机专业 </category>
+          <category> 计算机基础 </category>
           
       </categories>
       
@@ -1360,7 +1378,7 @@
       
       <categories>
           
-          <category> 学习生活 </category>
+          <category> 生活随记 </category>
           
       </categories>
       
@@ -1379,7 +1397,7 @@
       
       <categories>
           
-          <category> 编程与开发 </category>
+          <category> 后端开发与架构 </category>
           
       </categories>
       
@@ -1404,7 +1422,7 @@
       
       <categories>
           
-          <category> 计算机专业 </category>
+          <category> 计算机基础 </category>
           
       </categories>
       
