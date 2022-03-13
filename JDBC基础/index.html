@@ -1,0 +1,3345 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Java 数据库基础知识总结 - Bezhuang&#39;s Blog</title>
+  
+    <meta name="keywords" content="Java,MySQL,JDBC">
+  
+
+  
+    <meta name="description" content="
+Java 数据库连接，JDBC（Java Database Connectivity），是 Java 语言编程中与数据库连接的 API，封装了各种数据库访问的 API 和基础类库，支持多种数据库连接，也是 Java Web 技术核心的第一部分，我把整个学习过程分为 MySQL 基础、MySQL 高级、JDBC ...">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Bezhuang's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+
+<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+
+
+</head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
+    
+
+<header id="l_header" class="l_header always shadow floatable blur show"  >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Bezhuang's Blog
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div class='cover-bg' style='background-image:url(https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%A3%81%E7%BA%B82.jpg)'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">庄之皓 · Bezhuang</p>
+    
+    
+      <p class="subtitle">欢迎访问我的博客！Welcome to my blog!</p>
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="search here..." />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/photos"
+              
+              
+              id="photos">
+              <p>相册</p>
+            </a>
+          
+            <a href="/projects"
+              
+              
+              id="projects">
+              <p>开源库</p>
+            </a>
+          
+            <a href="/todo"
+              
+              
+              id="todo">
+              <p>计划表</p>
+            </a>
+          
+            <a href="/guestbook"
+              
+              
+              id="guestbook">
+              <p>留言板</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Java 数据库基础知识总结
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E7%BC%96%E7%A8%8B%E4%B8%8E%E5%BC%80%E5%8F%91/">编程与开发</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年3月12日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：8.9k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：35分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p>Java 数据库连接，JDBC（Java Database Connectivity），是 Java 语言编程中与数据库连接的 API，封装了各种数据库访问的 API 和基础类库，支持多种数据库连接，也是 Java Web 技术核心的第一部分，我把整个学习过程分为 MySQL 基础、MySQL 高级、JDBC 和数据连接池四个部分，便于理解，选择的课程为黑马程序员的 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Qf4y1T7Hx">Java web 从入门到企业实战教程</a>，以下为学习过程中所记笔记，可供参考。</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="MySQL-基础"><a href="#MySQL-基础" class="headerlink" title="MySQL 基础"></a>MySQL 基础</h3><h4 id="SQL简介"><a href="#SQL简介" class="headerlink" title="SQL简介"></a>SQL简介</h4><ul>
+<li>英文：Structured Query Language，简称 SQL</li>
+<li>结构化查询语言，一门操作关系型数据库的编程语言</li>
+<li>定义操作所有关系型数据库的统一标准</li>
+<li>对于同一个需求，每一种数据库操作的方式可能会存在一些不一样的地方</li>
+</ul>
+<h4 id="通用语法"><a href="#通用语法" class="headerlink" title="通用语法"></a>通用语法</h4><ul>
+<li><p>SQL 语句可以单行或多行书写，以分号结尾。</p>
+</li>
+<li><p>MySQL 数据库的 SQL 语句不区分大小写，关键字建议使用大写。</p>
+</li>
+<li><p>注释</p>
+<ul>
+<li><p>单行注释: <code>-- 注释内容</code> 或 <code>#注释内容</code></p>
+</li>
+<li><p>多行注释: <code>/* 注释 */</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="SQL分类"><a href="#SQL分类" class="headerlink" title="SQL分类"></a>SQL分类</h4><ul>
+<li><p>DDL (Data Definition Language) ： 数据定义语言，用来定义数据库对象：数据库，表，列等</p>
+</li>
+<li><p>DML (Data Manipulation Language) 数据操作语言，用来对数据库中表的数据进行增删改</p>
+</li>
+<li><p>DQL (Data Query Language) 数据查询语言，用来查询数据库中表的记录（数据）</p>
+</li>
+<li><p>DCL (Data Control Language) 数据控制语言，用来定义数据库的访问权限和安全级别，及创建用户</p>
+</li>
+</ul>
+<h4 id="DDL：操作数据库"><a href="#DDL：操作数据库" class="headerlink" title="DDL：操作数据库"></a>DDL：操作数据库</h4><ul>
+<li> 查询所有的数据库</li>
+</ul>
+<pre><code class="sql">SHOW DATABASES;</code></pre>
+<ul>
+<li>创建数据库（先判断，如果不存在则创建）</li>
+</ul>
+<pre><code class="sql">CREATE DATABASE IF NOT EXISTS 数据库名称;</code></pre>
+<ul>
+<li>删除数据库（先判断，如果存在则删除）</li>
+</ul>
+<pre><code class="sql">DROP DATABASE IF EXISTS 数据库名称;</code></pre>
+<ul>
+<li>使用数据库</li>
+</ul>
+<pre><code class="sql">USE 数据库名称;</code></pre>
+<ul>
+<li>查看当前使用的数据库</li>
+</ul>
+<pre><code class="sql">SELECT DATABASE();</code></pre>
+<h4 id="DDL：操作表"><a href="#DDL：操作表" class="headerlink" title="DDL：操作表"></a>DDL：操作表</h4><ul>
+<li>查询当前数据库下所有表名称</li>
+</ul>
+<pre><code class="sql">SHOW TABLES;</code></pre>
+<ul>
+<li>查询表结构</li>
+</ul>
+<pre><code class="sql">DESC 表名称;</code></pre>
+<ul>
+<li>创建表</li>
+</ul>
+<pre><code class="sql">create table tb_user (
+    id int,
+    username varchar(20),
+    password varchar(32)  -- 最后一行末尾，不能加逗号
+);</code></pre>
+<ul>
+<li>删除表（先判断表是否存在）</li>
+</ul>
+<pre><code class="sql">DROP TABLE IF EXISTS 表名;</code></pre>
+<ul>
+<li>修改表名</li>
+</ul>
+<pre><code class="sql">ALTER TABLE 表名 RENAME TO 新的表名;</code></pre>
+<ul>
+<li>添加一列</li>
+</ul>
+<pre><code class="sql">ALTER TABLE 表名 ADD 列名 数据类型;
+
+-- 给stu表添加一列address，该字段类型是varchar(50)
+alter table stu add address varchar(50);</code></pre>
+<ul>
+<li>修改数据类型</li>
+</ul>
+<pre><code class="sql">ALTER TABLE 表名 MODIFY 列名 新数据类型;
+
+-- 将stu表中的address字段的类型改为 char(50)
+alter table stu modify address char(50);</code></pre>
+<ul>
+<li>修改列名和数据类型</li>
+</ul>
+<pre><code class="sql">ALTER TABLE 表名 CHANGE 列名 新列名 新数据类型;
+
+-- 将stu表中的address字段名改为 addr，类型改为varchar(50)
+alter table stu change address addr varchar(50);</code></pre>
+<ul>
+<li>删除列</li>
+</ul>
+<pre><code class="sql">ALTER TABLE 表名 DROP 列名;</code></pre>
+<h4 id="SQL-的数据类型"><a href="#SQL-的数据类型" class="headerlink" title="SQL 的数据类型"></a>SQL 的数据类型</h4><ul>
+<li><p>数值</p>
+<pre><code class="sql">tinyint : 小整数型，占一个字节
+int    ： 大整数类型，占四个字节
+    eg ： age int
+double ： 浮点类型
+    使用格式： 字段名 double(总长度,小数点后保留的位数)
+    eg ： score double(5,2)   </code></pre>
+</li>
+<li><p>日期</p>
+<pre><code class="sql">date ： 日期值。只包含年月日
+    eg ：birthday date ： 
+datetime ： 混合日期和时间值。包含年月日时分秒</code></pre>
+</li>
+<li><p>字符串</p>
+<pre><code class="sql">char ： 定长字符串。
+    优点：存储性能高
+    缺点：浪费空间
+    eg ： name char(10)  如果存储的数据字符个数不足10个，也会占10个的空间
+varchar ： 变长字符串。
+    优点：节约空间
+    缺点：存储性能底
+    eg ： name varchar(10) 如果存储的数据字符个数不足10个，那就数据字符个数是几就占几个的空间    </code></pre>
+</li>
+</ul>
+<h4 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h4><ul>
+<li>查询所有数据</li>
+</ul>
+<pre><code class="sql">SELECT * FROM 表名;</code></pre>
+<ul>
+<li>给指定列添加数据</li>
+</ul>
+<pre><code class="sql">INSERT INTO 表名(列名1,列名2,…) VALUES(值1,值2,…);</code></pre>
+<ul>
+<li>给全部列添加数据</li>
+</ul>
+<pre><code class="sql">INSERT INTO 表名 VALUES(值1,值2,…);</code></pre>
+<ul>
+<li>批量添加数据</li>
+</ul>
+<pre><code class="sql">INSERT INTO 表名(列名1,列名2,…) VALUES(值1,值2,…),(值1,值2,…),(值1,值2,…)…;
+INSERT INTO 表名 VALUES(值1,值2,…),(值1,值2,…),(值1,值2,…)…;</code></pre>
+<ul>
+<li>修改表数据</li>
+</ul>
+<pre><code class="sql">UPDATE 表名 SET 列名1=值1,列名2=值2,… [WHERE 条件] ;
+-- 修改语句中如果不加条件，则将所有数据都修改！</code></pre>
+<ul>
+<li>删除数据</li>
+</ul>
+<pre><code class="sql">DELETE FROM 表名 [WHERE 条件] ;</code></pre>
+<ul>
+<li>删除表中所有的数据</li>
+</ul>
+<pre><code class="sql">DELETE FROM 表名;</code></pre>
+<h4 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h4><ul>
+<li>查询多个字段</li>
+</ul>
+<pre><code class="sql">SELECT 字段列表 FROM 表名;
+SELECT * FROM 表名; -- 查询所有数据</code></pre>
+<ul>
+<li>去除重复记录</li>
+</ul>
+<pre><code class="sql">SELECT DISTINCT 字段列表 FROM 表名;</code></pre>
+<ul>
+<li>起别名</li>
+</ul>
+<pre><code class="sql">SELECT 字段列表 AS: 别名 FROM 表名; -- AS 也可以省略</code></pre>
+<ul>
+<li>条件查询</li>
+</ul>
+<pre><code class="sql">SELECT 字段列表 FROM 表名 WHERE 条件列表;</code></pre>
+<ul>
+<li>模糊查询<ul>
+<li>使用 <code>LIKE</code> 关键字，可以使用通配符进行占位</li>
+<li><code>_</code> ：代表单个任意字符</li>
+<li><code>%</code> ：代表任意个数字符</li>
+</ul>
+</li>
+</ul>
+<pre><code class="sql">select * from stu where name like &#39;马%&#39;;  -- 查询姓&#39;马&#39;的学员信息
+
+select * from stu where name like &#39;_花%&#39;;  -- 查询第二个字是&#39;花&#39;的学员信息 
+
+select * from stu where name like &#39;%德%&#39;;  -- 查询名字中包含 &#39;德&#39; 的学员信息</code></pre>
+<ul>
+<li>排序查询</li>
+</ul>
+<pre><code class="sql">SELECT 字段列表 FROM 表名 ORDER BY 排序字段名1 [排序方式1],排序字段名2 [排序方式2] …;
+/*
+排序方式有两种，分别是：
+ASC ： 升序排列（默认值）
+DESC ： 降序排列
+如果有多个排序条件，当前边的条件值一样时，才会根据第二条件进行排序
+*/</code></pre>
+<ul>
+<li>聚合函数<ul>
+<li>将一列数据作为一个整体，进行纵向计算</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>count(列名)</code></td>
+<td>统计数量（一般选用不为null的列）</td>
+</tr>
+<tr>
+<td><code>max(列名)</code></td>
+<td>最大值</td>
+</tr>
+<tr>
+<td><code>min(列名)</code></td>
+<td>最小值</td>
+</tr>
+<tr>
+<td><code>sum(列名)</code></td>
+<td>求和</td>
+</tr>
+<tr>
+<td><code>avg(列名)</code></td>
+<td>平均值</td>
+</tr>
+</tbody></table>
+<pre><code class="sql">SELECT 聚合函数名(列名) FROM 表;
+-- null 值不参与所有聚合函数运算</code></pre>
+<ul>
+<li>分组查询</li>
+</ul>
+<pre><code class="sql">SELECT 字段列表 FROM 表名 [WHERE 分组前条件限定] GROUP BY 分组字段名 [HAVING 分组后条件过滤];
+-- 分组之后，查询的字段为聚合函数和分组字段，查询其他字段无任何意义</code></pre>
+<ul>
+<li><p>where 和 having 区别：</p>
+<ul>
+<li>执行时机不一样：<code>where</code> 是分组之前进行限定，不满足 <code>where</code> 条件，则不参与分组，而 <code>having</code> 是分组之后对结果进行过滤。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>可判断的条件不一样：<code>where</code> 不能对聚合函数进行判断，<code>having</code> 可以</li>
+</ul>
+<ul>
+<li>分页查询</li>
+</ul>
+<pre><code class="sql">SELECT 字段列表 FROM 表名 LIMIT  起始索引 , 查询条目数;
+-- 起始索引是从0开始</code></pre>
+<ul>
+<li>起始索引计算公式：</li>
+</ul>
+<pre><code class="sql">起始索引 = (当前页码 - 1) * 每页显示的条数</code></pre>
+<h3 id="MySQL-进阶"><a href="#MySQL-进阶" class="headerlink" title="MySQL 进阶"></a>MySQL 进阶</h3><h4 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h4><ul>
+<li><p>约束是作用于表中列上的规则，用于限制加入表的数据</p>
+</li>
+<li><p>约束的存在保证了数据库中数据的正确性、有效性和完整性</p>
+</li>
+<li><p>约束的分类</p>
+<ul>
+<li>非空约束：关键字是 <code>NOT NULL</code>，保证列中所有的数据不能有null值。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>唯一约束：关键字是 <code>UNIQUE</code>，保证列中所有数据各不相同</li>
+</ul>
+<ul>
+<li>主键约束： 关键字是 <code>PRIMARY KEY</code>，主键是一行数据的唯一标识，要求非空且唯一</li>
+</ul>
+<ul>
+<li>检查约束： 关键字是 <code>CHECK</code>，保证列中的值满足某一条件（MySQL不支持检查约束）</li>
+</ul>
+<ul>
+<li>默认约束： 关键字是  <code>DEFAULT</code>，保存数据时，未指定值则采用默认值</li>
+<li>外键约束： 关键字是 <code>FOREIGN KEY</code>，外键用来让两个表的数据之间建立链接，保证数据的一致性和完整性</li>
+</ul>
+<ul>
+<li><p>非空约束</p>
+<ul>
+<li><p>用于保证列中所有数据不能有NULL值</p>
+</li>
+<li><p>添加约束</p>
+<pre><code class="sql">-- 创建表时添加非空约束
+CREATE TABLE 表名(
+   列名 数据类型 NOT NULL,
+   …
+); </code></pre>
+<pre><code class="sql">-- 建完表后添加非空约束
+ALTER TABLE 表名 MODIFY 字段名 数据类型 NOT NULL;</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>* 删除约束
+
+  ```sql
+  ALTER TABLE 表名 MODIFY 字段名 数据类型;
+  ```</code></pre>
+<ul>
+<li><p>唯一约束</p>
+<ul>
+<li>用于保证列中所有数据各不相同</li>
+</ul>
+</li>
+</ul>
+<pre><code>* 添加约束
+
+  ```sql
+  -- 创建表时添加唯一约束
+  CREATE TABLE 表名(
+     列名 数据类型 UNIQUE [AUTO_INCREMENT],
+     -- AUTO_INCREMENT: 当不指定值时自动增长
+     …
+  ); 
+  CREATE TABLE 表名(
+     列名 数据类型,
+     …
+     [CONSTRAINT] [约束名称] UNIQUE(列名)
+  ); 
+  ```
+
+  ```sql
+  -- 建完表后添加唯一约束
+  ALTER TABLE 表名 MODIFY 字段名 数据类型 UNIQUE;
+  ```
+
+
+* 删除约束
+
+  ```sql
+  ALTER TABLE 表名 DROP INDEX 字段名;
+  ```</code></pre>
+<ul>
+<li><p>主键约束</p>
+<ul>
+<li>主键是一行数据的唯一标识，要求非空且唯一</li>
+<li>一张表只能有一个主键</li>
+</ul>
+<ul>
+<li><p>添加约束</p>
+<pre><code class="sql">-- 创建表时添加主键约束
+CREATE TABLE 表名(
+   列名 数据类型 PRIMARY KEY [AUTO_INCREMENT],
+   …
+); 
+CREATE TABLE 表名(
+   列名 数据类型,
+   [CONSTRAINT] [约束名称] PRIMARY KEY(列名)
+); 
+</code></pre>
+<pre><code class="sql">-- 建完表后添加主键约束
+ALTER TABLE 表名 ADD PRIMARY KEY(字段名);</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>删除约束</p>
+<pre><code class="sql">ALTER TABLE 表名 DROP PRIMARY KEY;</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>默认约束</p>
+<ul>
+<li><p>保存数据时，未指定值则采用默认值</p>
+</li>
+<li><p>添加约束</p>
+<pre><code class="sql">-- 创建表时添加默认约束
+CREATE TABLE 表名(
+   列名 数据类型 DEFAULT 默认值,
+   …
+); </code></pre>
+<pre><code class="sql">-- 建完表后添加默认约束
+ALTER TABLE 表名 ALTER 列名 SET DEFAULT 默认值;</code></pre>
+</li>
+<li><p>删除约束</p>
+<pre><code class="sql">ALTER TABLE 表名 ALTER 列名 DROP DEFAULT;</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>默认约束只有在不给值时才会采用默认值。如果给了null，那值就是null值</li>
+</ul>
+<h4 id="外键约束"><a href="#外键约束" class="headerlink" title="外键约束"></a>外键约束</h4><ul>
+<li>外键用来让两个表的数据之间建立链接，保证数据的一致性和完整性</li>
+</ul>
+<ul>
+<li>添加外键约束</li>
+</ul>
+<pre><code class="sql">-- 创建表时添加外键约束
+CREATE TABLE 表名(
+   列名 数据类型,
+   …
+   [CONSTRAINT] [外键名称] FOREIGN KEY(外键列名) REFERENCES 主表(主表列名) 
+); </code></pre>
+<pre><code class="sql">-- 建完表后添加外键约束
+ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY (外键字段名称) REFERENCES 主表名称(主表列名称);</code></pre>
+<ul>
+<li>删除外键约束</li>
+</ul>
+<pre><code class="sql">ALTER TABLE 表名 DROP FOREIGN KEY 外键名称;</code></pre>
+<ul>
+<li>添加数据</li>
+</ul>
+<pre><code class="sql">-- 添加 2 个部门
+insert into dept(dep_name,addr) values
+(&#39;研发部&#39;,&#39;广州&#39;),(&#39;销售部&#39;, &#39;深圳&#39;);
+
+-- 添加员工,dep_id 表示员工所在的部门
+INSERT INTO emp (NAME, age, dep_id) VALUES 
+(&#39;张三&#39;, 20, 1),
+(&#39;李四&#39;, 20, 1),
+(&#39;王五&#39;, 20, 1),</code></pre>
+<p>删除外键</p>
+<pre><code class="sql">alter table emp drop FOREIGN key fk_emp_dept;</code></pre>
+<p>重新添加外键</p>
+<pre><code class="sql">alter table emp add CONSTRAINT fk_emp_dept FOREIGN key(dep_id) REFERENCES dept(id);</code></pre>
+<h4 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h4><ul>
+<li><p>数据库设计概念</p>
+<ul>
+<li>数据库设计就是根据业务系统的具体需求，结合我们所选用的DBMS，为这个业务系统构造出最优的数据存储模型</li>
+<li>建立数据库中的表结构以及表与表之间的关联关系的过程</li>
+<li>有哪些表？表里有哪些字段？表和表之间有什么关系？</li>
+</ul>
+</li>
+<li><p>数据库设计的步骤</p>
+<ul>
+<li><p>需求分析（数据是什么? 数据具有哪些属性? 数据与属性的特点是什么）</p>
+</li>
+<li><p>逻辑分析（通过ER图对数据库进行逻辑建模，不需要考虑我们所选用的数据库管理系统）</p>
+</li>
+<li><p>物理设计（根据数据库自身的特点把逻辑设计转换为物理设计）</p>
+</li>
+<li><p>维护设计（1.对新的需求进行建表；2.表优化）</p>
+</li>
+</ul>
+</li>
+<li><p>表关系</p>
+<ul>
+<li><p>一对一（如：用户 和 用户详情）：一对一关系多用于表拆分，将一个实体中经常使用的字段放一张表，不经常使用的字段放另一张表，用于提升查询性能</p>
+</li>
+<li><p>一对多（如：部门 和 员工）：一个部门对应多个员工，一个员工对应一个部门</p>
+</li>
+<li><p>多对多（如：商品 和 订单）：一个商品对应多个订单，一个订单包含多个商品</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>表关系（一对多）</p>
+<ul>
+<li>实现方式：在多的一方建立外键，指向一的一方的主键</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>以 <code>员工表</code> 和 <code>部门表</code> 举例：在员工表中添加一列（dep_id），指向于部门表的主键（id）</li>
+</ul>
+<pre><code class="sql">-- 删除表
+DROP TABLE IF EXISTS tb_emp;
+DROP TABLE IF EXISTS tb_dept;
+
+-- 部门表
+CREATE TABLE tb_dept(
+    id int primary key auto_increment,
+    dep_name varchar(20),
+    addr varchar(20)
+);
+-- 员工表 
+CREATE TABLE tb_emp(
+    id int primary key auto_increment,
+    name varchar(20),
+    age int,
+    dep_id int,
+
+    -- 添加外键 dep_id,关联 dept 表的id主键
+    CONSTRAINT fk_emp_dept FOREIGN KEY(dep_id) REFERENCES tb_dept(id)    
+);</code></pre>
+<ul>
+<li><p>表关系（多对多）</p>
+<ul>
+<li>建立第三张中间表，中间表至少包含两个外键，分别关联两方主键</li>
+</ul>
+<ul>
+<li>以 <code>订单表</code> 和 <code>商品表</code> 举例：订单表和商品表都属于多的一方，此时需要创建一个中间表，在中间表中添加订单表的外键和商品表的外键指向两张表的主键：</li>
+</ul>
+<pre><code class="sql">  -- 删除表
+  DROP TABLE IF EXISTS tb_order_goods;
+  DROP TABLE IF EXISTS tb_order;
+  DROP TABLE IF EXISTS tb_goods;
+
+  -- 订单表
+  CREATE TABLE tb_order(
+  id int primary key auto_increment,
+  payment double(10,2),
+  payment_type TINYINT,
+  status TINYINT
+  );
+
+  -- 商品表
+  CREATE TABLE tb_goods(
+  id int primary key auto_increment,
+  title varchar(100),
+  price double(10,2)
+  );
+
+  -- 订单商品中间表
+  CREATE TABLE tb_order_goods(
+  id int primary key auto_increment,
+  order_id int,
+  goods_id int,
+  count int
+  );
+
+  -- 建完表后，添加外键
+  alter table tb_order_goods add CONSTRAINT fk_order_id FOREIGN key(order_id) REFERENCES tb_order(id);
+  alter table tb_order_goods add CONSTRAINT fk_goods_id FOREIGN key(goods_id) REFERENCES tb_goods(id);</code></pre>
+</li>
+<li><p>表关系（一对一）</p>
+<ul>
+<li>在任意一方加入外键，关联另一方主键，并且设置外键为唯一（<code>UNIQUE</code>）</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>以 <code>用户表</code> 举例：在真正使用过程中发现 id、photo、nickname、age、gender 字段比较常用，此时就可以将这张表查分成两张表</li>
+</ul>
+<pre><code class="sql">create table tb_user_desc (
+    id int primary key auto_increment,
+    city varchar(20),
+    edu varchar(10),
+    income int,
+    status char(2),
+    des varchar(100)
+);
+
+create table tb_user (
+    id int primary key auto_increment,
+    photo varchar(100),
+    nickname varchar(50),
+    age int,
+    gender char(1),
+    desc_id int unique,
+    -- 添加外键
+    CONSTRAINT fk_user_desc FOREIGN KEY(desc_id) REFERENCES tb_user_desc(id)    
+);</code></pre>
+<h4 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h4><ul>
+<li>多表查询顾名思义就是从多张表中一次性的查询出我们想要的数据</li>
+</ul>
+<pre><code class="sql">DROP TABLE IF EXISTS emp;
+DROP TABLE IF EXISTS dept;
+
+# 创建部门表
+    CREATE TABLE dept(
+        did INT PRIMARY KEY AUTO_INCREMENT,
+        dname VARCHAR(20)
+    );
+
+    # 创建员工表
+    CREATE TABLE emp (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        NAME VARCHAR(10),
+        gender CHAR(1), -- 性别
+        salary DOUBLE, -- 工资
+        join_date DATE, -- 入职日期
+        dep_id INT,
+        FOREIGN KEY (dep_id) REFERENCES dept(did) -- 外键，关联部门表(部门表的主键)
+    );
+    -- 添加部门数据
+    INSERT INTO dept (dNAME) VALUES (&#39;研发部&#39;),(&#39;市场部&#39;),(&#39;财务部&#39;),(&#39;销售部&#39;);
+    -- 添加员工数据
+    INSERT INTO emp(NAME,gender,salary,join_date,dep_id) VALUES
+    (&#39;孙悟空&#39;,&#39;男&#39;,7200,&#39;2013-02-24&#39;,1),
+    (&#39;猪八戒&#39;,&#39;男&#39;,3600,&#39;2010-12-02&#39;,2),
+    (&#39;唐僧&#39;,&#39;男&#39;,9000,&#39;2008-08-08&#39;,2),
+    (&#39;白骨精&#39;,&#39;女&#39;,5000,&#39;2015-10-07&#39;,3),
+    (&#39;蜘蛛精&#39;,&#39;女&#39;,4500,&#39;2011-03-14&#39;,1),
+    (&#39;小白龙&#39;,&#39;男&#39;,2500,&#39;2011-02-14&#39;,null);    </code></pre>
+<ul>
+<li>执行下面的多表查询语句</li>
+</ul>
+<pre><code class="sql">select * from emp , dept;  -- 从emp和dept表中查询所有的字段数据</code></pre>
+<ul>
+<li>通过限制员工表中的 <code>dep_id</code> 字段的值和部门表 <code>did</code> 字段的值相等来消除无效的数据，</li>
+</ul>
+<pre><code class="sql">select * from emp , dept where emp.dep_id = dept.did;</code></pre>
+<ul>
+<li><p>连接查询 </p>
+<ul>
+<li>内连接查询 ：相当于查询AB交集数据</li>
+<li>外连接查询<ul>
+<li>左外连接查询 ：相当于查询A表所有数据和交集部门数据</li>
+<li>右外连接查询 ： 相当于查询B表所有数据和交集部分数据</li>
+</ul>
+</li>
+<li>子查询</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>内连接查询</li>
+</ul>
+<pre><code class="sql">-- 隐式内连接
+SELECT 字段列表 FROM 表1,表2… WHERE 条件;
+
+-- 显示内连接
+SELECT 字段列表 FROM 表1 [INNER] JOIN 表2 ON 条件;</code></pre>
+<ul>
+<li>隐式内连接</li>
+</ul>
+<pre><code class="sql">SELECT * FROM emp, dept WHERE emp.dep_id = dept.did;</code></pre>
+<ul>
+<li>查询 emp 的 name， gender，dept 表的 dname</li>
+</ul>
+<pre><code class="sql">SELECT
+    t1. NAME,
+    t1.gender,
+    t2.dname
+FROM
+    emp t1,
+    dept t2
+WHERE
+    t1.dep_id = t2.did;</code></pre>
+<ul>
+<li>显式内连接</li>
+</ul>
+<pre><code class="sql">select * from emp inner join dept on emp.dep_id = dept.did;
+-- 上面语句中的inner可以省略，可以书写为如下语句
+select * from emp  join dept on emp.dep_id = dept.did;</code></pre>
+<ul>
+<li>外连接查询</li>
+</ul>
+<pre><code class="sql">-- 左外连接：相当于查询A表所有数据和交集部分数据
+SELECT 字段列表 FROM 表1 LEFT [OUTER] JOIN 表2 ON 条件;
+
+-- 右外连接：相当于查询B表所有数据和交集部分数据
+SELECT 字段列表 FROM 表1 RIGHT [OUTER] JOIN 表2 ON 条件;</code></pre>
+<ul>
+<li>查询emp表所有数据和对应的部门信息（左外连接）</li>
+</ul>
+<pre><code class="sql">select * from emp left join dept on emp.dep_id = dept.did;
+-- 结果显示查询到了左表（emp）中所有的数据及两张表能关联的数据</code></pre>
+<ul>
+<li>查询dept表所有数据和对应的员工信息（右外连接）</li>
+</ul>
+<pre><code class="sql">select * from emp right join dept on emp.dep_id = dept.did;
+-- 结果显示查询到了右表（dept）中所有的数据及两张表能关联的数据</code></pre>
+<p>。要查询出部门表中所有的数据，也可以通过左外连接实现，只需要将两个表的位置进行互换：</p>
+<pre><code class="sql">select * from dept left join emp on emp.dep_id = dept.did;</code></pre>
+<ul>
+<li><p>子查询</p>
+<ul>
+<li>查询中嵌套查询，称嵌套查询为子查询</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>子查询根据查询结果不同，作用不同</li>
+<li>子查询语句结果是单行单列，子查询语句作为条件值，使用 =  !=  &gt;  &lt;  等进行条件判断</li>
+<li>子查询语句结果是多行单列，子查询语句作为条件值，使用 in 等关键字进行条件判断</li>
+<li>子查询语句结果是多行多列，子查询语句作为虚拟表</li>
+<li>查询 ‘财务部’ 和 ‘市场部’ 所有的员工信息</li>
+</ul>
+<pre><code class="sql">-- 查询 &#39;财务部&#39; 或者 &#39;市场部&#39; 所有的员工的部门did
+select did from dept where dname = &#39;财务部&#39; or dname = &#39;市场部&#39;;
+
+select * from emp where dep_id in (select did from dept where dname = &#39;财务部&#39; or dname = &#39;市场部&#39;);</code></pre>
+<ul>
+<li>查询入职日期是 ‘2011-11-11’ 之后的员工信息和部门信息</li>
+</ul>
+<pre><code class="sql">-- 查询入职日期是 &#39;2011-11-11&#39; 之后的员工信息
+select * from emp where join_date &gt; &#39;2011-11-11&#39; ;
+-- 将上面语句的结果作为虚拟表和dept表进行内连接查询
+select * from (select * from emp where join_date &gt; &#39;2011-11-11&#39; ) t1, dept where t1.dep_id = dept.did;</code></pre>
+<h4 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h4><ul>
+<li><p>概述</p>
+<ul>
+<li><p>数据库的事务（Transaction）是一种机制、一个操作序列，包含了一组数据库操作命令</p>
+</li>
+<li><p>事务把所有的命令作为一个整体一起向系统提交或撤销操作请求，即这一组数据库命令要么同时成功，要么同时失败</p>
+</li>
+<li><p>事务是一个不可分割的工作逻辑单元</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>语法</p>
+<ul>
+<li>开启事务</li>
+</ul>
+<pre><code class="sql">START TRANSACTION;
+或者  
+BEGIN;</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>提交事务</p>
+<pre><code class="sql">commit;</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>回滚事务</p>
+<pre><code class="sql">rollback;</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>代码验证</p>
+<ul>
+<li>环境准备</li>
+</ul>
+<pre><code class="sql">DROP TABLE IF EXISTS account;
+
+-- 创建账户表
+CREATE TABLE account(
+    id int PRIMARY KEY auto_increment,
+    name varchar(10),
+    money double(10,2)
+);
+
+-- 添加数据
+INSERT INTO account(name,money) values(&#39;张三&#39;,1000),(&#39;李四&#39;,1000);</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>不加事务演示问题</p>
+<pre><code class="sql">-- 转账操作
+-- 1. 查询李四账户金额是否大于500
+
+-- 2. 李四账户 -500
+UPDATE account set money = money - 500 where name = &#39;李四&#39;;
+
+出现异常了...  -- 此处不是注释，在整体执行时会出问题，后面的sql则不执行
+-- 3. 张三账户 +500
+UPDATE account set money = money + 500 where name = &#39;张三&#39;;</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>添加事务 sql</p>
+<pre><code class="sql">-- 开启事务
+BEGIN;
+-- 转账操作
+-- 1. 查询李四账户金额是否大于500
+
+-- 2. 李四账户 -500
+UPDATE account set money = money - 500 where name = &#39;李四&#39;;
+
+出现异常了...  -- 此处不是注释，在整体执行时会出问题，后面的sql则不执行
+-- 3. 张三账户 +500
+UPDATE account set money = money + 500 where name = &#39;张三&#39;;
+
+-- 提交事务
+COMMIT;
+
+-- 回滚事务
+ROLLBACK;</code></pre>
+<ul>
+<li>上面sql中的执行成功进选择执行提交事务，而出现问题则执行回滚事务的语句，以后我们肯定不可能这样操作，而是在java中进行操作，在java中可以抓取异常，没出现异常提交事务，出现异常回滚事务</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>事务的四大特征</p>
+<ul>
+<li>原子性（Atomicity）: 事务是不可分割的最小操作单位，要么同时成功，要么同时失败</li>
+<li>一致性（Consistency） :事务完成时，必须使所有的数据都保持一致状态</li>
+<li>隔离性（Isolation） :多个事务之间，操作的可见性</li>
+<li>持久性（Durability） :事务一旦提交或回滚，它对数据库中的数据的改变就是永久的</li>
+<li>MySQL 中事务是自动提交的，也就是说我们不添加事务执行sql语句，语句执行完毕会自动的提交事务<ul>
+<li>可以通过下面语句查询默认提交方式：</li>
+</ul>
+</li>
+</ul>
+<pre><code class="java">SELECT @@autocommit;</code></pre>
+</li>
+<li><p> 查询到的结果是1 则表示自动提交，结果是0表示手动提交。当然也可以通过下面语句修改提交方式</p>
+</li>
+</ul>
+<pre><code class="sql">set @@autocommit = 0;</code></pre>
+<h3 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h3><h4 id="JDBC-简介"><a href="#JDBC-简介" class="headerlink" title="JDBC 简介"></a>JDBC 简介</h4><ul>
+<li><p>JDBC 概念</p>
+<ul>
+<li><p>JDBC 就是使用Java语言操作关系型数据库的一套API</p>
+</li>
+<li><p>JDBC 全称：( Java DataBase Connectivity ) Java 数据库连接</p>
+</li>
+<li><p>sun公司指定了一套标准接口（JDBC），JDBC中定义了所有操作关系型数据库的规则，众所周知接口是无法直接使用的，我们需要使用接口的实现类，而这套实现类（称之为：驱动）就由各自的数据库厂商给出</p>
+</li>
+</ul>
+</li>
+<li><p>JDBC本质</p>
+<ul>
+<li><p>官方（sun公司）定义的一套操作所有关系型数据库的规则，即接口</p>
+</li>
+<li><p>各个数据库厂商去实现这套接口，提供数据库驱动jar包</p>
+</li>
+<li><p>我们可以使用这套接口（JDBC）编程，真正执行的代码是驱动jar包中的实现类</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>JDBC好处</p>
+<ul>
+<li><p>各数据库厂商使用相同的接口，Java代码不需要针对不同数据库分别开发</p>
+</li>
+<li><p>可随时替换底层数据库，访问数据库的Java代码基本不变</p>
+</li>
+<li><p>以后编写操作数据库的代码只需要面向JDBC（接口），操作哪儿个关系型数据库就需要导入该数据库的驱动包，如需要操作MySQL数据库，就需要再项目中导入MySQL数据库的驱动包</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="JDBC快速入门"><a href="#JDBC快速入门" class="headerlink" title="JDBC快速入门"></a>JDBC快速入门</h4><ul>
+<li><p>通过Java操作数据库的流程</p>
+<ul>
+<li>第一步：编写Java代码</li>
+</ul>
+</li>
+</ul>
+<pre><code>- 第二步：Java代码将SQL发送到MySQL服务端
+
+
+- 第三步：MySQL服务端接收到SQL语句并执行该SQL语句
+
+
+- 第四步：将SQL语句执行的结果返回给Java代码</code></pre>
+<ul>
+<li><p>编写代码步骤</p>
+<ul>
+<li>创建工程，导入驱动 jar 包（mysql-connector-java-5.1.48.jar）</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>注册驱动</p>
+<pre><code class="sql">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>获取连接</p>
+<pre><code class="sql">Connection conn = DriverManager.getConnection(url, username, password);</code></pre>
+<ul>
+<li>Java代码需要发送SQL给MySQL服务端，就需要先建立连接</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>定义SQL语句</p>
+<pre><code class="sql">String sql =  &quot;select * from table;&quot; ;</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>获取执行SQL对象</p>
+<ul>
+<li>执行SQL语句需要SQL执行对象，而这个执行对象就是Statement对象</li>
+</ul>
+<pre><code class="sql">Statement stmt = conn.createStatement();</code></pre>
+</li>
+<li><p>执行SQL</p>
+<pre><code class="sql">stmt.executeUpdate(sql);  </code></pre>
+</li>
+</ul>
+<ul>
+<li>处理返回结果</li>
+<li>释放资源</li>
+<li>IDEA 中编写代码</li>
+</ul>
+<pre><code class="java">/**
+ * JDBC快速入门
+ */
+public class JDBCDemo &#123;
+
+    public static void main(String[] args) throws Exception &#123;
+        //1. 注册驱动
+        //Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+        //2. 获取连接
+        String url = &quot;jdbc:mysql://127.0.0.1:3306/db1?useSSL=false&quot;;
+        String username = &quot;root&quot;;
+        String password = &quot;1234&quot;;
+        Connection conn = DriverManager.getConnection(url, username, password);
+        //3. 定义sql
+        String sql = &quot;update account set money = 2000 where id = 1&quot;;
+        //4. 获取执行sql的对象 Statement
+        Statement stmt = conn.createStatement();
+        //5. 执行sql
+        int count = stmt.executeUpdate(sql);//受影响的行数
+        //6. 处理结果
+        System.out.println(count);
+        //7. 释放资源
+        stmt.close();
+        conn.close();
+    &#125;
+&#125;</code></pre>
+<h4 id="JDBC-API-详解"><a href="#JDBC-API-详解" class="headerlink" title="JDBC API 详解"></a>JDBC API 详解</h4><ul>
+<li><p>DriverManager（驱动管理类）</p>
+<ul>
+<li><p>注册驱动：<code>registerDriver</code> 方法是用于注册驱动的，但是我们之前做的入门案例并不是这样写的。而是如下实现</p>
+<pre><code class="sql">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</code></pre>
+</li>
+<li><p>在该类中的静态代码块中已经执行了 <code>DriverManager</code> 对象的 <code>registerDriver()</code> 方法进行驱动的注册了，那么我们只需要加载 <code>Driver</code> 类，该静态代码块就会执行，而 <code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</code> 就可以加载 <code>Driver</code> 类</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>* 获取数据库连接
+
+  ```sql
+  Connection conn = DriverManager.getConnection(url, username, password);
+  ```
+
+  * url ： `jdbc:mysql://ip地址(域名):端口号/数据库名称?参数键值对1&amp;参数键值对2…`
+    * 配置 `useSSL=false` 参数，禁用安全连接方式，解决警告提示
+  * user ：用户名
+  * poassword ：密码</code></pre>
+<ul>
+<li><p>Connection（数据库连接对象）</p>
+<ul>
+<li><p>获取执行 SQL 的对象</p>
+<ul>
+<li>普通执行SQL对象</li>
+</ul>
+<pre><code class="sql">Statement createStatement()  
+-- 通过该方法获取执行对象
+Statement stmt = conn.createStatement();
+int count = stmt.executeUpdate(sql);</code></pre>
+<ul>
+<li>预编译SQL的执行SQL对象：防止SQL注入</li>
+</ul>
+<pre><code class="sql">PreparedStatement  prepareStatement(sql)</code></pre>
+<ul>
+<li><p>通过这种方式获取的 <code>PreparedStatement</code> SQL语句执行对象可以防止SQL注入</p>
+</li>
+<li><p>执行存储过程的对象</p>
+<pre><code class="sql">CallableStatement prepareCall(sql)</code></pre>
+</li>
+<li><p>通过这种方式获取的 <code>CallableStatement</code> 执行对象是用来执行存储过程的，但存储过程在MySQL中不常用</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- 事务管理
+
+  - MySQL事务管理的操作（MySQL默认是自动提交事务）
+
+    * 开启事务 ： `BEGIN;` 或者 `START TRANSACTION;`
+
+    * 提交事务 ： `COMMIT;`
+
+    * 回滚事务 ： `ROLLBACK;`
+
+  - JDBC事务管理的方法
+
+
+    - Connection几个接口中定义了3个对应的方法：
+
+      * 开启事务
+
+        ```sql
+        setAutoCommit(boolean autoCommit)
+        ```
+
+      * 参与 `autoCommit` 表示是否自动提交事务，true表示自动提交事务，false表示手动提交事务，而开启事务需要将该参数设为为 false
+
+      * 提交事务
+
+        ```sql
+        commit()
+        ```
+
+      * 回滚事务
+
+        ```sql
+        rollback;
+        ```</code></pre>
+<ul>
+<li><p>Statement（声明执行对象）</p>
+<ul>
+<li>Statement对象的作用就是用来执行SQL语句，而针对不同类型的SQL语句使用的方法也不一样</li>
+</ul>
+</li>
+</ul>
+<pre><code>* 执行DDL、DML语句
+
+  ```sql
+  int excuteUpdate(sql)
+  ```
+
+  * 返回值：DML语句影响的行数，DDL语句执行成功后可能返回0
+
+
+* 执行DQL语句
+
+  ```sql
+  ResultSet excuteQuery(sql)
+  ```
+
+  - 返回值： `ResultSet` 结果集对象</code></pre>
+<ul>
+<li><p>ResultSet（结果集对象）</p>
+<ul>
+<li>封装了SQL查询语句的结果，执行DQL语句后就会返回该对象<ul>
+<li><code>ResultSet  executeQuery(sql)</code>：执行DQL 语句，返回 <code>ResultSet</code> 对象</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><code>ResultSet</code> 对象提供了获取查询结果数据的方法</p>
+<ul>
+<li><p><code>boolean  next()</code>：将光标从当前位置向前移动一行，判断当前行是否为有效行</p>
+</li>
+<li><p>方法返回值：true （ 有效行，当前行有数据），false（无效行，当前行没有数据）</p>
+</li>
+<li><p><code>xxx  getXxx(参数)</code>：获取数据</p>
+</li>
+<li><p>xxx : 数据类型；如： <code>nt getInt(参数)</code> ；<code>String getString(参数)</code></p>
+</li>
+<li><p>int 类型的参数：列的编号，从1开始</p>
+</li>
+<li><p>String 类型的参数： 列的名称 </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>一开始光标指定于第一行前，当我们调用了 <code>next()</code> 方法后，光标就下移到第一行数据，并且方法返回 true，此时就可以通过 <code>getInt(&quot;id&quot;)</code> 获取当前行id字段的值，也可以通过 <code>getString(&quot;name&quot;)</code> 获取当前行name字段的值。如果想获取下一行的数据，继续调用 <code>next()</code>  方法，以此类推。</p>
+</li>
+<li><p>PreparedStatement</p>
+<ul>
+<li><p>预编译SQL语句并执行：预防SQL注入问题</p>
+</li>
+<li><p>SQL注入是通过操作输入来修改事先定义好的SQL语句，用以达到执行代码对服务器进行攻击的方法。</p>
+</li>
+<li><p>代码模拟SQL注入问题</p>
+</li>
+</ul>
+<pre><code class="java">@Test
+public void testLogin() throws  Exception &#123;
+    //2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写
+    String url = &quot;jdbc:mysql:///db1?useSSL=false&quot;;
+    String username = &quot;root&quot;;
+    String password = &quot;1234&quot;;
+    Connection conn = DriverManager.getConnection(url, username, password);
+
+    // 接收用户输入 用户名和密码
+    String name = &quot;sjdljfld&quot;;
+    String pwd = &quot;&#39; or &#39;1&#39; = &#39;1&quot;;
+    String sql = &quot;select * from tb_user where username = &#39;&quot;+name+&quot;&#39; and password = &#39;&quot;+pwd+&quot;&#39;&quot;;
+    // 获取stmt对象
+    Statement stmt = conn.createStatement();
+    // 执行sql
+    ResultSet rs = stmt.executeQuery(sql);
+    // 判断登录是否成功
+    if(rs.next())&#123;
+        System.out.println(&quot;登录成功~&quot;);
+    &#125;else&#123;
+        System.out.println(&quot;登录失败~&quot;);
+    &#125;
+
+    //7. 释放资源
+    rs.close();
+    stmt.close();
+    conn.close();
+&#125;</code></pre>
+<ul>
+<li>上面代码是将用户名和密码拼接到sql语句中，拼接后的sql语句如下</li>
+</ul>
+<pre><code class="sql">select * from tb_user where username = &#39;sjdljfld&#39; and password = &#39;&#39;or &#39;1&#39; = &#39;1&#39;</code></pre>
+<ul>
+<li>获取 PreparedStatement 对象</li>
+</ul>
+</li>
+</ul>
+<pre><code class="java">// SQL语句中的参数值，使用？占位符替代
+String sql = &quot;select * from user where username = ? and password = ?&quot;;
+// 通过Connection对象获取，并传入对应的sql语句
+PreparedStatement pstmt = conn.prepareStatement(sql);</code></pre>
+<ul>
+<li><p>设置参数值：PreparedStatement 的sql语句中参数使用 ? 进行占位，在之前之前肯定要设置这些 ?  的值</p>
+</li>
+<li><p>PreparedStatement对象：<code>setXxx(参数1，参数2)</code>：给 ? 赋值</p>
+</li>
+<li><p>Xxx：数据类型 ； 如 setInt (参数1，参数2)</p>
+</li>
+<li><p>参数：</p>
+</li>
+<li><p>参数1： ？的位置编号，从1 开始</p>
+<ul>
+<li>参数2： ？的值</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>执行SQL语句</p>
+<ul>
+<li><code>executeUpdate()</code>;  执行DDL语句和DML语句</li>
+<li><code>executeQuery()</code>;  执行DQL语句</li>
+<li>调用这两个方法时不需要传递SQL语句，因为获取SQL语句执行对象时已经对SQL语句进行预编译了</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>使用PreparedStatement改进</p>
+<pre><code class="java">@Test
+public void testPreparedStatement() throws  Exception &#123;
+  //2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写
+  String url = &quot;jdbc:mysql:///db1?useSSL=false&quot;;
+  String username = &quot;root&quot;;
+  String password = &quot;1234&quot;;
+  Connection conn = DriverManager.getConnection(url, username, password);
+
+  // 接收用户输入 用户名和密码
+  String name = &quot;zhangsan&quot;;
+  String pwd = &quot;&#39; or &#39;1&#39; = &#39;1&quot;;
+
+  // 定义sql
+  String sql = &quot;select * from tb_user where username = ? and password = ?&quot;;
+  // 获取pstmt对象
+  PreparedStatement pstmt = conn.prepareStatement(sql);
+  // 设置？的值
+  pstmt.setString(1,name);
+  pstmt.setString(2,pwd);
+  // 执行sql
+  ResultSet rs = pstmt.executeQuery();
+  // 判断登录是否成功
+  if(rs.next())&#123;
+      System.out.println(&quot;登录成功~&quot;);
+  &#125;else&#123;
+      System.out.println(&quot;登录失败~&quot;);
+  &#125;
+  //7. 释放资源
+  rs.close();
+  pstmt.close();
+  conn.close();
+&#125;</code></pre>
+</li>
+<li><p>PreparedStatement 实际上是将特殊字符进行了转义，转义的SQL如下：</p>
+<pre><code class="sql">select * from tb_user where username = &#39;sjdljfld&#39; and password = &#39;\&#39;or \&#39;1\&#39; = \&#39;1&#39;</code></pre>
+</li>
+<li><p>PreparedStatement原理</p>
+<ul>
+<li>预编译SQL，性能更高</li>
+<li>防止SQL注入：将敏感字符进行转义</li>
+</ul>
+<ul>
+<li>将sql语句发送到MySQL服务器端</li>
+</ul>
+</li>
+</ul>
+<pre><code>* MySQL服务端会对sql语句进行如下操作
+
+  * 检查SQL语句的语法是否正确。
+
+  * 编译SQL语句。将SQL语句编译成可执行的函数。
+  * 检查SQL和编译SQL花费的时间比执行SQL的时间还要长。如果我们只是重新设置参数，那么检查SQL语句和编译SQL语句将不需要重复执行。这样就提高了性能。
+  * 执行SQL语句</code></pre>
+<ul>
+<li><p>开启预编译功能：<code>useServerPrepStmts=true</code></p>
+<pre><code class="sql">String url = &quot;jdbc:mysql:///db1?useSSL=false&amp;useServerPrepStmts=true&quot;;</code></pre>
+</li>
+<li><p>配置MySQL执行日志（重启mysql服务后生效）</p>
+<ul>
+<li>在mysql配置文件（my.ini）中添加如下配置</li>
+</ul>
+<pre><code class="ini">log-output=FILE
+general-log=1
+general_log_file=&quot;D:\mysql.log&quot;
+slow-query-log=1
+slow_query_log_file=&quot;D:\mysql_slow.log&quot;
+long_query_time=2</code></pre>
+</li>
+</ul>
+<ul>
+<li>PreparedStatement 小结<ul>
+<li>在获取PreparedStatement对象时，将sql语句发送给mysql服务器进行检查，编译（这些步骤很耗时）</li>
+<li>执行时就不用再进行这些步骤了，速度更快</li>
+<li>如果sql模板一样，则只需要进行一次检查、编译</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h3><h4 id="数据库连接池简介"><a href="#数据库连接池简介" class="headerlink" title="数据库连接池简介"></a>数据库连接池简介</h4><ul>
+<li>数据库连接池是个容器，负责分配、管理数据库连接(Connection)</li>
+<li>它允许应用程序重复使用一个现有的数据库连接，而不是再重新建立一个；</li>
+<li>释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏</li>
+<li>好处<ul>
+<li>资源重用</li>
+<li>提升系统响应速度</li>
+<li>避免数据库连接遗漏</li>
+</ul>
+</li>
+<li>之前我们代码中使用连接是没有使用都创建一个Connection对象，使用完毕就会将其销毁。这样重复创建销毁的过程是特别耗费计算机的性能的及消耗时间的</li>
+<li>而数据库使用了数据库连接池后，就能达到Connection对象的复用</li>
+<li>连接池是在一开始就创建好了一些连接（Connection）对象存储起来。用户需要连接数据库时，不需要自己创建连接，而只需要从连接池中获取一个连接进行使用，使用完毕后再将连接对象归还给连接池；这样就可以起到资源重用，也节省了频繁创建连接销毁连接所花费的时间，从而提升了系统响应的速度</li>
+</ul>
+<h4 id="数据库连接池实现"><a href="#数据库连接池实现" class="headerlink" title="数据库连接池实现"></a>数据库连接池实现</h4><ul>
+<li><p>标准接口：DataSource</p>
+</li>
+<li><p>官方(SUN) 提供的数据库连接池标准接口，由第三方组织实现此接口。该接口提供了获取连接的功能：</p>
+<pre><code class="java">Connection getConnection()</code></pre>
+</li>
+</ul>
+<ul>
+<li>那么以后就不需要通过 <code>DriverManager</code> 对象获取 <code>Connection</code> 对象，而是通过连接池（DataSource）获取 <code>Connection</code> 对象。</li>
+</ul>
+<ul>
+<li><p>常见的数据库连接池</p>
+<ul>
+<li>DBCP</li>
+<li>C3P0</li>
+<li>Druid</li>
+</ul>
+<p>我们现在使用更多的是Druid，它的性能比其他两个会好一些。</p>
+</li>
+<li><p>Druid（德鲁伊）</p>
+<ul>
+<li><p>Druid连接池是阿里巴巴开源的数据库连接池项目 </p>
+</li>
+<li><p>功能强大，性能优秀，是Java语言最好的数据库连接池之一</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Driud-使用"><a href="#Driud-使用" class="headerlink" title="Driud 使用"></a>Driud 使用</h4><ul>
+<li>导入jar包 druid-1.1.12.jar</li>
+<li>定义配置文件：src 目录下新建 <code>druid.properties</code></li>
+</ul>
+<pre><code class="properties">driverClassName=com.mysql.jdbc.Driver
+url=jdbc:mysql:///db1?useSSL=false&amp;useServerPrepStmts=true
+username=root
+password=1234
+# 初始化连接数量
+initialSize=5
+# 最大连接数
+maxActive=10
+# 最大等待时间
+maxWait=3000</code></pre>
+<ul>
+<li>加载配置文件</li>
+<li>获取数据库连接池对象</li>
+<li>获取连接</li>
+</ul>
+<pre><code class="java">/**
+ * Druid数据库连接池演示
+ */
+public class DruidDemo &#123;
+
+    public static void main(String[] args) throws Exception &#123;
+        // 加载配置文件
+        Properties prop = new Properties();
+        prop.load(new FileInputStream(&quot;jdbc-demo/src/druid.properties&quot;));
+        // 获取连接池对象
+        DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
+        // 获取数据库连接 Connection
+        Connection connection = dataSource.getConnection();
+        System.out.println(connection); //获取到了连接后就可以继续做其他操作了
+        //System.out.println(System.getProperty(&quot;user.dir&quot;));
+    &#125;
+&#125;</code></pre>
+<ul>
+<li>druid 配置详解</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">说明</th>
+<th align="center">建议值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">url</td>
+<td align="center">数据库的jdbc连接地址。一般为连接oracle/mysql。示例如下：</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">mysql : jdbc:mysql://ip:port/dbname?option1&amp;option2&amp;…</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">oracle : jdbc:oracle:thin:@ip:port:oracle_sid</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">username</td>
+<td align="center">登录数据库的用户名</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">password</td>
+<td align="center">登录数据库的用户密码</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">initialSize</td>
+<td align="center">启动程序时，在连接池中初始化多少个连接</td>
+<td align="center">10-50已足够</td>
+</tr>
+<tr>
+<td align="center">maxActive</td>
+<td align="center">连接池中最多支持多少个活动会话</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">maxWait</td>
+<td align="center">程序向连接池中请求连接时,超过maxWait的值后，认为本次请求失败，即连接池</td>
+<td align="center">100</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">没有可用连接，单位毫秒，设置-1时表示无限等待</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">minEvictableIdleTimeMillis</td>
+<td align="center">池中某个连接的空闲时长达到 N 毫秒后, 连接池在下次检查空闲连接时，将</td>
+<td align="center">见说明部分</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">回收该连接,要小于防火墙超时设置</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">net.netfilter.nf_conntrack_tcp_timeout_established的设置</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">timeBetweenEvictionRunsMillis</td>
+<td align="center">检查空闲连接的频率，单位毫秒, 非正整数时表示不进行检查</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">keepAlive</td>
+<td align="center">程序没有close连接且空闲时长超过 minEvictableIdleTimeMillis,则会执</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">行validationQuery指定的SQL,以保证该程序连接不会池kill掉,其范围不超</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">过minIdle指定的连接个数。</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">minIdle</td>
+<td align="center">回收空闲连接时，将保证至少有minIdle个连接.</td>
+<td align="center">与initialSize相同</td>
+</tr>
+<tr>
+<td align="center">removeAbandoned</td>
+<td align="center">要求程序从池中get到连接后, N 秒后必须close,否则druid 会强制回收该</td>
+<td align="center">false,当发现程序有未</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">连接,不管该连接中是活动还是空闲, 以防止进程不会进行close而霸占连接。</td>
+<td align="center">正常close连接时设置为true</td>
+</tr>
+<tr>
+<td align="center">removeAbandonedTimeout</td>
+<td align="center">设置druid 强制回收连接的时限，当程序从池中get到连接开始算起，超过此</td>
+<td align="center">应大于业务运行最长时间</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">值后，druid将强制回收该连接，单位秒。</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">logAbandoned</td>
+<td align="center">当druid强制回收连接后，是否将stack trace 记录到日志中</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">testWhileIdle</td>
+<td align="center">当程序请求连接，池在分配连接时，是否先检查该连接是否有效。(高效)</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center">validationQuery</td>
+<td align="center">检查池中的连接是否仍可用的 SQL 语句,drui会连接到数据库执行该SQL, 如果</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">正常返回，则表示连接可用，否则表示连接不可用</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">testOnBorrow</td>
+<td align="center">程序 <strong>申请</strong> 连接时,进行连接有效性检查（低效，影响性能）</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">testOnReturn</td>
+<td align="center">程序 <strong>返还</strong> 连接时,进行连接有效性检查（低效，影响性能）</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">poolPreparedStatements</td>
+<td align="center">缓存通过以下两个方法发起的SQL:</td>
+<td align="center">true</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">public PreparedStatement prepareStatement(String sql)</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">public PreparedStatement prepareStatement(String sql,</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">int resultSetType, int resultSetConcurrency)</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">maxPoolPrepareStatementPerConnectionSize</td>
+<td align="center">每个连接最多缓存多少个SQL</td>
+<td align="center">20</td>
+</tr>
+<tr>
+<td align="center">filters</td>
+<td align="center">这里配置的是插件,常用的插件有:</td>
+<td align="center">stat,wall,slf4j</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">监控统计: filter:stat</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">日志监控: filter:log4j 或者 slf4j</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">防御SQL注入: filter:wall</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">connectProperties</td>
+<td align="center">连接属性。比如设置一些连接池统计方面的配置。</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">比如设置一些数据库连接属性:</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MySQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MySQL</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JDBC/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>JDBC</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/JDBC%E5%9F%BA%E7%A1%80/&title=Java 数据库基础知识总结 - Bezhuang's Blog&summary=
+Java 数据库连接，JDBC（Java Database Connectivity），是 Java 语言编程中与数据库连接的 API，封装了各种数据库访问的 API 和基础类库，支持多种数据库连接，也是 Java Web 技术核心的第一部分，我把整个学习过程分为 MySQL 基础、MySQL 高级、JDBC 和数据连接池四个部分，便于理解，选择的课程为黑马程序员的 Java web 从入门到企业实战教程，以下为学习过程中所记笔记，可供参考。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/JDBC%E5%9F%BA%E7%A1%80/&title=Java 数据库基础知识总结 - Bezhuang's Blog&summary=
+Java 数据库连接，JDBC（Java Database Connectivity），是 Java 语言编程中与数据库连接的 API，封装了各种数据库访问的 API 和基础类库，支持多种数据库连接，也是 Java Web 技术核心的第一部分，我把整个学习过程分为 MySQL 基础、MySQL 高级、JDBC 和数据连接池四个部分，便于理解，选择的课程为黑马程序员的 Java web 从入门到企业实战教程，以下为学习过程中所记笔记，可供参考。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/JDBC%E5%9F%BA%E7%A1%80/&title=Java 数据库基础知识总结 - Bezhuang's Blog&summary=
+Java 数据库连接，JDBC（Java Database Connectivity），是 Java 语言编程中与数据库连接的 API，封装了各种数据库访问的 API 和基础类库，支持多种数据库连接，也是 Java Web 技术核心的第一部分，我把整个学习过程分为 MySQL 基础、MySQL 高级、JDBC 和数据连接池四个部分，便于理解，选择的课程为黑马程序员的 Java web 从入门到企业实战教程，以下为学习过程中所记笔记，可供参考。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADBklEQVR42u3aOW7EMAwAQP//00mfBDAvOSZ21O1hiRw3BKnry/pzXQjAgAEDBgyYNTBXcf3a8Ob7n793z42el94XDBgwYMCAAbMOJlwA3fz/LoFswt3P2XzAgAEDBgwYMHthpgKvPn+XQHX/8P/BgAEDBgwYMB8LE00oWxhmG2NgwIABAwYMGDBVmCxIdcC3rsADAwYMGDBgwByDSQ+ohhKo7p8dCD42iQQDBgwYMGDAPAaTXacu+kx9LucDBgwYMGDAgFkD012nGk3RfaYXGDBgwIABA2YPTLVAqjaMpgZ50y8KDBgwYMCAAbMfpju4KgfUbDCNvRAwYMCAAQMGzBqY24s0zUSrAVYbW9F80h08MGDAgAEDBszrYLIHRQ/sFmLRArD7YsOVLxgwYMCAAQPmdTDdDacaR1no6cIODBgwYMCAAbMPprpxuGBqFmTpxJIvoj2JBAMGDBgwYMD8O0z24KlGVndQ173YdFvggQEDBgwYMGBeC5N9cPq5amLZeMLPgwEDBgwYMGDWwGQbQ9XG0lThlj0/GxcYMGDAgAEDZg/MVKDZxtOpQV518AcGDBgwYMCA2QeTbuQkE+k2jqrA2YIQDBgwYMCAAbMfJgoW/T0a6FQ82YFguYMHBgwYMGDAgPl3mOqAK9qwmh6kVRtl4TjAgAEDBgwYMGtgTjWosg2makE5fsEJDBgwYMCAAbMOZmrj6kWj6kCtWuiFB25gwIABAwYMmDUwUainEj71YtIFHhgwYMCAAQPm9TDTjanuBZ/sRaNq4wsMGDBgwIABsw+mu04VXNXBWjc+MGDAgAEDBswemKu42gEMNaiqBWZ44AYGDBgwYMCAeT3M2MAqOZirNq7unh8r8MCAAQMGDBgwa2BODdSyhVkXOpsHGDBgwIABAwbMU4O7YxeKwIABAwYMGDAfB1NtQGULvO7+jzeqwIABAwYMGDCPwWQLsWxA1QtI2UZW9gWAAQMGDBgwYPbCdAdXVZBo4ZUtQMugYMCAAQMGDJg1MBYYMGDAgAEDZtn6Bgqu4yxar0sLAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/JDBC%E5%9F%BA%E7%A1%80/&text=Java 数据库基础知识总结 - Bezhuang's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/'>
+          <p class='title'>机器学习和深度学习介绍及入门<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择李沐老师的动手学深度学习 v2 课程来开启机器学习之旅，并特...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-%E5%9F%BA%E7%A1%80"><span class="toc-text">MySQL 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E7%AE%80%E4%BB%8B"><span class="toc-text">SQL简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E7%94%A8%E8%AF%AD%E6%B3%95"><span class="toc-text">通用语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E5%88%86%E7%B1%BB"><span class="toc-text">SQL分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DDL%EF%BC%9A%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">DDL：操作数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DDL%EF%BC%9A%E6%93%8D%E4%BD%9C%E8%A1%A8"><span class="toc-text">DDL：操作表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL-%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">SQL 的数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DML"><span class="toc-text">DML</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DQL"><span class="toc-text">DQL</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-%E8%BF%9B%E9%98%B6"><span class="toc-text">MySQL 进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BA%A6%E6%9D%9F"><span class="toc-text">约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="toc-text">外键约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1"><span class="toc-text">数据库设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-text">多表查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1"><span class="toc-text">事务</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDBC"><span class="toc-text">JDBC</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC-%E7%AE%80%E4%BB%8B"><span class="toc-text">JDBC 简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-text">JDBC快速入门</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC-API-%E8%AF%A6%E8%A7%A3"><span class="toc-text">JDBC API 详解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="toc-text">数据库连接池</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0%E7%AE%80%E4%BB%8B"><span class="toc-text">数据库连接池简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0%E5%AE%9E%E7%8E%B0"><span class="toc-text">数据库连接池实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Driud-%E4%BD%BF%E7%94%A8"><span class="toc-text">Driud 使用</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Java 数据库基础知识总结";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        
+          <div><p>Copyright © 2021 Zhihao Zhuang. All rights reserved</p>
+</div>
+        
+      
+    
+      
+        
+          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+</div>
+        
+      
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/********************脚本懒加载函数********************************/
+function loadScript(src, cb) {
+var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+var script = document.createElement('script');
+script.setAttribute('type','text/javascript');
+if (cb) script.onload = cb;
+script.setAttribute('src', src);
+HEAD.appendChild(script);
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://www.zhuangzhihao.top
+        
+        
+        
+        
+          id="https:wwwzhuangzhihaotop"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 返回主页
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/Bezhuang/Hexo-blog
+        
+        
+        
+        
+          id="https:githubcomBezhuangHexo-blog"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('false' == true && ('home,contributors,source_docs,hr,print'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+	
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/issues.min.js');
+	
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+
+
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
+  });
+</script>
+
+
+
+
+
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  pjax_comment=pjax_valine;
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/app.min.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/search/hexo.min.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI',
+    app_key: 'j5I5paEqIfWfOlCg13vU2vNq',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://blog.zhuangzhihao.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+function bindToggleButton() {
+	var btn=$("#wrapper .toggle-mode-btn");
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+document.addEventListener("pjax:success", bindToggleButton);
+
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/tu8j8vmfuovtkhsj4lgr7sub986gd1ku.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#l_cover",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      
+      $("#wrapper .toggle-mode-btn").unbind('click');
+      
+	  
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        if (typeof IssuesAPI == "undefined") {
+          loadIssuesJS();
+        }
+        
+          pjax_initCopyCode();
+        
+		
+          try{pjax_comment();} catch (e) {}
+        
+      } catch (e) {
+        console.log(e);
+      }
+	  
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+<!--浏览器搞笑标题-->
+<!--<script type="text/javascript" src="/js/FunnyTitle.js"></script>-->
+<!-- 数字雨 -->
+<canvas id="canvas" width="1440" height="900" ></canvas>
+<script type="text/javascript" src="/js/DigitalRain.js"></script>
