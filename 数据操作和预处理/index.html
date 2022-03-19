@@ -479,7 +479,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月14日</p>
+    <p>发布于：2022年3月13日</p>
   </a>
 </div>
 
@@ -490,13 +490,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：2.6k字</p>
+      <p>字数：2.8k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：10分钟</p>
+      <p>时长：11分钟</p>
     </a>
   </div>
 
@@ -690,6 +690,33 @@ print(data)</code></pre>
 </ul>
 </li>
 </ul>
+<h4 id="处理缺失值"><a href="#处理缺失值" class="headerlink" title="处理缺失值"></a>处理缺失值</h4><ul>
+<li><p>“NaN”项代表缺失值</p>
+</li>
+<li><p>为了处理缺失的数据，典型的方法包括插值法和删除法，其中插值法用一个替代值弥补缺失值，而删除法则直接忽略缺失值</p>
+</li>
+<li><p>插值法：通过位置索引<code>iloc</code>，将<code>data</code>分成<code>inputs</code>和<code>outputs</code>， 其中前者为<code>data</code>的前两列，而后者为<code>data</code>的最后一列</p>
+<ul>
+<li>对于<code>inputs</code>中缺少的数值，我们用同一列的均值替换“NaN”项</li>
+</ul>
+<pre><code class="python">inputs, outputs = data.iloc[:, 0:2], data.iloc[:, 2]
+inputs = inputs.fillna(inputs.mean())
+print(inputs)</code></pre>
+</li>
+<li><p>对于<code>inputs</code>中的类别值或离散值，我们将“NaN”视为一个类别</p>
+<pre><code class="python">inputs = pd.get_dummies(inputs, dummy_na=True)
+print(inputs)</code></pre>
+</li>
+</ul>
+<h4 id="转换为张量格式"><a href="#转换为张量格式" class="headerlink" title="转换为张量格式"></a>转换为张量格式</h4><ul>
+<li><p>现在<code>inputs</code>和<code>outputs</code>中的所有条目都是数值类型，它们可以转换为张量格式</p>
+</li>
+<li><p>当数据采用张量格式后，可以通过张量函数来进一步操作</p>
+<pre><code class="python">import torch
+X, y = torch.tensor(inputs.values), torch.tensor(outputs.values)
+X, y</code></pre>
+</li>
+</ul>
 
   
   
@@ -844,11 +871,17 @@ print(data)</code></pre>
   
     <div class="prev-next">
       
-      
-        <a class='next' href='/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/'>
-          <p class='title'>Maven 项目管理知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Maven 项目管理知识总结</p>
           <p class='content'>
 Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一...</p>
+        </a>
+      
+      
+        <a class='next' href='/JDBC%E5%9F%BA%E7%A1%80/'>
+          <p class='title'>Java 数据库基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+Java 数据库连接，JDBC（Java Database Connectivity），是 Java 语言编程中与数据库连接的 API，封装了各种数据库访问的 API 和基础类库，支持多种数据...</p>
         </a>
       
     </div>
@@ -891,7 +924,7 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="toc-text">数据操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#n-%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-text">n 维数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%BF%E6%92%AD%E6%9C%BA%E5%88%B6"><span class="toc-text">广播机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E5%92%8C%E5%88%87%E7%89%87"><span class="toc-text">索引和切片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8A%82%E7%9C%81%E5%86%85%E5%AD%98"><span class="toc-text">节省内存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%85%B6%E4%BB%96Python%E5%AF%B9%E8%B1%A1"><span class="toc-text">转换为其他Python对象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-text">数据预处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">读取数据集</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="toc-text">数据操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#n-%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-text">n 维数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%BF%E6%92%AD%E6%9C%BA%E5%88%B6"><span class="toc-text">广播机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E5%92%8C%E5%88%87%E7%89%87"><span class="toc-text">索引和切片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8A%82%E7%9C%81%E5%86%85%E5%AD%98"><span class="toc-text">节省内存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%85%B6%E4%BB%96Python%E5%AF%B9%E8%B1%A1"><span class="toc-text">转换为其他Python对象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-text">数据预处理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-text">读取数据集</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E7%BC%BA%E5%A4%B1%E5%80%BC"><span class="toc-text">处理缺失值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%BC%A0%E9%87%8F%E6%A0%BC%E5%BC%8F"><span class="toc-text">转换为张量格式</span></a></li></ol></li></ol>
     </div>
   </section>
 
