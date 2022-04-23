@@ -1,0 +1,2522 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>HTTP 协议和 Servlet - Bezhuang&#39;s Blog</title>
+  
+    <meta name="keywords" content="Java,Servlet,Tomcat,HTTP">
+  
+
+  
+    <meta name="description" content="
+Java Web 是用 Java 技术来解决相关 web 互联网领域的技术栈，国内很多大型网站公司也是首选 Java 语言来解决 web 互联网相关的问题。要了解 Java Web 开发的技术栈，首先需要理解 HTTP 协议和 HTTP 请求与响应数据的格式，理解 Servlet 的执行流程和生命周期，掌握 S...">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Bezhuang's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+
+<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+
+
+</head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
+    
+
+<header id="l_header" class="l_header always shadow floatable blur show"  >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Bezhuang's Blog
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">庄之皓 · Bezhuang</p>
+    
+    
+      <p class="subtitle">欢迎访问我的博客！Welcome to my blog!</p>
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="search here..." />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/photos"
+              
+              
+              id="photos">
+              <p>相册</p>
+            </a>
+          
+            <a href="/projects"
+              
+              
+              id="projects">
+              <p>开源库</p>
+            </a>
+          
+            <a href="/todo"
+              
+              
+              id="todo">
+              <p>计划表</p>
+            </a>
+          
+            <a href="/guestbook"
+              
+              
+              id="guestbook">
+              <p>留言板</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        HTTP 协议和 Servlet
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E4%B8%8E%E6%9E%B6%E6%9E%84/">后端开发与架构</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年4月5日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：6.1k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：27分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p>Java Web 是用 Java 技术来解决相关 web 互联网领域的技术栈，国内很多大型网站公司也是首选 Java 语言来解决 web 互联网相关的问题。要了解 Java Web 开发的技术栈，首先需要理解 HTTP 协议和 HTTP 请求与响应数据的格式，理解 Servlet 的执行流程和生命周期，掌握 Servlet 的使用和相关配置。</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="一、HTTP-协议"><a href="#一、HTTP-协议" class="headerlink" title="一、HTTP 协议"></a>一、HTTP 协议</h3><p>HyperText Transfer Protocol（超文本传输协议）规定了浏览器和服务器之间数据传输的规则。数据传输的规则指的是请求数据和响应数据需要按照指定的格式进行传输。</p>
+<p>HTTP 协议是基于 TCP 的协议，TCP 是一种面向连接的（建立连接前是需经过三次握手）、可靠的、基于字节流的传输层通信协议，在数据传输方面更安全。</p>
+<p>HTTP 同样也是基于请求—响应模型的，一次请求对应一次响应，请求和响应是一一对应关系。</p>
+<p>HTTP 协议是无状态协议，对于事物处理没有记忆能力，每次请求—响应都是独立的。无状态指的是客户端发送 HTTP 请求给服务端之后，服务端根据请求响应数据，响应完后，不会记录任何信息。这种特性有优点也有缺点，缺点是多次请求间不能共享数据，但速度快。</p>
+<p>请求之间无法共享数据会引发的问题，如电商网站加入购物车和去购物车结算是两次请求，加入购物车请求响应结束后，并未记录加入购物车是何商品，发起去购物车结算的请求后，因为无法获取哪些商品加入了购物车，会导致此次请求无法正确展示数据，在 Java Web 中要使用会话技术（Cookie、Session）来解决这个问题。</p>
+<h4 id="请求数据格式"><a href="#请求数据格式" class="headerlink" title="请求数据格式"></a>请求数据格式</h4><p>HTTP 请求数据总共分为三部分内容，分别是请求行、请求头、请求体，请求方式有七种，最常用的是 GET 和 POST 方法。</p>
+<p>请求行是 HTTP 请求中的第一行数据，请求行包含三块内容，分别是 <code>[请求方式] /[请求URL路径] / [HTTP协议及版本]</code>。</p>
+<pre><code class="http">GET / HTTP/1.1</code></pre>
+<p>请求头从第二行开始，格式均为 <code>key: value</code> 形式，请求头中会包含若干个属性。</p>
+<pre><code class="HTTP">Host: 请求的主机名
+User-Agent: 浏览器版本, Mozilla/5.0 Chrome/79
+Accept：表示浏览器能接收的资源类型，如text/*，image/*或者*/*表示所有
+Accept-Language：表示浏览器偏好的语言，服务器可以据此返回不同语言的网页
+Accept-Encoding：表示浏览器可以支持的压缩类型，例如gzip, deflate等</code></pre>
+<p>服务端可以根据请求头中的内容来获取客户端的相关信息，有了这些信息服务端就可以处理不同的业务需求，比如浏览器兼容问题。</p>
+<p>请求体是 POST 请求的最后一部分，存储请求参数，请求体和请求头之间是有一个空行隔开。</p>
+<pre><code class="http">username=bezhuang@password=1234</code></pre>
+<p>GET 和 POST 两个请求的区别：GET 请求请求参数在请求行中，没有请求体，POST 请求请求参数在请求体中，GET 请求请求参数大小有限制，POST 没有。</p>
+<h4 id="响应数据格式"><a href="#响应数据格式" class="headerlink" title="响应数据格式"></a>响应数据格式</h4><p>响应数据总共分为三部分内容，分别是响应行、响应头、响应体。</p>
+<p>响应行是响应数据的第一行，响应行包含三块内容，分别是 <code>[HTTP协议及版本] [响应状态码] [状态码的描述]</code>。</p>
+<pre><code class="http">HTTP/1.1 200 OK</code></pre>
+<p>响应状态码</p>
+<ul>
+<li>200  ok 客户端请求成功</li>
+<li>404  Not Found 请求资源不存在</li>
+<li>500 Internal Server Error 服务端发生不可预期的错误</li>
+</ul>
+<p>响应头从第二行开始，格式也为 <code>key：value</code> 形式，响应头中会包含若干个属性。</p>
+<pre><code class="http">Content-Type：表示该响应内容的类型，例如text/html，image/jpeg；
+Content-Length：表示该响应内容的长度（字节数）；
+Content-Encoding：表示该响应压缩算法，例如gzip；
+Cache-Control：指示客户端应如何缓存，例如max-age=300表示可以最多缓存300秒</code></pre>
+<p>响应体是最后一部分，存放响应数据，<code>&lt;html&gt;数据内容&lt;/html&gt;</code>。</p>
+<h4 id="自定义服务器"><a href="#自定义服务器" class="headerlink" title="自定义服务器"></a>自定义服务器</h4><p>可以使用 Java 编写服务器，用来接受页面发送的请求和响应数据给前端浏览器，主要使用到的是 <code>ServerSocket</code> 和 <code>Socket</code>。</p>
+<pre><code class="java">package com.itheima;
+import sun.misc.IOUtils;
+import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
+public class Server &#123;
+    public static void main(String[] args) throws IOException &#123;
+        ServerSocket ss = new ServerSocket(8080); // 监听指定端口
+        System.out.println(&quot;server is running...&quot;);
+        while (true)&#123;
+            Socket sock = ss.accept();
+            System.out.println(&quot;connected from &quot; + sock.getRemoteSocketAddress());
+            Thread t = new Handler(sock);
+            t.start();
+        &#125;
+    &#125;
+&#125;
+class Handler extends Thread &#123;
+    Socket sock;
+
+    public Handler(Socket sock) &#123;
+        this.sock = sock;
+    &#125;
+    public void run() &#123;
+        try (InputStream input = this.sock.getInputStream()) &#123;
+            try (OutputStream output = this.sock.getOutputStream()) &#123;
+                handle(input, output);
+            &#125;
+        &#125; catch (Exception e) &#123;
+            try &#123;
+                this.sock.close();
+            &#125; catch (IOException ioe) &#123;
+            &#125;
+            System.out.println(&quot;client disconnected.&quot;);
+        &#125;
+    &#125;
+    private void handle(InputStream input, OutputStream output) throws IOException &#123;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(input, StandardCharsets.UTF_8));
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output, StandardCharsets.UTF_8));
+        // 读取HTTP请求:
+        boolean requestOk = false;
+        String first = reader.readLine();
+        if (first.startsWith(&quot;GET / HTTP/1.&quot;)) &#123;
+            requestOk = true;
+        &#125;
+        for (;;) &#123;
+            String header = reader.readLine();
+            if (header.isEmpty()) &#123; // 读取到空行时, HTTP Header读取完毕
+                break;
+            &#125;
+            System.out.println(header);
+        &#125;
+        System.out.println(requestOk ? &quot;Response OK&quot; : &quot;Response Error&quot;);
+        if (!requestOk) &#123;
+            // 发送错误响应:
+            writer.write(&quot;HTTP/1.0 404 Not Found\r\n&quot;);
+            writer.write(&quot;Content-Length: 0\r\n&quot;);
+            writer.write(&quot;\r\n&quot;);
+            writer.flush();
+        &#125; else &#123;
+            // 发送成功响应:
+            //读取html文件，转换为字符串
+            BufferedReader br = new BufferedReader(new FileReader(&quot;http/html/a.html&quot;));
+            StringBuilder data = new StringBuilder();
+            String line = null;
+            while ((line = br.readLine()) != null)&#123;
+                data.append(line);
+            &#125;
+            br.close();
+            int length = data.toString().getBytes(StandardCharsets.UTF_8).length;
+            writer.write(&quot;HTTP/1.1 200 OK\r\n&quot;);
+            writer.write(&quot;Connection: keep-alive\r\n&quot;);
+            writer.write(&quot;Content-Type: text/html\r\n&quot;);
+            writer.write(&quot;Content-Length: &quot; + length + &quot;\r\n&quot;);
+            writer.write(&quot;\r\n&quot;); // 空行标识Header和Body的分隔
+            writer.write(data.toString());
+            writer.flush();
+        &#125;
+    &#125;
+&#125;</code></pre>
+<h3 id="二、Tomcat-服务器"><a href="#二、Tomcat-服务器" class="headerlink" title="二、Tomcat 服务器"></a>二、Tomcat 服务器</h3><p>Web 服务器是一个安装在服务器端的对 HTTP 协议的操作进行封装的应用程序，使得程序员不必直接对协议进行操作，让 Web 开发更加便捷，当Web服务器软件启动后，部署在Web服务器软件中的页面就可以直接通过浏览器来访问了。</p>
+<p>Tomcat 是 Apache 软件基金会一个核心项目，是一个开源免费的轻量级 Web 服务器，支持 Servlet/JSP 少量 JavaEE 规范。JavaEE 规范是指 Java 企业级开发的技术规范总和。因为 Tomcat 支持 Servlet/JSP 规范，所以 Tomcat 也被称为Web容器、Servlet容器。Servlet需要依赖 Tomcat 才能运行。</p>
+<p>使用 Maven 工具能更加简单快捷的把 Web 项目给创建出来，创建方式有两种：使用骨架和不使用骨架。使用骨架，默认没有 java 和 resources 目录，需要手动完成创建补齐，不使用骨架要在 pom.xml 设置打包方式为 war、补齐 Maven Web 项目缺失 webapp 的目录结构和 WEB-INF/web.xml 的目录结构。</p>
+<p>Maven Web 项目创建成功后，通过 Maven 的 package 命令可以将项目打包成 war 包，将 war 文件拷贝到 Tomcat 的 webapps 目录下，启动 Tomcat 就可以将项目部署成功，然后通过浏览器进行访问即可。</p>
+<p>在 IDEA 中可以直接使用 Maven 中的 Tomcat 插件来部署项目，即在 pom.xml 中添加 Tomcat 插件，再使用 Maven Helper 插件快速启动项目。</p>
+<pre><code class="xml">&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;!--Tomcat插件 --&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
+            &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.2&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;port&gt;80&lt;/port&gt;&lt;!--访问端口号 --&gt;
+                &lt;!--项目访问路径
+                    未配置访问路径: http://localhost:80/tomcat-demo2/a.html
+                    配置/后访问路径: http://localhost:80/a.html
+                    如果配置成 /hello,访问路径会变成什么?
+                        答案: http://localhost:80/hello/a.html
+                --&gt;
+                &lt;path&gt;/&lt;/path&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;</code></pre>
+<h3 id="三、Servlet"><a href="#三、Servlet" class="headerlink" title="三、Servlet"></a>三、Servlet</h3><p>Servlet 是 Java Web 最为核心的内容，它是 Java 提供的一门动态 web 资源开发技术。使用 Servlet 就可以实现根据不同的登录用户在页面上动态显示不同内容。Servlet 是 JavaEE 规范之一，其实就是一个接口，将来我们需要定义 Servlet 类实现 Servlet 接口，并由 web 服务器运行 Servlet。</p>
+<h4 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h4><p>编写一个 Servlet 类，并使用 IDEA 中 Tomcat 插件进行部署，最终通过浏览器访问所编写的 Servlet 程序。具体的实现步骤如下：</p>
+<ol>
+<li>创建 Web 项目 <code>web-demo</code>，导入 Servlet 依赖坐标。</li>
+</ol>
+<pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+    &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+    &lt;version&gt;3.1.0&lt;/version&gt;
+    &lt;!--
+      此处为什么需要添加该标签?
+      provided指的是在编译和测试过程中有效,最后生成的war包时不会加入
+       因为Tomcat的lib目录中已经有servlet-api这个jar包，如果在生成war包的时候生效就会和Tomcat中的jar包冲突，导致报错
+    --&gt;
+    &lt;scope&gt;provided&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+<ol start="2">
+<li>创建：定义一个类，实现 Servlet 接口，并重写接口中所有方法，并在 service 方法中输入一句话。</li>
+</ol>
+<pre><code class="java">package com.itheima.web;
+import javax.servlet.*;
+import java.io.IOException;
+public class ServletDemo1 implements Servlet &#123;
+    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException &#123;
+        System.out.println(&quot;servlet hello world~&quot;);
+    &#125;
+    public void init(ServletConfig servletConfig) throws ServletException &#123;
+    &#125;
+    public ServletConfig getServletConfig() &#123;
+        return null;
+    &#125;
+    public String getServletInfo() &#123;
+        return null;
+    &#125;
+    public void destroy() &#123;
+    &#125;
+&#125;</code></pre>
+<ol start="3">
+<li>配置：在类上使用 <code>@WebServlet</code> 注解，配置该 Servlet 的访问路径。</li>
+</ol>
+<pre><code class="java">@WebServlet(&quot;/demo1&quot;)</code></pre>
+<ol start="4">
+<li>访问：启动 Tomcat，浏览器中输入 URL 地址访问该 Servlet。</li>
+</ol>
+<pre><code class="http">http://localhost:8080/web-demo/demo1</code></pre>
+<ol start="5">
+<li>通过浏览器访问后，在控制台会打印 <code>servlet hello world~</code> ，说明 servlet 程序已经成功运行。</li>
+</ol>
+<h4 id="执行流程"><a href="#执行流程" class="headerlink" title="执行流程"></a>执行流程</h4><p>Servlet 的执行流程：浏览器发出 <code>http://localhost:8080/web-demo/demo1</code> 请求，从请求中可以解析出三部分内容，分别是 <code>localhost:8080</code>、<code>web-demo</code>、<code>demo1</code>，根据 <code>localhost:8080</code> 可以找到要访问的 Tomcat Web 服务器，根据 <code>web-demo</code> 可以找到部署在 Tomcat 服务器上的 web-demo 项目，根据 <code>demo1</code> 可以找到要访问的是项目中的哪个 Servlet 类，根据 <code>@WebServlet</code> 后面的值进行匹配。</p>
+<p>找到 ServletDemo1 这个类后，Tomcat Web 服务器就会为 ServletDemo1 这个类创建一个对象，然后调用对象中的 service 方法。</p>
+<p>ServletDemo1 实现了 Servlet 接口，所以类中必然会重写 service 方法供 Tomcat Web 服务器进行调用，service 方法中 ServletRequest 和 ServletResponse 两个参数，ServletRequest 封装的是请求数据，ServletResponse 封装的是响应数据，后期我们可以通过这两个参数实现前后端的数据交互。</p>
+<p>Servlet 由 web 服务器创建，Servlet 方法由 web 服务器调用。</p>
+<p>因为我们自定义的 Servlet 必须实现 Servlet 接口并复写其方法，而 Servlet 接口中有 service 方法，因此服务器知道 Servlet 中一定有 service 方法。</p>
+<h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><p>对象的生命周期指一个对象从被创建到被销毁的整个过程。</p>
+<p>Servlet 运行在 Servlet 容器（web 服务器）中，其生命周期由容器来管理，分为 4 个阶段：</p>
+<ol>
+<li>加载和实例化：默认情况下，当 Servlet 第一次被访问时，由容器创建 Servlet 对象，，但是如果创建 Servlet 比较耗时的话，那么第一个访问的人等待的时间就比较长，用户的体验就比较差，那么我们可以把 Servlet 的创建放到服务器启动的时候来创建。</li>
+</ol>
+<pre><code class="java">@WebServlet(urlPatterns = &quot;/demo1&quot;,loadOnStartup = 1)
+/*
+loadOnstartup的取值有两类情况
+    （1）负整数:第一次访问时创建Servlet对象
+    （2）0或正整数:服务器启动时创建Servlet对象，数字越小优先级越高
+*/</code></pre>
+<ol start="2">
+<li>初始化：在 Servlet 实例化之后，容器将调用 Servlet 的 <code>init()</code> 方法初始化这个对象，完成一些如加载配置文件、创建连接等初始化的工作。该方法只调用一次。</li>
+<li>请求处理：每次请求 Servlet 时，Servlet 容器都会调用 Servlet 的 <code>service()</code> 方法对请求进行处理</li>
+<li>服务终止：当需要释放内存或者容器关闭时，容器就会调用 Servlet 实例的 <code>destroy()</code> 方法完成资源的释放。在 <code>destroy()</code> 方法调用之后，容器会释放这个 Servlet 实例，该实例随后会被 Java 的垃圾收集器所回收。</li>
+</ol>
+<p>通过案例演示 Servlet 生命周期方法</p>
+<pre><code class="java">package com.itheima.web;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import java.io.IOException;
+/**
+* Servlet生命周期方法
+*/
+@WebServlet(urlPatterns = &quot;/demo2&quot;,loadOnStartup = 1)
+public class ServletDemo2 implements Servlet &#123;
+    /**
+     *  初始化方法
+     *  1.调用时机：默认情况下，Servlet被第一次访问时，调用
+     *      * loadOnStartup: 默认为-1，修改为0或者正整数，则会在服务器启动的时候，调用
+     *  2.调用次数: 1次
+     * @param config
+     * @throws ServletException
+     */
+    public void init(ServletConfig config) throws ServletException &#123;
+        System.out.println(&quot;init...&quot;);
+    &#125;
+    /**
+     * 提供服务
+     * 1.调用时机:每一次Servlet被访问时，调用
+     * 2.调用次数: 多次
+     * @param req
+     * @param res
+     * @throws ServletException
+     * @throws IOException
+     */
+    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException &#123;
+        System.out.println(&quot;servlet hello world~&quot;);
+    &#125;
+    /**
+     * 销毁方法
+     * 1.调用时机：内存释放或者服务器关闭的时候，Servlet对象会被销毁，调用
+     * 2.调用次数: 1次
+     */
+    public void destroy() &#123;
+        System.out.println(&quot;destroy...&quot;);
+    &#125;
+    public ServletConfig getServletConfig() &#123;
+        return null;
+    &#125;
+    public String getServletInfo() &#123;
+        return null;
+    &#125;
+&#125;</code></pre>
+<p>Servlet 对象默认是第一次访问的时候被创建，可以使用 <code>@WebServlet(urlPatterns = &quot;/demo2&quot;,loadOnStartup = 1)</code> 的 loadOnStartup 修改成在服务器启动的时候创建。</p>
+<p>Servlet 生命周期中涉及到三个方法，分别是 <code>init()</code>、<code>service()</code>、<code>destroy()</code>，<code>init</code> 方法在 Servlet 对象被创建的时候执行，只执行 1 次，service 方法在 Servlet 被访问的时候调用，每访问 1 次就调用 1 次，destroy 方法在 Servlet 对象被销毁的时候调用，只执行 1 次。</p>
+<h4 id="方法介绍"><a href="#方法介绍" class="headerlink" title="方法介绍"></a>方法介绍</h4><p>Servlet 中总共有5个方法，我们已经介绍过其中的三个，剩下的两个方法为 <code>getServletInfo()</code> 和 <code>getServletConfig() </code>。</p>
+<ol>
+<li>初始化方法，在 Servlet 被创建时执行，只执行一次。</li>
+</ol>
+<pre><code class="java">void init(ServletConfig config) </code></pre>
+<ol start="2">
+<li>提供服务方法， 每次 Servlet 被访问，都会调用该方法。</li>
+</ol>
+<pre><code class="java">void service(ServletRequest req, ServletResponse res)</code></pre>
+<ol start="3">
+<li>销毁方法，当 Servlet 被销毁时，调用该方法。在内存释放或服务器关闭时销毁 Servlet。</li>
+</ol>
+<pre><code class="java">void destroy() </code></pre>
+<ol start="4">
+<li>获取 Servlet 信息方法</li>
+</ol>
+<pre><code class="java">String getServletInfo() 
+//该方法用来返回Servlet的相关信息，没有什么太大的用处，一般我们返回一个空字符串即可
+public String getServletInfo() &#123;
+    return &quot;&quot;;
+&#125;</code></pre>
+<ol start="5">
+<li>获取 ServletConfig 对象方法</li>
+</ol>
+<pre><code class="java">ServletConfig getServletConfig()</code></pre>
+<p>ServletConfig 对象在 init 方法的参数中有，而 Tomcat Web 服务器在创建 Servlet 对象的时候会调用 init 方法，必定会传入一个  ServletConfig 对象，我们只需要将服务器传过来的 ServletConfig 进行返回即可。</p>
+<pre><code class="java">package com.itheima.web;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import java.io.IOException;
+/**
+ * Servlet方法介绍
+ */
+@WebServlet(urlPatterns = &quot;/demo3&quot;,loadOnStartup = 1)
+public class ServletDemo3 implements Servlet &#123;
+    private ServletConfig servletConfig;
+    /**
+     *  初始化方法
+     *  1.调用时机：默认情况下，Servlet被第一次访问时，调用
+     *      * loadOnStartup: 默认为-1，修改为0或者正整数，则会在服务器启动的时候，调用
+     *  2.调用次数: 1次
+     * @param config
+     * @throws ServletException
+     */
+    public void init(ServletConfig config) throws ServletException &#123;
+        this.servletConfig = config;
+        System.out.println(&quot;init...&quot;);
+    &#125;
+    public ServletConfig getServletConfig() &#123;
+        return servletConfig;
+    &#125;
+    /**
+     * 提供服务
+     * 1.调用时机:每一次Servlet被访问时，调用
+     * 2.调用次数: 多次
+     * @param req
+     * @param res
+     * @throws ServletException
+     * @throws IOException
+     */
+    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException &#123;
+        System.out.println(&quot;servlet hello world~&quot;);
+    &#125;
+    /**
+     * 销毁方法
+     * 1.调用时机：内存释放或者服务器关闭的时候，Servlet对象会被销毁，调用
+     * 2.调用次数: 1次
+     */
+    public void destroy() &#123;
+        System.out.println(&quot;destroy...&quot;);
+    &#125;    
+    public String getServletInfo() &#123;
+        return &quot;&quot;;
+    &#125;
+&#125;</code></pre>
+<h4 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h4><p>B/S 架构的 web 项目都是针对 HTTP 协议，所以我们自定义 Servlet，会通过继承 HttpServlet，具体的编写格式如下:</p>
+<pre><code class="java">@WebServlet(&quot;/demo4&quot;)
+public class ServletDemo4 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+        //TODO GET 请求方式处理逻辑
+        System.out.println(&quot;get...&quot;);
+    &#125;
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+        //TODO Post 请求方式处理逻辑
+        System.out.println(&quot;post...&quot;);
+    &#125;
+&#125;</code></pre>
+<p>要想发送一个 GET 请求，请求该 Servlet，只需要通过浏览器发送 <code>http://localhost:8080/web-demo/demo4</code>，就能看到 doGet 方法被执行了。</p>
+<p>要想发送一个 POST 请求，请求该 Servlet，单单通过浏览器是无法实现的，这个时候就需要编写一个 form 表单来发送请求，在 webapp 下创建一个 <code>a.html</code> 页面，启动测试，即可看到 doPost 方法被执行了。</p>
+<pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form action=&quot;/web-demo/demo4&quot; method=&quot;post&quot;&gt;
+        &lt;input name=&quot;username&quot;/&gt;&lt;input type=&quot;submit&quot;/&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>因为前端发送 GET 和 POST 请求的时候，参数的位置不一致，GET 请求参数在请求行中，POST 请求参数在请求体中，为了能处理不同的请求方式，我们得在 service 方法中进行判断，然后写不同的业务处理。</p>
+<pre><code class="java">package com.itheima.web;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+@WebServlet(&quot;/demo5&quot;)
+public class ServletDemo5 implements Servlet &#123;
+    public void init(ServletConfig config) throws ServletException &#123;
+    &#125;
+    public ServletConfig getServletConfig() &#123;
+        return null;
+    &#125;
+    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException &#123;
+        //如何调用?
+        //获取请求方式，根据不同的请求方式进行不同的业务处理
+        HttpServletRequest request = (HttpServletRequest)req;
+       //1. 获取请求方式
+        String method = request.getMethod();
+        //2. 判断
+        if(&quot;GET&quot;.equals(method))&#123;
+            // get方式的处理逻辑
+        &#125;else if(&quot;POST&quot;.equals(method))&#123;
+            // post方式的处理逻辑
+        &#125;
+    &#125;
+    public String getServletInfo() &#123;
+        return null;
+    &#125;
+    public void destroy() &#123;
+    &#125;
+&#125;</code></pre>
+<p>这样能实现，但是每个 Servlet 类中都将有相似的代码，针对这个问题，我们可以对 Servlet 接口进行继承封装，来简化代码开发。</p>
+<pre><code class="java">package com.itheima.web;
+import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+public class MyHttpServlet implements Servlet &#123;
+    public void init(ServletConfig config) throws ServletException &#123;
+    &#125;
+    public ServletConfig getServletConfig() &#123;
+        return null;
+    &#125;
+    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException &#123;
+        HttpServletRequest request = (HttpServletRequest)req;
+        //1. 获取请求方式
+        String method = request.getMethod();
+        //2. 判断
+        if(&quot;GET&quot;.equals(method))&#123;
+            // get方式的处理逻辑
+            doGet(req,res);
+        &#125;else if(&quot;POST&quot;.equals(method))&#123;
+            // post方式的处理逻辑
+            doPost(req,res);
+        &#125;
+    &#125;
+    protected void doPost(ServletRequest req, ServletResponse res) &#123;
+    &#125;
+    protected void doGet(ServletRequest req, ServletResponse res) &#123;
+    &#125;
+    public String getServletInfo() &#123;
+        return null;
+    &#125;
+    public void destroy() &#123;
+    &#125;
+&#125;</code></pre>
+<p>有了 MyHttpServlet 这个类，以后我们再编写 Servlet 类的时候，只需要继承 MyHttpServlet，重写父类中的 doGet 和 doPost 方法，就可以用来处理 GET 和 POST 请求的业务逻辑。</p>
+<pre><code class="java">@WebServlet(&quot;/demo5&quot;)
+public class ServletDemo5 extends MyHttpServlet &#123;
+    @Override
+    protected void doGet(ServletRequest req, ServletResponse res) &#123;
+        System.out.println(&quot;get...&quot;);
+    &#125;
+    @Override
+    protected void doPost(ServletRequest req, ServletResponse res) &#123;
+        System.out.println(&quot;post...&quot;);
+    &#125;
+&#125;</code></pre>
+<p>将来页面发送的是 GET 请求，则会进入到 doGet 方法中进行执行，如果是 POST 请求，则进入到 doPost 方法。这样代码在编写的时候就相对来说更加简单快捷。</p>
+<p>类似 MyHttpServlet 这样的类 Servlet 中已经为我们提供好了，就是 HttpServlet。</p>
+<pre><code class="java">protected void service(HttpServletRequest req, HttpServletResponse resp)
+        throws ServletException, IOException
+    &#123;
+        String method = req.getMethod();
+        if (method.equals(METHOD_GET)) &#123;
+            long lastModified = getLastModified(req);
+            if (lastModified == -1) &#123;
+                // servlet doesn&#39;t support if-modified-since, no reason
+                // to go through further expensive logic
+                doGet(req, resp);
+            &#125; else &#123;
+                long ifModifiedSince = req.getDateHeader(HEADER_IFMODSINCE);
+                if (ifModifiedSince &lt; lastModified) &#123;
+                    // If the servlet mod time is later, call doGet()
+                    // Round down to the nearest second for a proper compare
+                    // A ifModifiedSince of -1 will always be less
+                    maybeSetLastModified(resp, lastModified);
+                    doGet(req, resp);
+                &#125; else &#123;
+                    resp.setStatus(HttpServletResponse.SC_NOT_MODIFIED);
+                &#125;
+            &#125;
+        &#125; else if (method.equals(METHOD_HEAD)) &#123;
+            long lastModified = getLastModified(req);
+            maybeSetLastModified(resp, lastModified);
+            doHead(req, resp);
+        &#125; else if (method.equals(METHOD_POST)) &#123;
+            doPost(req, resp);
+        &#125; else if (method.equals(METHOD_PUT)) &#123;
+            doPut(req, resp);
+        &#125; else if (method.equals(METHOD_DELETE)) &#123;
+            doDelete(req, resp);
+        &#125; else if (method.equals(METHOD_OPTIONS)) &#123;
+            doOptions(req,resp);
+        &#125; else if (method.equals(METHOD_TRACE)) &#123;
+            doTrace(req,resp);       
+        &#125; else &#123;
+            //
+            // Note that this means NO servlet supports whatever
+            // method was requested, anywhere on this server.
+            //
+            String errMsg = lStrings.getString(&quot;http.method_not_implemented&quot;);
+            Object[] errArgs = new Object[1];
+            errArgs[0] = method;
+            errMsg = MessageFormat.format(errMsg, errArgs);
+            resp.sendError(HttpServletResponse.SC_NOT_IMPLEMENTED, errMsg);
+        &#125;
+    &#125;</code></pre>
+<p>HttpServlet 的使用步骤是先继承 HttpServlet，再重写 doGet、doPost 或其他方法。HttpServlet 的原理就是获取请求方式，并根据不同的请求方式，调用不同的 doXxx 方法。</p>
+<h4 id="urlPattern-配置"><a href="#urlPattern-配置" class="headerlink" title="urlPattern 配置"></a>urlPattern 配置</h4><p>Servlet 类编写好后，要想被访问到，就需要配置其访问路径（urlPattern），一个 Servlet，可以配置多个 urlPattern。</p>
+<pre><code class="java">package com.itheima.web;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+/**
+* urlPattern: 一个 Servlet 可以配置多个访问路径
+*/
+@WebServlet(urlPatterns = &#123;&quot;/demo7&quot;,&quot;/demo8&quot;&#125;)
+public class ServletDemo7 extends MyHttpServlet &#123;
+    @Override
+    protected void doGet(ServletRequest req, ServletResponse res) &#123;
+        System.out.println(&quot;demo7 get...&quot;);
+    &#125;
+    @Override
+    protected void doPost(ServletRequest req, ServletResponse res) &#123;
+    &#125;
+&#125;
+// 在浏览器上输入 http://localhost:8080/web-demo/demo7, http://localhost:8080/web-demo/demo8 这两个地址都能访问到 ServletDemo7 的 doGet 方法</code></pre>
+<p>urlPattern 总共有四种配置方式，分别是精确匹配、目录匹配、扩展名匹配、任意匹配，配置的优先级为 精确匹配 &gt; 目录匹配 &gt; 扩展名匹配 &gt; <code>/*</code> &gt; <code>/</code> 。</p>
+<ol>
+<li>精确匹配</li>
+</ol>
+<pre><code class="java">@WebServlet(urlPatterns = &quot;/user/select&quot;)
+public class ServletDemo8 extends MyHttpServlet &#123;
+    @Override
+    protected void doGet(ServletRequest req, ServletResponse res) &#123;
+        System.out.println(&quot;demo8 get...&quot;);
+    &#125;
+    @Override
+    protected void doPost(ServletRequest req, ServletResponse res) &#123;
+    &#125;
+&#125; //访问路径：http://localhost:8080/web-demo/user/select</code></pre>
+<ol start="2">
+<li>目录匹配：<code>/*</code></li>
+</ol>
+<pre><code class="java">package com.itheima.web;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+@WebServlet(urlPatterns = &quot;/user/*&quot;)
+public class ServletDemo9 extends MyHttpServlet &#123;
+    @Override
+    protected void doGet(ServletRequest req, ServletResponse res) &#123;
+        System.out.println(&quot;demo9 get...&quot;);
+    &#125;
+    @Override
+    protected void doPost(ServletRequest req, ServletResponse res) &#123;
+    &#125;
+&#125; //访问路径：http://localhost:8080/web-demo/user/任意</code></pre>
+<ol start="3">
+<li>扩展名匹配：<code>*.do</code></li>
+</ol>
+<pre><code class="java">package com.itheima.web;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+@WebServlet(urlPatterns = &quot;*.do&quot;)
+public class ServletDemo10 extends MyHttpServlet &#123;
+    @Override
+    protected void doGet(ServletRequest req, ServletResponse res) &#123;
+        System.out.println(&quot;demo10 get...&quot;);
+    &#125;
+    @Override
+    protected void doPost(ServletRequest req, ServletResponse res) &#123;
+    &#125;
+&#125;  //访问路径：http://localhost:8080/web-demo/任意.do</code></pre>
+<ol start="4">
+<li>任意匹配：<code>/</code> 或 <code>/*</code></li>
+</ol>
+<pre><code class="java">package com.itheima.web;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+@WebServlet(urlPatterns = &quot;/&quot;)
+public class ServletDemo11 extends MyHttpServlet &#123;
+    @Override
+    protected void doGet(ServletRequest req, ServletResponse res) &#123;
+        System.out.println(&quot;demo11 get...&quot;);
+    &#125;
+    @Override
+    protected void doPost(ServletRequest req, ServletResponse res) &#123;
+    &#125;
+&#125; //访问路径：http://localhost:8080/demo-web/任意</code></pre>
+<pre><code class="java">package com.itheima.web;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+@WebServlet(urlPatterns = &quot;/*&quot;)
+public class ServletDemo12 extends MyHttpServlet &#123;
+    @Override
+    protected void doGet(ServletRequest req, ServletResponse res) &#123;
+        System.out.println(&quot;demo12 get...&quot;);
+    &#125;
+    @Override
+    protected void doPost(ServletRequest req, ServletResponse res) &#123;
+    &#125;
+&#125; // 访问路径：http://localhost:8080/demo-web/任意</code></pre>
+<p>当我们的项目中的 Servlet 配置了 <code>/</code>，会覆盖掉 tomcat 中的 DefaultServlet，当其他的 url-pattern 都匹配不上时都会走这个 Servlet。当我们的项目中配置了 <code>/*</code>，意味着匹配任意访问路径。</p>
+<p>DefaultServlet 是用来处理静态资源，如果配置了 <code>/</code> 会把默认的覆盖掉，就会引发请求静态资源的时候没有走默认的而是走了自定义的 Servlet 类，最终导致静态资源不能被访问。</p>
+<h4 id="XML-配置"><a href="#XML-配置" class="headerlink" title="XML 配置"></a>XML 配置</h4><p>一般情况下 Servlet 使用的是注解配置 <code>@WebServlet</code>，但 3.0 版本前只支持 XML 配置文件的配置方法。对于 XML 的配置步骤有两步：</p>
+<ol>
+<li>编写Servlet类。</li>
+</ol>
+<pre><code class="java">package com.itheima.web;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+public class ServletDemo13 extends MyHttpServlet &#123;
+    @Override
+    protected void doGet(ServletRequest req, ServletResponse res) &#123;
+        System.out.println(&quot;demo13 get...&quot;);
+    &#125;
+    @Override
+    protected void doPost(ServletRequest req, ServletResponse res) &#123;
+    &#125;
+&#125;</code></pre>
+<ol start="2">
+<li>在 web.xml 中配置该 Servlet。</li>
+</ol>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&quot;
+         version=&quot;4.0&quot;&gt;
+    &lt;!-- 
+        Servlet 全类名
+    --&gt;
+    &lt;servlet&gt;
+        &lt;!-- servlet的名称，名字任意--&gt;
+        &lt;servlet-name&gt;demo13&lt;/servlet-name&gt;
+        &lt;!--servlet的类全名--&gt;
+        &lt;servlet-class&gt;com.itheima.web.ServletDemo13&lt;/servlet-class&gt;
+    &lt;/servlet&gt;
+    &lt;!-- 
+        Servlet 访问路径
+    --&gt;
+    &lt;servlet-mapping&gt;
+        &lt;!-- servlet的名称，要和上面的名称一致--&gt;
+        &lt;servlet-name&gt;demo13&lt;/servlet-name&gt;
+        &lt;!-- servlet的访问路径--&gt;
+        &lt;url-pattern&gt;/demo13&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;</code></pre>
+
+  
+  
+    
+    <div class='footer'>
+      
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>References</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://www.bilibili.com/video/BV1Qf4y1T7Hx" rel="external nofollow noopener noreferrer" target="_blank">
+                  Java web从入门到企业实战
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        </div>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Servlet/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Servlet</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Tomcat/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Tomcat</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTTP/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTTP</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/HTTP&Servlet/&title=HTTP 协议和 Servlet - Bezhuang's Blog&summary=
+Java Web 是用 Java 技术来解决相关 web 互联网领域的技术栈，国内很多大型网站公司也是首选 Java 语言来解决 web 互联网相关的问题。要了解 Java Web 开发的技术栈，首先需要理解 HTTP 协议和 HTTP 请求与响应数据的格式，理解 Servlet 的执行流程和生命周期，掌握 Servlet 的使用和相关配置。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/HTTP&Servlet/&title=HTTP 协议和 Servlet - Bezhuang's Blog&summary=
+Java Web 是用 Java 技术来解决相关 web 互联网领域的技术栈，国内很多大型网站公司也是首选 Java 语言来解决 web 互联网相关的问题。要了解 Java Web 开发的技术栈，首先需要理解 HTTP 协议和 HTTP 请求与响应数据的格式，理解 Servlet 的执行流程和生命周期，掌握 Servlet 的使用和相关配置。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/HTTP&Servlet/&title=HTTP 协议和 Servlet - Bezhuang's Blog&summary=
+Java Web 是用 Java 技术来解决相关 web 互联网领域的技术栈，国内很多大型网站公司也是首选 Java 语言来解决 web 互联网相关的问题。要了解 Java Web 开发的技术栈，首先需要理解 HTTP 协议和 HTTP 请求与响应数据的格式，理解 Servlet 的执行流程和生命周期，掌握 Servlet 的使用和相关配置。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC9ElEQVR42u3aSXLDMAwEQP//08k9S4kDQHYQN29WQopsXVAYPj6MH8cDARgwYMCAAbMG5lEc3xYs/t9vf0/nTZ0HDBgwYMCAAbMP5rgA+rrQ4QF/3UgIlf6OzwMGDBgwYMCAWQtzWQCFMNOF4Sl0+TxgwIABAwYMmLeHSQurFAwMGDBgwIABA6a7ULURlTas0mAODBgwYMCAAfN+MN3CrFrI3R0APj2JBAMGDBgwYMA8DSYdpxt71e/yecCAAQMGDBgwa2C6I73wM1WwVYO+y/eDAQMGDBgwYNbATG186vl0sHcavIEBAwYMGDBg9sKcNnLSjVbnpUHdKcTlPDBgwIABAwbMephqQypdL33evuAMBgwYMGDAgHlbmG5B1Q3KqoXn7QUeGDBgwIABA+ZlMGnBdPdIP0gXDgwYMGDAgAGzD+auDZw+7zamug0tMGDAgAEDBsz/gWkHVjcXbKeNrvKHAwMGDBgwYMCsg7k7YKsesLrPaiMMDBgwYMCAAbMHpts46haIaSE4/UHAgAEDBgwYMHthpgu8041NXSjqgj6tUQUGDBgwYMCAuQ0mffFUMFdthMVBWrXAAwMGDBgwYMCsg6kWUun8aiCXNsCO1wUDBgwYMGDArIGZDrCqB0gLwOkgEAwYMGDAgAGzF6YawE0FZGkjKi3wjhtkYMCAAQMGDJi1MHcFWtONqW5AFxd4YMCAAQMGDJh1MN2NV4O66oerNrTAgAEDBgwYMHth0gZQFyZtaHULu+P9gQEDBgwYMGDWwHRHGnxNX1CqXly6bFSBAQMGDBgwYP48zKM4poKxKejqfDBgwIABAwbMfphqQVd93n1P9UNd/gYDBgwYMGDArIVJC6hqwNYt8LqBW1zggQEDBgwYMGDeBiaFmG5IlQM/MGDAgAEDBgyY5sWf00ZUGqyBAQMGDBgwYP4vzFQQdrpOCn97QAcGDBgwYMCAWQfTDa7SxtH0/BTkOHADAwYMGDBgwPxZGAMMGDBgwIABs2x8As2ro2xDu4IGAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/HTTP&Servlet/&text=HTTP 协议和 Servlet - Bezhuang's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/MyBatis%E5%9F%BA%E7%A1%80/'>
+          <p class='title'>MyBatis 基础知识总结<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81HTTP-%E5%8D%8F%E8%AE%AE"><span class="toc-text">一、HTTP 协议</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="toc-text">请求数据格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="toc-text">响应数据格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">自定义服务器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Tomcat-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">二、Tomcat 服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81Servlet"><span class="toc-text">三、Servlet</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-text">快速入门</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B"><span class="toc-text">执行流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D"><span class="toc-text">方法介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-text">体系结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#urlPattern-%E9%85%8D%E7%BD%AE"><span class="toc-text">urlPattern 配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#XML-%E9%85%8D%E7%BD%AE"><span class="toc-text">XML 配置</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="HTTP 协议和 Servlet";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        
+          <div><p>Copyright © 2021 Zhihao Zhuang. All rights reserved</p>
+</div>
+        
+      
+    
+      
+        
+          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+</div>
+        
+      
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/********************脚本懒加载函数********************************/
+function loadScript(src, cb) {
+var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+var script = document.createElement('script');
+script.setAttribute('type','text/javascript');
+if (cb) script.onload = cb;
+script.setAttribute('src', src);
+HEAD.appendChild(script);
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://www.zhuangzhihao.top
+        
+        
+        
+        
+          id="https:wwwzhuangzhihaotop"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 返回主页
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/Bezhuang/Hexo-blog
+        
+        
+        
+        
+          id="https:githubcomBezhuangHexo-blog"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('false' == true && ('home,contributors,source_docs,hr,print'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+	
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/issues.min.js');
+	
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+
+
+  
+  
+    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
+  });
+</script>
+
+
+
+
+
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  pjax_comment=pjax_valine;
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/app.min.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/search/hexo.min.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI',
+    app_key: 'j5I5paEqIfWfOlCg13vU2vNq',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://blog.zhuangzhihao.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+function bindToggleButton() {
+	var btn=$("#wrapper .toggle-mode-btn");
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+document.addEventListener("pjax:success", bindToggleButton);
+
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/tu8j8vmfuovtkhsj4lgr7sub986gd1ku.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#l_cover",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      
+      $("#wrapper .toggle-mode-btn").unbind('click');
+      
+	  
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        if (typeof IssuesAPI == "undefined") {
+          loadIssuesJS();
+        }
+        
+          pjax_initCopyCode();
+        
+		
+          try{pjax_comment();} catch (e) {}
+        
+      } catch (e) {
+        console.log(e);
+      }
+	  
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+<!--浏览器搞笑标题-->
+<!--<script type="text/javascript" src="/js/FunnyTitle.js"></script>-->
+<!-- 数字雨 -->
+<canvas id="canvas" width="1440" height="900" ></canvas>
+<script type="text/javascript" src="/js/DigitalRain.js"></script>
