@@ -27,7 +27,8 @@
 
   
     <meta name="description" content="
-最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，打算再系统学习Linux和云计算方面的知识，感觉又给自己挖了一个新坑（＞︿＜）。Anyway，本篇笔记是在云主机上搭建LAMP环境...">
+最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，在云主机上搭建 LAMP 环境并部署 Wordpress 博客应用，仅供测试参考。
+">
   
 
   <!-- feed -->
@@ -377,7 +378,7 @@
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -463,13 +464,6 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E4%BA%91%E8%AE%A1%E7%AE%97/">云服务器与云计算</a>
-    </a>
-  </div>
-
 
           
         
@@ -477,7 +471,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2021年5月1日</p>
+    <p>本文发布于：2021年5月1日</p>
   </a>
 </div>
 
@@ -488,7 +482,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：762字</p>
+      <p>字数：707字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -509,7 +503,7 @@
   
   
   <blockquote>
-<p>最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，打算再系统学习Linux和云计算方面的知识，感觉又给自己挖了一个新坑（＞︿＜）。Anyway，本篇笔记是在云主机上搭建LAMP环境并部署Wordpress博客应用的过程记录，不过目前不打算把博客迁移到Wordpress，所以仅供测试参考。</p>
+<p>最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，在云主机上搭建 LAMP 环境并部署 Wordpress 博客应用，仅供测试参考。</p>
 </blockquote>
 <a id="more"></a>
 
@@ -665,17 +659,24 @@ sed -i &#39;s/password_here/数据库密码/&#39; /var/www/html/wp-blog/wp-confi
       
         
           
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1/">云服务</a>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
 <div class='new-meta-item author'>
   <a class='author' href="/about" rel="nofollow">
     <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
     <p>Bezhuang</p>
   </a>
 </div>
-
-        
-      
-        
-          
 
         
       
@@ -688,12 +689,12 @@ sed -i &#39;s/password_here/数据库密码/&#39; /var/www/html/wp-blog/wp-confi
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/&title=搭建 LAMP 环境安装部署 Wordpress - Bezhuang's Blog&summary=
-最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，打算再系统学习Linux和云计算方面的知识，感觉又给自己挖了一个新坑（＞︿＜）。Anyway，本篇笔记是在云主机上搭建LAMP环境并部署Wordpress博客应用的过程记录，不过目前不打算把博客迁移到Wordpress，所以仅供测试参考。
+最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，在云主机上搭建 LAMP 环境并部署 Wordpress 博客应用，仅供测试参考。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -702,12 +703,12 @@ sed -i &#39;s/password_here/数据库密码/&#39; /var/www/html/wp-blog/wp-confi
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/&title=搭建 LAMP 环境安装部署 Wordpress - Bezhuang's Blog&summary=
-最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，打算再系统学习Linux和云计算方面的知识，感觉又给自己挖了一个新坑（＞︿＜）。Anyway，本篇笔记是在云主机上搭建LAMP环境并部署Wordpress博客应用的过程记录，不过目前不打算把博客迁移到Wordpress，所以仅供测试参考。
+最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，在云主机上搭建 LAMP 环境并部署 Wordpress 博客应用，仅供测试参考。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -716,12 +717,12 @@ sed -i &#39;s/password_here/数据库密码/&#39; /var/www/html/wp-blog/wp-confi
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/&title=搭建 LAMP 环境安装部署 Wordpress - Bezhuang's Blog&summary=
-最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，打算再系统学习Linux和云计算方面的知识，感觉又给自己挖了一个新坑（＞︿＜）。Anyway，本篇笔记是在云主机上搭建LAMP环境并部署Wordpress博客应用的过程记录，不过目前不打算把博客迁移到Wordpress，所以仅供测试参考。
+最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，在云主机上搭建 LAMP 环境并部署 Wordpress 博客应用，仅供测试参考。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -729,7 +730,7 @@ sed -i &#39;s/password_here/数据库密码/&#39; /var/www/html/wp-blog/wp-confi
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEXElEQVR42u3aQXLjMAwEQP3/07v33UqJGICknWre4siS2PQBmMLzx9qyHgRgwVpgwYK1wB6BfcL1440Xr3+G1k/3+/fzt+umPMCCBQsWLFiwYMGehV0ugIvXdw9g9bnVA5jaH1iwYMGCBQsWLNjPgK2+WNpIdAvzVZDu52UPsGDBggULFixYsF8NWwVb3WC5YG82CGDBggULFixYsGB/N+x04J0OVKTgYMGCBQsWLFiwYL8bNi3Aq5/vGgR5e/5UIwIWLFiwYMGCBQv2M2DTgYnf+nfsARYsWLBgwYIFC/YI7HQhXn3R9L5pgzDdiPz3XLBgwYIFCxYsWLBHYNMCeTWoTiFXg+XqAac/lOX3AwsWLFiwYMGCBXsEtjqQkAbC6QBIepDp/dvfBwsWLFiwYMGCBXsEtjugsVrgTwXeacA9FdyXg26wYMGCBQsWLFiwR2FTyKnrq4V/CthtJMoNAliwYMGCBQsWLNgR2LTQrxb+3e9VN9gNzpchwYIFCxYsWLBgwV6FrQ4upIHxVIMwdf3UYAhYsGDBggULFizYz4BNC/SpAZDp95pqdJYHNsCCBQsWLFiwYMFegV3d8FRg3YWsNgjpDwEsWLBgwYIFCxbsZ8BOFdBVqNVCfhdIGuy/3hcsWLBgwYIFCxbsEdjdAxLVDXQD7KmgPg3iwYIFCxYsWLBgwd6B7W60++Ldv9NgfKyBAQsWLFiwYMGCBXsUthtgp4DTG64G9NUDKjcIYMGCBQsWLFiwYLfApqDpBtLCPgXpBvXV74EFCxYsWLBgwYI9A5sW8FWA7mDH1AHvuh4sWLBgwYIFCxbsHdg0wE4D825D0g22pwc1wIIFCxYsWLBgwd6BTQcqbg92dA+s+gMDCxYsWLBgwYIF+1mw6UamBjaWX7y5qgMb5fuABQsWLFiwYMGCPQJbLdTTB1Zhq43EroNYDerBggULFixYsGDBnoWdagCmvpc2Jt1gfCooBwsWLFiwYMGCBXsWdgqs2xhUC/30/lMNAliwYMGCBQsWLNg7sNWNVgvy6UGPbiNRBSuDgwULFixYsGDBgr0KW20QVv+fHmQXMm1cwIIFCxYsWLBgwX4XbDdorkKk13Whp0DBggULFixYsGDB3oVNA+y0IZgOprsDIulgCFiwYMGCBQsWLNi7sNUGoAqVFu5pg5BCvr0XWLBgwYIFCxYs2Luw3VV9gXQD3YB6Cv71c7BgwYIFCxYsWLBHYJ9wnQ6U00C8G7xXGxWwYMGCBQsWLFiwZ2G7QXJayKcH3A3KqwMpY5MwYMGCBQsWLFiwYLfATgfF1YZg+jnpDyM+MLBgwYIFCxYsWLBfBVsNorvB8+oBpQcXHyxYsGDBggULFizYr4KdGnjoFvxTP5D04MCCBQsWLFiwYMHega0W1t2NdjdcbVimDnb7JAxYsGDBggULFizYJdjqqkJ379Mt7NOBkfbABliwYMGCBQsWLNgtsNbsAgsWrAUWLFgL7Nb1FywXFYku6aFxAAAAAElFTkSuQmCC">
           </div>
@@ -743,7 +744,7 @@ sed -i &#39;s/password_here/数据库密码/&#39; /var/www/html/wp-blog/wp-confi
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -1255,11 +1256,46 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   
   
-    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
   
 
 

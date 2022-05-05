@@ -24,12 +24,11 @@
   
   <title>从 2020 年的视角看线性代数 - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="MIT">
-  
 
   
     <meta name="description" content="
-2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供...">
+2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。
+">
   
 
   <!-- feed -->
@@ -379,7 +378,7 @@
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -465,13 +464,6 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%95%B0%E5%AD%A6/">数学</a>
-    </a>
-  </div>
-
 
           
         
@@ -479,7 +471,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2021年9月20日</p>
+    <p>本文发布于：2021年9月20日</p>
   </a>
 </div>
 
@@ -511,7 +503,7 @@
   
   
   <blockquote>
-<p>2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。</p>
+<p>2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。</p>
 </blockquote>
 <a id="more"></a>
 
@@ -624,14 +616,14 @@
 </li>
 </ul>
 <h4 id="宏观视角下的线性代数"><a href="#宏观视角下的线性代数" class="headerlink" title="宏观视角下的线性代数"></a>宏观视角下的线性代数</h4><ul>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B001.png" style="zoom:67%;"></li>
+<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B001.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B001.png" srcset="data:image/png;base64,666" style="zoom:67%;"></li>
 <li>一对子空间处于 $R_{n}$ 之中，另一对处于$R_{m}$ 当中</li>
 <li>从行空间变换为列空间——由此可知 A 是可逆的</li>
 </ul>
 <h4 id="列与行相乘（六组因式）"><a href="#列与行相乘（六组因式）" class="headerlink" title="列与行相乘（六组因式）"></a>列与行相乘（六组因式）</h4><ul>
 <li>A = BC = 秩为 1 的矩阵之和（列乘以行：外积）</li>
 <li>对矩阵相乘的全新理解（高层次），每次拿一列乘以一行是低层次的<ul>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B002.png" style="zoom:67%;"></li>
+<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B002.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B002.png" srcset="data:image/png;base64,666" style="zoom:67%;"></li>
 </ul>
 </li>
 <li>$A=\begin{bmatrix} 2 &amp; 3 \ 4 &amp; 7 \end{bmatrix}=\begin{bmatrix} 1 &amp; 0 \ 2 &amp; 1 \end{bmatrix}\begin{bmatrix} 2 &amp; 3 \ 0 &amp; 1 \end{bmatrix}=LU$ （将矩阵拆分成上下两个三角矩阵）<ul>
@@ -642,13 +634,13 @@
 </ul>
 <h4 id="用消元来解Ax-b（因式-A-LU）"><a href="#用消元来解Ax-b（因式-A-LU）" class="headerlink" title="用消元来解Ax = b（因式 A = LU）"></a>用消元来解Ax = b（因式 A = LU）</h4><ul>
 <li>下三角矩阵 L 乘以上三角矩阵 U</li>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B003.png" style="zoom:67%;">
+<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B003.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B003.png" srcset="data:image/png;base64,666" style="zoom:67%;">
 
 </li>
 </ul>
 <h3 id="正交向量"><a href="#正交向量" class="headerlink" title="正交向量"></a>正交向量</h3><h4 id="正交向量-–-矩阵-–-子空间"><a href="#正交向量-–-矩阵-–-子空间" class="headerlink" title="正交向量 – 矩阵 – 子空间"></a>正交向量 – 矩阵 – 子空间</h4><ul>
 <li>$X^{T}y=0,y^{T}x=0,\left( x+y\right) ^{T}\left( x+y\right)=x^{T}<em>{x}+y^{T}</em>{y}$ （直角三角形）</li>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B004.png" style="zoom:67%;"></li>
+<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B004.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B004.png" srcset="data:image/png;base64,666" style="zoom:67%;"></li>
 <li>$Q=\dfrac{1}{3}\begin{bmatrix} -1 &amp; 2 \ 2 &amp; -1 \ 2 &amp; 2 \end{bmatrix}$ ，$Q^{T}Q=I,QQ^{T}\neq I$ ，$QQ^TQQ^T = QQ^T$</li>
 </ul>
 <h4 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h4><h3 id="特征值和特征向量"><a href="#特征值和特征向量" class="headerlink" title="特征值和特征向量"></a>特征值和特征向量</h3><h3 id="奇异值和奇异向量"><a href="#奇异值和奇异向量" class="headerlink" title="奇异值和奇异向量"></a>奇异值和奇异向量</h3>
@@ -682,20 +674,24 @@
       
         
           
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%85%95%E8%AF%BEMOOC/">慕课MOOC</a>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
 <div class='new-meta-item author'>
   <a class='author' href="/about" rel="nofollow">
     <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
     <p>Bezhuang</p>
   </a>
 </div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MIT/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MIT</p></a></div>
-
 
         
       
@@ -708,12 +704,12 @@
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E4%BB%8E2020%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/&title=从 2020 年的视角看线性代数 - Bezhuang's Blog&summary=
-2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。
+2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -722,12 +718,12 @@
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E4%BB%8E2020%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/&title=从 2020 年的视角看线性代数 - Bezhuang's Blog&summary=
-2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。
+2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -736,12 +732,12 @@
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E4%BB%8E2020%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/&title=从 2020 年的视角看线性代数 - Bezhuang's Blog&summary=
-2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。
+2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -749,7 +745,7 @@
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,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">
           </div>
@@ -763,7 +759,7 @@
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -1328,11 +1324,46 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   
   
-    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
   
 
 

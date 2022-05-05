@@ -24,7 +24,7 @@
   
   <title>HTML 和 CSS 基础知识总结 - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="HTML/CSS">
+    <meta name="keywords" content="CSS">
   
 
   
@@ -379,7 +379,7 @@
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -465,12 +465,8 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/">Web前端开发</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
 
 
           
@@ -479,7 +475,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年9月10日</p>
+    <p>本文发布于：2020年9月10日</p>
   </a>
 </div>
 
@@ -490,13 +486,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：5.1k字</p>
+      <p>字数：4.8k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：22分钟</p>
+      <p>时长：21分钟</p>
     </a>
   </div>
 
@@ -515,44 +511,24 @@
 </blockquote>
 <a id="more"></a>
 
-<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><ul>
-<li>HTML 是一门语言，所有的网页都是用HTML 这门语言编写出来的，也就是HTML是用来写网页的，像京东，12306等网站有很多网页</li>
-<li>HTML(HyperText Markup Language)：超文本标记语言</li>
-</ul>
+<h3 id="一、HTML"><a href="#一、HTML" class="headerlink" title="一、HTML"></a>一、HTML</h3><p>HTML(HyperText Markup Language)：超文本标记语言。</p>
 <ul>
-<li><p>超文本：超越了文本的限制，比普通文本更强大。除了文字信息，还可以定义图片、音频、视频等内容</p>
-</li>
-<li><p>标记语言：由标签构成的语言</p>
-</li>
-<li><p>XML就是标记语言，由一个一个的标签组成，HTML 也是由标签组成</p>
-</li>
-<li><p>HTML中的标签都是预定义好的，运行在浏览器上并由浏览器解析，然后展示出对应的效果。例如我们想在浏览器上展示出图片就需要使用预定义的 <code>img</code> 标签；想展示可以点击的链接的效果就可以使用预定义的 <code>a</code> 标签等</p>
-</li>
-<li><p>HTML 预定义了很多标签，对于后端开发工程师，不会每个都学习，页面开发是有专门的前端工程来开发</p>
-</li>
-<li><p>W3C标准：W3C是万维网联盟，这个组成是用来定义标准的。他们规定了一个网页是由三部分组成，分别是：</p>
-<ul>
-<li><p>结构：对应的是 HTML 语言</p>
-</li>
-<li><p>表现：对应的是 CSS 语言</p>
-</li>
-<li><p>行为：对应的是 JavaScript 语言</p>
-</li>
+<li>  超文本：超越了文本的限制，比普通文本更强大。除了文字信息，还可以定义图片、音频、视频等内容。</li>
+<li>  标记语言：由标签构成的语言。</li>
 </ul>
+<p>XML就是标记语言，由一个一个的标签组成，HTML 也是由标签组成。HTML中的标签都是预定义好的，运行在浏览器上并由浏览器解析，然后展示出对应的效果。例如我们想在浏览器上展示出图片就需要使用预定义的 <code>img</code> 标签；想展示可以点击的链接的效果就可以使用预定义的 <code>a</code> 标签等。</p>
+<p>W3C标准：W3C是万维网联盟，这个组成是用来定义标准的。他们规定了一个网页是由三部分组成，分别是：</p>
+<ol>
+<li><p> 结构：对应的是 HTML 语言</p>
 </li>
-<li><p>HTML定义页面的整体结构；CSS是用来美化页面，让页面看起来更加美观；JavaScript可以使网页动起来，比如轮播图也就是多张图片自动的进行切换等效果。</p>
+<li><p> 表现：对应的是 CSS 语言</p>
 </li>
-</ul>
-<h4 id="HTML-快速入门"><a href="#HTML-快速入门" class="headerlink" title="HTML 快速入门"></a>HTML 快速入门</h4><ul>
-<li><p>新建文本文件，后缀名改为 .html</p>
-<ul>
-<li>页面文件的后缀名是 .html，所以需要该后缀名</li>
-</ul>
+<li><p> 行为：对应的是 JavaScript 语言</p>
 </li>
-<li><p>编写 HTML 结构标签</p>
-<ul>
-<li>HTML 是由一个一个的标签组成的，但是它也用于表示结构的标签</li>
-</ul>
+</ol>
+<p>HTML定义页面的整体结构；CSS是用来美化页面，让页面看起来更加美观；JavaScript可以使网页动起来，比如轮播图也就是多张图片自动的进行切换等效果。</p>
+<h4 id="HTML-快速入门"><a href="#HTML-快速入门" class="headerlink" title="HTML 快速入门"></a>HTML 快速入门</h4><p>新建文本文件，后缀名改为 <code>.html</code>，编写 HTML 结构标签。</p>
+<p>HTML 是由一个一个的标签组成的，但是它也用于表示结构的标签：</p>
 <pre><code class="html">&lt;html&gt;
     &lt;head&gt;
         &lt;title&gt; &lt;/title&gt;
@@ -561,12 +537,8 @@
 
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-</li>
-<li><p>html 标签是根标签，下面有 <code>head</code> 标签和 <code>body</code> 标签这两个子标签。而 <code>head</code> 标签的 <code>title</code> 子标签是用来定义页面标题名</p>
-</li>
-<li><p><code>body</code> 标签的内容会被展示在内容区中</p>
-</li>
-</ul>
+<p>html 标签是根标签，下面有 <code>head</code> 标签和 <code>body</code> 标签这两个子标签。而 <code>head</code> 标签的 <code>title</code> 子标签是用来定义页面标题名。</p>
+<p><code>body</code> 标签的内容会被展示在内容区中：</p>
 <pre><code class="html">&lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;html 快速入门&lt;/title&gt;
@@ -575,12 +547,7 @@
         乾坤未定，你我皆是黑马~
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<ul>
-<li>更改字体颜色<ul>
-<li><code>font</code> 标签就可以使用，该标签有一个 <code>color</code> 属性可以设置字体颜色，如：<code>&lt;font color=&#39;red&#39;&gt;&lt;/font&gt;</code> 就是将文字设置成了红颜色。那么我们只需要将需要变成红色的文字放在标签体部分就可以了</li>
-</ul>
-</li>
-</ul>
+<p>可以使用 <code>font</code>  标签更改字体颜色：该标签有一个 <code>color</code> 属性可以设置字体颜色，如：<code>&lt;font color=&#39;red&#39;&gt;&lt;/font&gt;</code> 就是将文字设置成了红颜色。那么我们只需要将需要变成红色的文字放在标签体部分就可以了。</p>
 <pre><code class="html">&lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;html 快速入门&lt;/title&gt;
@@ -589,135 +556,100 @@
         &lt;font color=&#39;red&#39;&gt;乾坤未定，你我皆是黑马~&lt;/font&gt;
     &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<ul>
-<li><p>HTML 标签不区分大小写</p>
-</li>
-<li><p>HTML 标签属性值 单双引皆可</p>
-</li>
-<li><p>HTML 语法松散</p>
-</li>
-</ul>
-<h4 id="基础标签"><a href="#基础标签" class="headerlink" title="基础标签"></a>基础标签</h4><ul>
-<li><p>标题标签</p>
-<ul>
-<li>创建页面文件，在 <code>body</code> 标签中书写标签。</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>书写标题标签：标题标签中 h1最大，h6最小。</p>
+<p>HTML 语法松散：不区分大小写，HTML 标签属性值单双引皆可。</p>
+<h4 id="基础标签"><a href="#基础标签" class="headerlink" title="基础标签"></a>基础标签</h4><p>标题标签：创建页面文件，在 <code>body</code> 标签中书写标签。</p>
+<p>书写标题标签：标题标签中 h1最大，h6最小。</p>
 <pre><code class="html">&lt;h1&gt;我是标题 h1&lt;/h1&gt;
 &lt;h2&gt;我是标题 h2&lt;/h2&gt;
 &lt;h3&gt;我是标题 h3&lt;/h3&gt;
 &lt;h4&gt;我是标题 h4&lt;/h4&gt;
 &lt;h5&gt;我是标题 h5&lt;/h5&gt;
 &lt;h6&gt;我是标题 h6&lt;/h6&gt;</code></pre>
-</li>
-</ul>
-<ul>
-<li>hr标签：<code>hr</code> 标签在浏览器中呈现出 横线 的效果。</li>
-</ul>
+<p>hr标签：<code>hr</code> 标签在浏览器中呈现出 横线 的效果。</p>
 <pre><code class="html">&lt;hr&gt;</code></pre>
+<p>font：字体标签（已不建议使用了，可以用 CSS 进行设置）。</p>
 <ul>
-<li><p>font：字体标签（已不建议使用了，可以用 CSS 进行设置）</p>
-<ul>
-<li>face 属性：用来设置字体。如 “楷体”、”宋体”等</li>
-</ul>
-</li>
+<li>face 属性：用来设置字体。如 “楷体”、”宋体”等。</li>
 </ul>
 <ul>
-<li><p>color 属性：设置文字颜色。颜色有三种表示方式</p>
-<ul>
-<li><p>英文单词：red,pink,blue…</p>
+<li><p>color 属性：设置文字颜色。颜色有三种表示方式：</p>
+<ol>
+<li><p> 英文单词：red,pink,blue…</p>
 </li>
-<li><p><code>rgb(值1,值2,值3)</code>：值的取值范围：0~255  </p>
+<li><p> <code>rgb(值1,值2,值3)</code>：值的取值范围：0~255  </p>
 </li>
-<li><p><code>#值1值2值3</code>：值的范围：00~FF</p>
+<li><p> <code>#值1值2值3</code>：值的范围：00~FF</p>
 </li>
-</ul>
+</ol>
 </li>
 </ul>
 <ul>
-<li>size 属性：设置文字大小</li>
+<li>size 属性：设置文字大小。</li>
 </ul>
 <pre><code class="html">&lt;font face=&quot;楷体&quot; size=&quot;5&quot; color=&quot;#ff0000&quot;&gt;传智教育&lt;/font&gt;</code></pre>
-<ul>
-<li><p>换行标签：<code>&lt;br&gt;</code> 标签</p>
-</li>
-<li><p>段落标签</p>
-</li>
-</ul>
+<p>换行标签：<code>&lt;br&gt;</code> 标签。</p>
+<p>段落标签：</p>
 <pre><code class="html">&lt;p&gt;
 刚察草原绿草如茵，沙柳河水流淌入湖。藏族牧民索南才让家中，茶几上摆着馓子、麻花和水果，炉子上刚煮开的奶茶香气四溢……
 &lt;/p&gt;
 &lt;p&gt;
 6月8日下午，习近平总书记来到青海省海北藏族自治州刚察县沙柳河镇果洛藏贡麻村，走进牧民索南才让家中，看望慰问藏族群众。
 &lt;/p&gt;</code></pre>
+<p>加粗、斜体、下划线标签：</p>
 <ul>
-<li><p>加粗、斜体、下划线标签</p>
-<ul>
-<li><p>b：加粗标签</p>
+<li><p>b：加粗标签。</p>
 </li>
-<li><p>i：斜体标签</p>
+<li><p>i：斜体标签。</p>
 </li>
-<li><p>u：下划线标签，在文字的下方有一条横线</p>
-</li>
-</ul>
+<li><p>u：下划线标签，在文字的下方有一条横线。</p>
 </li>
 </ul>
 <pre><code class="html">&lt;b&gt;沙柳河水流淌&lt;/b&gt;&lt;br&gt;
 &lt;i&gt;沙柳河水流淌&lt;/i&gt;&lt;br&gt;
 &lt;u&gt;沙柳河水流淌&lt;/u&gt;&lt;br&gt;</code></pre>
-<ul>
-<li>居中标签 <code>&lt;center&gt;</code> ：文本居中</li>
-</ul>
+<p>居中标签 <code>&lt;center&gt;</code> ：文本居中。</p>
 <pre><code class="html">&lt;hr&gt;
 &lt;center&gt;
     &lt;b&gt;沙柳河水流淌&lt;/b&gt;
 &lt;/center&gt;</code></pre>
-<h4 id="图片、音频、视频标签"><a href="#图片、音频、视频标签" class="headerlink" title="图片、音频、视频标签"></a>图片、音频、视频标签</h4><ul>
-<li><p><code>&lt;img&gt;</code>：定义图片</p>
+<h4 id="图片、音频、视频标签"><a href="#图片、音频、视频标签" class="headerlink" title="图片、音频、视频标签"></a>图片、音频、视频标签</h4><p><code>&lt;img&gt;</code>：定义图片</p>
 <ul>
-<li><p>src：规定显示图像的 URL（统一资源定位符）</p>
+<li><p>src：规定显示图像的 URL（统一资源定位符）。</p>
 </li>
-<li><p>height：定义图像的高度</p>
+<li><p>height：定义图像的高度。</p>
 </li>
-<li><p>width：定义图像的宽度</p>
+<li><p>width：定义图像的宽度。</p>
 </li>
-<li><p>audio：定义音频。支持的音频格式：MP3、WAV、OGG </p>
+<li><p>audio：定义音频。支持的音频格式：MP3、WAV、OGG 。</p>
 <ul>
-<li><p>src：规定音频的 URL</p>
+<li><p>src：规定音频的 URL。</p>
 </li>
-<li><p>controls：显示播放控件</p>
-</li>
-</ul>
+<li><p>controls：显示播放控件。</p>
 </li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><code>&lt;video&gt;</code>：定义视频。支持的音频格式：MP4, WebM、OGG<ul>
-<li>src：规定视频的 URL<ul>
-<li>controls：显示播放控件</li>
-</ul>
-</li>
+<li><code>&lt;video&gt;</code>：定义视频。支持的音频格式：MP4, WebM、OGG。<ul>
+<li>src：规定视频的 URL。</li>
+<li>controls：显示播放控件。</li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><p>尺寸单位：height 属性和 width 属性有两种设置方式</p>
+<li><p>尺寸单位：height 属性和 width 属性有两种设置方式。</p>
 <ul>
-<li><p>像素：单位是px</p>
+<li><p>像素：单位是px。</p>
 </li>
-<li><p>百分比。占父标签的百分比。例如宽度设置为 50%，意思就是占它的父标签宽度的一般（50%）</p>
+<li><p>百分比。占父标签的百分比。例如宽度设置为 50%，意思就是占它的父标签宽度的一般（50%）。</p>
 </li>
 </ul>
 </li>
-<li><p>资源路径：图片，音频，视频标签都有 src 属性，而 src 是用来指定对应的图片，音频，视频文件的路径</p>
+<li><p>资源路径：图片，音频，视频标签都有 src 属性，而 src 是用来指定对应的图片，音频，视频文件的路径。</p>
 <ul>
-<li><p>绝对路径：协议://ip地址:端口号/资源名称</p>
+<li><p>绝对路径：协议://ip地址:端口号/资源名称。</p>
 </li>
-<li><p>相对路径：相对位置关系</p>
+<li><p>相对路径：相对位置关系。</p>
 </li>
 </ul>
 </li>
@@ -725,19 +657,16 @@
 <pre><code class="html">&lt;img src=&quot;../img/a.jpg&quot; width=&quot;300&quot; height=&quot;400&quot;&gt;
 &lt;audio src=&quot;b.mp3&quot; controls&gt;&lt;/audio&gt;
 &lt;video src=&quot;c.mp4&quot; controls width=&quot;500&quot; height=&quot;300&quot;&gt;&lt;/video&gt;</code></pre>
-<h4 id="超链接标签"><a href="#超链接标签" class="headerlink" title="超链接标签"></a>超链接标签</h4><ul>
-<li><p>在网页中可以看到很多超链接标签，超链接使用的是 <code>a</code> 标签。</p>
-</li>
-<li><p><code>a</code> 标签属性：</p>
+<h4 id="超链接标签"><a href="#超链接标签" class="headerlink" title="超链接标签"></a>超链接标签</h4><p>在网页中可以看到很多超链接标签，超链接使用的是 <code>a</code> 标签。</p>
 <ul>
-<li>href：指定访问资源的URL </li>
-</ul>
+<li><p>  href：指定访问资源的URL 。</p>
 </li>
-</ul>
+<li><p>target：指定打开资源的方式。</p>
 <ul>
-<li>target：指定打开资源的方式<ul>
-<li>_self：默认值，在当前页面打开</li>
-<li>_blank：在空白页面打开</li>
+<li><p>_self：默认值，在当前页面打开。</p>
+</li>
+<li><p>_blank：在空白页面打开。</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -751,20 +680,9 @@
     &lt;a href=&quot;https://www.itcast.cn&quot; target=&quot;_self&quot;&gt;点我有惊喜&lt;/a&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签"></a>列表标签</h4><ul>
-<li><p>有序列表：<code>&lt;ol&gt;</code></p>
-</li>
-<li><p>无序列表：<code>&lt;ul&gt;</code></p>
-</li>
-<li><p>列表项：<code>&lt;li&gt;</code></p>
-</li>
-</ul>
-<ul>
-<li><p>有序列表中的 <code>type</code> 属性用来指定标记的标号的类型（数字、字母、罗马数字等）</p>
-</li>
-<li><p>无序列表中的 <code>type</code> 属性用来指定标记的形状</p>
-</li>
-</ul>
+<h4 id="列表标签"><a href="#列表标签" class="headerlink" title="列表标签"></a>列表标签</h4><p>有序列表：<code>&lt;ol&gt;</code>。有序列表中的 <code>type</code> 属性用来指定标记的标号的类型（数字、字母、罗马数字等）。</p>
+<p>无序列表：<code>&lt;ul&gt;。</code>无序列表中的 <code>type</code> 属性用来指定标记的形状。</p>
+<p>列表项：<code>&lt;li&gt;。</code></p>
 <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -785,33 +703,27 @@
     &lt;/ul&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h4><ul>
-<li><p>table ：定义表格</p>
+<h4 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h4><p>table ：定义表格。</p>
 <ul>
-<li><p>border：规定表格边框的宽度</p>
+<li><p>border：规定表格边框的宽度。</p>
 </li>
-<li><p>width ：规定表格的宽度</p>
+<li><p>width ：规定表格的宽度。</p>
 </li>
-<li><p>cellspacing：规定单元格之间的空白</p>
+<li><p>cellspacing：规定单元格之间的空白。</p>
 </li>
 </ul>
-</li>
-<li><p>tr ：定义行</p>
+<p>tr ：定义行。</p>
 <ul>
-<li>align：定义表格行的内容对齐方式</li>
+<li>align：定义表格行的内容对齐方式。</li>
 </ul>
-</li>
-<li><p>td ：定义单元格</p>
+<p>td ：定义单元格。</p>
 <ul>
-<li><p>rowspan：规定单元格可横跨的行数</p>
+<li><p>rowspan：规定单元格可横跨的行数。</p>
 </li>
-<li><p>colspan：规定单元格可横跨的列数</p>
-</li>
-</ul>
-</li>
-<li><p>th：定义表头单元格</p>
+<li><p>colspan：规定单元格可横跨的列数。</p>
 </li>
 </ul>
+<p>th：定义表头单元格。</p>
 <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -848,11 +760,9 @@
 &lt;/table&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4 id="布局标签"><a href="#布局标签" class="headerlink" title="布局标签"></a>布局标签</h4><ul>
-<li><code>&lt;div&gt;</code>：定义 HTML 文档中的一个区域部分，经常与 CSS 一起使用，用来布局网页</li>
-<li><code>&lt;span&gt;</code>：用于组合行内元素</li>
-<li><code>div</code>标签 在浏览器上会有换行的效果，而 <code>span</code> 标签在浏览器上没有换行效果。</li>
-</ul>
+<h4 id="布局标签"><a href="#布局标签" class="headerlink" title="布局标签"></a>布局标签</h4><p><code>&lt;div&gt;</code>：定义 HTML 文档中的一个区域部分，经常与 CSS 一起使用，用来布局网页。</p>
+<p><code>&lt;span&gt;</code>：用于组合行内元素。</p>
+<p><code>div</code>标签 在浏览器上会有换行的效果，而 <code>span</code> 标签在浏览器上没有换行效果。</p>
 <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -866,10 +776,10 @@
     &lt;span&gt;我是span&lt;/span&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h4><ul>
-<li>表单就是用来采集用户输入的数据，然后将数据发送到服务端，服务端会对数据库进行操作，比如注册就是将数据保存到数据库中，而登陆就是根据用户名和密码进行数据库的查询操作</li>
-<li>表单：在网页中主要负责数据采集功能，使用 <code>&lt;form&gt;</code> 标签定义表单</li>
-<li>表单项（元素）：不同类型的 <code>input</code> 元素、下拉列表、文本域等<ul>
+<h4 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h4><p>表单就是用来采集用户输入的数据，然后将数据发送到服务端，服务端会对数据库进行操作，比如注册就是将数据保存到数据库中，而登陆就是根据用户名和密码进行数据库的查询操作。</p>
+<p>表单：在网页中主要负责数据采集功能，使用 <code>&lt;form&gt;</code> 标签定义表单。<code>form</code> 是表单标签，它在页面上没有任何展示的效果。需要借助于表单项标签来展示不同的效果。</p>
+<p>表单项（元素）：不同类型的 <code>input</code> 元素、下拉列表、文本域等。</p>
+<ul>
 <li><code>&lt;form&gt;</code>：定义表单</li>
 <li><code>&lt;input&gt;</code>：定义表单项，通过 type属性控制输入形式</li>
 <li><code>&lt;label&gt;</code>：为表单项定义标注</li>
@@ -877,33 +787,13 @@
 <li><code>&lt;option&gt;</code>：定义下拉列表的列表项</li>
 <li><code>&lt;textarea&gt;</code>：定义文本域</li>
 </ul>
-</li>
-<li><code>form</code> 是表单标签，它在页面上没有任何展示的效果。需要借助于表单项标签来展示不同的效果。</li>
-</ul>
-<h4 id="form-标签属性"><a href="#form-标签属性" class="headerlink" title="form 标签属性"></a>form 标签属性</h4><ul>
-<li><p>action：规定当提交表单时向何处发送表单数据，该属性值就是 URL</p>
+<h4 id="form-标签属性"><a href="#form-标签属性" class="headerlink" title="form 标签属性"></a>form 标签属性</h4><p>action：规定当提交表单时向何处发送表单数据，该属性值就是 URL。action 会将数据提交到服务端，该属性需要书写服务端的 URL。可以书写 <code>#</code> ，表示提交到当前页面。</p>
+<p>method ：规定用于发送表单数据的方式</p>
 <ul>
-<li>action 会将数据提交到服务端，该属性需要书写服务端的 URL。可以书写 <code>#</code> ，表示提交到当前页面</li>
+<li>get：默认值。如果不设置 method 属性则默认就是该值。请求参数会拼接在 URL 后边。url的长度有限制 4KB。</li>
+<li>post：浏览器会将数据放到 http 请求消息体中。请求参数无限制的。</li>
 </ul>
-</li>
-<li><p>method ：规定用于发送表单数据的方式</p>
-<ul>
-<li>get：默认值。如果不设置 method 属性则默认就是该值<ul>
-<li>请求参数会拼接在 URL 后边</li>
-<li>url的长度有限制 4KB</li>
-</ul>
-</li>
-<li>post<ul>
-<li>浏览器会将数据放到 http 请求消息体中</li>
-<li>请求参数无限制的</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>要想提交数据，<code>input</code> 输入框必须设置 <code>name</code> 属性</li>
-</ul>
+<p>要想提交数据，<code>input</code> 输入框必须设置 <code>name</code> 属性。</p>
 <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -917,8 +807,7 @@
     &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4 id="表单项标签"><a href="#表单项标签" class="headerlink" title="表单项标签"></a>表单项标签</h4><ul>
-<li><p><code>&lt;input&gt;</code>：表单项，通过type属性控制输入形式</p>
+<h4 id="表单项标签"><a href="#表单项标签" class="headerlink" title="表单项标签"></a>表单项标签</h4><p><code>&lt;input&gt;</code>：表单项，通过type属性控制输入形式。</p>
 <ul>
 <li><code>input</code> 标签有个 <code>type</code> 属性。 <code>type</code> 属性的取值不同，展示的效果也不一样</li>
 <li>text：默认值。定义单行的输入字段</li>
@@ -931,18 +820,11 @@
 <li>reset：定义重置按钮，重置按钮会清除表单中的所有数据</li>
 <li>button：定义可点击按钮</li>
 </ul>
-</li>
-<li><p><code>&lt;select&gt;</code>：定义下拉列表，<code>&lt;option&gt;</code> 定义列表项</p>
-</li>
-<li><p><code>&lt;textarea&gt;</code>：文本域，它可以输入多行文本，而 <code>input</code> 数据框只能输入一行文本</p>
-</li>
-<li><p>以上标签项的内容要想提交，必须得定义 <code>name</code> 属性。</p>
-</li>
-<li><p>每一个标签都有 id 属性，id 属性值是唯一的标识。</p>
-</li>
-<li><p>单选框、复选框、下拉列表需要使用 <code>value</code> 属性指定提交的值。</p>
-</li>
-</ul>
+<p><code>&lt;select&gt;</code>：定义下拉列表，<code>&lt;option&gt;</code> 定义列表项。</p>
+<p><code>&lt;textarea&gt;</code>：文本域，它可以输入多行文本，而 <code>input</code> 数据框只能输入一行文本。</p>
+<p>以上标签项的内容要想提交，必须得定义 <code>name</code> 属性。</p>
+<p>每一个标签都有 id 属性，id 属性值是唯一的标识。</p>
+<p>单选框、复选框、下拉列表需要使用 <code>value</code> 属性指定提交的值。</p>
 <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -991,24 +873,8 @@
     &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><h4 id="CSS-概述"><a href="#CSS-概述" class="headerlink" title="CSS 概述"></a>CSS 概述</h4><ul>
-<li><p>CSS 是一门语言，用于控制网页表现</p>
-</li>
-<li><p>W3C标准规定了网页是由以下组成：</p>
-<ul>
-<li><p>结构：HTML</p>
-</li>
-<li><p>表现：CSS</p>
-</li>
-<li><p>行为：JavaScript</p>
-</li>
-</ul>
-</li>
-<li><p>CSS也有一个专业的名字：Cascading Style Sheet（层叠样式表）</p>
-</li>
-<li><p><code>style</code> 标签中定义的就是css代码。以下代码描述了将 <code>div</code> 标签的内容的字体颜色设置为 红色</p>
-</li>
-</ul>
+<h3 id="二、CSS"><a href="#二、CSS" class="headerlink" title="二、CSS"></a>二、CSS</h3><p>CSS 是一门语言，用于控制网页表现。CSS也有一个专业的名字：Cascading Style Sheet（层叠样式表）。</p>
+<p><code>style</code> 标签中定义的就是css代码。以下代码描述了将 <code>div</code> 标签的内容的字体颜色设置为 红色。</p>
 <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -1025,29 +891,26 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4 id="css-导入方式"><a href="#css-导入方式" class="headerlink" title="css 导入方式"></a>css 导入方式</h4><p>css 导入方式其实就是 css 代码和 html 代码的结合方式。CSS 导入 HTML有三种方式：</p>
-<ul>
-<li><p>内联样式：在标签内部使用style属性，属性值是css属性键值对</p>
+<ol>
+<li>  内联样式：在标签内部使用style属性，属性值是css属性键值对。</li>
+</ol>
 <pre><code class="html">&lt;div style=&quot;color: red&quot;&gt;Hello CSS~&lt;/div&gt;</code></pre>
-</li>
-<li><p>内部样式：定义 <code>&lt;style&gt;</code> 标签，在标签内部定义css样式</p>
+<ol start="2">
+<li>  内部样式：定义 <code>&lt;style&gt;</code> 标签，在标签内部定义css样式。</li>
+</ol>
 <pre><code class="html">&lt;style type=&quot;text/css&quot;&gt;
     div&#123;
         color: red;
     &#125;
 &lt;/style&gt;</code></pre>
-</li>
-<li><p>外部样式：定义link标签，引入外部的css文件</p>
-<ul>
-<li>编写一个css文件。名为：demo.css</li>
-</ul>
+<ol start="3">
+<li>  外部样式：定义link标签，引入外部的css文件（编写一个css文件。名为：demo.css）。</li>
+</ol>
 <pre><code class="css">div&#123;
     color: red;
 &#125;</code></pre>
 <ul>
-<li>在html中引入 css 文件</li>
-</ul>
-<pre><code class="html">&lt;link rel=&quot;stylesheet&quot;  href=&quot;demo.css&quot;&gt;</code></pre>
-</li>
+<li>  在html中引入 css 文件：<code>&lt;link rel=&quot;stylesheet&quot;  href=&quot;demo.css&quot;&gt;</code>。</li>
 </ul>
 <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -1069,28 +932,18 @@
     &lt;p&gt;hello css&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-<h4 id="css-选择器"><a href="#css-选择器" class="headerlink" title="css 选择器"></a>css 选择器</h4><ul>
-<li>css 选择器就是选取需设置样式的元素（标签）</li>
-</ul>
+<h4 id="css-选择器"><a href="#css-选择器" class="headerlink" title="css 选择器"></a>css 选择器</h4><p>css 选择器就是选取需设置样式的元素（标签）。</p>
 <pre><code class="css">div &#123;
     color:red;
 &#125;</code></pre>
-<ul>
-<li><p>元素选择器</p>
-<pre><code class="css">元素名称&#123;color: red;&#125;</code></pre>
+<p>元素选择器：<code>元素名称&#123;color: red;&#125;</code></p>
 <pre><code class="css">div &#123;color:red&#125;  /*该代码表示将页面中所有的div标签的内容的颜色设置为红色*/</code></pre>
-</li>
-<li><p>id 选择器</p>
-<pre><code class="css">#id属性值&#123;color: red;&#125;</code></pre>
+<p>id 选择器：<code>#id属性值&#123;color: red;&#125;</code></p>
 <pre><code class="html">&lt;div id=&quot;name&quot;&gt;hello css2&lt;/div&gt;</code></pre>
 <pre><code class="css">#name&#123;color: red;&#125;  /*该代码表示将页面中所有的id属性值是 name 的标签的内容的颜色设置为红色*/</code></pre>
-</li>
-<li><p>类选择器</p>
-<pre><code class="css">.class属性值&#123;color: red;&#125;</code></pre>
+<p>类选择器：<code>.class属性值&#123;color: red;&#125;</code></p>
 <pre><code class="html">&lt;div class=&quot;cls&quot;&gt;hello css3&lt;/div&gt;</code></pre>
 <pre><code class="css">.cls&#123;color: red;&#125; /*该代码表示将页面中所有的class属性值是 cls 的标签的内容的颜色设置为红色*/</code></pre>
-</li>
-</ul>
 <pre><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -1282,97 +1135,20 @@
 <td align="left">设置轮廓的宽度。</td>
 </tr>
 </tbody></table>
+<p>CSS链接的四种状态：</p>
 <ul>
-<li><p>CSS链接的四种状态：</p>
-<ul>
-<li><code>a:link &#123;&#125;</code>- 普通的、未被访问的链接</li>
-<li><code>a:visited &#123;&#125;</code>- 用户已访问的链接</li>
-<li><code>a:hover &#123;&#125;</code>- 鼠标指针位于链接的上方</li>
-<li><code>a:active &#123;&#125;</code>- 链接被点击的时刻</li>
+<li><code>a:link &#123;&#125;</code>- 普通的、未被访问的链接。</li>
+<li><code>a:visited &#123;&#125;</code>- 用户已访问的链接。</li>
+<li><code>a:hover &#123;&#125;</code>- 鼠标指针位于链接的上方。</li>
+<li><code>a:active &#123;&#125;</code>- 链接被点击的时刻。</li>
 </ul>
-</li>
-<li><p>CSS框模型：element : 元素，padding : 内边距，border : 边框，margin : 外边距</p>
-</li>
-<li><p>CSS定位（position属性）</p>
+<p>CSS框模型：element : 元素，padding : 内边距，border : 边框，margin : 外边距。</p>
+<p>CSS定位（position属性）：</p>
 <ul>
-<li>static：元素框正常生成</li>
-<li>relative：元素框偏移某个距离</li>
+<li>static：元素框正常生成。</li>
+<li>relative：元素框偏移某个距离。</li>
 <li>absolute：元素框从文档流完全删除，并相对于其包含块定位。</li>
 <li>fixed：元素框的表现类似于将 position 设置为 absolute，不过其包含块是视窗本身。</li>
-</ul>
-</li>
-<li><p>CSS浮动定位（float属性）</p>
-</li>
-<li><p>伪类和伪元素</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/css/css_mediatypes.asp">@media</a> 规则使你有能力在相同的样式表中，使用不同的样式规则来针对不同的媒介。</p>
-</li>
-<li><p>更多关于 CSS 的信息，请参阅 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/example/csse_examples.asp">CSS 实例</a>、<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/index.asp">CSS 参考手册</a></p>
-</li>
-</ul>
-<h4 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h4><ul>
-<li><p>CSS3 完全向后兼容，浏览器通常支持 CSS2，因此您不必改变现有的设计。</p>
-</li>
-<li><p>选择器</p>
-</li>
-<li><p>框模型</p>
-<ul>
-<li>border-radius</li>
-<li>box-shadow</li>
-<li>border-image</li>
-</ul>
-</li>
-<li><p>背景和边框</p>
-<ul>
-<li>background-size</li>
-<li>background-origin</li>
-</ul>
-</li>
-<li><p>文本效果</p>
-<ul>
-<li>text-shadow</li>
-<li>word-wrap</li>
-</ul>
-</li>
-<li><p>2D/3D 转换</p>
-<ul>
-<li>translate()</li>
-<li>rotate()</li>
-<li>scale()</li>
-<li>skew()</li>
-<li>matrix()</li>
-<li>rotateX()</li>
-<li>rotateY()</li>
-</ul>
-</li>
-<li><p>动画</p>
-<ul>
-<li>transition</li>
-<li>transition-property</li>
-<li>transition-duration</li>
-</ul>
-</li>
-<li><p>transition-timing-function</p>
-<ul>
-<li>animation</li>
-</ul>
-</li>
-<li><p>多列布局</p>
-<ul>
-<li>column-count</li>
-<li>column-gap</li>
-<li>column-rule</li>
-</ul>
-</li>
-<li><p>用户界面</p>
-<ul>
-<li>resize</li>
-<li>box-sizing</li>
-<li>outline-offset</li>
-</ul>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/cssref/index.asp">CSS3参考手册</a></p>
-</li>
 </ul>
 
   
@@ -1431,20 +1207,24 @@
       
         
           
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
 <div class='new-meta-item author'>
   <a class='author' href="/about" rel="nofollow">
     <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
     <p>Bezhuang</p>
   </a>
 </div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML-CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML/CSS</p></a></div>
-
 
         
       
@@ -1462,7 +1242,7 @@
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -1476,7 +1256,7 @@
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -1490,7 +1270,7 @@
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -1498,7 +1278,7 @@
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADoElEQVR42u3aQY4CMQwEQP7/afa+EsLueAaDKjdWzCSuXHptHk8rWg8E4MCBA2eBA7cE7hGu/8+/+lzdp13Am+fenTeuFxw4cODAgQMHbhlceuAuSPX5Knz1/WP1ggMHDhw4cODALYXrBt5q4Ox+noafqhccOHDgwIEDB+5X4LoB87SReXcABwcOHDhw4MCB+1W4qUFvGqi7FwMOHDhw4MCBA/ercN0A2i18qiFZ3Sc9Pzhw4MCBAwcO3LfApcH1Wz/H9YIDBw4cOHDgwC2BO11pg3IskDb3O64XHDhw4MCBAwduCdy7gHgKlA62p8DTfcv/OYADBw4cOHDgwC2Fmw6oU4Pq7nvHgMGBAwcOHDhw4JbAXRVc0x8GpkCn5yoHe3DgwIEDBw4cuCVw3YZi9wB3/zDwdBANDhw4cODAgQP3rXDdg6aNxbSB+hhacQAHBw4cOHDgwIFbApcG3umg2oWeuujuIBscOHDgwIEDB24rXBpouxDpgDgN2t3B9sv3gQMHDhw4cODALYNLA+90g7P7g78pkPKFggMHDhw4cODALYGbCrTVA51ezGnjtDvgBgcOHDhw4MCB2wpXLeR4w8PAe3fQfvlecODAgQMHDhy4L4GbDqbPw1UdPHfPWb5AcODAgQMHDhy4pXDVDboFpAV2B9RpsC9/Dxw4cODAgQMHbglcGmjbDcChQJoCdP/+8jM4cODAgQMHDtwSuLRxeDpATgN4d/Cdfq/cyAQHDhw4cODAgfsQ3PTBpp5PL+A0QL99Dzhw4MCBAwcO3FK4auPxtIF41fNXNWbBgQMHDhw4cOC+Ba47SE4H0GmQTS/2GBYcOHDgwIEDB24JXPeg3cKrMGmjMR10p/WBAwcOHDhw4MBtg0sbhN2VBtwp4HRfcODAgQMHDhy4bXDdF141gD7d/7YLAAcOHDhw4MCBWwI3HXifQyuFuirAgwMHDhw4cODAbYdLC3wXiLuB+fTCpgfm4MCBAwcOHDhw2+COA2EzCFcLPi2wGqTjAAwOHDhw4MCBA7cE7uqDVN9zOtBOL7JcLzhw4MCBAwcO3FK4auDtNjhPg+30OdJBOjhw4MCBAwcO3K/AtQNk2CCdbrx+PACDAwcOHDhw4MAtgTse9DYbk+n3q+e/LQCDAwcOHDhw4MANwXUbilOD7HSgfNe5wIEDBw4cOHDgtsJNNwarhafB9rQxGtcLDhw4cODAgQO3BM5qBmYE4MCBA2eBA/fZ9QcnD3+mzeiVYQAAAABJRU5ErkJggg==">
           </div>
@@ -1512,7 +1292,7 @@
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -1537,7 +1317,7 @@
         <a class='prev' href='/JavaScript%E5%9F%BA%E7%A1%80/'>
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>JavaScript 基础知识总结</p>
           <p class='content'>
-JavaScript 是一门跨平台、面向对象的脚本语言，它能使网页可交互，可以让你在网页上添加更多功能，另外还有高级的服务端 JavaScript 版本，在web浏览器中，JavaScript...</p>
+JavaScript 是一门跨平台、面向对象的脚本语言，它能使网页可交互，可以让你在网页上添加更多功能，另外还有高级的服务端 JavaScript 版本，在 web 浏览器中，JavaScri...</p>
         </a>
       
       
@@ -1590,7 +1370,7 @@ MySQL 是目前应用最广泛的开源关系数据库，在学习完 SQL 语言
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML"><span class="toc-text">HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-text">HTML 快速入门</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%A0%87%E7%AD%BE"><span class="toc-text">基础标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E3%80%81%E9%9F%B3%E9%A2%91%E3%80%81%E8%A7%86%E9%A2%91%E6%A0%87%E7%AD%BE"><span class="toc-text">图片、音频、视频标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE"><span class="toc-text">超链接标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE"><span class="toc-text">列表标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE"><span class="toc-text">表格标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%83%E5%B1%80%E6%A0%87%E7%AD%BE"><span class="toc-text">布局标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE"><span class="toc-text">表单标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#form-%E6%A0%87%E7%AD%BE%E5%B1%9E%E6%80%A7"><span class="toc-text">form 标签属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E9%A1%B9%E6%A0%87%E7%AD%BE"><span class="toc-text">表单项标签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-text">CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS-%E6%A6%82%E8%BF%B0"><span class="toc-text">CSS 概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#css-%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">css 导入方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#css-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">css 选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS-%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7"><span class="toc-text">CSS 基本样式属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS3"><span class="toc-text">CSS3</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81HTML"><span class="toc-text">一、HTML</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HTML-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-text">HTML 快速入门</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%A0%87%E7%AD%BE"><span class="toc-text">基础标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E3%80%81%E9%9F%B3%E9%A2%91%E3%80%81%E8%A7%86%E9%A2%91%E6%A0%87%E7%AD%BE"><span class="toc-text">图片、音频、视频标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE"><span class="toc-text">超链接标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE"><span class="toc-text">列表标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE"><span class="toc-text">表格标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%83%E5%B1%80%E6%A0%87%E7%AD%BE"><span class="toc-text">布局标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE"><span class="toc-text">表单标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#form-%E6%A0%87%E7%AD%BE%E5%B1%9E%E6%80%A7"><span class="toc-text">form 标签属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E9%A1%B9%E6%A0%87%E7%AD%BE"><span class="toc-text">表单项标签</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81CSS"><span class="toc-text">二、CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#css-%E5%AF%BC%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-text">css 导入方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#css-%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-text">css 选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#CSS-%E5%9F%BA%E6%9C%AC%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7"><span class="toc-text">CSS 基本样式属性</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -2027,11 +1807,46 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   
   
-    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
   
 
 

@@ -22,14 +22,15 @@
 
   <!-- 页面元数据 -->
   
-  <title>LintCode 必会新手 50 题阶段一 - Bezhuang&#39;s Blog</title>
+  <title>必会新手 50 题之阶段一 - Bezhuang&#39;s Blog</title>
   
     <meta name="keywords" content="LintCode">
   
 
   
     <meta name="description" content="
-在线评测平台 LintCode 整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握，以下...">
+在线评测平台 LintCode 整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握。
+">
   
 
   <!-- feed -->
@@ -379,7 +380,7 @@
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -459,18 +460,14 @@
     
     
       <h1 class="title">
-        LintCode 必会新手 50 题阶段一
+        必会新手 50 题之阶段一
       </h1>
       <div class='new-meta-box'>
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/LintCode/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>LintCode</p></a></div>
 
 
           
@@ -479,7 +476,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年10月28日</p>
+    <p>本文发布于：2020年10月28日</p>
   </a>
 </div>
 
@@ -490,7 +487,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：907字</p>
+      <p>字数：878字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -511,45 +508,33 @@
   
   
   <blockquote>
-<p>在线评测平台 LintCode 整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握，以下是刷题过程中的思路和方法的记录，也包含成功通过的代码。</p>
+<p>在线评测平台 LintCode 整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="37-反转一个3位整数"><a href="#37-反转一个3位整数" class="headerlink" title="37.反转一个3位整数"></a>37.反转一个3位整数</h3><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><ul>
-<li>反转一个只有3位数的整数</li>
-</ul>
-<h4 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h4><ul>
-<li>获得个位数并将它变成百位数，获得十位数并将它变成十位数，获得百位数并将它变成个数位</li>
-</ul>
+<h3 id="37、反转一个3位整数"><a href="#37、反转一个3位整数" class="headerlink" title="37、反转一个3位整数"></a>37、反转一个3位整数</h3><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p>反转一个只有3位数的整数。</p>
+<h4 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h4><p>获得个位数并将它变成百位数，获得十位数并将它变成十位数，获得百位数并将它变成个数位。</p>
 <h4 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;
 public:
     int reverseInteger(int number) &#123;
         return number % 10 * 100 + number / 10 % 10 * 10 + number / 100;
     &#125;
 &#125;;</code></pre>
-<h3 id="1-A-B问题"><a href="#1-A-B问题" class="headerlink" title="1.A+B问题"></a>1.A+B问题</h3><h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><ul>
-<li>给出两个整数a和b，求他们的和并以整数（int）的形式返回</li>
-</ul>
-<h4 id="问题分析-1"><a href="#问题分析-1" class="headerlink" title="问题分析"></a>问题分析</h4><ul>
-<li>不需要从标准输入流读入数据，只需要根据<code>aplusb</code>传入的两个参数a和b，计算他们的和并返回就行</li>
-</ul>
+<h3 id="1、A-B问题"><a href="#1、A-B问题" class="headerlink" title="1、A+B问题"></a>1、A+B问题</h3><h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><p>给出两个整数a和b，求他们的和并以整数（int）的形式返回。</p>
+<h4 id="问题分析-1"><a href="#问题分析-1" class="headerlink" title="问题分析"></a>问题分析</h4><p>不需要从标准输入流读入数据，只需要根据<code>aplusb</code>传入的两个参数a和b，计算他们的和并返回就行。</p>
 <h4 id="题解-1"><a href="#题解-1" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;
 public:
     int aplusb(int a, int b) &#123;
         return a + b;
     &#125;
 &#125;;</code></pre>
-<h3 id="1300-巴什博弈"><a href="#1300-巴什博弈" class="headerlink" title="1300.巴什博弈"></a>1300.巴什博弈</h3><h4 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h4><ul>
-<li>你正在和朋友玩一个游戏：桌子上有一堆石头，每一次你们都会从中拿出1到3个石头。拿走最后一个石头的人赢得游戏</li>
-<li>游戏开始时，你是先手。假设两个人都绝对理性，都会做出最优决策。给定石头的数量，判断你是否会赢得比赛</li>
-<li>举例：有四个石头，那么你永远不会赢得游戏。不管拿几个，最后一个石头一定会被你的朋友拿走</li>
-</ul>
-<h4 id="问题分析-2"><a href="#问题分析-2" class="headerlink" title="问题分析"></a>问题分析</h4><ul>
-<li>巴什博弈：n个物品，两个人轮流从这堆物品中取物，规定每次至少取一个，最多取m个，最后取光者得胜</li>
-<li>如果物品数量 n 不能被 m+1 整除，则 n=k(m+1)+x（k为自然数，0&lt;x&lt;m+1），那么只要先手者第一次拿走 x 个物品，剩余物品数量变为 k(m+1)，接下来无论后手者怎么拿，先手者都可以让物品数量变 k(m+1) ，k逐渐变小直到最后变为 1，此时剩余物品为 m+1，接下来无论后手者拿多少都拿不完 ，并且会使剩余物品数量小于 m+1 ，而先手者则可以直接把剩下的拿完，先手者必胜</li>
-<li>如果物品数量为 k(m+1)，即 n 可被 (m+1) 整除，此时先手者就会面临上面的后手者的问题，先手者必输</li>
-<li>由题可知，m=3，所以物品数量不能被4整除，即n若是4的倍数则输出False，否则输出True</li>
-</ul>
+<h3 id="1300、巴什博弈"><a href="#1300、巴什博弈" class="headerlink" title="1300、巴什博弈"></a>1300、巴什博弈</h3><h4 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h4><p>你正在和朋友玩一个游戏：桌子上有一堆石头，每一次你们都会从中拿出1到3个石头。拿走最后一个石头的人赢得游戏。</p>
+<p>游戏开始时，你是先手。假设两个人都绝对理性，都会做出最优决策。给定石头的数量，判断你是否会赢得比赛。</p>
+<p>举例：有四个石头，那么你永远不会赢得游戏。不管拿几个，最后一个石头一定会被你的朋友拿走。</p>
+<h4 id="问题分析-2"><a href="#问题分析-2" class="headerlink" title="问题分析"></a>问题分析</h4><p>巴什博弈：n个物品，两个人轮流从这堆物品中取物，规定每次至少取一个，最多取m个，最后取光者得胜。</p>
+<p>如果物品数量 n 不能被 m+1 整除，则 n=k(m+1)+x（k为自然数，0&lt;x&lt;m+1），那么只要先手者第一次拿走 x 个物品，剩余物品数量变为 k(m+1)，接下来无论后手者怎么拿，先手者都可以让物品数量变 k(m+1) ，k逐渐变小直到最后变为 1，此时剩余物品为 m+1，接下来无论后手者拿多少都拿不完 ，并且会使剩余物品数量小于 m+1 ，而先手者则可以直接把剩下的拿完，先手者必胜。</p>
+<p>如果物品数量为 k(m+1)，即 n 可被 (m+1) 整除，此时先手者就会面临上面的后手者的问题，先手者必输。</p>
+<p>由题可知，m=3，所以物品数量不能被4整除，即n若是4的倍数则输出False，否则输出True。</p>
 <h4 id="题解-2"><a href="#题解-2" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;
 public:
     bool canWinBash(int n) &#123;
@@ -560,14 +545,10 @@ public:
         else return true;
     &#125;
 &#125;;</code></pre>
-<h3 id="764-计算圆周长和面积"><a href="#764-计算圆周长和面积" class="headerlink" title="764.计算圆周长和面积"></a>764.计算圆周长和面积</h3><h4 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h4><ul>
-<li>给定一个整数<code>r</code>代表一个圆的半径，返回一个数组，其中数组的第一个元素代表圆的周长，数组的第二个元素代表圆的面积</li>
-</ul>
-<h4 id="问题分析-3"><a href="#问题分析-3" class="headerlink" title="问题分析"></a>问题分析</h4><ul>
-<li>PI = 3.14</li>
-<li>向量（Vector）是一个封装了动态大小数组的顺序容器（Sequence Container），是一个能够存放任意类型的动态数组</li>
-<li><code>#include&lt;vector&gt;;</code></li>
-</ul>
+<h3 id="764、计算圆周长和面积"><a href="#764、计算圆周长和面积" class="headerlink" title="764、计算圆周长和面积"></a>764、计算圆周长和面积</h3><h4 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h4><p>给定一个整数<code>r</code>代表一个圆的半径，返回一个数组，其中数组的第一个元素代表圆的周长，数组的第二个元素代表圆的面积。</p>
+<h4 id="问题分析-3"><a href="#问题分析-3" class="headerlink" title="问题分析"></a>问题分析</h4><p>PI = 3.14。</p>
+<p>向量（Vector）是一个封装了动态大小数组的顺序容器（Sequence Container），是一个能够存放任意类型的动态数组。</p>
+<p><code>#include&lt;vector&gt;;</code></p>
 <h4 id="题解-3"><a href="#题解-3" class="headerlink" title="题解"></a>题解</h4><pre><code class="cpp">class Solution &#123;
 public:
     vector&lt;double&gt; calculate(int r) &#123;
@@ -608,6 +589,18 @@ public:
       
         
           
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构</a>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
 <div class='new-meta-item author'>
   <a class='author' href="/about" rel="nofollow">
     <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
@@ -619,27 +612,19 @@ public:
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/LintCode/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>LintCode</p></a></div>
-
-
-        
-      
-        
-          
   <div class="new-meta-item share -mob-share-list">
   <div class="-mob-share-list share-body">
     
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/&title=LintCode 必会新手 50 题阶段一 - Bezhuang's Blog&summary=
-在线评测平台 LintCode 整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握，以下是刷题过程中的思路和方法的记录，也包含成功通过的代码。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/&title=必会新手 50 题之阶段一 - Bezhuang's Blog&summary=
+在线评测平台 LintCode 整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -647,13 +632,13 @@ public:
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/&title=LintCode 必会新手 50 题阶段一 - Bezhuang's Blog&summary=
-在线评测平台 LintCode 整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握，以下是刷题过程中的思路和方法的记录，也包含成功通过的代码。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/&title=必会新手 50 题之阶段一 - Bezhuang's Blog&summary=
+在线评测平台 LintCode 整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -661,13 +646,13 @@ public:
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/&title=LintCode 必会新手 50 题阶段一 - Bezhuang's Blog&summary=
-在线评测平台 LintCode 整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握，以下是刷题过程中的思路和方法的记录，也包含成功通过的代码。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/&title=必会新手 50 题之阶段一 - Bezhuang's Blog&summary=
+在线评测平台 LintCode 整合了当前各大IT企业技术求职的热门题库，拥有2000多道常见面试题，可有效提升算法与数据结构水平，助力通过知名IT企业面试，拿到满意的Offer。新手必刷编程50题为初到Lintcode所接触到的最基础的阶梯练习，必知必会。在新手50题阶段一中考验的是对基本数据类型的掌握。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -675,7 +660,7 @@ public:
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFHUlEQVR42u3aQXLjMAwEwPz/07sPSLlEzIB2XNW82bEoqqHLBPj5Z31k/SAAD94CD94CD95agP8J168NX/z91e/HBy73OT3/0/etF3jw4MGDBw8ePHjwm/AtwBP804NPHzSFSMG3vMCDBw8ePHjw4MGDvwF/+qBtIZ5+P73vtCDtOeNzgwcPHjx48ODBgwf/B+HThsX0freCWHse8ODBgwcPHjx48OC/EX4rSLWNjvbFAQ8ePHjw4MGDBw/+m+DHAzqXQKaFbQvaDnS9fZIMPHjw4MGDBw8ePPhgtYNG3/459gIPHjx48ODBgwcPfgG+XWnAOQ0i7f5PgSq9PvYCDx48ePDgwYMHD34Bvm1sPIFMA8nTPi1M2nDZOg948ODBgwcPHjx48Bvw043TADO9PgWYBqS2UGuNEPDgwYMHDx48ePDgg4Gm7Ru2ASaFSc8zHeBKHcCDBw8ePHjw4MGD34S/3WiYBqCt608h2wKf7gcePHjw4MGDBw8e/AZ8GgzShsc00EwD3daL0QK/LBh48ODBgwcPHjx48Bfhp98/HSw9eBvQthoe7f7gwYMHDx48ePDgwW/Ct4M/W2BpALvVyLkWEMGDBw8ePHjw4MGDfwP8dmHSwaNpAdOglz738Wfw4MGDBw8ePHjw4C/Cbw8QTRsm6e/SArQNmWMP8ODBgwcPHjx48OAvwMcblo2DaeHb891+wcYBCjx48ODBgwcPHjz4AXwaPNKgk+6f3j8FO/UZN07AgwcPHjx48ODBg1+cj28bE20jY6vBMi3E9MVIvwcPHjx48ODBgwcPfhP+VpBpB4O2g1TbeEmf+7ERAh48ePDgwYMHDx78RfhbQWZ68LgBURYqfX7w4MGDBw8ePHjw4G/Abzc0TgPSNlBayNufjztQ4MGDBw8ePHjw4MEvwG8FmOnfb0G2DZQ2QIIHDx48ePDgwYMH/w74rYGiNHBtD1TFA0hLA1XgwYMHDx48ePDgwW/CT2+cNkq2A85xYAkLtdUQ+vUZPHjw4MGDBw8ePPgF+PYBTx9gqzDT/aeQKXTcCAEPHjx48ODBgwcPvoBPwbYO2v6uBUkbJ3WAAg8ePHjw4MGDBw/+InzbAJl+nxby9NzTINg+N3jw4MGDBw8ePHjwN+DTg00Hi24Hta0glj7n4/OBBw8ePHjw4MGDB78APw04aTBqGx9tMNoKSLUTePDgwYMHDx48ePAL8NODnYK1wWRa6K2Bp+n14yAJHjx48ODBgwcPHvwH4FvIFDx9MdYbGWHBwYMHDx48ePDgwYP/JPytADNtuKSFSRslbaAEDx48ePDgwYMHD34TfusG7XVt4yMdwJq+UHXABA8ePHjw4MGDBw9+ET4dSNqCToPN1iBU3eAADx48ePDgwYMHD/6N8GnASB94Cp3eL73/tLDjBhF48ODBgwcPHjx48Avw7WobG9PAM/17GrjaAFd3oMCDBw8ePHjw4MGDP/h//HRNIbb2Ow0+bQHigPT0IoEHDx48ePDgwYMHvwg/PfD0+rbxMN03hdwKUODBgwcPHjx48ODBvxN+O0CkA0/tfrcg64KCBw8ePHjw4MGDB/+H4dPBpjSond63/V0a4MCDBw8ePHjw4MGD/yb4W9BbhZ8GuPRFAA8ePHjw4MGDBw/+Jvz0QVvQ04CVFmD6fFuDUy/3AQ8ePHjw4MGDBw9+EX59cGdpcKhtRJy+IOmLNt0fPHjw4MGDBw8ePPgNeOu9Czx48BZ48BZ48Fax/gNw8LEDkA98RAAAAABJRU5ErkJggg==">
           </div>
@@ -685,11 +670,11 @@ public:
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/&text=LintCode 必会新手 50 题阶段一 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/&text=必会新手 50 题之阶段一 - Bezhuang's Blog"
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -764,7 +749,7 @@ Python 是由 Guido van Rossum 在八十年代末和九十年代初，在荷兰�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#37-%E5%8F%8D%E8%BD%AC%E4%B8%80%E4%B8%AA3%E4%BD%8D%E6%95%B4%E6%95%B0"><span class="toc-text">37.反转一个3位整数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-A-B%E9%97%AE%E9%A2%98"><span class="toc-text">1.A+B问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-1"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90-1"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-1"><span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1300-%E5%B7%B4%E4%BB%80%E5%8D%9A%E5%BC%88"><span class="toc-text">1300.巴什博弈</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-2"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90-2"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#764-%E8%AE%A1%E7%AE%97%E5%9C%86%E5%91%A8%E9%95%BF%E5%92%8C%E9%9D%A2%E7%A7%AF"><span class="toc-text">764.计算圆周长和面积</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-3"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90-3"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="toc-text">题解</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#37%E3%80%81%E5%8F%8D%E8%BD%AC%E4%B8%80%E4%B8%AA3%E4%BD%8D%E6%95%B4%E6%95%B0"><span class="toc-text">37、反转一个3位整数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81A-B%E9%97%AE%E9%A2%98"><span class="toc-text">1、A+B问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-1"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90-1"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-1"><span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1300%E3%80%81%E5%B7%B4%E4%BB%80%E5%8D%9A%E5%BC%88"><span class="toc-text">1300、巴什博弈</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-2"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90-2"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-2"><span class="toc-text">题解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#764%E3%80%81%E8%AE%A1%E7%AE%97%E5%9C%86%E5%91%A8%E9%95%BF%E5%92%8C%E9%9D%A2%E7%A7%AF"><span class="toc-text">764、计算圆周长和面积</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0-3"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90-3"><span class="toc-text">问题分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3-3"><span class="toc-text">题解</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -783,7 +768,7 @@ Python 是由 Guido van Rossum 在八十年代末和九十年代初，在荷兰�
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="LintCode 必会新手 50 题阶段一";
+  pdata.postTitle="必会新手 50 题之阶段一";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
@@ -1201,11 +1186,46 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   
   
-    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
   
 
 

@@ -24,7 +24,7 @@
   
   <title>MyBatis 基础知识总结 - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="Java,MyBatis">
+    <meta name="keywords" content="MyBatis">
   
 
   
@@ -379,7 +379,7 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -465,12 +465,8 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E4%B8%8E%E6%9E%B6%E6%9E%84/">后端开发与架构</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MyBatis/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MyBatis</p></a></div>
 
 
           
@@ -479,7 +475,7 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月19日</p>
+    <p>本文发布于：2022年3月19日</p>
   </a>
 </div>
 
@@ -511,54 +507,21 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
   
   
   <blockquote>
-<p>MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录，也 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Qf4y1T7Hx">Java Web</a> 的重要知识点之一，以下为学习 MyBatis 时所记笔记，可供参考。</p>
+<p>MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="Mybatis概述"><a href="#Mybatis概述" class="headerlink" title="Mybatis概述"></a>Mybatis概述</h3><h4 id="Mybatis-概念"><a href="#Mybatis-概念" class="headerlink" title="Mybatis 概念"></a>Mybatis 概念</h4><ul>
-<li><p>MyBatis 是一款优秀的持久层框架，用于简化 JDBC 开发</p>
-</li>
-<li><p>MyBatis 本是 Apache 的一个开源项目iBatis, 2010年这个项目由apache software foundation 迁移到了google code，并且改名为MyBatis 。2013年11月迁移到Github</p>
-</li>
-<li><p>官网：<a target="_blank" rel="noopener" href="https://mybatis.org/mybatis-3/zh/index.html">https://mybatis.org/mybatis-3/zh/index.html</a> </p>
-</li>
-</ul>
-<h4 id="持久层"><a href="#持久层" class="headerlink" title="持久层"></a>持久层</h4><ul>
-<li>负责将数据到保存到数据库的那一层代码</li>
-<li>以后开发我们会将操作数据库的 Java 代码作为持久层。而 Mybatis 就是对 jdbc 代码进行了封装</li>
-<li>JavaEE三层架构：表现层、业务层、持久层</li>
-</ul>
-<h4 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h4><ul>
-<li>框架就是一个半成品软件，是一套可重用的、通用的、软件基础代码模型</li>
-<li>在框架的基础之上构建软件编写更加高效、规范、通用、可扩展</li>
-</ul>
-<h4 id="JDBC-缺点"><a href="#JDBC-缺点" class="headerlink" title="JDBC 缺点"></a>JDBC 缺点</h4><ul>
-<li><p>硬编码</p>
-<ul>
-<li><p>注册驱动、获取连接：代码有很多字符串，而这些是连接数据库的四个基本信息，以后如果要换成其他的关系型数据库的话，要修改源代码</p>
-</li>
-<li><p>SQL语句：如果表结构发生变化，SQL语句就要进行更改。这也不方便后期的维护</p>
-</li>
-</ul>
-</li>
-<li><p>操作繁琐</p>
-<ul>
-<li><p>手动设置参数</p>
-</li>
-<li><p>手动封装结果集</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="Mybatis-优化"><a href="#Mybatis-优化" class="headerlink" title="Mybatis 优化"></a>Mybatis 优化</h4><ul>
-<li>硬编码可以配置到配置文件</li>
-<li>操作繁琐的地方 MyBatis 都自动完成</li>
-</ul>
-<h3 id="MyBatis-快速入门"><a href="#MyBatis-快速入门" class="headerlink" title="MyBatis 快速入门"></a>MyBatis 快速入门</h3><ul>
-<li>需求：查询 user 表中所有的数据</li>
-</ul>
-<ul>
-<li><p>创建 user 表，添加数据</p>
+<h3 id="一、Mybatis-概述"><a href="#一、Mybatis-概述" class="headerlink" title="一、Mybatis 概述"></a>一、Mybatis 概述</h3><p>MyBatis 是一款优秀的持久层框架，用于简化 JDBC 开发。</p>
+<p>MyBatis 本是 Apache 的一个开源项目iBatis, 2010年这个项目由apache software foundation 迁移到了google code，并且改名为MyBatis 。2013年11月迁移到Github。</p>
+<p>官网：<a target="_blank" rel="noopener" href="https://mybatis.org/mybatis-3/zh/index.html">https://mybatis.org/mybatis-3/zh/index.html</a> 。</p>
+<p>持久层：负责将数据到保存到数据库的那一层代码。以后开发我们会将操作数据库的 Java 代码作为持久层。而 Mybatis 就是对 jdbc 代码进行了封装。</p>
+<p>JavaEE三层架构：表现层、业务层、持久层。</p>
+<p>框架：框架就是一个半成品软件，是一套可重用的、通用的、软件基础代码模型。在框架的基础之上构建软件编写更加高效、规范、通用、可扩展。</p>
+<h4 id="JDBC-缺点"><a href="#JDBC-缺点" class="headerlink" title="JDBC 缺点"></a>JDBC 缺点</h4><p>硬编码：注册驱动、获取连接代码有很多字符串，而这些是连接数据库的四个基本信息，以后如果要换成其他的关系型数据库的话，要修改源代码。如果表结构发生变化，SQL语句就要进行更改。这也不方便后期的维护。</p>
+<p>操作繁琐：手动设置参数。手动封装结果集。</p>
+<p>使用Mybatis 优化：硬编码可以配置到配置文件，操作繁琐的地方 MyBatis 都自动完成。</p>
+<h4 id="MyBatis-快速入门"><a href="#MyBatis-快速入门" class="headerlink" title="MyBatis 快速入门"></a>MyBatis 快速入门</h4><p>需求：查询 user 表中所有的数据。</p>
+<p>创建 user 表，添加数据。</p>
 <pre><code class="sql">create database mybatis;
 use mybatis;
 drop table if exists tb_user;
@@ -572,11 +535,7 @@ create table tb_user(
 INSERT INTO tb_user VALUES (1, &#39;zhangsan&#39;, &#39;123&#39;, &#39;男&#39;, &#39;北京&#39;);
 INSERT INTO tb_user VALUES (2, &#39;李四&#39;, &#39;234&#39;, &#39;女&#39;, &#39;天津&#39;);
 INSERT INTO tb_user VALUES (3, &#39;王五&#39;, &#39;11&#39;, &#39;男&#39;, &#39;西安&#39;);</code></pre>
-</li>
-<li><p>创建模块，导入坐标</p>
-<ul>
-<li>需要在项目的 resources 目录下创建 logback 的配置文件</li>
-</ul>
+<p>创建模块，导入坐标：需要在项目的 resources 目录下创建 logback 的配置文件。</p>
 <pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;configuration&gt;
     &lt;!--
@@ -600,9 +559,7 @@ INSERT INTO tb_user VALUES (3, &#39;王五&#39;, &#39;11&#39;, &#39;男&#39;, &#
         &lt;appender-ref ref=&quot;Console&quot;/&gt;
     &lt;/root&gt;
 &lt;/configuration&gt;</code></pre>
-<ul>
-<li>在创建好的模块中的 pom.xml 配置文件中添加依赖的坐标</li>
-</ul>
+<p>在创建好的模块中的 pom.xml 配置文件中添加依赖的坐标。</p>
 <pre><code class="xml">&lt;dependencies&gt;
     &lt;!--mybatis 依赖--&gt;
     &lt;dependency&gt;
@@ -645,10 +602,9 @@ INSERT INTO tb_user VALUES (3, &#39;王五&#39;, &#39;11&#39;, &#39;男&#39;, &#
         &lt;version&gt;1.2.3&lt;/version&gt;
     &lt;/dependency&gt;
 &lt;/dependencies&gt;</code></pre>
-</li>
-<li><p>编写 MyBatis 核心配置文件 – &gt; 替换连接信息 解决硬编码问题</p>
+<p>编写 MyBatis 核心配置文件 – &gt; 替换连接信息 解决硬编码问题。</p>
 <ul>
-<li>在模块下的 resources 目录下创建 MyBatis 的配置文件 <code>mybatis-config.xml</code>，内容如下：</li>
+<li>  在模块下的 resources 目录下创建 MyBatis 的配置文件 <code>mybatis-config.xml</code>，内容如下：</li>
 </ul>
 <pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
 &lt;!DOCTYPE configuration
@@ -691,10 +647,9 @@ INSERT INTO tb_user VALUES (3, &#39;王五&#39;, &#39;11&#39;, &#39;男&#39;, &#
        &lt;mapper resource=&quot;UserMapper.xml&quot;/&gt;
     &lt;/mappers&gt;
 &lt;/configuration&gt;</code></pre>
-</li>
-<li><p>编写 SQL 映射文件：统一管理sql语句，解决硬编码问题</p>
+<p>编写 SQL 映射文件：统一管理sql语句，解决硬编码问题。</p>
 <ul>
-<li>在模块的 <code>resources</code> 目录下创建映射配置文件 <code>UserMapper.xml</code>，内容如下：</li>
+<li>  在模块的 <code>resources</code> 目录下创建映射配置文件 <code>UserMapper.xml</code>，内容如下：</li>
 </ul>
 <pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
 &lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot; &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;
@@ -703,10 +658,10 @@ INSERT INTO tb_user VALUES (3, &#39;王五&#39;, &#39;11&#39;, &#39;男&#39;, &#
         select * from tb_user;
     &lt;/select&gt;
 &lt;/mapper&gt;</code></pre>
-</li>
-<li><p>编码</p>
+<p>编码</p>
 <ul>
-<li><p>在 <code>com.itheima.pojo</code> 包下创建 User类</p>
+<li>  在 <code>com.itheima.pojo</code> 包下创建 User类。</li>
+</ul>
 <pre><code class="java">public class User &#123;
     private int id;
     private String username;
@@ -715,8 +670,9 @@ INSERT INTO tb_user VALUES (3, &#39;王五&#39;, &#39;11&#39;, &#39;男&#39;, &#
     private String addr;
     //添加 setter 和 getter
 &#125;</code></pre>
-</li>
-<li><p>在 <code>com.itheima</code> 包下编写 MybatisDemo 测试类</p>
+<ul>
+<li>  在 <code>com.itheima</code> 包下编写 MybatisDemo 测试类。</li>
+</ul>
 <pre><code class="java">public class MyBatisDemo &#123;
     public static void main(String[] args) throws IOException &#123;
         //1. 加载mybatis的核心配置文件，获取 SqlSessionFactory
@@ -732,39 +688,21 @@ INSERT INTO tb_user VALUES (3, &#39;王五&#39;, &#39;11&#39;, &#39;男&#39;, &#
         sqlSession.close();
     &#125;
 &#125;</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Mapper-代理开发"><a href="#Mapper-代理开发" class="headerlink" title="Mapper 代理开发"></a>Mapper 代理开发</h3><h4 id="Mapper-代理开发概述"><a href="#Mapper-代理开发概述" class="headerlink" title="Mapper 代理开发概述"></a>Mapper 代理开发概述</h4><ul>
-<li><p>Mapper 代理方式的目的：</p>
-<ul>
-<li><p>解决原生方式中的硬编码</p>
-</li>
-<li><p>简化后期执行SQL</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>Mybatis 官网也是推荐使用 Mapper 代理的方式。下图是截止官网的图片</li>
-</ul>
+<h3 id="二、Mapper-代理开发"><a href="#二、Mapper-代理开发" class="headerlink" title="二、Mapper 代理开发"></a>二、Mapper 代理开发</h3><p>Mapper 代理方式的目的：解决原生方式中的硬编码，简化后期执行SQL。</p>
 <h4 id="使用-Mapper-代理要求"><a href="#使用-Mapper-代理要求" class="headerlink" title="使用 Mapper 代理要求"></a>使用 Mapper 代理要求</h4><ul>
-<li><p>定义与 SQL 映射文件同名的 Mapper 接口，并且将 Mapper 接口和 SQL 映射文件放置在同一目录下</p>
+<li><p>定义与 SQL 映射文件同名的 Mapper 接口，并且将 Mapper 接口和 SQL 映射文件放置在同一目录下。</p>
 </li>
-<li><p>设置 SQL 映射文件的 namespace 属性为 Mapper 接口全限定名</p>
+<li><p>设置 SQL 映射文件的 namespace 属性为 Mapper 接口全限定名。</p>
 </li>
-<li><p>在 Mapper 接口中定义方法，方法名就是 SQL 映射文件中 sql 语句的 id，并保持参数类型和返回值类型一致</p>
+<li><p>在 Mapper 接口中定义方法，方法名就是 SQL 映射文件中 sql 语句的 id，并保持参数类型和返回值类型一致。</p>
 </li>
 </ul>
-<h4 id="Mapper-代理代码实现"><a href="#Mapper-代理代码实现" class="headerlink" title="Mapper 代理代码实现"></a>Mapper 代理代码实现</h4><ul>
-<li><p>在 <code>com.itheima.mapper</code> 包下创建 UserMapper接口，代码如下：</p>
+<h4 id="Mapper-代理代码实现"><a href="#Mapper-代理代码实现" class="headerlink" title="Mapper 代理代码实现"></a>Mapper 代理代码实现</h4><p>在 <code>com.itheima.mapper</code> 包下创建 UserMapper接口，代码如下：</p>
 <pre><code class="java">public interface UserMapper &#123;
     List&lt;User&gt; selectAll();
     User selectById(int id);
 &#125;</code></pre>
-</li>
-<li><p>在 <code>resources</code> 下创建 <code>com/itheima/mapper</code> 目录，并在该目录下创建 UserMapper.xml 映射配置文件</p>
+<p>在 <code>resources</code> 下创建 <code>com/itheima/mapper</code> 目录，并在该目录下创建 UserMapper.xml 映射配置文件：</p>
 <pre><code class="xml">&lt;!--
     namespace:名称空间。必须是对应接口的全限定名
 --&gt;
@@ -773,8 +711,7 @@ INSERT INTO tb_user VALUES (3, &#39;王五&#39;, &#39;11&#39;, &#39;男&#39;, &#
         select * from tb_user;
     &lt;/select&gt;
 &lt;/mapper&gt;</code></pre>
-</li>
-<li><p>在 <code>com.itheima</code> 包下创建 MybatisDemo2 测试类，代码如下：</p>
+<p>在 <code>com.itheima</code> 包下创建 MybatisDemo2 测试类，代码如下：</p>
 <pre><code class="java">/**
  * Mybatis 代理开发
  */
@@ -799,22 +736,15 @@ public class MyBatisDemo2 &#123;
         sqlSession.close();
     &#125;
 &#125;</code></pre>
-</li>
-</ul>
-<ul>
-<li>如果Mapper接口名称和SQL映射文件名称相同，并在同一目录下，则可以使用包扫描的方式简化SQL映射文件的加载</li>
-<li>也就是将核心配置文件的加载映射配置文件的配置修改为</li>
-</ul>
+<p>如果Mapper接口名称和SQL映射文件名称相同，并在同一目录下，则可以使用包扫描的方式简化SQL映射文件的加载。</p>
+<p>也就是将核心配置文件的加载映射配置文件的配置修改为：</p>
 <pre><code class="xml">&lt;mappers&gt;
     &lt;!--加载sql映射文件--&gt;
     &lt;!-- &lt;mapper resource=&quot;com/itheima/mapper/UserMapper.xml&quot;/&gt;--&gt;
     &lt;!--Mapper代理方式--&gt;
     &lt;package name=&quot;com.itheima.mapper&quot;/&gt;
 &lt;/mappers&gt;</code></pre>
-<h3 id="MyBatis-核心配置文件"><a href="#MyBatis-核心配置文件" class="headerlink" title="MyBatis 核心配置文件"></a>MyBatis 核心配置文件</h3><h4 id="多环境配置"><a href="#多环境配置" class="headerlink" title="多环境配置"></a>多环境配置</h4><ul>
-<li>在核心配置文件的 <code>environments</code> 标签中其实是可以配置多个 <code>environment</code> ，使用 <code>id</code> 给每段环境起名，在 <code>environments</code> 中使用 <code>default=&#39;环境id&#39;</code> 来指定使用哪儿段配置</li>
-<li>一般就配置一个 <code>environment</code> 即可</li>
-</ul>
+<h3 id="三、MyBatis-核心配置文件"><a href="#三、MyBatis-核心配置文件" class="headerlink" title="三、MyBatis 核心配置文件"></a>三、MyBatis 核心配置文件</h3><h4 id="多环境配置"><a href="#多环境配置" class="headerlink" title="多环境配置"></a>多环境配置</h4><p>在核心配置文件的 <code>environments</code> 标签中其实是可以配置多个 <code>environment</code> ，使用 <code>id</code> 给每段环境起名，在 <code>environments</code> 中使用 <code>default=&#39;环境id&#39;</code> 来指定使用哪儿段配置。一般就配置一个 <code>environment</code> 即可。</p>
 <pre><code class="xml">&lt;environments default=&quot;development&quot;&gt;
     &lt;environment id=&quot;development&quot;&gt;
         &lt;transactionManager type=&quot;JDBC&quot;/&gt;
@@ -838,18 +768,14 @@ public class MyBatisDemo2 &#123;
         &lt;/dataSource&gt;
     &lt;/environment&gt;
 &lt;/environments&gt;=</code></pre>
-<h4 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h4><ul>
-<li>在映射配置文件中的 <code>resultType</code> 属性需要配置数据封装的类型（类的全限定名）</li>
-<li>Mybatis 提供了 <code>类型别名</code>(typeAliases) 可以简化这部分的书写</li>
-<li>首先需要现在核心配置文件中配置类型别名，也就意味着给pojo包下所有的类起了别名（别名就是类名），不区分大小写</li>
-</ul>
+<h4 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h4><p>在映射配置文件中的 <code>resultType</code> 属性需要配置数据封装的类型（类的全限定名）。</p>
+<p>Mybatis 提供了 <code>类型别名</code>(typeAliases) 可以简化这部分的书写。</p>
+<p>首先需要现在核心配置文件中配置类型别名，也就意味着给pojo包下所有的类起了别名（别名就是类名），不区分大小写。</p>
 <pre><code class="xml">&lt;typeAliases&gt;
     &lt;!--name属性的值是实体类所在包--&gt;
     &lt;package name=&quot;com.itheima.pojo&quot;/&gt; 
 &lt;/typeAliases&gt;</code></pre>
-<ul>
-<li>通过上述的配置，我们就可以简化映射配置文件中 <code>resultType</code> 属性值的编写</li>
-</ul>
+<p>通过上述的配置，我们就可以简化映射配置文件中 <code>resultType</code> 属性值的编写。</p>
 <pre><code class="xml">&lt;mapper namespace=&quot;com.itheima.mapper.UserMapper&quot;&gt;
     &lt;select id=&quot;selectAll&quot; resultType=&quot;user&quot;&gt;
         select * from tb_user;
@@ -860,6 +786,26 @@ public class MyBatisDemo2 &#123;
   
     
     <div class='footer'>
+      
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>References</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://www.bilibili.com/video/BV1Qf4y1T7Hx" rel="external nofollow noopener noreferrer" target="_blank">
+                  Java web从入门到企业实战
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        </div>
       
       
       
@@ -886,20 +832,24 @@ public class MyBatisDemo2 &#123;
       
         
           
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Java/">Java</a>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
 <div class='new-meta-item author'>
   <a class='author' href="/about" rel="nofollow">
     <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
     <p>Bezhuang</p>
   </a>
 </div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MyBatis/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MyBatis</p></a></div>
-
 
         
       
@@ -912,12 +862,12 @@ public class MyBatisDemo2 &#123;
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/MyBatis%E5%9F%BA%E7%A1%80/&title=MyBatis 基础知识总结 - Bezhuang's Blog&summary=
-MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录，也 Java Web 的重要知识点之一，以下为学习 MyBatis 时所记笔记，可供参考。
+MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -926,12 +876,12 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/MyBatis%E5%9F%BA%E7%A1%80/&title=MyBatis 基础知识总结 - Bezhuang's Blog&summary=
-MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录，也 Java Web 的重要知识点之一，以下为学习 MyBatis 时所记笔记，可供参考。
+MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -940,12 +890,12 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/MyBatis%E5%9F%BA%E7%A1%80/&title=MyBatis 基础知识总结 - Bezhuang's Blog&summary=
-MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录，也 Java Web 的重要知识点之一，以下为学习 MyBatis 时所记笔记，可供参考。
+MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -953,7 +903,7 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADvklEQVR42u3aQZLbMAwEQP//08k9W1vCAJBMO82bypZENC9jwK8/Vmu9EIADBw6cBQ7cIXCv5vrxwPB7v27sn8/T6+rzuvWCAwcOHDhw4MCdBlcOgDdttPqe6n6n9/9aDzhw4MCBAwcO3KFwlwGweN0NrlPg7v7L3wcHDhw4cODAgfsyuPQ5KUA3YK9DgwMHDhw4cODA/SdwVwE3HWxvHQg4cODAgQMHDty3wcUD2ibctNCr+9N9PT7JBwcOHDhw4MCBW4JLV7fQU67b9YIDBw4cOHDgwB0CN13VQJwG4fS93UZn/F5w4MCBAwcOHLhD4LoBsQuaNjpfw1WFLR84OHDgwIEDBw7cIXBbg9x0AD39g+DV89KgXT5YcODAgQMHDhy4w+CqG9geUD8VgLv7KA+kwYEDBw4cOHDgHobbLjQNpNsBtR1sq41VcODAgQMHDhy4w+GqQXRaSPf+NPh2gz04cODAgQMHDtypcN2BbjXYThuP0yC9dVDgwIEDBw4cOHCnwVUbkVeFVAtOv5cWOg327YE0OHDgwIEDBw7cw3DTjVYL32qUTgN6egA/ngsOHDhw4MCBA3c43FbDcvuAtg8ubZCCAwcOHDhw4MCdAtcd2KaNyvS+7vUU9tIFHDhw4MCBAwfuMLg06HbvrwbnboMy/eNi3HAFBw4cOHDgwIH7ULitAtKNd+9LG6aXBwUOHDhw4MCBA3cI3DTwphudwm7d1x5ogwMHDhw4cODAHQJXvqEZWLvPuauhmg62L385gAMHDhw4cODAHQr31OD4rgZq96DLA2lw4MCBAwcOHLg3waWBsAvaLXAazLuDbnDgwIEDBw4cuE+B676wW8jWwLobfNvBGBw4cODAgQMH7hC4uxqVaeMxhU4HymnA/3Uf4MCBAwcOHDhwh8FtB9+txmU32G4F5fVJPjhw4MCBAwcO3E1wU6hpkN0aPHeDOThw4MCBAwcO3KfCdQuvQk/flwbsNAhfXoMDBw4cOHDgwB0CN13pYDhtmHYL3G7UggMHDhw4cODAnQb3aq67AuxWcO42LONfDuDAgQMHDhw4cG+G2w681YFwtxGZvj/dXzkAgwMHDhw4cODAHQLXbSCmhU3/uPh6eIEDBw4cOHDgwH0rXDoY3gLrBupugAYHDhw4cODAgfs2uHTwnAbgrcKrjdrHfzmAAwcOHDhw4MAN4dKB9BQ0LaA8OB4G5TgAgwMHDhw4cODAvQmuPaBtBtLue7Yg1gbS4MCBAwcOHDhwb4KzsgUOHDhw4Cxw4N68/gJDjH+mcqLdYgAAAABJRU5ErkJggg==">
           </div>
@@ -967,7 +917,7 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -1042,7 +992,7 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mybatis%E6%A6%82%E8%BF%B0"><span class="toc-text">Mybatis概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Mybatis-%E6%A6%82%E5%BF%B5"><span class="toc-text">Mybatis 概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8C%81%E4%B9%85%E5%B1%82"><span class="toc-text">持久层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A1%86%E6%9E%B6"><span class="toc-text">框架</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC-%E7%BC%BA%E7%82%B9"><span class="toc-text">JDBC 缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Mybatis-%E4%BC%98%E5%8C%96"><span class="toc-text">Mybatis 优化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyBatis-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-text">MyBatis 快速入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mapper-%E4%BB%A3%E7%90%86%E5%BC%80%E5%8F%91"><span class="toc-text">Mapper 代理开发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Mapper-%E4%BB%A3%E7%90%86%E5%BC%80%E5%8F%91%E6%A6%82%E8%BF%B0"><span class="toc-text">Mapper 代理开发概述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Mapper-%E4%BB%A3%E7%90%86%E8%A6%81%E6%B1%82"><span class="toc-text">使用 Mapper 代理要求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Mapper-%E4%BB%A3%E7%90%86%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-text">Mapper 代理代码实现</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MyBatis-%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">MyBatis 核心配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-text">多环境配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="toc-text">类型别名</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81Mybatis-%E6%A6%82%E8%BF%B0"><span class="toc-text">一、Mybatis 概述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#JDBC-%E7%BC%BA%E7%82%B9"><span class="toc-text">JDBC 缺点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MyBatis-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8"><span class="toc-text">MyBatis 快速入门</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Mapper-%E4%BB%A3%E7%90%86%E5%BC%80%E5%8F%91"><span class="toc-text">二、Mapper 代理开发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-Mapper-%E4%BB%A3%E7%90%86%E8%A6%81%E6%B1%82"><span class="toc-text">使用 Mapper 代理要求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Mapper-%E4%BB%A3%E7%90%86%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-text">Mapper 代理代码实现</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81MyBatis-%E6%A0%B8%E5%BF%83%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">三、MyBatis 核心配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-text">多环境配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="toc-text">类型别名</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -1479,11 +1429,46 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   
   
-    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
   
 
 

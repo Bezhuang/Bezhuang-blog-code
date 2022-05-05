@@ -24,13 +24,10 @@
   
   <title>冒泡排序 - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="Python,Java">
-  
 
   
     <meta name="description" content="
-偶然刷到一篇名为《一半人写不出冒泡排序，你的同龄人都躺下了》的文章，其中提到轮子哥毕业去参加面试的时候，第一轮笔试考察冒泡排序，结果现场的一半学生都没写出来。自己回想了一下，也有一些遗忘。冒泡排序（Bubble Sort）作为最简单直观的排序算法是需要要求做到条件反射般熟练的，故作此笔记记录以防止哪天再次遇到。
-">
+偶然刷到一篇名为《一半人写不出冒泡排序，你的同龄人都躺下了》的文章，其中提到轮子哥毕业去参加面试的时候，第一轮笔试考察冒泡排序，结果现场的一半学生都没写出来。冒泡排序（Bubble Sort），是一种最基础的、最简单直观的交换排序，之所以叫做冒泡排序，是因为越小的元素会经由交换慢慢“浮”到数列的顶端（升序或降序...">
   
 
   <!-- feed -->
@@ -380,7 +377,7 @@
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -466,13 +463,6 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构</a>
-    </a>
-  </div>
-
 
           
         
@@ -480,7 +470,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2021年7月5日</p>
+    <p>本文发布于：2021年7月5日</p>
   </a>
 </div>
 
@@ -491,7 +481,7 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：394字</p>
+      <p>字数：471字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -512,20 +502,17 @@
   
   
   <blockquote>
-<p>偶然刷到一篇名为<a target="_blank" rel="noopener" href="https://www.cnblogs.com/techflow/p/13998832.html">《一半人写不出冒泡排序，你的同龄人都躺下了》</a>的文章，其中提到轮子哥毕业去参加面试的时候，第一轮笔试考察冒泡排序，结果现场的一半学生都没写出来。自己回想了一下，也有一些遗忘。冒泡排序（Bubble Sort）作为最简单直观的排序算法是需要要求做到条件反射般熟练的，故作此笔记记录以防止哪天再次遇到。</p>
+<p>偶然刷到一篇名为<a target="_blank" rel="noopener" href="https://www.cnblogs.com/techflow/p/13998832.html">《一半人写不出冒泡排序，你的同龄人都躺下了》</a>的文章，其中提到轮子哥毕业去参加面试的时候，第一轮笔试考察冒泡排序，结果现场的一半学生都没写出来。冒泡排序（Bubble Sort），是一种最基础的、最简单直观的交换排序，之所以叫做冒泡排序，是因为越小的元素会经由交换慢慢“浮”到数列的顶端（升序或降序排列），就如同碳酸饮料中二氧化碳的气泡最终会上浮到顶端一样。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="冒泡排序的思想"><a href="#冒泡排序的思想" class="headerlink" title="冒泡排序的思想"></a>冒泡排序的思想</h3><ul>
-<li>从头开始两两比较，把较大的元素与较小的元素进行交换</li>
-<li>每轮把当前最大的一个元素存入到数组当前的末尾</li>
-</ul>
-<h3 id="冒泡排序的实现步骤"><a href="#冒泡排序的实现步骤" class="headerlink" title="冒泡排序的实现步骤"></a>冒泡排序的实现步骤</h3><ul>
-<li>定义一个外部循环控制冒泡的轮数（<code>数组.length-1</code>）</li>
-<li>定义一个内部循环控制每轮依次往后比较几个位置（<code>数组.length-i-1</code>）</li>
-<li>如果当前位置的元素值 <code>&gt;</code> 后一个位置的元素值，两者交换</li>
-</ul>
-<h3 id="Java-版代码"><a href="#Java-版代码" class="headerlink" title="Java 版代码"></a>Java 版代码</h3><pre><code class="java">public class BubbleSort &#123;
+<h3 id="一、冒泡排序的思想"><a href="#一、冒泡排序的思想" class="headerlink" title="一、冒泡排序的思想"></a>一、冒泡排序的思想</h3><p>从头开始两两比较，把较大的元素与较小的元素进行交换，每轮把当前最大的一个元素存入到数组当前的末尾。每一趟比较只能确定将一个数归位，如果有 n 个数进行排序，要进行 n-1 趟操作。算法时间复杂度复杂度 <code>O(n)</code> 。</p>
+<h3 id="二、冒泡排序的实现步骤"><a href="#二、冒泡排序的实现步骤" class="headerlink" title="二、冒泡排序的实现步骤"></a>二、冒泡排序的实现步骤</h3><ol>
+<li> 定义一个外部循环控制冒泡的轮数（<code>数组.length-1</code>）</li>
+<li> 定义一个内部循环控制每轮依次往后比较几个位置（<code>数组.length-i-1</code>）</li>
+<li> 如果当前位置的元素值 <code>&gt;</code> 后一个位置的元素值，两者交换</li>
+</ol>
+<h3 id="三、Java-版代码实现"><a href="#三、Java-版代码实现" class="headerlink" title="三、Java 版代码实现"></a>三、Java 版代码实现</h3><pre><code class="java">public class BubbleSort &#123;
     public static void main(String[] args) &#123;
         int[] arr = &#123;5, 2, 3, 1&#125;;
         for (int i = 1; i &lt;= arr.length - 1; i++) &#123;
@@ -542,7 +529,7 @@
         &#125;
     &#125;
 &#125;</code></pre>
-<h3 id="Python-版代码"><a href="#Python-版代码" class="headerlink" title="Python 版代码"></a>Python 版代码</h3><pre><code class="python">def bubbleSort(arr):
+<h3 id="四、Python-版代码实现"><a href="#四、Python-版代码实现" class="headerlink" title="四、Python 版代码实现"></a>四、Python 版代码实现</h3><pre><code class="python">def bubbleSort(arr):
     for i in range(1, len(arr)):
         for j in range(0, len(arr) - i):
             if arr[j] &gt; arr[j + 1]:
@@ -579,20 +566,24 @@
       
         
           
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构</a>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
 <div class='new-meta-item author'>
   <a class='author' href="/about" rel="nofollow">
     <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
     <p>Bezhuang</p>
   </a>
 </div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Python</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div>
-
 
         
       
@@ -605,12 +596,12 @@
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/&title=冒泡排序 - Bezhuang's Blog&summary=
-偶然刷到一篇名为《一半人写不出冒泡排序，你的同龄人都躺下了》的文章，其中提到轮子哥毕业去参加面试的时候，第一轮笔试考察冒泡排序，结果现场的一半学生都没写出来。自己回想了一下，也有一些遗忘。冒泡排序（Bubble Sort）作为最简单直观的排序算法是需要要求做到条件反射般熟练的，故作此笔记记录以防止哪天再次遇到。
+偶然刷到一篇名为《一半人写不出冒泡排序，你的同龄人都躺下了》的文章，其中提到轮子哥毕业去参加面试的时候，第一轮笔试考察冒泡排序，结果现场的一半学生都没写出来。冒泡排序（Bubble Sort），是一种最基础的、最简单直观的交换排序，之所以叫做冒泡排序，是因为越小的元素会经由交换慢慢“浮”到数列的顶端（升序或降序排列），就如同碳酸饮料中二氧化碳的气泡最终会上浮到顶端一样。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -619,12 +610,12 @@
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/&title=冒泡排序 - Bezhuang's Blog&summary=
-偶然刷到一篇名为《一半人写不出冒泡排序，你的同龄人都躺下了》的文章，其中提到轮子哥毕业去参加面试的时候，第一轮笔试考察冒泡排序，结果现场的一半学生都没写出来。自己回想了一下，也有一些遗忘。冒泡排序（Bubble Sort）作为最简单直观的排序算法是需要要求做到条件反射般熟练的，故作此笔记记录以防止哪天再次遇到。
+偶然刷到一篇名为《一半人写不出冒泡排序，你的同龄人都躺下了》的文章，其中提到轮子哥毕业去参加面试的时候，第一轮笔试考察冒泡排序，结果现场的一半学生都没写出来。冒泡排序（Bubble Sort），是一种最基础的、最简单直观的交换排序，之所以叫做冒泡排序，是因为越小的元素会经由交换慢慢“浮”到数列的顶端（升序或降序排列），就如同碳酸饮料中二氧化碳的气泡最终会上浮到顶端一样。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -633,12 +624,12 @@
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/&title=冒泡排序 - Bezhuang's Blog&summary=
-偶然刷到一篇名为《一半人写不出冒泡排序，你的同龄人都躺下了》的文章，其中提到轮子哥毕业去参加面试的时候，第一轮笔试考察冒泡排序，结果现场的一半学生都没写出来。自己回想了一下，也有一些遗忘。冒泡排序（Bubble Sort）作为最简单直观的排序算法是需要要求做到条件反射般熟练的，故作此笔记记录以防止哪天再次遇到。
+偶然刷到一篇名为《一半人写不出冒泡排序，你的同龄人都躺下了》的文章，其中提到轮子哥毕业去参加面试的时候，第一轮笔试考察冒泡排序，结果现场的一半学生都没写出来。冒泡排序（Bubble Sort），是一种最基础的、最简单直观的交换排序，之所以叫做冒泡排序，是因为越小的元素会经由交换慢慢“浮”到数列的顶端（升序或降序排列），就如同碳酸饮料中二氧化碳的气泡最终会上浮到顶端一样。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -646,7 +637,7 @@
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADrElEQVR42u3aS5KDMAwFQO5/6ZkDTKWwngyITHuXDxi1Ny9Sjh8rWgcCcODAgbPAgRsCd4Tr0/V/Njr5/Oz7n/b7dN3Z++16wYEDBw4cOHDghsEtB8CTQqpAq3DpAaXP9/F6cODAgQMHDhy4oXDVAJoGye79Vr+f7gcOHDhw4MCBA/ftcFcH3/Q5q4EdHDhw4MCBAwfuv8GtFlBtLKaNyfQ1OHDgwIEDBw7c2+F2Bdj0j4Mp4Go9Yyb54MCBAwcOHDhwm+DSwfJbX8f1ggMHDhw4cODADYG7alXhr26IbqsLHDhw4MCBAwduCFz1j37dgXW3Ybp63+4fD5d/OYADBw4cOHDgwA2BSzfoDrJTkOp1aVAHBw4cOHDgwIF7K1z6gGmh1UC76wBO6wEHDhw4cODAgRsGl25QDdDlxmHxYLvw8T8ywYEDBw4cOHDgboarbtQt7Kr7pY3L1ffBgQMHDhw4cOCmwnUbi90G4e4BefU5lusGBw4cOHDgwIEbCpcOltMG6FUA1f3bARgcOHDgwIEDB+5muOqFuwe+6WA5bXR2DwocOHDgwIEDB24aXDcIVwuPB8LNA2gPzMGBAwcOHDhw4IbBdRuVq4PjalDd/XzpoBwcOHDgwIEDB24qXBo4q4V0A/Huz8uNT3DgwIEDBw4cuOFwaXDtNjS70LsOFBw4cODAgQMH7i1w6aC2G4x3Nx6PcC0fODhw4MCBAwcO3DC4XYPgaoOy28iMB8vpvuDAgQMHDhw4cMPgVm9QhUwfMA3g6aB6uU5w4MCBAwcOHLhhcKsNwmrg3NWYTAfaqwG8/csBHDhw4MCBAwfuYbjqjbsPmB5Ud6Ce3hccOHDgwIEDB24qXBpw7yrs7v3KvxzAgQMHDhw4cOBuhksDb/r9XQPsaiO2Cro8yQcHDhw4cODAgXsIrhqI08ZmGmi7r9ODAAcOHDhw4MCBextcNbh2H2g1gFYbkke4yh1gcODAgQMHDhy4m+G6qzrQrgbhamG7BtynjUxw4MCBAwcOHLiH4boB8aqBc/fzbqNzuZEJDhw4cODAgQP3MFwaeHfB7w7WtwVgcODAgQMHDhy4IXDVQrswaSCtDqq7wR4cOHDgwIEDB+6/wXWDbQqxLfCCAwcOHDhw4MB9KdyuhuJlA+Ti9+OBNDhw4MCBAwcO3MNw1cKqjcZV4N0Fb2twggMHDhw4cODADYPrDm67jdA0AHcbk+1GJjhw4MCBAwcO3ENwVm2BAwcOHDgLHLiH1y/Y/AII2mmZRwAAAABJRU5ErkJggg==">
           </div>
@@ -660,7 +651,7 @@
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -690,7 +681,7 @@ Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视
       
       
         <a class='next' href='/%E5%8F%8C%E8%89%B2%E7%90%83/'>
-          <p class='title'>双色球系统实现<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='title'>Java 实现双色球系统<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
 双色球是最常见的一种彩票。双色球投注区分为红球号码区和蓝球号码区，红球号码范围为01～33，蓝球号码范围为01～16。双色球每期从33个红球中开出6个号码，从16个蓝球中开出1个号码作为中奖号...</p>
         </a>
@@ -735,7 +726,7 @@ Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%9A%84%E6%80%9D%E6%83%B3"><span class="toc-text">冒泡排序的思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="toc-text">冒泡排序的实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-%E7%89%88%E4%BB%A3%E7%A0%81"><span class="toc-text">Java 版代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-%E7%89%88%E4%BB%A3%E7%A0%81"><span class="toc-text">Python 版代码</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%9A%84%E6%80%9D%E6%83%B3"><span class="toc-text">一、冒泡排序的思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="toc-text">二、冒泡排序的实现步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81Java-%E7%89%88%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-text">三、Java 版代码实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81Python-%E7%89%88%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="toc-text">四、Python 版代码实现</span></a></li></ol>
     </div>
   </section>
 
@@ -1172,11 +1163,46 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   
   
-    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
   
 
 

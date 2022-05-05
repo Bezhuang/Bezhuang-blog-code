@@ -379,7 +379,7 @@
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -465,12 +465,8 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E4%B8%8E%E6%9E%B6%E6%9E%84/">后端开发与架构</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MySQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MySQL</p></a></div>
 
 
           
@@ -479,7 +475,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年7月26日</p>
+    <p>本文发布于：2020年7月26日</p>
   </a>
 </div>
 
@@ -1539,20 +1535,24 @@ DROP TRIGGER IF EXISTS trigger_insert_user;</code></pre>
       
         
           
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
 <div class='new-meta-item author'>
   <a class='author' href="/about" rel="nofollow">
     <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
     <p>Bezhuang</p>
   </a>
 </div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MySQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MySQL</p></a></div>
-
 
         
       
@@ -1570,7 +1570,7 @@ DROP TRIGGER IF EXISTS trigger_insert_user;</code></pre>
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -1584,7 +1584,7 @@ DROP TRIGGER IF EXISTS trigger_insert_user;</code></pre>
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -1598,7 +1598,7 @@ DROP TRIGGER IF EXISTS trigger_insert_user;</code></pre>
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -1606,7 +1606,7 @@ DROP TRIGGER IF EXISTS trigger_insert_user;</code></pre>
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC8UlEQVR42u3awXIiMQwE0Pn/n07uW0shtQwZwfONZAD7celq+fqx/rsuBGDAgAEDBswamCtc/76/+nr690f/P3YeMGDAgAEDBsw6mHIAKh58euAqXLqfh+8HAwYMGDBgwKyFSQPdNJh1odLnnj4PBgwYMGDAgPkamLSgqn7PNBiCAQMGDBgwYMBMAbpFU1qAgQEDBgwYMGC+FyYdnE0PeroY+/NJJBgwYMCAAQPmbTDdlV7kedfr+DxgwIABAwYMmDUwr17dQPZs42mQK+8XDBgwYMCAAbMGJr3gkxZQ0wFbt0BrD+DAgAEDBgwYMOtg0iCWBrwpVPqDtC8OgQEDBgwYMGBuCzMdZE2DVjdopgePB25gwIABAwYMmNvCpADd93cLsWlR1YUGAwYMGDBgwOyDSS/6pMFqWkh1C6o2KBgwYMCAAQPmY2FOb/zU+7s/6MPPBwMGDBgwYMCsgzk1sOoWS9OiKx0YggEDBgwYMGD2w3QHVenraoDrPpfCPy2qwIABAwYMGDDrYKogU6i0WLrCVQYFAwYMGDBgwKyBSQNWurFpQfXy12DAgAEDBgyYNTDdQumvBmQpeBseDBgwYMCAAbMG5tSAawr6qqKsDQwGDBgwYMCAWQNT/cDp812ANBhW9xXfqAIDBgwYMGDA3Bbm9IG6ga8b5NJBYHyjCgwYMGDAgAFzW5jp4KsK3A103QtAXTgwYMCAAQMGzH6YuwS56X7i4goMGDBgwIABsw7m1AWdd0Fd4XoKCAYMGDBgwIBZAzNdabE1PUAaPMtFFRgwYMCAAQPm9jDTjZcLoGYw7H5vN0C2ky8YMGDAgAED5rYwrw503UB2+rk44IEBAwYMGDBg1sB0D3a6kCoPxg4VX2DAgAEDBgwYMNOCKr2IdAoUDBgwYMCAAfN9MGkBlQKlhRQYMGDAgAED5vNhuhuo/v3UxrsDODBgwIABAwbM58OkA6x3BcTpD1UGBgMGDBgwYMCsgbHAgAEDBgwYMMvWL7CzYcq9h4x3AAAAAElFTkSuQmCC">
           </div>
@@ -1620,7 +1620,7 @@ DROP TRIGGER IF EXISTS trigger_insert_user;</code></pre>
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -1642,17 +1642,17 @@ DROP TRIGGER IF EXISTS trigger_insert_user;</code></pre>
   
     <div class="prev-next">
       
-        <a class='prev' href='/%E4%BD%99%E5%A7%9A%E6%B8%B8%E8%AE%B0/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>余姚两日自驾游</p>
+        <a class='prev' href='/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C 语言基础知识总结</p>
           <p class='content'>
-“全球绿色城市”，宁波余姚，位于浙东盆地山区和浙北平原交叉地区，是十分小众的旅游目的地，余姚的四明山盘山公路，号称“浙江最美的盘山公路”、“中国秋名山”，一直深受广大自驾爱好者的喜爱。上半年因...</p>
+1972 年，为了移植与开发 UNIX 操作系统，丹尼斯·里奇在贝尔电话实验室设计开发了 C 语言。C 语言是一种通用的、面向过程式的计算机程序设计语言，它与 Java 编程语言一样普及，二者...</p>
         </a>
       
       
         <a class='next' href='/Creative-Thinking-for-Success/'>
           <p class='title'>Creative Thinking：Techniques and Tools for Success<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
-In this ever-growing and changing world, being able to think creatively and innovatively are ess...</p>
+The greatest innovators aren’t necessarily the people who have the most original idea. Often, th...</p>
         </a>
       
     </div>
@@ -2132,11 +2132,46 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   
   
-    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
   
 
 

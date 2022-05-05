@@ -22,14 +22,12 @@
 
   <!-- 页面元数据 -->
   
-  <title>银行 ATM 系统实现 - Bezhuang&#39;s Blog</title>
-  
-    <meta name="keywords" content="Java">
+  <title>Java 实现银行 ATM 系统 - Bezhuang&#39;s Blog</title>
   
 
   
     <meta name="description" content="
-2022年寒假二刷复习完 Java SE 的全部知识点后，为了更加熟练掌握 Java 面向对象的特性，进一步掌握编程技巧和调试技巧，根据黑马程序员项目指导模拟实现一个银行 ATM 系统软件，以下为项目过程中记录的笔记和项目介绍文档，源代码保存在 Github 仓库中，可供参考。
+在复习完 Java SE 的全部基础知识点后，为了更加熟练掌握 Java 面向对象的特性，进一步掌握编程技巧和调试技巧，使用 Java 模拟实现一个银行 ATM 系统软件，共 Account.java 和 ATM.java 两个 Java 类。
 ">
   
 
@@ -380,7 +378,7 @@
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -460,19 +458,12 @@
     
     
       <h1 class="title">
-        银行 ATM 系统实现
+        Java 实现银行 ATM 系统
       </h1>
       <div class='new-meta-box'>
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E9%A1%B9%E7%9B%AE%E6%96%87%E6%A1%A3%E4%B8%8E%E7%BB%8F%E9%AA%8C/">项目文档与经验</a>
-    </a>
-  </div>
-
 
           
         
@@ -480,7 +471,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年2月5日</p>
+    <p>本文发布于：2022年2月5日</p>
   </a>
 </div>
 
@@ -491,13 +482,13 @@
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：733字</p>
+      <p>字数：3.7k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：2分钟</p>
+      <p>时长：16分钟</p>
     </a>
   </div>
 
@@ -512,70 +503,525 @@
   
   
   <blockquote>
-<p>2022年寒假二刷复习完 Java SE 的全部知识点后，为了更加熟练掌握 Java 面向对象的特性，进一步掌握编程技巧和调试技巧，根据<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Cv411372m">黑马程序员项目指导</a>模拟实现一个银行 ATM 系统软件，以下为项目过程中记录的笔记和项目介绍文档，源代码保存在 <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/Learn-CS/tree/main/%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE/ATM-system">Github 仓库</a>中，可供参考。</p>
+<p>在复习完 Java SE 的全部基础知识点后，为了更加熟练掌握 Java 面向对象的特性，进一步掌握编程技巧和调试技巧，使用 Java 模拟实现一个银行 ATM 系统软件，共 Account.java 和 ATM.java 两个 Java 类。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="银行-ATM-系统技术选型分析"><a href="#银行-ATM-系统技术选型分析" class="headerlink" title="银行 ATM 系统技术选型分析"></a>银行 ATM 系统技术选型分析</h3><ul>
-<li>面向对象编程：每个用户对象要对应一个账户对象，所以需要设计账户类 <code>Account</code></li>
-<li>使用集合容器：系统需要提供一个容器用于存储这些账户对象的信息，选用 <code>ArrayList</code> 集合</li>
-<li>程序流程控制：需要结合分支、循环、跳转等相关操作控制程序的业务逻辑</li>
-<li>使用常见API：内容比较，分析，数据处理等需要用到 <code>String</code> 等常用 API</li>
-</ul>
-<h3 id="账户类、首页设计"><a href="#账户类、首页设计" class="headerlink" title="账户类、首页设计"></a>账户类、首页设计</h3><ul>
-<li><p>每个用户一个账户对象，需要设计账户类 <code>Account</code>，账户类至少包含（卡号、用户名、余额、取现额度、密码）</p>
-</li>
-<li><p>需要定义一个 <code>ArrayList</code> 的集合用于存储账户对象</p>
+<h3 id="一、银行-ATM-系统技术选型分析"><a href="#一、银行-ATM-系统技术选型分析" class="headerlink" title="一、银行 ATM 系统技术选型分析"></a>一、银行 ATM 系统技术选型分析</h3><p>面向对象编程：每个用户对象要对应一个账户对象，所以需要设计账户类 <code>Account</code>。</p>
+<p>使用集合容器：系统需要提供一个容器用于存储这些账户对象的信息，选用 <code>ArrayList</code> 集合。</p>
+<p>程序流程控制：需要结合分支、循环、跳转等相关操作控制程序的业务逻辑。</p>
+<p>使用常见API：内容比较，分析，数据处理等需要用到 <code>String</code> 等常用 API。</p>
+<h3 id="二、Account-账户类设计"><a href="#二、Account-账户类设计" class="headerlink" title="二、Account 账户类设计"></a>二、Account 账户类设计</h3><p>每个用户一个账户对象，需要设计账户类 <code>Account</code>，账户类至少包含（卡号、用户名、余额、取现额度、密码）。</p>
+<pre><code class="java">public class Account &#123;
+    private String cardId; // 卡号
+    private String userName; // 用户名称
+    private String passWord; // 密码
+    private double money; // 账户余额
+    private double quotaMoney; // 每次取现额度限度。
+
+    public String getCardId() &#123;
+        return cardId;
+    &#125;
+
+    public void setCardId(String cardId) &#123;
+        this.cardId = cardId;
+    &#125;
+
+    public String getUserName() &#123;
+        return userName;
+    &#125;
+
+    public void setUserName(String userName) &#123;
+        this.userName = userName;
+    &#125;
+
+    public String getPassWord() &#123;
+        return passWord;
+    &#125;
+
+    public void setPassWord(String passWord) &#123;
+        this.passWord = passWord;
+    &#125;
+
+    public double getMoney() &#123;
+        return money;
+    &#125;
+
+    public void setMoney(double money) &#123;
+        this.money = money;
+    &#125;
+
+    public double getQuotaMoney() &#123;
+        return quotaMoney;
+    &#125;
+
+    public void setQuotaMoney(double quotaMoney) &#123;
+        this.quotaMoney = quotaMoney;
+    &#125;
+&#125;</code></pre>
+<h4 id="三、首页设计"><a href="#三、首页设计" class="headerlink" title="三、首页设计"></a>三、首页设计</h4><p>需要定义一个 <code>ArrayList</code> 的集合用于存储账户对象。</p>
 <pre><code class="java">ArrayList accounts = new ArrayList&lt;&gt;();</code></pre>
-</li>
-<li><p>需要展示欢迎页包含2个功能：注册开户、登录账户</p>
-</li>
-</ul>
-<h3 id="用户开户功能实现"><a href="#用户开户功能实现" class="headerlink" title="用户开户功能实现"></a>用户开户功能实现</h3><ul>
-<li><p>开户功能应该独立定义成方法，并传入当前集合对象给该方法</p>
+<p>需要展示欢迎页包含2个功能：注册开户、登录账户。</p>
+<pre><code class="java">public static void main(String[] args) &#123;
+        // 2、创建一个集合对象，用于后期存入账户对象。
+        ArrayList&lt;Account&gt; accounts = new ArrayList&lt;&gt;();
+
+        // 3、展示系统欢迎页面
+        System.out.println(&quot;======欢迎您进入到黑马ATM系统===============&quot;);
+        while (true) &#123;
+            System.out.println(&quot;1、登录账户&quot;);
+            System.out.println(&quot;2、注册账户&quot;);
+            System.out.println(&quot;请您选择操作：&quot;);
+            Scanner sc = new Scanner(System.in);
+            int command = sc.nextInt();
+            switch (command)&#123;
+                case 1:
+                    // 登录操作
+                    login(accounts, sc);
+                    break;
+                case 2:
+                    // 注册账户
+                    register(accounts, sc);
+                    break;
+                default:
+                    System.out.println(&quot;当前输入的操作不存在！&quot;);
+            &#125;
+        &#125;
+    &#125;</code></pre>
+<h3 id="四、用户开户功能实现"><a href="#四、用户开户功能实现" class="headerlink" title="四、用户开户功能实现"></a>四、用户开户功能实现</h3><p>开户功能应该独立定义成方法，并传入当前集合对象给该方法。</p>
 <pre><code class="java">public static void register(ArrayList&lt;Account&gt; accounts) &#123;…&#125;</code></pre>
-</li>
-<li><p>需要提示用户输入个人信息，开户的卡号是系统自动生成的8位数</p>
+<p>需要提示用户输入个人信息，开户的卡号是系统自动生成的8位数。</p>
 <pre><code class="java">public static String createCardId()&#123;…&#125;</code></pre>
-</li>
-<li><p>注意自动生成的卡号不能与其他用户的卡号重复</p>
-</li>
-<li><p>最终把用户开户的信息封装成 <code>Account</code> 对象，存入到集合中</p>
-</li>
-</ul>
-<h3 id="用户登录功能实现"><a href="#用户登录功能实现" class="headerlink" title="用户登录功能实现"></a>用户登录功能实现</h3><ul>
-<li><p>定义方法</p>
+<p>注意自动生成的卡号不能与其他用户的卡号重复。</p>
+<p>最终把用户开户的信息封装成 <code>Account</code> 对象，存入到集合中。</p>
+<pre><code class="java">    /**
+       用户开户功能
+     */
+        private static void register(ArrayList&lt;Account&gt; accounts, Scanner sc) &#123;
+        System.out.println(&quot;==================欢迎您进入到开户操作======================&quot;);
+        // 2、创建一个账户对象封装账户信息
+        Account acc = new Account();
+        // 1、录入用户账户信息
+        System.out.println(&quot;请您输入账户名称：&quot;);
+        String userName =sc.next();
+        acc.setUserName(userName);
+
+        while (true) &#123;
+            System.out.println(&quot;请您输入账户密码：&quot;);
+            String passWord =sc.next();
+            System.out.println(&quot;请您输入确认密码：&quot;);
+            String okPassWord =sc.next();
+            if(okPassWord.equals(passWord))&#123;
+                // 密码无问题
+                acc.setPassWord(okPassWord);
+                break;
+            &#125;else &#123;
+                System.out.println(&quot;两次输入的密码不一致！&quot;);
+            &#125;
+        &#125;
+        System.out.println(&quot;请您设置当次取现额度：&quot;);
+        double quataMoney = sc.nextDouble();
+        acc.setQuotaMoney(quataMoney);
+        // 关键点：为当前账户生成一个随机的8位数字作为卡号，卡号不能与其他用户的卡号重复。
+        String cardId = createCardId(accounts);
+        acc.setCardId(cardId);
+
+        // 3、把账户对象存入到集合容器对象中去
+        accounts.add(acc);
+        System.out.println(&quot;恭喜您,&quot;+acc.getUserName()+&quot;先生/女士，您开户完成，您的卡号是：&quot; + acc.getCardId());
+    &#125;
+
+    public static String createCardId(ArrayList&lt;Account&gt; accounts)&#123;
+        while (true) &#123;
+            String cardId = &quot;&quot;;
+            // 随机8个数字
+            Random r = new Random();
+            for (int i = 1; i &lt;= 8 ; i++) &#123;
+                cardId += r.nextInt(10);
+            &#125;
+            // 判断这个卡号是否重复：根据卡号去查询账户对象
+            Account account = getAccountByCardId(cardId , accounts);
+            if(account == null)&#123;
+                return cardId;
+            &#125;
+        &#125;
+    &#125;
+
+    public static Account getAccountByCardId(String cardId , ArrayList&lt;Account&gt; accounts)&#123;
+        for (int i = 0; i &lt; accounts.size(); i++) &#123;
+            Account acc = accounts.get(i);
+            if(acc.getCardId().equals(cardId))&#123;
+                return acc;
+            &#125;
+        &#125;
+        return null;
+    &#125;
+&#125;</code></pre>
+<h3 id="五、用户登录功能和界面实现"><a href="#五、用户登录功能和界面实现" class="headerlink" title="五、用户登录功能和界面实现"></a>五、用户登录功能和界面实现</h3><p>定义方法：</p>
 <pre><code class="java">public static void login(ArrayList&lt;Account&gt; accounts) &#123;…&#125;</code></pre>
-</li>
-<li><p>需要根据卡号去集合中查询对应的账户对象</p>
-</li>
-<li><p>如果找到了账户对象，说明卡号存在，继续输入密码</p>
-</li>
-<li><p>如果密码也正确，则登录成功</p>
-</li>
-</ul>
-<h3 id="用户操作页设计、查询账户、退出账户功能"><a href="#用户操作页设计、查询账户、退出账户功能" class="headerlink" title="用户操作页设计、查询账户、退出账户功能"></a>用户操作页设计、查询账户、退出账户功能</h3><ul>
-<li>用户登录成功后，需要进入用户操作页</li>
-<li>查询就是直接展示当前登录成功的账户对象的信息</li>
-<li>退出账户是需要回到首页的</li>
-</ul>
-<h3 id="用户存款、取款功能设计"><a href="#用户存款、取款功能设计" class="headerlink" title="用户存款、取款功能设计"></a>用户存款、取款功能设计</h3><ul>
-<li>存款和取款都是拿到当前用户的账户对象</li>
-<li> 通过调用账户对象的 <code>set</code> 方法修改其余额</li>
-</ul>
-<h3 id="用户转账功能"><a href="#用户转账功能" class="headerlink" title="用户转账功能"></a>用户转账功能</h3><ul>
-<li>转账功能要分析对方账户是否存在的问题</li>
-<li>还要分析自己的余额是否足够的问题</li>
-</ul>
-<h3 id="用户密码修改功能、销户功能"><a href="#用户密码修改功能、销户功能" class="headerlink" title="用户密码修改功能、销户功能"></a>用户密码修改功能、销户功能</h3><ul>
-<li>修改密码就是把当前对象的密码属性使用 <code>set</code> 方法进行更新</li>
-<li>销户是从集合对象中删除当前对象，并回到首页</li>
-</ul>
+<p>需要根据卡号去集合中查询对应的账户对象。如果找到了账户对象，说明卡号存在，继续输入密码。如果密码也正确，则登录成功。</p>
+<p>用户登录成功后，需要进入用户操作页。查询就是直接展示当前登录成功的账户对象的信息。退出账户是需要回到首页的。</p>
+<pre><code class="java">    /**
+       用户登录功能
+     */
+    private static void login(ArrayList&lt;Account&gt; accounts, Scanner sc) &#123;
+        System.out.println(&quot;==================欢迎您进入到登录操作======================&quot;);
+        if(accounts.size() &gt; 0)&#123;
+            while (true) &#123;
+                System.out.println(&quot;请您输入登录的卡号：&quot;);
+                String cardId = sc.next();
+                // 2、根据卡号去集合中查询是否存在账户对象
+                Account acc = getAccountByCardId(cardId , accounts);
+                // 判断账户对象是否存在，存在说明卡号正确
+                if(acc != null)&#123;
+                    while (true) &#123;
+                        // 3、判断密码是否正确
+                        System.out.println(&quot;请您输入登录的密码：&quot;);
+                        String passWord = sc.next();
+                        if(acc.getPassWord().equals(passWord))&#123;
+                            // 登录成功了！
+                            System.out.println(&quot;欢迎你：&quot; + acc.getUserName() + &quot;先生/女士进入系统，您可开始办理你的业务了!&quot;);
+                            // 展示登录成功后的操作界面。
+                            showCommand(sc, acc, accounts);
+                            return;
+                        &#125;else &#123;
+                            System.out.println(&quot;您的密码不正确！&quot;);
+                        &#125;
+                    &#125;
+                &#125;else &#123;
+                    System.out.println(&quot;卡号不存在，请确认！&quot;);
+                &#125;
+            &#125;
+        &#125;else &#123;
+            System.out.println(&quot;当前系统无任何账户，请先注册再登录！&quot;);
+        &#125;
+    &#125;
+
+    /**
+      登录后展示的界面
+     */
+    private static void showCommand(Scanner sc, Account acc, ArrayList&lt;Account&gt; accounts) &#123;
+        while (true) &#123;
+            System.out.println(&quot;==================欢迎您进入到操作界面======================&quot;);
+            System.out.println(&quot;1、查询&quot;);
+            System.out.println(&quot;2、存款&quot;);
+            System.out.println(&quot;3、取款&quot;);
+            System.out.println(&quot;4、转账&quot;);
+            System.out.println(&quot;5、修改密码&quot;);
+            System.out.println(&quot;6、退出&quot;);
+            System.out.println(&quot;7、注销账户&quot;);
+            System.out.println(&quot;请您输入操作命令：&quot;);
+            int command = sc.nextInt();
+            switch (command) &#123;
+                case 1:
+                    // 查询账户信息展示
+                    showAccount(acc);
+                    break;
+                case 2:
+                    // 存款
+                    depositMoney(acc,sc);
+                    break;
+                case 3:
+                    // 取款
+                    drawMoney(acc,sc);
+                    break;
+                case 4:
+                    // 转账
+                    transferMoney(acc, accounts, sc);
+                    break;
+                case 5:
+                    // 修改密码
+                    updatePassWord(acc, sc);
+                    return; // 跳出当前操作的方法，最终回到首页
+                case 6:
+                    // 退出 回到首页
+                    System.out.println(&quot;欢迎下次继续光临！！&quot;);
+                    return; // 结束登录后的全部操作
+                case 7:
+                    // 注销账户
+                    accounts.remove(acc); // 从集合对象中删除当前账户对象。
+                    System.out.println(&quot;您的账户已经完成了销毁，您将不可以进行登录了！&quot;);
+                    return;
+                default:
+                    System.out.println(&quot;您的操作命令有误！&quot;);
+            &#125;
+        &#125;
+
+    &#125;</code></pre>
+<h3 id="六、用户转账、存款、取款功能"><a href="#六、用户转账、存款、取款功能" class="headerlink" title="六、用户转账、存款、取款功能"></a>六、用户转账、存款、取款功能</h3><p>转账功能要分析对方账户是否存在的问题。还要分析自己的余额是否足够的问题。</p>
+<p>存款和取款都是拿到当前用户的账户对象，通过调用账户对象的 <code>set</code> 方法修改其余额。</p>
+<pre><code class="java">    /**
+     * 从当前账户对象中把金额转给其他账户对象。
+     * @param acc
+     * @param accounts
+     * @param sc
+     */
+    private static void transferMoney(Account acc, ArrayList&lt;Account&gt; accounts, Scanner sc) &#123;
+        // 1、判断自己的账户中是否有钱
+        if(acc.getMoney() &lt;= 0)&#123;
+            System.out.println(&quot;您自己都没钱，就别转了吧！&quot;);
+            return;
+        &#125;
+
+        // 2、判断总账户数量是否大于等于2个。
+        if(accounts.size() &gt;= 2)&#123;
+            while (true) &#123;
+                // 3、让当前用户输入对方的账号进行转账
+                System.out.println(&quot;请您输入对方卡号：&quot;);
+                String cardId = sc.next();
+
+                // 4、根据卡号查询出集合中的账户对象
+                Account otherAcc = getAccountByCardId(cardId , accounts);
+                // 5、判断账户对象是否存在，而且这个账户对象不能是自己。
+                if(otherAcc != null)&#123;
+                    // 6、判断当前账户是否是自己。
+                    if(acc.getCardId().equals(otherAcc.getCardId()))&#123;
+                        System.out.println(&quot;不能给自己账户转账！&quot;);
+                    &#125;else &#123;
+                        // 7、正式进入到转账逻辑了
+                        // 黑马刘德华
+                        String rs = &quot;*&quot; + otherAcc.getUserName().substring(1);
+                        System.out.println(&quot;请您确认[&quot;+rs +&quot;]的姓氏来确认！&quot;);
+                        System.out.println(&quot;请您输入对方的姓氏：&quot;);
+                        String preName = sc.next();
+                        if(otherAcc.getUserName().startsWith(preName))&#123;
+                            // 认证通过
+                            while (true) &#123;
+                                System.out.println(&quot;请您输入转账的金额（您最多可以转账：&quot; + acc.getMoney() +&quot;元）：&quot;);
+                                double money = sc.nextDouble();
+                                if(money &gt; acc.getMoney())&#123;
+                                    System.out.println(&quot;你不听话，没有这么多钱可以转！&quot;);
+                                &#125;else &#123;
+                                    // 开始转
+                                    acc.setMoney(acc.getMoney() - money); // 更新自己账户
+                                    otherAcc.setMoney(otherAcc.getMoney() + money);
+                                    System.out.println(&quot;您已经完成转账！您当前还剩余：&quot; + acc.getMoney());
+                                    return;
+                                &#125;
+                            &#125;
+
+                        &#125;else &#123;
+                            System.out.println(&quot;您输入对方的信息有误！&quot;);
+                        &#125;
+                    &#125;
+                &#125;else &#123;
+                    System.out.println(&quot;您输入的转账卡号不存在！&quot;);
+                &#125;
+            &#125;
+        &#125;else &#123;
+            System.out.println(&quot;当前系统中没有其他账户可以转账，去注册一个账户吧！&quot;);
+        &#125;
+
+    &#125;
+
+    private static void drawMoney(Account acc, Scanner sc) &#123;
+        System.out.println(&quot;==================欢迎进入账户取款操作======================&quot;);
+        // 1、判断账户的余额是否高于等于100
+        double money = acc.getMoney();
+        if(money &gt;= 100) &#123;
+            while (true) &#123;
+                // 2、输入取钱的金额
+                System.out.println(&quot;请您输入取钱的金额：&quot;);
+                double drawMoney = sc.nextDouble();
+                // 3、判断取钱金额是否超过了当次限额
+                if(drawMoney &gt; acc.getQuotaMoney())&#123;
+                    System.out.println(&quot;您当前取款金额超过了每次限额！&quot;);
+                &#125;else &#123;
+                    // 4、判断当前取钱金额是超过了账户的余额
+                    if(drawMoney &gt; money)&#123;
+                        System.out.println(&quot;当前余额不足！当前余额是：&quot; + money);
+                    &#125;else &#123;
+                        // 更新账户余额
+                        acc.setMoney(money - drawMoney);
+                        System.out.println(&quot;您当前取钱完成，请拿走你的钱，当前剩余余额是：&quot; + acc.getMoney());
+                        break;
+                    &#125;
+                &#125;
+            &#125;
+        &#125;else &#123;
+            System.out.println(&quot;您当前账户余额不足100元，存钱去吧！&quot;);
+        &#125;
+    &#125;
+
+    private static void depositMoney(Account acc, Scanner sc) &#123;
+        System.out.println(&quot;==================欢迎进入账户存款操作======================&quot;);
+        System.out.println(&quot;请您输入存款金额：&quot;);
+        double money = sc.nextDouble();
+        acc.setMoney(acc.getMoney() + money);
+        showAccount(acc);
+    &#125;
+
+    private static void showAccount(Account acc) &#123;
+        System.out.println(&quot;==================您当前账户详情信息如下======================&quot;);
+        System.out.println(&quot;卡号：&quot; + acc.getCardId());
+        System.out.println(&quot;户主：&quot; + acc.getUserName());
+        System.out.println(&quot;余额：&quot; + acc.getMoney());
+        System.out.println(&quot;当次取现额度：&quot; + acc.getQuotaMoney());
+    &#125;
+    /**
+     * 从当前账户对象中把金额转给其他账户对象。
+     * @param acc
+     * @param accounts
+     * @param sc
+     */
+    private static void transferMoney(Account acc, ArrayList&lt;Account&gt; accounts, Scanner sc) &#123;
+        // 1、判断自己的账户中是否有钱
+        if(acc.getMoney() &lt;= 0)&#123;
+            System.out.println(&quot;您自己都没钱，就别转了吧！&quot;);
+            return;
+        &#125;
+
+        // 2、判断总账户数量是否大于等于2个。
+        if(accounts.size() &gt;= 2)&#123;
+            while (true) &#123;
+                // 3、让当前用户输入对方的账号进行转账
+                System.out.println(&quot;请您输入对方卡号：&quot;);
+                String cardId = sc.next();
+
+                // 4、根据卡号查询出集合中的账户对象
+                Account otherAcc = getAccountByCardId(cardId , accounts);
+                // 5、判断账户对象是否存在，而且这个账户对象不能是自己。
+                if(otherAcc != null)&#123;
+                    // 6、判断当前账户是否是自己。
+                    if(acc.getCardId().equals(otherAcc.getCardId()))&#123;
+                        System.out.println(&quot;不能给自己账户转账！&quot;);
+                    &#125;else &#123;
+                        // 7、正式进入到转账逻辑了
+                        // 黑马刘德华
+                        String rs = &quot;*&quot; + otherAcc.getUserName().substring(1);
+                        System.out.println(&quot;请您确认[&quot;+rs +&quot;]的姓氏来确认！&quot;);
+                        System.out.println(&quot;请您输入对方的姓氏：&quot;);
+                        String preName = sc.next();
+                        if(otherAcc.getUserName().startsWith(preName))&#123;
+                            // 认证通过
+                            while (true) &#123;
+                                System.out.println(&quot;请您输入转账的金额（您最多可以转账：&quot; + acc.getMoney() +&quot;元）：&quot;);
+                                double money = sc.nextDouble();
+                                if(money &gt; acc.getMoney())&#123;
+                                    System.out.println(&quot;你不听话，没有这么多钱可以转！&quot;);
+                                &#125;else &#123;
+                                    // 开始转
+                                    acc.setMoney(acc.getMoney() - money); // 更新自己账户
+                                    otherAcc.setMoney(otherAcc.getMoney() + money);
+                                    System.out.println(&quot;您已经完成转账！您当前还剩余：&quot; + acc.getMoney());
+                                    return;
+                                &#125;
+                            &#125;
+
+                        &#125;else &#123;
+                            System.out.println(&quot;您输入对方的信息有误！&quot;);
+                        &#125;
+                    &#125;
+                &#125;else &#123;
+                    System.out.println(&quot;您输入的转账卡号不存在！&quot;);
+                &#125;
+            &#125;
+        &#125;else &#123;
+            System.out.println(&quot;当前系统中没有其他账户可以转账，去注册一个账户吧！&quot;);
+        &#125;
+
+    &#125;
+
+    private static void drawMoney(Account acc, Scanner sc) &#123;
+        System.out.println(&quot;==================欢迎进入账户取款操作======================&quot;);
+        // 1、判断账户的余额是否高于等于100
+        double money = acc.getMoney();
+        if(money &gt;= 100) &#123;
+            while (true) &#123;
+                // 2、输入取钱的金额
+                System.out.println(&quot;请您输入取钱的金额：&quot;);
+                double drawMoney = sc.nextDouble();
+                // 3、判断取钱金额是否超过了当次限额
+                if(drawMoney &gt; acc.getQuotaMoney())&#123;
+                    System.out.println(&quot;您当前取款金额超过了每次限额！&quot;);
+                &#125;else &#123;
+                    // 4、判断当前取钱金额是超过了账户的余额
+                    if(drawMoney &gt; money)&#123;
+                        System.out.println(&quot;当前余额不足！当前余额是：&quot; + money);
+                    &#125;else &#123;
+                        // 更新账户余额
+                        acc.setMoney(money - drawMoney);
+                        System.out.println(&quot;您当前取钱完成，请拿走你的钱，当前剩余余额是：&quot; + acc.getMoney());
+                        break;
+                    &#125;
+                &#125;
+            &#125;
+        &#125;else &#123;
+            System.out.println(&quot;您当前账户余额不足100元，存钱去吧！&quot;);
+        &#125;
+    &#125;
+
+    private static void depositMoney(Account acc, Scanner sc) &#123;
+        System.out.println(&quot;==================欢迎进入账户存款操作======================&quot;);
+        System.out.println(&quot;请您输入存款金额：&quot;);
+        double money = sc.nextDouble();
+        acc.setMoney(acc.getMoney() + money);
+        showAccount(acc);
+    &#125;
+
+    private static void showAccount(Account acc) &#123;
+        System.out.println(&quot;==================您当前账户详情信息如下======================&quot;);
+        System.out.println(&quot;卡号：&quot; + acc.getCardId());
+        System.out.println(&quot;户主：&quot; + acc.getUserName());
+        System.out.println(&quot;余额：&quot; + acc.getMoney());
+        System.out.println(&quot;当次取现额度：&quot; + acc.getQuotaMoney());
+    &#125;</code></pre>
+<h3 id="七、用户密码修改功能、销户功能"><a href="#七、用户密码修改功能、销户功能" class="headerlink" title="七、用户密码修改功能、销户功能"></a>七、用户密码修改功能、销户功能</h3><p>修改密码就是把当前对象的密码属性使用 <code>set</code> 方法进行更新。销户是从集合对象中删除当前对象，并回到首页。</p>
+<pre><code class="java">    /**
+      修改当前账户对象的密码
+     * @param acc
+     */
+    private static void updatePassWord(Account acc, Scanner sc) &#123;
+        // 1、判断旧密码是否正确
+        while (true) &#123;
+            System.out.println(&quot;请您输入当前密码认证：&quot;);
+            String passWord = sc.next();
+            if(acc.getPassWord().equals(passWord))&#123;
+                while (true) &#123;
+                    // 2、输入新密码
+                    System.out.println(&quot;请您输入新密码：&quot;);
+                    String newPassWord = sc.next();
+                    System.out.println(&quot;请您确认新密码：&quot;);
+                    String okPassWord = sc.next();
+                    // 3、比对两次密码是否一致
+                    if(newPassWord.equals(okPassWord))&#123;
+                        acc.setPassWord(okPassWord);
+                        System.out.println(&quot;密码已经修改成功，请重新登录！&quot;);
+                        return;
+                    &#125;else &#123;
+                        System.out.println(&quot;两次密码不一致！&quot;);
+                    &#125;
+                &#125;
+            &#125;else &#123;
+                System.out.println(&quot;您输入的密码有误。请重新确认密码！&quot;);
+            &#125;
+        &#125;
+    &#125;</code></pre>
 
   
   
     
     <div class='footer'>
+      
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>References</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://www.bilibili.com/video/BV1Cv411372m" rel="external nofollow noopener noreferrer" target="_blank">
+                  Java入门基础视频教程
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        </div>
       
       
       
@@ -602,6 +1048,18 @@
       
         
           
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Java/">Java</a>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
 <div class='new-meta-item author'>
   <a class='author' href="/about" rel="nofollow">
     <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
@@ -613,27 +1071,19 @@
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div>
-
-
-        
-      
-        
-          
   <div class="new-meta-item share -mob-share-list">
   <div class="-mob-share-list share-body">
     
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/ATM%E7%B3%BB%E7%BB%9F/&title=银行 ATM 系统实现 - Bezhuang's Blog&summary=
-2022年寒假二刷复习完 Java SE 的全部知识点后，为了更加熟练掌握 Java 面向对象的特性，进一步掌握编程技巧和调试技巧，根据黑马程序员项目指导模拟实现一个银行 ATM 系统软件，以下为项目过程中记录的笔记和项目介绍文档，源代码保存在 Github 仓库中，可供参考。
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/ATM%E7%B3%BB%E7%BB%9F/&title=Java 实现银行 ATM 系统 - Bezhuang's Blog&summary=
+在复习完 Java SE 的全部基础知识点后，为了更加熟练掌握 Java 面向对象的特性，进一步掌握编程技巧和调试技巧，使用 Java 模拟实现一个银行 ATM 系统软件，共 Account.java 和 ATM.java 两个 Java 类。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -641,13 +1091,13 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/ATM%E7%B3%BB%E7%BB%9F/&title=银行 ATM 系统实现 - Bezhuang's Blog&summary=
-2022年寒假二刷复习完 Java SE 的全部知识点后，为了更加熟练掌握 Java 面向对象的特性，进一步掌握编程技巧和调试技巧，根据黑马程序员项目指导模拟实现一个银行 ATM 系统软件，以下为项目过程中记录的笔记和项目介绍文档，源代码保存在 Github 仓库中，可供参考。
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/ATM%E7%B3%BB%E7%BB%9F/&title=Java 实现银行 ATM 系统 - Bezhuang's Blog&summary=
+在复习完 Java SE 的全部基础知识点后，为了更加熟练掌握 Java 面向对象的特性，进一步掌握编程技巧和调试技巧，使用 Java 模拟实现一个银行 ATM 系统软件，共 Account.java 和 ATM.java 两个 Java 类。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -655,13 +1105,13 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/ATM%E7%B3%BB%E7%BB%9F/&title=银行 ATM 系统实现 - Bezhuang's Blog&summary=
-2022年寒假二刷复习完 Java SE 的全部知识点后，为了更加熟练掌握 Java 面向对象的特性，进一步掌握编程技巧和调试技巧，根据黑马程序员项目指导模拟实现一个银行 ATM 系统软件，以下为项目过程中记录的笔记和项目介绍文档，源代码保存在 Github 仓库中，可供参考。
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/ATM%E7%B3%BB%E7%BB%9F/&title=Java 实现银行 ATM 系统 - Bezhuang's Blog&summary=
+在复习完 Java SE 的全部基础知识点后，为了更加熟练掌握 Java 面向对象的特性，进一步掌握编程技巧和调试技巧，使用 Java 模拟实现一个银行 ATM 系统软件，共 Account.java 和 ATM.java 两个 Java 类。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -669,7 +1119,7 @@
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADCUlEQVR42u3aQXLjMAwEQP//09kHJCkCA8obJM2bbFki25cpAK8P68v1QgAGDBgwYMCsgXmFq/v77+7/tLHD5999f+08YMCAAQMGDJh1MOUAVDzo6br7++pzx+cBAwYMGDBgwKyFqQa06QGqAe3WH1K+HwwYMGDAgAHzZ2CqhaJqIalb0AIDBgwYMGDAgHkq4HV/X22spc8DAwYMGDBgwPxemO5Gqht4ukD14zqRYMCAAQMGDJi3wXRXOsjzruv4PGDAgAEDBgyYNTDvWtVAVg2K3SBX3icYMGDAgAEDZg1Mt/CUbjwdEHo3PBgwYMCAAQNmL0y1IJUWjm5BVb9/bKIKDBgwYMCAAfPfYdIHVQNe2qibBtBuUAUDBgwYMGDA7INJG1vdA6eA04JUdd9gwIABAwYMmL0waaMqLgg1IaoNufR+MGDAgAEDBsxemDQQ3RpAqjbSuoWq9jnAgAEDBgwYMOthpgWhW4ND0z8GDBgwYMCAAfN7YbovqDbK0sJUdx/tQtTpGgwYMGDAgAGzBmY6cBM3tsLC0rTxd9wnGDBgwIABA2YNTBqMpsEvLVA9fg0GDBgwYMCAWQfTDVzT+9PCVvfzNjwYMGDAgAEDZh3MNMh1A990IKgLW/5DwIABAwYMGDDrYNLg1m3UVQ/6VAHt+DwwYMCAAQMGzBqY6aDN0420LkT1/cfBITBgwIABAwbMGpi04HNr4CcF78IenwsGDBgwYMCAWQvTLfCkQawbDG81Bo/PBQMGDBgwYMCsg0kHebpw02A2DZ5HSDBgwIABAwbMGpjpSoPe9ABPNeDAgAEDBgwYMHtgbjfS0g2mwTBtxMXJFwwYMGDAgAHz42DSQDVtiFUbcNP7ytdgwIABAwYMmLUwtxpktwaC0kJX9T1gwIABAwYMGDC3Bnmmg0TjBiEYMGDAgAED5s/A3BrgmRa6pg09MGDAgAEDBsx+mO4GbhWUqhvvNuDa7wcDBgwYMGDArINJC0zdIDgtNHXh20EUDBgwYMCAAbMGxgIDBgwYMGDALFv/AESWY6zZliciAAAAAElFTkSuQmCC">
           </div>
@@ -679,11 +1129,11 @@
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/ATM%E7%B3%BB%E7%BB%9F/&text=银行 ATM 系统实现 - Bezhuang's Blog"
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/ATM%E7%B3%BB%E7%BB%9F/&text=Java 实现银行 ATM 系统 - Bezhuang's Blog"
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -758,7 +1208,7 @@ The Accenture Know-the-Code Virtual Experience Program covers the fundamentals o
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%B6%E8%A1%8C-ATM-%E7%B3%BB%E7%BB%9F%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E5%88%86%E6%9E%90"><span class="toc-text">银行 ATM 系统技术选型分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A6%E6%88%B7%E7%B1%BB%E3%80%81%E9%A6%96%E9%A1%B5%E8%AE%BE%E8%AE%A1"><span class="toc-text">账户类、首页设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%BC%80%E6%88%B7%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="toc-text">用户开户功能实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="toc-text">用户登录功能实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E6%93%8D%E4%BD%9C%E9%A1%B5%E8%AE%BE%E8%AE%A1%E3%80%81%E6%9F%A5%E8%AF%A2%E8%B4%A6%E6%88%B7%E3%80%81%E9%80%80%E5%87%BA%E8%B4%A6%E6%88%B7%E5%8A%9F%E8%83%BD"><span class="toc-text">用户操作页设计、查询账户、退出账户功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%AD%98%E6%AC%BE%E3%80%81%E5%8F%96%E6%AC%BE%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1"><span class="toc-text">用户存款、取款功能设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E8%BD%AC%E8%B4%A6%E5%8A%9F%E8%83%BD"><span class="toc-text">用户转账功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9%E5%8A%9F%E8%83%BD%E3%80%81%E9%94%80%E6%88%B7%E5%8A%9F%E8%83%BD"><span class="toc-text">用户密码修改功能、销户功能</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%93%B6%E8%A1%8C-ATM-%E7%B3%BB%E7%BB%9F%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E5%88%86%E6%9E%90"><span class="toc-text">一、银行 ATM 系统技术选型分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Account-%E8%B4%A6%E6%88%B7%E7%B1%BB%E8%AE%BE%E8%AE%A1"><span class="toc-text">二、Account 账户类设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%A6%96%E9%A1%B5%E8%AE%BE%E8%AE%A1"><span class="toc-text">三、首页设计</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%94%A8%E6%88%B7%E5%BC%80%E6%88%B7%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="toc-text">四、用户开户功能实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD%E5%92%8C%E7%95%8C%E9%9D%A2%E5%AE%9E%E7%8E%B0"><span class="toc-text">五、用户登录功能和界面实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%94%A8%E6%88%B7%E8%BD%AC%E8%B4%A6%E3%80%81%E5%AD%98%E6%AC%BE%E3%80%81%E5%8F%96%E6%AC%BE%E5%8A%9F%E8%83%BD"><span class="toc-text">六、用户转账、存款、取款功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9%E5%8A%9F%E8%83%BD%E3%80%81%E9%94%80%E6%88%B7%E5%8A%9F%E8%83%BD"><span class="toc-text">七、用户密码修改功能、销户功能</span></a></li></ol>
     </div>
   </section>
 
@@ -777,7 +1227,7 @@ The Accenture Know-the-Code Virtual Experience Program covers the fundamentals o
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="银行 ATM 系统实现";
+  pdata.postTitle="Java 实现银行 ATM 系统";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
@@ -1195,11 +1645,46 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   
   
-    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
   
 
 

@@ -24,12 +24,10 @@
   
   <title>机器学习和深度学习介绍及入门 - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="d2l">
-  
 
   
     <meta name="description" content="
-就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择李沐老师的动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。以下为学习 Dive to Deep Learni...">
+机器学习（machine learning，ML）是一类强大的可以从经验中学习的技术。 通常采用观测数据或与环境交互的形式，机器学习算法会积累更多的经验，其性能也会逐步提高就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择动手学深...">
   
 
   <!-- feed -->
@@ -379,7 +377,7 @@
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -465,13 +463,6 @@
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">人工智能与机器学习</a>
-    </a>
-  </div>
-
 
           
         
@@ -479,7 +470,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月8日</p>
+    <p>本文发布于：2022年3月8日</p>
   </a>
 </div>
 
@@ -496,7 +487,7 @@
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：28分钟</p>
+      <p>时长：27分钟</p>
     </a>
   </div>
 
@@ -511,12 +502,11 @@
   
   
   <blockquote>
-<p>就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择李沐老师的动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。以下为学习 Dive to Deep Learning（d2l） 课程第一章所记笔记，可供参考。</p>
+<p>机器学习（machine learning，ML）是一类强大的可以从经验中学习的技术。 通常采用观测数据或与环境交互的形式，机器学习算法会积累更多的经验，其性能也会逐步提高就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。</p>
 </blockquote>
 <a id="more"></a>
 
 <h3 id="日常生活中的机器学习"><a href="#日常生活中的机器学习" class="headerlink" title="日常生活中的机器学习"></a>日常生活中的机器学习</h3><ul>
-<li>机器学习（machine learning，ML）是一类强大的可以从经验中学习的技术。 通常采用观测数据或与环境交互的形式，机器学习算法会积累更多的经验，其性能也会逐步提高</li>
 <li>Hey, Siri：收集一个包含音频样本的巨大的数据集（dataset），并对包含和不包含唤醒词的样本进行标记</li>
 <li>通过机器学习算法，我们不需要设计一个“明确地”识别唤醒词的系统。 相反，我们定义一个灵活的程序算法，其输出由许多参数（parameter）决定。 然后我们使用数据集来确定当下的“最佳参数集”，这些参数通过某种性能度量来获取完成任务的最佳性能</li>
 <li>把参数看作是旋钮，我们可以转动旋钮来调整程序的行为。 任一调整参数后的程序，我们称为模型（model）</li>
@@ -775,20 +765,24 @@ git clone git@github.com:d2l-ai/d2l-zh-pytorch-slides.git</code></pre>
       
         
           
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
 <div class='new-meta-item author'>
   <a class='author' href="/about" rel="nofollow">
     <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
     <p>Bezhuang</p>
   </a>
 </div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/d2l/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>d2l</p></a></div>
-
 
         
       
@@ -801,12 +795,12 @@ git clone git@github.com:d2l-ai/d2l-zh-pytorch-slides.git</code></pre>
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/&title=机器学习和深度学习介绍及入门 - Bezhuang's Blog&summary=
-就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择李沐老师的动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。以下为学习 Dive to Deep Learning（d2l） 课程第一章所记笔记，可供参考。
+机器学习（machine learning，ML）是一类强大的可以从经验中学习的技术。 通常采用观测数据或与环境交互的形式，机器学习算法会积累更多的经验，其性能也会逐步提高就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -815,12 +809,12 @@ git clone git@github.com:d2l-ai/d2l-zh-pytorch-slides.git</code></pre>
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/&title=机器学习和深度学习介绍及入门 - Bezhuang's Blog&summary=
-就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择李沐老师的动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。以下为学习 Dive to Deep Learning（d2l） 课程第一章所记笔记，可供参考。
+机器学习（machine learning，ML）是一类强大的可以从经验中学习的技术。 通常采用观测数据或与环境交互的形式，机器学习算法会积累更多的经验，其性能也会逐步提高就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -829,12 +823,12 @@ git clone git@github.com:d2l-ai/d2l-zh-pytorch-slides.git</code></pre>
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/&title=机器学习和深度学习介绍及入门 - Bezhuang's Blog&summary=
-就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择李沐老师的动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。以下为学习 Dive to Deep Learning（d2l） 课程第一章所记笔记，可供参考。
+机器学习（machine learning，ML）是一类强大的可以从经验中学习的技术。 通常采用观测数据或与环境交互的形式，机器学习算法会积累更多的经验，其性能也会逐步提高就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -842,7 +836,7 @@ git clone git@github.com:d2l-ai/d2l-zh-pytorch-slides.git</code></pre>
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEaklEQVR42u3aQY4bMQwEQP//08k9gWGySWnWi9LNhkcjlXwQiX79MY6MFwKwYA2wYMEaYK/AvsLx7/PvPv/34vA9Hzf04bnq/GMPsGDBggULFixYsFdhuxvowla/Tzf8ab7qPsceYMGCBQsWLFiwYB+B7S48vaBXgbtw1QKl+7m8HrBgwYIFCxYsWLBfAds9gHEgYqlB3YUHCxYsWLBgwYIF+7tgu43o7YDF1u/BggULFixYsGDBfjfs9ILeXVA6poGMrcIGLFiwYMGCBQsW7LOw0439ts+xB1iwYMGCBQsWLNgrsKcDFGmDvHvR7wZKTgVLwIIFCxYsWLBgwd6BrS5kq1BID2L6XDdI0m3kgwULFixYsGDBgn0WthxMGDaI06DHKei1PwhYsGDBggULFizYK7BbC00b0dUFTxvk1cInbbCDBQsWLFiwYMGCvQubNobTAEb14t+dv9uwP3ZQYMGCBQsWLFiwYK/CpgGJbqHR3cD2BT8tZMrgYMGCBQsWLFiwYK/AToMMW43v9CC3CohpUAQsWLBgwYIFCxbss7DdhXYXlDaQtwIf3d+1/1hgwYIFCxYsWLBgr8DGwYQmwLRx3i1cuu+dNuLBggULFixYsGDB/izYUxf8bqGxdQBp47z8PViwYMGCBQsWLNgrsNWFTYMU28+l86SjXHiABQsWLFiwYMGCvQK7Hcw9tYG0QJiuszsPWLBgwYIFCxYs2Luw3Y1NA8nTRvRWEKPbWP/4HFiwYMGCBQsWLNgrsKcXnl6404v+9ADHgRSwYMGCBQsWLFiwV2GrC0oX0A0Epxf06funfxCwYMGCBQsWLFiwd2G3GsPpAVR/nxYapwIh5coLLFiwYMGCBQsW7CrsVkM6BWtfwJcb6NMDAQsWLFiwYMGCBfsMbBrESAuEtJBIC5juuqbBEbBgwYIFCxYsWLB3YNMLdfVF6Xxd6DSosV2wgAULFixYsGDBgr0LO71YTwuMLth2Y3zrIMCCBQsWLFiwYME+A1u9MHcXeqoQmP4uXefbecGCBQsWLFiwYMFegU3BxsGGpYJiWoCkBwQWLFiwYMGCBQv2Z8BWH9wqLE4FMrYKlHhfYMGCBQsWLFiwYK/AphN34aeBkOmBpwGUdsECFixYsGDBggUL9gpst9E9bYCnBcfW76fztSsvsGDBggULFixYsEdh0yDGNkR6QGlhsDXAggULFixYsGDBPgObju1gRhXm9vrLBwYWLFiwYMGCBQv2Cuz4QhwWFu+ev90QTwMi5SQMWLBgwYIFCxYs2KOw6YX6VFAj/X4LLj4YsGDBggULFixYsI/AngpobDWsp8GSNLhRPgiwYMGCBQsWLFiwXwGbBoKfDn6kBcxHD7BgwYIFCxYsWLBfBZtudLqRreBItUH+cX1gwYIFCxYsWLBgH4FNG83TBa1d0IdBke6BlRvdYMGCBQsWLFiwYI/Adkf3xWnBUT2QrWDJODgCFixYsGDBggUL9gqssTvAggVrgAUL1gB7dPwFHQ9RhUPLQicAAAAASUVORK5CYII=">
           </div>
@@ -856,7 +850,7 @@ git clone git@github.com:d2l-ai/d2l-zh-pytorch-slides.git</code></pre>
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -1368,11 +1362,46 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   
   
-    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
   
 
 

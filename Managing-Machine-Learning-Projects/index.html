@@ -377,7 +377,7 @@ This course provided by GOOGLE CLOUD is intended to be an introduction to machin
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -463,13 +463,6 @@ This course provided by GOOGLE CLOUD is intended to be an introduction to machin
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">人工智能与机器学习</a>
-    </a>
-  </div>
-
 
           
         
@@ -477,7 +470,7 @@ This course provided by GOOGLE CLOUD is intended to be an introduction to machin
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年6月8日</p>
+    <p>本文发布于：2020年6月8日</p>
   </a>
 </div>
 
@@ -488,7 +481,7 @@ This course provided by GOOGLE CLOUD is intended to be an introduction to machin
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：471字</p>
+      <p>字数：466字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -509,7 +502,7 @@ This course provided by GOOGLE CLOUD is intended to be an introduction to machin
   
   
   <blockquote>
-<p>This course provided by GOOGLE CLOUD is intended to be an introduction to machine learning for business professionals. It teaches me how to translate business problems into machine learning use cases and vet them for feasibility and impact. The following are the notes I took during this course.</p>
+<p>This course provided by GOOGLE CLOUD is intended to be an introduction to machine learning for business professionals. It teaches me how to translate business problems into machine learning use cases and vet them for feasibility and impact.</p>
 </blockquote>
 <a id="more"></a>
 
@@ -522,125 +515,103 @@ This course provided by GOOGLE CLOUD is intended to be an introduction to machin
 
 
 
-<h3 id="What-is-Machine-Learning"><a href="#What-is-Machine-Learning" class="headerlink" title="What is Machine Learning ?"></a>What is Machine Learning ?</h3><ul>
-<li>ML is a way to use standard algorithms to derive predictive insights from data and make repeated decisions.</li>
-</ul>
+<h3 id="1-What-is-Machine-Learning"><a href="#1-What-is-Machine-Learning" class="headerlink" title="1. What is Machine Learning ?"></a>1. What is Machine Learning ?</h3><p>ML is a way to use standard algorithms to derive predictive insights from data and make repeated decisions.</p>
 <h4 id="Phases-of-ML"><a href="#Phases-of-ML" class="headerlink" title="Phases of ML"></a>Phases of ML</h4><ol>
-<li>Collecting data</li>
-<li>Labeling data</li>
-<li>Training using chosen metrics and objectives</li>
-<li>Evaluate a model</li>
-<li>Deploy a model</li>
+<li>Collecting data.</li>
+<li>Labeling data.</li>
+<li>Training using chosen metrics and objectives.</li>
+<li>Evaluate a model.</li>
+<li>Deploy a model.</li>
 </ol>
-<h3 id="Good-data-characteristic"><a href="#Good-data-characteristic" class="headerlink" title="Good data characteristic"></a>Good data characteristic</h3><ol>
-<li>Has coverage</li>
-<li>Is clean</li>
-<li>Is complete</li>
+<h3 id="2-Good-data-characteristic"><a href="#2-Good-data-characteristic" class="headerlink" title="2. Good data characteristic"></a>2. Good data characteristic</h3><ol>
+<li>Has coverage.</li>
+<li>Is clean.</li>
+<li>Is complete.</li>
 </ol>
-<h3 id="ML-vs-AI"><a href="#ML-vs-AI" class="headerlink" title="ML vs AI"></a>ML vs AI</h3><ul>
-<li>ML is a type of Artificial intelligence.</li>
-<li>Logic vs Machine Learning</li>
-<li>Neural networks &amp; Deep learning</li>
-<li>Use AI responsibly — responsible AI = successful AI</li>
-</ul>
-<h3 id="Why-ML-now"><a href="#Why-ML-now" class="headerlink" title="Why ML now ?"></a>Why ML now ?</h3><ul>
-<li>Increasing availability of data</li>
-<li>Increasing maturity and sophistication of ML algorithms</li>
-<li>Increasing power and availability of computing hardware and software</li>
-</ul>
-<h3 id="Labeling-data"><a href="#Labeling-data" class="headerlink" title="Labeling data"></a>Labeling data</h3><ul>
-<li>Label is the true answer for a given input.</li>
-<li>Regression vs Classification</li>
-<li>Every example needs to have features and a label.</li>
-<li>Ways to label your data<ol>
-<li>Use a proxy label</li>
-<li>Build a labeling system</li>
-<li>Use a labeling service</li>
+<h3 id="3-ML-vs-AI"><a href="#3-ML-vs-AI" class="headerlink" title="3. ML vs AI"></a>3. ML vs AI</h3><p>ML is a type of Artificial intelligence.</p>
+<p>Logic vs Machine Learning.</p>
+<p>Neural networks &amp; Deep learning.</p>
+<p>Use AI responsibly — responsible AI = successful AI.</p>
+<h3 id="4-Why-ML-now"><a href="#4-Why-ML-now" class="headerlink" title="4. Why ML now ?"></a>4. Why ML now ?</h3><ol>
+<li> Increasing availability of data.</li>
+<li> Increasing maturity and sophistication of ML algorithms.</li>
+<li> Increasing power and availability of computing hardware and software.</li>
 </ol>
-</li>
-</ul>
-<h3 id="Modeling-Training"><a href="#Modeling-Training" class="headerlink" title="Modeling Training"></a>Modeling Training</h3><ul>
-<li>Continuous training keeps models fresh</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/tensorflow">https://github.com/tensorflow</a></li>
-</ul>
-<h4 id="Formulating-the-ML-problem"><a href="#Formulating-the-ML-problem" class="headerlink" title="Formulating the ML problem"></a>Formulating the ML problem</h4><ol>
-<li>Choosing input features</li>
-<li>Get labels</li>
-<li>Choose an objective</li>
-</ol>
-<h3 id="Modeling-Evaluation"><a href="#Modeling-Evaluation" class="headerlink" title="Modeling Evaluation"></a>Modeling Evaluation</h3><ul>
-<li>Test data (20%)</li>
-<li>Confusion matrices measure performance relative to expectations for classification.</li>
-</ul>
-<h3 id="ML-Best-Practices"><a href="#ML-Best-Practices" class="headerlink" title="ML Best Practices"></a>ML Best Practices</h3><ol>
-<li>ML involves experimentation</li>
-<li>start simple</li>
-<li>Don’t use your test data during experimentation</li>
-<li>Do pilot projects with end-users</li>
-</ol>
-<h3 id="Human-Bias-in-ML"><a href="#Human-Bias-in-ML" class="headerlink" title="Human Bias in ML"></a>Human Bias in ML</h3><ul>
-<li>Decisions made as you do ML have real world impact for you and your customers</li>
-<li>Unconscious biases exist in data</li>
-<li>Fairness in ML</li>
-</ul>
-<h3 id="Discovering-ML-Use-Cases"><a href="#Discovering-ML-Use-Cases" class="headerlink" title="Discovering ML Use Cases"></a>Discovering ML Use Cases</h3><ul>
-<li>Simplifying rule-based systems</li>
-<li>Streaming business processes</li>
-<li>Understanding unstructured data</li>
-<li>Personalizing experiences<ul>
-<li>Adds significant value to users</li>
-</ul>
-</li>
-<li>Recommender systems</li>
-</ul>
-<h4 id="ML-in-Series"><a href="#ML-in-Series" class="headerlink" title="ML in Series"></a>ML in Series</h4><h3 id="Data-Strategy"><a href="#Data-Strategy" class="headerlink" title="Data Strategy"></a>Data Strategy</h3><ul>
-<li>ML is about repeated decisions</li>
-</ul>
+<h3 id="5-Labeling-data"><a href="#5-Labeling-data" class="headerlink" title="5. Labeling data"></a>5. Labeling data</h3><p>Label is the true answer for a given input.</p>
+<p>Regression vs Classification.</p>
+<p>Every example needs to have features and a label.</p>
+<p>Ways to label your data:</p>
 <ol>
-<li>Design a system so that you will have more data next year</li>
-<li>Break down data silos</li>
-<li>Transition from data lakes to data warehouses</li>
-<li>Learn about your data</li>
-<li>Integrate pilots into your tools</li>
-<li>Run ML models on real-time data to extract the most value</li>
-<li>Collect more data</li>
+<li>Use a proxy label.</li>
+<li>Build a labeling system.</li>
+<li>Use a labeling service.</li>
 </ol>
-<h3 id="Data-Governance"><a href="#Data-Governance" class="headerlink" title="Data Governance"></a>Data Governance</h3><ul>
-<li>Data access must be balanced against security</li>
-<li>Three goals for ML and Privacy<ol>
-<li>Identify sensitive data</li>
-<li>Protect sensitive data by removing, masking or coarsening</li>
-<li>Create public governance documentation</li>
+<h3 id="6-Modeling-Training"><a href="#6-Modeling-Training" class="headerlink" title="6. Modeling Training"></a>6. Modeling Training</h3><p>Continuous training keeps models fresh.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/tensorflow">https://github.com/tensorflow</a>.</p>
+<h4 id="Formulating-the-ML-problem"><a href="#Formulating-the-ML-problem" class="headerlink" title="Formulating the ML problem"></a>Formulating the ML problem</h4><ol>
+<li>Choosing input features.</li>
+<li>Get labels.</li>
+<li>Choose an objective.</li>
 </ol>
-</li>
-<li>Types of sensitive data<ol>
-<li>Specific columns in structured datasets</li>
-<li>Patterned text, e.g., credit card numbers</li>
-<li>Unstructured data, like audio, video and images</li>
-<li>Combination of fields</li>
+<h3 id="7-Modeling-Evaluation"><a href="#7-Modeling-Evaluation" class="headerlink" title="7. Modeling Evaluation"></a>7. Modeling Evaluation</h3><p>Test data (20%)</p>
+<p>Confusion matrices measure performance relative to expectations for classification.</p>
+<h3 id="8-ML-Best-Practices"><a href="#8-ML-Best-Practices" class="headerlink" title="8. ML Best Practices"></a>8. ML Best Practices</h3><ol>
+<li>ML involves experimentation.</li>
+<li>start simple.</li>
+<li>Don’t use your test data during experimentation.</li>
+<li>Do pilot projects with end-users.</li>
 </ol>
-</li>
-<li>Common principles for establishing a policy framework<ol>
-<li>Establish a secure location for documentation</li>
-<li>Exclude sensitive information from documentation</li>
-<li>Document all sources and processes</li>
-<li>Establish a process to review and enforce policies</li>
+<h3 id="9-Human-Bias-in-ML"><a href="#9-Human-Bias-in-ML" class="headerlink" title="9. Human Bias in ML"></a>9. Human Bias in ML</h3><p>Decisions made as you do ML have real world impact for you and your customers.</p>
+<p>Unconscious biases exist in data.</p>
+<p>Fairness in ML.</p>
+<h3 id="10-Discovering-ML-Use-Cases"><a href="#10-Discovering-ML-Use-Cases" class="headerlink" title="10. Discovering ML Use Cases"></a>10. Discovering ML Use Cases</h3><p>Simplifying rule-based systems.</p>
+<p>Streaming business processes.</p>
+<p>Understanding unstructured data.</p>
+<p>Personalizing experiences: Adds significant value to users.</p>
+<p>Recommender systems.</p>
+<p>ML in Series.</p>
+<h3 id="11-Data-Strategy"><a href="#11-Data-Strategy" class="headerlink" title="11. Data Strategy"></a>11. Data Strategy</h3><p>ML is about repeated decisions:</p>
+<ol>
+<li>Design a system so that you will have more data next year.</li>
+<li>Break down data silos.</li>
+<li>Transition from data lakes to data warehouses.</li>
+<li>Learn about your data.</li>
+<li>Integrate pilots into your tools.</li>
+<li>Run ML models on real-time data to extract the most value.</li>
+<li>Collect more data.</li>
 </ol>
-</li>
-<li>Build your ML team<ol>
-<li>Data engineers</li>
-<li>ML engineers</li>
-<li>Data analysts</li>
+<h3 id="12-Data-Governance"><a href="#12-Data-Governance" class="headerlink" title="12. Data Governance"></a>12. Data Governance</h3><p>Data access must be balanced against security.</p>
+<p>Three goals for ML and Privacy:</p>
+<ol>
+<li>Identify sensitive data.</li>
+<li>Protect sensitive data by removing, masking or coarsening.</li>
+<li>Create public governance documentation.</li>
 </ol>
-</li>
-</ul>
-<h3 id="Create-a-Culture-of-Innovation"><a href="#Create-a-Culture-of-Innovation" class="headerlink" title="Create a Culture of Innovation"></a>Create a Culture of Innovation</h3><ul>
-<li>Starts with a dedicated mindset</li>
-<li>Focus on the user</li>
-<li>10X thinking</li>
-<li>Launch and iterate</li>
-<li>Change is inevitable</li>
-</ul>
+<p>Types of sensitive data:</p>
+<ol>
+<li>Specific columns in structured datasets.</li>
+<li>Patterned text, e.g., credit card numbers.</li>
+<li>Unstructured data, like audio, video and images.</li>
+<li>Combination of fields.</li>
+</ol>
+<p>Common principles for establishing a policy framework:</p>
+<ol>
+<li>Establish a secure location for documentation.</li>
+<li>Exclude sensitive information from documentation.</li>
+<li>Document all sources and processes.</li>
+<li>Establish a process to review and enforce policies.</li>
+</ol>
+<p>Build your ML team:</p>
+<ol>
+<li>Data engineers.</li>
+<li>ML engineers.</li>
+<li>Data analysts.</li>
+</ol>
+<h3 id="13-Create-a-Culture-of-Innovation"><a href="#13-Create-a-Culture-of-Innovation" class="headerlink" title="13. Create a Culture of Innovation"></a>13. Create a Culture of Innovation</h3><p>Starts with a dedicated mindset.</p>
+<p>Focus on the user.</p>
+<p>10X thinking.</p>
+<p>Launch and iterate.</p>
+<p>Change is inevitable.</p>
 
   
   
@@ -672,17 +643,24 @@ This course provided by GOOGLE CLOUD is intended to be an introduction to machin
       
         
           
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%85%95%E8%AF%BEMOOC/">慕课MOOC</a>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
 <div class='new-meta-item author'>
   <a class='author' href="/about" rel="nofollow">
     <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
     <p>Bezhuang</p>
   </a>
 </div>
-
-        
-      
-        
-          
 
         
       
@@ -695,12 +673,12 @@ This course provided by GOOGLE CLOUD is intended to be an introduction to machin
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Managing-Machine-Learning-Projects/&title=Managing Machine Learning Projects with Google Cloud - Bezhuang's Blog&summary=
-This course provided by GOOGLE CLOUD is intended to be an introduction to machine learning for business professionals. It teaches me how to translate business problems into machine learning use cases and vet them for feasibility and impact. The following are the notes I took during this course.
+This course provided by GOOGLE CLOUD is intended to be an introduction to machine learning for business professionals. It teaches me how to translate business problems into machine learning use cases and vet them for feasibility and impact.
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -709,12 +687,12 @@ This course provided by GOOGLE CLOUD is intended to be an introduction to machin
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Managing-Machine-Learning-Projects/&title=Managing Machine Learning Projects with Google Cloud - Bezhuang's Blog&summary=
-This course provided by GOOGLE CLOUD is intended to be an introduction to machine learning for business professionals. It teaches me how to translate business problems into machine learning use cases and vet them for feasibility and impact. The following are the notes I took during this course.
+This course provided by GOOGLE CLOUD is intended to be an introduction to machine learning for business professionals. It teaches me how to translate business problems into machine learning use cases and vet them for feasibility and impact.
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -723,12 +701,12 @@ This course provided by GOOGLE CLOUD is intended to be an introduction to machin
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Managing-Machine-Learning-Projects/&title=Managing Machine Learning Projects with Google Cloud - Bezhuang's Blog&summary=
-This course provided by GOOGLE CLOUD is intended to be an introduction to machine learning for business professionals. It teaches me how to translate business problems into machine learning use cases and vet them for feasibility and impact. The following are the notes I took during this course.
+This course provided by GOOGLE CLOUD is intended to be an introduction to machine learning for business professionals. It teaches me how to translate business problems into machine learning use cases and vet them for feasibility and impact.
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -736,7 +714,7 @@ This course provided by GOOGLE CLOUD is intended to be an introduction to machin
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADpklEQVR42u3aQXLCQAwEQP7/6eSeKsrSSMCa9N4cwNb25jAl+fFjReuBABw4cOAscOAOgXuE6+mN/3z+7Prqvld/f/bcan3pfsGBAwcOHDhw4E6DKwfA5kaqG6uCVJ/frbf8e3DgwIEDBw4cuEPhuoVuX1c3MA3g8X7BgQMHDhw4cOC+DC4NqtVg3P18Wj84cODAgQMHDty3w3UbmNWNbg3KwYEDBw4cOHDg/gvctKHYDaTpYHv792+f5IMDBw4cOHDgwC3BpUHzrtfxfsGBAwcOHDhw4A6Bm66tgHoVkKtBOn0hsbxfcODAgQMHDhy4Q+DGjb3mgDcFSANst5F6+T1w4MCBAwcOHLhD4KoFTQG7EOkBTp8LDhw4cODAgQN3N7hu8NxqeG7/vTo47zZYwYEDBw4cOHDg7gbXDaRpsOweVDXgbg3AwYEDBw4cOHDgToPrPiBtWG4V3gUqB9tqwxYcOHDgwIEDB+4QuLSQrUH1dmMyDdDlgwcHDhw4cODAgTsELg2EaaNwe3A8HZy3B+DgwIEDBw4cOHCHwG03/roFpY3ItI60HnDgwIEDBw4cuFPhuo3IarBMwbYG3N3AfVkfOHDgwIEDBw7cIXBp43C7QZk+b3sgDQ4cOHDgwIEDdze4Vw2apw3L6cFuN0rBgQMHDhw4cODuArcVJKug29dpoAcHDhw4cODAgbsbXDoAflejcnog3X+MciMTHDhw4MCBAwfuzXDbjchuIE4H2mmgrUKCAwcOHDhw4MCdDveqgrrBc+tgpgd6eV9w4MCBAwcOHLhD4NLG4tYG0oZit47u88CBAwcOHDhw4L4NrlvoFHgayNPvP90POHDgwIEDBw7cIXDdAXR3pRt71YGMDwocOHDgwIEDB+4wuHQj0xcS04ZiFyJ9cbE8yQcHDhw4cODAgfsw3LSBOC24G5C7daUHCA4cOHDgwIEDd1e4tQAZ3r97QN2DBAcOHDhw4MCBuxvc1sB5OxBPg/O0AQoOHDhw4MCBA3c63FZA3ILYCuBVmG5jFBw4cODAgQMH7jS4buBNg24aZKf1bN0fHDhw4MCBAwfuVLhPBc3txuh0jSf54MCBAwcOHDhwXwaXDoa7dW4F5mMCMDhw4MCBAwcO3Ivhuhvprq3Ga/V34MCBAwcOHDhwd4GbFtJtVKbBOG2Mpi9MggMHDhw4cODAnQo3fTGwW0C1gVj9vDvY7tYHDhw4cODAgQN3GpzVbHAiAAcOHDgLHLjPrl8MKDwi0yEmjAAAAABJRU5ErkJggg==">
           </div>
@@ -750,7 +728,7 @@ This course provided by GOOGLE CLOUD is intended to be an introduction to machin
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -825,7 +803,7 @@ turtle 库是 Python 的标准库之一，属于入门级的图形绘制函数�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-Machine-Learning"><span class="toc-text">What is Machine Learning ?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Phases-of-ML"><span class="toc-text">Phases of ML</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Good-data-characteristic"><span class="toc-text">Good data characteristic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ML-vs-AI"><span class="toc-text">ML vs AI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Why-ML-now"><span class="toc-text">Why ML now ?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Labeling-data"><span class="toc-text">Labeling data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modeling-Training"><span class="toc-text">Modeling Training</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Formulating-the-ML-problem"><span class="toc-text">Formulating the ML problem</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Modeling-Evaluation"><span class="toc-text">Modeling Evaluation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ML-Best-Practices"><span class="toc-text">ML Best Practices</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Human-Bias-in-ML"><span class="toc-text">Human Bias in ML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Discovering-ML-Use-Cases"><span class="toc-text">Discovering ML Use Cases</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ML-in-Series"><span class="toc-text">ML in Series</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Strategy"><span class="toc-text">Data Strategy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-Governance"><span class="toc-text">Data Governance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-Culture-of-Innovation"><span class="toc-text">Create a Culture of Innovation</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-What-is-Machine-Learning"><span class="toc-text">1. What is Machine Learning ?</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Phases-of-ML"><span class="toc-text">Phases of ML</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Good-data-characteristic"><span class="toc-text">2. Good data characteristic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-ML-vs-AI"><span class="toc-text">3. ML vs AI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Why-ML-now"><span class="toc-text">4. Why ML now ?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Labeling-data"><span class="toc-text">5. Labeling data</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Modeling-Training"><span class="toc-text">6. Modeling Training</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Formulating-the-ML-problem"><span class="toc-text">Formulating the ML problem</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Modeling-Evaluation"><span class="toc-text">7. Modeling Evaluation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-ML-Best-Practices"><span class="toc-text">8. ML Best Practices</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-Human-Bias-in-ML"><span class="toc-text">9. Human Bias in ML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-Discovering-ML-Use-Cases"><span class="toc-text">10. Discovering ML Use Cases</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-Data-Strategy"><span class="toc-text">11. Data Strategy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-Data-Governance"><span class="toc-text">12. Data Governance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-Create-a-Culture-of-Innovation"><span class="toc-text">13. Create a Culture of Innovation</span></a></li></ol>
     </div>
   </section>
 
@@ -1262,11 +1240,46 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   
   
-    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
   
 
 

@@ -1,0 +1,2546 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>Request 和 Response 对象详解 - Bezhuang&#39;s Blog</title>
+  
+    <meta name="keywords" content="Servlet">
+  
+
+  
+    <meta name="description" content="
+在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
+">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Bezhuang's Blog" type="application/atom+xml">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+
+<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+
+
+</head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
+    
+
+<header id="l_header" class="l_header always shadow floatable blur show"  >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+          
+          
+            Bezhuang's Blog
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于我
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                  
+                  
+                  
+                    id="friends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友情链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post search' style="display: none;">
+          
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">庄之皓 · Bezhuang</p>
+    
+    
+      <p class="subtitle">欢迎访问我的博客！Welcome to my blog!</p>
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="search here..." />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/photos"
+              
+              
+              id="photos">
+              <p>相册</p>
+            </a>
+          
+            <a href="/projects"
+              
+              
+              id="projects">
+              <p>开源库</p>
+            </a>
+          
+            <a href="/todo"
+              
+              
+              id="todo">
+              <p>计划表</p>
+            </a>
+          
+            <a href="/guestbook"
+              
+              
+              id="guestbook">
+              <p>留言板</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        Request 和 Response 对象详解
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Servlet/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Servlet</p></a></div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>本文发布于：2022年4月30日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：5.4k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：23分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p>在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="一、Request-和-Response-对象的使用"><a href="#一、Request-和-Response-对象的使用" class="headerlink" title="一、Request 和 Response 对象的使用"></a>一、Request 和 Response 对象的使用</h3><p>Request 和 Response 这两个参数的作用是什么?</p>
+<p>Request：获取请求数据</p>
+<ul>
+<li>浏览器会发送 HTTP 请求到后台服务器（Tomcat）。</li>
+<li>HTTP 的请求中会包含很多请求数据（请求行 + 请求头 + 请求体）。</li>
+<li>后台服务器会对 HTTP 请求中的数据进行解析并把解析结果存入到一个对象中。</li>
+<li>所存入的对象即为 Request 对象，所以我们可以从 Request 对象中获取请求的相关参数。</li>
+<li>获取到数据后就可以继续后续的业务，比如获取用户名和密码就可以实现登录操作的相关业务。</li>
+</ul>
+<p>Response：设置响应数据</p>
+<ul>
+<li>业务处理完后，后台就需要给前端返回业务处理的结果，即响应数据。</li>
+<li>把响应数据封装到 Response 对象中。</li>
+<li>后台服务器（Tomcat）会解析 Response 对象，按照（响应行 + 响应头 + 响应体）格式拼接结果。</li>
+<li>浏览器最终解析结果，把内容展示在浏览器给用户浏览。</li>
+</ul>
+<p>初步体验下 Request 和 Response 对象的使用案例。</p>
+<pre><code class="java">@WebServlet(&quot;/demo3&quot;)
+public class ServletDemo3 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        //使用request对象 获取请求数据
+        String name = request.getParameter(&quot;name&quot;);//url?name=zhangsan
+
+        //使用response对象 设置响应数据
+        response.setHeader(&quot;content-type&quot;,&quot;text/html;charset=utf-8&quot;);
+        response.getWriter().write(&quot;&lt;h1&gt;&quot;+name+&quot;,欢迎您！&lt;/h1&gt;&quot;);
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        System.out.println(&quot;Post...&quot;);
+    &#125;
+&#125;</code></pre>
+<h3 id="二、Request-对象"><a href="#二、Request-对象" class="headerlink" title="二、Request 对象"></a>二、Request 对象</h3><h4 id="Request-继承体系"><a href="#Request-继承体系" class="headerlink" title="Request 继承体系"></a>Request 继承体系</h4><p>当我们的 Servlet 类实现的是 Servlet 接口的时候，service 方法中的参数是 ServletRequest 和 ServletResponse，当我们的 Servlet 类继承的是 HttpServlet 类的时候，doGet 和 doPost 方法中的参数就变成 HttpServletRequest 和 HttpServletReponse。</p>
+<p>Request 的继承体系：</p>
+<pre><code class="mermaid">graph BT
+RequestFacade --&gt; HttpServletRequest --&gt; ServletRequest</code></pre>
+<p>ServletRequest 和 HttpServletRequest 是继承关系，并且两个都是接口，接口是无法创建对象，需要用到 RequestFacade：该类实现了 HttpServletRequest 接口，也间接实现了ServletRequest接口。Servlet 类中的 service 方法、doGet 方法或者是 doPost 方法最终都是由 Web 服务器来调用的，所以 Tomcat 提供了方法参数接口的具体实现类，并完成了对象的创建。</p>
+<p>要想了解 RequestFacade 中都提供了哪些方法，我们可以直接查看 JavaEE API 文档中关于 ServletRequest 和 HttpServletRequest 的接口文档，因为 RequestFacade 实现了其接口就需要重写接口中的方法。</p>
+<pre><code class="java">@WebServlet(&quot;/demo2&quot;)
+public class ServletDemo2 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        System.out.println(request);
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+    &#125;
+&#125;</code></pre>
+<h4 id="Request-获取请求数据"><a href="#Request-获取请求数据" class="headerlink" title="Request 获取请求数据"></a>Request 获取请求数据</h4><p>获取请求行数据：请求行包含三块内容，分别是 <code>请求方式</code>、<code>请求资源路径</code>、<code>HTTP协议及版本</code>。</p>
+<pre><code class="java">@WebServlet(&quot;/req1&quot;)
+public class RequestDemo1 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+        // String getMethod()：获取请求方式： GET
+        String method = req.getMethod();
+        System.out.println(method);//GET
+        // String getContextPath()：获取虚拟目录(项目访问路径)：/request-demo
+        String contextPath = req.getContextPath();
+        System.out.println(contextPath);
+        // StringBuffer getRequestURL(): 获取URL(统一资源定位符)：http://localhost:8080/request-demo/req1
+        StringBuffer url = req.getRequestURL();
+        System.out.println(url.toString());
+        // String getRequestURI()：获取URI(统一资源标识符)： /request-demo/req1
+        String uri = req.getRequestURI();
+        System.out.println(uri);
+        // String getQueryString()：获取请求参数（GET方式）： username=zhangsan
+        String queryString = req.getQueryString();
+        System.out.println(queryString);
+    &#125;
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+    &#125;
+&#125;</code></pre>
+<p>获取请求头数据：请求头的数据格式为 <code>key: value</code>。</p>
+<pre><code class="java">@WebServlet(&quot;/req1&quot;)
+public class RequestDemo1 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+        //获取请求头: user-agent: 浏览器的版本信息
+        String agent = req.getHeader(&quot;user-agent&quot;);
+        System.out.println(agent);
+    &#125;
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+    &#125;
+&#125;</code></pre>
+<p>获取请求体数据：浏览器在发送 GET 请求的时候是没有请求体的，所以需要把请求方式变更为 POST。</p>
+<ol>
+<li><p>  如果前端发送的是字节数据，比如传递的是文件数据，则使用 <code>getInputStream()</code> 方法获取字节输入流。</p>
+</li>
+<li><p>  如果前端发送的是纯文本数据，则使用 <code>getReader()</code> 方法获取字符输入流。</p>
+</li>
+</ol>
+<pre><code class="java">@WebServlet(&quot;/req1&quot;)
+public class RequestDemo1 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+    &#125;
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+         //获取post 请求体：请求参数
+        //1. 获取字符输入流
+        BufferedReader br = req.getReader();
+        //2. 读取数据
+        String line = br.readLine();
+        System.out.println(line);
+    &#125;
+&#125;</code></pre>
+<p>BufferedReader 流是通过 request 对象来获取的，当请求完成后 request 对象就会被销毁，request 对象被销毁后，BufferedReader 流就会自动关闭，所以此处就不需要手动关闭流了。</p>
+<h4 id="获取请求参数的通用方式"><a href="#获取请求参数的通用方式" class="headerlink" title="获取请求参数的通用方式"></a>获取请求参数的通用方式</h4><p>请求参数是请求数据中的部分内容（如：用户名和密码），请求数据则是包含请求行、请求头和请求体的所有数据，如果是 GET 请求，请求参数在请求行中，如果是 POST 请求，请求参数一般在请求体中。</p>
+<ol>
+<li><p>  GET 方式获取请求参数：<code>String getQueryString()</code></p>
+</li>
+<li><p>  POST 方式获取请求参数：<code>BufferedReader getReader();</code></p>
+</li>
+</ol>
+<pre><code class="java">@WebServlet(&quot;/req1&quot;)
+public class RequestDemo1 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+                //GET 方式获取请求参数
+        String result = req.getQueryString();
+        System.out.println(result);
+    &#125;
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+        // POST 方式获取请求参数
+          BufferedReader br = req.getReader();
+        String result = br.readLine();
+        System.out.println(result);
+    &#125;
+&#125;</code></pre>
+<p>GET 请求方式和 POST 请求方式区别主要在于获取请求参数的方式不一样，为了统一获取请求参数，Request 对象为我们提供了如下方法：</p>
+<ol>
+<li><p>  获取所有参数Map集合：<code>Map&lt;String,String[]&gt; getParameterMap()</code></p>
+</li>
+<li><p>  根据名称获取参数值（数组）：<code>String[] getParameterValues(String name)</code></p>
+</li>
+<li><p>  根据名称获取参数值（单个值）：<code>String getParameter(String name)</code></p>
+</li>
+</ol>
+<pre><code class="java">/**
+ * request 通用方式获取请求参数
+ */
+@WebServlet(&quot;/req2&quot;)
+public class RequestDemo2 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+        //GET请求逻辑
+        System.out.println(&quot;get....&quot;);
+        //1. 获取所有参数的Map集合
+        Map&lt;String, String[]&gt; map = req.getParameterMap();
+        for (String key : map.keySet()) &#123;
+            // username:zhangsan lisi
+            System.out.print(key+&quot;:&quot;);
+            //获取值
+            String[] values = map.get(key);
+            for (String value : values) &#123;
+                System.out.print(value + &quot; &quot;);
+            &#125;
+            System.out.println();
+        &#125;
+        //2. 获取GET请求参数中的爱好，结果是数组值
+        System.out.println(&quot;------------&quot;);
+        String[] hobbies = req.getParameterValues(&quot;hobby&quot;);
+        for (String hobby : hobbies) &#123;
+            System.out.println(hobby);
+        &#125;
+          //3. 获取GET请求参数中的用户名和密码，结果是单个值
+        String username = req.getParameter(&quot;username&quot;);
+        String password = req.getParameter(&quot;password&quot;);
+        System.out.println(username);
+        System.out.println(password);
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+    &#125;
+&#125;</code></pre>
+<p><code>req.getParameter()</code> 方法使用的频率会比较高，以后我们再写代码的时候，就只需要按照如下格式来编写：</p>
+<pre><code class="java">public class RequestDemo1 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+       //采用request提供的获取请求参数的通用方式来获取请求参数
+       //编写其他的业务代码...
+    &#125;
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
+        this.doGet(req,resp);
+    &#125;
+&#125;</code></pre>
+<h4 id="请求参数中文乱码问题"><a href="#请求参数中文乱码问题" class="headerlink" title="请求参数中文乱码问题"></a>请求参数中文乱码问题</h4><p>POST 的请求参数是通过 request 的 <code>getReader()</code> 来获取流中的数据，Tomcat 在获取流的时候采用的编码是ISO-8859-1（不支持中文），需要通过 <code>request.setCharacterEncoding(&quot;UTF-8&quot;)</code> 把 Tomcat 在获取流数据之前的编码设置为UTF-8。</p>
+<pre><code class="java">@WebServlet(&quot;/req4&quot;)
+public class RequestDemo4 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        //1. 解决乱码: POST getReader()
+        //设置字符输入流的编码，设置的字符集要和页面保持一致
+        request.setCharacterEncoding(&quot;UTF-8&quot;);
+       //2. 获取username
+       String username = request.getParameter(&quot;username&quot;);
+       System.out.println(username);
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;</code></pre>
+<p>GET 请求获取请求参数的方式是 <code>request.getQueryString()</code>，并没有通过流的方式获取数据，所以 GET 请求不能用设置编码的方式来解决中文乱码问题。</p>
+<p>GET 请求中文参数出现乱码的原因，是浏览器把中文参数按照  <code>UTF-8</code>  进行 URL 编码，而后台的 Tomcat 对获取到的内容进行 <code>ISO-8859-1</code> 的 URL 解码，我们可以按照 ISO-8859-1 编码获取乱码对应的字节数组，再按照 UTF-8 编码获取字节数组对应的字符串，在转换的过程中它们的编码一致，就可以解决中文乱码问题。</p>
+<p>URL编码实现方式:</p>
+<ul>
+<li><p>编码：<code>URLEncoder.encode(str,&quot;UTF-8&quot;);</code></p>
+</li>
+<li><p>解码：<code>URLDecoder.decode(s,&quot;ISO-8859-1&quot;);</code></p>
+</li>
+</ul>
+<pre><code class="java">public class URLDemo &#123;
+
+  public static void main(String[] args) throws UnsupportedEncodingException &#123;
+        String username = &quot;张三&quot;;
+        //1. URL编码
+        String encode = URLEncoder.encode(username, &quot;utf-8&quot;);
+        System.out.println(encode);
+        //2. URL解码
+        String decode = URLDecoder.decode(encode, &quot;ISO-8859-1&quot;);
+
+        System.out.println(decode); //此处打印的是对应的乱码数据
+
+        //3. 转换为字节数据,编码
+        byte[] bytes = decode.getBytes(&quot;ISO-8859-1&quot;);
+        for (byte b : bytes) &#123;
+            System.out.print(b + &quot; &quot;);
+        &#125;
+        //此处打印的是:-27 -68 -96 -28 -72 -119
+        //4. 将字节数组转为字符串，解码
+        String s = new String(bytes, &quot;utf-8&quot;);
+        System.out.println(s); //此处打印的是张三
+    &#125;
+&#125;</code></pre>
+<p>通用中文乱码解决方案：先解码，再编码。</p>
+<pre><code class="java">@WebServlet(&quot;/req4&quot;)
+public class RequestDemo4 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        //1. 解决乱码：POST，getReader()
+        //request.setCharacterEncoding(&quot;UTF-8&quot;);//设置字符输入流的编码
+
+        //2. 获取username
+        String username = request.getParameter(&quot;username&quot;);
+        System.out.println(&quot;解决乱码前：&quot;+username);
+
+        //3. GET,获取参数的方式：getQueryString
+        // 乱码原因：tomcat进行URL解码，默认的字符集ISO-8859-1
+       /* //3.1 先对乱码数据进行编码：转为字节数组
+        byte[] bytes = username.getBytes(StandardCharsets.ISO_8859_1);
+        //3.2 字节数组解码
+        username = new String(bytes, StandardCharsets.UTF_8);*/
+
+        username  = new String(username.getBytes(StandardCharsets.ISO_8859_1),StandardCharsets.UTF_8);
+
+        System.out.println(&quot;解决乱码后：&quot;+username);
+
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;</code></pre>
+<p>把 <code>request.setCharacterEncoding(&quot;UTF-8&quot;)</code> 代码注释掉后，会发现 GET 请求参数乱码解决方案同时也可也把 POST 请求参数乱码的问题也解决了，只不过对于 POST 请求参数一般都会比较多，采用这种方式解决乱码起来比较麻烦，所以对于 POST 请求还是建议使用设置编码的方式进行。</p>
+<p>Tomcat 8.0 之后的版本已将 GET 请求乱码问题解决，设置默认的解码方式为 UTF-8。</p>
+<h4 id="Request-请求转发"><a href="#Request-请求转发" class="headerlink" title="Request 请求转发"></a>Request 请求转发</h4><p>请求转发（forward）是一种在服务器内部的资源跳转方式。</p>
+<p>请求转发的实现方式：<code>req.getRequestDispatcher(&quot;资源B路径&quot;).forward(req,resp);</code>。</p>
+<pre><code class="java">@WebServlet(&quot;/req5&quot;)
+public class RequestDemo5 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        System.out.println(&quot;demo5...&quot;);
+        //请求转发
+        request.getRequestDispatcher(&quot;/req6&quot;).forward(request,response);
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;</code></pre>
+<p>请求转发资源间共享数据：使用 Request 对象。</p>
+<ol>
+<li><p>  存储数据到 request 域中：<code>void setAttribute(String name,Object o);</code></p>
+</li>
+<li><p>  根据 key 获取值：<code>Object getAttribute(String name);</code></p>
+</li>
+<li><p>  根据 key 删除该键值对：<code>void removeAttribute(String name);</code></p>
+</li>
+</ol>
+<pre><code class="java">@WebServlet(&quot;/req5&quot;)
+public class RequestDemo5 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        System.out.println(&quot;demo5...&quot;);
+        //存储数据
+        request.setAttribute(&quot;msg&quot;,&quot;hello&quot;);
+        //请求转发
+        request.getRequestDispatcher(&quot;/req6&quot;).forward(request,response);
+    &#125;
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;
+
+@WebServlet(&quot;/req6&quot;)
+public class RequestDemo6 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        System.out.println(&quot;demo6...&quot;);
+        //获取数据
+        Object msg = request.getAttribute(&quot;msg&quot;);
+        System.out.println(msg);
+    &#125;
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;</code></pre>
+<p>请求转发的特点：浏览器地址栏路径不发生变化，只能转发到当前服务器的内部资源，而不能从一个服务器通过转发访问另一台服务器。一次请求可以在转发资源间使用 request 共享数据。</p>
+<h3 id="三、Response-对象"><a href="#三、Response-对象" class="headerlink" title="三、Response 对象"></a>三、Response 对象</h3><p>Reponse 的继承体系和 Request 的继承体系非常相似</p>
+<p>Servlet -&gt; <code>service(request, response)</code></p>
+<pre><code class="mermaid">graph BT
+ReponseFacade --&gt; HttpServletReponse --&gt; ServletReponse</code></pre>
+<h4 id="Response-设置响应数据"><a href="#Response-设置响应数据" class="headerlink" title="Response 设置响应数据"></a>Response 设置响应数据</h4><p>HTTP响应数据总共分为三部分内容，分别是==响应行、响应头、响应体==，对于这三部分内容的数据，respone对象都提供了哪些方法来进行设置?</p>
+<ol>
+<li>响应行</li>
+</ol>
+<p><img src="/.top//1628858926498.png" class="lazyload" data-srcset="/.top//1628858926498.png" srcset="data:image/png;base64,666" alt="1628858926498"></p>
+<p>对于响应头，比较常用的就是设置响应状态码:</p>
+<pre><code>void setStatus(int sc);</code></pre>
+<ol start="2">
+<li>响应头</li>
+</ol>
+<p><img src="/.top//1628859051368.png" class="lazyload" data-srcset="/.top//1628859051368.png" srcset="data:image/png;base64,666" alt="1628859051368"></p>
+<p>设置响应头键值对：</p>
+<pre><code>void setHeader(String name,String value);</code></pre>
+<ol start="3">
+<li>响应体</li>
+</ol>
+<p><img src="/.top//1628859268095.png" class="lazyload" data-srcset="/.top//1628859268095.png" srcset="data:image/png;base64,666" alt="1628859268095"></p>
+<p>对于响应体，是通过字符、字节输出流的方式往浏览器写，</p>
+<p>获取字符输出流:</p>
+<pre><code>PrintWriter getWriter();</code></pre>
+<p>获取字节输出流</p>
+<pre><code>ServletOutputStream getOutputStream();</code></pre>
+<p>介绍完这些方法后，后面我们会通过案例把这些方法都用一用，首先先来完成下重定向的功能开发。</p>
+<h3 id="3-2-Respones请求重定向"><a href="#3-2-Respones请求重定向" class="headerlink" title="3.2 Respones请求重定向"></a>3.2 Respones请求重定向</h3><ol>
+<li>==Response重定向(redirect):一种资源跳转方式。==</li>
+</ol>
+<p><img src="/.top//1628859860279.png" class="lazyload" data-srcset="/.top//1628859860279.png" srcset="data:image/png;base64,666" alt="1628859860279"></p>
+<p>(1)浏览器发送请求给服务器，服务器中对应的资源A接收到请求</p>
+<p>(2)资源A现在无法处理该请求，就会给浏览器响应一个302的状态码+location的一个访问资源B的路径</p>
+<p>(3)浏览器接收到响应状态码为302就会重新发送请求到location对应的访问地址去访问资源B</p>
+<p>(4)资源B接收到请求后进行处理并最终给浏览器响应结果，这整个过程就叫==重定向==</p>
+<ol start="2">
+<li>重定向的实现方式:</li>
+</ol>
+<pre><code>resp.setStatus(302);
+resp.setHeader(&quot;location&quot;,&quot;资源B的访问路径&quot;);</code></pre>
+<p>具体如何来使用，我们先来看下需求:</p>
+<p><img src="/.top//1628861030429.png" class="lazyload" data-srcset="/.top//1628861030429.png" srcset="data:image/png;base64,666" alt="1628861030429"></p>
+<p>针对上述需求，具体的实现步骤为:</p>
+<blockquote>
+<p>1.创建一个ResponseDemo1类，接收/resp1的请求，在doGet方法中打印<code>resp1....</code></p>
+<p>2.创建一个ResponseDemo2类，接收/resp2的请求，在doGet方法中打印<code>resp2....</code></p>
+<p>3.在ResponseDemo1的方法中使用</p>
+<p>​    response.setStatus(302);</p>
+<p>​    response.setHeader(“Location”,”/request-demo/resp2”) 来给前端响应结果数据</p>
+<p>4.启动测试</p>
+</blockquote>
+<p>(1)创建ResponseDemo1类</p>
+<pre><code class="java">@WebServlet(&quot;/resp1&quot;)
+public class ResponseDemo1 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        System.out.println(&quot;resp1....&quot;);
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;</code></pre>
+<p>(2)创建ResponseDemo2类</p>
+<pre><code class="java">@WebServlet(&quot;/resp2&quot;)
+public class ResponseDemo2 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        System.out.println(&quot;resp2....&quot;);
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;</code></pre>
+<p>(3)在ResponseDemo1的doGet方法中给前端响应数据</p>
+<pre><code class="java">@WebServlet(&quot;/resp1&quot;)
+public class ResponseDemo1 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        System.out.println(&quot;resp1....&quot;);
+        //重定向
+        //1.设置响应状态码 302
+        response.setStatus(302);
+        //2. 设置响应头 Location
+        response.setHeader(&quot;Location&quot;,&quot;/request-demo/resp2&quot;);
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;</code></pre>
+<p>(4)启动测试</p>
+<p>访问<code>http://localhost:8080/request-demo/resp1</code>,就可以在控制台看到如下内容:</p>
+<p><img src="/.top//1628861404699.png" class="lazyload" data-srcset="/.top//1628861404699.png" srcset="data:image/png;base64,666" alt="1628861404699"></p>
+<p>说明<code>/resp1</code>和<code>/resp2</code>都被访问到了。到这重定向就已经完成了。</p>
+<p>虽然功能已经实现，但是从设置重定向的两行代码来看，会发现除了重定向的地址不一样，其他的内容都是一模一样，所以request对象给我们提供了简化的编写方式为:</p>
+<pre><code>resposne.sendRedirect(&quot;/request-demo/resp2&quot;)</code></pre>
+<p>所以第3步中的代码就可以简化为：</p>
+<pre><code class="java">@WebServlet(&quot;/resp1&quot;)
+public class ResponseDemo1 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        System.out.println(&quot;resp1....&quot;);
+        //重定向
+        resposne.sendRedirect(&quot;/request-demo/resp2&quot;)；
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;</code></pre>
+<ol start="3">
+<li>重定向的特点</li>
+</ol>
+<ul>
+<li><p>浏览器地址栏路径发送变化</p>
+<p>当进行重定向访问的时候，由于是由浏览器发送的两次请求，所以地址会发生变化</p>
+<p><img src="/.top//1628861893130.png" class="lazyload" data-srcset="/.top//1628861893130.png" srcset="data:image/png;base64,666" alt="1628861893130"></p>
+</li>
+<li><p>可以重定向到任何位置的资源(服务内容、外部均可)</p>
+<p>因为第一次响应结果中包含了浏览器下次要跳转的路径，所以这个路径是可以任意位置资源。</p>
+</li>
+<li><p>两次请求，不能在多个资源使用request共享数据</p>
+<p>因为浏览器发送了两次请求，是两个不同的request对象，就无法通过request对象进行共享数据</p>
+</li>
+</ul>
+<p>介绍完==请求重定向==和==请求转发==以后，接下来需要把这两个放在一块对比下:</p>
+<p><img src="/.top//1628862170296.png" class="lazyload" data-srcset="/.top//1628862170296.png" srcset="data:image/png;base64,666" alt="1628862170296"></p>
+<p>以后到底用哪个，还是需要根据具体的业务来决定。</p>
+<h3 id="3-3-路径问题"><a href="#3-3-路径问题" class="headerlink" title="3.3 路径问题"></a>3.3 路径问题</h3><ol>
+<li>问题1：转发的时候路径上没有加<code>/request-demo</code>而重定向加了，那么到底什么时候需要加，什么时候不需要加呢?</li>
+</ol>
+<p><img src="/.top//1628862652700.png" class="lazyload" data-srcset="/.top//1628862652700.png" srcset="data:image/png;base64,666" alt="1628862652700"></p>
+<p>其实判断的依据很简单，只需要记住下面的规则即可:</p>
+<ul>
+<li>浏览器使用:需要加虚拟目录(项目访问路径)</li>
+<li>服务端使用:不需要加虚拟目录</li>
+</ul>
+<p>对于转发来说，因为是在服务端进行的，所以不需要加虚拟目录</p>
+<p>对于重定向来说，路径最终是由浏览器来发送请求，就需要添加虚拟目录。</p>
+<p>掌握了这个规则，接下来就通过一些练习来强化下知识的学习:</p>
+<ul>
+<li><code>&lt;a href=&#39;路劲&#39;&gt;</code></li>
+<li><code>&lt;form action=&#39;路径&#39;&gt;</code></li>
+<li>req.getRequestDispatcher(“路径”)</li>
+<li>resp.sendRedirect(“路径”)</li>
+</ul>
+<p>答案:</p>
+<pre><code>1.超链接，从浏览器发送，需要加
+2.表单，从浏览器发送，需要加
+3.转发，是从服务器内部跳转，不需要加
+4.重定向，是由浏览器进行跳转，需要加。</code></pre>
+<ol start="2">
+<li>问题2：在重定向的代码中，<code>/request-demo</code>是固定编码的，如果后期通过Tomcat插件配置了项目的访问路径，那么所有需要重定向的地方都需要重新修改，该如何优化?</li>
+</ol>
+<p><img src="/.top//1628863270545.png" class="lazyload" data-srcset="/.top//1628863270545.png" srcset="data:image/png;base64,666" alt="1628863270545"></p>
+<p>答案也比较简单，我们可以在代码中动态去获取项目访问的虚拟目录，具体如何获取，我们可以借助前面咱们所学习的request对象中的getContextPath()方法，修改后的代码如下:</p>
+<pre><code class="java">@WebServlet(&quot;/resp1&quot;)
+public class ResponseDemo1 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        System.out.println(&quot;resp1....&quot;);
+
+        //简化方式完成重定向
+        //动态获取虚拟目录
+        String contextPath = request.getContextPath();
+        response.sendRedirect(contextPath+&quot;/resp2&quot;);
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;</code></pre>
+<p>重新启动访问测试，功能依然能够实现，此时就可以动态获取项目访问的虚拟路径，从而降低代码的耦合度。</p>
+<h3 id="3-4-Response响应字符数据"><a href="#3-4-Response响应字符数据" class="headerlink" title="3.4 Response响应字符数据"></a>3.4 Response响应字符数据</h3><p>要想将字符数据写回到浏览器，我们需要两个步骤:</p>
+<ul>
+<li><p>通过Response对象获取字符输出流： PrintWriter writer = resp.getWriter();</p>
+</li>
+<li><p>通过字符输出流写数据: writer.write(“aaa”);</p>
+</li>
+</ul>
+<p>接下来，我们实现通过些案例把响应字符数据给实际应用下:</p>
+<ol>
+<li>返回一个简单的字符串<code>aaa</code></li>
+</ol>
+<pre><code class="java">/**
+ * 响应字符数据：设置字符数据的响应体
+ */
+@WebServlet(&quot;/resp3&quot;)
+public class ResponseDemo3 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        response.setContentType(&quot;text/html;charset=utf-8&quot;);
+        //1. 获取字符输出流
+        PrintWriter writer = response.getWriter();
+         writer.write(&quot;aaa&quot;);
+    &#125;
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;</code></pre>
+<p><img src="/.top//1628863905362.png" class="lazyload" data-srcset="/.top//1628863905362.png" srcset="data:image/png;base64,666" alt="1628863905362"></p>
+<ol start="2">
+<li>返回一串html字符串，并且能被浏览器解析</li>
+</ol>
+<pre><code>PrintWriter writer = response.getWriter();
+//content-type，告诉浏览器返回的数据类型是HTML类型数据，这样浏览器才会解析HTML标签
+response.setHeader(&quot;content-type&quot;,&quot;text/html&quot;);
+writer.write(&quot;&lt;h1&gt;aaa&lt;/h1&gt;&quot;);</code></pre>
+<p><img src="/.top//1628864140820.png" class="lazyload" data-srcset="/.top//1628864140820.png" srcset="data:image/png;base64,666" alt="1628864140820"></p>
+<p>==注意:==一次请求响应结束后，response对象就会被销毁掉，所以不要手动关闭流。</p>
+<ol start="3">
+<li>返回一个中文的字符串<code>你好</code>，需要注意设置响应数据的编码为<code>utf-8</code></li>
+</ol>
+<pre><code>//设置响应的数据格式及数据的编码
+response.setContentType(&quot;text/html;charset=utf-8&quot;);
+writer.write(&quot;你好&quot;);</code></pre>
+<p><img src="/.top//1628864390263.png" class="lazyload" data-srcset="/.top//1628864390263.png" srcset="data:image/png;base64,666" alt="1628864390263"></p>
+<h3 id="3-3-Response响应字节数据"><a href="#3-3-Response响应字节数据" class="headerlink" title="3.3 Response响应字节数据"></a>3.3 Response响应字节数据</h3><p>要想将字节数据写回到浏览器，我们需要两个步骤:</p>
+<ul>
+<li><p>通过Response对象获取字节输出流：ServletOutputStream outputStream = resp.getOutputStream();</p>
+</li>
+<li><p>通过字节输出流写数据: outputStream.write(字节数据);</p>
+</li>
+</ul>
+<p>接下来，我们实现通过些案例把响应字符数据给实际应用下:</p>
+<ol>
+<li>返回一个图片文件到浏览器</li>
+</ol>
+<pre><code class="java">/**
+ * 响应字节数据：设置字节数据的响应体
+ */
+@WebServlet(&quot;/resp4&quot;)
+public class ResponseDemo4 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        //1. 读取文件
+        FileInputStream fis = new FileInputStream(&quot;d://a.jpg&quot;);
+        //2. 获取response字节输出流
+        ServletOutputStream os = response.getOutputStream();
+        //3. 完成流的copy
+        byte[] buff = new byte[1024];
+        int len = 0;
+        while ((len = fis.read(buff))!= -1)&#123;
+            os.write(buff,0,len);
+        &#125;
+        fis.close();
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;</code></pre>
+<p><img src="/.top//1628864883564.png" class="lazyload" data-srcset="/.top//1628864883564.png" srcset="data:image/png;base64,666" alt="1628864883564"></p>
+<p>上述代码中，对于流的copy的代码还是比较复杂的，所以我们可以使用别人提供好的方法来简化代码的开发，具体的步骤是:</p>
+<p>(1)pom.xml添加依赖</p>
+<pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;commons-io&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-io&lt;/artifactId&gt;
+    &lt;version&gt;2.6&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+<p>(2)调用工具类方法</p>
+<pre><code>//fis:输入流
+//os:输出流
+IOUtils.copy(fis,os);</code></pre>
+<p>优化后的代码:</p>
+<pre><code class="java">/**
+ * 响应字节数据：设置字节数据的响应体
+ */
+@WebServlet(&quot;/resp4&quot;)
+public class ResponseDemo4 extends HttpServlet &#123;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        //1. 读取文件
+        FileInputStream fis = new FileInputStream(&quot;d://a.jpg&quot;);
+        //2. 获取response字节输出流
+        ServletOutputStream os = response.getOutputStream();
+        //3. 完成流的copy
+          IOUtils.copy(fis,os);
+        fis.close();
+    &#125;
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+        this.doGet(request, response);
+    &#125;
+&#125;</code></pre>
+
+  
+  
+    
+    <div class='footer'>
+      
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>References</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://www.bilibili.com/video/BV1Qf4y1T7Hx" rel="external nofollow noopener noreferrer" target="_blank">
+                  Java web从入门到企业实战
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        </div>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Java/">Java</a>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Request&Response/&title=Request 和 Response 对象详解 - Bezhuang's Blog&summary=
+在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Request&Response/&title=Request 和 Response 对象详解 - Bezhuang's Blog&summary=
+在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Request&Response/&title=Request 和 Response 对象详解 - Bezhuang's Blog&summary=
+在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC90lEQVR42u3aQZbjIAwFwNz/0jMXaD+jL7kbnGKXGDtQzuI/ic8/48fxQQAGDBgwYMAcA/MJx939ywsJ77+a194PGDBgwIABA+Y4mOpGut9fXb8Dupo/tR8wYMCAAQMGzLkwq4GuCzB9fWo/YMCAAQMGDJjvgekGtLtC03RgBAMGDBgwYMCA6Ta+pjYMBgwYMGDAgAETN6ge+tw9iPTnnUgwYMCAAQMGzK/BdA9A7/Z5m5PhYMCAAQMGDJjHYLojDWir4N3AV94PGDBgwIABA+YYmKmDON0Fp4DVYDdWwQMDBgwYMGDAbAeTHsiZguwGwnbwBAMGDBgwYMAcA9MFSYNdNyiuvtDyHwAMGDBgwIABcwxMXNBZDHxTIKvBr10YAwMGDBgwYMAcA9PdWLWQNFWg6hbUbhtuYMCAAQMGDJjtYaYCXjVIVYPj1HNv7wMDBgwYMGDAHAOTPjgNet1gmcLEhSowYMCAAQMGzLYwTx8Eqi40LWRN7QcMGDBgwIAB8x6YarCbCoqr89MDTe2ABwYMGDBgwID5c5ipws9vAT1eEAMDBgwYMGDAHAdT3WAavFavV383bSCCAQMGDBgwYN4Lkx7omdp4+qLiFw8GDBgwYMCAOQamWkBK51efu/qi0gbb5TwwYMCAAQMGzPEw1UZbNYilgbLbILxdBxgwYMCAAQPmGJi0ADV14Gfqd6vrAQMGDBgwYMC8H6a6gemDQNV1VK+DAQMGDBgwYM6FSRtq1YZYtaH2VGOvfHAIDBgwYMCAAbMtTHdUFzBV8EoD3u18MGDAgAEDBswxMI8FpeFCVbrx8eQLBgwYMGDAgNkOphroqhDVhU7DgQEDBgwYMGDeD5MWntIDRNXg123E3QZEMGDAgAEDBszXwHQDWbyB4rzlAAoGDBgwYMCA+VqY7rxu4awa8MCAAQMGDBgw74FJG25poOoGx+6LAgMGDBgwYMCcD5M2rqrX0/u661sOiGDAgAEDBgyYY2CMi4BngAEDBgwYMLuO/y+NoYqSbcfRAAAAAElFTkSuQmCC">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Request&Response/&text=Request 和 Response 对象详解 - Bezhuang's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/HTTP&Servlet/'>
+          <p class='title'>HTTP 协议和 Servlet<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+Java Web 是用 Java 技术来解决相关 web 互联网领域的技术栈，国内很多大型网站公司也是首选 Java 语言来解决 web 互联网相关的问题。要了解 Java Web 开发的技术...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81Request-%E5%92%8C-Response-%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">一、Request 和 Response 对象的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Request-%E5%AF%B9%E8%B1%A1"><span class="toc-text">二、Request 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Request-%E7%BB%A7%E6%89%BF%E4%BD%93%E7%B3%BB"><span class="toc-text">Request 继承体系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Request-%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE"><span class="toc-text">Request 获取请求数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E7%9A%84%E9%80%9A%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">获取请求参数的通用方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98"><span class="toc-text">请求参数中文乱码问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Request-%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91"><span class="toc-text">Request 请求转发</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81Response-%E5%AF%B9%E8%B1%A1"><span class="toc-text">三、Response 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Response-%E8%AE%BE%E7%BD%AE%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE"><span class="toc-text">Response 设置响应数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Respones%E8%AF%B7%E6%B1%82%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-text">3.2 Respones请求重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98"><span class="toc-text">3.3 路径问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-Response%E5%93%8D%E5%BA%94%E5%AD%97%E7%AC%A6%E6%95%B0%E6%8D%AE"><span class="toc-text">3.4 Response响应字符数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Response%E5%93%8D%E5%BA%94%E5%AD%97%E8%8A%82%E6%95%B0%E6%8D%AE"><span class="toc-text">3.3 Response响应字节数据</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="Request 和 Response 对象详解";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        
+          <div><p>Copyright © 2021 Zhihao Zhuang. All rights reserved</p>
+</div>
+        
+      
+    
+      
+        
+          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+</div>
+        
+      
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/********************脚本懒加载函数********************************/
+function loadScript(src, cb) {
+var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+var script = document.createElement('script');
+script.setAttribute('type','text/javascript');
+if (cb) script.onload = cb;
+script.setAttribute('src', src);
+HEAD.appendChild(script);
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css", window.volantis.loadcss);
+  
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://www.zhuangzhihao.top
+        
+        
+        
+        
+          id="https:wwwzhuangzhihaotop"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 返回主页
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/Bezhuang/Hexo-blog
+        
+        
+        
+        
+          id="https:githubcomBezhuangHexo-blog"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('false' == true && ('home,contributors,source_docs,hr,print'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+	
+	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/issues.min.js');
+	
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+   <script type="text/javascript">
+  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.l_main .reveal', {
+      distance: '32px',
+      duration: '800',
+      interval: '20',
+      scale: '1',
+      easing: 'ease-out'
+    });
+  }
+  $(function () {
+  var checkScrollReveal = setInterval(function () {
+    if ($("#safearea").css("display")!="block") return
+    if (typeof ScrollReveal=="undefined") return
+    clearInterval(checkScrollReveal)
+	pjax_scrollrebeal();
+  }, 100)
+  });
+</script>
+
+
+
+
+
+
+  
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/valine.min.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  pjax_comment=pjax_valine;
+</script>
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/app.min.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/search/hexo.min.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+		document.addEventListener("pjax:success", listenSearch);
+	
+}
+</script>
+
+
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+  
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI',
+    app_key: 'j5I5paEqIfWfOlCg13vU2vNq',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'http://blog.zhuangzhihao.top' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'http://blog.zhuangzhihao.top' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+function bindToggleButton() {
+	var btn=$("#wrapper .toggle-mode-btn");
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+document.addEventListener("pjax:success", bindToggleButton);
+
+</script>
+
+
+
+
+
+
+
+<script src="//code.tidio.co/tu8j8vmfuovtkhsj4lgr7sub986gd1ku.js" async></script>
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#l_cover",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = ["/artitalk/"];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      
+      $("#wrapper .toggle-mode-btn").unbind('click');
+      
+	  
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        document.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+        
+        
+          pjax_scrollrebeal();
+        
+        if (typeof IssuesAPI == "undefined") {
+          loadIssuesJS();
+        }
+        
+          pjax_initCopyCode();
+        
+		
+          try{pjax_comment();} catch (e) {}
+        
+      } catch (e) {
+        console.log(e);
+      }
+	  
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>
+<!--单击显示文字-->
+<script type="text/javascript" src="/js/click_show_text.js"></script>
+<!--浏览器搞笑标题-->
+<!--<script type="text/javascript" src="/js/FunnyTitle.js"></script>-->
+<!-- 数字雨 -->
+<canvas id="canvas" width="1440" height="900" ></canvas>
+<script type="text/javascript" src="/js/DigitalRain.js"></script>

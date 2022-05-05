@@ -24,7 +24,7 @@
   
   <title>Maven 项目管理知识总结 - Bezhuang&#39;s Blog</title>
   
-    <meta name="keywords" content="Java,Maven">
+    <meta name="keywords" content="Maven">
   
 
   
@@ -379,7 +379,7 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -465,12 +465,8 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
         
           
             
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E4%B8%8E%E6%9E%B6%E6%9E%84/">后端开发与架构</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Maven/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Maven</p></a></div>
 
 
           
@@ -479,7 +475,7 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年3月14日</p>
+    <p>本文发布于：2022年3月14日</p>
   </a>
 </div>
 
@@ -496,7 +492,7 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：6分钟</p>
+      <p>时长：5分钟</p>
     </a>
   </div>
 
@@ -511,83 +507,51 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
   
   
   <blockquote>
-<p>Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala，我是通过<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Qf4y1T7Hx"> maven 项目管理从基础到高级</a>一课系统学习 Maven 的，以下为所记笔记，可供参考。</p>
+<p>Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="Maven-概述"><a href="#Maven-概述" class="headerlink" title="Maven 概述"></a>Maven 概述</h3><ul>
-<li><p>Maven是专门用于管理和构建Java项目的工具，它的主要功能有：</p>
-<ul>
-<li>提供了一套标准化的项目结构</li>
+<h3 id="一、Maven-概述"><a href="#一、Maven-概述" class="headerlink" title="一、Maven 概述"></a>一、Maven 概述</h3><ul>
+<li>Maven 是专门用于管理和构建 Java 项目的工具，它提供了一套标准化的项目结构，提供了一套标准化的构建流程（编译，测试，打包，发布……），提供了一套依赖管理机制。</li>
 </ul>
-<ul>
-<li>提供了一套标准化的构建流程（编译，测试，打包，发布……）</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>提供了一套依赖管理机制</li>
-</ul>
-<ul>
-<li><p>标准化的项目结构：每一个开发工具（IDE）都有自己不同的项目结构，它们互相之间不通用。在 Eclipse 中创建的目录，无法在 IDEA 中进行使用，这就造成了很大的不方便，而 Maven 提供了一套标准化的项目结构，所有的 IDE 使用 Maven 构建的项目完全一样，所以 IDE 创建的 Maven 项目可以通用</p>
-</li>
-<li><p>标准化的构建流程：开发了一套系统，代码需要进行编译、测试、打包、发布，这些操作如果需要反复进行就显得特别麻烦，而 Maven 提供了一套简单的命令来完成项目构建</p>
-</li>
-<li><p>依赖管理：管理你项目所依赖的第三方资源（jar包、插件），而 Maven 使用标准的坐标配置来管理各种依赖，只需要简单的配置就可以完成依赖管理</p>
-</li>
-<li><p>Maven 模型</p>
-<ul>
-<li><p>项目对象模型（Project Object Model）：将我们自己抽象成一个对象模型，有自己专属的坐标</p>
+<p>标准化的项目结构：每一个开发工具（IDE）都有自己不同的项目结构，它们互相之间不通用。在 Eclipse 中创建的目录，无法在 IDEA 中进行使用，这就造成了很大的不方便，而 Maven 提供了一套标准化的项目结构，所有的 IDE 使用 Maven 构建的项目完全一样，所以 IDE 创建的 Maven 项目可以通用。</p>
+<p>标准化的构建流程：开发了一套系统，代码需要进行编译、测试、打包、发布，这些操作如果需要反复进行就显得特别麻烦，而 Maven 提供了一套简单的命令来完成项目构建。</p>
+<p>依赖管理：管理你项目所依赖的第三方资源（jar包、插件），而 Maven 使用标准的坐标配置来管理各种依赖，只需要简单的配置就可以完成依赖管理。</p>
+<p>Maven 模型：</p>
+<ol>
+<li>  项目对象模型（Project Object Model）：将我们自己抽象成一个对象模型，有自己专属的坐标。</li>
+</ol>
 <pre><code class="xml">&lt;groupId&gt;com.itheima&lt;/groupId&gt;
 &lt;artifactId&gt;maven&lt;/artifactId&gt;
 &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</code></pre>
-</li>
-<li><p>依赖管理模型（Dependency）：使用坐标来描述当前项目依赖哪儿些第三方jar包</p>
+<ol start="2">
+<li>  依赖管理模型（Dependency）：使用坐标来描述当前项目依赖哪儿些第三方jar包。</li>
+</ol>
 <pre><code class="xml">&lt;dependency&gt;
         &lt;groupId&gt;mysql&lt;/groupId&gt;
         &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
         &lt;version&gt;5.1.32&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
-</li>
-<li><p>插件（Plugin）</p>
-</li>
-</ul>
-</li>
-<li><p>Maven 仓库</p>
+<p>Maven 仓库</p>
 <ul>
-<li><p>本地仓库：自己计算机上的一个目录</p>
-</li>
-<li><p>中央仓库：由 Maven 团队维护的全球唯一的仓库： <a target="_blank" rel="noopener" href="https://repo1.maven.org/maven2/">https://repo1.maven.org/maven2/</a></p>
-</li>
-<li><p>远程仓库(私服)：一般由公司团队搭建的私有仓库</p>
-</li>
-<li><p>当项目中使用坐标引入对应依赖 jar 包后，首先会查找本地仓库中是否有对应的 jar 包：</p>
+<li>本地仓库：自己计算机上的一个目录。</li>
+<li>中央仓库：由 Maven 团队维护的全球唯一的仓库： <a target="_blank" rel="noopener" href="https://repo1.maven.org/maven2/%E3%80%82">https://repo1.maven.org/maven2/。</a></li>
+<li>远程仓库(私服)：一般由公司团队搭建的私有仓库。</li>
+<li>当项目中使用坐标引入对应依赖 jar 包后，首先会查找本地仓库中是否有对应的 jar 包，如果有，则在项目直接引用；如果没有，则去中央仓库中下载对应的jar包到本地仓库。</li>
+<li>如果还可以搭建远程仓库，将来jar包的查找顺序则变为：本地仓库 –&gt; 远程仓库–&gt; 中央仓库。</li>
+</ul>
+<p>Maven 安装配置</p>
 <ul>
-<li>如果有，则在项目直接引用；如果没有，则去中央仓库中下载对应的jar包到本地仓库</li>
+<li>IDEA 自带 Maven 且 Mac 无需配置环境变量。</li>
+<li>安装 Maven Helper 插件。</li>
 </ul>
-</li>
-<li><p>如果还可以搭建远程仓库，将来jar包的查找顺序则变为：本地仓库 –&gt; 远程仓库–&gt; 中央仓库</p>
-</li>
-</ul>
-</li>
-<li><p>Maven 安装配置</p>
-<ul>
-<li>IDEA 自带 Maven 且 Mac 无需配置环境变量</li>
-<li>安装 Maven Helper 插件</li>
-</ul>
-</li>
-</ul>
-<h3 id="Maven-基本使用"><a href="#Maven-基本使用" class="headerlink" title="Maven 基本使用"></a>Maven 基本使用</h3><h4 id="Maven-常用命令"><a href="#Maven-常用命令" class="headerlink" title="Maven 常用命令"></a>Maven 常用命令</h4><ul>
-<li><code>mvn compile</code> ：编译，在项目下会生成一个 <code>target</code> 目录</li>
-<li><code>mvn clean</code>：清理，删除项目下的 <code>target</code> 目录</li>
-<li><code>mvn test</code>：测试，执行所有的测试代码</li>
-<li><code>mvn package</code>：打包，将当前项目打成的 jar 包</li>
-<li><code>mvn install</code>：安装，将当前项目打成jar包，并安装到本地仓库</li>
-</ul>
-<h4 id="Maven-生命周期"><a href="#Maven-生命周期" class="headerlink" title="Maven 生命周期"></a>Maven 生命周期</h4><ul>
-<li><p>Maven 构建项目生命周期描述的是一次构建过程经历经历了多少个事件</p>
-</li>
-<li><p>Maven 对项目构建的生命周期划分为3套：</p>
+<h3 id="二、Maven-基本使用"><a href="#二、Maven-基本使用" class="headerlink" title="二、Maven 基本使用"></a>二、Maven 基本使用</h3><h4 id="Maven-常用命令"><a href="#Maven-常用命令" class="headerlink" title="Maven 常用命令"></a>Maven 常用命令</h4><p><code>mvn compile</code> ：编译，在项目下会生成一个 <code>target</code> 目录。</p>
+<p><code>mvn clean</code>：清理，删除项目下的 <code>target</code> 目录。</p>
+<p><code>mvn test</code>：测试，执行所有的测试代码。</p>
+<p><code>mvn package</code>：打包，将当前项目打成的 jar 包。</p>
+<p><code>mvn install</code>：安装，将当前项目打成jar包，并安装到本地仓库。</p>
+<h4 id="Maven-生命周期"><a href="#Maven-生命周期" class="headerlink" title="Maven 生命周期"></a>Maven 生命周期</h4><p>Maven 构建项目生命周期描述的是一次构建过程经历经历了多少个事件。</p>
+<p>Maven 对项目构建的生命周期划分为3套：</p>
 <ul>
 <li><p>clean ：清理工作。</p>
 </li>
@@ -596,42 +560,22 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
 <li><p>site ： 产生报告，发布站点等。这套声明周期一般不会使用。</p>
 </li>
 </ul>
-</li>
-<li><p>同一套生命周期内，执行后边的命令，前面的所有命令会自动执行</p>
-</li>
-<li><p>当我们执行 <code>install</code>（安装）命令时，它会先执行 <code>compile</code>命令，再执行 <code>test </code> 命令，再执行 <code>package</code> 命令，最后执行 <code>install</code> 命令</p>
-</li>
-<li><p>当我们执行 <code>package</code> （打包）命令时，它会先执行 <code>compile</code> 命令，再执行 <code>test</code> 命令，最后执行 <code>package</code> 命令</p>
-</li>
-<li><p>默认的生命周期也有对应的很多命令，其他的一般都不会使用，我们只关注常用的</p>
-</li>
-</ul>
-<h4 id="Maven-坐标详解"><a href="#Maven-坐标详解" class="headerlink" title="Maven 坐标详解"></a>Maven 坐标详解</h4><ul>
-<li><p>Maven 中的坐标是资源的唯一标识</p>
-</li>
-<li><p>使用坐标来定义项目或引入项目中需要的依赖</p>
-</li>
-<li><p>Maven 坐标主要组成</p>
+<p>同一套生命周期内，执行后边的命令，前面的所有命令会自动执行。当我们执行 <code>install</code>（安装）命令时，它会先执行 <code>compile</code>命令，再执行 <code>test </code> 命令，再执行 <code>package</code> 命令，最后执行 <code>install</code> 命令；当我们执行 <code>package</code> （打包）命令时，它会先执行 <code>compile</code> 命令，再执行 <code>test</code> 命令，最后执行 <code>package</code> 命令。</p>
+<h4 id="Maven-坐标详解"><a href="#Maven-坐标详解" class="headerlink" title="Maven 坐标详解"></a>Maven 坐标详解</h4><p>Maven 中的坐标是资源的唯一标识，资源可以是插件、依赖、当前项目。</p>
+<p>使用坐标来定义项目或引入项目中需要的依赖。</p>
+<p>Maven 坐标主要组成：</p>
 <ul>
-<li><p>groupId：定义当前Maven项目隶属组织名称（通常是域名反写，例如：com.itheima）</p>
+<li><p>groupId：定义当前Maven项目隶属组织名称（通常是域名反写，例如：com.itheima）。</p>
 </li>
-<li><p>artifactId：定义当前Maven项目名称（通常是模块名称，例如 order-service、goods-service）</p>
+<li><p>artifactId：定义当前Maven项目名称（通常是模块名称，例如 order-service、goods-service）。</p>
 </li>
-<li><p>version：定义当前项目版本号</p>
-</li>
-</ul>
-</li>
-<li><p>上面所说的资源可以是插件、依赖、当前项目</p>
-</li>
-<li><p>我们的项目如果被其他的项目依赖时，也是需要坐标来引入的</p>
+<li><p>version：定义当前项目版本号。</p>
 </li>
 </ul>
-<h3 id="Maven-依赖管理"><a href="#Maven-依赖管理" class="headerlink" title="Maven 依赖管理"></a>Maven 依赖管理</h3><h4 id="使用坐标引入-jar-包"><a href="#使用坐标引入-jar-包" class="headerlink" title="使用坐标引入 jar 包"></a>使用坐标引入 jar 包</h4><ul>
-<li><p>在项目的 pom.xml 中编写<code> &lt;dependencies&gt;</code> 标签</p>
-</li>
-<li><p>在 <code>&lt;dependencies&gt; </code>标签中 使用 <code>&lt;dependency&gt;</code> 引入坐标</p>
-</li>
-<li><p>定义坐标的 <code> groupId</code>，<code>artifactId</code>，<code>version</code></p>
+<p>我们的项目如果被其他的项目依赖时，也是需要坐标来引入的。</p>
+<h3 id="三、Maven-依赖管理"><a href="#三、Maven-依赖管理" class="headerlink" title="三、Maven 依赖管理"></a>三、Maven 依赖管理</h3><h4 id="使用坐标引入-jar-包"><a href="#使用坐标引入-jar-包" class="headerlink" title="使用坐标引入 jar 包"></a>使用坐标引入 jar 包</h4><p>在项目的 pom.xml 中编写<code> &lt;dependencies&gt;</code> 标签。</p>
+<p>在 <code>&lt;dependencies&gt; </code>标签中 使用 <code>&lt;dependency&gt;</code> 引入坐标。</p>
+<p>定义坐标的 <code> groupId</code>，<code>artifactId</code>，<code>version</code>。</p>
 <pre><code class="xml">&lt;dependencies&gt;
     &lt;dependency&gt;
         &lt;groupId&gt;mysql&lt;/groupId&gt;
@@ -639,22 +583,15 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
         &lt;version&gt;5.1.32&lt;/version&gt;
     &lt;/dependency&gt;
 &lt;/dependencies&gt;</code></pre>
-</li>
-</ul>
-<h4 id="依赖范围"><a href="#依赖范围" class="headerlink" title="依赖范围"></a>依赖范围</h4><ul>
-<li><p>通过设置坐标的依赖范围（scope），可以设置对应 jar 包的作用范围：编译环境、测试环境、运行环境。</p>
-</li>
-<li><p>通过 <code>scope</code> 标签指定依赖的作用范围。 那么这个依赖就只能作用在测试环境，其他环境下不能使用</p>
+<h4 id="依赖范围"><a href="#依赖范围" class="headerlink" title="依赖范围"></a>依赖范围</h4><p>通过设置坐标的依赖范围（scope），可以设置对应 jar 包的作用范围：编译环境、测试环境、运行环境。</p>
+<p>通过 <code>scope</code> 标签指定依赖的作用范围。 那么这个依赖就只能作用在测试环境，其他环境下不能使用。</p>
 <pre><code class="xml">&lt;dependency&gt;
         &lt;groupId&gt;mysql&lt;/groupId&gt;
         &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
         &lt;version&gt;5.1.32&lt;/version&gt;
     &lt;scope&gt;test&lt;/scope&gt;
 &lt;/dependency&gt;</code></pre>
-</li>
-<li><p> <code>scope</code> 的取值</p>
-</li>
-</ul>
+<p><code>scope</code> 的取值：</p>
 <table>
 <thead>
 <tr>
@@ -701,18 +638,36 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
 <td>存储在本地的jar包</td>
 </tr>
 </tbody></table>
-<ul>
-<li>compile：作用于编译环境、测试环境、运行环境</li>
-<li>test：作用于测试环境。典型的就是 Junit 坐标，以后使用 Junit 时，都会将 scope 指定为该值</li>
-<li>provided：作用于编译环境、测试环境。我们后面会学习 <code>servlet-api</code> ，在使用它时，必须将 <code>scope</code> 设置为该值，不然运行时就会报错</li>
-<li>runtime： 作用于测试环境、运行环境。jdbc驱动一般将 <code>scope</code> 设置为该值，当然不设置也没有任何问题 </li>
-<li>如果引入坐标不指定 <code>scope</code> 标签时，默认就是 compile  值，大部分 jar 包都是使用默认值</li>
-</ul>
+<p>compile：作用于编译环境、测试环境、运行环境。</p>
+<p>test：作用于测试环境。典型的就是 Junit 坐标，以后使用 Junit 时，都会将 scope 指定为该值。</p>
+<p>provided：作用于编译环境、测试环境。我们后面会学习 <code>servlet-api</code> ，在使用它时，必须将 <code>scope</code> 设置为该值，不然运行时就会报错。</p>
+<p>runtime： 作用于测试环境、运行环境。jdbc驱动一般将 <code>scope</code> 设置为该值，当然不设置也没有任何问题 。</p>
+<p>如果引入坐标不指定 <code>scope</code> 标签时，默认就是 compile  值，大部分 jar 包都是使用默认值。</p>
 
   
   
     
     <div class='footer'>
+      
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>References</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://www.bilibili.com/video/BV1Qf4y1T7Hx" rel="external nofollow noopener noreferrer" target="_blank">
+                  Java web从入门到企业实战
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        </div>
       
       
       
@@ -739,20 +694,24 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
       
         
           
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Java/">Java</a>
+    </a>
+  </div>
+
+
+        
+      
+        
+          
 <div class='new-meta-item author'>
   <a class='author' href="/about" rel="nofollow">
     <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
     <p>Bezhuang</p>
   </a>
 </div>
-
-        
-      
-        
-          
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Java/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Java</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Maven/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Maven</p></a></div>
-
 
         
       
@@ -765,12 +724,12 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/&title=Maven 项目管理知识总结 - Bezhuang's Blog&summary=
-Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala，我是通过 maven 项目管理从基础到高级一课系统学习 Maven 的，以下为所记笔记，可供参考。
+Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -779,12 +738,12 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/&title=Maven 项目管理知识总结 - Bezhuang's Blog&summary=
-Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala，我是通过 maven 项目管理从基础到高级一课系统学习 Maven 的，以下为所记笔记，可供参考。
+Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -793,12 +752,12 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/&title=Maven 项目管理知识总结 - Bezhuang's Blog&summary=
-Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala，我是通过 maven 项目管理从基础到高级一课系统学习 Maven 的，以下为所记笔记，可供参考。
+Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala。
 "
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -806,7 +765,7 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADn0lEQVR42u3aQW7DMAwEQP//0+29RWBxSTdsMLqlcGRq1MOCzPVlRetCAA4cOHAWOHBL4K5w/fz+rxe8eC7dP93vVV1xPeDAgQMHDhw4cMvgjgNg8/kpmLvnTt9frh8cOHDgwIEDB24pXBp4qwe+gzvdt7pfGx4cOHDgwIEDB+5D4E4PXg2gp5BpYAYHDhw4cODAgQNXC7BpsH1qgA4OHDhw4MCBA/cpcN0BcxpQ033TOt4+yQcHDhw4cODAgRuCmw6U2z/H5wUHDhw4cODAgVsC111V4DTApkH7a3iBAwcOHDhw4MBtgasOkquB8RRi+nM6yB7rAIMDBw4cOHDgwD0Mlw5mpwfVXYCpxuZt/eDAgQMHDhw4cEvg0kZk9wBViKkgnjZUwYEDBw4cOHDgtsKljce0gPQ9acN06nlw4MCBAwcOHLgtcFWIU5DpwfVT+5SfAwcOHDhw4MCBWwJXLSSFPB0IdwfZXdjb94IDBw4cOHDgwC2Fe1djcSrIVi+2fA5w4MCBAwcOHLglcHeFdwfPTwXa03q7AR0cOHDgwIEDB+6/wk0FyurFPNVgvcIFDhw4cODAgQO3De60sXjaeKw2KKvBNL2YKvTL/cCBAwcOHDhw4JbBdRuX6YC5GrCnG53lCwQHDhw4cODAgVsCFw9mw6BbbhwO/X2qcQoOHDhw4MCBA7cFLh0wVwNtOihOG45T5wAHDhw4cODAgdsONzXofXpQXR2gV4N8uQMMDhw4cODAgQP3JrinBs2ngTYNuOkPBtv/MODAgQMHDhw4cMvg0uCYBuHTQqcaqmN1gAMHDhw4cODALYG7wjUFWR1onwbmqf3AgQMHDhw4cOC2w50OgqcKrAbb6mB6OviCAwcOHDhw4MBtg+sOaruD5G4js/r+9sAdHDhw4MCBAwduOVw60I0LChupp0DV84ADBw4cOHDgwG2H6w6k00DcDdhPXcht3eDAgQMHDhw4cEvguisNwF2g9CK6jVVw4MCBAwcOHLgtcNMBsRpMu4Ptpy4MHDhw4MCBAwfuv8BNDXRPC+o2MtOgnDY6wYEDBw4cOHDgtsOlA+hqAE5/8NcNyt3zgQMHDhw4cODAfQrcXwNONTKr0ODAgQMHDhw4cJ8K1y1saiCd1nV8PnDgwIEDBw4cuKVwaUCtBtY0mKZwp5C3dYADBw4cOHDgwC2Dq65uQO1eQLpP93lw4MCBAwcOHLgtcFYxOCMABw4cOAscuPeub7v+gJewvULeAAAAAElFTkSuQmCC">
           </div>
@@ -820,7 +779,7 @@ Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
           
         </a>
       
@@ -895,7 +854,7 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven-%E6%A6%82%E8%BF%B0"><span class="toc-text">Maven 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-text">Maven 基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Maven-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">Maven 常用命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Maven-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">Maven 生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Maven-%E5%9D%90%E6%A0%87%E8%AF%A6%E8%A7%A3"><span class="toc-text">Maven 坐标详解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Maven-%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86"><span class="toc-text">Maven 依赖管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%9D%90%E6%A0%87%E5%BC%95%E5%85%A5-jar-%E5%8C%85"><span class="toc-text">使用坐标引入 jar 包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E8%8C%83%E5%9B%B4"><span class="toc-text">依赖范围</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81Maven-%E6%A6%82%E8%BF%B0"><span class="toc-text">一、Maven 概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Maven-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="toc-text">二、Maven 基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Maven-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">Maven 常用命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Maven-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">Maven 生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Maven-%E5%9D%90%E6%A0%87%E8%AF%A6%E8%A7%A3"><span class="toc-text">Maven 坐标详解</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81Maven-%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86"><span class="toc-text">三、Maven 依赖管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%9D%90%E6%A0%87%E5%BC%95%E5%85%A5-jar-%E5%8C%85"><span class="toc-text">使用坐标引入 jar 包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E8%8C%83%E5%9B%B4"><span class="toc-text">依赖范围</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -1332,11 +1291,46 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
 
 
   
   
-    <script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
   
 
 
