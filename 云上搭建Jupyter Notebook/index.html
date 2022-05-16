@@ -27,7 +27,7 @@
 
   
     <meta name="description" content="
-Jupyter Notebook是基于浏览器网页的用于交互计算的应用程序，支持Python、R、Julia和Scala等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab是基于web的集成开发环境，包含了Jupyter Notebook所有功能的同时还支持操作终端、编辑markdown文本、打开...">
+Jupyter Notebook 是基于浏览器网页的用于交互计算的应用程序，支持 Python、R、Julia 和 Scala 等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab 是基于 web 的集成开发环境，包含了 Jupyter Notebook 所有功能的同时还支持操作终端、编辑 ma...">
   
 
   <!-- feed -->
@@ -481,7 +481,7 @@ Jupyter Notebook是基于浏览器网页的用于交互计算的应用程序，�
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：615字</p>
+      <p>字数：631字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -502,96 +502,69 @@ Jupyter Notebook是基于浏览器网页的用于交互计算的应用程序，�
   
   
   <blockquote>
-<p>Jupyter Notebook是基于浏览器网页的用于交互计算的应用程序，支持Python、R、Julia和Scala等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab是基于web的集成开发环境，包含了Jupyter Notebook所有功能的同时还支持操作终端、编辑markdown文本、打开交互模式、查看csv文件及图片等功能，最近在学习的IBM数据科学专项课程也都是基于Jupyter Lab的，在阿里云主机上部署Jupyter环境也能使研究和学习更加方便。</p>
+<p>Jupyter Notebook 是基于浏览器网页的用于交互计算的应用程序，支持 Python、R、Julia 和 Scala 等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab 是基于 web 的集成开发环境，包含了 Jupyter Notebook 所有功能的同时还支持操作终端、编辑 markdown 文本、打开交互模式、查看 csv 文件及图片等功能，最近在学习的 IBM 数据科学专项课程也都是基于 Jupyter Lab 的，在阿里云主机上部署 Jupyter 环境也能使研究和学习更加方便。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="安装Anaconda"><a href="#安装Anaconda" class="headerlink" title="安装Anaconda"></a>安装Anaconda</h3><ul>
-<li><p>通过清华源安装最新版本Anaconda</p>
+<h3 id="一、安装Anaconda"><a href="#一、安装Anaconda" class="headerlink" title="一、安装Anaconda"></a>一、安装Anaconda</h3><p>通过清华源安装最新版本 Anaconda：</p>
 <pre><code class="bash">wget http://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2020.11-Linux-x86_64.sh
 bash Anaconda3-2020.11-Linux-x86_64.sh
 # 狂按Enter&gt;&gt;yes&gt;&gt;继续狂按Enter安装</code></pre>
-</li>
-<li><p>Anaconda默认安装在<code>/root/anaconda3</code>目录下</p>
-</li>
-<li><p>配置环境变量</p>
+<p>Anaconda 默认安装在 <code>/root/anaconda3</code> 目录下。</p>
+<p>配置环境变量：</p>
 <pre><code class="bash">vim ~/.bashrc
 # 添加下面两行内容
 #added by Anaconda3 4.4.0 installer
 export PATH=&quot;/root/anaconda3/bin:$PATH&quot;</code></pre>
-</li>
-<li><p>激活Anaconda环境并测试</p>
+<p>激活 Anaconda 环境并测试：</p>
 <pre><code class="bash">source ~/.bashrc
 conda --version</code></pre>
-</li>
-<li><p>添加清华镜像源，并搜索时显示通道地址</p>
+<p>添加清华镜像源，并搜索时显示通道地址：</p>
 <pre><code class="bash">conda config --add channels &#39;https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/&#39;
 conda config --set show_channel_urls yes</code></pre>
-</li>
-<li><p>创建jupyter notebook运行环境</p>
+<p>创建 jupyter notebook 运行环境：</p>
 <pre><code class="bash">conda create -n jupyter_notebook python=3
 # source activate jupyter_notebook 激活环境
 # source deactivate 退出环境</code></pre>
-</li>
-</ul>
-<h3 id="安装配置Jupyter"><a href="#安装配置Jupyter" class="headerlink" title="安装配置Jupyter"></a>安装配置Jupyter</h3><ul>
-<li><p>通过Anaconda安装Jupyter Notebook</p>
+<h3 id="二、安装配置Jupyter"><a href="#二、安装配置Jupyter" class="headerlink" title="二、安装配置Jupyter"></a>二、安装配置Jupyter</h3><p>通过 Anaconda 安装 Jupyter Notebook：</p>
 <pre><code class="bash">conda install jupyter notebook
 # 输入jupyter notebook --ip=127.0.0.1 --allow-root 可运行则为安装成功</code></pre>
-</li>
-<li><p>生成Jupyter Notebook配置文件</p>
+<p>生成 Jupyter Notebook 配置文件：</p>
 <pre><code class="bash">jupyter notebook --generate-config</code></pre>
-</li>
-<li><p>设置Jupyter Notebook密码</p>
+<p>设置 Jupyter Notebook 密码：</p>
 <pre><code class="bash">ipython
 In [1]: from notebook.auth import passwd
 In [2]: passwd()
 Enter password: 
 Verify password: 
 Out[2]: &#39;加密字符串&#39;</code></pre>
-</li>
-<li><p>修改配置文件</p>
+<p>修改配置文件：</p>
 <pre><code class="bash">vim /root/.jupyter/jupyter_notebook_config.py
 #修改如下行
 c.NotebookApp.ip = &#39;*&#39;
 c.NotebookApp.password = &#39;加密字符串&#39;
 c.NotebookApp.open_browser = False
 c.NotebookApp.allow_root = True</code></pre>
-</li>
-<li><p>启动Jupyter Notebook</p>
+<p>启动 Jupyter Notebook：</p>
 <pre><code class="bash">jupyter notebook</code></pre>
-</li>
-<li><p>访问<a target="_blank" rel="noopener" href="http://106.15.200.147:8888/">云服务器公网ip地址:8888</a></p>
-</li>
-<li><p>启动Jupyter Lab</p>
+<p>启动 Jupyter Lab：</p>
 <pre><code class="bash">jupyter lab</code></pre>
-</li>
-<li><p>访问<a target="_blank" rel="noopener" href="http://106.15.200.147:8888/">云服务器公网ip地址:8888</a></p>
-</li>
-</ul>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li>Jupyter Notebook只适用于单用户登录，如果想搭建多用户的Jupyter的话，要使用JupyterHub进行搭建</li>
-<li>阿里云默认不打卡8888端口，需要在服务器管理控制台中设置开放端口</li>
-</ul>
-<h3 id="添加JAVA环境支持"><a href="#添加JAVA环境支持" class="headerlink" title="添加JAVA环境支持"></a>添加JAVA环境支持</h3><ul>
-<li><p>安装JDK（过程略）</p>
-</li>
-<li><p>下载 java 内核压缩包<code>ijava</code>，<a target="_blank" rel="noopener" href="https://github.com/SpencerPark/IJava/releases">下载地址</a></p>
-</li>
-<li><p>上传到服务器，使用<code>unzip</code>命令解压</p>
-</li>
-<li><p>安装Java内核</p>
+<p>远程访问方式：<code>公网ip地址:8888</code></p>
+<p>通过 SSH 端口映射到本地：</p>
+<pre><code class="bash">ssh -L8888:localhost:8888 root@106.15.200.147</code></pre>
+<p>访问方式：<code>localhost:8888</code></p>
+<h3 id="三、注意事项"><a href="#三、注意事项" class="headerlink" title="三、注意事项"></a>三、注意事项</h3><p>Jupyter Notebook 只适用于单用户登录，如果想搭建多用户的 Jupyter 的话，要使用 JupyterHub 进行搭建。</p>
+<p>阿里云默认不打卡 8888 端口，需要在服务器管理控制台中设置开放端口。</p>
+<h3 id="添加-JAVA-环境支持"><a href="#添加-JAVA-环境支持" class="headerlink" title="添加 JAVA 环境支持"></a>添加 JAVA 环境支持</h3><p>安装 JDK（过程略），<a target="_blank" rel="noopener" href="https://github.com/SpencerPark/IJava/releases">下载</a> Java 内核压缩包 <code>ijava</code>，上传到服务器，使用 <code>unzip</code> 命令解压。</p>
+<p>安装 Java 内核：</p>
 <pre><code class="bash">python install.py --sys-prefix</code></pre>
-</li>
-<li><p>查看Jupyter内核支持</p>
+<p>查看 Jupyter 内核支持：</p>
 <pre><code class="python">jupyter kernelspec list
 &#39;&#39;&#39;
 Available kernels:
   java       /root/anaconda3/share/jupyter/kernels/java
   python3    /root/anaconda3/share/jupyter/kernels/python3
 &#39;&#39;&#39;</code></pre>
-</li>
-</ul>
 
   
   
@@ -673,7 +646,7 @@ Available kernels:
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAJupyter%20Notebook/&title=云上搭建基于 Anaconda 的 Jupyter 数据科学环境 - Bezhuang's Blog&summary=
-Jupyter Notebook是基于浏览器网页的用于交互计算的应用程序，支持Python、R、Julia和Scala等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab是基于web的集成开发环境，包含了Jupyter Notebook所有功能的同时还支持操作终端、编辑markdown文本、打开交互模式、查看csv文件及图片等功能，最近在学习的IBM数据科学专项课程也都是基于Jupyter Lab的，在阿里云主机上部署Jupyter环境也能使研究和学习更加方便。
+Jupyter Notebook 是基于浏览器网页的用于交互计算的应用程序，支持 Python、R、Julia 和 Scala 等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab 是基于 web 的集成开发环境，包含了 Jupyter Notebook 所有功能的同时还支持操作终端、编辑 markdown 文本、打开交互模式、查看 csv 文件及图片等功能，最近在学习的 IBM 数据科学专项课程也都是基于 Jupyter Lab 的，在阿里云主机上部署 Jupyter 环境也能使研究和学习更加方便。
 "
           
           >
@@ -687,7 +660,7 @@ Jupyter Notebook是基于浏览器网页的用于交互计算的应用程序，�
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAJupyter%20Notebook/&title=云上搭建基于 Anaconda 的 Jupyter 数据科学环境 - Bezhuang's Blog&summary=
-Jupyter Notebook是基于浏览器网页的用于交互计算的应用程序，支持Python、R、Julia和Scala等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab是基于web的集成开发环境，包含了Jupyter Notebook所有功能的同时还支持操作终端、编辑markdown文本、打开交互模式、查看csv文件及图片等功能，最近在学习的IBM数据科学专项课程也都是基于Jupyter Lab的，在阿里云主机上部署Jupyter环境也能使研究和学习更加方便。
+Jupyter Notebook 是基于浏览器网页的用于交互计算的应用程序，支持 Python、R、Julia 和 Scala 等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab 是基于 web 的集成开发环境，包含了 Jupyter Notebook 所有功能的同时还支持操作终端、编辑 markdown 文本、打开交互模式、查看 csv 文件及图片等功能，最近在学习的 IBM 数据科学专项课程也都是基于 Jupyter Lab 的，在阿里云主机上部署 Jupyter 环境也能使研究和学习更加方便。
 "
           
           >
@@ -701,7 +674,7 @@ Jupyter Notebook是基于浏览器网页的用于交互计算的应用程序，�
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAJupyter%20Notebook/&title=云上搭建基于 Anaconda 的 Jupyter 数据科学环境 - Bezhuang's Blog&summary=
-Jupyter Notebook是基于浏览器网页的用于交互计算的应用程序，支持Python、R、Julia和Scala等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab是基于web的集成开发环境，包含了Jupyter Notebook所有功能的同时还支持操作终端、编辑markdown文本、打开交互模式、查看csv文件及图片等功能，最近在学习的IBM数据科学专项课程也都是基于Jupyter Lab的，在阿里云主机上部署Jupyter环境也能使研究和学习更加方便。
+Jupyter Notebook 是基于浏览器网页的用于交互计算的应用程序，支持 Python、R、Julia 和 Scala 等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab 是基于 web 的集成开发环境，包含了 Jupyter Notebook 所有功能的同时还支持操作终端、编辑 markdown 文本、打开交互模式、查看 csv 文件及图片等功能，最近在学习的 IBM 数据科学专项课程也都是基于 Jupyter Lab 的，在阿里云主机上部署 Jupyter 环境也能使研究和学习更加方便。
 "
           
           >
@@ -758,7 +731,7 @@ In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, R
       
       
         <a class='next' href='/%E9%98%BF%E9%87%8C%E4%BA%91%E4%BA%91%E8%AE%A1%E7%AE%97%E5%8A%A9%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88%E8%AE%A4%E8%AF%81/'>
-          <p class='title'>阿里云云计算助理工程师认证（ACA）<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='title'>阿里云云计算助理工程师认证<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
 阿里云基础认证（ACA - Alibaba Cloud Certified Associate）是面向使用阿里云基础产品的专业技术认证，主要涉及阿里云的计算、存储、网络、安全类的核心产品。 阿...</p>
         </a>
@@ -803,7 +776,7 @@ In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, R
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Anaconda"><span class="toc-text">安装Anaconda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJupyter"><span class="toc-text">安装配置Jupyter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0JAVA%E7%8E%AF%E5%A2%83%E6%94%AF%E6%8C%81"><span class="toc-text">添加JAVA环境支持</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85Anaconda"><span class="toc-text">一、安装Anaconda</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEJupyter"><span class="toc-text">二、安装配置Jupyter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">三、注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0-JAVA-%E7%8E%AF%E5%A2%83%E6%94%AF%E6%8C%81"><span class="toc-text">添加 JAVA 环境支持</span></a></li></ol>
     </div>
   </section>
 
