@@ -507,49 +507,28 @@ Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视
   
   
   <blockquote>
-<p>Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 <code>python-opencv</code> 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。以下为项目笔记，源代码保存在 <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/Learn-CS/tree/main/%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE/Python-OpenCV">Github 仓库</a>中，可供参考。</p>
+<p>Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 <code>python-opencv</code> 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。源代码保存在 <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/Learn-CS/tree/main/%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE/Python-OpenCV">Github 仓库 </a>中。</p>
 </blockquote>
 <a id="more"></a>
 
-<h3 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h3><h4 id="人脸识别介绍"><a href="#人脸识别介绍" class="headerlink" title="人脸识别介绍"></a>人脸识别介绍</h4><ul>
-<li>对人类来说，人脸识别很容易：我们的大脑有专门的神经细胞针对不同的场景或运动特征作出反应，视觉皮层再以某种方式把不同的信息来源转化成可用的模型</li>
-<li>自动人脸识别就是研究如何从一幅图像中提取有意义的特征，形成可用的模型，然后对他们进行一些分类，因此基于几何特征的人脸的人脸识别可能是最直观的识别人脸的方法</li>
-<li>但即使是使用最先进的算法，标记点的确定也是很复杂的，单靠几何特征不能提供足够的信息用于人脸识别</li>
-<li>特征脸方法：把面部图像看作是一个点，从高维图像空间找到它在低维空间的表示，使用主元分析（Principal Component Analysis，PCA）可以找拥有最大方差的轴，但轴的最大方差不一定包含任何有鉴别性的信息</li>
-<li>使用线性鉴别（Linear Discriminant Analysis，LDA）的特定类投影方法：使类内方差最小的同时，使类外方差最大</li>
-<li>仅仅使用的局部特征描述图像的方法避免输入的图像的高维数据：提取的特征对于局部遮挡、光照变化、小样本等情况更强健<ul>
-<li>盖伯小波：Gabor Waelets</li>
-<li>离散傅立叶变换：Discrete Cosinus Transform（DCT）</li>
-<li>局部二值模式：Local Binary Patterns（LBP）</li>
-</ul>
-</li>
-</ul>
-<h4 id="OpenCV-介绍"><a href="#OpenCV-介绍" class="headerlink" title="OpenCV 介绍"></a>OpenCV 介绍</h4><ul>
-<li>从 OpenCV 2.4 开始，加入了新的类 FaceRecognizer，可以使用它便捷地进行人脸识别实验</li>
-<li>FaceRecognizer 类目前包含三种人脸识别方法<ul>
-<li>基于 PCA 变换的人脸识别：EigenFaceRecognizer</li>
-<li>基于 Fisher 变换的人脸识别：FisherFaceRecognizer</li>
-<li>基于局部二值模式的人脸识别：LBPHFaceRecognizer</li>
-</ul>
-</li>
-<li>特征脸（Eigenfaces）：图像表示的问题是他的高维问题，如果数据有任何差异，可以通过寻找主元来知道主要信息，把一些可能相关的变量转换成一个更小的不相关的子集<ul>
-<li>一个高维数据集经常被相关变量表示，因此只有一些的维上数据才是有意义的（包含最多的信息）</li>
-<li>PCA 方法寻找数据中拥有最大方差的方向（主成分）</li>
-<li>计算特征值和对应的特征向量，对特征值进行递减排序，特征向量和它顺序一致</li>
-<li>k 个主成分也就是 k 个最大的特征值对应的特征向量</li>
-<li>把所有的训练数据投影到 PCA 子空间 -&gt; 把待识别图像投影到 PCA 子空间 -&gt; 找到训练数据投影后的向量和待识别图像投影后的向量最近的那个</li>
-</ul>
-</li>
-<li>FisherFaces：基于线性判别分析（Linear Discriminant Analysis，LDA）理论，在降维的同时考虑类别信息，基于特征脸的方法，找到使数据中最大方差的特征线性组合<ul>
-<li>在低维表示下，相同的类应该紧紧的聚在一起，而不同的类别尽量距离越远</li>
-</ul>
-</li>
-<li>局部二值模式直方图（Local Binary Patterns Histograms）：不把整个图像看成一个高维向量，仅用局部特征来描述一个物体，通过这种方式提取特征，获得一个低维隐式<ul>
-<li>对图像的像素和它局部周围像素进行对比后的结果进行求和，把这个像素作为中心，对相邻像素进行阈值比较</li>
-<li>如果中心像素的亮度大于等于他的相邻像素，标记为 1，否则标记为 0（用二进制数字来表示每个像素）</li>
-</ul>
-</li>
-</ul>
+<h3 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h3><h4 id="人脸识别介绍"><a href="#人脸识别介绍" class="headerlink" title="人脸识别介绍"></a>人脸识别介绍</h4><p>对人类来说，人脸识别很容易：我们的大脑有专门的神经细胞针对不同的场景或运动特征作出反应，视觉皮层再以某种方式把不同的信息来源转化成可用的模型。</p>
+<p>自动人脸识别就是研究如何从一幅图像中提取有意义的特征，形成可用的模型，然后对他们进行一些分类，因此基于几何特征的人脸的人脸识别可能是最直观的识别人脸的方法。但即使是使用最先进的算法，标记点的确定也是很复杂的，单靠几何特征不能提供足够的信息用于人脸识别。</p>
+<p>特征脸方法：把面部图像看作是一个点，从高维图像空间找到它在低维空间的表示，使用主元分析（Principal Component Analysis，PCA）可以找拥有最大方差的轴，但轴的最大方差不一定包含任何有鉴别性的信息。</p>
+<p>使用线性鉴别（Linear Discriminant Analysis，LDA）的特定类投影方法：使类内方差最小的同时，使类外方差最大。</p>
+<p>仅仅使用的局部特征描述图像的方法避免输入的图像的高维数据：提取的特征对于局部遮挡、光照变化、小样本等情况更强健。如：盖伯小波：Gabor Waelets，离散傅立叶变换：Discrete Cosinus Transform（DCT），局部二值模式：Local Binary Patterns（LBP）。</p>
+<h4 id="OpenCV-介绍"><a href="#OpenCV-介绍" class="headerlink" title="OpenCV 介绍"></a>OpenCV 介绍</h4><p>从 OpenCV 2.4 开始，加入了新的类 FaceRecognizer，可以使用它便捷地进行人脸识别实验。</p>
+<p>FaceRecognizer 类目前包含三种人脸识别方法：</p>
+<ol>
+<li> 基于 PCA 变换的人脸识别：EigenFaceRecognizer。</li>
+<li> 基于 Fisher 变换的人脸识别：FisherFaceRecognizer。</li>
+<li> 基于局部二值模式的人脸识别：LBPHFaceRecognizer。</li>
+</ol>
+<p>特征脸（Eigenfaces）：图像表示的问题是他的高维问题，如果数据有任何差异，可以通过寻找主元来知道主要信息，把一些可能相关的变量转换成一个更小的不相关的子集。</p>
+<p>一个高维数据集经常被相关变量表示，因此只有一些的维上数据才是有意义的（包含最多的信息），PCA 方法寻找数据中拥有最大方差的方向（主成分）。计算特征值和对应的特征向量，对特征值进行递减排序，特征向量和它顺序一致。</p>
+<p>k 个主成分也就是 k 个最大的特征值对应的特征向量。</p>
+<p>把所有的训练数据投影到 PCA 子空间 -&gt; 把待识别图像投影到 PCA 子空间 -&gt; 找到训练数据投影后的向量和待识别图像投影后的向量最近的那个。</p>
+<p>FisherFaces：基于线性判别分析（Linear Discriminant Analysis，LDA）理论，在降维的同时考虑类别信息，基于特征脸的方法，找到使数据中最大方差的特征线性组合。在低维表示下，相同的类应该紧紧的聚在一起，而不同的类别尽量距离越远。</p>
+<p>局部二值模式直方图（Local Binary Patterns Histograms）：不把整个图像看成一个高维向量，仅用局部特征来描述一个物体，通过这种方式提取特征，获得一个低维隐式。对图像的像素和它局部周围像素进行对比后的结果进行求和，把这个像素作为中心，对相邻像素进行阈值比较。如果中心像素的亮度大于等于他的相邻像素，标记为 1，否则标记为 0（用二进制数字来表示每个像素）。</p>
 <h3 id="OpenCV-的基本使用"><a href="#OpenCV-的基本使用" class="headerlink" title="OpenCV 的基本使用"></a>OpenCV 的基本使用</h3><h4 id="读取图片"><a href="#读取图片" class="headerlink" title="读取图片"></a>读取图片</h4><pre><code class="python">#导入模块
 import cv2 as cv
 #读取图片
@@ -595,21 +574,13 @@ cv.circle(img,center=(x,y),radius=r,color=(0,0,255),thickness=2)
 cv.imshow(&#39;rectangle_img&#39;,img)
 cv.waitKey(0)
 cv.destroyAllWindows()</code></pre>
-<h3 id="人脸检测"><a href="#人脸检测" class="headerlink" title="人脸检测"></a>人脸检测</h3><h4 id="Haarcascades"><a href="#Haarcascades" class="headerlink" title="Haarcascades"></a>Haarcascades</h4><ul>
-<li>提取出图像的细节对产生稳定分类结果和跟踪结果很有用，这些提取的结果被称为特征</li>
-<li>虽然任意像素都可以能影响多个特征，但特征应该比像素少得多，两个图像的相似程度可以通过它们对应特征的欧氏距离来度量</li>
-<li>Haar 特征是一种用于实现实时人脸跟踪的特征，每一个 Haar 特征都描述了相邻图像区域的对比模式，如边、顶点和细线都能生成具有判别性的特征</li>
-</ul>
-<h4 id="官方-demo"><a href="#官方-demo" class="headerlink" title="官方 demo"></a>官方 demo</h4><ul>
-<li><p>下载：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/opencvlibrary/files/4.5.3/opencv-4.5.3-vc14_vc15.exe/download">https://sourceforge.net/projects/opencvlibrary/files/4.5.3/opencv-4.5.3-vc14_vc15.exe/download</a></p>
-</li>
-<li><p>build 中是 OpenCV 使用时要用到的一些库文件</p>
-</li>
-<li><p>sources 中是 OpenCV 官方提供的 demo 示例源码</p>
-</li>
-<li><p>sources/data/haarcascades 文件夹包含了所有 OpenCV 的人脸检测的 XML 文件，可用于检测静止图像、视频和摄像头所得到图像中的人脸</p>
-</li>
-</ul>
+<h3 id="人脸检测"><a href="#人脸检测" class="headerlink" title="人脸检测"></a>人脸检测</h3><h4 id="Haarcascades"><a href="#Haarcascades" class="headerlink" title="Haarcascades"></a>Haarcascades</h4><p>提取出图像的细节对产生稳定分类结果和跟踪结果很有用，这些提取的结果被称为特征。</p>
+<p>虽然任意像素都可以能影响多个特征，但特征应该比像素少得多，两个图像的相似程度可以通过它们对应特征的欧氏距离来度量。</p>
+<p>Haar 特征是一种用于实现实时人脸跟踪的特征，每一个 Haar 特征都描述了相邻图像区域的对比模式，如边、顶点和细线都能生成具有判别性的特征。</p>
+<h4 id="官方-demo"><a href="#官方-demo" class="headerlink" title="官方 demo"></a>官方 demo</h4><p>下载：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/opencvlibrary/files/4.5.3/opencv-4.5.3-vc14_vc15.exe/download%E3%80%82">https://sourceforge.net/projects/opencvlibrary/files/4.5.3/opencv-4.5.3-vc14_vc15.exe/download。</a></p>
+<p>build 中是 OpenCV 使用时要用到的一些库文件。</p>
+<p>sources 中是 OpenCV 官方提供的 demo 示例源码。</p>
+<p>sources/data/haarcascades 文件夹包含了所有 OpenCV 的人脸检测的 XML 文件，可用于检测静止图像、视频和摄像头所得到图像中的人脸。</p>
 <h4 id="静态人脸检测"><a href="#静态人脸检测" class="headerlink" title="静态人脸检测"></a>静态人脸检测</h4><pre><code class="python">import cv2 as cv
 def face_detect_demo():
     #将图片转换为灰度图片
@@ -668,14 +639,9 @@ while True:
         break
 cv.destroyAllWindows()
 cap.release()</code></pre>
-<h3 id="人脸识别"><a href="#人脸识别" class="headerlink" title="人脸识别"></a>人脸识别</h3><ul>
-<li>用一系列分好类的图像来训练程序，并基于这些图像来进行识别</li>
-<li>每个识别都具有转置信（confidence）评分，因此可在实际应用中通过对其设置阈值来进行筛选</li>
-</ul>
-<h4 id="训练数据"><a href="#训练数据" class="headerlink" title="训练数据"></a>训练数据</h4><ul>
-<li><code>train()</code> 函数中有两个参数：图像数组和标签数组，这些标签表示进行识别时候某人人脸的ID</li>
-<li>需要安装 <code>opencv-contrib-python</code> 模块</li>
-</ul>
+<h3 id="人脸识别"><a href="#人脸识别" class="headerlink" title="人脸识别"></a>人脸识别</h3><p>用一系列分好类的图像来训练程序，并基于这些图像来进行识别，每个识别都具有转置信（confidence）评分，因此可在实际应用中通过对其设置阈值来进行筛选。</p>
+<h4 id="训练数据"><a href="#训练数据" class="headerlink" title="训练数据"></a>训练数据</h4><p><code>train()</code> 函数中有两个参数：图像数组和标签数组，这些标签表示进行识别时候某人人脸的ID 。</p>
+<p>需要安装 <code>opencv-contrib-python</code> 模块。</p>
 <pre><code class="python">import os
 import cv2 as cv
 import sys
@@ -711,14 +677,10 @@ if __name__ == &#39;__main__&#39;:
     recognizer.train(faces,np.array(ids))
     #保存文件
     recognizer.write(&#39;trainer/trainer.yml&#39;)</code></pre>
-<h4 id="基于-LBPH-的人脸识别"><a href="#基于-LBPH-的人脸识别" class="headerlink" title="基于 LBPH 的人脸识别"></a>基于 LBPH 的人脸识别</h4><ul>
-<li>LBPH（Local Binary Pattern Histogram）将检测到的人脸分为小单元，并将其与模型中的对应单元进行比较，对每个区域的匹配值产生一个直方图</li>
-<li>由于这种方法的灵活性，LBPH 是唯一允许模型样本人脸和检测到的人脸在形状、大小上可以不同的人脸识别算法</li>
-<li>调整后的区域中调用 <code>predict()</code>函数，该函数返回两个元素的数组：第一个元素是所识别<br>个体的标签，第二个是置信度评分</li>
-<li>所有的算法都有一个置信度评分阈值，置信度评分用来衡量所识别人脸与原模型的差距，0 表示完全匹配</li>
-<li>可能有时不想保留所有的识别结果，则需要进一步处理，因此可用自己的算法来估算识别的置信度评分</li>
-<li>一个好的 LBPH 识别参考值要低于50，任何高于80的参考值都会被认为是低的置信度评分</li>
-</ul>
+<h4 id="基于-LBPH-的人脸识别"><a href="#基于-LBPH-的人脸识别" class="headerlink" title="基于 LBPH 的人脸识别"></a>基于 LBPH 的人脸识别</h4><p>LBPH（Local Binary Pattern Histogram）将检测到的人脸分为小单元，并将其与模型中的对应单元进行比较，对每个区域的匹配值产生一个直方图。由于这种方法的灵活性，LBPH 是唯一允许模型样本人脸和检测到的人脸在形状、大小上可以不同的人脸识别算法。</p>
+<p>调整后的区域中调用 <code>predict()</code>函数，该函数返回两个元素的数组：第一个元素是所识别个体的标签，第二个是置信度评分。</p>
+<p>所有的算法都有一个置信度评分阈值，置信度评分用来衡量所识别人脸与原模型的差距，0 表示完全匹配，可能有时不想保留所有的识别结果，则需要进一步处理，因此可用自己的算法来估算识别的置信度评分。</p>
+<p>一个好的 LBPH 识别参考值要低于50，任何高于80的参考值都会被认为是低的置信度评分。</p>
 <pre><code class="python">import cv2 as cv
 import numpy as np
 import os
@@ -792,7 +754,7 @@ while True:
               
                 <li>
                   <a href="https://www.cnblogs.com/guoming0000/archive/2012/09/27/2706019.html" rel="external nofollow noopener noreferrer" target="_blank">
-                  怎样使用OpenCV进行人脸识别
+                  怎样使用 OpenCV 进行人脸识别
                   </a>
                 </li>
               
@@ -855,7 +817,7 @@ while True:
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/&title=基于 Python 和 OpenCV 实现人脸识别 - Bezhuang's Blog&summary=
-Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 python-opencv 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。以下为项目笔记，源代码保存在 Github 仓库中，可供参考。
+Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 python-opencv 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。源代码保存在 Github 仓库 中。
 "
           
           >
@@ -869,7 +831,7 @@ Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/&title=基于 Python 和 OpenCV 实现人脸识别 - Bezhuang's Blog&summary=
-Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 python-opencv 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。以下为项目笔记，源代码保存在 Github 仓库中，可供参考。
+Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 python-opencv 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。源代码保存在 Github 仓库 中。
 "
           
           >
@@ -883,7 +845,7 @@ Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/&title=基于 Python 和 OpenCV 实现人脸识别 - Bezhuang's Blog&summary=
-Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 python-opencv 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。以下为项目笔记，源代码保存在 Github 仓库中，可供参考。
+Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 python-opencv 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。源代码保存在 Github 仓库 中。
 "
           
           >

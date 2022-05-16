@@ -29,7 +29,7 @@
 
   
     <meta name="description" content="
-Java Web 核心第二节。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
+Java Web 核心第二章。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
 ">
   
 
@@ -487,13 +487,13 @@ Java Web 核心第二节。在 Java Servlet 中，Request 对象是用来封装�
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：5.4k字</p>
+      <p>字数：5k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：23分钟</p>
+      <p>时长：21分钟</p>
     </a>
   </div>
 
@@ -508,7 +508,7 @@ Java Web 核心第二节。在 Java Servlet 中，Request 对象是用来封装�
   
   
   <blockquote>
-<p>Java Web 核心第二节。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。</p>
+<p>Java Web 核心第二章。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。</p>
 </blockquote>
 <a id="more"></a>
 
@@ -848,54 +848,18 @@ public class RequestDemo6 extends HttpServlet &#123;
 <p>Servlet -&gt; <code>service(request, response)</code></p>
 <pre><code class="mermaid">graph BT
 ReponseFacade --&gt; HttpServletReponse --&gt; ServletReponse</code></pre>
-<h4 id="Response-设置响应数据"><a href="#Response-设置响应数据" class="headerlink" title="Response 设置响应数据"></a>Response 设置响应数据</h4><p>HTTP响应数据总共分为三部分内容，分别是响应行、响应头、响应体，对于这三部分内容的数据，respone对象都提供了哪些方法来进行设置?</p>
-<ol>
-<li>响应行</li>
-</ol>
-<p><img src="/.top//1628858926498.png" class="lazyload" data-srcset="/.top//1628858926498.png" srcset="data:image/png;base64,666" alt="1628858926498"></p>
-<p>对于响应头，比较常用的就是设置响应状态码:</p>
-<pre><code>void setStatus(int sc);</code></pre>
-<ol start="2">
-<li>响应头</li>
-</ol>
-<p><img src="/.top//1628859051368.png" class="lazyload" data-srcset="/.top//1628859051368.png" srcset="data:image/png;base64,666" alt="1628859051368"></p>
-<p>设置响应头键值对：</p>
-<pre><code>void setHeader(String name,String value);</code></pre>
-<ol start="3">
-<li>响应体</li>
-</ol>
-<p><img src="/.top//1628859268095.png" class="lazyload" data-srcset="/.top//1628859268095.png" srcset="data:image/png;base64,666" alt="1628859268095"></p>
-<p>对于响应体，是通过字符、字节输出流的方式往浏览器写，</p>
-<p>获取字符输出流:</p>
-<pre><code>PrintWriter getWriter();</code></pre>
-<p>获取字节输出流</p>
-<pre><code>ServletOutputStream getOutputStream();</code></pre>
+<h4 id="Response-设置响应数据"><a href="#Response-设置响应数据" class="headerlink" title="Response 设置响应数据"></a>Response 设置响应数据</h4><p>HTTP响应数据总共分为三部分内容，分别是响应行、响应头、响应体，对于这三部分内容的数据，respone 对象都提供了哪些方法来进行设置?</p>
+<p>对于响应头，比较常用的就是设置响应状态码：<code>void setStatus(int sc);</code>。</p>
+<p>设置响应头键值对：<code>void setHeader(String name,String value);</code>。</p>
+<p>对于响应体，是通过字符、字节输出流的方式往浏览器写，获取字符输出流：<code>PrintWriter getWriter();</code>，或获取字节输出流：<code>ServletOutputStream getOutputStream();</code>。</p>
 <p>介绍完这些方法后，后面我们会通过案例把这些方法都用一用，首先先来完成下重定向的功能开发。</p>
-<h3 id="3-2-Respones请求重定向"><a href="#3-2-Respones请求重定向" class="headerlink" title="3.2 Respones请求重定向"></a>3.2 Respones请求重定向</h3><ol>
-<li>==Response重定向(redirect):一种资源跳转方式。==</li>
-</ol>
-<p><img src="/.top//1628859860279.png" class="lazyload" data-srcset="/.top//1628859860279.png" srcset="data:image/png;base64,666" alt="1628859860279"></p>
-<p>(1)浏览器发送请求给服务器，服务器中对应的资源A接收到请求</p>
-<p>(2)资源A现在无法处理该请求，就会给浏览器响应一个302的状态码+location的一个访问资源B的路径</p>
-<p>(3)浏览器接收到响应状态码为302就会重新发送请求到location对应的访问地址去访问资源B</p>
-<p>(4)资源B接收到请求后进行处理并最终给浏览器响应结果，这整个过程就叫==重定向==</p>
-<ol start="2">
-<li>重定向的实现方式:</li>
-</ol>
-<pre><code>resp.setStatus(302);
+<h4 id="Respones-请求重定向"><a href="#Respones-请求重定向" class="headerlink" title="Respones 请求重定向"></a>Respones 请求重定向</h4><p>Response 重定向（redirect）是一种资源跳转方式。浏览器发送请求给服务器，服务器中对应的资源 A 接收到请求。当资源 A 现在无法处理该请求，就会给浏览器响应一个 302 的状态码 + location 的一个访问资源 B 的路径。浏览器接收到响应状态码为 302 就会重新发送请求到 location 对应的访问地址去访问资源 B。资源 B 接收到请求后进行处理并最终给浏览器响应结果，这整个过程就叫重定向。</p>
+<p>重定向的实现方式：</p>
+<pre><code class="http">resp.setStatus(302);
 resp.setHeader(&quot;location&quot;,&quot;资源B的访问路径&quot;);</code></pre>
-<p>具体如何来使用，我们先来看下需求:</p>
-<p><img src="/.top//1628861030429.png" class="lazyload" data-srcset="/.top//1628861030429.png" srcset="data:image/png;base64,666" alt="1628861030429"></p>
-<p>针对上述需求，具体的实现步骤为:</p>
-<blockquote>
-<p>1.创建一个ResponseDemo1类，接收/resp1的请求，在doGet方法中打印<code>resp1....</code></p>
-<p>2.创建一个ResponseDemo2类，接收/resp2的请求，在doGet方法中打印<code>resp2....</code></p>
-<p>3.在ResponseDemo1的方法中使用</p>
-<p>​    response.setStatus(302);</p>
-<p>​    response.setHeader(“Location”,”/request-demo/resp2”) 来给前端响应结果数据</p>
-<p>4.启动测试</p>
-</blockquote>
-<p>(1)创建ResponseDemo1类</p>
+<ol>
+<li>  具体使用，我们先创建 ResponseDemo1 类</li>
+</ol>
 <pre><code class="java">@WebServlet(&quot;/resp1&quot;)
 public class ResponseDemo1 extends HttpServlet &#123;
     @Override
@@ -908,7 +872,9 @@ public class ResponseDemo1 extends HttpServlet &#123;
         this.doGet(request, response);
     &#125;
 &#125;</code></pre>
-<p>(2)创建ResponseDemo2类</p>
+<ol start="2">
+<li>  创建 ResponseDemo2 类</li>
+</ol>
 <pre><code class="java">@WebServlet(&quot;/resp2&quot;)
 public class ResponseDemo2 extends HttpServlet &#123;
     @Override
@@ -921,7 +887,9 @@ public class ResponseDemo2 extends HttpServlet &#123;
         this.doGet(request, response);
     &#125;
 &#125;</code></pre>
-<p>(3)在ResponseDemo1的doGet方法中给前端响应数据</p>
+<ol start="3">
+<li>  在 ResponseDemo1 的 doGet 方法中给前端响应数据</li>
+</ol>
 <pre><code class="java">@WebServlet(&quot;/resp1&quot;)
 public class ResponseDemo1 extends HttpServlet &#123;
     @Override
@@ -939,13 +907,9 @@ public class ResponseDemo1 extends HttpServlet &#123;
         this.doGet(request, response);
     &#125;
 &#125;</code></pre>
-<p>(4)启动测试</p>
-<p>访问<code>http://localhost:8080/request-demo/resp1</code>,就可以在控制台看到如下内容:</p>
-<p><img src="/.top//1628861404699.png" class="lazyload" data-srcset="/.top//1628861404699.png" srcset="data:image/png;base64,666" alt="1628861404699"></p>
-<p>说明<code>/resp1</code>和<code>/resp2</code>都被访问到了。到这重定向就已经完成了。</p>
-<p>虽然功能已经实现，但是从设置重定向的两行代码来看，会发现除了重定向的地址不一样，其他的内容都是一模一样，所以request对象给我们提供了简化的编写方式为:</p>
-<pre><code>resposne.sendRedirect(&quot;/request-demo/resp2&quot;)</code></pre>
-<p>所以第3步中的代码就可以简化为：</p>
+<ol start="4">
+<li>  虽然功能已经实现，但是从设置重定向的两行代码来看，会发现除了重定向的地址不一样，其他的内容都是一模一样，所以request对象给我们提供了简化的编写方式为：<code>resposne.sendRedirect(&quot;/request-demo/resp2&quot;)</code>。</li>
+</ol>
 <pre><code class="java">@WebServlet(&quot;/resp1&quot;)
 public class ResponseDemo1 extends HttpServlet &#123;
     @Override
@@ -954,58 +918,26 @@ public class ResponseDemo1 extends HttpServlet &#123;
         //重定向
         resposne.sendRedirect(&quot;/request-demo/resp2&quot;)；
     &#125;
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
         this.doGet(request, response);
     &#125;
 &#125;</code></pre>
-<ol start="3">
-<li>重定向的特点</li>
-</ol>
+<p>重定向的特点</p>
 <ul>
-<li><p>浏览器地址栏路径发送变化</p>
-<p>当进行重定向访问的时候，由于是由浏览器发送的两次请求，所以地址会发生变化</p>
-<p><img src="/.top//1628861893130.png" class="lazyload" data-srcset="/.top//1628861893130.png" srcset="data:image/png;base64,666" alt="1628861893130"></p>
+<li><p>浏览器地址栏路径发送变化：当进行重定向访问的时候，由于是由浏览器发送的两次请求，所以地址会发生变化。</p>
 </li>
-<li><p>可以重定向到任何位置的资源(服务内容、外部均可)</p>
-<p>因为第一次响应结果中包含了浏览器下次要跳转的路径，所以这个路径是可以任意位置资源。</p>
+<li><p>可以重定向到任何位置的资源(服务内容、外部均可)，因为第一次响应结果中包含了浏览器下次要跳转的路径，所以这个路径是可以任意位置资源。</p>
 </li>
-<li><p>两次请求，不能在多个资源使用request共享数据</p>
-<p>因为浏览器发送了两次请求，是两个不同的request对象，就无法通过request对象进行共享数据</p>
+<li><p>两次请求，不能在多个资源使用 request 共享数据，因为浏览器发送了两次请求，是两个不同的 request 对象，就无法通过 request 对象进行共享数据</p>
 </li>
 </ul>
-<p>介绍完==请求重定向==和==请求转发==以后，接下来需要把这两个放在一块对比下:</p>
-<p><img src="/.top//1628862170296.png" class="lazyload" data-srcset="/.top//1628862170296.png" srcset="data:image/png;base64,666" alt="1628862170296"></p>
-<p>以后到底用哪个，还是需要根据具体的业务来决定。</p>
-<h3 id="3-3-路径问题"><a href="#3-3-路径问题" class="headerlink" title="3.3 路径问题"></a>3.3 路径问题</h3><ol>
-<li>问题1：转发的时候路径上没有加<code>/request-demo</code>而重定向加了，那么到底什么时候需要加，什么时候不需要加呢?</li>
+<h4 id="路径问题"><a href="#路径问题" class="headerlink" title="路径问题"></a>路径问题</h4><ol>
+<li><p>转发的时候路径上没有加 <code>/request-demo</code> 而重定向加了，因为对于转发来说，因为是在服务端进行的，所以不需要加虚拟目录。对于重定向来说，路径最终是由浏览器来发送请求，就需要添加虚拟目录。</p>
+</li>
+<li><p>在重定向的代码中，<code>/request-demo</code> 是固定编码的，如果后期通过 Tomcat 插件配置了项目的访问路径，那么所有需要重定向的地方都需要重新修改，因此我们可以在代码中动态去获取项目访问的虚拟目录进行优化，具体可以借助 request 对象 <code>getContextPath() </code>方法，修改后的代码如下：</p>
+</li>
 </ol>
-<p><img src="/.top//1628862652700.png" class="lazyload" data-srcset="/.top//1628862652700.png" srcset="data:image/png;base64,666" alt="1628862652700"></p>
-<p>其实判断的依据很简单，只需要记住下面的规则即可:</p>
-<ul>
-<li>浏览器使用:需要加虚拟目录(项目访问路径)</li>
-<li>服务端使用:不需要加虚拟目录</li>
-</ul>
-<p>对于转发来说，因为是在服务端进行的，所以不需要加虚拟目录</p>
-<p>对于重定向来说，路径最终是由浏览器来发送请求，就需要添加虚拟目录。</p>
-<p>掌握了这个规则，接下来就通过一些练习来强化下知识的学习:</p>
-<ul>
-<li><code>&lt;a href=&#39;路劲&#39;&gt;</code></li>
-<li><code>&lt;form action=&#39;路径&#39;&gt;</code></li>
-<li>req.getRequestDispatcher(“路径”)</li>
-<li>resp.sendRedirect(“路径”)</li>
-</ul>
-<p>答案:</p>
-<pre><code>1.超链接，从浏览器发送，需要加
-2.表单，从浏览器发送，需要加
-3.转发，是从服务器内部跳转，不需要加
-4.重定向，是由浏览器进行跳转，需要加。</code></pre>
-<ol start="2">
-<li>问题2：在重定向的代码中，<code>/request-demo</code>是固定编码的，如果后期通过Tomcat插件配置了项目的访问路径，那么所有需要重定向的地方都需要重新修改，该如何优化?</li>
-</ol>
-<p><img src="/.top//1628863270545.png" class="lazyload" data-srcset="/.top//1628863270545.png" srcset="data:image/png;base64,666" alt="1628863270545"></p>
-<p>答案也比较简单，我们可以在代码中动态去获取项目访问的虚拟目录，具体如何获取，我们可以借助前面咱们所学习的request对象中的getContextPath()方法，修改后的代码如下:</p>
 <pre><code class="java">@WebServlet(&quot;/resp1&quot;)
 public class ResponseDemo1 extends HttpServlet &#123;
     @Override
@@ -1024,16 +956,9 @@ public class ResponseDemo1 extends HttpServlet &#123;
     &#125;
 &#125;</code></pre>
 <p>重新启动访问测试，功能依然能够实现，此时就可以动态获取项目访问的虚拟路径，从而降低代码的耦合度。</p>
-<h3 id="3-4-Response响应字符数据"><a href="#3-4-Response响应字符数据" class="headerlink" title="3.4 Response响应字符数据"></a>3.4 Response响应字符数据</h3><p>要想将字符数据写回到浏览器，我们需要两个步骤:</p>
-<ul>
-<li><p>通过Response对象获取字符输出流： PrintWriter writer = resp.getWriter();</p>
-</li>
-<li><p>通过字符输出流写数据: writer.write(“aaa”);</p>
-</li>
-</ul>
-<p>接下来，我们实现通过些案例把响应字符数据给实际应用下:</p>
+<h4 id="Response-响应字符数据"><a href="#Response-响应字符数据" class="headerlink" title="Response 响应字符数据"></a>Response 响应字符数据</h4><p>要想将字符数据写回到浏览器，我们需要两个步骤：首先通过 Response 对象获取字符输出流（<code>PrintWriter writer = resp.getWriter();</code>），再通过字符输出流写数据（<code>writer.write(&quot;aaa&quot;);</code>）</p>
 <ol>
-<li>返回一个简单的字符串<code>aaa</code></li>
+<li>返回一个简单的字符串 <code>aaa</code>。</li>
 </ol>
 <pre><code class="java">/**
  * 响应字符数据：设置字符数据的响应体
@@ -1052,31 +977,22 @@ public class ResponseDemo3 extends HttpServlet &#123;
         this.doGet(request, response);
     &#125;
 &#125;</code></pre>
-<p><img src="/.top//1628863905362.png" class="lazyload" data-srcset="/.top//1628863905362.png" srcset="data:image/png;base64,666" alt="1628863905362"></p>
 <ol start="2">
-<li>返回一串html字符串，并且能被浏览器解析</li>
+<li>返回一串 html 字符串，并且能被浏览器解析。</li>
 </ol>
-<pre><code>PrintWriter writer = response.getWriter();
+<pre><code class="java">PrintWriter writer = response.getWriter();
 //content-type，告诉浏览器返回的数据类型是HTML类型数据，这样浏览器才会解析HTML标签
 response.setHeader(&quot;content-type&quot;,&quot;text/html&quot;);
-writer.write(&quot;&lt;h1&gt;aaa&lt;/h1&gt;&quot;);</code></pre>
-<p><img src="/.top//1628864140820.png" class="lazyload" data-srcset="/.top//1628864140820.png" srcset="data:image/png;base64,666" alt="1628864140820"></p>
-<p>==注意:==一次请求响应结束后，response对象就会被销毁掉，所以不要手动关闭流。</p>
+writer.write(&quot;&lt;h1&gt;aaa&lt;/h1&gt;&quot;);
+//一次请求响应结束后，response 对象就会被销毁掉，所以不要手动关闭流。</code></pre>
 <ol start="3">
-<li>返回一个中文的字符串<code>你好</code>，需要注意设置响应数据的编码为<code>utf-8</code></li>
+<li>返回一个中文的字符串 <code>你好</code>，需要注意设置响应数据的编码为 <code>utf-8</code></li>
 </ol>
-<pre><code>//设置响应的数据格式及数据的编码
+<pre><code class="java">//设置响应的数据格式及数据的编码
 response.setContentType(&quot;text/html;charset=utf-8&quot;);
 writer.write(&quot;你好&quot;);</code></pre>
-<p><img src="/.top//1628864390263.png" class="lazyload" data-srcset="/.top//1628864390263.png" srcset="data:image/png;base64,666" alt="1628864390263"></p>
-<h3 id="3-3-Response响应字节数据"><a href="#3-3-Response响应字节数据" class="headerlink" title="3.3 Response响应字节数据"></a>3.3 Response响应字节数据</h3><p>要想将字节数据写回到浏览器，我们需要两个步骤:</p>
-<ul>
-<li><p>通过Response对象获取字节输出流：ServletOutputStream outputStream = resp.getOutputStream();</p>
-</li>
-<li><p>通过字节输出流写数据: outputStream.write(字节数据);</p>
-</li>
-</ul>
-<p>接下来，我们实现通过些案例把响应字符数据给实际应用下:</p>
+<h4 id="Response-响应字节数据"><a href="#Response-响应字节数据" class="headerlink" title="Response 响应字节数据"></a>Response 响应字节数据</h4><p>要想将字节数据写回到浏览器，我们需要两个步骤：首先通过Response对象获取字节输出流（<code>ServletOutputStream outputStream = resp.getOutputStream();</code>），再通过字节输出流写数据（<code>outputStream.write(字节数据);</code>）。</p>
+<p>响应字符数据的实际应用：</p>
 <ol>
 <li>返回一个图片文件到浏览器</li>
 </ol>
@@ -1105,19 +1021,22 @@ public class ResponseDemo4 extends HttpServlet &#123;
         this.doGet(request, response);
     &#125;
 &#125;</code></pre>
-<p><img src="/.top//1628864883564.png" class="lazyload" data-srcset="/.top//1628864883564.png" srcset="data:image/png;base64,666" alt="1628864883564"></p>
-<p>上述代码中，对于流的copy的代码还是比较复杂的，所以我们可以使用别人提供好的方法来简化代码的开发，具体的步骤是:</p>
-<p>(1)pom.xml添加依赖</p>
+<p>上述代码中，对于流的 copy 的代码还是比较复杂的，所以我们可以使用别人提供好的方法来简化代码的开发，具体的步骤是：</p>
+<ol>
+<li>  pom.xml 添加依赖</li>
+</ol>
 <pre><code class="xml">&lt;dependency&gt;
     &lt;groupId&gt;commons-io&lt;/groupId&gt;
     &lt;artifactId&gt;commons-io&lt;/artifactId&gt;
     &lt;version&gt;2.6&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
-<p>(2)调用工具类方法</p>
-<pre><code>//fis:输入流
+<ol start="2">
+<li>  调用工具类方法</li>
+</ol>
+<pre><code class="java">//fis:输入流
 //os:输出流
 IOUtils.copy(fis,os);</code></pre>
-<p>优化后的代码:</p>
+<p>优化后的代码：</p>
 <pre><code class="java">/**
  * 响应字节数据：设置字节数据的响应体
  */
@@ -1220,7 +1139,7 @@ public class ResponseDemo4 extends HttpServlet &#123;
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Request&Response/&title=Request 和 Response 对象详解 - Bezhuang's Blog&summary=
-Java Web 核心第二节。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
+Java Web 核心第二章。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
 "
           
           >
@@ -1234,7 +1153,7 @@ Java Web 核心第二节。在 Java Servlet 中，Request 对象是用来封装�
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Request&Response/&title=Request 和 Response 对象详解 - Bezhuang's Blog&summary=
-Java Web 核心第二节。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
+Java Web 核心第二章。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
 "
           
           >
@@ -1248,7 +1167,7 @@ Java Web 核心第二节。在 Java Servlet 中，Request 对象是用来封装�
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
           target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Request&Response/&title=Request 和 Response 对象详解 - Bezhuang's Blog&summary=
-Java Web 核心第二节。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
+Java Web 核心第二章。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
 "
           
           >
@@ -1307,7 +1226,7 @@ freeCodeCamp 响应式网页设计的认证课程第一章。HTML 标签赋予�
         <a class='next' href='/HTTP&Servlet/'>
           <p class='title'>HTTP 协议和 Servlet<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
-Java Web 核心第一节。Java Web 是用 Java 技术来解决相关 web 互联网领域的技术栈，国内很多大型网站公司也是首选 Java 语言来解决 web 互联网相关的问题。要了解...</p>
+Java Web 核心第一章。Java Web 是用 Java 技术来解决相关 web 互联网领域的技术栈，国内很多大型网站公司也是首选 Java 语言来解决 web 互联网相关的问题。要了解...</p>
         </a>
       
     </div>
@@ -1350,7 +1269,7 @@ Java Web 核心第一节。Java Web 是用 Java 技术来解决相关 web 互联
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81Request-%E5%92%8C-Response-%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">一、Request 和 Response 对象的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Request-%E5%AF%B9%E8%B1%A1"><span class="toc-text">二、Request 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Request-%E7%BB%A7%E6%89%BF%E4%BD%93%E7%B3%BB"><span class="toc-text">Request 继承体系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Request-%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE"><span class="toc-text">Request 获取请求数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E7%9A%84%E9%80%9A%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">获取请求参数的通用方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98"><span class="toc-text">请求参数中文乱码问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Request-%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91"><span class="toc-text">Request 请求转发</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81Response-%E5%AF%B9%E8%B1%A1"><span class="toc-text">三、Response 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Response-%E8%AE%BE%E7%BD%AE%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE"><span class="toc-text">Response 设置响应数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Respones%E8%AF%B7%E6%B1%82%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-text">3.2 Respones请求重定向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98"><span class="toc-text">3.3 路径问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-Response%E5%93%8D%E5%BA%94%E5%AD%97%E7%AC%A6%E6%95%B0%E6%8D%AE"><span class="toc-text">3.4 Response响应字符数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Response%E5%93%8D%E5%BA%94%E5%AD%97%E8%8A%82%E6%95%B0%E6%8D%AE"><span class="toc-text">3.3 Response响应字节数据</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81Request-%E5%92%8C-Response-%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">一、Request 和 Response 对象的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Request-%E5%AF%B9%E8%B1%A1"><span class="toc-text">二、Request 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Request-%E7%BB%A7%E6%89%BF%E4%BD%93%E7%B3%BB"><span class="toc-text">Request 继承体系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Request-%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE"><span class="toc-text">Request 获取请求数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E7%9A%84%E9%80%9A%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">获取请求参数的通用方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98"><span class="toc-text">请求参数中文乱码问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Request-%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91"><span class="toc-text">Request 请求转发</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81Response-%E5%AF%B9%E8%B1%A1"><span class="toc-text">三、Response 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Response-%E8%AE%BE%E7%BD%AE%E5%93%8D%E5%BA%94%E6%95%B0%E6%8D%AE"><span class="toc-text">Response 设置响应数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Respones-%E8%AF%B7%E6%B1%82%E9%87%8D%E5%AE%9A%E5%90%91"><span class="toc-text">Respones 请求重定向</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98"><span class="toc-text">路径问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Response-%E5%93%8D%E5%BA%94%E5%AD%97%E7%AC%A6%E6%95%B0%E6%8D%AE"><span class="toc-text">Response 响应字符数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Response-%E5%93%8D%E5%BA%94%E5%AD%97%E8%8A%82%E6%95%B0%E6%8D%AE"><span class="toc-text">Response 响应字节数据</span></a></li></ol></li></ol>
     </div>
   </section>
 
