@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,9 +22,15 @@
 
   <!-- 页面元数据 -->
   
-  <title>标签：OpenCV - Bezhuang&#39;s Blog</title>
+  <title>通过编写咖啡店菜单学习基础 CSS - Bezhuang&#39;s Blog</title>
+  
+    <meta name="keywords" content="CSS">
   
 
+  
+    <meta name="description" content="
+freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏览器如何展示你的网页。你可以使用 CSS 设置 HTML 元素的颜色、字体、大小等属性。在通过编写咖啡店菜单学习基础 CSS 课程中，通过为一个咖啡店网站设计菜单页来学习 CSS。
+">
   
 
   <!-- feed -->
@@ -374,7 +378,7 @@
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  search' style="display: none;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
@@ -445,76 +449,367 @@
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        通过编写咖啡店菜单学习基础 CSS
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
+
+
+          
         
-      
-    
-    
-      
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>本文发布于：2022年5月17日</p>
+  </a>
+</div>
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/">
-        基于 Python 和 OpenCV 实现人脸识别
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <blockquote>
-<p>Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 <code>python-opencv</code> 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。源代码保存在 <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/Learn-CS/tree/main/%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE/Python-OpenCV">Github 仓库 </a>中。</p>
-</blockquote>
-    
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：549字</p>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2021-08-03</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：3分钟</p>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p>freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏览器如何展示你的网页。你可以使用 CSS 设置 HTML 元素的颜色、字体、大小等属性。在通过编写咖啡店菜单学习基础 CSS 课程中，通过为一个咖啡店网站设计菜单页来学习 CSS。</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="一、重点-HTML-代码"><a href="#一、重点-HTML-代码" class="headerlink" title="一、重点 HTML 代码"></a>一、重点 HTML 代码</h3><p>meta 标签（自闭和）：</p>
+<pre><code class="HTML">&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+&lt;/head&gt;</code></pre>
+<p>head 中 link CSS 文件 <code>styles.css</code>：</p>
+<pre><code class="html">&lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</code></pre>
+<p>header 标签：</p>
+<pre><code class="html">&lt;body&gt;
+  &lt;header&gt;
+        &lt;h1&gt;CAMPER CAFE&lt;/h1&gt;
+        &lt;p class=&quot;established&quot;&gt;Est. 2020&lt;/p&gt;
+    &lt;/header&gt;
+  &lt;hr&gt;
+&lt;/body&gt;</code></pre>
+<p>div 标签：</p>
+<pre><code class="html">&lt;div class=&quot;menu&quot;&gt;
+  &lt;!--header + main + footer--&gt;
+&lt;/div&gt;</code></pre>
+<p>article 标签：</p>
+<pre><code class="html">&lt;section&gt;
+    &lt;h2&gt;Coffee&lt;/h2&gt;
+    &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg&quot; alt=&quot;coffee icon&quot;/&gt;
+    &lt;article class=&quot;item&quot;&gt;
+    &lt;p class=&quot;flavor&quot;&gt;French Vanilla&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;
+    &lt;/article&gt;
+&lt;section&gt;</code></pre>
+<p>footer 标签：</p>
+<pre><code class="html">&lt;hr class=&quot;bottom-line&quot;&gt;
+&lt;footer&gt;
+    &lt;p&gt;
+    &lt;a href=&quot;https://www.freecodecamp.org&quot; target=&quot;_blank&quot;&gt;Visit our website&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;p class=&quot;address&quot;&gt;123 Free Code Camp Drive&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+<p>CSS type selector：</p>
+<pre><code class="html">&lt;head&gt;
+  &lt;style&gt;
+        h1, h2, p &#123;
+            text-align: center;
+        &#125;
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+<h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>CSS 注释：</p>
+<pre><code class="CSS">/* FOOTER */</code></pre>
+<p>background-image 属性：</p>
+<pre><code class="CSS">body &#123;
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    font-family: sans-serif;
+    padding: 20px;
+&#125;</code></pre>
+<p>CSS class selector：</p>
+<pre><code class="CSS">.menu &#123;
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+&#125;</code></pre>
+<p>多层 CSS style selector：</p>
+<pre><code class="CSS">h1, h2, p &#123;
+    text-align: center;
+&#125;
+h1, h2 &#123;
+    font-family: Impact, serif;
+&#125;</code></pre>
+<p>多层 CSS class selector：</p>
+<pre><code class="CSS">.flavor, .dessert &#123;
+    text-align: left;
+    width: 75%;
+&#125;</code></pre>
+<p>display 属性：</p>
+<pre><code class="css">.item p &#123;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+&#125;</code></pre>
+<p>CSS pseudo-selector：</p>
+<pre><code class="CSS">a &#123;
+    color: black;
+&#125;
+a:visited &#123;
+    color: black;
+&#125;
+a:hover &#123;
+    color: brown;
+&#125;
+a:active &#123;
+    color: brown;
+&#125;</code></pre>
+<p>给 img 和 hr 设置属性：</p>
+<pre><code class="CSS">img &#123;
+    margin: -25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+&#125;
+hr &#123;
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+&#125;</code></pre>
+<p>font-size 属性：</p>
+<pre><code class="CSS">footer &#123;
+    font-size: 14px;
+&#125;</code></pre>
+<h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+    <iframe src="https://free-code-camp-demo.vercel.app/通过编写咖啡店菜单学习基础CSS/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
+</div>
+
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/'>
-            阅读全文
-          </a>
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>References</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://chinese.freecodecamp.org/learn/2022/responsive-web-design" rel="external nofollow noopener noreferrer" target="_blank">
+                  freeCodeCamp
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
         </div>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
       
     </div>
   
+  
+    
 
-</div>
 
-          </div>
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </a>
+  </div>
+
+
         
       
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
-  
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/&title=通过编写咖啡店菜单学习基础 CSS - Bezhuang's Blog&summary=
+freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏览器如何展示你的网页。你可以使用 CSS 设置 HTML 元素的颜色、字体、大小等属性。在通过编写咖啡店菜单学习基础 CSS 课程中，通过为一个咖啡店网站设计菜单页来学习 CSS。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
     
-  
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/&title=通过编写咖啡店菜单学习基础 CSS - Bezhuang's Blog&summary=
+freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏览器如何展示你的网页。你可以使用 CSS 设置 HTML 元素的颜色、字体、大小等属性。在通过编写咖啡店菜单学习基础 CSS 课程中，通过为一个咖啡店网站设计菜单页来学习 CSS。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/&title=通过编写咖啡店菜单学习基础 CSS - Bezhuang's Blog&summary=
+freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏览器如何展示你的网页。你可以使用 CSS 设置 HTML 元素的颜色、字体、大小等属性。在通过编写咖啡店菜单学习基础 CSS 课程中，通过为一个咖啡店网站设计菜单页来学习 CSS。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEVUlEQVR42u3aQXLjQAgF0Nz/0jMHmEqp+dDInnq9S8qWmkcWQPj541w5PwjAgnXAggXrgF2B/QnP0/ePL/LwvN8+n35u6nu/eoAFCxYsWLBgwYJdhf0UiKf3niZ66ueyB1iwYMGCBQsWLNhXYKsXfwKuNg7TDUoaR+oBFixYsGDBggUL9jtgqwX/aSNwmrhqAQ8WLFiwYMGCBQsWbAekWvBXE1IdnIMFCxYsWLBgwYL9bti04K4ualRBbw/SP24TBixYsGDBggULFuwRbDew/+3n2AMsWLBgwYIFCxbsCmz3pIV7mrjqoDot/GMPsGDBggULFixYsCuw3UWK7oA4bTymB+bd94AFCxYsWLBgwYLdhU0L66mLVxOYAkwltDzoBgsWLFiwYMGCBXsFttoQpIPo6oW7DUY6GE+fAxYsWLBgwYIFC/Zd2O7ixa0FkDRxKVz8ebBgwYIFCxYsWLCrsFXIcuE8nIDTe003II/vAQsWLFiwYMGCBbsCW4XrFvS3B9vpgkYaB1iwYMGCBQsWLNh3YFPI6gtvJ+j0edcH6WDBggULFixYsGBXYdMLVi+SvrfaEKQD8Or3HxsEsGDBggULFixYsFdgT1+YDoarjUU30WlCxgb/YMGCBQsWLFiwYFdhq4V2dwGjG2i18E8L/vKAHSxYsGDBggULFuwq7BTo1EJwF3J64H48OAcLFixYsGDBggW7Anu8UBsOlqu/TxPSHcynz/nnc2DBggULFixYsGBXYI8L32HAtCDvNhLdP6D2fxDAggULFixYsGDBjsJWC+E08LTQrxb8acLajQ9YsGDBggULFizYj4DtBnYKfdqoTA3KryUeLFiwYMGCBQsW7Cuwt4HTgr4K0G2A4sSBBQsWLFiwYMGC/QjY6QI+DaBbyHcbieOEgAULFixYsGDBgl2FPW0EbsFNL2JUF03G4gULFixYsGDBggW7Ant98Ht5IF4NPF3IOIYGCxYsWLBgwYIFuwJ7ClAFrQ7Gq3DVhY403nLDABYsWLBgwYIFC/ZV2GqAW4sZ3Yah27iABQsWLFiwYMGC/UzYaiBpgV1NVJqwtPFJGx6wYMGCBQsWLFiwO7DpYDhtLKoXTxcrqo3L2B8KWLBgwYIFCxYs2BXY7gC4Wqh3B+bpQkg6wAcLFixYsGDBggX72bDdxYYu3PRJG4L03mDBggULFixYsGDfgU3PVIGeDs67z00bELBgwYIFCxYsWLDvwk4V4NUBeRrg9GC820D8OugGCxYsWLBgwYIFuwKbNgSnA+ApwOnFj24j8tgggAULFixYsGDBgl2BvVWATwHcHqy34wcLFixYsGDBggX7FbCnBXT1eSnUVCOT3gcsWLBgwYIFCxbsd8GOXWw5sdOJAQsWLFiwYMGCBfsObDpAThcxHi9ahKnGMx0vWLBgwYIFCxYs2F3Y6qkW0inE1CLFVOMAFixYsGDBggUL9jNgndkDFixYByxYsA7Yq+cvEgfR9rFvpf4AAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/&text=通过编写咖啡店菜单学习基础 CSS - Bezhuang's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+  </div>
+</div>
 
 
-    
+
+        
+      
+    </div>
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/HTML%E7%8C%AB%E5%92%AA%E7%9B%B8%E5%86%8C%E5%BA%94%E7%94%A8/'>
+          <p class='title'>通过编写猫咪相册应用学习 HTML<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+freeCodeCamp 响应式网页设计的认证课程第一章。HTML 标签赋予了网页结构。你可以使用 HTML 标签添加照片、按钮和其它元素到你的网页。在通过编写猫咪相册应用学习 HTML 的课...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -522,207 +817,28 @@
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/头像.gif'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Rolling Stone</h2>
-        
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:bezhuang@outlook.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Bezhuang/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://www.linkedin.com/in/zhuangzhihao/"
-              class="social fab fa-linkedin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://space.bilibili.com/30593492"
-              class="social fab fa-youtube flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop mobile">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Java/" href="/categories/Java/"
-            id="categoriesJava"
-            ><div class='name'>Java</div><div class='badge'>(14)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Python/" href="/categories/Python/"
-            id="categoriesPython"
-            ><div class='name'>Python</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1/" href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1/"
-            id="categoriesE4BA91E69C8DE58AA1"
-            ><div class='name'>云服务</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
-            id="categoriesE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%90%8E%E7%AB%AF/" href="/categories/%E5%90%8E%E7%AB%AF/"
-            id="categoriesE5908EE7ABAF"
-            ><div class='name'>后端</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"
-            id="categoriesE5BC80E6BA90E9A1B9E79BAE"
-            ><div class='name'>开源项目</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%85%95%E8%AF%BEMOOC/" href="/categories/%E6%85%95%E8%AF%BEMOOC/"
-            id="categoriesE68595E8AFBEMOOC"
-            ><div class='name'>慕课MOOC</div><div class='badge'>(16)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"
-            id="categoriesE695B0E68DAEE7A791E5ADA6"
-            ><div class='name'>数据科学</div><div class='badge'>(12)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"
-            id="categoriesE69CBAE599A8E5ADA6E4B9A0"
-            ><div class='name'>机器学习</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
-            id="categoriesE7AE97E6B395E4B88EE695B0E68DAEE7BB93E69E84"
-            ><div class='name'>算法与数据结构</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%84%9F%E6%83%B3/" href="/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%84%9F%E6%83%B3/"
-            id="categoriesE8A782E782B9E4B88EE6849FE683B3"
-            ><div class='name'>观点与感想</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"
-            id="categoriesE8AFBBE4B9A6E7AC94E8AEB0"
-            ><div class='name'>读书笔记</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%87%8D%E7%82%B9-HTML-%E4%BB%A3%E7%A0%81"><span class="toc-text">一、重点 HTML 代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%87%8D%E7%82%B9-CSS-%E4%BB%A3%E7%A0%81"><span class="toc-text">二、重点 CSS 代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA"><span class="toc-text">三、页面展示</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/CSS/" style="font-size: 17.33px; color: #828282">CSS</a> <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/Gradle/" style="font-size: 14px; color: #999">Gradle</a> <a href="/tags/HTML/" style="font-size: 14px; color: #999">HTML</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/IDEA/" style="font-size: 14px; color: #999">IDEA</a> <a href="/tags/JDBC/" style="font-size: 17.33px; color: #828282">JDBC</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #999">JavaScript</a> <a href="/tags/Jenkins/" style="font-size: 14px; color: #999">Jenkins</a> <a href="/tags/Jupyter/" style="font-size: 14px; color: #999">Jupyter</a> <a href="/tags/LintCode/" style="font-size: 14px; color: #999">LintCode</a> <a href="/tags/Linux/" style="font-size: 20.67px; color: #6c6c6c">Linux</a> <a href="/tags/Maven/" style="font-size: 14px; color: #999">Maven</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #999">MongoDB</a> <a href="/tags/MyBatis/" style="font-size: 14px; color: #999">MyBatis</a> <a href="/tags/MySQL/" style="font-size: 24px; color: #555">MySQL</a> <a href="/tags/OpenCV/" style="font-size: 14px; color: #999">OpenCV</a> <a href="/tags/PyTorch/" style="font-size: 14px; color: #999">PyTorch</a> <a href="/tags/R-Language/" style="font-size: 14px; color: #999">R Language</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/SQL/" style="font-size: 20.67px; color: #6c6c6c">SQL</a> <a href="/tags/Servlet/" style="font-size: 20.67px; color: #6c6c6c">Servlet</a> <a href="/tags/Spring/" style="font-size: 14px; color: #999">Spring</a> <a href="/tags/Spring-Boot/" style="font-size: 17.33px; color: #828282">Spring Boot</a> <a href="/tags/Spring-Cloud/" style="font-size: 14px; color: #999">Spring Cloud</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/hdoj/" style="font-size: 14px; color: #999">hdoj</a> <a href="/tags/pandas/" style="font-size: 14px; color: #999">pandas</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobile">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='https://tva1.sinaimg.cn/large/9150e4e5gy1g6amdgiegcj20hh0cqjux.jpg'
-      />
-    
-      <img src='https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/微信二维码.jpg'
-      />
-    
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -731,8 +847,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="通过编写咖啡店菜单学习基础 CSS";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
