@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,9 +22,15 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档：2022/1 - Bezhuang&#39;s Blog</title>
+  <title>通过构建一组彩色标记来学习 CSS 颜色 - Bezhuang&#39;s Blog</title>
+  
+    <meta name="keywords" content="CSS">
   
 
+  
+    <meta name="description" content="
+freeCodeCamp 响应式网页设计的认证课程第三章。为你的网页选择正确的颜色可以大大提高对读者的审美吸引力。在通过构建一组彩色标记来学习 CSS 颜色的课程中，构建一组彩色标记，学习设置颜色值的不同方法以及如何将颜色相互配对。
+">
   
 
   <!-- feed -->
@@ -67,7 +71,7 @@
     <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
     
 
-<header id="l_header" class="l_header always shadow floatable blur "  >
+<header id="l_header" class="l_header always shadow floatable blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -374,7 +378,7 @@
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  search' style="display: ;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
@@ -446,72 +450,331 @@
           
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
-      
+    
+    
+      <h1 class="title">
+        通过构建一组彩色标记来学习 CSS 颜色
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
+
+
+          
         
-      
-    
-    
-      
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>本文发布于：2022年5月19日</p>
+  </a>
+</div>
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/Accenture-Coding-Virtual-Experience/">
-        Accenture Coding Virtual Experience Program
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <blockquote>
-<p>The Accenture Know-the-Code Virtual Experience Program covers the fundamentals of software development, including object-oriented programming, code refactoring, and agile delivery. It empowers me to explore what a career in software development could look like at Accenture while practicing my coding skills. The following are the notes I took during this virtual experience.</p>
-</blockquote>
-    
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：474字</p>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2022-01-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：2分钟</p>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p>freeCodeCamp 响应式网页设计的认证课程第三章。为你的网页选择正确的颜色可以大大提高对读者的审美吸引力。在通过构建一组彩色标记来学习 CSS 颜色的课程中，构建一组彩色标记，学习设置颜色值的不同方法以及如何将颜色相互配对。</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="一、重点-HTML-代码"><a href="#一、重点-HTML-代码" class="headerlink" title="一、重点 HTML 代码"></a>一、重点 HTML 代码</h3><p>head 标签：</p>
+<pre><code class="html">&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Colored Markers&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot;&gt;
+&lt;/head&gt;</code></pre>
+<p>含多个 CSS class 的 div 标签：</p>
+<pre><code class="html">&lt;body&gt;
+    &lt;h1&gt;CSS Color Markers&lt;/h1&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;marker red&quot;&gt;
+            &lt;div class=&quot;cap&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;sleeve&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;marker green&quot;&gt;
+            &lt;div class=&quot;cap&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;sleeve&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;marker blue&quot;&gt;
+            &lt;div class=&quot;cap&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;sleeve&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+<h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>padding 属性：</p>
+<pre><code class="CSS">.container &#123;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
+&#125;
+.marker &#123;
+    width: 200px;
+    height: 25px;
+    margin: 10px auto;
+&#125;</code></pre>
+<p> opacity 属性：</p>
+<pre><code class="CSS">.sleeve &#123;
+  opacity: 0.5;
+  width: 110px;
+  height: 25px;
+  background-color: white;
+&#125;</code></pre>
+<p>border-left 属性：</p>
+<pre><code class="CSS">.cap &#123;
+    width: 60px;
+    height: 25px;
+&#125;
+.sleeve &#123;
+    width: 110px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 10px double rgba(0, 0, 0, 0.75);
+&#125;</code></pre>
+<p>多层 CSS class selector：</p>
+<pre><code class="CSS">.cap,
+.sleeve &#123;
+    display: inline-block;
+&#125;</code></pre>
+<p>linear-gradient 属性：</p>
+<pre><code class="CSS">.red &#123;
+    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+&#125;</code></pre>
+<p>box-shadow 属性：</p>
+<pre><code class="css">.green &#123;
+    background: linear-gradient(#55680D, #71F53E, #116C31);
+    box-shadow: 0 0 20px 0 #3B7E20CC;
+&#125;</code></pre>
+<p>HSL color model：</p>
+<pre><code class="CSS">.blue &#123;
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+&#125;</code></pre>
+<h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+    <iframe src="https://free-code-camp-demo.vercel.app/通过构建一组彩色标记学习CSS颜色" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
+</div>
+
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/Accenture-Coding-Virtual-Experience/'>
-            阅读全文
-          </a>
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>References</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://chinese.freecodecamp.org/learn/2022/responsive-web-design" rel="external nofollow noopener noreferrer" target="_blank">
+                  freeCodeCamp
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
         </div>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
       
     </div>
   
+  
+    
 
-</div>
 
-          </div>
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </a>
+  </div>
+
+
         
       
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
-  
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/&title=通过构建一组彩色标记来学习 CSS 颜色 - Bezhuang's Blog&summary=
+freeCodeCamp 响应式网页设计的认证课程第三章。为你的网页选择正确的颜色可以大大提高对读者的审美吸引力。在通过构建一组彩色标记来学习 CSS 颜色的课程中，构建一组彩色标记，学习设置颜色值的不同方法以及如何将颜色相互配对。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
     
-  
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/&title=通过构建一组彩色标记来学习 CSS 颜色 - Bezhuang's Blog&summary=
+freeCodeCamp 响应式网页设计的认证课程第三章。为你的网页选择正确的颜色可以大大提高对读者的审美吸引力。在通过构建一组彩色标记来学习 CSS 颜色的课程中，构建一组彩色标记，学习设置颜色值的不同方法以及如何将颜色相互配对。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/&title=通过构建一组彩色标记来学习 CSS 颜色 - Bezhuang's Blog&summary=
+freeCodeCamp 响应式网页设计的认证课程第三章。为你的网页选择正确的颜色可以大大提高对读者的审美吸引力。在通过构建一组彩色标记来学习 CSS 颜色的课程中，构建一组彩色标记，学习设置颜色值的不同方法以及如何将颜色相互配对。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFI0lEQVR42u3cQW4jMQwEQP//07sPCAyLzdYkBkq3BLaGKs2ll8y+/lm/sl4IwIO3wIO3wIO3CvCvcL37/qd93xZ0+P20jtN9W3W9rQc8ePDgwYMHDx48+CL8cQA4/Hx6kO2+2xdkWv+0XvDgwYMHDx48ePDgb8CfHiC9iG3AmV7oto40UIEHDx48ePDgwYMH/5fhT4PQ9qDTi0gvpvWigAcPHjx48ODBgwf/DfCtRkhrwGr7M3jw4MGDBw8ePHjw3wSfBpFWIJkOEKWB6vZAF3jw4MGDBw8ePHjwT8D/dmD5tp9jL/DgwYMHDx48ePDgC/C3VtoISQNUOrjUCmLHLuDBgwcPHjx48ODBF+DTxsRTg0FPBbwp+PTFAg8ePHjw4MGDBw++CZ8GnDQgpYNNLYht0JruDx48ePDgwYMHDx78E/CnDYI0yJwGlmmwaTVA0sB4XBd48ODBgwcPHjx48AX4dIAnbZikF9yCmzZGpp/7eE7w4MGDBw8ePHjw4Avw6T/sbwPSFDIOLOV6t40d8ODBgwcPHjx48OAb8OlG6YHSRkjaKHlqgOrYBzx48ODBgwcPHjz4AvxvBY02+On30oZOGtjAgwcPHjx48ODBg78Bv21ctFb63DTIpAHreiMEPHjw4MGDBw8ePPjBQNP0wesgMfx9q9HyVIPn7f7gwYMHDx48ePDgwRfgtwNDrYbJ9CJbAa3dIAEPHjx48ODBgwcP/gn4LeQ2ON0aSEqD07QxMw5U4MGDBw8ePHjw4MEX4LcHvz1w1IY6HWhK6/jYUAEPHjx48ODBgwcPvgA/DQLtQaXXpXUK26rn+KLAgwcPHjx48ODBgy/Cp8Gk3ehIn5/uuw2O07rBgwcPHjx48ODBg2/Cn24whZ4eNK0nrevW+ePkCh48ePDgwYMHDx784A+Mpw2E1qBR64JiiOHn04AGHjx48ODBgwcPHnwT/unGxrbRkMK2gtw6kIEHDx48ePDgwYMHX4TfHqAF1Qb/BHv6AqTfBw8ePHjw4MGDBw/+JvzpxtvgdFzg8udpPe3gCB48ePDgwYMHDx78E/BPFz5twEwPmNaX1hUPNIEHDx48ePDgwYMHH8CnDYPtgdqA0+CTBqR08Ak8ePDgwYMHDx48+Bvw2+Czvbj0otKBo9aLNn4uePDgwYMHDx48ePAF+G3DY1p4+vtWA6M90DQ+H3jw4MGDBw8ePHjwBfjTBsM0mEz3nUJuA8+2zrg+8ODBgwcPHjx48OCL8K3GyLSg9IDpQNX0vKlLPNAEHjx48ODBgwcPHvwCPj3g9qKmF3arEZJexLgRAh48ePDgwYMHDx784j8KmjY6tiBpI2Lb8JjuNwUHDx48ePDgwYMHD/5J+GnwSYNVCjd97jaoTes63hc8ePDgwYMHDx48+AL8rQZAa4BoPDC03L/d6DnuQIEHDx48ePDgwYMHP4DfrhZYq4FxGnBOz9V+Pnjw4MGDBw8ePHjwDfhtUIgbAqUBolbDZvpiTYMYePDgwYMHDx48ePA34FsDQLcGn1owaRBMAxR48ODBgwcPHjx48E/ApxDbAaFtoGsNYE2D3viFAw8ePHjw4MGDBw/+C+DTQm/VdRr82gERPHjw4MGDBw8ePPi/BL890OmBpwe8FYTWgQ08ePDgwYMHDx48+AvwaZDYDhhtA9D0BZrWnXr8+Dx48ODBgwcPHjx48EX47cDQFPz2gNP0RUhflPGFggcPHjx48ODBgwdfgLeeXeDBg7fAg7fAg7cW6z8JVnI0mbA6eAAAAABJRU5ErkJggg==">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/&text=通过构建一组彩色标记来学习 CSS 颜色 - Bezhuang's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+  </div>
+</div>
 
 
-	
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/'>
+          <p class='title'>通过编写咖啡店菜单学习基础 CSS<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏览器如何展示你的网页。你可以使用 CSS 设置 HTML 元素的颜色、字体、大小等属性。在通过编写咖啡店菜单学习基础...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -519,207 +782,28 @@
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/头像.gif'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Rolling Stone</h2>
-        
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:bezhuang@outlook.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Bezhuang/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://www.linkedin.com/in/zhuangzhihao/"
-              class="social fab fa-linkedin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://space.bilibili.com/30593492"
-              class="social fab fa-youtube flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop mobile">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Java/" href="/categories/Java/"
-            id="categoriesJava"
-            ><div class='name'>Java</div><div class='badge'>(14)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Python/" href="/categories/Python/"
-            id="categoriesPython"
-            ><div class='name'>Python</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1/" href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1/"
-            id="categoriesE4BA91E69C8DE58AA1"
-            ><div class='name'>云服务</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
-            id="categoriesE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%90%8E%E7%AB%AF/" href="/categories/%E5%90%8E%E7%AB%AF/"
-            id="categoriesE5908EE7ABAF"
-            ><div class='name'>后端</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"
-            id="categoriesE5BC80E6BA90E9A1B9E79BAE"
-            ><div class='name'>开源项目</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%85%95%E8%AF%BEMOOC/" href="/categories/%E6%85%95%E8%AF%BEMOOC/"
-            id="categoriesE68595E8AFBEMOOC"
-            ><div class='name'>慕课MOOC</div><div class='badge'>(16)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"
-            id="categoriesE695B0E68DAEE7A791E5ADA6"
-            ><div class='name'>数据科学</div><div class='badge'>(12)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"
-            id="categoriesE69CBAE599A8E5ADA6E4B9A0"
-            ><div class='name'>机器学习</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
-            id="categoriesE7AE97E6B395E4B88EE695B0E68DAEE7BB93E69E84"
-            ><div class='name'>算法与数据结构</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%84%9F%E6%83%B3/" href="/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%84%9F%E6%83%B3/"
-            id="categoriesE8A782E782B9E4B88EE6849FE683B3"
-            ><div class='name'>观点与感想</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"
-            id="categoriesE8AFBBE4B9A6E7AC94E8AEB0"
-            ><div class='name'>读书笔记</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%87%8D%E7%82%B9-HTML-%E4%BB%A3%E7%A0%81"><span class="toc-text">一、重点 HTML 代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%87%8D%E7%82%B9-CSS-%E4%BB%A3%E7%A0%81"><span class="toc-text">二、重点 CSS 代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA"><span class="toc-text">三、页面展示</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/CSS/" style="font-size: 20.67px; color: #6c6c6c">CSS</a> <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/Gradle/" style="font-size: 14px; color: #999">Gradle</a> <a href="/tags/HTML/" style="font-size: 17.33px; color: #828282">HTML</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/IDEA/" style="font-size: 14px; color: #999">IDEA</a> <a href="/tags/JDBC/" style="font-size: 17.33px; color: #828282">JDBC</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #999">JavaScript</a> <a href="/tags/Jenkins/" style="font-size: 14px; color: #999">Jenkins</a> <a href="/tags/Jupyter/" style="font-size: 14px; color: #999">Jupyter</a> <a href="/tags/LintCode/" style="font-size: 14px; color: #999">LintCode</a> <a href="/tags/Linux/" style="font-size: 20.67px; color: #6c6c6c">Linux</a> <a href="/tags/Maven/" style="font-size: 14px; color: #999">Maven</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #999">MongoDB</a> <a href="/tags/MyBatis/" style="font-size: 14px; color: #999">MyBatis</a> <a href="/tags/MySQL/" style="font-size: 24px; color: #555">MySQL</a> <a href="/tags/OpenCV/" style="font-size: 14px; color: #999">OpenCV</a> <a href="/tags/PyTorch/" style="font-size: 14px; color: #999">PyTorch</a> <a href="/tags/R-Language/" style="font-size: 14px; color: #999">R Language</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/SQL/" style="font-size: 20.67px; color: #6c6c6c">SQL</a> <a href="/tags/Servlet/" style="font-size: 20.67px; color: #6c6c6c">Servlet</a> <a href="/tags/Spring/" style="font-size: 14px; color: #999">Spring</a> <a href="/tags/Spring-Boot/" style="font-size: 17.33px; color: #828282">Spring Boot</a> <a href="/tags/Spring-Cloud/" style="font-size: 14px; color: #999">Spring Cloud</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/hdoj/" style="font-size: 14px; color: #999">hdoj</a> <a href="/tags/pandas/" style="font-size: 14px; color: #999">pandas</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobile">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='https://tva1.sinaimg.cn/large/9150e4e5gy1g6amdgiegcj20hh0cqjux.jpg'
-      />
-    
-      <img src='https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/微信二维码.jpg'
-      />
-    
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -728,14 +812,14 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="通过构建一组彩色标记来学习 CSS 颜色";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
 </script>
 

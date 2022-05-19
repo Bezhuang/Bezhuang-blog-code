@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>通过构建一组彩色标记来学习 CSS 颜色</title>
+      <link href="CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/"/>
+      <url>CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>freeCodeCamp 响应式网页设计的认证课程第三章。为你的网页选择正确的颜色可以大大提高对读者的审美吸引力。在通过构建一组彩色标记来学习 CSS 颜色的课程中，构建一组彩色标记，学习设置颜色值的不同方法以及如何将颜色相互配对。</p></blockquote><a id="more"></a><h3 id="一、重点-HTML-代码"><a href="#一、重点-HTML-代码" class="headerlink" title="一、重点 HTML 代码"></a>一、重点 HTML 代码</h3><p>head 标签：</p><pre><code class="html">&lt;head&gt;    &lt;meta charset=&quot;utf-8&quot;&gt;    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;    &lt;title&gt;Colored Markers&lt;/title&gt;    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot;&gt;&lt;/head&gt;</code></pre><p>含多个 CSS class 的 div 标签：</p><pre><code class="html">&lt;body&gt;    &lt;h1&gt;CSS Color Markers&lt;/h1&gt;    &lt;div class=&quot;container&quot;&gt;        &lt;div class=&quot;marker red&quot;&gt;            &lt;div class=&quot;cap&quot;&gt;&lt;/div&gt;            &lt;div class=&quot;sleeve&quot;&gt;&lt;/div&gt;        &lt;/div&gt;        &lt;div class=&quot;marker green&quot;&gt;            &lt;div class=&quot;cap&quot;&gt;&lt;/div&gt;            &lt;div class=&quot;sleeve&quot;&gt;&lt;/div&gt;        &lt;/div&gt;        &lt;div class=&quot;marker blue&quot;&gt;            &lt;div class=&quot;cap&quot;&gt;&lt;/div&gt;            &lt;div class=&quot;sleeve&quot;&gt;&lt;/div&gt;        &lt;/div&gt;    &lt;/div&gt;&lt;/body&gt;</code></pre><h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>padding 属性：</p><pre><code class="CSS">.container &#123;    background-color: rgb(255, 255, 255);    padding: 10px 0;&#125;.marker &#123;    width: 200px;    height: 25px;    margin: 10px auto;&#125;</code></pre><p> opacity 属性：</p><pre><code class="CSS">.sleeve &#123;  opacity: 0.5;  width: 110px;  height: 25px;  background-color: white;&#125;</code></pre><p>border-left 属性：</p><pre><code class="CSS">.cap &#123;    width: 60px;    height: 25px;&#125;.sleeve &#123;    width: 110px;    height: 25px;    background-color: rgba(255, 255, 255, 0.5);    border-left: 10px double rgba(0, 0, 0, 0.75);&#125;</code></pre><p>多层 CSS class selector：</p><pre><code class="CSS">.cap,.sleeve &#123;    display: inline-block;&#125;</code></pre><p>linear-gradient 属性：</p><pre><code class="CSS">.red &#123;    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);&#125;</code></pre><p>box-shadow 属性：</p><pre><code class="css">.green &#123;    background: linear-gradient(#55680D, #71F53E, #116C31);    box-shadow: 0 0 20px 0 #3B7E20CC;&#125;</code></pre><p>HSL color model：</p><pre><code class="CSS">.blue &#123;    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);&#125;</code></pre><h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">    <iframe src="https://free-code-camp-demo.vercel.app/通过构建一组彩色标记学习CSS颜色" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>通过编写咖啡店菜单学习基础 CSS</title>
       <link href="CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/"/>
       <url>CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/</url>
@@ -1190,6 +1215,8 @@
         <tags>
             
             <tag> CSS </tag>
+            
+            <tag> HTML </tag>
             
         </tags>
       
