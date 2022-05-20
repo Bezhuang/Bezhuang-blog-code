@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,9 +22,15 @@
 
   <!-- 页面元数据 -->
   
-  <title>标签：MyBatis - Bezhuang&#39;s Blog</title>
+  <title>通过编写注册表单学习 HTML 表单 - Bezhuang&#39;s Blog</title>
+  
+    <meta name="keywords" content="HTML">
   
 
+  
+    <meta name="description" content="
+freeCodeCamp 响应式网页设计的认证课程第四章。你可以使用 HTML 表单收集访问网页的用户的信息。在通过编写注册表单学习 HTML 表单的课程中，通过编写一个注册页学习 HTML 表单，学习如何控制人们在表单中可以输入的数据类型，以及使用一些新的 CSS 工具装饰你的页面。
+">
   
 
   <!-- feed -->
@@ -374,7 +378,7 @@
       <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper  search' style="display: none;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
@@ -445,76 +449,368 @@
         <div class="body-wrapper" id="pjax-container">
           
 
-
 <div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
+
+
+  
+  <div class="article-meta" id="top">
     
-      
-  <section class="post-list">
     
-      
+    
+      <h1 class="title">
+        通过编写注册表单学习 HTML 表单
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML</p></a></div>
+
+
+          
         
-      
-    
-    
-      
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>本文发布于：2022年5月20日</p>
+  </a>
+</div>
+
+          
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/MyBatis%E5%9F%BA%E7%A1%80/">
-        MyBatis 基础知识总结
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <blockquote>
-<p>MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录。</p>
-</blockquote>
-    
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：770字</p>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time>2022-03-19</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Java/">Java</a>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：4分钟</p>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <blockquote>
+<p>freeCodeCamp 响应式网页设计的认证课程第四章。你可以使用 HTML 表单收集访问网页的用户的信息。在通过编写注册表单学习 HTML 表单的课程中，通过编写一个注册页学习 HTML 表单，学习如何控制人们在表单中可以输入的数据类型，以及使用一些新的 CSS 工具装饰你的页面。</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="一、重点-HTML-代码"><a href="#一、重点-HTML-代码" class="headerlink" title="一、重点 HTML 代码"></a>一、重点 HTML 代码</h3><p>表格页面格式：</p>
+<pre><code class="HTML">&lt;body&gt;
+  &lt;h1&gt;Registration Form&lt;/h1&gt;
+  &lt;p&gt;Please fill out this form with the required information&lt;/p&gt;
+  &lt;form action=&#39;https://register-demo.freecodecamp.org&#39;&gt;
+    &lt;!--表格内容--&gt;
+  &lt;/form&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
+&lt;/body&gt;</code></pre>
+<p>输入框：</p>
+<pre><code class="html">&lt;fieldset&gt;
+    &lt;label&gt;Enter Your First Name: &lt;input type=&quot;text&quot; name=&quot;first-name&quot; required /&gt;&lt;/label&gt;
+    &lt;label&gt;Enter Your Last Name: &lt;input type=&quot;text&quot; name=&quot;last-name&quot; required /&gt;&lt;/label&gt;
+    &lt;label&gt;Enter Your Email: &lt;input type=&quot;email&quot; name=&quot;email&quot; required /&gt;&lt;/label&gt;
+    &lt;label&gt;Create a New Password: &lt;input type=&quot;password&quot; name=&quot;password&quot; minlen=&quot;8&quot; pattern=&quot;[a-z0-5]&#123;8,&#125;&quot; required /&gt;&lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+<p>单选&amp;复选框：</p>
+<pre><code class="html">&lt;fieldset&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;account-type&quot; class=&quot;inline&quot; /&gt; Personal Account&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;account-type&quot; class=&quot;inline&quot; /&gt; Business Account&lt;/label&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;terms&quot; class=&quot;inline&quot; required /&gt; I accept the &lt;a href=&quot;https://www.freecodecamp.org/news/terms-of-service/&quot;&gt;terms and conditions&lt;/a&gt;
+  &lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+<p>文件、数字、下拉栏、文本框输入：</p>
+<pre><code class="html">&lt;fieldset&gt;
+    &lt;label&gt;Upload a profile picture: &lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;&lt;/label&gt;
+    &lt;label&gt;Input your age (years): &lt;input type=&quot;number&quot; name=&quot;age&quot; min=&quot;13&quot; max=&quot;120&quot; /&gt;&lt;/label&gt;
+    &lt;label&gt;How did you hear about us?
+        &lt;select name=&quot;referrer&quot;&gt;
+        &lt;option value=&quot;&quot;&gt;(select one)&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;freeCodeCamp News&lt;/option&gt;
+         &lt;option value=&quot;2&quot;&gt;freeCodeCamp YouTube Channel&lt;/option&gt;
+      &lt;option value=&quot;3&quot;&gt;freeCodeCamp Forum&lt;/option&gt;
+      &lt;option value=&quot;4&quot;&gt;Other&lt;/option&gt;
+       &lt;/select&gt;
+  &lt;/label&gt;
+  &lt;label&gt;Provide a bio:
+      &lt;textarea name=&quot;bio&quot; rows=&quot;3&quot; cols=&quot;30&quot; placeholder=&quot;I like coding on the beach...&quot;&gt;&lt;/textarea&gt;
+    &lt;/label&gt;
+&lt;/fieldset&gt;</code></pre>
+<h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>pseudo-class（<code>:not(:last-of-type)</code>）：</p>
+<pre><code class="CSS">fieldset &#123;
+  border: none;
+    padding: 2rem 0;
+&#125;
+fieldset:not(:last-of-type) &#123;
+  border-bottom: 3px solid #3b3b4f;
+&#125;</code></pre>
+<p>unset 属性：</p>
+<pre><code class="css">.inline &#123;
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+&#125;</code></pre>
+<p>CSS attribute selector：</p>
+<pre><code class="CSS">input[type=&quot;submit&quot;] &#123;
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+&#125;
+input[type=&quot;file&quot;] &#123;
+  padding: 1px 2px;
+&#125;</code></pre>
+<p>其他表单设置：</p>
+<pre><code class="css">body &#123;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #1b1b32;
+    color: #f5f6f7;
+  font-family: Tahoma;
+    font-size: 16px;
+&#125;
+h1, p &#123;
+  margin: 1em auto;
+  text-align: center;
+&#125;
+form &#123;
+  width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+  padding-bottom: 2em;
+&#125;
+label &#123;
+  display: block;
+    margin: 0.5rem 0;
+&#125;
+input,
+textarea,
+select &#123;
+  margin: 10px 0 0 0;
+    width: 100%;
+  min-height: 2em;
+&#125;
+input, textarea &#123;
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+&#125;
+a&#123;
+  color: #dfdfe2;
+&#125;</code></pre>
+<h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+    <iframe src="https://free-code-camp-demo.vercel.app/通过编写注册表单学习HTML表单/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
+</div>
+
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/MyBatis%E5%9F%BA%E7%A1%80/'>
-            阅读全文
-          </a>
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>References</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://chinese.freecodecamp.org/learn/2022/responsive-web-design" rel="external nofollow noopener noreferrer" target="_blank">
+                  freeCodeCamp
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
         </div>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+          </blockquote>
+        </div>
+      
       
     </div>
   
+  
+    
 
-</div>
 
-          </div>
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+    </a>
+  </div>
+
+
         
       
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
-  
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/&title=通过编写注册表单学习 HTML 表单 - Bezhuang's Blog&summary=
+freeCodeCamp 响应式网页设计的认证课程第四章。你可以使用 HTML 表单收集访问网页的用户的信息。在通过编写注册表单学习 HTML 表单的课程中，通过编写一个注册页学习 HTML 表单，学习如何控制人们在表单中可以输入的数据类型，以及使用一些新的 CSS 工具装饰你的页面。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
     
-  
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/&title=通过编写注册表单学习 HTML 表单 - Bezhuang's Blog&summary=
+freeCodeCamp 响应式网页设计的认证课程第四章。你可以使用 HTML 表单收集访问网页的用户的信息。在通过编写注册表单学习 HTML 表单的课程中，通过编写一个注册页学习 HTML 表单，学习如何控制人们在表单中可以输入的数据类型，以及使用一些新的 CSS 工具装饰你的页面。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/&title=通过编写注册表单学习 HTML 表单 - Bezhuang's Blog&summary=
+freeCodeCamp 响应式网页设计的认证课程第四章。你可以使用 HTML 表单收集访问网页的用户的信息。在通过编写注册表单学习 HTML 表单的课程中，通过编写一个注册页学习 HTML 表单，学习如何控制人们在表单中可以输入的数据类型，以及使用一些新的 CSS 工具装饰你的页面。
+"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,666"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEUklEQVR42u3aQXIjIQwFUN//0p79VKUafQmwk8fOcRrkRy8klV5va8t6IQAL1gILFqwF9gjsK1z/P1/9/LRvuv/T86v7xx5gwYIFCxYsWLBgj8IuJ8CLANPPrV5AF77rARYsWLBgwYIFC/YObFoQVOHSfXcVMmMeYMGCBQsWLFiwYL8CdjWhTxPxFLz7ooAFCxYsWLBgwYL9m7C79zv9GSxYsGDBggULFuxnw04l7GkhML1/F/baJAxYsGDBggULFizYJdhdgxDf+jn2AAsWLFiwYMGCBXsEdmqlifd0gj79fdkBLFiwYMGCBQsW7BHY7mBx9fvuBZ2KM30RwIIFCxYsWLBgwd6FrQa+OnCRPlc9HyxYsGDBggULFuzvhl0NePr79NzVFyKFTV8MsGDBggULFixYsHdgu4MTaeDdBna3sEgHTn7cHyxYsGDBggULFuwV2OkfVgWYLkC6jffqiwAWLFiwYMGCBQv2DGw1kOpgQ9rYLifmIUgKChYsWLBgwYIFC/YzYKcawFOJeVpIVPcdjxcsWLBgwYIFCxbsUdjuAMVU4dAdrKgOklQLorjyAgsWLFiwYMGCBTsKmx7cbVhPNdqn92/HDxYsWLBgwYIFC/Yq7DtcKcSuC+nuU71wsGDBggULFixYsHdgu43ip/+LG8jFBnWa8Hcb7WDBggULFixYsGDPwKaN39UAdiXmq8+l8bcLBLBgwYIFCxYsWLBXYatQaaI+NViRxtv9/WDBggULFixYsGDPwlYfTBvaU5+nLqo6oLJcwIAFCxYsWLBgwYI9CpsOMnQT92qDO724dP+xSRiwYMGCBQsWLFiwo7DVAKYC755fPWc6LrBgwYIFCxYsWLCfATs1iFHdZ3rg4lahAxYsWLBgwYIFC/YsbDXxnkrspxrOXfipxjtYsGDBggULFizYO7DVA9L/r15cmsjvGvB43BcsWLBgwYIFCxbsFdj34trd4F49P73Qblw/ngsWLFiwYMGCBQv2CGwK2g24mqB3G/BThcRjPGDBggULFixYsGCPwE4l/quJe3qh3YZ8OijSbnSDBQsWLFiwYMGC3QJbHYiYHrzo7lO98GriXz4HLFiwYMGCBQsW7BHY6Qb0VMBTje7uhVUb4GDBggULFixYsGDPwKYgXYBq4zmFWv0d1bU8CQMWLFiwYMGCBQt2C2x3VRPo3dDVv4/HCRYsWLBgwYIFC/YI7HSCnDa2pwuQ6oBHt+AACxYsWLBgwYIFewe2WhBUE+nqgMT0uVMFwON+YMGCBQsWLFiwYK/AdguC9AelhUkKkxZEcYEAFixYsGDBggUL9qNhVyFWf3C3QEhfhHjwGSxYsGDBggULFuxXwFYT+fT/ps5ZBYo9wIIFCxYsWLBgwV6B3T2wsT1BD0Grz33cJAxYsGDBggULFuwfhd2dmFcHINKGeNpwTxv0jwUCWLBgwYIFCxYs2C2w1uwCCxasBRYsWAvs1vUPxEBUWKtFi/gAAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/&text=通过编写注册表单学习 HTML 表单 - Bezhuang's Blog"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+  </div>
+</div>
 
 
-    
+
+        
+      
+    </div>
+  </div>
+
+
   
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/'>
+          <p class='title'>通过构建一组彩色标记来学习 CSS 颜色<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+freeCodeCamp 响应式网页设计的认证课程第三章。为你的网页选择正确的颜色可以大大提高对读者的审美吸引力。在通过构建一组彩色标记来学习 CSS 颜色的课程中，构建一组彩色标记，学习设置...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 评论</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -522,207 +818,28 @@
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/头像.gif'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Rolling Stone</h2>
-        
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:bezhuang@outlook.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/Bezhuang/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://www.linkedin.com/in/zhuangzhihao/"
-              class="social fab fa-linkedin flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://space.bilibili.com/30593492"
-              class="social fab fa-youtube flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop mobile">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Java/" href="/categories/Java/"
-            id="categoriesJava"
-            ><div class='name'>Java</div><div class='badge'>(14)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Python/" href="/categories/Python/"
-            id="categoriesPython"
-            ><div class='name'>Python</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1/" href="/categories/%E4%BA%91%E6%9C%8D%E5%8A%A1/"
-            id="categoriesE4BA91E69C8DE58AA1"
-            ><div class='name'>云服务</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%89%8D%E7%AB%AF/" href="/categories/%E5%89%8D%E7%AB%AF/"
-            id="categoriesE5898DE7ABAF"
-            ><div class='name'>前端</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%90%8E%E7%AB%AF/" href="/categories/%E5%90%8E%E7%AB%AF/"
-            id="categoriesE5908EE7ABAF"
-            ><div class='name'>后端</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"
-            id="categoriesE5BC80E6BA90E9A1B9E79BAE"
-            ><div class='name'>开源项目</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%85%95%E8%AF%BEMOOC/" href="/categories/%E6%85%95%E8%AF%BEMOOC/"
-            id="categoriesE68595E8AFBEMOOC"
-            ><div class='name'>慕课MOOC</div><div class='badge'>(16)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"
-            id="categoriesE695B0E68DAEE7A791E5ADA6"
-            ><div class='name'>数据科学</div><div class='badge'>(12)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"
-            id="categoriesE69CBAE599A8E5ADA6E4B9A0"
-            ><div class='name'>机器学习</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
-            id="categoriesE7AE97E6B395E4B88EE695B0E68DAEE7BB93E69E84"
-            ><div class='name'>算法与数据结构</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%84%9F%E6%83%B3/" href="/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%84%9F%E6%83%B3/"
-            id="categoriesE8A782E782B9E4B88EE6849FE683B3"
-            ><div class='name'>观点与感想</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"
-            id="categoriesE8AFBBE4B9A6E7AC94E8AEB0"
-            ><div class='name'>读书笔记</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%87%8D%E7%82%B9-HTML-%E4%BB%A3%E7%A0%81"><span class="toc-text">一、重点 HTML 代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%87%8D%E7%82%B9-CSS-%E4%BB%A3%E7%A0%81"><span class="toc-text">二、重点 CSS 代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA"><span class="toc-text">三、页面展示</span></a></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/CSS/" style="font-size: 20.67px; color: #6c6c6c">CSS</a> <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/Gradle/" style="font-size: 14px; color: #999">Gradle</a> <a href="/tags/HTML/" style="font-size: 20.67px; color: #6c6c6c">HTML</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/IDEA/" style="font-size: 14px; color: #999">IDEA</a> <a href="/tags/JDBC/" style="font-size: 17.33px; color: #828282">JDBC</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #999">JavaScript</a> <a href="/tags/Jenkins/" style="font-size: 14px; color: #999">Jenkins</a> <a href="/tags/Jupyter/" style="font-size: 14px; color: #999">Jupyter</a> <a href="/tags/LintCode/" style="font-size: 14px; color: #999">LintCode</a> <a href="/tags/Linux/" style="font-size: 20.67px; color: #6c6c6c">Linux</a> <a href="/tags/Maven/" style="font-size: 14px; color: #999">Maven</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #999">MongoDB</a> <a href="/tags/MyBatis/" style="font-size: 14px; color: #999">MyBatis</a> <a href="/tags/MySQL/" style="font-size: 24px; color: #555">MySQL</a> <a href="/tags/OpenCV/" style="font-size: 14px; color: #999">OpenCV</a> <a href="/tags/PyTorch/" style="font-size: 14px; color: #999">PyTorch</a> <a href="/tags/R-Language/" style="font-size: 14px; color: #999">R Language</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/SQL/" style="font-size: 20.67px; color: #6c6c6c">SQL</a> <a href="/tags/Servlet/" style="font-size: 20.67px; color: #6c6c6c">Servlet</a> <a href="/tags/Spring/" style="font-size: 14px; color: #999">Spring</a> <a href="/tags/Spring-Boot/" style="font-size: 17.33px; color: #828282">Spring Boot</a> <a href="/tags/Spring-Cloud/" style="font-size: 14px; color: #999">Spring Cloud</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/hdoj/" style="font-size: 14px; color: #999">hdoj</a> <a href="/tags/pandas/" style="font-size: 14px; color: #999">pandas</a>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-
-<section class="widget qrcode shadow desktop mobile">
-  
-
-  <div class='content article-entry'>
-    
-      <img src='https://tva1.sinaimg.cn/large/9150e4e5gy1g6amdgiegcj20hh0cqjux.jpg'
-      />
-    
-      <img src='https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/微信二维码.jpg'
-      />
-    
-  </div>
-</section>
 
   
 
 
 </aside>
+
 
 
 		  
@@ -731,8 +848,8 @@
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="通过编写注册表单学习 HTML 表单";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
