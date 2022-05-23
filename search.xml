@@ -13,7 +13,7 @@
       
       <categories>
           
-          <category> 前端 </category>
+          <category> Web前端 </category>
           
       </categories>
       
@@ -38,7 +38,7 @@
       
       <categories>
           
-          <category> 前端 </category>
+          <category> Web前端 </category>
           
       </categories>
       
@@ -63,7 +63,7 @@
       
       <categories>
           
-          <category> 前端 </category>
+          <category> Web前端 </category>
           
       </categories>
       
@@ -88,7 +88,7 @@
       
       <categories>
           
-          <category> 前端 </category>
+          <category> Web前端 </category>
           
       </categories>
       
@@ -185,7 +185,7 @@
       <link href="Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
       <url>Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala。</p></blockquote><a id="more"></a><h3 id="一、Maven-概述"><a href="#一、Maven-概述" class="headerlink" title="一、Maven 概述"></a>一、Maven 概述</h3><ul><li>Maven 是专门用于管理和构建 Java 项目的工具，它提供了一套标准化的项目结构，提供了一套标准化的构建流程（编译，测试，打包，发布……），提供了一套依赖管理机制。</li></ul><p>标准化的项目结构：每一个开发工具（IDE）都有自己不同的项目结构，它们互相之间不通用。在 Eclipse 中创建的目录，无法在 IDEA 中进行使用，这就造成了很大的不方便，而 Maven 提供了一套标准化的项目结构，所有的 IDE 使用 Maven 构建的项目完全一样，所以 IDE 创建的 Maven 项目可以通用。</p><p>标准化的构建流程：开发了一套系统，代码需要进行编译、测试、打包、发布，这些操作如果需要反复进行就显得特别麻烦，而 Maven 提供了一套简单的命令来完成项目构建。</p><p>依赖管理：管理你项目所依赖的第三方资源（jar包、插件），而 Maven 使用标准的坐标配置来管理各种依赖，只需要简单的配置就可以完成依赖管理。</p><p>Maven 模型：</p><ol><li>  项目对象模型（Project Object Model）：将我们自己抽象成一个对象模型，有自己专属的坐标。</li></ol><pre><code class="xml">&lt;groupId&gt;com.itheima&lt;/groupId&gt;&lt;artifactId&gt;maven&lt;/artifactId&gt;&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</code></pre><ol start="2"><li>  依赖管理模型（Dependency）：使用坐标来描述当前项目依赖哪儿些第三方jar包。</li></ol><pre><code class="xml">&lt;dependency&gt;        &lt;groupId&gt;mysql&lt;/groupId&gt;        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;        &lt;version&gt;5.1.32&lt;/version&gt;&lt;/dependency&gt;</code></pre><p>Maven 仓库</p><ul><li>本地仓库：自己计算机上的一个目录。</li><li>中央仓库：由 Maven 团队维护的全球唯一的仓库： <a href="https://repo1.maven.org/maven2/%E3%80%82">https://repo1.maven.org/maven2/。</a></li><li>远程仓库(私服)：一般由公司团队搭建的私有仓库。</li><li>当项目中使用坐标引入对应依赖 jar 包后，首先会查找本地仓库中是否有对应的 jar 包，如果有，则在项目直接引用；如果没有，则去中央仓库中下载对应的jar包到本地仓库。</li><li>如果还可以搭建远程仓库，将来jar包的查找顺序则变为：本地仓库 –&gt; 远程仓库–&gt; 中央仓库。</li></ul><p>Maven 安装配置</p><ul><li>IDEA 自带 Maven 且 Mac 无需配置环境变量。</li><li>安装 Maven Helper 插件。</li></ul><h3 id="二、Maven-基本使用"><a href="#二、Maven-基本使用" class="headerlink" title="二、Maven 基本使用"></a>二、Maven 基本使用</h3><h4 id="Maven-常用命令"><a href="#Maven-常用命令" class="headerlink" title="Maven 常用命令"></a>Maven 常用命令</h4><p><code>mvn compile</code> ：编译，在项目下会生成一个 <code>target</code> 目录。</p><p><code>mvn clean</code>：清理，删除项目下的 <code>target</code> 目录。</p><p><code>mvn test</code>：测试，执行所有的测试代码。</p><p><code>mvn package</code>：打包，将当前项目打成的 jar 包。</p><p><code>mvn install</code>：安装，将当前项目打成jar包，并安装到本地仓库。</p><h4 id="Maven-生命周期"><a href="#Maven-生命周期" class="headerlink" title="Maven 生命周期"></a>Maven 生命周期</h4><p>Maven 构建项目生命周期描述的是一次构建过程经历经历了多少个事件。</p><p>Maven 对项目构建的生命周期划分为3套：</p><ul><li><p>clean ：清理工作。</p></li><li><p>default ：核心工作，例如编译，测试，打包，安装等。</p></li><li><p>site ： 产生报告，发布站点等。这套声明周期一般不会使用。</p></li></ul><p>同一套生命周期内，执行后边的命令，前面的所有命令会自动执行。当我们执行 <code>install</code>（安装）命令时，它会先执行 <code>compile</code>命令，再执行 <code>test </code> 命令，再执行 <code>package</code> 命令，最后执行 <code>install</code> 命令；当我们执行 <code>package</code> （打包）命令时，它会先执行 <code>compile</code> 命令，再执行 <code>test</code> 命令，最后执行 <code>package</code> 命令。</p><h4 id="Maven-坐标详解"><a href="#Maven-坐标详解" class="headerlink" title="Maven 坐标详解"></a>Maven 坐标详解</h4><p>Maven 中的坐标是资源的唯一标识，资源可以是插件、依赖、当前项目。</p><p>使用坐标来定义项目或引入项目中需要的依赖。</p><p>Maven 坐标主要组成：</p><ul><li><p>groupId：定义当前Maven项目隶属组织名称（通常是域名反写，例如：com.itheima）。</p></li><li><p>artifactId：定义当前Maven项目名称（通常是模块名称，例如 order-service、goods-service）。</p></li><li><p>version：定义当前项目版本号。</p></li></ul><p>我们的项目如果被其他的项目依赖时，也是需要坐标来引入的。</p><h3 id="三、Maven-依赖管理"><a href="#三、Maven-依赖管理" class="headerlink" title="三、Maven 依赖管理"></a>三、Maven 依赖管理</h3><h4 id="使用坐标引入-jar-包"><a href="#使用坐标引入-jar-包" class="headerlink" title="使用坐标引入 jar 包"></a>使用坐标引入 jar 包</h4><p>在项目的 pom.xml 中编写<code> &lt;dependencies&gt;</code> 标签。</p><p>在 <code>&lt;dependencies&gt; </code>标签中 使用 <code>&lt;dependency&gt;</code> 引入坐标。</p><p>定义坐标的 <code> groupId</code>，<code>artifactId</code>，<code>version</code>。</p><pre><code class="xml">&lt;dependencies&gt;    &lt;dependency&gt;        &lt;groupId&gt;mysql&lt;/groupId&gt;        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;        &lt;version&gt;5.1.32&lt;/version&gt;    &lt;/dependency&gt;&lt;/dependencies&gt;</code></pre><h4 id="依赖范围"><a href="#依赖范围" class="headerlink" title="依赖范围"></a>依赖范围</h4><p>通过设置坐标的依赖范围（scope），可以设置对应 jar 包的作用范围：编译环境、测试环境、运行环境。</p><p>通过 <code>scope</code> 标签指定依赖的作用范围。 那么这个依赖就只能作用在测试环境，其他环境下不能使用。</p><pre><code class="xml">&lt;dependency&gt;        &lt;groupId&gt;mysql&lt;/groupId&gt;        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;        &lt;version&gt;5.1.32&lt;/version&gt;    &lt;scope&gt;test&lt;/scope&gt;&lt;/dependency&gt;</code></pre><p><code>scope</code> 的取值：</p><table><thead><tr><th><strong>依赖范围</strong></th><th>编译classpath</th><th>测试classpath</th><th>运行classpath</th><th>例子</th></tr></thead><tbody><tr><td><strong>compile</strong></td><td>Y</td><td>Y</td><td>Y</td><td>logback</td></tr><tr><td><strong>test</strong></td><td>-</td><td>Y</td><td>-</td><td>Junit</td></tr><tr><td><strong>provided</strong></td><td>Y</td><td>Y</td><td>-</td><td>servlet-api</td></tr><tr><td><strong>runtime</strong></td><td>-</td><td>Y</td><td>Y</td><td>jdbc驱动</td></tr><tr><td><strong>system</strong></td><td>Y</td><td>Y</td><td>-</td><td>存储在本地的jar包</td></tr></tbody></table><p>compile：作用于编译环境、测试环境、运行环境。</p><p>test：作用于测试环境。典型的就是 Junit 坐标，以后使用 Junit 时，都会将 scope 指定为该值。</p><p>provided：作用于编译环境、测试环境。我们后面会学习 <code>servlet-api</code> ，在使用它时，必须将 <code>scope</code> 设置为该值，不然运行时就会报错。</p><p>runtime： 作用于测试环境、运行环境。jdbc驱动一般将 <code>scope</code> 设置为该值，当然不设置也没有任何问题 。</p><p>如果引入坐标不指定 <code>scope</code> 标签时，默认就是 compile  值，大部分 jar 包都是使用默认值。</p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala。</p></blockquote><a id="more"></a><h3 id="一、Maven-概述"><a href="#一、Maven-概述" class="headerlink" title="一、Maven 概述"></a>一、Maven 概述</h3><p>Maven 是专门用于管理和构建 Java 项目的工具，它提供了一套标准化的项目结构，提供了一套标准化的构建流程（编译，测试，打包，发布……），提供了一套依赖管理机制。</p><p>标准化的项目结构：每一个开发工具（IDE）都有自己不同的项目结构，它们互相之间不通用。在 Eclipse 中创建的目录，无法在 IDEA 中进行使用，这就造成了很大的不方便，而 Maven 提供了一套标准化的项目结构，所有的 IDE 使用 Maven 构建的项目完全一样，所以 IDE 创建的 Maven 项目可以通用。</p><p>标准化的构建流程：开发了一套系统，代码需要进行编译、测试、打包、发布，这些操作如果需要反复进行就显得特别麻烦，而 Maven 提供了一套简单的命令来完成项目构建。</p><p>依赖管理：管理你项目所依赖的第三方资源（jar包、插件），而 Maven 使用标准的坐标配置来管理各种依赖，只需要简单的配置就可以完成依赖管理。</p><p>Maven 模型：</p><ol><li>  项目对象模型（Project Object Model）：将我们自己抽象成一个对象模型，有自己专属的坐标。</li></ol><pre><code class="xml">&lt;groupId&gt;com.itheima&lt;/groupId&gt;&lt;artifactId&gt;maven&lt;/artifactId&gt;&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</code></pre><ol start="2"><li>  依赖管理模型（Dependency）：使用坐标来描述当前项目依赖哪儿些第三方jar包。</li></ol><pre><code class="xml">&lt;dependency&gt;        &lt;groupId&gt;mysql&lt;/groupId&gt;        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;        &lt;version&gt;5.1.32&lt;/version&gt;&lt;/dependency&gt;</code></pre><p>Maven 仓库</p><ul><li>本地仓库：自己计算机上的一个目录。</li><li>中央仓库：由 Maven 团队维护的全球唯一的仓库： <a href="https://repo1.maven.org/maven2/%E3%80%82">https://repo1.maven.org/maven2/。</a></li><li>远程仓库(私服)：一般由公司团队搭建的私有仓库。</li><li>当项目中使用坐标引入对应依赖 jar 包后，首先会查找本地仓库中是否有对应的 jar 包，如果有，则在项目直接引用；如果没有，则去中央仓库中下载对应的jar包到本地仓库。</li><li>如果还可以搭建远程仓库，将来jar包的查找顺序则变为：本地仓库 –&gt; 远程仓库–&gt; 中央仓库。</li></ul><p>Maven 安装配置</p><ul><li>IDEA 自带 Maven 且 Mac 无需配置环境变量。</li><li>安装 Maven Helper 插件。</li></ul><h3 id="二、Maven-基本使用"><a href="#二、Maven-基本使用" class="headerlink" title="二、Maven 基本使用"></a>二、Maven 基本使用</h3><h4 id="Maven-常用命令"><a href="#Maven-常用命令" class="headerlink" title="Maven 常用命令"></a>Maven 常用命令</h4><p><code>mvn compile</code> ：编译，在项目下会生成一个 <code>target</code> 目录。</p><p><code>mvn clean</code>：清理，删除项目下的 <code>target</code> 目录。</p><p><code>mvn test</code>：测试，执行所有的测试代码。</p><p><code>mvn package</code>：打包，将当前项目打成的 jar 包。</p><p><code>mvn install</code>：安装，将当前项目打成jar包，并安装到本地仓库。</p><h4 id="Maven-生命周期"><a href="#Maven-生命周期" class="headerlink" title="Maven 生命周期"></a>Maven 生命周期</h4><p>Maven 构建项目生命周期描述的是一次构建过程经历经历了多少个事件。</p><p>Maven 对项目构建的生命周期划分为3套：</p><ul><li><p>clean ：清理工作。</p></li><li><p>default ：核心工作，例如编译，测试，打包，安装等。</p></li><li><p>site ： 产生报告，发布站点等。这套声明周期一般不会使用。</p></li></ul><p>同一套生命周期内，执行后边的命令，前面的所有命令会自动执行。当我们执行 <code>install</code>（安装）命令时，它会先执行 <code>compile</code>命令，再执行 <code>test </code> 命令，再执行 <code>package</code> 命令，最后执行 <code>install</code> 命令；当我们执行 <code>package</code> （打包）命令时，它会先执行 <code>compile</code> 命令，再执行 <code>test</code> 命令，最后执行 <code>package</code> 命令。</p><h4 id="Maven-坐标详解"><a href="#Maven-坐标详解" class="headerlink" title="Maven 坐标详解"></a>Maven 坐标详解</h4><p>Maven 中的坐标是资源的唯一标识，资源可以是插件、依赖、当前项目。</p><p>使用坐标来定义项目或引入项目中需要的依赖。</p><p>Maven 坐标主要组成：</p><ul><li><p>groupId：定义当前Maven项目隶属组织名称（通常是域名反写，例如：com.itheima）。</p></li><li><p>artifactId：定义当前Maven项目名称（通常是模块名称，例如 order-service、goods-service）。</p></li><li><p>version：定义当前项目版本号。</p></li></ul><p>我们的项目如果被其他的项目依赖时，也是需要坐标来引入的。</p><h3 id="三、Maven-依赖管理"><a href="#三、Maven-依赖管理" class="headerlink" title="三、Maven 依赖管理"></a>三、Maven 依赖管理</h3><h4 id="使用坐标引入-jar-包"><a href="#使用坐标引入-jar-包" class="headerlink" title="使用坐标引入 jar 包"></a>使用坐标引入 jar 包</h4><p>在项目的 pom.xml 中编写<code> &lt;dependencies&gt;</code> 标签。</p><p>在 <code>&lt;dependencies&gt; </code>标签中 使用 <code>&lt;dependency&gt;</code> 引入坐标。</p><p>定义坐标的 <code> groupId</code>，<code>artifactId</code>，<code>version</code>。</p><pre><code class="xml">&lt;dependencies&gt;    &lt;dependency&gt;        &lt;groupId&gt;mysql&lt;/groupId&gt;        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;        &lt;version&gt;5.1.32&lt;/version&gt;    &lt;/dependency&gt;&lt;/dependencies&gt;</code></pre><h4 id="依赖范围"><a href="#依赖范围" class="headerlink" title="依赖范围"></a>依赖范围</h4><p>通过设置坐标的依赖范围（scope），可以设置对应 jar 包的作用范围：编译环境、测试环境、运行环境。</p><p>通过 <code>scope</code> 标签指定依赖的作用范围。 那么这个依赖就只能作用在测试环境，其他环境下不能使用。</p><pre><code class="xml">&lt;dependency&gt;        &lt;groupId&gt;mysql&lt;/groupId&gt;        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;        &lt;version&gt;5.1.32&lt;/version&gt;    &lt;scope&gt;test&lt;/scope&gt;&lt;/dependency&gt;</code></pre><p><code>scope</code> 的取值：</p><table><thead><tr><th><strong>依赖范围</strong></th><th>编译classpath</th><th>测试classpath</th><th>运行classpath</th><th>例子</th></tr></thead><tbody><tr><td><strong>compile</strong></td><td>Y</td><td>Y</td><td>Y</td><td>logback</td></tr><tr><td><strong>test</strong></td><td>-</td><td>Y</td><td>-</td><td>Junit</td></tr><tr><td><strong>provided</strong></td><td>Y</td><td>Y</td><td>-</td><td>servlet-api</td></tr><tr><td><strong>runtime</strong></td><td>-</td><td>Y</td><td>Y</td><td>jdbc驱动</td></tr><tr><td><strong>system</strong></td><td>Y</td><td>Y</td><td>-</td><td>存储在本地的jar包</td></tr></tbody></table><p>compile：作用于编译环境、测试环境、运行环境。</p><p>test：作用于测试环境。典型的就是 Junit 坐标，以后使用 Junit 时，都会将 scope 指定为该值。</p><p>provided：作用于编译环境、测试环境。我们后面会学习 <code>servlet-api</code> ，在使用它时，必须将 <code>scope</code> 设置为该值，不然运行时就会报错。</p><p>runtime： 作用于测试环境、运行环境。jdbc驱动一般将 <code>scope</code> 设置为该值，当然不设置也没有任何问题 。</p><p>如果引入坐标不指定 <code>scope</code> 标签时，默认就是 compile  值，大部分 jar 包都是使用默认值。</p>]]></content>
       
       
       <categories>
@@ -288,7 +288,7 @@
       
       <categories>
           
-          <category> 云服务 </category>
+          <category> 其他开发 </category>
           
       </categories>
       
@@ -313,7 +313,7 @@
       
       <categories>
           
-          <category> 后端 </category>
+          <category> 其他开发 </category>
           
       </categories>
       
@@ -382,7 +382,7 @@
       
       <categories>
           
-          <category> 慕课MOOC </category>
+          <category> 计算机科学与技术 </category>
           
       </categories>
       
@@ -401,7 +401,7 @@
       
       <categories>
           
-          <category> 慕课MOOC </category>
+          <category> 计算机科学与技术 </category>
           
       </categories>
       
@@ -420,7 +420,7 @@
       
       <categories>
           
-          <category> 慕课MOOC </category>
+          <category> 计算机科学与技术 </category>
           
       </categories>
       
@@ -439,7 +439,7 @@
       
       <categories>
           
-          <category> 慕课MOOC </category>
+          <category> 计算机科学与技术 </category>
           
       </categories>
       
@@ -458,7 +458,7 @@
       
       <categories>
           
-          <category> 读书笔记 </category>
+          <category> 机器学习 </category>
           
       </categories>
       
@@ -704,7 +704,7 @@
       
       <categories>
           
-          <category> 云服务 </category>
+          <category> 其他开发 </category>
           
       </categories>
       
@@ -731,7 +731,7 @@
       
       <categories>
           
-          <category> 云服务 </category>
+          <category> 其他开发 </category>
           
       </categories>
       
@@ -745,7 +745,7 @@
       <link href="gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/"/>
       <url>gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>C 语言标准输入 scanf 在通过 <code>%s</code> 读取字符串时遇到空格就认为读取结束，这样没办法把一行带有空格的字符串存入到一个字符数组中。所以当需要输入的字符串中含有空格时，我们需要使用 gets 函数进行读取，使用 puts 函数进行输出。</p></blockquote><a id="more"></a><h3 id="一、字符数组"><a href="#一、字符数组" class="headerlink" title="一、字符数组"></a>一、字符数组</h3><p>字符数组的定义方法一维数组、二维数组类似，例如 <code>char c[10]=&quot;hello&quot;</code>。</p><p>因为 C 语言规定字符串的结束标志为 <code>\0</code>，而系统会对字符串常量自动加一个 <code>\0</code>，为了保证处理方法一致，一般会人为地在字符数组中添加 <code>\0</code>，所以字符数组存储的字符串长度必须比字符数组少 1 字节。例如 <code>char[10]</code> 最多存储 9 个字符，最后一个字符用来存储 <code>\0</code>。</p><p>字符数组的数组名里存的就是字符数组的起始地址，类型是字符指针。即编译器给字符数组 c 内部存了一个值，c 中存储的值的类型是字符指针。</p><h3 id="二、gets-函数和-puts-函数"><a href="#二、gets-函数和-puts-函数" class="headerlink" title="二、gets 函数和 puts 函数"></a>二、gets 函数和 puts 函数</h3><p>scanf 函数没办法把一行带有空格的字符串存入到一个字符数组中，所以当需要输入的字符串中含有空格时，我们需要使用 gets 函数进行读取：<code>char *gets(char *str)</code>。</p><p>gets 函数从 STDIN（标准输入）读取字符并把它们加载到 str（字符串）中，直到遇到换行符（\n）或到达 EOF。gets 遇到 <code>\n</code> 后, 不会存储 <code>\n</code>，而是将其翻译为空字符 <code>\0</code>。</p><p>puts 函数类似于 printf 函数，用于输出标准输出：<code>int puts(char *str);</code>。</p><p>函数 puts 把 str (字符串) 写人STDOU (标准输出)。puts 执行成功时返回非负值，执行失败时返回 EOF。相对于 printf 函数，puts 只能用于输出字符串，同时多打印一个换行符。</p><pre><code class="c">int main()&#123;    char c[20];    gets(c); //当一次读取一行时，使用gets    puts(c); //等价于printf(&quot;%s\n&quot;,c);    return 0;&#125;</code></pre><h3 id="三、str-系列字符串操作函数"><a href="#三、str-系列字符串操作函数" class="headerlink" title="三、str 系列字符串操作函数"></a>三、str 系列字符串操作函数</h3><p>str 系列字符串操作函数主要包括 strlen、strcpy 、strcmp、strcat 等。strlen 函数用于统计字符串长度，strcpy 函数用于将某个字符串复制到字符数组中，strcmp 函数用于比较两个字符串的大小，strcat 函数用于将两个字符串连接到一起：</p><pre><code class="c">#include &lt;string.h&gt;size_t strlen(char *str);char *strcpy(char *to, const char *from); //有const修饰代表此处可以放字符串常量int strcmp(const char *str1, const char *str2);char *strcat(char *str1, const char *str2);</code></pre><p>对于传参类型 <code>char*</code>，直接放入字符数组的数组名即可。</p><pre><code class="c">#include &lt;stdio.h&gt;#include &lt;string.h&gt;int main()&#123;    char c[20] = &quot;zhuang&quot;;    puts(c); //zhuang    printf(&quot;数组c内字符串的长度=%d\n&quot;, strlen(c));    char d[20];    strcpy(d, c); // 将c的内容复制到d中    puts(d); //zhuang    strcpy(d, &quot;study&quot;); // 将字符串study复制到d中    //strcmp比较字符串对应字符位置的ascii码值    int ret = strcmp(&quot;hello&quot;, &quot;how&quot;);    printf(&quot;两个字符串比较结果=%d\n&quot;, ret);  //-1    //strcat拼接两个字符串    strcat(d, &quot;!&quot;); // 将字符串!拼接到d中    puts(d);  //study!    return 0;&#125;</code></pre>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>C 语言标准输入 scanf 在通过 <code>%s</code> 读取字符串时遇到空格就认为读取结束，这样没办法把一行带有空格的字符串存入到一个字符数组中。所以当需要输入的字符串中含有空格时，我们需要使用 gets 函数进行读取，使用 puts 函数进行输出。</p></blockquote><a id="more"></a><h3 id="一、字符数组"><a href="#一、字符数组" class="headerlink" title="一、字符数组"></a>一、字符数组</h3><p>字符数组的定义方法一维数组、二维数组类似，例如 <code>char c[10]=&quot;hello&quot;</code>。</p><p>因为 C 语言规定字符串的结束标志为 <code>\0</code>，而系统会对字符串常量自动加一个 <code>\0</code>，为了保证处理方法一致，一般会人为地在字符数组中添加 <code>\0</code>，所以字符数组存储的字符串长度必须比字符数组少 1 字节。例如 <code>char[10]</code> 最多存储 9 个字符，最后一个字符用来存储 <code>\0</code>。</p><p>字符数组的数组名里存的就是字符数组的起始地址，类型是字符指针。即编译器给字符数组 c 内部存了一个值，c 中存储的值的类型是字符指针。</p><h3 id="二、gets-函数和-puts-函数"><a href="#二、gets-函数和-puts-函数" class="headerlink" title="二、gets 函数和 puts 函数"></a>二、gets 函数和 puts 函数</h3><p>scanf 函数没办法把一行带有空格的字符串存入到一个字符数组中，所以当需要输入的字符串中含有空格时，我们需要使用 gets 函数进行读取：<code>char *gets(char *str)</code>。</p><p>gets 函数从 STDIN（标准输入）读取字符并把它们加载到 str（字符串）中，直到遇到换行符（\n）或到达 EOF。gets 遇到 <code>\n</code> 后, 不会存储 <code>\n</code>，而是将其翻译为空字符 <code>\0</code>。</p><p>puts 函数类似于 printf 函数，用于输出标准输出：<code>int puts(char *str);</code>。</p><p>函数 puts 把 str (字符串) 写人STDOU (标准输出)。puts 执行成功时返回非负值，执行失败时返回 EOF。相对于 printf 函数，puts 只能用于输出字符串，同时多打印一个换行符。</p><pre><code class="c">int main()&#123;    char c[20];    gets(c); //当一次读取一行时，使用gets    puts(c); //等价于printf(&quot;%s\n&quot;,c);    return 0;&#125;</code></pre><p>虽然用 <code>gets()</code> 时有空格也可以直接输入，但是 gets 不检查预留存储区是否能够容纳实际输入的数据，换句话说，如果输入的字符数目大于数组的长度，gets 无法检测到这个问题，就会发生内存越界，所以编程时建议使用 <code>fgets()</code>。fgets 相对于 gets 去读取标准输入时，会把 <code>\n</code> 放到字符数组中。<code>char *fgets(char *s, int size, FILE *stream);</code>。</p><pre><code class="c">int main()&#123;    char c[20];    fgets(c, sizeof(c), stdin);    int len = strlen(c);  c[len -1] = &#39;\0&#39;;    puts(c);  return 0;&#125;</code></pre><h3 id="三、str-系列字符串操作函数"><a href="#三、str-系列字符串操作函数" class="headerlink" title="三、str 系列字符串操作函数"></a>三、str 系列字符串操作函数</h3><p>str 系列字符串操作函数主要包括 strlen、strcpy 、strcmp、strcat 等。strlen 函数用于统计字符串长度，strcpy 函数用于将某个字符串复制到字符数组中，strcmp 函数用于比较两个字符串的大小，strcat 函数用于将两个字符串连接到一起：</p><pre><code class="c">#include &lt;string.h&gt;size_t strlen(char *str);char *strcpy(char *to, const char *from); //有const修饰代表此处可以放字符串常量int strcmp(const char *str1, const char *str2);char *strcat(char *str1, const char *str2);</code></pre><p>对于传参类型 <code>char*</code>，直接放入字符数组的数组名即可。</p><pre><code class="c">#include &lt;stdio.h&gt;#include &lt;string.h&gt;int main()&#123;    char c[20] = &quot;zhuang&quot;;    puts(c); //zhuang    printf(&quot;数组c内字符串的长度=%d\n&quot;, strlen(c));    char d[20];    strcpy(d, c); // 将c的内容复制到d中    puts(d); //zhuang    strcpy(d, &quot;study&quot;); // 将字符串study复制到d中    //strcmp比较字符串对应字符位置的ascii码值    int ret = strcmp(&quot;hello&quot;, &quot;how&quot;);    printf(&quot;两个字符串比较结果=%d\n&quot;, ret);  //-1    //strcat拼接两个字符串    strcat(d, &quot;!&quot;); // 将字符串!拼接到d中    puts(d);  //study!    return 0;&#125;</code></pre><h3 id="四、判断回文数"><a href="#四、判断回文数" class="headerlink" title="四、判断回文数"></a>四、判断回文数</h3><p>读取一个字符串，字符串可能含有空格，将字符串逆转，原来的字符串与逆转后字符串相同，输出 0，原字符串小于逆转后字符串输出 -1，大于逆转后字符串输出 1。例如输入 hello，逆转后的字符串为 olleh，因为hello 小于 olleh，所以输出 -1。</p><pre><code class="c">#include &lt;stdio.h&gt;#include &lt;string.h&gt;int main()&#123;  char c[20], d[20];  gets(c);  int i, j;  for (i = strlen(c) - 1, j = 0; i &gt;= 0; i--, j++)  &#123;    d[j] = c[i];  &#125;  d[j] = &#39;\0&#39;;  int result = strcmp(c, d);  if (result &lt; 0)  &#123;    printf(&quot;%d\n&quot;, -1);  &#125;  else if (result &gt; 0)  &#123;    printf(&quot;%d\n&quot;, 1);  &#125;  else  &#123;    printf(&quot;%d\n&quot;, 0);  &#125;  return 0；&#125;</code></pre>]]></content>
       
       
       <categories>
@@ -788,7 +788,7 @@
       
       <categories>
           
-          <category> 云服务 </category>
+          <category> 其他开发 </category>
           
       </categories>
       
@@ -932,7 +932,7 @@
       
       <categories>
           
-          <category> 慕课MOOC </category>
+          <category> 其他开发 </category>
           
       </categories>
       
@@ -989,7 +989,7 @@
       
       <categories>
           
-          <category> 开源项目 </category>
+          <category> 其他开发 </category>
           
       </categories>
       
@@ -1042,9 +1042,9 @@
             
             <tag> Servlet </tag>
             
-            <tag> Tomcat </tag>
-            
             <tag> JDBC </tag>
+            
+            <tag> Tomcat </tag>
             
         </tags>
       
@@ -1143,12 +1143,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> hdoj </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -1226,7 +1220,7 @@
       
       <categories>
           
-          <category> 前端 </category>
+          <category> Web前端 </category>
           
       </categories>
       
@@ -1251,7 +1245,7 @@
       
       <categories>
           
-          <category> 前端 </category>
+          <category> Web前端 </category>
           
       </categories>
       
@@ -1278,7 +1272,7 @@
       
       <categories>
           
-          <category> 后端 </category>
+          <category> 其他开发 </category>
           
       </categories>
       
@@ -1322,7 +1316,7 @@
       
       <categories>
           
-          <category> 后端 </category>
+          <category> 其他开发 </category>
           
       </categories>
       
@@ -1444,7 +1438,7 @@
       
       <categories>
           
-          <category> 慕课MOOC </category>
+          <category> Python </category>
           
       </categories>
       
@@ -1482,7 +1476,7 @@
       
       <categories>
           
-          <category> 后端 </category>
+          <category> 其他开发 </category>
           
       </categories>
       
@@ -1507,7 +1501,7 @@
       
       <categories>
           
-          <category> 慕课MOOC </category>
+          <category> 计算机科学与技术 </category>
           
       </categories>
       
