@@ -4,6 +4,108 @@
   
     
     <entry>
+      <title>通过编写小测验学习无障碍</title>
+      <link href="%E7%BC%96%E5%86%99%E5%B0%8F%E6%B5%8B%E9%AA%8C%E5%AD%A6%E4%B9%A0%E6%97%A0%E9%9A%9C%E7%A2%8D/"/>
+      <url>%E7%BC%96%E5%86%99%E5%B0%8F%E6%B5%8B%E9%AA%8C%E5%AD%A6%E4%B9%A0%E6%97%A0%E9%9A%9C%E7%A2%8D/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>freeCodeCamp 响应式网页设计的认证课程第八章。无障碍环境使你的网页便于所有人使用，甚至是残疾人。在通过编写小测验学习无障碍的课程中，建立一个测验网页，学习诸如键盘快捷键、ARIA 属性和设计最佳实践等无障碍工具。</p></blockquote><a id="more"></a><h3 id="一、重点-HTML-代码"><a href="#一、重点-HTML-代码" class="headerlink" title="一、重点 HTML 代码"></a>一、重点 HTML 代码</h3><p>head：</p><pre><code class="html">&lt;head&gt;  &lt;meta charset=&quot;UTF-8&quot; /&gt;  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;  &lt;meta name=&quot;description&quot; content=&quot;freeCodeCamp Accessibility Quiz practice project&quot; /&gt;  &lt;title&gt;Accessibility Quiz&lt;/title&gt;  &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;&lt;/head&gt;</code></pre><p>header：</p><pre><code class="html">&lt;header&gt;  &lt;img id=&quot;logo&quot; src=&quot;https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg&quot;&gt;  &lt;h1&gt;HTML/CSS Quiz&lt;/h1&gt;  &lt;nav&gt;    &lt;ul&gt;      &lt;li&gt;&lt;a href=&quot;#student-info&quot; accesskey=&quot;i&quot;&gt;INFO&lt;/a&gt;&lt;/li&gt;      &lt;li&gt;&lt;a href=&quot;#html-questions&quot; accesskey=&quot;h&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt;      &lt;li&gt;&lt;a href=&quot;#css-questions&quot; accesskey=&quot;c&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt;    &lt;/ul&gt;  &lt;/nav&gt;&lt;/header&gt;</code></pre><p>student-info:</p><pre><code class="html">&lt;section role=&quot;region&quot; aria-labelledby=&quot;student-info&quot;&gt;  &lt;h2 id=&quot;student-info&quot;&gt;Student Info&lt;/h2&gt;  &lt;div class=&quot;info&quot;&gt;    &lt;label for=&quot;student-name&quot;&gt;Name:&lt;/label&gt;    &lt;input type=&quot;text&quot; name=&quot;student-name&quot; id=&quot;student-name&quot; /&gt;  &lt;/div&gt;  &lt;div class=&quot;info&quot;&gt;    &lt;label for=&quot;student-email&quot;&gt;Email:&lt;/label&gt;    &lt;input type=&quot;email&quot; name=&quot;student-email&quot; id=&quot;student-email&quot; /&gt;  &lt;/div&gt;  &lt;div class=&quot;info&quot;&gt;    &lt;label for=&quot;birth-date&quot;&gt;D.O.B.&lt;span class=&quot;sr-only&quot;&gt;(Date of Birth)&lt;/span&gt;&lt;/label&gt;    &lt;input type=&quot;date&quot; name=&quot;birth-date&quot; id=&quot;birth-date&quot; /&gt;  &lt;/div&gt;&lt;/section&gt;</code></pre><p>html-questions：</p><pre><code class="html">&lt;section role=&quot;region&quot; aria-labelledby=&quot;html-questions&quot;&gt;  &lt;h2 id=&quot;html-questions&quot;&gt;HTML&lt;/h2&gt;  &lt;div class=&quot;question-block&quot;&gt;    &lt;p&gt;1&lt;/p&gt;    &lt;fieldset class=&quot;question&quot; name=&quot;html-question-one&quot;&gt;      &lt;legend&gt;        The legend element represents a caption for the content of its        parent fieldset element      &lt;/legend&gt;      &lt;ul class=&quot;answers-list&quot;&gt;        &lt;li&gt;          &lt;label for=&quot;q1-a1&quot;&gt;            &lt;input type=&quot;radio&quot; id=&quot;q1-a1&quot; name=&quot;q1&quot; value=&quot;true&quot; /&gt;            True          &lt;/label&gt;        &lt;/li&gt;        &lt;li&gt;          &lt;label for=&quot;q1-a2&quot;&gt;            &lt;input type=&quot;radio&quot; id=&quot;q1-a2&quot; name=&quot;q1&quot; value=&quot;false&quot; /&gt;            False          &lt;/label&gt;        &lt;/li&gt;      &lt;/ul&gt;    &lt;/fieldset&gt;  &lt;/div&gt;  &lt;div class=&quot;question-block&quot;&gt;    &lt;p&gt;2&lt;/p&gt;    &lt;fieldset class=&quot;question&quot; name=&quot;html-question-two&quot;&gt;      &lt;legend&gt;        A label element nesting an input element is required to have a        for attribute with the same value as the input&#39;s id      &lt;/legend&gt;      &lt;ul class=&quot;answers-list&quot;&gt;        &lt;li&gt;          &lt;label for=&quot;q2-a1&quot;&gt;            &lt;input type=&quot;radio&quot; id=&quot;q2-a1&quot; name=&quot;q2&quot; value=&quot;true&quot; /&gt;            True          &lt;/label&gt;        &lt;/li&gt;        &lt;li&gt;          &lt;label for=&quot;q2-a2&quot;&gt;            &lt;input type=&quot;radio&quot; id=&quot;q2-a2&quot; name=&quot;q2&quot; value=&quot;false&quot; /&gt;            False          &lt;/label&gt;        &lt;/li&gt;      &lt;/ul&gt;    &lt;/fieldset&gt;  &lt;/div&gt;&lt;/section&gt;</code></pre><p>css-questions：</p><pre><code class="html">&lt;section role=&quot;region&quot; aria-labelledby=&quot;css-questions&quot;&gt;  &lt;h2 id=&quot;css-questions&quot;&gt;CSS&lt;/h2&gt;  &lt;div class=&quot;formrow&quot;&gt;    &lt;div class=&quot;question-block&quot;&gt;      &lt;label for=&quot;customer&quot;&gt;Are you a frontend developer?&lt;/label&gt;    &lt;/div&gt;    &lt;div class=&quot;answer&quot;&gt;      &lt;select name=&quot;customer&quot; id=&quot;customer&quot; required&gt;        &lt;option value=&quot;&quot;&gt;Select an option&lt;/option&gt;        &lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;        &lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;      &lt;/select&gt;    &lt;/div&gt;    &lt;div class=&quot;question-block&quot;&gt;      &lt;label for=&quot;css-questions&quot;&gt;Do you have any questions:&lt;/label&gt;    &lt;/div&gt;    &lt;div class=&quot;answer&quot;&gt;      &lt;textarea id=&quot;css-questions&quot; name=&quot;css-questions&quot; rows=&quot;5&quot; cols=&quot;24&quot;                placeholder=&quot;Who is flexbox...&quot;&gt;&lt;/textarea&gt;    &lt;/div&gt;  &lt;/div&gt;&lt;/section&gt;</code></pre><p>footer：</p><pre><code class="html">&lt;footer&gt;  &lt;address&gt;    &lt;a href=&quot;https://freecodecamp.org&quot;&gt;freeCodeCamp&lt;/a&gt;&lt;br /&gt;    San Francisco&lt;br /&gt;    California&lt;br /&gt;    USA  &lt;/address&gt;&lt;/footer&gt;</code></pre><h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>@media 属性：</p><pre><code class="CSS">@media (prefers-reduced-motion: no-preference) &#123;    * &#123;        scroll-behavior: smooth;    &#125;&#125;</code></pre><p>body，header：</p><pre><code class="css">body &#123;    background: #f5f6f7;    color: #1b1b32;    font-family: Helvetica;    margin: 0;&#125;header &#123;    width: 100%;    height: 50px;    background-color: #1b1b32;    display: flex;    justify-content: space-between;    align-items: center;    position: fixed;    top: 0;&#125;</code></pre><p>logo，nav：</p><pre><code class="CSS">#logo &#123;    width: max(100px, 18vw);    background-color: #0a0a23;    aspect-ratio: 35 / 4;    padding: 0.4rem;&#125;h1 &#123;    color: #f1be32;    font-size: min(5vw, 1.2em);    text-align: center;&#125;nav &#123;    width: 50%;    max-width: 300px;    height: 50px;&#125;nav&gt;ul &#123;    display: flex;    justify-content: space-evenly;    flex-wrap: wrap;    align-items: center;    padding-inline-start: 0;    margin-block: 0;    height: 100%;&#125;nav&gt;ul&gt;li &#123;    color: #dfdfe2;    margin: 0 0.2rem;    padding: 0.2rem;    display: block;&#125;nav&gt;ul&gt;li:hover &#123;    background-color: #dfdfe2;    color: #1b1b32;    cursor: pointer;&#125;li&gt;a &#123;    color: inherit;    text-decoration: none;&#125;</code></pre><p>表单 1：</p><pre><code class="CSS">main &#123;    padding-top: 50px;&#125;section &#123;    width: 80%;    margin: 0 auto 10px auto;    max-width: 600px;&#125;h1,h2 &#123;    font-family: Verdana, Tahoma;&#125;h2 &#123;    border-bottom: 4px solid #dfdfe2;    margin-top: 0px;    padding-top: 60px;&#125;.info &#123;    padding: 10px 0 0 5px;&#125;.formrow &#123;    margin-top: 30px;    padding: 0px 15px;&#125;input &#123;    font-size: 16px;&#125;.info label,.info input &#123;    display: inline-block;    text-align: right;&#125;.info input &#123;    width: 50%;    text-align: left;&#125;.info label &#123;    width: 10%;    min-width: 55px;&#125;</code></pre><p>表单 2、3：</p><pre><code class="CSS">.question-block &#123;    text-align: left;    display: block;    width: 100%;    margin-top: 20px;    padding-top: 5px;&#125;p &#123;    margin-top: 5px;    padding-left: 15px;    font-size: 20px;&#125;p::before &#123;    content: &quot;Question #&quot;;&#125;.question &#123;    border: none;    padding-bottom: 0;&#125;.answers-list &#123;    list-style: none;    padding: 0;&#125;button &#123;    display: block;    margin: 40px auto;    width: 40%;    padding: 15px;    font-size: 23px;    background: #d0d0d5;    border: 3px solid #3b3b4f;&#125;</code></pre><p>.sr-only selector：</p><pre><code class="CSS">.sr-only &#123;    position: absolute;    width: 1px;    height: 1px;    padding: 0;    margin: -1px;    overflow: hidden;    clip: rect(0, 0, 0, 0);    white-space: nowrap;    border: 0;&#125;</code></pre><h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">    <iframe src="https://free-code-camp-demo.vercel.app/通过编写小测验学习无障碍/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> Web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>通过建立营养标签来学习排版</title>
+      <link href="%E5%BB%BA%E7%AB%8B%E8%90%A5%E5%85%BB%E6%A0%87%E7%AD%BE%E6%9D%A5%E5%AD%A6%E4%B9%A0%E6%8E%92%E7%89%88/"/>
+      <url>%E5%BB%BA%E7%AB%8B%E8%90%A5%E5%85%BB%E6%A0%87%E7%AD%BE%E6%9D%A5%E5%AD%A6%E4%B9%A0%E6%8E%92%E7%89%88/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>freeCodeCamp 响应式网页设计的认证课程第七章。排版是将文本样式设置为易于阅读并适合其目的的艺术。在通过建立营养标签来学习排版的课程中，你将使用排版来构建营养标签网页。你将学习如何使用 CSS 设置文本样式、调整行高和定位文本。</p></blockquote><a id="more"></a><h3 id="一、重点-HTML-代码"><a href="#一、重点-HTML-代码" class="headerlink" title="一、重点 HTML 代码"></a>一、重点 HTML 代码</h3><p>head：</p><pre><code class="html">&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;Nutrition Label&lt;/title&gt;    &lt;link href=&quot;https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&quot; rel=&quot;stylesheet&quot;&gt;    &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;&lt;/head&gt;</code></pre><p>body：</p><pre><code class="html">&lt;body&gt;    &lt;div class=&quot;label&quot;&gt;        &lt;header&gt;            &lt;h1 class=&quot;bold&quot;&gt;Nutrition Facts&lt;/h1&gt;            &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;            &lt;p&gt;8 servings per container&lt;/p&gt;            &lt;p class=&quot;bold&quot;&gt;Serving size &lt;span class=&quot;right&quot;&gt;2/3 cup (55g)&lt;/span&gt;&lt;/p&gt;        &lt;/header&gt;        &lt;div class=&quot;divider lg&quot;&gt;&lt;/div&gt;        &lt;div class=&quot;calories-info&quot;&gt;            &lt;p class=&quot;bold sm-text&quot;&gt;Amount per serving&lt;/p&gt;            &lt;h1&gt;Calories &lt;span class=&quot;right&quot;&gt;230&lt;/span&gt;&lt;/h1&gt;        &lt;/div&gt;        &lt;div class=&quot;divider md&quot;&gt;&lt;/div&gt;        &lt;div class=&quot;daily-value sm-text&quot;&gt;            &lt;p class=&quot;right bold no-divider&quot;&gt;% Daily Value *&lt;/p&gt;            &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;            &lt;p&gt;&lt;span class=&quot;bold&quot;&gt;Total Fat&lt;/span&gt; 8g &lt;span class=&quot;bold right&quot;&gt;10%&lt;/span&gt;&lt;/p&gt;            &lt;p class=&quot;indent no-divider&quot;&gt;Saturated Fat 1g &lt;span class=&quot;bold right&quot;&gt;5%&lt;/span&gt;&lt;/p&gt;            &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;            &lt;p class=&quot;indent no-divider&quot;&gt;&lt;i&gt;Trans&lt;/i&gt; Fat 0g&lt;/p&gt;            &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;            &lt;p&gt;&lt;span class=&quot;bold&quot;&gt;Cholesterol&lt;/span&gt; 0mg &lt;span class=&quot;right bold&quot;&gt;0%&lt;/span&gt;&lt;/p&gt;            &lt;p&gt;&lt;span class=&quot;bold&quot;&gt;Sodium&lt;/span&gt; 160mg &lt;span class=&quot;right bold&quot;&gt;7%&lt;/span&gt;&lt;/p&gt;            &lt;p&gt;&lt;span class=&quot;bold&quot;&gt;Total Carbohydrate&lt;/span&gt; 37g &lt;span class=&quot;right bold&quot;&gt;13%&lt;/span&gt;&lt;/p&gt;            &lt;p class=&quot;indent no-divider&quot;&gt;Dietary Fiber 4g&lt;/p&gt;            &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;            &lt;p class=&quot;indent no-divider&quot;&gt;Total Sugars 12g&lt;/p&gt;            &lt;div class=&quot;divider dbl-indent&quot;&gt;&lt;/div&gt;            &lt;p class=&quot;dbl-indent no-divider&quot;&gt;Includes 10g Added Sugars &lt;span class=&quot;right bold&quot;&gt;20%&lt;/span&gt;            &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;            &lt;p class=&quot;no-divider&quot;&gt;&lt;span class=&quot;bold&quot;&gt;Protein&lt;/span&gt; 3g&lt;/p&gt;            &lt;div class=&quot;divider lg&quot;&gt;&lt;/div&gt;            &lt;p&gt;Vitamin D 2mcg &lt;span class=&quot;right&quot;&gt;10%&lt;/span&gt;&lt;/p&gt;            &lt;p&gt;Calcium 260mg &lt;span class=&quot;right&quot;&gt;20%&lt;/span&gt;&lt;/p&gt;            &lt;p&gt;Iron 8mg &lt;span class=&quot;right&quot;&gt;45%&lt;/span&gt;&lt;/p&gt;            &lt;p class=&quot;no-divider&quot;&gt;Potassium 235mg &lt;span class=&quot;right&quot;&gt;6%&lt;/span&gt;&lt;/p&gt;        &lt;/div&gt;        &lt;div class=&quot;divider md&quot;&gt;&lt;/div&gt;        &lt;p class=&quot;note&quot;&gt;* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a            daily diet. 2,000 calories a day is used for general nutrition advice.&lt;/p&gt;    &lt;/div&gt;&lt;/body&gt;</code></pre><h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>box-sizing 属性：</p><pre><code class="CSS">* &#123;    box-sizing: border-box;&#125;html &#123;    font-size: 16px;&#125;body &#123;    font-family: &#39;Open Sans&#39;, sans-serif;&#125;</code></pre><p>letter-spacing 属性：</p><pre><code class="css">.label &#123;    border: 2px solid black;    width: 270px;    margin: 20px auto;    padding: 0 7px;&#125;header h1 &#123;    text-align: center;    margin: -4px 0;    letter-spacing: 0.15px&#125;p &#123;    margin: 0;&#125;</code></pre><p>divider 分隔栏：</p><pre><code class="CSS">.divider &#123;    border-bottom: 1px solid #888989;    margin: 2px 0;    clear: right;&#125;.bold &#123;    font-weight: 800;&#125;.right &#123;    float: right;&#125;.lg &#123;    height: 10px;&#125;.lg,.md &#123;    background-color: black;    border: 0;&#125;.md &#123;    height: 5px;&#125;</code></pre><p>calories-info：</p><pre><code class="CSS">.sm-text &#123;    font-size: 0.85rem;&#125;.calories-info h1 &#123;    margin: -5px -2px;    overflow: hidden;&#125;.calories-info span &#123;    font-size: 1.2em;    margin-top: -7px;&#125;</code></pre><p>indent 缩进：</p><pre><code class="CSS">.indent &#123;    margin-left: 1em;&#125;.dbl-indent &#123;    margin-left: 2em;&#125;.note &#123;    font-size: 0.6rem;    margin: 5px 0;    padding: 0 8px;    text-indent: -8px;&#125;</code></pre><p><code>:not</code> pseudo-selector：</p><pre><code class="CSS">.daily-value p:not(.no-divider) &#123;    border-bottom: 1px solid #888989;&#125;</code></pre><h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">    <iframe src="https://free-code-camp-demo.vercel.app/通过建立营养标签来学习排版/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> Web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>通过创建照片集来学习 CSS 弹性盒子</title>
+      <link href="CSS%E5%88%9B%E5%BB%BA%E7%85%A7%E7%89%87%E9%9B%86/"/>
+      <url>CSS%E5%88%9B%E5%BB%BA%E7%85%A7%E7%89%87%E9%9B%86/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>freeCodeCamp 响应式网页设计的认证课程第六章。通过弹性盒子你可以设计适应不同屏幕大小的网页。在通过创建照片集来学习 CSS 弹性盒子的课程中，使用弹性盒子创建一个响应式的照片集网页。</p></blockquote><a id="more"></a><h3 id="一、重点-CSS-代码"><a href="#一、重点-CSS-代码" class="headerlink" title="一、重点 CSS 代码"></a>一、重点 CSS 代码</h3><p><code>*</code> selector：</p><pre><code class="CSS">* &#123;    box-sizing: border-box;&#125;body &#123;    margin: 0;    font-family: Arial;    background: #EBE7E7;&#125;.header &#123;    text-align: center;    padding: 32px;    background: #E0DDDD;&#125;</code></pre><p>id selector：</p><pre><code class="css">#gallery img &#123;    width: 25%;    height: 300px;    object-fit: cover;    margin-top: 8px;    padding: 0 4px;    border-radius: 10px;&#125;</code></pre><p>CSS Flexbox：</p><pre><code class="CSS">#gallery &#123;    display: flex;    flex-direction: row;    flex-wrap: wrap;    justify-content: center;    align-items: center;    padding: 0 4px;&#125;</code></pre><p>media query：</p><pre><code class="CSS">@media (max-width: 800px) &#123;    #gallery img &#123;        width: 50%;    &#125;&#125;@media (max-width: 600px) &#123;    #gallery img &#123;        width: 100%;    &#125;&#125;</code></pre><h3 id="二、页面展示"><a href="#二、页面展示" class="headerlink" title="二、页面展示"></a>二、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">    <iframe src="https://free-code-camp-demo.vercel.app/通过创建照片集来学习CSS弹性盒子/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> Web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>通过创作罗斯科绘画学习 CSS 盒子模型</title>
+      <link href="CSS%E5%88%9B%E4%BD%9C%E7%BD%97%E6%96%AF%E7%A7%91%E7%BB%98%E7%94%BB/"/>
+      <url>CSS%E5%88%9B%E4%BD%9C%E7%BD%97%E6%96%AF%E7%A7%91%E7%BB%98%E7%94%BB/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>freeCodeCamp 响应式网页设计的认证课程第五章。每个 HTML 元素都是一个盒子，它拥有着自己的间距和边框，这叫作盒子模型。在通过创作罗斯科绘画学习 CSS 盒子模型的课程中，使用 CSS 和盒子模型，创作属于自己的罗斯科风格的矩形艺术作品。</p></blockquote><a id="more"></a><h3 id="一、CSS-box-model"><a href="#一、CSS-box-model" class="headerlink" title="一、CSS box model"></a>一、CSS box model</h3><p><img src="https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png" class="lazyload" data-srcset="https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png" srcset="data:image/png;base64,666"></p><h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>Use padding to adjust the spacing within an element：</p><pre><code class="CSS">.frame &#123;    border: 50px solid black;    width: 500px;    padding: 50px;    margin: 20px auto;&#125;</code></pre><p>Use margins to adjust the spacing outside of an element：</p><pre><code class="css">.one &#123;    width: 425px;    height: 150px;    background-color: #efb762;    margin: 20px auto;    box-shadow: 0 0 3px 3px #efb762;    border-radius: 9px;    transform: rotate(-0.6deg);&#125;</code></pre><p>overflow:hidden 溢出隐藏、清除浮动、解决外边距塌陷：</p><pre><code class="CSS">.canvas &#123;    width: 500px;    height: 600px;    background-color: #4d0f00;    overflow: hidden;    filter: blur(2px);&#125;</code></pre><p>filter 属性；box-shadow 属性；border-radius 属性；transform 属性：</p><pre><code class="CSS">.two &#123;    width: 475px;    height: 200px;    background-color: #8f0401;    margin: 0 auto 20px;    box-shadow: 0 0 3px 3px #8f0401;    border-radius: 8px 10px;    transform: rotate(0.4deg);&#125;.one,.two &#123;    filter: blur(1px);&#125;.three &#123;    width: 91%;    height: 28%;    background-color: #b20403;    margin: auto;    filter: blur(2px);    box-shadow: 0 0 5px 5px #b20403;    border-radius: 30px 25px 60px 12px;    transform: rotate(-0.2deg);&#125;</code></pre><h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">    <iframe src="https://free-code-camp-demo.vercel.app/通过创作罗斯科绘画学习CSS盒子模型/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> Web前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>通过编写注册表单学习 HTML 表单</title>
       <link href="HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/"/>
       <url>HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/</url>
@@ -98,6 +200,44 @@
             <tag> HTML </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>浅谈 C 语言指针</title>
+      <link href="%E6%B5%85%E8%B0%88%E6%8C%87%E9%92%88/"/>
+      <url>%E6%B5%85%E8%B0%88%E6%8C%87%E9%92%88/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>计算机内存区域中的每字节都对应一个编号，这个编号就是“地址”。如果在程序中定义了一个变量，那么在对程序进行编译时，系统就会给这个变量分配内存单元。如果我们在程序中需要将某个整型、浮点型或字符型数据变量的地址保存下来，需要用到 C 语言为我们提供的指针。在 C 语言中，指针变量是一种特殊的变量，它用来存放变量地址。掌握指针，对于学习操作系统、理解操作系统原理会有非常大的帮助。</p></blockquote><a id="more"></a><h3 id="一、取地址操作符和取值操作符"><a href="#一、取地址操作符和取值操作符" class="headerlink" title="一、取地址操作符和取值操作符"></a>一、取地址操作符和取值操作符</h3><p>取地址操作符为 <code>&amp;</code>，也称引用，通过该操作符我们可以获取一个变量的地址值；取值操作符为 <code>*</code>，也称解引用，通过该操作符我们可以得到一个地址对应的数据。取地址操作符和取值操作符优先级相同，按照自右向左的顺序相结合。</p><pre><code class="c">int main()&#123;  int i = 10;  int *p; //p就是一个指针变量，可以用来存储地址，类型是整型指针  p = &amp;i; //初始化赋值  printf(&quot;i = %d\n&quot;, i); //直接访问  printf(&quot;*p = %d\n&quot;, *p); //间接访问&#125;</code></pre><p>指针变量前面的表示该变量为指针型变量，例如 <code>float **pointer_1;</code> 的指针变量名是 <code>pointer_1</code>。在定义指针变量时必须指定其类型，只有整型变量的地址才能放到指向整型变量的指针变量中。</p><h3 id="二、指针的传递和偏移"><a href="#二、指针的传递和偏移" class="headerlink" title="二、指针的传递和偏移"></a>二、指针的传递和偏移</h3><p>C 语言中的函数调用均为值传递。指针的传递将变量 i 的地址传递给 change 函数时，实际效果是 <code>j=&amp;i</code>，这时 j 是一个指针变量，依然是值传递, 只是 j 内部存储的是变量 i 的地址，所以通过 <code>*j</code> 就间接访问到了与变量 i 相同的区域，通过 <code>*j=5</code> 就实现了对变量 i 的值的改变。</p><pre><code class="c">void change(int* j)&#123;  *j = 5; //间接访问得到变量 i&#125;int main() //指针的传递&#123;  int i = 10;    printf(&quot;before change i=%d\n&quot;, i);    change(&amp;i); //传递变量 i 的地址    printf(&quot;after change i=%d\n&quot;, i);&#125;</code></pre><p>我们把对指针的加减称为指针的偏移，加就是向后偏移，减就是向前偏移，但对指针进行乘除是没有意义的。</p><pre><code class="c">//指针的偏移int main()&#123;  int a[5]=&#123;1,2,3,4,5&#125;;  int *p;  int i;  p = a; //保证等号两边的数值类型一致  for(i=0; i&lt;5; i++) //正序输出  &#123;      printf(&quot;%3d&quot;, *(p+i));  &#125;  p = &amp;a[4]; //让 p 指向最后一个元素    for(i=0; i&lt;5; i++) //逆序输出    &#123;    printf(&quot;%3d&quot;,*(p-i));  &#125;&#125;</code></pre><h3 id="三、指针与一维数组"><a href="#三、指针与一维数组" class="headerlink" title="三、指针与一维数组"></a>三、指针与一维数组</h3><p>数组在传递时弱化为指针。这是由于一维数组名中存储的是数组的首地址，因此一维数组在函数调用进行传递时，它的长度子函数无法知道。定义一个指针变量时，指针变量的类型要和数组的数据类型保持一致，通过取值操作, 就可获取数组元素, 这种方法称为指针法。也可以通过取下标的方式来获取数组元素并进行修改，这种方法称为下标法。</p><pre><code class="c">void change(char *d)  //*d 为形参&#123;  *d = &#39;H&#39;; //指针法  d[1] = &#39;E&#39;; //下标法  *(d+2) = &#39;L&#39;; //指针的偏移&#125;int main()&#123;  char c[10] = &#39;hello&#39;;  change(c); //c 为实参  printf(&quot;%c\n&quot;, c);&#125;</code></pre><h3 id="四、指针与动态内存申请"><a href="#四、指针与动态内存申请" class="headerlink" title="四、指针与动态内存申请"></a>四、指针与动态内存申请</h3><p>C 语言的数组长度固定是因为其定义的整型、浮点型、字符型变量、数组变量都在栈空间中，而栈空间的大小在编译时是确定的。如果使用的空间大小不确定，那么就要使用堆空间申请动态内存申请。栈空间由系统自动管理，而堆空间的申请和释放需要自行管理，所以在具体例子中需要通过 free 函数释放堆空间。</p><p>栈是计算机系统提供的数据结构，计算机会在底层对栈提供支持：分配专门的寄存器存放栈的地址，压栈操作、出栈操作都有专门的指令执行，这就决定了栈的效率比较高；堆则是 C/C++ 函数库提供的数据结构，它的机制很复杂，例如为了分配一块内存，库函数会按照一定的算法在堆内存中搜索可用的足够大小的空间，如果没有足够大小的空间（可能由于内存碎片太多）那么就有可能调用系统功能去增加程序数据段的内存空间，这样就有机会分到足够大小的内存，然后返回。显然，堆的效率要比栈低得多。</p><pre><code class="c">int main()&#123;  int i;  char *p;  scanf(&quot;%d&quot;, &amp;i); //输入要申请的空间大小  p = (char*)malloc(i)；//使用 malloc 动态申请堆空间，(char *)是强制类型转换  strcpy(p, &quot;malloc success&quot;);  puts(p);  free(p)；//free 时必须使用 malloc 申请时返回的指针值，不能进行任何偏移  p = NULL; //消除野指针&#125;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C/C++ </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gets 函数与 puts 函数</title>
+      <link href="gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/"/>
+      <url>gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>C 语言标准输入 scanf 在通过 <code>%s</code> 读取字符串时遇到空格就认为读取结束，这样没办法把一行带有空格的字符串存入到一个字符数组中。所以当需要输入的字符串中含有空格时，我们需要使用 gets 函数进行读取，使用 puts 函数进行输出。</p></blockquote><a id="more"></a><h3 id="一、字符数组"><a href="#一、字符数组" class="headerlink" title="一、字符数组"></a>一、字符数组</h3><p>字符数组的定义方法一维数组、二维数组类似，例如 <code>char c[10]=&quot;hello&quot;</code>。</p><p>因为 C 语言规定字符串的结束标志为 <code>\0</code>，而系统会对字符串常量自动加一个 <code>\0</code>，为了保证处理方法一致，一般会人为地在字符数组中添加 <code>\0</code>，所以字符数组存储的字符串长度必须比字符数组少 1 字节。例如 <code>char[10]</code> 最多存储 9 个字符，最后一个字符用来存储 <code>\0</code>。</p><p>字符数组的数组名里存的就是字符数组的起始地址，类型是字符指针。即编译器给字符数组 c 内部存了一个值，c 中存储的值的类型是字符指针。</p><h3 id="二、gets-函数和-puts-函数"><a href="#二、gets-函数和-puts-函数" class="headerlink" title="二、gets 函数和 puts 函数"></a>二、gets 函数和 puts 函数</h3><p>scanf 函数没办法把一行带有空格的字符串存入到一个字符数组中，所以当需要输入的字符串中含有空格时，我们需要使用 gets 函数进行读取：<code>char *gets(char *str)</code>。</p><p>gets 函数从 STDIN（标准输入）读取字符并把它们加载到 str（字符串）中，直到遇到换行符（\n）或到达 EOF。gets 遇到 <code>\n</code> 后, 不会存储 <code>\n</code>，而是将其翻译为空字符 <code>\0</code>。</p><p>puts 函数类似于 printf 函数，用于输出标准输出：<code>int puts(char *str);</code>。</p><p>函数 puts 把 str (字符串) 写人STDOU (标准输出)。puts 执行成功时返回非负值，执行失败时返回 EOF。相对于 printf 函数，puts 只能用于输出字符串，同时多打印一个换行符。</p><pre><code class="c">int main()&#123;    char c[20];    gets(c); //当一次读取一行时，使用gets    puts(c); //等价于printf(&quot;%s\n&quot;,c);    return 0;&#125;</code></pre><p>虽然用 <code>gets()</code> 时有空格也可以直接输入，但是 gets 不检查预留存储区是否能够容纳实际输入的数据，换句话说，如果输入的字符数目大于数组的长度，gets 无法检测到这个问题，就会发生内存越界，所以编程时建议使用 <code>fgets()</code>。fgets 相对于 gets 去读取标准输入时，会把 <code>\n</code> 放到字符数组中。<code>char *fgets(char *s, int size, FILE *stream);</code>。</p><pre><code class="c">int main()&#123;    char c[20];    fgets(c, sizeof(c), stdin);    int len = strlen(c);  c[len -1] = &#39;\0&#39;;    puts(c);  return 0;&#125;</code></pre><h3 id="三、str-系列字符串操作函数"><a href="#三、str-系列字符串操作函数" class="headerlink" title="三、str 系列字符串操作函数"></a>三、str 系列字符串操作函数</h3><p>str 系列字符串操作函数主要包括 strlen、strcpy 、strcmp、strcat 等。strlen 函数用于统计字符串长度，strcpy 函数用于将某个字符串复制到字符数组中，strcmp 函数用于比较两个字符串的大小，strcat 函数用于将两个字符串连接到一起：</p><pre><code class="c">#include &lt;string.h&gt;size_t strlen(char *str);char *strcpy(char *to, const char *from); //有const修饰代表此处可以放字符串常量int strcmp(const char *str1, const char *str2);char *strcat(char *str1, const char *str2);</code></pre><p>对于传参类型 <code>char*</code>，直接放入字符数组的数组名即可。</p><pre><code class="c">#include &lt;stdio.h&gt;#include &lt;string.h&gt;int main()&#123;    char c[20] = &quot;zhuang&quot;;    puts(c); //zhuang    printf(&quot;数组c内字符串的长度=%d\n&quot;, strlen(c));    char d[20];    strcpy(d, c); // 将c的内容复制到d中    puts(d); //zhuang    strcpy(d, &quot;study&quot;); // 将字符串study复制到d中    //strcmp比较字符串对应字符位置的ascii码值    int ret = strcmp(&quot;hello&quot;, &quot;how&quot;);    printf(&quot;两个字符串比较结果=%d\n&quot;, ret);  //-1    //strcat拼接两个字符串    strcat(d, &quot;!&quot;); // 将字符串!拼接到d中    puts(d);  //study!    return 0;&#125;</code></pre><h3 id="四、判断回文数"><a href="#四、判断回文数" class="headerlink" title="四、判断回文数"></a>四、判断回文数</h3><p>读取一个字符串，字符串可能含有空格，将字符串逆转，原来的字符串与逆转后字符串相同，输出 0，原字符串小于逆转后字符串输出 -1，大于逆转后字符串输出 1。例如输入 hello，逆转后的字符串为 olleh，因为hello 小于 olleh，所以输出 -1。</p><pre><code class="c">#include &lt;stdio.h&gt;#include &lt;string.h&gt;int main()&#123;  char c[20], d[20];  gets(c);  int i, j;  for (i = strlen(c) - 1, j = 0; i &gt;= 0; i--, j++)  &#123;    d[j] = c[i];  &#125;  d[j] = &#39;\0&#39;;  int result = strcmp(c, d);  if (result &lt; 0)  &#123;    printf(&quot;%d\n&quot;, -1);  &#125;  else if (result &gt; 0)  &#123;    printf(&quot;%d\n&quot;, 1);  &#125;  else  &#123;    printf(&quot;%d\n&quot;, 0);  &#125;  return 0；&#125;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C/C++ </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -732,25 +872,6 @@
       <categories>
           
           <category> 其他开发 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>gets 函数与 puts 函数</title>
-      <link href="gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/"/>
-      <url>gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>C 语言标准输入 scanf 在通过 <code>%s</code> 读取字符串时遇到空格就认为读取结束，这样没办法把一行带有空格的字符串存入到一个字符数组中。所以当需要输入的字符串中含有空格时，我们需要使用 gets 函数进行读取，使用 puts 函数进行输出。</p></blockquote><a id="more"></a><h3 id="一、字符数组"><a href="#一、字符数组" class="headerlink" title="一、字符数组"></a>一、字符数组</h3><p>字符数组的定义方法一维数组、二维数组类似，例如 <code>char c[10]=&quot;hello&quot;</code>。</p><p>因为 C 语言规定字符串的结束标志为 <code>\0</code>，而系统会对字符串常量自动加一个 <code>\0</code>，为了保证处理方法一致，一般会人为地在字符数组中添加 <code>\0</code>，所以字符数组存储的字符串长度必须比字符数组少 1 字节。例如 <code>char[10]</code> 最多存储 9 个字符，最后一个字符用来存储 <code>\0</code>。</p><p>字符数组的数组名里存的就是字符数组的起始地址，类型是字符指针。即编译器给字符数组 c 内部存了一个值，c 中存储的值的类型是字符指针。</p><h3 id="二、gets-函数和-puts-函数"><a href="#二、gets-函数和-puts-函数" class="headerlink" title="二、gets 函数和 puts 函数"></a>二、gets 函数和 puts 函数</h3><p>scanf 函数没办法把一行带有空格的字符串存入到一个字符数组中，所以当需要输入的字符串中含有空格时，我们需要使用 gets 函数进行读取：<code>char *gets(char *str)</code>。</p><p>gets 函数从 STDIN（标准输入）读取字符并把它们加载到 str（字符串）中，直到遇到换行符（\n）或到达 EOF。gets 遇到 <code>\n</code> 后, 不会存储 <code>\n</code>，而是将其翻译为空字符 <code>\0</code>。</p><p>puts 函数类似于 printf 函数，用于输出标准输出：<code>int puts(char *str);</code>。</p><p>函数 puts 把 str (字符串) 写人STDOU (标准输出)。puts 执行成功时返回非负值，执行失败时返回 EOF。相对于 printf 函数，puts 只能用于输出字符串，同时多打印一个换行符。</p><pre><code class="c">int main()&#123;    char c[20];    gets(c); //当一次读取一行时，使用gets    puts(c); //等价于printf(&quot;%s\n&quot;,c);    return 0;&#125;</code></pre><p>虽然用 <code>gets()</code> 时有空格也可以直接输入，但是 gets 不检查预留存储区是否能够容纳实际输入的数据，换句话说，如果输入的字符数目大于数组的长度，gets 无法检测到这个问题，就会发生内存越界，所以编程时建议使用 <code>fgets()</code>。fgets 相对于 gets 去读取标准输入时，会把 <code>\n</code> 放到字符数组中。<code>char *fgets(char *s, int size, FILE *stream);</code>。</p><pre><code class="c">int main()&#123;    char c[20];    fgets(c, sizeof(c), stdin);    int len = strlen(c);  c[len -1] = &#39;\0&#39;;    puts(c);  return 0;&#125;</code></pre><h3 id="三、str-系列字符串操作函数"><a href="#三、str-系列字符串操作函数" class="headerlink" title="三、str 系列字符串操作函数"></a>三、str 系列字符串操作函数</h3><p>str 系列字符串操作函数主要包括 strlen、strcpy 、strcmp、strcat 等。strlen 函数用于统计字符串长度，strcpy 函数用于将某个字符串复制到字符数组中，strcmp 函数用于比较两个字符串的大小，strcat 函数用于将两个字符串连接到一起：</p><pre><code class="c">#include &lt;string.h&gt;size_t strlen(char *str);char *strcpy(char *to, const char *from); //有const修饰代表此处可以放字符串常量int strcmp(const char *str1, const char *str2);char *strcat(char *str1, const char *str2);</code></pre><p>对于传参类型 <code>char*</code>，直接放入字符数组的数组名即可。</p><pre><code class="c">#include &lt;stdio.h&gt;#include &lt;string.h&gt;int main()&#123;    char c[20] = &quot;zhuang&quot;;    puts(c); //zhuang    printf(&quot;数组c内字符串的长度=%d\n&quot;, strlen(c));    char d[20];    strcpy(d, c); // 将c的内容复制到d中    puts(d); //zhuang    strcpy(d, &quot;study&quot;); // 将字符串study复制到d中    //strcmp比较字符串对应字符位置的ascii码值    int ret = strcmp(&quot;hello&quot;, &quot;how&quot;);    printf(&quot;两个字符串比较结果=%d\n&quot;, ret);  //-1    //strcat拼接两个字符串    strcat(d, &quot;!&quot;); // 将字符串!拼接到d中    puts(d);  //study!    return 0;&#125;</code></pre><h3 id="四、判断回文数"><a href="#四、判断回文数" class="headerlink" title="四、判断回文数"></a>四、判断回文数</h3><p>读取一个字符串，字符串可能含有空格，将字符串逆转，原来的字符串与逆转后字符串相同，输出 0，原字符串小于逆转后字符串输出 -1，大于逆转后字符串输出 1。例如输入 hello，逆转后的字符串为 olleh，因为hello 小于 olleh，所以输出 -1。</p><pre><code class="c">#include &lt;stdio.h&gt;#include &lt;string.h&gt;int main()&#123;  char c[20], d[20];  gets(c);  int i, j;  for (i = strlen(c) - 1, j = 0; i &gt;= 0; i--, j++)  &#123;    d[j] = c[i];  &#125;  d[j] = &#39;\0&#39;;  int result = strcmp(c, d);  if (result &lt; 0)  &#123;    printf(&quot;%d\n&quot;, -1);  &#125;  else if (result &gt; 0)  &#123;    printf(&quot;%d\n&quot;, 1);  &#125;  else  &#123;    printf(&quot;%d\n&quot;, 0);  &#125;  return 0；&#125;</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> C/C++ </category>
           
       </categories>
       
