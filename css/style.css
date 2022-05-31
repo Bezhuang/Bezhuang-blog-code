@@ -2852,7 +2852,7 @@ article#tag .all-tags ul li span:before {
   margin-top: 24px;
 }
 .article h4 {
-  text-align: left;
+  text-align: center;
   color: var(--color-h4);
   margin-top: 12px;
 }
@@ -2928,7 +2928,7 @@ article#tag .all-tags ul li span:before {
 .article p {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  text-align: justify;
+  text-align: left;
   max-width: 100%;
   line-height: inherit;
 }
