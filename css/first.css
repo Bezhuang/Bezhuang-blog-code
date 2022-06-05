@@ -20,19 +20,19 @@
   box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
 }
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Microsoft YaHei';
   src: url("https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Ubuntu/Ubuntu-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
 }
 @font-face {
-  font-family: 'Monaco';
+  font-family: 'UbuntuMono';
   src: url("https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Monaco/Monaco.ttf");
   font-weight: 'normal';
   font-style: 'normal';
 }
 @font-face {
-  font-family: 'TsukushiARoundGothic';
+  font-family: 'PingFang SC';
   src: url("https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/TsukushiARoundGothic/TsukushiAMaruGothic.ttc");
   font-weight: 'normal';
   font-style: 'normal';
@@ -1329,18 +1329,21 @@ ul.list-v >li>a:hover {
 .menu-phone li ul.list-v ul {
   right: calc(100% - 0.5 * 16px);
 }
-#wrapper .m_search {
-  margin-left: auto;
-  margin-right: 16px;
+#wrapper {
+  max-width: 1080px;
+  margin: auto;
+}
+@media screen and (min-width: 2048px) {
+  #wrapper {
+    max-width: 55vw;
+  }
 }
 #wrapper .menu {
-  order: 1;
+  flex: 1 1 auto;
+  margin: 0 16px 0 0;
 }
-#wrapper .menu li ul.list-v {
-  right: 0;
-}
-#wrapper .menu li ul.list-v ul {
-  right: calc(100% - 0.5 * 16px);
+#wrapper .menu .list-v ul {
+  left: calc(100% - 0.5 * 16px);
 }
 .menu-phone {
   display: none;
@@ -1368,6 +1371,25 @@ ul.list-v >li>a:hover {
 }
 .cover-wrapper .l_header.show {
   transform: translateY(0);
+}
+.l_header {
+  max-width: 65vw;
+  left: calc((100% - 65vw) * 0.5);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+@media screen and (max-width: 2048px) {
+  .l_header {
+    max-width: 1112px;
+    left: calc((100% - 1112px) * 0.5);
+  }
+}
+@media screen and (max-width: 1112px) {
+  .l_header {
+    left: 0;
+    border-radius: 0;
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 500px) {
   .l_header .container {
