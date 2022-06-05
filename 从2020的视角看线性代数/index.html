@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN,en,default">
-  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0'>
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.1'>
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
@@ -59,14 +59,53 @@
   <script id="loadcss"></script>
 
   
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        '<h1><b>抱歉，您的浏览器无法访问本站</b></h1>'+
+        '<h3>微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>'+
+        '继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</h3><br/>'+
+        '<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support"><strong>了解详情 ></strong></a>'+
+    '</div>');
+</script>
 
-<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
 
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+	</style>
+    <div class="kill-noscript">
+        <h1><b>抱歉，您的浏览器无法访问本站</b></h1>
+        <h3>本页面需要浏览器支持（启用）JavaScript</h3><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
+    </div>
+</noscript>
 
 </head>
 
   <body>
-    <script src="https://cdn.jsdelivr.net/gh/zyoushuo/Blog/hexo/js/clicksocialist.js"></script>
     
 
 <header id="l_header" class="l_header always shadow floatable blur show"  >
@@ -378,7 +417,7 @@
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed@main/blogimg/c言语入门.png)'></div>
+            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -616,14 +655,14 @@
 </li>
 </ul>
 <h4 id="宏观视角下的线性代数"><a href="#宏观视角下的线性代数" class="headerlink" title="宏观视角下的线性代数"></a>宏观视角下的线性代数</h4><ul>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B001.png" style="zoom:67%;"></li>
+<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B001.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B001.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" style="zoom:67%;"></li>
 <li>一对子空间处于 $R_{n}$ 之中，另一对处于$R_{m}$ 当中</li>
 <li>从行空间变换为列空间——由此可知 A 是可逆的</li>
 </ul>
 <h4 id="列与行相乘（六组因式）"><a href="#列与行相乘（六组因式）" class="headerlink" title="列与行相乘（六组因式）"></a>列与行相乘（六组因式）</h4><ul>
 <li>A = BC = 秩为 1 的矩阵之和（列乘以行：外积）</li>
 <li>对矩阵相乘的全新理解（高层次），每次拿一列乘以一行是低层次的<ul>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B002.png" style="zoom:67%;"></li>
+<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B002.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B002.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" style="zoom:67%;"></li>
 </ul>
 </li>
 <li>$A=\begin{bmatrix} 2 &amp; 3 \ 4 &amp; 7 \end{bmatrix}=\begin{bmatrix} 1 &amp; 0 \ 2 &amp; 1 \end{bmatrix}\begin{bmatrix} 2 &amp; 3 \ 0 &amp; 1 \end{bmatrix}=LU$ （将矩阵拆分成上下两个三角矩阵）<ul>
@@ -634,13 +673,13 @@
 </ul>
 <h4 id="用消元来解Ax-b（因式-A-LU）"><a href="#用消元来解Ax-b（因式-A-LU）" class="headerlink" title="用消元来解Ax = b（因式 A = LU）"></a>用消元来解Ax = b（因式 A = LU）</h4><ul>
 <li>下三角矩阵 L 乘以上三角矩阵 U</li>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B003.png" style="zoom:67%;">
+<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B003.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B003.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" style="zoom:67%;">
 
 </li>
 </ul>
 <h3 id="正交向量"><a href="#正交向量" class="headerlink" title="正交向量"></a>正交向量</h3><h4 id="正交向量-–-矩阵-–-子空间"><a href="#正交向量-–-矩阵-–-子空间" class="headerlink" title="正交向量 – 矩阵 – 子空间"></a>正交向量 – 矩阵 – 子空间</h4><ul>
 <li>$X^{T}y=0,y^{T}x=0,\left( x+y\right) ^{T}\left( x+y\right)=x^{T}<em>{x}+y^{T}</em>{y}$ （直角三角形）</li>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B004.png" style="zoom:67%;"></li>
+<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B004.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B004.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" style="zoom:67%;"></li>
 <li>$Q=\dfrac{1}{3}\begin{bmatrix} -1 &amp; 2 \ 2 &amp; -1 \ 2 &amp; 2 \end{bmatrix}$ ，$Q^{T}Q=I,QQ^{T}\neq I$ ，$QQ^TQQ^T = QQ^T$</li>
 </ul>
 <h4 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h4><h3 id="特征值和特征向量"><a href="#特征值和特征向量" class="headerlink" title="特征值和特征向量"></a>特征值和特征向量</h3><h3 id="奇异值和奇异向量"><a href="#奇异值和奇异向量" class="headerlink" title="奇异值和奇异向量"></a>奇异值和奇异向量</h3>
@@ -709,7 +748,7 @@
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
           
         </a>
       
@@ -723,7 +762,7 @@
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
           
         </a>
       
@@ -737,7 +776,7 @@
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
           
         </a>
       
@@ -745,7 +784,7 @@
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a>
           <div class='target'>
             <img src="data:image/png;base64,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">
           </div>
@@ -759,7 +798,7 @@
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
           
         </a>
       
@@ -909,10 +948,18 @@
   pdata.postTitle="从 2020 年的视角看线性代数";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
-
+  // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
   l_header.classList.add("show");
+  
+  
+    // cover
+    var cover_wrapper=document.querySelector('.cover-wrapper');
+    
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
+    
   
 </script>
 
@@ -952,16 +999,54 @@
     </div>
     <div>
       <script>
+/************这个文件存放不需要重载的全局变量和全局函数*********/
 window.volantis={};
 window.volantis.loadcss=document.getElementById("loadcss");
+/******************** Pjax ********************************/
+function VPjax(){
+	this.list=[] // 存放回调函数
+	this.start=()=>{
+	  for(var i=0;i<this.list.length;i++){
+		this.list[i].run();
+	  }
+	}
+	this.push=(fn,name)=>{
+		var f=new PjaxItem(fn,name);
+		this.list.push(f);
+	}
+	// 构造一个可以run的对象
+	function PjaxItem(fn,name){
+		// 函数名称
+		this.name = name || fn.name
+		// run方法
+		this.run=()=>{
+			fn()
+		}
+	}
+}
+volantis.pjax={}
+volantis.pjax.method={
+	complete: new VPjax(),
+	error: new VPjax(),
+	send: new VPjax()
+}
+volantis.pjax={
+	...volantis.pjax,
+	push: volantis.pjax.method.complete.push,
+	error: volantis.pjax.method.error.push,
+	send: volantis.pjax.method.send.push
+}
 /********************脚本懒加载函数********************************/
+// 已经加入了setTimeout
 function loadScript(src, cb) {
-var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-var script = document.createElement('script');
-script.setAttribute('type','text/javascript');
-if (cb) script.onload = cb;
-script.setAttribute('src', src);
-HEAD.appendChild(script);
+	setTimeout(function() {
+		var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+		var script = document.createElement('script');
+		script.setAttribute('type','text/javascript');
+		if (cb) script.onload = cb;
+		script.setAttribute('src', src);
+		HEAD.appendChild(script);
+	});
 }
 //https://github.com/filamentgroup/loadCSS
 var loadCSS = function( href, before, media, attributes ){
@@ -1028,10 +1113,6 @@ var loadCSS = function( href, before, media, attributes ){
   loadCSS("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14/css/all.min.css", window.volantis.loadcss);
   
   
-  loadCSS("https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css", window.volantis.loadcss);
-  
-  
-  loadCSS("https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css", window.volantis.loadcss);
   
   
   loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
@@ -1083,13 +1164,24 @@ var loadCSS = function( href, before, media, attributes ){
   function SCload_fancybox() {
     if ($(".md .gallery").find("img").length == 0) return;
     loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
-    setTimeout(function() {
-      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
-    }, 1);
+    loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
   };
   $(function () {
     SCload_fancybox();
   });
+  function Pjax_SCload_fancybox(){
+	if (typeof $.fancybox == "undefined") {
+	 SCload_fancybox();
+    } else {
+	 pjax_fancybox();
+    }
+  }
+  volantis.pjax.push(Pjax_SCload_fancybox)
+  volantis.pjax.send(()=>{
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+  },'fancybox')
 </script>
 
 
@@ -1126,7 +1218,7 @@ var loadCSS = function( href, before, media, attributes ){
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' href=https://www.zhuangzhihao.top
+      <a class='vlts-menu fix-cursor-default ' href=https://www.zhuangzhihao.top
         
         
         
@@ -1142,7 +1234,7 @@ var loadCSS = function( href, before, media, attributes ){
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/Bezhuang/Hexo-blog
+      <a class='vlts-menu fix-cursor-default ' href=https://github.com/Bezhuang/Hexo-blog
         
         
         
@@ -1162,7 +1254,7 @@ var loadCSS = function( href, before, media, attributes ){
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' 
+      <a class='vlts-menu fix-cursor-default ' 
         
         
         
@@ -1276,18 +1368,8 @@ var loadCSS = function( href, before, media, attributes ){
           copyHref.style.display = 'none';
         }
       }
-
-      // 有音乐播放器
-      if ('false' == true && ('home,contributors,source_docs,hr,print'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
+      // 有音乐播放器 see: layout/_third-party/aplayer/script.ejs
+      
       return false; // 该行代码确保系统自带的右键菜单不会被调出
     }
     function hideMenu() {
@@ -1311,19 +1393,54 @@ var loadCSS = function( href, before, media, attributes ){
 <script>
   function loadIssuesJS() {
     if ($(".md").find(".issues-api").length == 0) return;
-    setTimeout(function() {
 	
-	  loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/issues.min.js');
+	  loadScript('/js/issues.js');
 	
-    }, 1);
   };
   $(function () {
     loadIssuesJS();
+  });
+  volantis.pjax.push(()=>{
+	if (typeof IssuesAPI == "undefined") {
+	  loadIssuesJS();
+	}
+  },"IssuesJS")
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
   });
 </script>
 
 
 
+
+  
+
+<script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 
 
 
@@ -1381,6 +1498,7 @@ var loadCSS = function( href, before, media, attributes ){
     $(function () {
         pjax_initCopyCode()
     });
+	volantis.pjax.push(pjax_initCopyCode)
 </script>
 
 
@@ -1405,6 +1523,7 @@ var loadCSS = function( href, before, media, attributes ){
 	pjax_scrollrebeal();
   }, 100)
   });
+  volantis.pjax.push(pjax_scrollrebeal)
 </script>
 
 
@@ -1414,7 +1533,7 @@ var loadCSS = function( href, before, media, attributes ){
 
   
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/valine.min.js"></script>
+<script src="/js/valine.js"></script>
 
 
 <script>
@@ -1457,7 +1576,7 @@ var loadCSS = function( href, before, media, attributes ){
   $(function () {
     pjax_valine();
   });
-  pjax_comment=pjax_valine;
+  volantis.pjax.push(pjax_valine);
 </script>
 
 
@@ -1466,8 +1585,9 @@ var loadCSS = function( href, before, media, attributes ){
   <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
 
 
+
   
-<script src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/app.min.js"></script>
+<script src="/js/app.js"></script>
 
 
 
@@ -1479,7 +1599,7 @@ const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
 
 $('.input.u-search-input').one('focus',function(){
 	
-		loadScript('https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.3.0/source/js/search/hexo.min.js',setSearchService);
+		loadScript('/js/search/hexo.js',setSearchService);
 	
 })
 
@@ -1502,35 +1622,23 @@ function setSearchService() {
 
 
 
-  
-<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
-
-  <script type="text/javascript">
-    $(function () {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
-    });
-  </script>
-
-
-
-  
-<script src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/comment_typing.js"></script>
 
 
 
 
   
-    
+
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
 
-    <script>hljs.initHighlightingOnLoad();</script>
-  
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+volantis.pjax.push(()=>{
+	document.querySelectorAll('pre code').forEach((block) => {
+	  hljs.highlightBlock(block);
+	});
+},"highlightjs")
+</script>
 
 
 
@@ -1815,8 +1923,8 @@ const toggleCustomDarkMode = () => {
 /**
  * bind click event for toggle button
  */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
 function bindToggleButton() {
-	var btn=$("#wrapper .toggle-mode-btn");
     btn.on('click',(e) => {
       const mode = toggleCustomDarkMode();
       applyCustomDarkModeSettings(mode);
@@ -1825,8 +1933,10 @@ function bindToggleButton() {
 
 applyCustomDarkModeSettings();
 document.addEventListener("DOMContentLoaded", bindToggleButton);
-document.addEventListener("pjax:success", bindToggleButton);
-
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
 </script>
 
 
@@ -1936,7 +2046,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
         elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
         selectors: [
           "title",
-          "#l_cover",
+          
           "#pjax-container",
           "#pjax-header-nav-list"
         ],
@@ -1962,9 +2072,7 @@ document.addEventListener("pjax:success", listennSidebarTOC);
       } catch (error) {}
 
       window.subData = null; // 移除标题（用于一二级导航栏切换处）
-      if (typeof $.fancybox != "undefined") {
-        $.fancybox.close();    // 关闭弹窗
-      }
+
       volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
       volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
       volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
@@ -1977,61 +2085,27 @@ document.addEventListener("pjax:success", listennSidebarTOC);
       $(document).unbind('scroll');
       $(document).unbind('click');
       $('body').unbind('click');
-      
-      $("#wrapper .toggle-mode-btn").unbind('click');
-      
-	  
+	  // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.send.start();
     });
 
     document.addEventListener('pjax:complete', function () {
-      // 关于百度统计对 SPA 页面的处理：
-      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
-      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
-       
-
-      // 关于谷歌统计对 SPA 页面的处理：
-      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
-      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
-      
-
-
       $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
       $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
       $('script[data-pjax], .pjax-reload script').each(function () {
         $(this).parent().append($(this).remove());
       });
       try{
-          if (typeof $.fancybox == "undefined") {
-            SCload_fancybox();
-          } else {
-            pjax_fancybox();
-          }
-        
-        
-        document.querySelectorAll('pre code').forEach((block) => {
-          hljs.highlightBlock(block);
-        });
-        
-        
-          pjax_scrollrebeal();
-        
-        if (typeof IssuesAPI == "undefined") {
-          loadIssuesJS();
-        }
-        
-          pjax_initCopyCode();
-        
-		
-          try{pjax_comment();} catch (e) {}
-        
+		// 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+		volantis.pjax.method.complete.start();
       } catch (e) {
         console.log(e);
       }
-	  
     });
 
     document.addEventListener('pjax:error', function (e) {
-	  
+	  // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+	  volantis.pjax.method.error.start();
       window.location.href = e.triggerElement.href;
     });
 </script>
@@ -2040,10 +2114,3 @@ document.addEventListener("pjax:success", listennSidebarTOC);
     </div>
   </body>
 </html>
-<!--单击显示文字-->
-<script type="text/javascript" src="/js/click_show_text.js"></script>
-<!--浏览器搞笑标题-->
-<!--<script type="text/javascript" src="/js/FunnyTitle.js"></script>-->
-<!-- 数字雨 -->
-<canvas id="canvas" width="1440" height="900" ></canvas>
-<script type="text/javascript" src="/js/DigitalRain.js"></script>

@@ -17,19 +17,19 @@
   box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
 }
 @font-face {
-  font-family: 'Microsoft YaHei';
+  font-family: 'STKaiti';
   src: url("https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Ubuntu/Ubuntu-Regular.ttf");
   font-weight: 'normal';
   font-style: 'normal';
 }
 @font-face {
-  font-family: 'UbuntuMono';
+  font-family: 'Space Mono';
   src: url("https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/Monaco/Monaco.ttf");
   font-weight: 'normal';
   font-style: 'normal';
 }
 @font-face {
-  font-family: 'PingFang SC';
+  font-family: 'TsukushiARoundGothic';
   src: url("https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@21.2.19/TsukushiARoundGothic/TsukushiAMaruGothic.ttc");
   font-weight: 'normal';
   font-style: 'normal';
@@ -1317,7 +1317,7 @@ p.p.logo {
 }
 span.p.code,
 p.p.code {
-  font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+  font-family: Space Mono, Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
 }
 span.p.left,
 p.p.left {
@@ -1747,7 +1747,7 @@ pre {
   display: block;
   background: var(--color-block);
   font-size: 1rem;
-  font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+  font-family: Space Mono, Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
   border-radius: 8px;
   line-height: 1.5;
   -webkit-font-smoothing: auto;
@@ -2095,7 +2095,7 @@ pre {
   color: #e24f5a;
 }
 .article mjx-container {
-  font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+  font-family: Space Mono, Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
   padding: 16px 8px;
   border-radius: 8px;
   min-width: 0 !important;
@@ -2257,7 +2257,7 @@ div.fancybox .image-caption:empty {
   -webkit-user-select: none;
   user-select: none;
   -webkit-appearance: none;
-  font-family: Menlo, Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+  font-family: Menlo, Space Mono, Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
   font-size: 11px;
   font-weight: bold;
   padding: 4px 8px;
@@ -2498,7 +2498,7 @@ article#comments #valine_container .vcards .vcontent blockquote {
 }
 article#comments #valine_container .vcards .vcontent code {
   color: var(--color-p);
-  font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+  font-family: Space Mono, Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
 }
 article#comments #valine_container .vcards .vcontent pre {
   background: var(--color-codeblock);
@@ -2994,7 +2994,7 @@ article#tag .all-tags ul li span:before {
   overflow: auto;
   background: var(--color-codeblock);
   font-size: 1rem;
-  font-family: Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
+  font-family: Space Mono, Menlo, UbuntuMono, Monaco, monospace, courier, sans-serif;
   border: 1px solid #a8b5bc;
   padding: 16px;
   border-radius: 8px;
@@ -3012,7 +3012,7 @@ article#tag .all-tags ul li span:before {
   color: rgba(68,68,68,0.9);
 }
 .article code {
-  font-family: "Ubuntu", "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-family: "STKaiti", "Ubuntu", "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
 }
 .article code:not([class]) {
   word-break: break-all;
