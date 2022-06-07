@@ -246,16 +246,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
                     
-                      
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fas fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-                    
                   </ul>
                 
               </li>
@@ -388,16 +378,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
                     
-                      
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fas fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-                    
                   </ul>
                 
               </li>
@@ -418,7 +398,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
+            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -910,7 +890,7 @@ IntelliJ IDEA 被公认为是最好的 Java 开发工具之一，尤其在智能
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
           
         </a>
       
@@ -924,7 +904,7 @@ IntelliJ IDEA 被公认为是最好的 Java 开发工具之一，尤其在智能
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
           
         </a>
       
@@ -938,7 +918,7 @@ IntelliJ IDEA 被公认为是最好的 Java 开发工具之一，尤其在智能
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
           
         </a>
       
@@ -946,7 +926,7 @@ IntelliJ IDEA 被公认为是最好的 Java 开发工具之一，尤其在智能
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC+klEQVR42u3aQXLDMAgF0Nz/0u0B2kz0AWdC/LSLY0viacOAHj/Gv+OBAAwYMGDAgFkD8yiOPxM++f/0ebru6T7iecGAAQMGDBgw62COE6AX758GdBpw93caDxgwYMCAAQNmL0x34y8XLgZSTfzi98GAAQMGDBgwt4OpFrKmwMGAAQMGDBgwYKYTvKkGWdrgAwMGDBgwYMDcDyZuUIUXe7oJWrch+LZOJBgwYMCAAQPmbTDpuOqiz9TvcjxgwIABAwYMmDUw3VFN7F5BnxaspgcYMGDAgAEDZg9MNUFKA642ytJCVHX/YMCAAQMGDJi9MPEEYaNtKqBT+PKBgAEDBgwYMGDWwEw33qYSvPS7U6jjBA8MGDBgwIAB8/Ew1cJTNZGrft/dz/HBgQEDBgwYMGC+DqaaUHUvEF1VUBtL8MCAAQMGDBgwHwPTTdCqjbZuISs90KfvgQEDBgwYMGDWwHQnThtc1e/jRK26fzBgwIABAwbMOpjTgKqJYTfAamEq/h4MGDBgwIAB83UwaSGpW1iaKmzFBwwGDBgwYMCAWQdzCpIWnLoNt2rg6X7BgAEDBgwYMPtguoWjNODqumniVz5QMGDAgAEDBswamKsLU6eJWrvAFK4PBgwYMGDAgPkemKkAqxd3psCqBwsGDBgwYMCA2QdTXTB9L22wpQ207jxgwIABAwYMmL0wxw2p4gbKCVdzP/F7YMCAAQMGDJj1MN0Eq9pw615YqiaYYMCAAQMGDJj9MClImkB1G2NTjb6nz8GAAQMGDBgwa2C647RANBVo2vBLE0owYMCAAQMGzB6YR3GkBaH0/3R/3cIbGDBgwIABA2YvzFTD6hTg6gtKYwkeGDBgwIABA2YNTDWB6iaK1QtB0+uBAQMGDBgwYO4Hc3UiWG3kxRejwIABAwYMGDC3hZkuII0FfLovMGDAgAEDBsxamLThdvXzU4jqwYIBAwYMGDBg9sN0G1fpBtPEa3re44YbGDBgwIABA+ZjYQwwYMCAAQMGzLLxC0PqYrtEXE67AAAAAElFTkSuQmCC">
           </div>
@@ -960,7 +940,7 @@ IntelliJ IDEA 被公认为是最好的 Java 开发工具之一，尤其在智能
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
           
         </a>
       
@@ -1518,39 +1498,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
-
-
-
-
-  
-
-<script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-
 
 
 
@@ -1960,93 +1907,6 @@ volantis.pjax.push(()=>{
 </script>
 
 
-
-
-  <script>
-const rootElement = document.documentElement;
-const darkModeStorageKey = "user-color-scheme";
-const rootElementDarkModeAttributeName = "data-user-color-scheme";
-
-const setLS = (k, v) => {
-    localStorage.setItem(k, v);
-};
-
-const removeLS = (k) => {
-    localStorage.removeItem(k);
-};
-
-const getLS = (k) => {
-    return localStorage.getItem(k);
-};
-
-const getModeFromCSSMediaQuery = () => {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-};
-
-const resetRootDarkModeAttributeAndLS = () => {
-  rootElement.removeAttribute(rootElementDarkModeAttributeName);
-  removeLS(darkModeStorageKey);
-};
-
-const validColorModeKeys = {
-  dark: true,
-  light: true,
-};
-
-const applyCustomDarkModeSettings = (mode) => {
-  const currentSetting = mode || getLS(darkModeStorageKey);
-
-  if (currentSetting === getModeFromCSSMediaQuery()) {
-    resetRootDarkModeAttributeAndLS();
-  } else if (validColorModeKeys[currentSetting]) {
-    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
-  } else {
-    resetRootDarkModeAttributeAndLS();
-  }
-};
-
-const invertDarkModeObj = {
-  dark: "light",
-  light: "dark",
-};
-
-/**
- * get target mode
- */
-const toggleCustomDarkMode = () => {
-  let currentSetting = getLS(darkModeStorageKey);
-
-  if (validColorModeKeys[currentSetting]) {
-    currentSetting = invertDarkModeObj[currentSetting];
-  } else if (currentSetting === null) {
-    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
-  } else {
-    return;
-  }
-  setLS(darkModeStorageKey, currentSetting);
-  return currentSetting;
-};
-
-/**
- * bind click event for toggle button
- */
-var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
-function bindToggleButton() {
-    btn.on('click',(e) => {
-      const mode = toggleCustomDarkMode();
-      applyCustomDarkModeSettings(mode);
-    });
-}
-
-applyCustomDarkModeSettings();
-document.addEventListener("DOMContentLoaded", bindToggleButton);
-volantis.pjax.push(bindToggleButton);
-volantis.pjax.send(()=>{
-	btn.unbind('click');
-},'toggle-mode-btn-unbind');
-</script>
 
 
 

@@ -246,16 +246,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
                     
-                      
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fas fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-                    
                   </ul>
                 
               </li>
@@ -388,16 +378,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
                     
-                      
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fas fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-                    
                   </ul>
                 
               </li>
@@ -418,7 +398,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
+            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -906,7 +886,7 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
           
         </a>
       
@@ -920,7 +900,7 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
           
         </a>
       
@@ -934,7 +914,7 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
           
         </a>
       
@@ -942,7 +922,7 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADvklEQVR42u3aQZLbMAwEQP//08k9W1vCAJBMO82bypZENC9jwK8/Vmu9EIADBw6cBQ7cIXCv5vrxwPB7v27sn8/T6+rzuvWCAwcOHDhw4MCdBlcOgDdttPqe6n6n9/9aDzhw4MCBAwcO3KFwlwGweN0NrlPg7v7L3wcHDhw4cODAgfsyuPQ5KUA3YK9DgwMHDhw4cODA/SdwVwE3HWxvHQg4cODAgQMHDty3wcUD2ibctNCr+9N9PT7JBwcOHDhw4MCBW4JLV7fQU67b9YIDBw4cOHDgwB0CN13VQJwG4fS93UZn/F5w4MCBAwcOHLhD4LoBsQuaNjpfw1WFLR84OHDgwIEDBw7cIXBbg9x0AD39g+DV89KgXT5YcODAgQMHDhy4w+CqG9geUD8VgLv7KA+kwYEDBw4cOHDgHobbLjQNpNsBtR1sq41VcODAgQMHDhy4w+GqQXRaSPf+NPh2gz04cODAgQMHDtypcN2BbjXYThuP0yC9dVDgwIEDBw4cOHCnwVUbkVeFVAtOv5cWOg327YE0OHDgwIEDBw7cw3DTjVYL32qUTgN6egA/ngsOHDhw4MCBA3c43FbDcvuAtg8ubZCCAwcOHDhw4MCdAtcd2KaNyvS+7vUU9tIFHDhw4MCBAwfuMLg06HbvrwbnboMy/eNi3HAFBw4cOHDgwIH7ULitAtKNd+9LG6aXBwUOHDhw4MCBA3cI3DTwphudwm7d1x5ogwMHDhw4cODAHQJXvqEZWLvPuauhmg62L385gAMHDhw4cODAHQr31OD4rgZq96DLA2lw4MCBAwcOHLg3waWBsAvaLXAazLuDbnDgwIEDBw4cuE+B676wW8jWwLobfNvBGBw4cODAgQMH7hC4uxqVaeMxhU4HymnA/3Uf4MCBAwcOHDhwh8FtB9+txmU32G4F5fVJPjhw4MCBAwcO3E1wU6hpkN0aPHeDOThw4MCBAwcO3KfCdQuvQk/flwbsNAhfXoMDBw4cOHDgwB0CN13pYDhtmHYL3G7UggMHDhw4cODAnQb3aq67AuxWcO42LONfDuDAgQMHDhw4cG+G2w681YFwtxGZvj/dXzkAgwMHDhw4cODAHQLXbSCmhU3/uPh6eIEDBw4cOHDgwH0rXDoY3gLrBupugAYHDhw4cODAgfs2uHTwnAbgrcKrjdrHfzmAAwcOHDhw4MAN4dKB9BQ0LaA8OB4G5TgAgwMHDhw4cODAvQmuPaBtBtLue7Yg1gbS4MCBAwcOHDhwb4KzsgUOHDhw4Cxw4N68/gJDjH+mcqLdYgAAAABJRU5ErkJggg==">
           </div>
@@ -956,7 +936,7 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
           
         </a>
       
@@ -1514,39 +1494,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
-
-
-
-
-  
-
-<script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-
 
 
 
@@ -1956,93 +1903,6 @@ volantis.pjax.push(()=>{
 </script>
 
 
-
-
-  <script>
-const rootElement = document.documentElement;
-const darkModeStorageKey = "user-color-scheme";
-const rootElementDarkModeAttributeName = "data-user-color-scheme";
-
-const setLS = (k, v) => {
-    localStorage.setItem(k, v);
-};
-
-const removeLS = (k) => {
-    localStorage.removeItem(k);
-};
-
-const getLS = (k) => {
-    return localStorage.getItem(k);
-};
-
-const getModeFromCSSMediaQuery = () => {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-};
-
-const resetRootDarkModeAttributeAndLS = () => {
-  rootElement.removeAttribute(rootElementDarkModeAttributeName);
-  removeLS(darkModeStorageKey);
-};
-
-const validColorModeKeys = {
-  dark: true,
-  light: true,
-};
-
-const applyCustomDarkModeSettings = (mode) => {
-  const currentSetting = mode || getLS(darkModeStorageKey);
-
-  if (currentSetting === getModeFromCSSMediaQuery()) {
-    resetRootDarkModeAttributeAndLS();
-  } else if (validColorModeKeys[currentSetting]) {
-    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
-  } else {
-    resetRootDarkModeAttributeAndLS();
-  }
-};
-
-const invertDarkModeObj = {
-  dark: "light",
-  light: "dark",
-};
-
-/**
- * get target mode
- */
-const toggleCustomDarkMode = () => {
-  let currentSetting = getLS(darkModeStorageKey);
-
-  if (validColorModeKeys[currentSetting]) {
-    currentSetting = invertDarkModeObj[currentSetting];
-  } else if (currentSetting === null) {
-    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
-  } else {
-    return;
-  }
-  setLS(darkModeStorageKey, currentSetting);
-  return currentSetting;
-};
-
-/**
- * bind click event for toggle button
- */
-var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
-function bindToggleButton() {
-    btn.on('click',(e) => {
-      const mode = toggleCustomDarkMode();
-      applyCustomDarkModeSettings(mode);
-    });
-}
-
-applyCustomDarkModeSettings();
-document.addEventListener("DOMContentLoaded", bindToggleButton);
-volantis.pjax.push(bindToggleButton);
-volantis.pjax.send(()=>{
-	btn.unbind('click');
-},'toggle-mode-btn-unbind');
-</script>
 
 
 

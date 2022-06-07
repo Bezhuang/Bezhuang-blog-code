@@ -247,16 +247,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
                     
-                      
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fas fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-                    
                   </ul>
                 
               </li>
@@ -389,16 +379,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
                     
-                      
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fas fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-                    
                   </ul>
                 
               </li>
@@ -419,7 +399,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg lazyload placeholder' data-bg="https://wallpapercave.com/wp/wp10474992.png"></div>
+            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -663,7 +643,7 @@ public:
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
           
         </a>
       
@@ -677,7 +657,7 @@ public:
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
           
         </a>
       
@@ -691,7 +671,7 @@ public:
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
           
         </a>
       
@@ -699,7 +679,7 @@ public:
       
         
         <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="></a>
+          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
           <div class='target'>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFHUlEQVR42u3aQXLjMAwEwPz/07sPSLlEzIB2XNW82bEoqqHLBPj5Z31k/SAAD94CD94CD95agP8J168NX/z91e/HBy73OT3/0/etF3jw4MGDBw8ePHjwm/AtwBP804NPHzSFSMG3vMCDBw8ePHjw4MGDvwF/+qBtIZ5+P73vtCDtOeNzgwcPHjx48ODBgwf/B+HThsX0freCWHse8ODBgwcPHjx48OC/EX4rSLWNjvbFAQ8ePHjw4MGDBw/+m+DHAzqXQKaFbQvaDnS9fZIMPHjw4MGDBw8ePPhgtYNG3/459gIPHjx48ODBgwcPfgG+XWnAOQ0i7f5PgSq9PvYCDx48ePDgwYMHD34Bvm1sPIFMA8nTPi1M2nDZOg948ODBgwcPHjx48Bvw043TADO9PgWYBqS2UGuNEPDgwYMHDx48ePDgg4Gm7Ru2ASaFSc8zHeBKHcCDBw8ePHjw4MGD34S/3WiYBqCt608h2wKf7gcePHjw4MGDBw8e/AZ8GgzShsc00EwD3daL0QK/LBh48ODBgwcPHjx48Bfhp98/HSw9eBvQthoe7f7gwYMHDx48ePDgwW/Ct4M/W2BpALvVyLkWEMGDBw8ePHjw4MGDfwP8dmHSwaNpAdOglz738Wfw4MGDBw8ePHjw4C/Cbw8QTRsm6e/SArQNmWMP8ODBgwcPHjx48OAvwMcblo2DaeHb891+wcYBCjx48ODBgwcPHjz4AXwaPNKgk+6f3j8FO/UZN07AgwcPHjx48ODBg1+cj28bE20jY6vBMi3E9MVIvwcPHjx48ODBgwcPfhP+VpBpB4O2g1TbeEmf+7ERAh48ePDgwYMHDx78RfhbQWZ68LgBURYqfX7w4MGDBw8ePHjw4G/Abzc0TgPSNlBayNufjztQ4MGDBw8ePHjw4MEvwG8FmOnfb0G2DZQ2QIIHDx48ePDgwYMH/w74rYGiNHBtD1TFA0hLA1XgwYMHDx48ePDgwW/CT2+cNkq2A85xYAkLtdUQ+vUZPHjw4MGDBw8ePPgF+PYBTx9gqzDT/aeQKXTcCAEPHjx48ODBgwcPvoBPwbYO2v6uBUkbJ3WAAg8ePHjw4MGDBw/+InzbAJl+nxby9NzTINg+N3jw4MGDBw8ePHjwN+DTg00Hi24Hta0glj7n4/OBBw8ePHjw4MGDB78APw04aTBqGx9tMNoKSLUTePDgwYMHDx48ePAL8NODnYK1wWRa6K2Bp+n14yAJHjx48ODBgwcPHvwH4FvIFDx9MdYbGWHBwYMHDx48ePDgwYP/JPytADNtuKSFSRslbaAEDx48ePDgwYMHD34TfusG7XVt4yMdwJq+UHXABA8ePHjw4MGDBw9+ET4dSNqCToPN1iBU3eAADx48ePDgwYMHD/6N8GnASB94Cp3eL73/tLDjBhF48ODBgwcPHjx48Avw7WobG9PAM/17GrjaAFd3oMCDBw8ePHjw4MGDP/h//HRNIbb2Ow0+bQHigPT0IoEHDx48ePDgwYMHvwg/PfD0+rbxMN03hdwKUODBgwcPHjx48ODBvxN+O0CkA0/tfrcg64KCBw8ePHjw4MGDB/+H4dPBpjSond63/V0a4MCDBw8ePHjw4MGD/yb4W9BbhZ8GuPRFAA8ePHjw4MGDBw/+Jvz0QVvQ04CVFmD6fFuDUy/3AQ8ePHjw4MGDBw9+EX59cGdpcKhtRJy+IOmLNt0fPHjw4MGDBw8ePPgNeOu9Czx48BZ48BZ48Fax/gNw8LEDkA98RAAAAABJRU5ErkJggg==">
           </div>
@@ -713,7 +693,7 @@ public:
           
           >
           
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
           
         </a>
       
@@ -1271,39 +1251,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
-
-
-
-
-  
-
-<script async src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-
 
 
 
@@ -1713,93 +1660,6 @@ volantis.pjax.push(()=>{
 </script>
 
 
-
-
-  <script>
-const rootElement = document.documentElement;
-const darkModeStorageKey = "user-color-scheme";
-const rootElementDarkModeAttributeName = "data-user-color-scheme";
-
-const setLS = (k, v) => {
-    localStorage.setItem(k, v);
-};
-
-const removeLS = (k) => {
-    localStorage.removeItem(k);
-};
-
-const getLS = (k) => {
-    return localStorage.getItem(k);
-};
-
-const getModeFromCSSMediaQuery = () => {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-};
-
-const resetRootDarkModeAttributeAndLS = () => {
-  rootElement.removeAttribute(rootElementDarkModeAttributeName);
-  removeLS(darkModeStorageKey);
-};
-
-const validColorModeKeys = {
-  dark: true,
-  light: true,
-};
-
-const applyCustomDarkModeSettings = (mode) => {
-  const currentSetting = mode || getLS(darkModeStorageKey);
-
-  if (currentSetting === getModeFromCSSMediaQuery()) {
-    resetRootDarkModeAttributeAndLS();
-  } else if (validColorModeKeys[currentSetting]) {
-    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
-  } else {
-    resetRootDarkModeAttributeAndLS();
-  }
-};
-
-const invertDarkModeObj = {
-  dark: "light",
-  light: "dark",
-};
-
-/**
- * get target mode
- */
-const toggleCustomDarkMode = () => {
-  let currentSetting = getLS(darkModeStorageKey);
-
-  if (validColorModeKeys[currentSetting]) {
-    currentSetting = invertDarkModeObj[currentSetting];
-  } else if (currentSetting === null) {
-    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
-  } else {
-    return;
-  }
-  setLS(darkModeStorageKey, currentSetting);
-  return currentSetting;
-};
-
-/**
- * bind click event for toggle button
- */
-var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
-function bindToggleButton() {
-    btn.on('click',(e) => {
-      const mode = toggleCustomDarkMode();
-      applyCustomDarkModeSettings(mode);
-    });
-}
-
-applyCustomDarkModeSettings();
-document.addEventListener("DOMContentLoaded", bindToggleButton);
-volantis.pjax.push(bindToggleButton);
-volantis.pjax.send(()=>{
-	btn.unbind('click');
-},'toggle-mode-btn-unbind');
-</script>
 
 
 
