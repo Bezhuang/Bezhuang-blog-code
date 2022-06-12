@@ -108,7 +108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -232,16 +232,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -364,16 +374,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -397,7 +417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -420,36 +440,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -483,6 +473,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/">计算机科学与技术</a>
+    </a>
+  </div>
+
 
           
         
@@ -524,8 +521,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av21376839/">计算机科学速成课程</a>的授课老师是英国树莓派基金会教育部长Carrie Anne，她以入门级大学教材和 AP 计算机科学原理指南为基础，在短短40节课中概述了计算机的历史、设计决策、编程和软件的基本要素、硬件的基本组件及其作用，对新手小白可以说是非常友好了。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、计算机的早期历史和电子计算机"><a href="#一、计算机的早期历史和电子计算机" class="headerlink" title="一、计算机的早期历史和电子计算机"></a>一、计算机的早期历史和电子计算机</h3><p>最早的计算设备是算盘，其次是步进计算器，差分机，分析机，打孔卡片制表机。步进计算器是第一个可以做加减乘除的机器，Charles Babbage 提出了“差分机”，在构造差分机期间，想出了分析机, 分析机是通用计算机。</p>
 <p>Ada Lovelace 给分析机写了假想程序，因此成为了第一位程序员，后来 Herman Hollerith 的打孔卡片制表机又大大提升了人口普查效率。</p>
 <p>电子计算机组成核心最初由继电器组成。继电器一秒最多 50 次开关，bug 原指继电器上的虫子。</p>
@@ -585,9 +581,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>软盘（Floppy Disk）、光盘（Compact Disk）、固态硬盘（Solid State Drives）。</p>
 <p>文件格式：可以随便存文件数据，但按格式存会更方便。</p>
 <ul>
-<li>  TXT 文本文件：ASCII。</li>
-<li>  WAV 音频文件：每秒上千次的音频采样数字。</li>
-<li>  BMP 图片文件：像素的红绿蓝 RGB 值。</li>
+<li>TXT 文本文件：ASCII。</li>
+<li>WAV 音频文件：每秒上千次的音频采样数字。</li>
+<li>BMP 图片文件：像素的红绿蓝 RGB 值。</li>
 </ul>
 <p>文件系统：很早期时空间小，整个存储器就像一整个文件。后来随容量增长，多文件非常必要。</p>
 <p>目录文件：用来解决多文件问题，存其他文件的信息，比如开头，结尾，创建时间等。</p>
@@ -694,7 +690,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -719,6 +715,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/>http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -734,13 +734,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/">计算机科学与技术</a>
-    </a>
-  </div>
-
 
         
       
@@ -757,77 +750,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/&title=计算机科学速成课 - Bezhuang's Blog&summary=
-计算机科学速成课程的授课老师是英国树莓派基金会教育部长Carrie Anne，她以入门级大学教材和 AP 计算机科学原理指南为基础，在短短40节课中概述了计算机的历史、设计决策、编程和软件的基本要素、硬件的基本组件及其作用，对新手小白可以说是非常友好了。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/&title=计算机科学速成课 - Bezhuang's Blog&summary=
-计算机科学速成课程的授课老师是英国树莓派基金会教育部长Carrie Anne，她以入门级大学教材和 AP 计算机科学原理指南为基础，在短短40节课中概述了计算机的历史、设计决策、编程和软件的基本要素、硬件的基本组件及其作用，对新手小白可以说是非常友好了。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/&title=计算机科学速成课 - Bezhuang's Blog&summary=
-计算机科学速成课程的授课老师是英国树莓派基金会教育部长Carrie Anne，她以入门级大学教材和 AP 计算机科学原理指南为基础，在短短40节课中概述了计算机的历史、设计决策、编程和软件的基本要素、硬件的基本组件及其作用，对新手小白可以说是非常友好了。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFFUlEQVR42u3bQW4jMQwEwPz/09kHLAyLzdbYCEo3x+ORVNKll9yfX+Mj4wcBePAGePAGePBGAf4nHP+98MX3p797udAX73v3/On60/lTL/DgwYMHDx48ePDgm/DHAeAQ8PSA0udOD3j6Of378cGBBw8ePHjw4MGDB38B/nbgaP/99Pv04NNABR48ePDgwYMHDx78X4JPA1FagImDTmmd4MGDBw8ePHjw4MF/M/wp1LRAsW4gKs0DHjx48ODBgwcPHvw3w2+DxjbwpAfYmjdt6Hq8kww8ePDgwYMHDx48+AcCyl/7HHuBBw8ePHjw4MGDB1+Af2pMg1Crger3ywZ48ODBgwcPHjx48A34d4WDtJAwBZsWOm4VPtLgCB48ePDgwYMHDx78J+CnE9QWUt7Y6b62ATAuFIEHDx48ePDgwYMHX4BPCxWnB7KFnjYYnc63BZ2uDzx48ODBgwcPHjz4G/DbF04LHu3/EDENhO3Ad3zBwIMHDx48ePDgwYN/AP42wLaAsT2w6UFtCyzgwYMHDx48ePDgwTfga//AHwalbbBpFV7SAg948ODBgwcPHjx48J+Any50G3zSgHMrOG1hx07gwYMHDx48ePDgwRfhpwEmLXRsg8k2qG0D2/TgwIMHDx48ePDgwYN/Ej5t5Em/b83Ten5bWHl5QODBgwcPHjx48ODBF+GnBYC0IHErQE1h0s9pAxh48ODBgwcPHjx48E34bSBIN5weyBY4HWngexmgwIMHDx48ePDgwYMvwqfBabrAbSGiXYCZBqL0goEHDx48ePDgwYMH34SfFja2DUXtsQZZOhxfEPDgwYMHDx48ePDgC/DTgJQ+l8JMCyZpINru/3h94MGDBw8ePHjw4MEX4FuBZNsY1Co4tAoerYAGHjx48ODBgwcPHvwN+LSBaLqhbZBKg870ve2gBR48ePDgwYMHDx78Dfjpi08DRvv72w1QrUasd+8FDx48ePDgwYMHD74B3ypInAaLVjC6FfTSixh3koEHDx48ePDgwYMHX4BPg8JvOG4VMrbrns5z/Dvw4MGDBw8ePHjw4B+Ab4O1gs8WfFsASgMdePDgwYMHDx48ePAN+G1w2QaMNOhsYdMLl+4PPHjw4MGDBw8ePPgb8NsGphTkdvBJDzANfseFEPDgwYMHDx48ePDgH4RPD2rbuNRa57YQs3YBDx48ePDgwYMHD74IP23QSQsl06C0PdBWYafW6AQePHjw4MGDBw8efAE+Xei2IHHr99sLMoY8fA48ePDgwYMHDx48+Cb8NhCcbngK83QQWoNuK1DgwYMHDx48ePDgwQ/gW6DbQDaFuQW4LXy8LeSABw8ePHjw4MGDB1+E305wPPFy4WmhJm20ah0cePDgwYMHDx48ePBN+BQ2BdgewHZMoafvBQ8ePHjw4MGDBw/+CfjtuB1UphvbFkqmhZ9pwAIPHjx48ODBgwcPvgG/DSJpENse3O2CzLWLBB48ePDgwYMHDx58Ef5WYGoHsrRgsg1g1wIUePDgwYMHDx48ePAF+NPgcQq2DTxPNTC153vpAh48ePDgwYMHDx78F8CfBoj0fekFmAaodB8fC1DgwYMHDx48ePDgwRcDVGvj9eBy+Nx0P+MgBx48ePDgwYMHDx78Bfhpw1HasNQKVNsAt25QagUo8ODBgwcPHjx48OAD+NuNQtMgkwab1j62F+Hl+sGDBw8ePHjw4MGDL8Abzw7w4MEb4MEb4MEbi/EPw0gpCol3QpoAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/&text=计算机科学速成课 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -946,17 +868,9 @@ Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个�
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1082,8 +996,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1439,29 +1351,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1500,7 +1389,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1560,20 +1449,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1786,6 +1661,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

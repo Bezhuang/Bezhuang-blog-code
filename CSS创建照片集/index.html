@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
+    </a>
+  </div>
 
 
           
@@ -506,7 +500,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：185字</p>
+      <p>字数：189字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -529,51 +523,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>freeCodeCamp 响应式网页设计的认证课程第六章。通过弹性盒子你可以设计适应不同屏幕大小的网页。在通过创建照片集来学习 CSS 弹性盒子的课程中，使用弹性盒子创建一个响应式的照片集网页。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、重点-CSS-代码"><a href="#一、重点-CSS-代码" class="headerlink" title="一、重点 CSS 代码"></a>一、重点 CSS 代码</h3><p><code>*</code> selector：</p>
-<pre><code class="CSS">* &#123;
-    box-sizing: border-box;
-&#125;
-body &#123;
-    margin: 0;
-    font-family: Arial;
-    background: #EBE7E7;
-&#125;
-.header &#123;
-    text-align: center;
-    padding: 32px;
-    background: #E0DDDD;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: Arial;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#EBE7E7</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.header</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">32px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#E0DDDD</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>id selector：</p>
-<pre><code class="css">#gallery img &#123;
-    width: 25%;
-    height: 300px;
-    object-fit: cover;
-    margin-top: 8px;
-    padding: 0 4px;
-    border-radius: 10px;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#gallery</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">25%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">object-fit</span>: cover;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">8px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>CSS Flexbox：</p>
-<pre><code class="CSS">#gallery &#123;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0 4px;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#gallery</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: row;</span><br><span class="line">    <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">    <span class="attribute">justify-content</span>: center;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">4px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>media query：</p>
-<pre><code class="CSS">@media (max-width: 800px) &#123;
-    #gallery img &#123;
-        width: 50%;
-    &#125;
-&#125;
-@media (max-width: 600px) &#123;
-    #gallery img &#123;
-        width: 100%;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">max-width</span>: <span class="number">800px</span>) &#123;</span><br><span class="line">    <span class="selector-id">#gallery</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">max-width</span>: <span class="number">600px</span>) &#123;</span><br><span class="line">    <span class="selector-id">#gallery</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="二、页面展示"><a href="#二、页面展示" class="headerlink" title="二、页面展示"></a>二、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="https://free-code-camp-demo.vercel.app/通过创建照片集来学习CSS弹性盒子/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
 </div>
@@ -588,7 +546,7 @@ body &#123;
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -613,6 +571,10 @@ body &#123;
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/CSS%E5%88%9B%E5%BB%BA%E7%85%A7%E7%89%87%E9%9B%86/>http://blog.zhuangzhihao.top/CSS%E5%88%9B%E5%BB%BA%E7%85%A7%E7%89%87%E9%9B%86/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -628,12 +590,8 @@ body &#123;
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
 
 
         
@@ -651,77 +609,6 @@ body &#123;
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/CSS%E5%88%9B%E5%BB%BA%E7%85%A7%E7%89%87%E9%9B%86/&title=通过创建照片集来学习 CSS 弹性盒子 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第六章。通过弹性盒子你可以设计适应不同屏幕大小的网页。在通过创建照片集来学习 CSS 弹性盒子的课程中，使用弹性盒子创建一个响应式的照片集网页。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/CSS%E5%88%9B%E5%BB%BA%E7%85%A7%E7%89%87%E9%9B%86/&title=通过创建照片集来学习 CSS 弹性盒子 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第六章。通过弹性盒子你可以设计适应不同屏幕大小的网页。在通过创建照片集来学习 CSS 弹性盒子的课程中，使用弹性盒子创建一个响应式的照片集网页。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/CSS%E5%88%9B%E5%BB%BA%E7%85%A7%E7%89%87%E9%9B%86/&title=通过创建照片集来学习 CSS 弹性盒子 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第六章。通过弹性盒子你可以设计适应不同屏幕大小的网页。在通过创建照片集来学习 CSS 弹性盒子的课程中，使用弹性盒子创建一个响应式的照片集网页。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEaElEQVR42u3aQXIbMQwEQP//08o9VSpxABBrJc1bXNKa2/ABmODn5Vw5PwjAgnXAggXrgF2B/Smev7//7nmnPz993q17jXmABQsWLFiwYMGCXYU9boDffP7056cgpy/yCe60gFMeYMGCBQsWLFiwYJ+BTRvvTy/YBZ8qzGkhuh5gwYIFCxYsWLBgvwO2G1ynBUsb+VNosGDBggULFixYsP8nbDc4rgbYXdhfPyCABQsWLFiwYMGCvbKwUV246A4a1eD6azZhwIIFCxYsWLBgwR7BboF8y7/LHmDBggULFixYsGBXYLunGwyngfnpAkb6uTEPsGDBggULFixYsCuwpwHy9EAxFZBvBfKnhQELFixYsGDBggW7A5teqNvoVxcsunDVe4MFCxYsWLBgwYL9nbDdxv4ULh0Mqo19NxhvB/1gwYIFCxYsWLBgV2HTRYfqYJE29N2BYqvAYMGCBQsWLFiwYJ+BTRvpagBeBZn63tRA9PbnYMGCBQsWLFiwYB+B7S5OVBv+tEGvNvbp74/vCRYsWLBgwYIFC/YR2CpUGmRXA+1uo98dbNpBN1iwYMGCBQsWLNgR2O6iRhV0KohuQwwPSGDBggULFixYsGB3YKsvWv3crcGjWqDu7ykvbIAFCxYsWLBgwYJtwXYb9PTiaRA91fBPFWos6AYLFixYsGDBggXbgq023GlQfBpMn0JOB+NjgwRYsGDBggULFizYFdjTBYV0oSEt0HTw3F3MSO8HFixYsGDBggULdhe2CpY25FMNePq8bhB+6gAWLFiwYMGCBQt2F7baEFcv3A2qbwXdabA/FnSDBQsWLFiwYMGCXYGtvnj14t3nVwPz8gACFixYsGDBggULdgU2beinFj2mgvJ0MaMb7Jf/BwEsWLBgwYIFCxbsVdjqgsTp99LnVX9vFab9hwMWLFiwYMGCBQt2FTYdAKqQr6HTXehIF0rihQ2wYMGCBQsWLFiwK7BVuOnAeSp4Ly9chH8AYMGCBQsWLFiwYJ+F7QbY08+pDh4p4HQBwIIFCxYsWLBgwe7Cdhcsqg19NXCfXvhIB5a33wMLFixYsGDBggW7CpsG3mlhugsY3QJWnxO/P1iwYMGCBQsWLNgV2PSi04sZ0wsV1aA9hf44IIAFCxYsWLBgwYJ9FPYVnqkXmCp0dXBICwoWLFiwYMGCBQt2Fza9wNSpgt0aHLrvARYsWLBgwYIFC3YXtnvSYHlqcaNawHQhJC4wWLBgwYIFCxYs2BXYqQZ/CioNoqcD7LQAYMGCBQsWLFiwYJ+FnVrIqC5QdBcyusH92PuCBQsWLFiwYMGCfQS2Gxinjf+t56ULHFODEViwYMGCBQsWLNjvgE0Hje6CxfQ9pwJxsGDBggULFixYsP8WbHXQSBv56gBSDfzjhQ2wYMGCBQsWLFiwV2GfWtg4HShuFaK6yAEWLFiwYMGCBQv2WdipxYWpRYv24kSxEO1BCSxYsGDBggULFuwKrDN7wIIF64AFC9YBe/X8AQsKojcolSJHAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/CSS%E5%88%9B%E5%BB%BA%E7%85%A7%E7%89%87%E9%9B%86/&text=通过创建照片集来学习 CSS 弹性盒子 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -840,17 +727,9 @@ freeCodeCamp 响应式网页设计的认证课程第五章。每个 HTML 元素�
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -976,8 +855,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1333,29 +1210,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1394,7 +1248,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1454,20 +1308,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1680,6 +1520,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

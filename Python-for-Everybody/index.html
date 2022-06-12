@@ -107,7 +107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -231,16 +231,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -363,16 +373,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -396,7 +416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -419,36 +439,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -482,6 +472,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Python/">Python</a>
+    </a>
+  </div>
+
 
           
         
@@ -500,13 +497,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：5.5k字</p>
+      <p>字数：5.3k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：34分钟</p>
+      <p>时长：33分钟</p>
     </a>
   </div>
 
@@ -523,8 +520,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>The Python for Everybody Specialization provided by UNIVERSITY OF MICHIGAN introduces fundamental programming concepts including data structures, networked application program interfaces, and databases, using the Python programming language. Python for Everybody is a completely open-source course, you can find all the notes and textbooks on its official <a target="_blank" rel="noopener" href="https://www.py4e.com/">website</a>, so this note will only contain my solution to all post-lesson exercises in this course.</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 
 
 	<div class="row">
@@ -533,224 +529,62 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-
 <h3 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h3><h4 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h4><p>Write a program that uses a <strong>print</strong> statement to say ‘hello world’ as shown in ‘Desired Output’.<br><strong>Desired Output</strong></p>
-<pre><code>hello world</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello world</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code class="python">print(&quot;hello world&quot;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;hello world&quot;</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a>Chapter 2</h3><h4 id="Question-1-1"><a href="#Question-1-1" class="headerlink" title="Question 1"></a>Question 1</h4><p>Write a program to prompt the user for hours and rate per hour using input to compute gross pay. Use 35 hours and a rate of 2.75 per hour to test the program (the pay should be 96.25). You should use <strong>input</strong> to read a string and <strong>float()</strong> to convert the string to a number. Do not worry about error checking or bad user data.<br><strong>Desired Output</strong></p>
-<pre><code>Pay: 96.25</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Pay: 96.25</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code>hrs = input(&quot;Enter Hours: &quot;)
-rat = input(&quot;Enter Rates: &quot;)
-pay = float(hrs) * float(rat)
-print(&quot;Pay: &quot; + str(pay))</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hrs = input(&quot;Enter Hours: &quot;)</span><br><span class="line">rat = input(&quot;Enter Rates: &quot;)</span><br><span class="line">pay = float(hrs) * float(rat)</span><br><span class="line">print(&quot;Pay: &quot; + str(pay))</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-3"><a href="#Chapter-3" class="headerlink" title="Chapter 3"></a>Chapter 3</h3><h4 id="Question-1-2"><a href="#Question-1-2" class="headerlink" title="Question 1"></a>Question 1</h4><p>Write a program to prompt the user for hours and rate per hour using input to compute gross pay. Pay the hourly rate for the hours up to 40 and 1.5 times the hourly rate for all hours worked above 40 hours. Use 45 hours and a rate of 10.50 per hour to test the program (the pay should be 498.75). You should use <strong>input</strong> to read a string and <strong>float()</strong> to convert the string to a number. Do not worry about error checking the user input - assume the user types numbers properly.<br><strong>Desired Output</strong></p>
-<pre><code>498.75</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">498.75</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code>hrs = input(&quot;Enter Hours:&quot;)
-h = float(hrs)
-rat = input(&quot;Enter Rates:&quot;)
-r = float(rat)
-if h &lt;=40:
-    pay = h * r
-else:
-    pay = 40 * r + (h - 40) * r * 1.5
-print(str(pay))</code></pre>
-<h4 id="Question-2"><a href="#Question-2" class="headerlink" title="Question 2"></a>Question 2</h4><p>Write a program to prompt for a score between 0.0 and 1.0. If the score is out of range, print an error. If the score is between 0.0 and 1.0, print a grade using the following table:<br>Score Grade<br>&gt;= 0.9 A<br>&gt;= 0.8 B<br>&gt;= 0.7 C<br>&gt;= 0.6 D<br>&lt; 0.6 F<br>If the user enters a value out of range, print a suitable error message and exit. For the test, enter a score of 0.85.<br><strong>Desired Output</strong></p>
-<pre><code>B</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hrs = input(&quot;Enter Hours:&quot;)</span><br><span class="line">h = float(hrs)</span><br><span class="line">rat = input(&quot;Enter Rates:&quot;)</span><br><span class="line">r = float(rat)</span><br><span class="line">if h &lt;=40:</span><br><span class="line">    pay = h * r</span><br><span class="line">else:</span><br><span class="line">    pay = 40 * r + (h - 40) * r * 1.5</span><br><span class="line">print(str(pay))</span><br></pre></td></tr></table></figure>
+<h4 id="Question-2"><a href="#Question-2" class="headerlink" title="Question 2"></a>Question 2</h4><p>Write a program to prompt for a score between 0.0 and 1.0. If the score is out of range, print an error. If the score is between 0.0 and 1.0, print a grade using the following table:<br>Score Grade<br>>= 0.9 A<br>>= 0.8 B<br>>= 0.7 C<br>>= 0.6 D<br>&lt; 0.6 F<br>If the user enters a value out of range, print a suitable error message and exit. For the test, enter a score of 0.85.<br><strong>Desired Output</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">B</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code>score = input(&quot;Enter Score: &quot;)
-sco = float(score)
-if 0.0 &lt;= sco &lt;= 1.0:
-    if sco &gt;= 0.9:
-        grade = &quot;A&quot;
-    elif sco &gt;= 0.8:
-        grade = &quot;B&quot;
-    elif sco &gt;= 0.7:
-        grade = &quot;C&quot;
-    elif sco &gt;= 0.6:
-        grade = &quot;D&quot;
-    else:
-        grade = &quot;F&quot;
-    print(grade)
-else:
-    print(&quot;error&quot;)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">score = input(&quot;Enter Score: &quot;)</span><br><span class="line">sco = float(score)</span><br><span class="line">if 0.0 &lt;= sco &lt;= 1.0:</span><br><span class="line">    if sco &gt;= 0.9:</span><br><span class="line">        grade = &quot;A&quot;</span><br><span class="line">    elif sco &gt;= 0.8:</span><br><span class="line">        grade = &quot;B&quot;</span><br><span class="line">    elif sco &gt;= 0.7:</span><br><span class="line">        grade = &quot;C&quot;</span><br><span class="line">    elif sco &gt;= 0.6:</span><br><span class="line">        grade = &quot;D&quot;</span><br><span class="line">    else:</span><br><span class="line">        grade = &quot;F&quot;</span><br><span class="line">    print(grade)</span><br><span class="line">else:</span><br><span class="line">    print(&quot;error&quot;)</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a>Chapter 4</h3><h4 id="Question-1-3"><a href="#Question-1-3" class="headerlink" title="Question 1"></a>Question 1</h4><p>Write a program to prompt the user for hours and rate per hour using input to compute gross pay. Pay should be the normal rate for hours up to 40 and time-and-a-half for the hourly rate for all hours worked above 40 hours. Put the logic to do the computation of pay in a function called <strong>computepay()</strong> and use the function to do the computation. The function should return a value. Use 45 hours and a rate of 10.50 per hour to test the program (the pay should be 498.75). You should use <strong>input</strong> to read a string and <strong>float()</strong> to convert the string to a number. Do not worry about error checking the user input unless you want to - you can assume the user types numbers properly. Do not name your variable sum or use the sum() function.<br><strong>Desired Output</strong></p>
-<pre><code>Pay 498.75</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Pay 498.75</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code>def computepay(h,r):
-    if h &lt;= 40:
-        p = h * r
-    else:
-        p = 40 * r + (h - 40) * 1.5 * r
-    return p
-hrs = input(&quot;Enter Hours:&quot;)
-ho = float(hrs)
-rat = input(&quot;Enter Rates:&quot;)
-ro = float(rat)
-p = computepay(ho,ro)
-print(&quot;Pay&quot;,p)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def computepay(h,r):</span><br><span class="line">    if h &lt;= 40:</span><br><span class="line">        p = h * r</span><br><span class="line">    else:</span><br><span class="line">        p = 40 * r + (h - 40) * 1.5 * r</span><br><span class="line">    return p</span><br><span class="line">hrs = input(&quot;Enter Hours:&quot;)</span><br><span class="line">ho = float(hrs)</span><br><span class="line">rat = input(&quot;Enter Rates:&quot;)</span><br><span class="line">ro = float(rat)</span><br><span class="line">p = computepay(ho,ro)</span><br><span class="line">print(&quot;Pay&quot;,p)</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-5"><a href="#Chapter-5" class="headerlink" title="Chapter 5"></a>Chapter 5</h3><h4 id="Question-1-4"><a href="#Question-1-4" class="headerlink" title="Question 1"></a>Question 1</h4><p>Write a program that repeatedly prompts a user for integer numbers until the user enters ‘done’. Once ‘done’ is entered, print out the largest and smallest of the numbers. If the user enters anything other than a valid number catch it with a try/except and put out an appropriate message and ignore the number. Enter 7, 2, bob, 10, and 4 and match the output below.<br><strong>Desired Output</strong></p>
-<pre><code>Invalid input
-Maximum is 10
-Minimum is 2</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Invalid input</span><br><span class="line">Maximum is 10</span><br><span class="line">Minimum is 2</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code>largest = None
-smallest = None
-shuzi = []
-while True:
-    num = input(&quot;Enter a number: &quot;)
-    if num == &quot;done&quot; : break
-    else:
-        try:
-            numm = int(num)
-            shuzi.append(numm)
-        except:
-            print(&quot;Invalid input&quot;)
-            continue
-largest = max(shuzi)
-smallest = min(shuzi)
-print(&quot;Maximum is&quot;, largest)
-print(&quot;Minimum is&quot;, smallest)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">largest = None</span><br><span class="line">smallest = None</span><br><span class="line">shuzi = []</span><br><span class="line">while True:</span><br><span class="line">    num = input(&quot;Enter a number: &quot;)</span><br><span class="line">    if num == &quot;done&quot; : break</span><br><span class="line">    else:</span><br><span class="line">        try:</span><br><span class="line">            numm = int(num)</span><br><span class="line">            shuzi.append(numm)</span><br><span class="line">        except:</span><br><span class="line">            print(&quot;Invalid input&quot;)</span><br><span class="line">            continue</span><br><span class="line">largest = max(shuzi)</span><br><span class="line">smallest = min(shuzi)</span><br><span class="line">print(&quot;Maximum is&quot;, largest)</span><br><span class="line">print(&quot;Minimum is&quot;, smallest)</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-6"><a href="#Chapter-6" class="headerlink" title="Chapter 6"></a>Chapter 6</h3><h4 id="Question-1-5"><a href="#Question-1-5" class="headerlink" title="Question 1"></a>Question 1</h4><p>Write code using find() and string slicing (see section 6.10) to extract the number at the end of the line below. Convert the extracted value to a floating point number and print it out.<br><strong>Desired Output</strong></p>
-<pre><code>0.8475</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.8475</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code>text = &quot;X-DSPAM-Confidence:    0.8475&quot;;
-shuziqian = text.find(&#39;:&#39;)
-number = float(text[shuziqian+1:])
-print(number)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">text = &quot;X-DSPAM-Confidence:    0.8475&quot;;</span><br><span class="line">shuziqian = text.find(&#x27;:&#x27;)</span><br><span class="line">number = float(text[shuziqian+1:])</span><br><span class="line">print(number)</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-7"><a href="#Chapter-7" class="headerlink" title="Chapter 7"></a>Chapter 7</h3><h4 id="Question-1-6"><a href="#Question-1-6" class="headerlink" title="Question 1"></a>Question 1</h4><p>Write a program that prompts for a file name, then opens that file and reads through the file, looking for lines of the form:</p>
-<pre><code>X-DSPAM-Confidence:    0.8475</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">X-DSPAM-Confidence:    0.8475</span><br></pre></td></tr></table></figure>
 <p>Count these lines and extract the floating point values from each of the lines and compute the average of those values and produce an output as shown below. Do not use the sum() function or a variable named sum in your solution.<br>You can download the sample data at <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/mbox-short.txt">http://www.py4e.com/code3/mbox-short.txt</a> when you are testing below enter <strong>mbox-short.txt</strong> as the file name.<br><strong>Desired Output</strong></p>
-<pre><code>Average spam confidence: 0.750718518519</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Average spam confidence: 0.750718518519</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code># Use the file name mbox-short.txt as the file name
-fname = input(&quot;Enter file name: &quot;)
-fh = open(fname)
-value = 0
-count = 0
-for line in fh:
-    if not line.startswith(&quot;X-DSPAM-Confidence:&quot;) :
-        continue
-    shuziqian = line.find(&#39;:&#39;)+1
-    value = float(line[shuziqian:]) + value
-    count = count + 1
-print(&quot;Average spam confidence:&quot;,value / count)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Use the file name mbox-short.txt as the file name</span><br><span class="line">fname = input(&quot;Enter file name: &quot;)</span><br><span class="line">fh = open(fname)</span><br><span class="line">value = 0</span><br><span class="line">count = 0</span><br><span class="line">for line in fh:</span><br><span class="line">    if not line.startswith(&quot;X-DSPAM-Confidence:&quot;) :</span><br><span class="line">        continue</span><br><span class="line">    shuziqian = line.find(&#x27;:&#x27;)+1</span><br><span class="line">    value = float(line[shuziqian:]) + value</span><br><span class="line">    count = count + 1</span><br><span class="line">print(&quot;Average spam confidence:&quot;,value / count)</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-8"><a href="#Chapter-8" class="headerlink" title="Chapter 8"></a>Chapter 8</h3><h4 id="Question-1-7"><a href="#Question-1-7" class="headerlink" title="Question 1"></a>Question 1</h4><p>Open the file <strong>romeo.txt</strong> and read it line by line. For each line, split the line into a list of words using the <strong>split()</strong> method. The program should build a list of words. For each word on each line check to see if the word is already in the list and if not append it to the list. When the program completes, sort and print the resulting words in alphabetical order.<br>You can download the sample data at <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/romeo.txt">http://www.py4e.com/code3/romeo.txt</a><br><strong>Desired Output</strong></p>
-<pre><code>[&#39;Arise&#39;, &#39;But&#39;, &#39;It&#39;, &#39;Juliet&#39;, &#39;Who&#39;, &#39;already&#39;, &#39;and&#39;, &#39;breaks&#39;, &#39;east&#39;, &#39;envious&#39;, &#39;fair&#39;, &#39;grief&#39;, &#39;is&#39;, &#39;kill&#39;, &#39;light&#39;, &#39;moon&#39;, &#39;pale&#39;, &#39;sick&#39;, &#39;soft&#39;, &#39;sun&#39;, &#39;the&#39;, &#39;through&#39;, &#39;what&#39;, &#39;window&#39;, &#39;with&#39;, &#39;yonder&#39;]</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#x27;Arise&#x27;, &#x27;But&#x27;, &#x27;It&#x27;, &#x27;Juliet&#x27;, &#x27;Who&#x27;, &#x27;already&#x27;, &#x27;and&#x27;, &#x27;breaks&#x27;, &#x27;east&#x27;, &#x27;envious&#x27;, &#x27;fair&#x27;, &#x27;grief&#x27;, &#x27;is&#x27;, &#x27;kill&#x27;, &#x27;light&#x27;, &#x27;moon&#x27;, &#x27;pale&#x27;, &#x27;sick&#x27;, &#x27;soft&#x27;, &#x27;sun&#x27;, &#x27;the&#x27;, &#x27;through&#x27;, &#x27;what&#x27;, &#x27;window&#x27;, &#x27;with&#x27;, &#x27;yonder&#x27;]</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code>fname = input(&quot;Enter file name: &quot;)
-fh = open(fname)
-lst = list()
-for line in fh:
-    line = line.strip()
-    words = line.split()
-    for word in words:
-        if word not in lst:
-            lst.append(word)
-print(sorted(lst))</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fname = input(&quot;Enter file name: &quot;)</span><br><span class="line">fh = open(fname)</span><br><span class="line">lst = list()</span><br><span class="line">for line in fh:</span><br><span class="line">    line = line.strip()</span><br><span class="line">    words = line.split()</span><br><span class="line">    for word in words:</span><br><span class="line">        if word not in lst:</span><br><span class="line">            lst.append(word)</span><br><span class="line">print(sorted(lst))</span><br></pre></td></tr></table></figure>
 <h4 id="Question-2-1"><a href="#Question-2-1" class="headerlink" title="Question 2"></a>Question 2</h4><p>Open the file <strong>mbox-short.txt</strong> and read it line by line. When you find a line that starts with ‘From ‘ like the following line:</p>
-<pre><code>From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008</span><br></pre></td></tr></table></figure>
 <p>You will parse the From line using split() and print out the second word in the line (i.e. the entire address of the person who sent the message). Then print out a count at the end.<br><strong>Hint:</strong> make sure not to include the lines that start with ‘From:’.<br>You can download the sample data at <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/mbox-short.txt">http://www.py4e.com/code3/mbox-short.txt</a><br><strong>Desired Output</strong></p>
-<pre><code>stephen.marquard@uct.ac.za
-louis@media.berkeley.edu
-zqian@umich.edu
-rjlowe@iupui.edu
-zqian@umich.edu
-rjlowe@iupui.edu
-cwen@iupui.edu
-cwen@iupui.edu
-gsilver@umich.edu
-gsilver@umich.edu
-zqian@umich.edu
-gsilver@umich.edu
-wagnermr@iupui.edu
-zqian@umich.edu
-antranig@caret.cam.ac.uk
-gopal.ramasammycook@gmail.com
-david.horwitz@uct.ac.za
-david.horwitz@uct.ac.za
-david.horwitz@uct.ac.za
-david.horwitz@uct.ac.za
-stephen.marquard@uct.ac.za
-louis@media.berkeley.edu
-louis@media.berkeley.edu
-ray@media.berkeley.edu
-cwen@iupui.edu
-cwen@iupui.edu
-cwen@iupui.edu
-There were 27 lines in the file with From as the first word</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">stephen.marquard@uct.ac.za</span><br><span class="line">louis@media.berkeley.edu</span><br><span class="line">zqian@umich.edu</span><br><span class="line">rjlowe@iupui.edu</span><br><span class="line">zqian@umich.edu</span><br><span class="line">rjlowe@iupui.edu</span><br><span class="line">cwen@iupui.edu</span><br><span class="line">cwen@iupui.edu</span><br><span class="line">gsilver@umich.edu</span><br><span class="line">gsilver@umich.edu</span><br><span class="line">zqian@umich.edu</span><br><span class="line">gsilver@umich.edu</span><br><span class="line">wagnermr@iupui.edu</span><br><span class="line">zqian@umich.edu</span><br><span class="line">antranig@caret.cam.ac.uk</span><br><span class="line">gopal.ramasammycook@gmail.com</span><br><span class="line">david.horwitz@uct.ac.za</span><br><span class="line">david.horwitz@uct.ac.za</span><br><span class="line">david.horwitz@uct.ac.za</span><br><span class="line">david.horwitz@uct.ac.za</span><br><span class="line">stephen.marquard@uct.ac.za</span><br><span class="line">louis@media.berkeley.edu</span><br><span class="line">louis@media.berkeley.edu</span><br><span class="line">ray@media.berkeley.edu</span><br><span class="line">cwen@iupui.edu</span><br><span class="line">cwen@iupui.edu</span><br><span class="line">cwen@iupui.edu</span><br><span class="line">There were 27 lines in the file with From as the first word</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code>fname = input(&quot;Enter file name: &quot;)
-if len(fname) &lt; 1 : fname = &quot;mbox-short.txt&quot;
-fh = open(fname)
-count = 0
-for line in fh:
-    line = line.strip()
-    if not line.startswith(&quot;From &quot;):
-        continue
-    words = line.split()
-    print(words[1])
-    count = count + 1
-print(&quot;There were&quot;, count, &quot;lines in the file with From as the first word&quot;)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">fname = input(&quot;Enter file name: &quot;)</span><br><span class="line">if len(fname) &lt; 1 : fname = &quot;mbox-short.txt&quot;</span><br><span class="line">fh = open(fname)</span><br><span class="line">count = 0</span><br><span class="line">for line in fh:</span><br><span class="line">    line = line.strip()</span><br><span class="line">    if not line.startswith(&quot;From &quot;):</span><br><span class="line">        continue</span><br><span class="line">    words = line.split()</span><br><span class="line">    print(words[1])</span><br><span class="line">    count = count + 1</span><br><span class="line">print(&quot;There were&quot;, count, &quot;lines in the file with From as the first word&quot;)</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-9"><a href="#Chapter-9" class="headerlink" title="Chapter 9"></a>Chapter 9</h3><h4 id="Question-1-8"><a href="#Question-1-8" class="headerlink" title="Question 1"></a>Question 1</h4><p>Write a program to read through the <strong>mbox-short.txt</strong> and figure out who has sent the greatest number of mail messages. The program looks for ‘From ‘ lines and takes the second word of those lines as the person who sent the mail. The program creates a Python dictionary that maps the sender’s mail address to a count of the number of times they appear in the file. After the dictionary is produced, the program reads through the dictionary using a maximum loop to find the most prolific committer.<br><strong>Desired Output</strong></p>
-<pre><code>cwen@iupui.edu 5</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cwen@iupui.edu 5</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code>fname = input(&quot;Enter file name: &quot;)
-if len(fname) &lt; 1 : fname = &quot;mbox-short.txt&quot;
-
-fh = open(fname)
-count_dict = dict()
-
-for line in fh:
-    line = line.strip()
-    if not line.startswith(&#39;From &#39;):
-        continue
-    words = line.split()
-    count_dict[words[1]] = 1 + count_dict.get(words[1],0)
-sort_list = sorted([(v,k) for k,v in count_dict.items()],reverse=True)
-print(sort_list[0][1],sort_list[0][0])</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fname = input(&quot;Enter file name: &quot;)</span><br><span class="line">if len(fname) &lt; 1 : fname = &quot;mbox-short.txt&quot;</span><br><span class="line"></span><br><span class="line">fh = open(fname)</span><br><span class="line">count_dict = dict()</span><br><span class="line"></span><br><span class="line">for line in fh:</span><br><span class="line">    line = line.strip()</span><br><span class="line">    if not line.startswith(&#x27;From &#x27;):</span><br><span class="line">        continue</span><br><span class="line">    words = line.split()</span><br><span class="line">    count_dict[words[1]] = 1 + count_dict.get(words[1],0)</span><br><span class="line">sort_list = sorted([(v,k) for k,v in count_dict.items()],reverse=True)</span><br><span class="line">print(sort_list[0][1],sort_list[0][0])</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-10"><a href="#Chapter-10" class="headerlink" title="Chapter 10"></a>Chapter 10</h3><h4 id="Question-1-9"><a href="#Question-1-9" class="headerlink" title="Question 1"></a>Question 1</h4><p>Write a program to read through the <strong>mbox-short.txt</strong> and figure out the distribution by hour of the day for each of the messages. You can pull the hour out from the ‘From ‘ line by finding the time and then splitting the string a second time using a colon.</p>
-<pre><code>From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008</span><br></pre></td></tr></table></figure>
 <p>Once you have accumulated the counts for each hour, print out the counts, sorted by hour as shown below.<br><strong>Desired Output</strong></p>
-<pre><code>04 3
-06 1
-07 1
-09 2
-10 3
-11 6
-14 1
-15 2
-16 4
-17 2
-18 1
-19 1</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">04 3</span><br><span class="line">06 1</span><br><span class="line">07 1</span><br><span class="line">09 2</span><br><span class="line">10 3</span><br><span class="line">11 6</span><br><span class="line">14 1</span><br><span class="line">15 2</span><br><span class="line">16 4</span><br><span class="line">17 2</span><br><span class="line">18 1</span><br><span class="line">19 1</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code>fname = input(&quot;Enter file name: &quot;)
-if len(fname) &lt; 1 : fname = &quot;mbox-short.txt&quot;
-fh = open(fname)
-count_dict = dict()
-for line in fh:
-    line = line.strip()
-    if not line.startswith(&#39;From &#39;):
-        continue
-    words = line.split()
-    times = words[5].split(&#39;:&#39;)
-    hours = times[0]
-    count_dict[hours] = 1 + count_dict.get(hours,0)
-count_list = sorted([(k,v) for k,v in count_dict.items()])
-for k,v in count_list:
-    print(k,v)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">fname = input(&quot;Enter file name: &quot;)</span><br><span class="line">if len(fname) &lt; 1 : fname = &quot;mbox-short.txt&quot;</span><br><span class="line">fh = open(fname)</span><br><span class="line">count_dict = dict()</span><br><span class="line">for line in fh:</span><br><span class="line">    line = line.strip()</span><br><span class="line">    if not line.startswith(&#x27;From &#x27;):</span><br><span class="line">        continue</span><br><span class="line">    words = line.split()</span><br><span class="line">    times = words[5].split(&#x27;:&#x27;)</span><br><span class="line">    hours = times[0]</span><br><span class="line">    count_dict[hours] = 1 + count_dict.get(hours,0)</span><br><span class="line">count_list = sorted([(k,v) for k,v in count_dict.items()])</span><br><span class="line">for k,v in count_list:</span><br><span class="line">    print(k,v)</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-11"><a href="#Chapter-11" class="headerlink" title="Chapter 11"></a>Chapter 11</h3><h4 id="Question-1-10"><a href="#Question-1-10" class="headerlink" title="Question 1"></a>Question 1</h4><p><strong>Handling The Data</strong><br>The basic outline of this problem is to read the file, look for integers using the <strong>re.findall()</strong>, looking for a regular expression of <strong>‘[0-9]+’</strong> and then converting the extracted strings to integers and summing up the integers.<br><strong>Solution</strong></p>
-<pre><code>import re
-file = open(&#39;C:/Users/dell/Desktop/regex_sum_501451.txt&#39;, &#39;r&#39;)
-file_data = file.read()
-numbers_str = re.findall(&#39;[0-9]+&#39;, file_data)
-total = 0
-for number_str in numbers_str:
-    total = total + int(number_str)
-print(total)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line">file = open(&#x27;C:/Users/dell/Desktop/regex_sum_501451.txt&#x27;, &#x27;r&#x27;)</span><br><span class="line">file_data = file.read()</span><br><span class="line">numbers_str = re.findall(&#x27;[0-9]+&#x27;, file_data)</span><br><span class="line">total = 0</span><br><span class="line">for number_str in numbers_str:</span><br><span class="line">    total = total + int(number_str)</span><br><span class="line">print(total)</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-12"><a href="#Chapter-12" class="headerlink" title="Chapter 12"></a>Chapter 12</h3><h4 id="Question-1-11"><a href="#Question-1-11" class="headerlink" title="Question 1"></a>Question 1</h4><p><strong>Exploring the HyperText Transport Protocol</strong><br>You are to retrieve the following document using the HTTP protocol in a way that you can examine the HTTP Response headers.</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="http://data.pr4e.org/intro-short.txt">http://data.pr4e.org/intro-short.txt</a><br>There are three ways that you might retrieve this web page and look at the response headers:</li>
@@ -758,415 +592,57 @@ print(total)</code></pre>
 <li>Open the URL in a web browser with a developer console or FireBug and manually examine the headers that are returned.</li>
 <li>Use the <strong>telnet</strong> program as shown in lecture to retrieve the headers and content.<br><strong>Desired Output</strong></li>
 </ul>
-<pre><code>HTTP/1.1 200 OK
-Date: Sun, 01 Oct 2017 05:25:59 GMT
-Server: Apache/2.4.7 (Ubuntu)
-Last-Modified: Sat, 13 May 2017 11:22:22 GMT
-ETag: “1d3-54f6609240717”
-Accept-Ranges: bytes
-Content-Length: 467
-Cache-Control: max-age=0, no-cache, no-store, must-revalidate
-Pragma: no-cache
-Expires: Wed, 11 Jan 1984 05:00:00 GMT
-Connection: close
-Content-Type: text/plain</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Date: Sun, 01 Oct 2017 05:25:59 GMT</span><br><span class="line">Server: Apache/2.4.7 (Ubuntu)</span><br><span class="line">Last-Modified: Sat, 13 May 2017 11:22:22 GMT</span><br><span class="line">ETag: “1d3-54f6609240717”</span><br><span class="line">Accept-Ranges: bytes</span><br><span class="line">Content-Length: 467</span><br><span class="line">Cache-Control: max-age=0, no-cache, no-store, must-revalidate</span><br><span class="line">Pragma: no-cache</span><br><span class="line">Expires: Wed, 11 Jan 1984 05:00:00 GMT</span><br><span class="line">Connection: close</span><br><span class="line">Content-Type: text/plain</span><br></pre></td></tr></table></figure>
 <p><strong>Solution</strong></p>
-<pre><code>import socket
-
-mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-mysock.connect((&#39;data.pr4e.org&#39;, 80))
-cmd = &#39;GET http://data.pr4e.org/intro-short.txt HTTP/1.0\r\n\r\n&#39;.encode()
-mysock.send(cmd)
-while True:
-    data = mysock.recv(512)
-    if (len(data) &lt; 1):
-        break
-    print(data.decode())
-mysock.close()</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import socket</span><br><span class="line"></span><br><span class="line">mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">mysock.connect((&#x27;data.pr4e.org&#x27;, 80))</span><br><span class="line">cmd = &#x27;GET http://data.pr4e.org/intro-short.txt HTTP/1.0\r\n\r\n&#x27;.encode()</span><br><span class="line">mysock.send(cmd)</span><br><span class="line">while True:</span><br><span class="line">    data = mysock.recv(512)</span><br><span class="line">    if (len(data) &lt; 1):</span><br><span class="line">        break</span><br><span class="line">    print(data.decode())</span><br><span class="line">mysock.close()</span><br></pre></td></tr></table></figure>
 <h4 id="Question-2-2"><a href="#Question-2-2" class="headerlink" title="Question 2"></a>Question 2</h4><p><strong>Scraping Numbers from HTML using BeautifulSoup</strong> In this assignment you will write a Python program similar to <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/urllink2.py">http://www.py4e.com/code3/urllink2.py</a>. The program will use <strong>urllib</strong> to read the HTML from the data files below, and parse the data, extracting numbers and compute the sum of the numbers in the file.<br>We provide two files for this assignment. One is a sample file where we give you the sum for your testing and the other is the actual data you need to process for the assignment.</p>
 <ul>
 <li>Sample data: <a target="_blank" rel="noopener" href="http://py4e-data.dr-chuck.net/comments_42.html">http://py4e-data.dr-chuck.net/comments_42.html</a> (Sum=2553)</li>
 <li>Actual data: <a target="_blank" rel="noopener" href="http://py4e-data.dr-chuck.net/comments_501453.html">http://py4e-data.dr-chuck.net/comments_501453.html</a> (Sum ends with 35)<br>You do not need to save these files to your folder since your program will read the data directly from the URL. <strong>Note:</strong> Each student will have a distinct data url for the assignment - so only use your own data url for analysis.<br><strong>Solution</strong></li>
 </ul>
-<pre><code>from urllib.request import urlopen
-from bs4 import BeautifulSoup
-import ssl
-# Ignore SSL certificate errors
-ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
-url = input(&#39;Enter - &#39;)
-html = urlopen(url, context=ctx).read()
-# html.parser is the HTML parser included in the standard Python 3 library.
-# information on other HTML parsers is here:
-# http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser
-soup = BeautifulSoup(html, &quot;html.parser&quot;)
-# Retrieve all of the anchor tags
-tags = soup(&#39;span&#39;)
-total = 0
-for tag in tags:
-    # Look at the parts of a tag
-    total = total + int(tag.contents[0])
-print(total)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">from urllib.request import urlopen</span><br><span class="line">from bs4 import BeautifulSoup</span><br><span class="line">import ssl</span><br><span class="line"># Ignore SSL certificate errors</span><br><span class="line">ctx = ssl.create_default_context()</span><br><span class="line">ctx.check_hostname = False</span><br><span class="line">ctx.verify_mode = ssl.CERT_NONE</span><br><span class="line">url = input(&#x27;Enter - &#x27;)</span><br><span class="line">html = urlopen(url, context=ctx).read()</span><br><span class="line"># html.parser is the HTML parser included in the standard Python 3 library.</span><br><span class="line"># information on other HTML parsers is here:</span><br><span class="line"># http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-a-parser</span><br><span class="line">soup = BeautifulSoup(html, &quot;html.parser&quot;)</span><br><span class="line"># Retrieve all of the anchor tags</span><br><span class="line">tags = soup(&#x27;span&#x27;)</span><br><span class="line">total = 0</span><br><span class="line">for tag in tags:</span><br><span class="line">    # Look at the parts of a tag</span><br><span class="line">    total = total + int(tag.contents[0])</span><br><span class="line">print(total)</span><br></pre></td></tr></table></figure>
 <h4 id="Question-3"><a href="#Question-3" class="headerlink" title="Question 3"></a>Question 3</h4><p><strong>Following Links in Python</strong><br>In this assignment you will write a Python program that expands on <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/urllinks.py">http://www.py4e.com/code3/urllinks.py</a>. The program will use <strong>urllib</strong> to read the HTML from the data files below, extract the href= vaues from the anchor tags, scan for a tag that is in a particular position relative to the first name in the list, follow that link and repeat the process a number of times and report the last name you find.<br>We provide two files for this assignment. One is a sample file where we give you the name for your testing and the other is the actual data you need to process for the assignment</p>
 <ul>
 <li>Sample problem: Start at <a target="_blank" rel="noopener" href="http://py4e-data.dr-chuck.net/known_by_Fikret.html">http://py4e-data.dr-chuck.net/known_by_Fikret.html</a><br>Find the link at position <strong>3</strong> (the first name is 1). Follow that link. Repeat this process <strong>4</strong> times. The answer is the last name that you retrieve.<br>Sequence of names: Fikret Montgomery Mhairade Butchi Anayah<br>Last name in sequence: Anayah</li>
 <li>Actual problem: Start at: <a target="_blank" rel="noopener" href="http://py4e-data.dr-chuck.net/known_by_Malaeka.html">http://py4e-data.dr-chuck.net/known_by_Malaeka.html</a><br>Find the link at position <strong>18</strong> (the first name is 1). Follow that link. Repeat this process <strong>7</strong> times. The answer is the last name that you retrieve.<br>Hint: The first character of the name of the last page that you will load is: K<br><strong>Solution</strong></li>
 </ul>
-<pre><code>  import urllib.request
-import urllib.parse
-import urllib.error
-from bs4 import BeautifulSoup
-import ssl
-def findUrl(url, position):
-    html = urllib.request.urlopen(url, context=ctx).read()
-    soup = BeautifulSoup(html, &#39;html.parser&#39;)
-    # Retrieve all of the anchor tags
-    tags = soup(&#39;a&#39;)
-    return tags[position].get(&#39;href&#39;, None)
-# Ignore SSL certificate errors
-ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
-count_str = input(&#39;Enter count - &#39;)
-count = int(count_str)
-position_str = input(&#39;Enter position - &#39;)
-position = int(position_str)-1
-for i in range(count):
-    if i == 0:
-        url_now = input(&#39;Enter - &#39;)
-        print(url_now)
-        url_now = findUrl(url_now, position)
-        print(url_now)
-    else:
-        url_now = findUrl(url_now, position)
-        print(url_now)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">  import urllib.request</span><br><span class="line">import urllib.parse</span><br><span class="line">import urllib.error</span><br><span class="line">from bs4 import BeautifulSoup</span><br><span class="line">import ssl</span><br><span class="line">def findUrl(url, position):</span><br><span class="line">    html = urllib.request.urlopen(url, context=ctx).read()</span><br><span class="line">    soup = BeautifulSoup(html, &#x27;html.parser&#x27;)</span><br><span class="line">    # Retrieve all of the anchor tags</span><br><span class="line">    tags = soup(&#x27;a&#x27;)</span><br><span class="line">    return tags[position].get(&#x27;href&#x27;, None)</span><br><span class="line"># Ignore SSL certificate errors</span><br><span class="line">ctx = ssl.create_default_context()</span><br><span class="line">ctx.check_hostname = False</span><br><span class="line">ctx.verify_mode = ssl.CERT_NONE</span><br><span class="line">count_str = input(&#x27;Enter count - &#x27;)</span><br><span class="line">count = int(count_str)</span><br><span class="line">position_str = input(&#x27;Enter position - &#x27;)</span><br><span class="line">position = int(position_str)-1</span><br><span class="line">for i in range(count):</span><br><span class="line">    if i == 0:</span><br><span class="line">        url_now = input(&#x27;Enter - &#x27;)</span><br><span class="line">        print(url_now)</span><br><span class="line">        url_now = findUrl(url_now, position)</span><br><span class="line">        print(url_now)</span><br><span class="line">    else:</span><br><span class="line">        url_now = findUrl(url_now, position)</span><br><span class="line">        print(url_now)</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-13"><a href="#Chapter-13" class="headerlink" title="Chapter 13"></a>Chapter 13</h3><h4 id="Question-1-12"><a href="#Question-1-12" class="headerlink" title="Question 1"></a>Question 1</h4><p><strong>Extracting Data from XML</strong><br>In this assignment you will write a Python program somewhat similar to <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/geoxml.py">http://www.py4e.com/code3/geoxml.py</a>. The program will prompt for a URL, read the XML data from that URL using <strong>urllib</strong> and then parse and extract the comment counts from the XML data, compute the sum of the numbers in the file.<br>We provide two files for this assignment. One is a sample file where we give you the sum for your testing and the other is the actual data you need to process for the assignment.</p>
 <ul>
 <li>Sample data: <a target="_blank" rel="noopener" href="http://py4e-data.dr-chuck.net/comments_42.xml">http://py4e-data.dr-chuck.net/comments_42.xml</a> (Sum=2553)</li>
 <li>Actual data: <a target="_blank" rel="noopener" href="http://py4e-data.dr-chuck.net/comments_501455.xml">http://py4e-data.dr-chuck.net/comments_501455.xml</a> (Sum ends with 78)<br>You do not need to save these files to your folder since your program will read the data directly from the URL. <strong>Note:</strong> Each student will have a distinct data url for the assignment - so only use your own data url for analysis.<br><strong>Solution</strong></li>
 </ul>
-<pre><code>import urllib.request
-import urllib.parse
-import urllib.error
-import xml.etree.ElementTree as ET
-url = &#39;http://py4e-data.dr-chuck.net/comments_501455.xml&#39;
-print(&#39;Retrieving&#39;, url)
-uh = urllib.request.urlopen(url)
-data = uh.read()
-print(&#39;Retrieved&#39;, len(data), &#39;characters&#39;)
-tree = ET.fromstring(data)
-comments_node = tree.findall(&#39;comments&#39;)
-comment_node = comments_node[0].findall(&#39;comment&#39;)
-total = 0
-for node in comment_node:
-    total = total + int(node.find(&#39;count&#39;).text)
-print(total)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request</span><br><span class="line">import urllib.parse</span><br><span class="line">import urllib.error</span><br><span class="line">import xml.etree.ElementTree as ET</span><br><span class="line">url = &#x27;http://py4e-data.dr-chuck.net/comments_501455.xml&#x27;</span><br><span class="line">print(&#x27;Retrieving&#x27;, url)</span><br><span class="line">uh = urllib.request.urlopen(url)</span><br><span class="line">data = uh.read()</span><br><span class="line">print(&#x27;Retrieved&#x27;, len(data), &#x27;characters&#x27;)</span><br><span class="line">tree = ET.fromstring(data)</span><br><span class="line">comments_node = tree.findall(&#x27;comments&#x27;)</span><br><span class="line">comment_node = comments_node[0].findall(&#x27;comment&#x27;)</span><br><span class="line">total = 0</span><br><span class="line">for node in comment_node:</span><br><span class="line">    total = total + int(node.find(&#x27;count&#x27;).text)</span><br><span class="line">print(total)</span><br></pre></td></tr></table></figure>
 <h4 id="Question-2-3"><a href="#Question-2-3" class="headerlink" title="Question 2"></a>Question 2</h4><p><strong>Extracting Data from JSON</strong><br>In this assignment you will write a Python program somewhat similar to <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/json2.py">http://www.py4e.com/code3/json2.py</a>. The program will prompt for a URL, read the JSON data from that URL using <strong>urllib</strong> and then parse and extract the comment counts from the JSON data, compute the sum of the numbers in the file and enter the sum below:<br>We provide two files for this assignment. One is a sample file where we give you the sum for your testing and the other is the actual data you need to process for the assignment.</p>
 <ul>
 <li>Sample data: <a target="_blank" rel="noopener" href="http://py4e-data.dr-chuck.net/comments_42.json">http://py4e-data.dr-chuck.net/comments_42.json</a> (Sum=2553)</li>
 <li>Actual data: <a target="_blank" rel="noopener" href="http://py4e-data.dr-chuck.net/comments_501456.json">http://py4e-data.dr-chuck.net/comments_501456.json</a> (Sum ends with 42)<br>You do not need to save these files to your folder since your program will read the data directly from the URL. <strong>Note:</strong> Each student will have a distinct data url for the assignment - so only use your own data url for analysis.<br><strong>Solution</strong></li>
 </ul>
-<pre><code>import urllib.request
-import urllib.parse
-import urllib.error
-import json
-url = &#39;http://py4e-data.dr-chuck.net/comments_501456.json&#39;
-print(&#39;Retrieving&#39;, url)
-uh = urllib.request.urlopen(url)
-data = uh.read()
-info = json.loads(data.decode())
-print(&#39;User count:&#39;, len(info))
-comments_dic = info[&#39;comments&#39;]
-total = 0
-for item in comments_dic:
-    total = total + int(item[&#39;count&#39;])
-print(total)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request</span><br><span class="line">import urllib.parse</span><br><span class="line">import urllib.error</span><br><span class="line">import json</span><br><span class="line">url = &#x27;http://py4e-data.dr-chuck.net/comments_501456.json&#x27;</span><br><span class="line">print(&#x27;Retrieving&#x27;, url)</span><br><span class="line">uh = urllib.request.urlopen(url)</span><br><span class="line">data = uh.read()</span><br><span class="line">info = json.loads(data.decode())</span><br><span class="line">print(&#x27;User count:&#x27;, len(info))</span><br><span class="line">comments_dic = info[&#x27;comments&#x27;]</span><br><span class="line">total = 0</span><br><span class="line">for item in comments_dic:</span><br><span class="line">    total = total + int(item[&#x27;count&#x27;])</span><br><span class="line">print(total)</span><br></pre></td></tr></table></figure>
 <h4 id="Question-3-1"><a href="#Question-3-1" class="headerlink" title="Question 3"></a>Question 3</h4><p><strong>Calling a JSON API</strong><br>In this assignment you will write a Python program somewhat similar to <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/geojson.py">http://www.py4e.com/code3/geojson.py</a>. The program will prompt for a location, contact a web service and retrieve JSON for the web service and parse that data, and retrieve the first <strong>place_id</strong> from the JSON. A place ID is a textual identifier that uniquely identifies a place as within Google Maps.<br><strong>API End Points</strong><br>To complete this assignment, you should use this API endpoint that has a static subset of the Google Data:</p>
-<pre><code>http://py4e-data.dr-chuck.net/json?</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://py4e-data.dr-chuck.net/json?</span><br></pre></td></tr></table></figure>
 <p>This API uses the same parameter (address) as the Google API. This API also has no rate limit so you can test as often as you like. If you visit the URL with no parameters, you get “No address…” response.<br>To call the API, you need to include a <strong>key=</strong> parameter and provide the address that you are requesting as the <strong>address=</strong> parameter that is properly URL encoded using the <strong>urllib.parse.urlencode()</strong> function as shown in <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/geojson.py">http://www.py4e.com/code3/geojson.py</a><br>Make sure to check that your code is using the API endpoint is as shown above. You will get <em>different</em> results from the <strong>geojson</strong> and <strong>json</strong> endpoints so make sure you are using the same end point as this autograder is using.<br><strong>Solution</strong></p>
-<pre><code>import urllib.request
-import urllib.parse
-import urllib.error
-import json
-import ssl
-api_key = False
-# If you have a Google Places API key, enter it here
-# api_key = &#39;AIzaSy___IDByT70&#39;
-# https://developers.google.com/maps/documentation/geocoding/intro
-if api_key is False:
-    api_key = 42
-    serviceurl = &#39;http://py4e-data.dr-chuck.net/json?&#39;
-else:
-    serviceurl = &#39;https://maps.googleapis.com/maps/api/geocode/json?&#39;
-# Ignore SSL certificate errors
-ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
-while True:
-    address = input(&#39;Enter location: &#39;)
-    if len(address) &lt; 1:
-        break
-    parms = dict()
-    parms[&#39;address&#39;] = address
-    if api_key is not False:
-        parms[&#39;key&#39;] = api_key
-    url = serviceurl + urllib.parse.urlencode(parms)
-    print(&#39;Retrieving&#39;, url)
-    uh = urllib.request.urlopen(url, context=ctx)
-    data = uh.read().decode()
-    print(&#39;Retrieved&#39;, len(data), &#39;characters&#39;)
-    try:
-        js = json.loads(data)
-    except:
-        js = None
-    if not js or &#39;status&#39; not in js or js[&#39;status&#39;] != &#39;OK&#39;:
-        print(&#39;==== Failure To Retrieve ====&#39;)
-        print(data)
-        continue
-    print(json.dumps(js, indent=4))
-    lat = js[&#39;results&#39;][0][&#39;geometry&#39;][&#39;location&#39;][&#39;lat&#39;]
-    lng = js[&#39;results&#39;][0][&#39;geometry&#39;][&#39;location&#39;][&#39;lng&#39;]
-    print(&#39;lat&#39;, lat, &#39;lng&#39;, lng)
-    location = js[&#39;results&#39;][0][&#39;formatted_address&#39;]
-    print(location)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request</span><br><span class="line">import urllib.parse</span><br><span class="line">import urllib.error</span><br><span class="line">import json</span><br><span class="line">import ssl</span><br><span class="line">api_key = False</span><br><span class="line"># If you have a Google Places API key, enter it here</span><br><span class="line"># api_key = &#x27;AIzaSy___IDByT70&#x27;</span><br><span class="line"># https://developers.google.com/maps/documentation/geocoding/intro</span><br><span class="line">if api_key is False:</span><br><span class="line">    api_key = 42</span><br><span class="line">    serviceurl = &#x27;http://py4e-data.dr-chuck.net/json?&#x27;</span><br><span class="line">else:</span><br><span class="line">    serviceurl = &#x27;https://maps.googleapis.com/maps/api/geocode/json?&#x27;</span><br><span class="line"># Ignore SSL certificate errors</span><br><span class="line">ctx = ssl.create_default_context()</span><br><span class="line">ctx.check_hostname = False</span><br><span class="line">ctx.verify_mode = ssl.CERT_NONE</span><br><span class="line">while True:</span><br><span class="line">    address = input(&#x27;Enter location: &#x27;)</span><br><span class="line">    if len(address) &lt; 1:</span><br><span class="line">        break</span><br><span class="line">    parms = dict()</span><br><span class="line">    parms[&#x27;address&#x27;] = address</span><br><span class="line">    if api_key is not False:</span><br><span class="line">        parms[&#x27;key&#x27;] = api_key</span><br><span class="line">    url = serviceurl + urllib.parse.urlencode(parms)</span><br><span class="line">    print(&#x27;Retrieving&#x27;, url)</span><br><span class="line">    uh = urllib.request.urlopen(url, context=ctx)</span><br><span class="line">    data = uh.read().decode()</span><br><span class="line">    print(&#x27;Retrieved&#x27;, len(data), &#x27;characters&#x27;)</span><br><span class="line">    try:</span><br><span class="line">        js = json.loads(data)</span><br><span class="line">    except:</span><br><span class="line">        js = None</span><br><span class="line">    if not js or &#x27;status&#x27; not in js or js[&#x27;status&#x27;] != &#x27;OK&#x27;:</span><br><span class="line">        print(&#x27;==== Failure To Retrieve ====&#x27;)</span><br><span class="line">        print(data)</span><br><span class="line">        continue</span><br><span class="line">    print(json.dumps(js, indent=4))</span><br><span class="line">    lat = js[&#x27;results&#x27;][0][&#x27;geometry&#x27;][&#x27;location&#x27;][&#x27;lat&#x27;]</span><br><span class="line">    lng = js[&#x27;results&#x27;][0][&#x27;geometry&#x27;][&#x27;location&#x27;][&#x27;lng&#x27;]</span><br><span class="line">    print(&#x27;lat&#x27;, lat, &#x27;lng&#x27;, lng)</span><br><span class="line">    location = js[&#x27;results&#x27;][0][&#x27;formatted_address&#x27;]</span><br><span class="line">    print(location)</span><br></pre></td></tr></table></figure>
 <h3 id="Chapter-15"><a href="#Chapter-15" class="headerlink" title="Chapter 15"></a>Chapter 15</h3><h4 id="Question-1-13"><a href="#Question-1-13" class="headerlink" title="Question 1"></a>Question 1</h4><p>create a SQLITE database or use an existing database and create a table in the database called “Ages”:</p>
-<pre><code>CREATE TABLE Ages (
-  name VARCHAR(128),
-  age INTEGER
-)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Ages (</span><br><span class="line">  name VARCHAR(128),</span><br><span class="line">  age INTEGER</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 <p>Then make sure the table is empty by deleting any rows that you previously inserted, and insert these rows and only these rows with the following commands:</p>
-<pre><code>DELETE FROM Ages;
-INSERT INTO Ages (name, age) VALUES (&#39;Muqadaas&#39;, 29);
-INSERT INTO Ages (name, age) VALUES (&#39;Sabine&#39;, 13);
-INSERT INTO Ages (name, age) VALUES (&#39;Brydon&#39;, 35);
-INSERT INTO Ages (name, age) VALUES (&#39;Jayla&#39;, 39);</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM Ages;</span><br><span class="line">INSERT INTO Ages (name, age) VALUES (&#x27;Muqadaas&#x27;, 29);</span><br><span class="line">INSERT INTO Ages (name, age) VALUES (&#x27;Sabine&#x27;, 13);</span><br><span class="line">INSERT INTO Ages (name, age) VALUES (&#x27;Brydon&#x27;, 35);</span><br><span class="line">INSERT INTO Ages (name, age) VALUES (&#x27;Jayla&#x27;, 39);</span><br></pre></td></tr></table></figure>
 <p>Once the inserts are done, run the following SQL command:</p>
-<pre><code>SELECT hex(name || age) AS X FROM Ages ORDER BY X</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT hex(name || age) AS X FROM Ages ORDER BY X</span><br></pre></td></tr></table></figure>
 <h4 id="Question-2-4"><a href="#Question-2-4" class="headerlink" title="Question 2"></a>Question 2</h4><p><strong>Counting Organizations</strong><br>This application will read the mailbox data (mbox.txt) and count the number of email messages per organization (i.e. domain name of the email address) using a database with the following schema to maintain the counts.</p>
-<pre><code>CREATE TABLE Counts (org TEXT, count INTEGER)</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Counts (org TEXT, count INTEGER)</span><br></pre></td></tr></table></figure>
 <p>When you have run the program on <strong>mbox.txt</strong> upload the resulting database file above for grading.<br>If you run the program multiple times in testing or with dfferent files, make sure to empty out the data before each run.<br>You can use this code as a starting point for your application: <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/emaildb.py">http://www.py4e.com/code3/emaildb.py</a>.<br>The data file for this application is the same as in previous assignments: <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/mbox.txt">http://www.py4e.com/code3/mbox.txt</a>.<br><strong>Solution</strong></p>
-<pre><code>import sqlite3
-conn = sqlite3.connect(&#39;emaildb2.sqlite&#39;)
-cur = conn.cursor()
-cur.execute(&#39;&#39;&#39;
-DROP TABLE IF EXISTS Counts&#39;&#39;&#39;)
-cur.execute(&#39;&#39;&#39;
-CREATE TABLE Counts (org TEXT, count INTEGER)&#39;&#39;&#39;)
-fh = open(&#39;C:/Users/dell/Desktop/mbox.txt&#39;, &#39;r&#39;)
-list_1 = []
-for line in fh:
-    if not line.startswith(&#39;From: &#39;):
-        continue
-    pieces = line.split()
-    email = pieces[1]
-    dom = email.find(&#39;@&#39;)
-    org = email[dom+1:len(email)]
-    cur.execute(&#39;SELECT count FROM Counts WHERE org = ? &#39;, (org,))
-    row = cur.fetchone()
-    if row is None:
-        cur.execute(&#39;&#39;&#39;INSERT INTO Counts (org, count)
-                VALUES (?, 1)&#39;&#39;&#39;, (org,))
-    else:
-        cur.execute(&#39;UPDATE Counts SET count = count + 1 WHERE org = ?&#39;,
-                    (org,))
-conn.commit()
-# https://www.sqlite.org/lang_select.html
-sqlstr = &#39;SELECT org, count FROM Counts ORDER BY count DESC LIMIT 10&#39;
-for row in cur.execute(sqlstr):
-    print(str(row[0]), row[1])
-cur.close()</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">import sqlite3</span><br><span class="line">conn = sqlite3.connect(&#x27;emaildb2.sqlite&#x27;)</span><br><span class="line">cur = conn.cursor()</span><br><span class="line">cur.execute(&#x27;&#x27;&#x27;</span><br><span class="line">DROP TABLE IF EXISTS Counts&#x27;&#x27;&#x27;)</span><br><span class="line">cur.execute(&#x27;&#x27;&#x27;</span><br><span class="line">CREATE TABLE Counts (org TEXT, count INTEGER)&#x27;&#x27;&#x27;)</span><br><span class="line">fh = open(&#x27;C:/Users/dell/Desktop/mbox.txt&#x27;, &#x27;r&#x27;)</span><br><span class="line">list_1 = []</span><br><span class="line">for line in fh:</span><br><span class="line">    if not line.startswith(&#x27;From: &#x27;):</span><br><span class="line">        continue</span><br><span class="line">    pieces = line.split()</span><br><span class="line">    email = pieces[1]</span><br><span class="line">    dom = email.find(&#x27;@&#x27;)</span><br><span class="line">    org = email[dom+1:len(email)]</span><br><span class="line">    cur.execute(&#x27;SELECT count FROM Counts WHERE org = ? &#x27;, (org,))</span><br><span class="line">    row = cur.fetchone()</span><br><span class="line">    if row is None:</span><br><span class="line">        cur.execute(&#x27;&#x27;&#x27;INSERT INTO Counts (org, count)</span><br><span class="line">                VALUES (?, 1)&#x27;&#x27;&#x27;, (org,))</span><br><span class="line">    else:</span><br><span class="line">        cur.execute(&#x27;UPDATE Counts SET count = count + 1 WHERE org = ?&#x27;,</span><br><span class="line">                    (org,))</span><br><span class="line">conn.commit()</span><br><span class="line"># https://www.sqlite.org/lang_select.html</span><br><span class="line">sqlstr = &#x27;SELECT org, count FROM Counts ORDER BY count DESC LIMIT 10&#x27;</span><br><span class="line">for row in cur.execute(sqlstr):</span><br><span class="line">    print(str(row[0]), row[1])</span><br><span class="line">cur.close()</span><br></pre></td></tr></table></figure>
 <h4 id="Question-3-2"><a href="#Question-3-2" class="headerlink" title="Question 3"></a>Question 3</h4><p><strong>Musical Track Database</strong><br>This application will read an iTunes export file in XML and produce a properly normalized database with this structure:</p>
-<pre><code>CREATE TABLE Artist (
-    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    name    TEXT UNIQUE
-);
-CREATE TABLE Genre (
-    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    name    TEXT UNIQUE
-);
-CREATE TABLE Album (
-    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    artist_id  INTEGER,
-    title   TEXT UNIQUE
-);
-CREATE TABLE Track (
-    id  INTEGER NOT NULL PRIMARY KEY
-        AUTOINCREMENT UNIQUE,
-    title TEXT  UNIQUE,
-    album_id  INTEGER,
-    genre_id  INTEGER,
-    len INTEGER, rating INTEGER, count INTEGER
-);</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Artist (</span><br><span class="line">    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,</span><br><span class="line">    name    TEXT UNIQUE</span><br><span class="line">);</span><br><span class="line">CREATE TABLE Genre (</span><br><span class="line">    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,</span><br><span class="line">    name    TEXT UNIQUE</span><br><span class="line">);</span><br><span class="line">CREATE TABLE Album (</span><br><span class="line">    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,</span><br><span class="line">    artist_id  INTEGER,</span><br><span class="line">    title   TEXT UNIQUE</span><br><span class="line">);</span><br><span class="line">CREATE TABLE Track (</span><br><span class="line">    id  INTEGER NOT NULL PRIMARY KEY</span><br><span class="line">        AUTOINCREMENT UNIQUE,</span><br><span class="line">    title TEXT  UNIQUE,</span><br><span class="line">    album_id  INTEGER,</span><br><span class="line">    genre_id  INTEGER,</span><br><span class="line">    len INTEGER, rating INTEGER, count INTEGER</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <p>If you run the program multiple times in testing or with different files, make sure to empty out the data before each run.<br>You can use this code as a starting point for your application: <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/tracks.zip">http://www.py4e.com/code3/tracks.zip</a>. The ZIP file contains the <strong>Library.xml</strong> file to be used for this assignment. You can export your own tracks from iTunes and create a database, but for the database that you turn in for this assignment, only use the <strong>Library.xml</strong> data that is provided.<br>To grade this assignment, the program will run a query like this on your uploaded database and look for the data it expects to see:</p>
-<pre><code>SELECT Track.title, Artist.name, Album.title, Genre.name
-    FROM Track JOIN Genre JOIN Album JOIN Artist
-    ON Track.genre_id = Genre.ID and Track.album_id = Album.id
-        AND Album.artist_id = Artist.id
-    ORDER BY Artist.name LIMIT 3</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT Track.title, Artist.name, Album.title, Genre.name</span><br><span class="line">    FROM Track JOIN Genre JOIN Album JOIN Artist</span><br><span class="line">    ON Track.genre_id = Genre.ID and Track.album_id = Album.id</span><br><span class="line">        AND Album.artist_id = Artist.id</span><br><span class="line">    ORDER BY Artist.name LIMIT 3</span><br></pre></td></tr></table></figure>
 <p>The expected result of the modified query on your database is: (shown here as a simple HTML table with titles)<br><strong>Solution</strong></p>
-<pre><code>import xml.etree.ElementTree as ET
-import sqlite3
-conn = sqlite3.connect(&#39;trackdb.sqlite&#39;)
-cur = conn.cursor()
-# Make some fresh tables using executescript()
-cur.executescript(&#39;&#39;&#39;
-DROP TABLE IF EXISTS Artist;
-DROP TABLE IF EXISTS Album;
-DROP TABLE IF EXISTS Genre;
-DROP TABLE IF EXISTS Track;
-CREATE TABLE Artist (
-    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    name    TEXT UNIQUE
-);
-CREATE TABLE Album (
-    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    artist_id  INTEGER,
-    title   TEXT UNIQUE
-);
-CREATE TABLE Genre (
-    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    name   TEXT UNIQUE
-);
-CREATE TABLE Track (
-    id  INTEGER NOT NULL PRIMARY KEY
-        AUTOINCREMENT UNIQUE,
-    title TEXT  UNIQUE,
-    album_id  INTEGER,
-    genre_id  INTEGER,
-    len INTEGER, rating INTEGER, count INTEGER
-);
-&#39;&#39;&#39;)
-fname = input(&#39;Enter file name: &#39;)
-if (len(fname) &lt; 1):
-    fname = &#39;Library.xml&#39;
-# &lt;key&gt;Track ID&lt;/key&gt;&lt;integer&gt;369&lt;/integer&gt;
-# &lt;key&gt;Name&lt;/key&gt;&lt;string&gt;Another One Bites The Dust&lt;/string&gt;
-# &lt;key&gt;Artist&lt;/key&gt;&lt;string&gt;Queen&lt;/string&gt;
-def lookup(d, key):
-    found = False
-    for child in d:
-        if found:
-            return child.text
-        if child.tag == &#39;key&#39; and child.text == key:
-            found = True
-    return None
-stuff = ET.parse(fname)
-all = stuff.findall(&#39;dict/dict/dict&#39;)
-print(&#39;Dict count:&#39;, len(all))
-for entry in all:
-    if (lookup(entry, &#39;Track ID&#39;) is None):
-        continue
-    name = lookup(entry, &#39;Name&#39;)
-    artist = lookup(entry, &#39;Artist&#39;)
-    album = lookup(entry, &#39;Album&#39;)
-    genre = lookup(entry, &#39;Genre&#39;)
-    count = lookup(entry, &#39;Play Count&#39;)
-    rating = lookup(entry, &#39;Rating&#39;)
-    length = lookup(entry, &#39;Total Time&#39;)
-    if name is None or artist is None or album is None:
-        continue
-    print(name, artist, album, genre, count, rating, length)
-    cur.execute(&#39;&#39;&#39;INSERT OR IGNORE INTO Artist (name)
-        VALUES ( ? )&#39;&#39;&#39;, (artist, ))
-    cur.execute(&#39;SELECT id FROM Artist WHERE name = ? &#39;, (artist, ))
-    artist_id = cur.fetchone()[0]
-    cur.execute(&#39;&#39;&#39;INSERT OR IGNORE INTO Album (title, artist_id)
-        VALUES ( ?, ? )&#39;&#39;&#39;, (album, artist_id))
-    cur.execute(&#39;SELECT id FROM Album WHERE title = ? &#39;, (album, ))
-    album_id = cur.fetchone()[0]
-    cur.execute(&#39;&#39;&#39;INSERT OR IGNORE INTO Genre (name)
-    VALUES ( ? )&#39;&#39;&#39;, (genre, ))
-    cur.execute(&#39;SELECT id FROM Genre WHERE name = ? &#39;, (genre, ))
-    genre_id = cur.fetchone()[0]
-    cur.execute(&#39;&#39;&#39;INSERT OR REPLACE INTO Track
-        (title, album_id, genre_id, len, rating, count)
-        VALUES ( ?, ?, ?, ?, ?, ?)&#39;&#39;&#39;,
-                (name, album_id, genre_id, length, rating, count))
-    conn.commit()</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">import xml.etree.ElementTree as ET</span><br><span class="line">import sqlite3</span><br><span class="line">conn = sqlite3.connect(&#x27;trackdb.sqlite&#x27;)</span><br><span class="line">cur = conn.cursor()</span><br><span class="line"># Make some fresh tables using executescript()</span><br><span class="line">cur.executescript(&#x27;&#x27;&#x27;</span><br><span class="line">DROP TABLE IF EXISTS Artist;</span><br><span class="line">DROP TABLE IF EXISTS Album;</span><br><span class="line">DROP TABLE IF EXISTS Genre;</span><br><span class="line">DROP TABLE IF EXISTS Track;</span><br><span class="line">CREATE TABLE Artist (</span><br><span class="line">    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,</span><br><span class="line">    name    TEXT UNIQUE</span><br><span class="line">);</span><br><span class="line">CREATE TABLE Album (</span><br><span class="line">    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,</span><br><span class="line">    artist_id  INTEGER,</span><br><span class="line">    title   TEXT UNIQUE</span><br><span class="line">);</span><br><span class="line">CREATE TABLE Genre (</span><br><span class="line">    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,</span><br><span class="line">    name   TEXT UNIQUE</span><br><span class="line">);</span><br><span class="line">CREATE TABLE Track (</span><br><span class="line">    id  INTEGER NOT NULL PRIMARY KEY</span><br><span class="line">        AUTOINCREMENT UNIQUE,</span><br><span class="line">    title TEXT  UNIQUE,</span><br><span class="line">    album_id  INTEGER,</span><br><span class="line">    genre_id  INTEGER,</span><br><span class="line">    len INTEGER, rating INTEGER, count INTEGER</span><br><span class="line">);</span><br><span class="line">&#x27;&#x27;&#x27;)</span><br><span class="line">fname = input(&#x27;Enter file name: &#x27;)</span><br><span class="line">if (len(fname) &lt; 1):</span><br><span class="line">    fname = &#x27;Library.xml&#x27;</span><br><span class="line"># &lt;key&gt;Track ID&lt;/key&gt;&lt;integer&gt;369&lt;/integer&gt;</span><br><span class="line"># &lt;key&gt;Name&lt;/key&gt;&lt;string&gt;Another One Bites The Dust&lt;/string&gt;</span><br><span class="line"># &lt;key&gt;Artist&lt;/key&gt;&lt;string&gt;Queen&lt;/string&gt;</span><br><span class="line">def lookup(d, key):</span><br><span class="line">    found = False</span><br><span class="line">    for child in d:</span><br><span class="line">        if found:</span><br><span class="line">            return child.text</span><br><span class="line">        if child.tag == &#x27;key&#x27; and child.text == key:</span><br><span class="line">            found = True</span><br><span class="line">    return None</span><br><span class="line">stuff = ET.parse(fname)</span><br><span class="line">all = stuff.findall(&#x27;dict/dict/dict&#x27;)</span><br><span class="line">print(&#x27;Dict count:&#x27;, len(all))</span><br><span class="line">for entry in all:</span><br><span class="line">    if (lookup(entry, &#x27;Track ID&#x27;) is None):</span><br><span class="line">        continue</span><br><span class="line">    name = lookup(entry, &#x27;Name&#x27;)</span><br><span class="line">    artist = lookup(entry, &#x27;Artist&#x27;)</span><br><span class="line">    album = lookup(entry, &#x27;Album&#x27;)</span><br><span class="line">    genre = lookup(entry, &#x27;Genre&#x27;)</span><br><span class="line">    count = lookup(entry, &#x27;Play Count&#x27;)</span><br><span class="line">    rating = lookup(entry, &#x27;Rating&#x27;)</span><br><span class="line">    length = lookup(entry, &#x27;Total Time&#x27;)</span><br><span class="line">    if name is None or artist is None or album is None:</span><br><span class="line">        continue</span><br><span class="line">    print(name, artist, album, genre, count, rating, length)</span><br><span class="line">    cur.execute(&#x27;&#x27;&#x27;INSERT OR IGNORE INTO Artist (name)</span><br><span class="line">        VALUES ( ? )&#x27;&#x27;&#x27;, (artist, ))</span><br><span class="line">    cur.execute(&#x27;SELECT id FROM Artist WHERE name = ? &#x27;, (artist, ))</span><br><span class="line">    artist_id = cur.fetchone()[0]</span><br><span class="line">    cur.execute(&#x27;&#x27;&#x27;INSERT OR IGNORE INTO Album (title, artist_id)</span><br><span class="line">        VALUES ( ?, ? )&#x27;&#x27;&#x27;, (album, artist_id))</span><br><span class="line">    cur.execute(&#x27;SELECT id FROM Album WHERE title = ? &#x27;, (album, ))</span><br><span class="line">    album_id = cur.fetchone()[0]</span><br><span class="line">    cur.execute(&#x27;&#x27;&#x27;INSERT OR IGNORE INTO Genre (name)</span><br><span class="line">    VALUES ( ? )&#x27;&#x27;&#x27;, (genre, ))</span><br><span class="line">    cur.execute(&#x27;SELECT id FROM Genre WHERE name = ? &#x27;, (genre, ))</span><br><span class="line">    genre_id = cur.fetchone()[0]</span><br><span class="line">    cur.execute(&#x27;&#x27;&#x27;INSERT OR REPLACE INTO Track</span><br><span class="line">        (title, album_id, genre_id, len, rating, count)</span><br><span class="line">        VALUES ( ?, ?, ?, ?, ?, ?)&#x27;&#x27;&#x27;,</span><br><span class="line">                (name, album_id, genre_id, length, rating, count))</span><br><span class="line">    conn.commit()</span><br></pre></td></tr></table></figure>
 <h4 id="Question-4"><a href="#Question-4" class="headerlink" title="Question 4"></a>Question 4</h4><p>This application will read roster data in JSON format, parse the file, and then produce an SQLite database that contains a User, Course, and Member table and populate the tables from the data file.<br>You can base your solution on this code: <a target="_blank" rel="noopener" href="https://www.py4e.com/code3/roster/roster.py">http://www.py4e.com/code3/roster/roster.py</a> - this code is incomplete as you need to modify the program to store the <strong>role</strong> column in the <strong>Member</strong> table to complete the assignment.<br>Each student gets their own file for the assignment. Download <a target="_blank" rel="noopener" href="https://www.py4e.com/tools/sql-intro/roster_data.php?PHPSESSID=4e9bbaef3d818a7530c32084639a353c">this file</a> and save it as <code>roster_data.json</code>. Move the downloaded file into the same folder as your <code>roster.py</code> program.<br>Once you have made the necessary changes to the program and it has been run successfully reading the above JSON data, run the following SQL command:</p>
-<pre><code>SELECT hex(User.name || Course.title || Member.role ) AS X FROM
-    User JOIN Member JOIN Course
-    ON User.id = Member.user_id AND Member.course_id = Course.id
-    ORDER BY X</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT hex(User.name || Course.title || Member.role ) AS X FROM</span><br><span class="line">    User JOIN Member JOIN Course</span><br><span class="line">    ON User.id = Member.user_id AND Member.course_id = Course.id</span><br><span class="line">    ORDER BY X</span><br></pre></td></tr></table></figure>
 <p>Find the <strong>first</strong> row in the resulting record set and enter the long string that looks like <strong>53656C696E613333</strong>.<br><strong>Solution</strong></p>
-<pre><code>import json
-import sqlite3
-# PART 1: Creating the database
-dbname = &quot;roster.sqlite&quot;
-conn = sqlite3.connect(dbname)
-cur = conn.cursor()
-cur.executescript(&#39;&#39;&#39;
-    DROP TABLE IF EXISTS User;
-    DROP TABLE IF EXISTS Course;
-    DROP TABLE IF EXISTS Member;
-    CREATE TABLE User (
-        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-        name TEXT UNIQUE
-    );
-    CREATE TABLE Course (
-        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-        title TEXT UNIQUE
-    );
-    CREATE TABLE Member (
-        user_id INTEGER,
-        course_id INTEGER,
-        role INTEGER,
-        PRIMARY KEY(user_id, course_id)
-    )
-&#39;&#39;&#39;)
-# Note: if we don&#39;t add UNIQUE after &quot;User.name&quot; and &quot;Course.title&quot;,
-# the IGNORE statement won&#39;t work and therefore we&#39;ll have duplicates
-# PART 2: DESERIALIZING THE data
-# The JSON data we&#39;re going to process is stored in an array form, with each
-# item being also an array of three elements: one corresponding to the username
-# one corresponding to the course name, and one indicating if the user is instructor
-# None of them has any field title.
-filename = &quot;roster_data.json&quot;
-jsondata = open(&#39;C:/Users/dell/Desktop/roster_data.json&#39;)
-data = json.load(jsondata)
-# PART 3: INSERTING DATA
-for entry in data:
-    user = entry[0]
-    course = entry[1]
-    instructor = entry[2]
-    # Inserting user
-    user_statement = &quot;&quot;&quot;INSERT OR IGNORE INTO User(name) VALUES( ? )&quot;&quot;&quot;
-    SQLparams = (user, )
-    cur.execute(user_statement, SQLparams)
-    # Inserting course
-    course_statement = &quot;&quot;&quot;INSERT OR IGNORE INTO Course(title) VALUES( ? )&quot;&quot;&quot;
-    SQLparams = (course, )
-    cur.execute(course_statement, SQLparams)
-    # Getting user and course id
-    courseID_statement = &quot;&quot;&quot;SELECT id FROM Course WHERE title = ?&quot;&quot;&quot;
-    SQLparams = (course, )
-    cur.execute(courseID_statement, SQLparams)
-    courseID = cur.fetchone()[0]
-    userID_statement = &quot;&quot;&quot;SELECT id FROM User WHERE name = ?&quot;&quot;&quot;
-    SQLparams = (user, )
-    cur.execute(userID_statement, SQLparams)
-    userID = cur.fetchone()[0]
-    # Inserting the entry
-    member_statement = &quot;&quot;&quot;INSERT INTO Member(user_id, course_id, role)
-        VALUES(?, ?, ?)&quot;&quot;&quot;
-    SQLparams = (userID, courseID, instructor)
-    cur.execute(member_statement, SQLparams)
-# Saving the changes
-conn.commit()
-# PART 4: Testing and obtaining the results
-test_statement = &quot;&quot;&quot;
-SELECT hex(User.name || Course.title || Member.role ) AS X FROM
-    User JOIN Member JOIN Course
-    ON User.id = Member.user_id AND Member.course_id = Course.id
-    ORDER BY X
-&quot;&quot;&quot;
-cur.execute(test_statement)
-result = cur.fetchone()
-print(&quot;RESULT: &quot; + str(result))
-# Closing the connection
-cur.close()
-conn.close()</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line">import sqlite3</span><br><span class="line"># PART 1: Creating the database</span><br><span class="line">dbname = &quot;roster.sqlite&quot;</span><br><span class="line">conn = sqlite3.connect(dbname)</span><br><span class="line">cur = conn.cursor()</span><br><span class="line">cur.executescript(&#x27;&#x27;&#x27;</span><br><span class="line">	DROP TABLE IF EXISTS User;</span><br><span class="line">	DROP TABLE IF EXISTS Course;</span><br><span class="line">	DROP TABLE IF EXISTS Member;</span><br><span class="line">	CREATE TABLE User (</span><br><span class="line">		id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,</span><br><span class="line">		name TEXT UNIQUE</span><br><span class="line">	);</span><br><span class="line">	CREATE TABLE Course (</span><br><span class="line">		id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,</span><br><span class="line">		title TEXT UNIQUE</span><br><span class="line">	);</span><br><span class="line">	CREATE TABLE Member (</span><br><span class="line">		user_id INTEGER,</span><br><span class="line">		course_id INTEGER,</span><br><span class="line">		role INTEGER,</span><br><span class="line">		PRIMARY KEY(user_id, course_id)</span><br><span class="line">	)</span><br><span class="line">&#x27;&#x27;&#x27;)</span><br><span class="line"># Note: if we don&#x27;t add UNIQUE after &quot;User.name&quot; and &quot;Course.title&quot;,</span><br><span class="line"># the IGNORE statement won&#x27;t work and therefore we&#x27;ll have duplicates</span><br><span class="line"># PART 2: DESERIALIZING THE data</span><br><span class="line"># The JSON data we&#x27;re going to process is stored in an array form, with each</span><br><span class="line"># item being also an array of three elements: one corresponding to the username</span><br><span class="line"># one corresponding to the course name, and one indicating if the user is instructor</span><br><span class="line"># None of them has any field title.</span><br><span class="line">filename = &quot;roster_data.json&quot;</span><br><span class="line">jsondata = open(&#x27;C:/Users/dell/Desktop/roster_data.json&#x27;)</span><br><span class="line">data = json.load(jsondata)</span><br><span class="line"># PART 3: INSERTING DATA</span><br><span class="line">for entry in data:</span><br><span class="line">    user = entry[0]</span><br><span class="line">    course = entry[1]</span><br><span class="line">    instructor = entry[2]</span><br><span class="line">    # Inserting user</span><br><span class="line">    user_statement = &quot;&quot;&quot;INSERT OR IGNORE INTO User(name) VALUES( ? )&quot;&quot;&quot;</span><br><span class="line">    SQLparams = (user, )</span><br><span class="line">    cur.execute(user_statement, SQLparams)</span><br><span class="line">    # Inserting course</span><br><span class="line">    course_statement = &quot;&quot;&quot;INSERT OR IGNORE INTO Course(title) VALUES( ? )&quot;&quot;&quot;</span><br><span class="line">    SQLparams = (course, )</span><br><span class="line">    cur.execute(course_statement, SQLparams)</span><br><span class="line">    # Getting user and course id</span><br><span class="line">    courseID_statement = &quot;&quot;&quot;SELECT id FROM Course WHERE title = ?&quot;&quot;&quot;</span><br><span class="line">    SQLparams = (course, )</span><br><span class="line">    cur.execute(courseID_statement, SQLparams)</span><br><span class="line">    courseID = cur.fetchone()[0]</span><br><span class="line">    userID_statement = &quot;&quot;&quot;SELECT id FROM User WHERE name = ?&quot;&quot;&quot;</span><br><span class="line">    SQLparams = (user, )</span><br><span class="line">    cur.execute(userID_statement, SQLparams)</span><br><span class="line">    userID = cur.fetchone()[0]</span><br><span class="line">    # Inserting the entry</span><br><span class="line">    member_statement = &quot;&quot;&quot;INSERT INTO Member(user_id, course_id, role)</span><br><span class="line">		VALUES(?, ?, ?)&quot;&quot;&quot;</span><br><span class="line">    SQLparams = (userID, courseID, instructor)</span><br><span class="line">    cur.execute(member_statement, SQLparams)</span><br><span class="line"># Saving the changes</span><br><span class="line">conn.commit()</span><br><span class="line"># PART 4: Testing and obtaining the results</span><br><span class="line">test_statement = &quot;&quot;&quot;</span><br><span class="line">SELECT hex(User.name || Course.title || Member.role ) AS X FROM</span><br><span class="line">    User JOIN Member JOIN Course</span><br><span class="line">    ON User.id = Member.user_id AND Member.course_id = Course.id</span><br><span class="line">    ORDER BY X</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">cur.execute(test_statement)</span><br><span class="line">result = cur.fetchone()</span><br><span class="line">print(&quot;RESULT: &quot; + str(result))</span><br><span class="line"># Closing the connection</span><br><span class="line">cur.close()</span><br><span class="line">conn.close()</span><br></pre></td></tr></table></figure>
 
   
   
@@ -1178,7 +654,7 @@ conn.close()</code></pre>
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -1203,6 +679,10 @@ conn.close()</code></pre>
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Python-for-Everybody/>http://blog.zhuangzhihao.top/Python-for-Everybody/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -1218,13 +698,6 @@ conn.close()</code></pre>
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Python/">Python</a>
-    </a>
-  </div>
-
 
         
       
@@ -1241,77 +714,6 @@ conn.close()</code></pre>
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Python-for-Everybody/&title=Python for everybody - Bezhuang's Blog&summary=
-The Python for Everybody Specialization provided by UNIVERSITY OF MICHIGAN introduces fundamental programming concepts including data structures, networked application program interfaces, and databases, using the Python programming language. Python for Everybody is a completely open-source course, you can find all the notes and textbooks on its official website, so this note will only contain my solution to all post-lesson exercises in this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Python-for-Everybody/&title=Python for everybody - Bezhuang's Blog&summary=
-The Python for Everybody Specialization provided by UNIVERSITY OF MICHIGAN introduces fundamental programming concepts including data structures, networked application program interfaces, and databases, using the Python programming language. Python for Everybody is a completely open-source course, you can find all the notes and textbooks on its official website, so this note will only contain my solution to all post-lesson exercises in this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Python-for-Everybody/&title=Python for everybody - Bezhuang's Blog&summary=
-The Python for Everybody Specialization provided by UNIVERSITY OF MICHIGAN introduces fundamental programming concepts including data structures, networked application program interfaces, and databases, using the Python programming language. Python for Everybody is a completely open-source course, you can find all the notes and textbooks on its official website, so this note will only contain my solution to all post-lesson exercises in this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC+ElEQVR42u3aQZIiMQwEQP7/6dkH7BB2SWJBS/o2wHTbqUuF5MeP9et6IAADBgwYMGDWwDyK668HNj8/Pf/0vKnzgAEDBgwYMGD2wVwHoCcHSjeWHrS6n/g8YMCAAQMGDJi1MOlBTgEuDYbp86qFAgMGDBgwYMCAqQa02/ekwRAMGDBgwIABA6bbWKoGu+kBHxgwYMCAAQPme2DSAdWrB2DdAeDbJpFgwIABAwYMmH8Gk67bjb3r7/J5wIABAwYMGDBrYLprqrFVbXSlge54HjBgwIABAwbMGpipxlB6EajacKpCXYODAQMGDBgwYNbBVC/cpBd+0vd2B3/xvsCAAQMGDBgwa2C6QFNBsdsoqwZSMGDAgAEDBsxemHRA1n7xi0HawRMMGDBgwIABsxYmbSx1g2K3IZXu7wgLBgwYMGDAgFkDMxWwqheIuheB0sIcfwcGDBgwYMCAWQOTXuCpXmBO4VLIauA8Jl8wYMCAAQMGzMfDVDdSheoO1qYGgceABwYMGDBgwID5eJjqqm5oOkim7wUDBgwYMGDA/L8wU42oE0S1EFXQdsADAwYMGDBgwHwMTLXhc9tIqga1tFBTgzcwYMCAAQMGzD6YuKFzGby635cPGEKDAQMGDBgwYPbBTAWl6u+mGmbVAoABAwYMGDBg9sNUG0PdwVp3YJe+91ggMGDAgAEDBsw6mKkDdRtf0xBxQcGAAQMGDBgwa2GmN9QNjulArhpIwYABAwYMGDB7YVKAtDE0FQynCwMGDBgwYMCA2QvTXWmAmz5QtSH2tDBgwIABAwYMmDUwr9poNfBNXUBKgyUYMGDAgAEDZi9MGuiqv09h08bZeMADAwYMGDBgwKyBSQNUNdiVB2LNxtfxeWDAgAEDBgyYr4XpBrUUNC3Y8XMwYMCAAQMGzNfCpMHqFrob/D6+UQUGDBgwYMCAefvALQWtgnQL9vS5YMCAAQMGDJh1MNXB1S1E9/+7g73bAoABAwYMGDBg9sBYYMCAAQMGDJhl6w/x0aJ7KpOomAAAAABJRU5ErkJggg==">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Python-for-Everybody/&text=Python for everybody - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1430,17 +832,9 @@ Some common sports injuries can occur when engaging in confrontational sports li
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1566,8 +960,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1923,29 +1315,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1984,7 +1353,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -2044,20 +1413,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -2270,6 +1625,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

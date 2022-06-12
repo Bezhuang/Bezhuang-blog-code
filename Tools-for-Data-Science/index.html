@@ -109,7 +109,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -233,16 +233,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -365,16 +375,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -398,7 +418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -421,36 +441,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -484,8 +474,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/R-Language/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>R Language</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
+    </a>
+  </div>
 
 
           
@@ -528,14 +522,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, RStudio IDE, Git, GitHub, and Watson Studio, what each tool is used for, what programming languages they can execute, their features and limitations. With the tools hosted in the cloud on Skills Network Labs, I can now run simple code in Python, R or Scala. The following are the notes I took during this course.</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 
 
 	<div class="row">
     <embed src="/pdf/Tools-for-Data-Science.pdf" width="100%" height="550" type="application/pdf">
 	</div>
-
 
 
 
@@ -747,10 +739,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>R supports importing data from different sources: Flat files, Databases, Web, Statistical software</p>
 </li>
 <li><p>Rstudio is an integrated development environment that helps improve and increase productivity with the R language</p>
-<pre><code class="R">library (datasets)
-data(iris)
-View(iris) 
-unique(iris$Species)</code></pre>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">library <span class="punctuation">(</span>datasets<span class="punctuation">)</span></span><br><span class="line">data<span class="punctuation">(</span>iris<span class="punctuation">)</span></span><br><span class="line">View<span class="punctuation">(</span>iris<span class="punctuation">)</span> </span><br><span class="line">unique<span class="punctuation">(</span>iris<span class="operator">$</span>Species<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Popular R Libraries for Data Science</p>
 <ul>
@@ -770,40 +759,10 @@ unique(iris$Species)</code></pre>
 </ul>
 </li>
 <li><p>Using the plot function</p>
-<pre><code class="R"># Define the cars vector with 5 values
-cars &lt;- c(1,4,6,5,10)
-# Gragh the cars vector with all defaults
-plot(caars, type=&quot;o&quot;)
-# Create a title
-title(main=&quot;Cars vs Index&quot;)</code></pre>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Define the cars vector with 5 values</span></span><br><span class="line">cars <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">4</span><span class="punctuation">,</span><span class="number">6</span><span class="punctuation">,</span><span class="number">5</span><span class="punctuation">,</span><span class="number">10</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment"># Gragh the cars vector with all defaults</span></span><br><span class="line">plot<span class="punctuation">(</span>caars<span class="punctuation">,</span> type<span class="operator">=</span><span class="string">&quot;o&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment"># Create a title</span></span><br><span class="line">title<span class="punctuation">(</span>main<span class="operator">=</span><span class="string">&quot;Cars vs Index&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Using ggplot</p>
-<pre><code class="R">library(datasets)
-# Load Data
-data(mtcars)
-# View first 5 rows
-head(mtcars, 5)
-#load ggplot package
-library(ggplot2)
-# create a scatterplot of displacement (disp) and miles per gallon (mpg)
-ggplot(aes(x=disp,y=mpg,),data=mtcars)+geom_point()
-# Add a title
-ggplot(aes(x=disp,y=mpg,),data=mtcars)+geom_point()+ggtitle(&quot;displacement vs miles per gallon&quot;)
-# change axis name
-ggplot(aes(x=disp,y=mpg,),data=mtcars)+geom_point()+ggtitle(&quot;displacement vs miles per gallon&quot;) + labs(x = &quot;Displacement&quot;, y = &quot;Miles per Gallon&quot;)
-#make vs a factor
-mtcars$vs &lt;- as.factor(mtcars$vs)
-# create boxplot of the distribution for v-shaped and straight Engine
-ggplot(aes(x=vs, y=mpg), data = mtcars) + geom_boxplot()
-# Add color to the boxplots to help differentiate
-ggplot(aes(x=vs, y=mpg, fill = vs), data = mtcars) + 
-  geom_boxplot(alpha=0.3) +
-  theme(legend.position=&quot;none&quot;)
-# reate the histogram of weight wt
-ggplot(aes(x=wt),data=mtcars) + geom_histogram(binwidth=0.5)
-# GGally is an extension of ggplot2
-library(GGally)
-ggpairs(iris, mapping=ggplot2::aes(colour = Species))</code></pre>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span>datasets<span class="punctuation">)</span></span><br><span class="line"><span class="comment"># Load Data</span></span><br><span class="line">data<span class="punctuation">(</span>mtcars<span class="punctuation">)</span></span><br><span class="line"><span class="comment"># View first 5 rows</span></span><br><span class="line">head<span class="punctuation">(</span>mtcars<span class="punctuation">,</span> <span class="number">5</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#load ggplot package</span></span><br><span class="line">library<span class="punctuation">(</span>ggplot2<span class="punctuation">)</span></span><br><span class="line"><span class="comment"># create a scatterplot of displacement (disp) and miles per gallon (mpg)</span></span><br><span class="line">ggplot<span class="punctuation">(</span>aes<span class="punctuation">(</span>x<span class="operator">=</span>disp<span class="punctuation">,</span>y<span class="operator">=</span>mpg<span class="punctuation">,</span><span class="punctuation">)</span><span class="punctuation">,</span>data<span class="operator">=</span>mtcars<span class="punctuation">)</span><span class="operator">+</span>geom_point<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment"># Add a title</span></span><br><span class="line">ggplot<span class="punctuation">(</span>aes<span class="punctuation">(</span>x<span class="operator">=</span>disp<span class="punctuation">,</span>y<span class="operator">=</span>mpg<span class="punctuation">,</span><span class="punctuation">)</span><span class="punctuation">,</span>data<span class="operator">=</span>mtcars<span class="punctuation">)</span><span class="operator">+</span>geom_point<span class="punctuation">(</span><span class="punctuation">)</span><span class="operator">+</span>ggtitle<span class="punctuation">(</span><span class="string">&quot;displacement vs miles per gallon&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment"># change axis name</span></span><br><span class="line">ggplot<span class="punctuation">(</span>aes<span class="punctuation">(</span>x<span class="operator">=</span>disp<span class="punctuation">,</span>y<span class="operator">=</span>mpg<span class="punctuation">,</span><span class="punctuation">)</span><span class="punctuation">,</span>data<span class="operator">=</span>mtcars<span class="punctuation">)</span><span class="operator">+</span>geom_point<span class="punctuation">(</span><span class="punctuation">)</span><span class="operator">+</span>ggtitle<span class="punctuation">(</span><span class="string">&quot;displacement vs miles per gallon&quot;</span><span class="punctuation">)</span> <span class="operator">+</span> labs<span class="punctuation">(</span>x <span class="operator">=</span> <span class="string">&quot;Displacement&quot;</span><span class="punctuation">,</span> y <span class="operator">=</span> <span class="string">&quot;Miles per Gallon&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#make vs a factor</span></span><br><span class="line">mtcars<span class="operator">$</span>vs <span class="operator">&lt;-</span> as.factor<span class="punctuation">(</span>mtcars<span class="operator">$</span>vs<span class="punctuation">)</span></span><br><span class="line"><span class="comment"># create boxplot of the distribution for v-shaped and straight Engine</span></span><br><span class="line">ggplot<span class="punctuation">(</span>aes<span class="punctuation">(</span>x<span class="operator">=</span>vs<span class="punctuation">,</span> y<span class="operator">=</span>mpg<span class="punctuation">)</span><span class="punctuation">,</span> data <span class="operator">=</span> mtcars<span class="punctuation">)</span> <span class="operator">+</span> geom_boxplot<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment"># Add color to the boxplots to help differentiate</span></span><br><span class="line">ggplot<span class="punctuation">(</span>aes<span class="punctuation">(</span>x<span class="operator">=</span>vs<span class="punctuation">,</span> y<span class="operator">=</span>mpg<span class="punctuation">,</span> fill <span class="operator">=</span> vs<span class="punctuation">)</span><span class="punctuation">,</span> data <span class="operator">=</span> mtcars<span class="punctuation">)</span> <span class="operator">+</span> </span><br><span class="line">  geom_boxplot<span class="punctuation">(</span>alpha<span class="operator">=</span><span class="number">0.3</span><span class="punctuation">)</span> <span class="operator">+</span></span><br><span class="line">  theme<span class="punctuation">(</span>legend.position<span class="operator">=</span><span class="string">&quot;none&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment"># reate the histogram of weight wt</span></span><br><span class="line">ggplot<span class="punctuation">(</span>aes<span class="punctuation">(</span>x<span class="operator">=</span>wt<span class="punctuation">)</span><span class="punctuation">,</span>data<span class="operator">=</span>mtcars<span class="punctuation">)</span> <span class="operator">+</span> geom_histogram<span class="punctuation">(</span>binwidth<span class="operator">=</span><span class="number">0.5</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment"># GGally is an extension of ggplot2</span></span><br><span class="line">library<span class="punctuation">(</span>GGally<span class="punctuation">)</span></span><br><span class="line">ggpairs<span class="punctuation">(</span>iris<span class="punctuation">,</span> mapping<span class="operator">=</span>ggplot2<span class="operator">::</span>aes<span class="punctuation">(</span>colour <span class="operator">=</span> Species<span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h3><ul>
@@ -824,15 +783,7 @@ ggpairs(iris, mapping=ggplot2::aes(colour = Species))</code></pre>
 <li><p>Working directory contains the files and subdirectories on your computer that are associated with a Git repository</p>
 </li>
 <li><p>Basic Git Commands</p>
-<pre><code class="bash">git init
-git add *
-git status
-git commit
-git reset
-git log
-git branch
-git checkout
-git merge</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add *</span><br><span class="line">git status</span><br><span class="line">git commit</span><br><span class="line">git reset</span><br><span class="line">git <span class="built_in">log</span></span><br><span class="line">git branch</span><br><span class="line">git checkout</span><br><span class="line">git merge</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Working with Branches</p>
 <ul>
@@ -885,6 +836,10 @@ git merge</code></pre>
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Tools-for-Data-Science/>http://blog.zhuangzhihao.top/Tools-for-Data-Science/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -900,12 +855,8 @@ git merge</code></pre>
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/R-Language/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>R Language</p></a></div>
 
 
         
@@ -923,77 +874,6 @@ git merge</code></pre>
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Tools-for-Data-Science/&title=Tools for Data Science - Bezhuang's Blog&summary=
-In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, RStudio IDE, Git, GitHub, and Watson Studio, what each tool is used for, what programming languages they can execute, their features and limitations. With the tools hosted in the cloud on Skills Network Labs, I can now run simple code in Python, R or Scala. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Tools-for-Data-Science/&title=Tools for Data Science - Bezhuang's Blog&summary=
-In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, RStudio IDE, Git, GitHub, and Watson Studio, what each tool is used for, what programming languages they can execute, their features and limitations. With the tools hosted in the cloud on Skills Network Labs, I can now run simple code in Python, R or Scala. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Tools-for-Data-Science/&title=Tools for Data Science - Bezhuang's Blog&summary=
-In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, RStudio IDE, Git, GitHub, and Watson Studio, what each tool is used for, what programming languages they can execute, their features and limitations. With the tools hosted in the cloud on Skills Network Labs, I can now run simple code in Python, R or Scala. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADAElEQVR42u3aSXKEQAwEQP7/afsDJkYbGA3ZtzG4l+RSIfXxY/w5DgRgwIABAwbMGpijOE4nPnl+DI2r1gEDBgwYMGDA7IUJB6AgTHbjZ/NnP0T3PGDAgAEDBgyYvTDVjWcDWPYg1eCXfh8MGDBgwIAB83qYavDLFqKi84ABAwYMGDBgwGTf7wa3duEJDBgwYMCAAfMamOrC0SDWDWjdhuBtnUgwYMCAAQMGzG0w2RGF+q/f5fOAAQMGDBgwYNbAdEd249kAWC1Ylc8DBgwYMGDAgFkDUw1I0QLRVFDMFrqqwGDAgAEDBgyYPTBTDa8q3FSBaewDgQEDBgwYMGDWwGQv5EQPmIWuFqKqwfEUEAwYMGDAgAGzDqba4KoecCqgdf8PDBgwYMCAAbMfpltQmmqMTTfwos/BgAEDBgwYMN8Dky0cdQtN2ULWdOMNDBgwYMCAAbMXZmpDUwWpaqGpHSDBgAEDBgwYMGtgogWgqYBVbcxdHfzAgAEDBgwYMPtgqg23qcLS1EWl6rzjnUgwYMCAAQMGzG0w2UD16f3q8+z66QtB0Q8IBgwYMGDAgFkDUw102UJStABWLWxV4cOFKjBgwIABAwbM42CmGm5TB86uV23Yna4DBgwYMGDAgPkamOmGV3bedmDL7g8MGDBgwIABswYmGuSqQaraYKvuq/t3MGDAgAEDBsw+mOmG23Twiz7P7u/2TiQYMGDAgAED5t9guoWrqy78VIPnWMADAwYMGDBgwDwGJjxRE7a7XvUCU7jhBgYMGDBgwIB5LEx3ZDfUbcBNBdCPAQ8MGDBgwIAB83iYozi6UN0LSVOB8GPDDQwYMGDAgAHzeJhsoIs2tLINsOoHm9ovGDBgwIABA2YvTDVAdRthVxW2ovsDAwYMGDBgwLwXJguVPXC1kZYGAwMGDBgwYMC8DqYK2G3AZZ9/nB8MGDBgwIABsxYmWyiaAp6+eFRu0IEBAwYMGDBg1sGMN66aBawpuOiHBAMGDBgwYMDsgzHAgAEDBgwYMMvGLy4R5vDjS5bfAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Tools-for-Data-Science/&text=Tools for Data Science - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1112,17 +992,9 @@ Jupyter Notebook 是基于浏览器网页的用于交互计算的应用程序，
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1248,8 +1120,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1605,29 +1475,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1666,7 +1513,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1726,20 +1573,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1952,6 +1785,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

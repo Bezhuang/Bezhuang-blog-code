@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91/">其他开发</a>
+    </a>
+  </div>
 
 
           
@@ -506,7 +500,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：728字</p>
+      <p>字数：710字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -529,8 +523,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、服务器镜像信息"><a href="#一、服务器镜像信息" class="headerlink" title="一、服务器镜像信息"></a>一、服务器镜像信息</h3><p>我使用的是阿里云轻量应用服务器提供的 LNMP 7.4 镜像，该镜像为LNMP（Ubuntu18.04 64位+Nginx+MySQL5.7+PHP5.3～8.0切换）架构，jemalloc优化内存管理，脚本菜单式添加Nginx虚拟主机绑定，并支持内网OSS备份功能，是常见的搭建Web应用所需的环境，支持高并发性能。</p>
 <p>应用程序安装信息：</p>
 <ul>
@@ -538,77 +531,46 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 <li><p>PHP 7.4：<code>/usr/local/php</code></p>
 </li>
-<li><p>MySQL 5.7：<code>/usr/local/mysql</code></p>
-</li>
-<li><p>数据库地址：127.0.0.1:3306 </p>
-</li>
-<li><p>网站根目录：<code>/data/wwwroot</code></p>
-</li>
+<li>MySQL 5.7：<code>/usr/local/mysql</code></li>
+<li>数据库地址：127.0.0.1:3306 </li>
+<li>网站根目录：<code>/data/wwwroot</code></li>
 </ul>
 <p>查询数据库和 FTP 密码</p>
-<pre><code class="bash">sudo cat /root/ReadMe</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">cat</span> /root/ReadMe</span><br></pre></td></tr></table></figure>
 <h3 id="二、Ubuntu-系统配置"><a href="#二、Ubuntu-系统配置" class="headerlink" title="二、Ubuntu 系统配置"></a>二、Ubuntu 系统配置</h3><p>依赖源设置：</p>
-<pre><code class="bash">mv /etc/apt/sources.list&#123;,bak&#125; #备份sources.list
-cat &gt; /etc/apt/sources.list &lt;&lt; EOF
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-EOF
-apt update</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> /etc/apt/sources.list&#123;,bak&#125; <span class="comment">#备份sources.list</span></span><br><span class="line"><span class="built_in">cat</span> &gt; /etc/apt/sources.list &lt;&lt; <span class="string">EOF</span></span><br><span class="line"><span class="string">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span></span><br><span class="line"><span class="string">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span></span><br><span class="line"><span class="string">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span></span><br><span class="line"><span class="string">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span></span><br><span class="line"><span class="string">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span></span><br><span class="line"><span class="string">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span></span><br><span class="line"><span class="string">EOF</span></span><br><span class="line">apt update</span><br></pre></td></tr></table></figure>
 <p>在防火墙添加规则放行 21、20000/30000 端口，允许通过 FTP 连接。</p>
 <h3 id="三、搭建开发环境"><a href="#三、搭建开发环境" class="headerlink" title="三、搭建开发环境"></a>三、搭建开发环境</h3><p>C/C++ 开发环境：</p>
-<pre><code class="bash">sudo apt-get install build-essential</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br></pre></td></tr></table></figure>
 <p>Python3 开发环境：</p>
-<pre><code class="bash">python3 --version  
-sudo apt-get install python3-pip</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python3 --version  </span><br><span class="line">sudo apt-get install python3-pip</span><br></pre></td></tr></table></figure>
 <p>Java 开发环境：</p>
-<pre><code class="bash">sudo apt install openjdk-11-jdk</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install openjdk-11-jdk</span><br></pre></td></tr></table></figure>
 <p>Go 开发环境：</p>
-<pre><code class="bash">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local
-vim /etc/profile</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo wget -c https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O - | sudo tar -xz -C /usr/local</span><br><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
 <p>添加以下内容：</p>
-<pre><code class="bash">export GOROOT=/usr/local/go
-export GOPATH=/tufei/code/go
-export GOBIN=$GOPATH/bin
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:$PATH</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GOROOT=/usr/local/go</span><br><span class="line"><span class="built_in">export</span> GOPATH=/tufei/code/go</span><br><span class="line"><span class="built_in">export</span> GOBIN=<span class="variable">$GOPATH</span>/bin</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$GOPATH</span>:<span class="variable">$GOBIN</span>:<span class="variable">$GOROOT</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
 <p>保存：</p>
-<pre><code class="bash">source  /etc/profile
-go version</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span>  /etc/profile</span><br><span class="line">go version</span><br></pre></td></tr></table></figure>
 <p>Git 安装配置：</p>
-<pre><code class="bash">sudo apt-get install git
-git config --global user.name &quot;Zhuang Zhihao&quot;
-git config --global user.email &quot;bezhuang@outlook.com&quot;
-ssh-keygen -t rsa -C &quot;bezhuang@outlook.com&quot;
-cat /root/.ssh/id_rsa.pub</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br><span class="line">git config --global user.name <span class="string">&quot;Zhuang Zhihao&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;bezhuang@outlook.com&quot;</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;bezhuang@outlook.com&quot;</span></span><br><span class="line"><span class="built_in">cat</span> /root/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>提交公钥到 Github 或其他 Git 仓库。</p>
 <h3 id="四、管理服务"><a href="#四、管理服务" class="headerlink" title="四、管理服务"></a>四、管理服务</h3><p>Nginx：</p>
-<pre><code class="bash">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx &#123;start|stop|status|restart|reload|configtest&#125;</span><br></pre></td></tr></table></figure>
 <p>MySQL：</p>
-<pre><code class="bash">service mysqld &#123;start|stop|restart|reload|status&#125;</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld &#123;start|stop|restart|reload|status&#125;</span><br></pre></td></tr></table></figure>
 <p>PHP：</p>
-<pre><code class="bash">service php-fpm &#123;start|stop|restart|reload|status&#125;</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service php-fpm &#123;start|stop|restart|reload|status&#125;</span><br></pre></td></tr></table></figure>
 <p>Pure-Ftpd：</p>
-<pre><code class="bash">service pureftpd &#123;start|stop|restart|status&#125;</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service pureftpd &#123;start|stop|restart|status&#125;</span><br></pre></td></tr></table></figure>
 <p>Redis：</p>
-<pre><code class="bash">service redis-server &#123;start|stop|status|restart&#125;</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service redis-server &#123;start|stop|status|restart&#125;</span><br></pre></td></tr></table></figure>
 <p>Memcached：</p>
-<pre><code class="bash">service memcached &#123;start|stop|status|restart|reload&#125;</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service memcached &#123;start|stop|status|restart|reload&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="五、虚拟主机管理"><a href="#五、虚拟主机管理" class="headerlink" title="五、虚拟主机管理"></a>五、虚拟主机管理</h3><p>添加虚拟主机：</p>
-<pre><code class="bash">cd /root/oneinstack
-./vhost.sh</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /root/oneinstack</span><br><span class="line">./vhost.sh</span><br></pre></td></tr></table></figure>
 <p>删除虚拟主机：</p>
-<pre><code class="bash">./vhost.sh --del</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./vhost.sh --del</span><br></pre></td></tr></table></figure>
 <h3 id="六、本地开发环境"><a href="#六、本地开发环境" class="headerlink" title="六、本地开发环境"></a>六、本地开发环境</h3><p>使用 Visual Studio Code 中的 Remote -SSH 插件连接，</p>
 <p>使用 Termius 进行 SSH 和 SFTP 连接，</p>
 <p>博客现仍使用 Hexo，Typora 软件用于编写博客文章，uPic 软件用于上传图床。</p>
@@ -623,7 +585,7 @@ cat /root/.ssh/id_rsa.pub</code></pre>
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -648,6 +610,10 @@ cat /root/.ssh/id_rsa.pub</code></pre>
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/>http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -663,12 +629,8 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91/">其他开发</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div>
 
 
         
@@ -686,77 +648,6 @@ cat /root/.ssh/id_rsa.pub</code></pre>
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&title=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog&summary=
-刚刚续费了一年的阿里云轻量应用服务器，打算把大多数的开发环境放到服务器上，实现远程开发。我使用的是 macOS Monterey 和基于 Ubuntu 18.04 的 LNMP 镜像系统，IDE 选取 Visual Studio Code 和 IntelliJ IDEA 进行开发学习。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEb0lEQVR42u3awXLrMAgF0Pz/T/ft30zHXMCymznaJXEj6ZAFUD4/1i3rgwAsWAssWLAW2COwn+b69Ysvnks/7+5fPd//z089wIIFCxYsWLBgwZ6FLSfAFyDbAasCnArM5b3BggULFixYsGDBPgJbTaBTgPS5rferoFseYMGCBQsWLFiwYL8T9mrf7j5pgj8tdMCCBQsWLFiwYMF+B2y34T2FrAKmBQxYsGDBggULFizYvwXbbQRXL7Q1yJEGbrvAAAsWLFiwYMGCBfsO2O5Fv/V12wMsWLBgwYIFCxbsEdjtVQ1E9f1uIXBXQXB5f7BgwYIFCxYsWLBHYKsbpgVCOujR3Wd73yk4WLBgwYIFCxYs2DOw0w3SBHxaGGwVJNXPq/uABQsWLFiwYMGCPQs7HVDoBqh6kbsa0937gAULFixYsGDBgn0HbAqUblwd7J0GOk30U7DyDwIsWLBgwYIFCxbsEditgY3tRvJ2ILZ+EJfnBQsWLFiwYMGCBXsUdutA3cb1NHDdQmfayAcLFixYsGDBggX7LGw3YZ8WAtWEfKuxvjUYAhYsWLBgwYIFC/YdsNMGdjdA3Ub3dgN8GmiwYMGCBQsWLFiwz8CmCfg00U8b7NX30/2rjfHy94IFCxYsWLBgwYJ9BDa98PbgRbeQ6EJ27/nra7BgwYIFCxYsWLBHYOOBhOFBuo3yn+Laho0LIrBgwYIFCxYsWLBHYNODdwuEbmC2E/m00IkdwIIFCxYsWLBgwR6F7SbI1QClAxDT83QLg+5gCliwYMGCBQsWLNhnYO9O9LsJe7fBvTVoEv8jACxYsGDBggULFuxR2Cno9mDG9qBGCt/+O7BgwYIFCxYsWLBHYKeFQvfC3Ub0dqO8CwoWLFiwYMGCBQv2HbBpI3i7sZ1etNvQTguTNEBgwYIFCxYsWLBgz8JOG9jbAan+fTpgsT1wUq68wIIFCxYsWLBgwa7Cdgcppo3naQGRnmOroX55LrBgwYIFCxYsWLBHYdNBi2qCn8JPG87bAY0b52DBggULFixYsGCPwHYbzdOLTy+SNuCnjXKwYMGCBQsWLFiw74RNC4W0QTx9Pt1/u9AoBxAsWLBgwYIFCxbsEditRH07ANNCIb1fFxosWLBgwYIFCxbsM7Bbiff2xaaN7u4gyXh/sGDBggULFixYsEdg0wGLaaK/3VDvNrSn940rL7BgwYIFCxYsWLCrsNM1HYioDkh0z3NXo7w8CQMWLFiwYMGCBQv2FthPc1U3mgag+v1dyO7rcqMbLFiwYMGCBQsW7K2wpw/aDVA6aFItVKbfCxYsWLBgwYIFC/ZZ2HQwo9wADguHtNE8LVy2CiKwYMGCBQsWLFiwfwM2Tci3oLsJ/nbj/bYCASxYsGDBggULFuyRfmzamN4KZNqYT8+bFhBgwYIFCxYsWLBgn4G966BbDefuIMZWodAuEMCCBQsWLFiwYMHeArt1oW5gts6zBdYulMCCBQsWLFiwYMEegbV2F1iwYC2wYMFaYG9d/wC1GNecmm2H+gAAAABJRU5ErkJggg==">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/&text=macOS + Ubuntu 实现远程开发配置 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -875,17 +766,9 @@ Go 语言是 Google 开发的一种静态强类型、编译型、并发型，并
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1011,8 +894,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1368,29 +1249,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1429,7 +1287,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1489,20 +1347,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1715,6 +1559,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

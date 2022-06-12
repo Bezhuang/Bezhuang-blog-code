@@ -107,7 +107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -231,16 +231,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -363,16 +373,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -396,7 +416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -419,36 +439,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -482,6 +472,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
+    </a>
+  </div>
+
 
           
         
@@ -500,7 +497,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：2.7k字</p>
+      <p>字数：2.6k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -523,14 +520,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue to expand Python learning. The following are the notes I took during this course. Since that I’ve learned <a href="/py4e-code">Python for everybody</a> on Coursera before, so this note will only contain the necessary outlines and newly learned content.</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 
 
 	<div class="row">
     <embed src="/pdf/Coursera-Py-for-DS&amp;AI.pdf" width="100%" height="550" type="application/pdf">
 	</div>
-
 
 
 
@@ -584,33 +579,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>An object is an instance of a particular type.</p>
 </li>
 <li><p>Class includes Data attributes and methods  <code>dir(NameOfObject):</code></p>
-<pre><code class="python">class Circle(object):
-    def __init__(self, radius, color=&#39;red&#39;):
-        self.radius = radius;
-        self.color = color;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Circle</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, radius, color=<span class="string">&#x27;red&#x27;</span></span>):</span><br><span class="line">        self.radius = radius;</span><br><span class="line">        self.color = color;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 <li><p>Reading and Writing files with <code>open()</code></p>
-<pre><code class="python">with open(&quot;/example1.txt&quot;, &quot;r&quot;) as File1:  # &quot;r&quot; for reading
-    file_stuff=File1.read()  # file.readlines()can save text to a list
-    print(file_stuff)        # file.readline(3)can only read 1 line
-print(File1.closed)
-
-with open(&quot;/example2.txt&quot;, &quot;a&quot;) as File2:  #&quot;a&quot; for appending
-        File2.write(line)
-
-with open(&quot;example1.txt&quot;, &quot;r&quot;) as readfile:   # copy file
-    with open(&quot;example2.txt&quot;, &quot;w&quot;):     # &quot;w&quot; for writing
-        for line in readfile:
-            writefile.write(line)</code></pre>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;/example1.txt&quot;</span>, <span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> File1:  <span class="comment"># &quot;r&quot; for reading</span></span><br><span class="line">    file_stuff=File1.read()  <span class="comment"># file.readlines()can save text to a list</span></span><br><span class="line">    <span class="built_in">print</span>(file_stuff)        <span class="comment"># file.readline(3)can only read 1 line</span></span><br><span class="line"><span class="built_in">print</span>(File1.closed)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;/example2.txt&quot;</span>, <span class="string">&quot;a&quot;</span>) <span class="keyword">as</span> File2:  <span class="comment">#&quot;a&quot; for appending</span></span><br><span class="line">        File2.write(line)</span><br><span class="line">        </span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;example1.txt&quot;</span>, <span class="string">&quot;r&quot;</span>) <span class="keyword">as</span> readfile:   <span class="comment"># copy file</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;example2.txt&quot;</span>, <span class="string">&quot;w&quot;</span>):     <span class="comment"># &quot;w&quot; for writing</span></span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> readfile:</span><br><span class="line">            writefile.write(line)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><h4 id="Loading-data-with-Pandas"><a href="#Loading-data-with-Pandas" class="headerlink" title="Loading data with Pandas"></a>Loading data with Pandas</h4><pre><code class="python">import pandas as pd
-csv_path=&quot;file1.csv&quot;
-df = pd.read_csv(csv_path)  # Dataframes
-df.head()  # Treat the first row as the column name
-x=df[[&#39;ColumnA&#39;]]</code></pre>
+<h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><h4 id="Loading-data-with-Pandas"><a href="#Loading-data-with-Pandas" class="headerlink" title="Loading data with Pandas"></a>Loading data with Pandas</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">csv_path=<span class="string">&quot;file1.csv&quot;</span></span><br><span class="line">df = pd.read_csv(csv_path)  <span class="comment"># Dataframes</span></span><br><span class="line">df.head()  <span class="comment"># Treat the first row as the column name</span></span><br><span class="line">x=df[[<span class="string">&#x27;ColumnA&#x27;</span>]]</span><br></pre></td></tr></table></figure>
 <h4 id="Select-Data-from-a-data-frame-in-Pandas"><a href="#Select-Data-from-a-data-frame-in-Pandas" class="headerlink" title="Select Data from a data frame in Pandas"></a>Select Data from a data frame in Pandas</h4><ul>
 <li><code>df.loc[&#39;row&#39;, &#39;column&#39;]: &#39;value&#39;</code><ul>
 <li><code>loc</code> is primarily label based; when two arguments are used, you use column headers and row indexes to select the data you want.  </li>
@@ -629,182 +606,49 @@ x=df[[&#39;ColumnA&#39;]]</code></pre>
 </li>
 </ul>
 <h4 id="Working-with-and-Saving-data-with-Pandas"><a href="#Working-with-and-Saving-data-with-Pandas" class="headerlink" title="Working with and Saving data with Pandas"></a>Working with and Saving data with Pandas</h4><ul>
-<li><code>df[&#39;ColumnA&#39;].unique()</code>，``df1=df[df[‘ColumnA’]&gt;=1980]`</li>
+<li><code>df[&#39;ColumnA&#39;].unique()</code>，<code>`df1=df[df[&#39;ColumnA&#39;]&gt;=1980]</code></li>
 <li>Save as CSV：<code>df1.to_csv(&#39;new.csv&#39;)</code></li>
 </ul>
-<h3 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h3><h4 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h4><pre><code class="python"># Import the libraries
-import time 
-import sys
-import numpy as np 
-import matplotlib.pyplot as plt
-%matplotlib inline  
-
-# Plotting functions
-def Plotvec1(u, z, v):    
-    ax = plt.axes()
-    ax.arrow(0, 0, *u, head_width=0.05, color=&#39;r&#39;, head_length=0.1)
-    plt.text(*(u + 0.1), &#39;u&#39;)    
-    ax.arrow(0, 0, *v, head_width=0.05, color=&#39;b&#39;, head_length=0.1)
-    plt.text(*(v + 0.1), &#39;v&#39;)
-    ax.arrow(0, 0, *z, head_width=0.05, head_length=0.1)
-    plt.text(*(z + 0.1), &#39;z&#39;)
-    plt.ylim(-2, 2)
-    plt.xlim(-2, 2)
-def Plotvec2(a,b):
-    ax = plt.axes()
-    ax.arrow(0, 0, *a, head_width=0.05, color =&#39;r&#39;, head_length=0.1)
-    plt.text(*(a + 0.1), &#39;a&#39;)
-    ax.arrow(0, 0, *b, head_width=0.05, color =&#39;b&#39;, head_length=0.1)
-    plt.text(*(b + 0.1), &#39;b&#39;)
-    plt.ylim(-2, 2)
-    plt.xlim(-2, 2)</code></pre>
+<h3 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h3><h4 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Import the libraries</span></span><br><span class="line"><span class="keyword">import</span> time </span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np </span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">%matplotlib inline  </span><br><span class="line"></span><br><span class="line"><span class="comment"># Plotting functions</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">Plotvec1</span>(<span class="params">u, z, v</span>):    </span><br><span class="line">    ax = plt.axes()</span><br><span class="line">    ax.arrow(<span class="number">0</span>, <span class="number">0</span>, *u, head_width=<span class="number">0.05</span>, color=<span class="string">&#x27;r&#x27;</span>, head_length=<span class="number">0.1</span>)</span><br><span class="line">    plt.text(*(u + <span class="number">0.1</span>), <span class="string">&#x27;u&#x27;</span>)    </span><br><span class="line">    ax.arrow(<span class="number">0</span>, <span class="number">0</span>, *v, head_width=<span class="number">0.05</span>, color=<span class="string">&#x27;b&#x27;</span>, head_length=<span class="number">0.1</span>)</span><br><span class="line">    plt.text(*(v + <span class="number">0.1</span>), <span class="string">&#x27;v&#x27;</span>)</span><br><span class="line">    ax.arrow(<span class="number">0</span>, <span class="number">0</span>, *z, head_width=<span class="number">0.05</span>, head_length=<span class="number">0.1</span>)</span><br><span class="line">    plt.text(*(z + <span class="number">0.1</span>), <span class="string">&#x27;z&#x27;</span>)</span><br><span class="line">    plt.ylim(-<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">    plt.xlim(-<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">Plotvec2</span>(<span class="params">a,b</span>):</span><br><span class="line">    ax = plt.axes()</span><br><span class="line">    ax.arrow(<span class="number">0</span>, <span class="number">0</span>, *a, head_width=<span class="number">0.05</span>, color =<span class="string">&#x27;r&#x27;</span>, head_length=<span class="number">0.1</span>)</span><br><span class="line">    plt.text(*(a + <span class="number">0.1</span>), <span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">    ax.arrow(<span class="number">0</span>, <span class="number">0</span>, *b, head_width=<span class="number">0.05</span>, color =<span class="string">&#x27;b&#x27;</span>, head_length=<span class="number">0.1</span>)</span><br><span class="line">    plt.text(*(b + <span class="number">0.1</span>), <span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">    plt.ylim(-<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">    plt.xlim(-<span class="number">2</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 <h4 id="One-Dimensional-Numpy"><a href="#One-Dimensional-Numpy" class="headerlink" title="One Dimensional Numpy"></a>One Dimensional Numpy</h4><ul>
 <li>A numpy array is similar to a list. It’s usually fixed in size and each element is of the same type.</li>
 </ul>
-<pre><code class="python">import numpy as np
-a=np.array([0,1,2,3,4])
-a.size # Get the size of numpy array  5
-a.ndim # Get the number of dimensions of numpy array  1
-a.shape # Get the shape/size of numpy array  (5,)
-a.dtype # Check the type of the values stored in numpy array
-a[0]=20 # Assign value  [20,1,2,3,4]
-b=a[3:5] # Slicing  [3,4]
-mean = a.mean() # Get the mean of numpy array
-standard_deviation=a.std() # Get the standard deviation of numpy array
-max_b = b.max()
-min_b = b.min()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a=np.array([<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">a.size <span class="comment"># Get the size of numpy array  5</span></span><br><span class="line">a.ndim <span class="comment"># Get the number of dimensions of numpy array  1</span></span><br><span class="line">a.shape <span class="comment"># Get the shape/size of numpy array  (5,)</span></span><br><span class="line">a.dtype <span class="comment"># Check the type of the values stored in numpy array</span></span><br><span class="line">a[<span class="number">0</span>]=<span class="number">20</span> <span class="comment"># Assign value  [20,1,2,3,4]</span></span><br><span class="line">b=a[<span class="number">3</span>:<span class="number">5</span>] <span class="comment"># Slicing  [3,4]</span></span><br><span class="line">mean = a.mean() <span class="comment"># Get the mean of numpy array</span></span><br><span class="line">standard_deviation=a.std() <span class="comment"># Get the standard deviation of numpy array</span></span><br><span class="line">max_b = b.<span class="built_in">max</span>()</span><br><span class="line">min_b = b.<span class="built_in">min</span>()</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Numpy Array Operations</li>
 </ul>
-<pre><code class="python">u = np.array([1, 0])
-v = np.array([0, 1])
-z = u + v # Numpy Array Addition
-Plotvec1(u, z, v) # Plot numpy arrays (equivalent to vector addition)
-z = 2 * u # Numpy Array Multiplication
-z = u * v # Calculate the production of two numpy arrays
-np.dot(u, v) # Calculate the dot product  1*0+0*1
-u + 1 # Add the constant to array  [2,1]
-x = np.array([0, np.pi/2 , np.pi]) # Create the numpy array in radians
-y = np.sin(x) # Calculate the sin of each elements</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">u = np.array([<span class="number">1</span>, <span class="number">0</span>])</span><br><span class="line">v = np.array([<span class="number">0</span>, <span class="number">1</span>])</span><br><span class="line">z = u + v <span class="comment"># Numpy Array Addition</span></span><br><span class="line">Plotvec1(u, z, v) <span class="comment"># Plot numpy arrays (equivalent to vector addition)</span></span><br><span class="line">z = <span class="number">2</span> * u <span class="comment"># Numpy Array Multiplication</span></span><br><span class="line">z = u * v <span class="comment"># Calculate the production of two numpy arrays</span></span><br><span class="line">np.dot(u, v) <span class="comment"># Calculate the dot product  1*0+0*1</span></span><br><span class="line">u + <span class="number">1</span> <span class="comment"># Add the constant to array  [2,1]</span></span><br><span class="line">x = np.array([<span class="number">0</span>, np.pi/<span class="number">2</span> , np.pi]) <span class="comment"># Create the numpy array in radians</span></span><br><span class="line">y = np.sin(x) <span class="comment"># Calculate the sin of each elements</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>  A useful function for plotting mathematical functions is <code>linspace</code></li>
+<li>A useful function for plotting mathematical functions is <code>linspace</code></li>
 <li>Linspace returns evenly spaced numbers over a specified interval.</li>
 </ul>
-<pre><code class="python">x = np.linspace(0, 2*np.pi, num=100) # Makeup a numpy array within [0, 2π] and 100 elements 
-y = np.sin(x) # Calculate the sine of x list
-plt.plot(x, y) # Plot the result</code></pre>
-<h4 id="Two-Dimensional-Numpy"><a href="#Two-Dimensional-Numpy" class="headerlink" title="Two Dimensional Numpy"></a>Two Dimensional Numpy</h4><pre><code class="python">a=[[11,12,13],[21,22,23],[31,32,33]]
-A = np.array(a) # Convert list to Numpy Array，Every element is the same type
-A.ndim # # Show the numpy array dimensions  2
-A.shape # A.shape  (3,3)
-A.size # # Show the numpy array size  9
-A[1, 2] # Access the element on the second row and third column  23
-A[1][2] # Access the element on the second row and third column
-A[0][0:2] # Access the element on the first row and first and second columns  array([11, 12])
-A[0:2, 2] # Access the element on the first and second rows third column  array([13, 23])
-Z = X + Y # Add X and Y
-Z = 2 * Y # Multiply Y with 2
-Z = X * Y # Multiply X with Y
-Z = np.dot(A,B) # Calculate the dot product
-np.sin(Z) # Calculate the sine of Z
-C.T # Get the transposed of C</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>*np.pi, num=<span class="number">100</span>) <span class="comment"># Makeup a numpy array within [0, 2π] and 100 elements </span></span><br><span class="line">y = np.sin(x) <span class="comment"># Calculate the sine of x list</span></span><br><span class="line">plt.plot(x, y) <span class="comment"># Plot the result</span></span><br></pre></td></tr></table></figure>
+<h4 id="Two-Dimensional-Numpy"><a href="#Two-Dimensional-Numpy" class="headerlink" title="Two Dimensional Numpy"></a>Two Dimensional Numpy</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a=[[<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>],[<span class="number">21</span>,<span class="number">22</span>,<span class="number">23</span>],[<span class="number">31</span>,<span class="number">32</span>,<span class="number">33</span>]]</span><br><span class="line">A = np.array(a) <span class="comment"># Convert list to Numpy Array，Every element is the same type</span></span><br><span class="line">A.ndim <span class="comment"># # Show the numpy array dimensions  2</span></span><br><span class="line">A.shape <span class="comment"># A.shape  (3,3)</span></span><br><span class="line">A.size <span class="comment"># # Show the numpy array size  9</span></span><br><span class="line">A[<span class="number">1</span>, <span class="number">2</span>] <span class="comment"># Access the element on the second row and third column  23</span></span><br><span class="line">A[<span class="number">1</span>][<span class="number">2</span>] <span class="comment"># Access the element on the second row and third column</span></span><br><span class="line">A[<span class="number">0</span>][<span class="number">0</span>:<span class="number">2</span>] <span class="comment"># Access the element on the first row and first and second columns  array([11, 12])</span></span><br><span class="line">A[<span class="number">0</span>:<span class="number">2</span>, <span class="number">2</span>] <span class="comment"># Access the element on the first and second rows third column  array([13, 23])</span></span><br><span class="line">Z = X + Y <span class="comment"># Add X and Y</span></span><br><span class="line">Z = <span class="number">2</span> * Y <span class="comment"># Multiply Y with 2</span></span><br><span class="line">Z = X * Y <span class="comment"># Multiply X with Y</span></span><br><span class="line">Z = np.dot(A,B) <span class="comment"># Calculate the dot product</span></span><br><span class="line">np.sin(Z) <span class="comment"># Calculate the sine of Z</span></span><br><span class="line">C.T <span class="comment"># Get the transposed of C</span></span><br></pre></td></tr></table></figure>
 <h3 id="Simple-APIs"><a href="#Simple-APIs" class="headerlink" title="Simple APIs"></a>Simple APIs</h3><h4 id="Create-and-Use-APIs-in-Python"><a href="#Create-and-Use-APIs-in-Python" class="headerlink" title="Create and Use APIs in Python"></a>Create and Use APIs in Python</h4><ul>
 <li><p>An API lets two pieces of software talk to each other. </p>
 </li>
 <li><p>An essential type of API is a REST API (<strong>Re</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer APIs) that allows you to access resources via the internet. </p>
 </li>
 <li><p>Preparation</p>
-<pre><code class="python">!pip install nba_api
-def one_dict(list_dict):
-    keys=list_dict[0].keys()
-    out_dict=&#123;key:[] for key in keys&#125;
-    for dict_ in list_dict:
-        for key, value in dict_.items():
-            out_dict[key].append(value)
-    return out_dict</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">!pip install nba_api</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">one_dict</span>(<span class="params">list_dict</span>):</span><br><span class="line">    keys=list_dict[<span class="number">0</span>].keys()</span><br><span class="line">    out_dict=&#123;key:[] <span class="keyword">for</span> key <span class="keyword">in</span> keys&#125;</span><br><span class="line">    <span class="keyword">for</span> dict_ <span class="keyword">in</span> list_dict:</span><br><span class="line">        <span class="keyword">for</span> key, value <span class="keyword">in</span> dict_.items():</span><br><span class="line">            out_dict[key].append(value)</span><br><span class="line">    <span class="keyword">return</span> out_dict</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Pandas API</p>
-<pre><code class="python">import pandas as pd
-import matplotlib.pyplot as plt
-dict_=&#123;&#39;a&#39;:[11,21,31],&#39;b&#39;:[12,22,32]&#125; # create a dictionary
-df=pd.DataFrame(dict_) #use the dataframe to communicate with the pandas API
-df.head()
-df.mean()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">dict_=&#123;<span class="string">&#x27;a&#x27;</span>:[<span class="number">11</span>,<span class="number">21</span>,<span class="number">31</span>],<span class="string">&#x27;b&#x27;</span>:[<span class="number">12</span>,<span class="number">22</span>,<span class="number">32</span>]&#125; <span class="comment"># create a dictionary</span></span><br><span class="line">df=pd.DataFrame(dict_) <span class="comment">#use the dataframe to communicate with the pandas API</span></span><br><span class="line">df.head()</span><br><span class="line">df.mean()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>REST APIs</p>
 <ul>
 <li>Use the <a target="_blank" rel="noopener" href="https://pypi.org/project/nba-api/">NBA API</a> to determine how well the Golden State Warriors performed against the Toronto Raptors.</li>
 <li>Use the API do the determined number of points the Golden State Warriors won or lost by for each game.</li>
 </ul>
-<pre><code class="python">from nba_api.stats.static import teams #https://pypi.org/project/nba-api/
-import matplotlib.pyplot as plt
-nba_teams = teams.get_teams() #returns a list of dictionaries 
-#The dictionary key id has a unique identifier for each team as a value
-nba_teams[0:3]
-dict_nba_team=one_dict(nba_teams) #create a dictionary
-df_teams=pd.DataFrame(dict_nba_team)
-df_teams.head()
-df_warriors=df_teams[df_teams[&#39;nickname&#39;]==&#39;Warriors&#39;]
-id_warriors=df_warriors[[&#39;id&#39;]].values[0][0] #we now have an integer that can be used to request the Warriors information
-from nba_api.stats.endpoints import leaguegamefinder
-wget https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%205/Labs/Golden_State.pkl
-file_name = &quot;Golden_State.pkl&quot;
-games = pd.read_pickle(file_name)
-games.head()
-games_home=games [games [&#39;MATCHUP&#39;]==&#39;GSW vs. TOR&#39;] #create two dataframes
-games_away=games [games [&#39;MATCHUP&#39;]==&#39;GSW @ TOR&#39;]   #Home&amp;Away
-games_home.mean()[&#39;PLUS_MINUS&#39;]
-games_away.mean()[&#39;PLUS_MINUS&#39;]
-fig, ax = plt.subplots()  #plot out
-games_away.plot(x=&#39;GAME_DATE&#39;,y=&#39;PLUS_MINUS&#39;, ax=ax)
-games_home.plot(x=&#39;GAME_DATE&#39;,y=&#39;PLUS_MINUS&#39;, ax=ax)
-ax.legend([&quot;away&quot;, &quot;home&quot;])
-plt.show()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> nba_api.stats.static <span class="keyword">import</span> teams <span class="comment">#https://pypi.org/project/nba-api/</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">nba_teams = teams.get_teams() <span class="comment">#returns a list of dictionaries </span></span><br><span class="line"><span class="comment">#The dictionary key id has a unique identifier for each team as a value</span></span><br><span class="line">nba_teams[<span class="number">0</span>:<span class="number">3</span>]</span><br><span class="line">dict_nba_team=one_dict(nba_teams) <span class="comment">#create a dictionary</span></span><br><span class="line">df_teams=pd.DataFrame(dict_nba_team)</span><br><span class="line">df_teams.head()</span><br><span class="line">df_warriors=df_teams[df_teams[<span class="string">&#x27;nickname&#x27;</span>]==<span class="string">&#x27;Warriors&#x27;</span>]</span><br><span class="line">id_warriors=df_warriors[[<span class="string">&#x27;id&#x27;</span>]].values[<span class="number">0</span>][<span class="number">0</span>] <span class="comment">#we now have an integer that can be used to request the Warriors information</span></span><br><span class="line"><span class="keyword">from</span> nba_api.stats.endpoints <span class="keyword">import</span> leaguegamefinder</span><br><span class="line">wget https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%<span class="number">205</span>/Labs/Golden_State.pkl</span><br><span class="line">file_name = <span class="string">&quot;Golden_State.pkl&quot;</span></span><br><span class="line">games = pd.read_pickle(file_name)</span><br><span class="line">games.head()</span><br><span class="line">games_home=games [games [<span class="string">&#x27;MATCHUP&#x27;</span>]==<span class="string">&#x27;GSW vs. TOR&#x27;</span>] <span class="comment">#create two dataframes</span></span><br><span class="line">games_away=games [games [<span class="string">&#x27;MATCHUP&#x27;</span>]==<span class="string">&#x27;GSW @ TOR&#x27;</span>]   <span class="comment">#Home&amp;Away</span></span><br><span class="line">games_home.mean()[<span class="string">&#x27;PLUS_MINUS&#x27;</span>]</span><br><span class="line">games_away.mean()[<span class="string">&#x27;PLUS_MINUS&#x27;</span>]</span><br><span class="line">fig, ax = plt.subplots()  <span class="comment">#plot out</span></span><br><span class="line">games_away.plot(x=<span class="string">&#x27;GAME_DATE&#x27;</span>,y=<span class="string">&#x27;PLUS_MINUS&#x27;</span>, ax=ax)</span><br><span class="line">games_home.plot(x=<span class="string">&#x27;GAME_DATE&#x27;</span>,y=<span class="string">&#x27;PLUS_MINUS&#x27;</span>, ax=ax)</span><br><span class="line">ax.legend([<span class="string">&quot;away&quot;</span>, <span class="string">&quot;home&quot;</span>])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="Create-Speech-to-Text-Translator"><a href="#Create-Speech-to-Text-Translator" class="headerlink" title="Create Speech to Text Translator"></a>Create Speech to Text Translator</h4><ul>
 <li><p>Convert an audio file of an English speaker to text using a Speech to Text API</p>
-<pre><code class="python">!pip install PyJWT==1.7.1 ibm_watson wget
-from ibm_watson import SpeechToTextV1 
-import json
-from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-url_s2t = &quot;&quot; #URL
-iam_apikey_s2t = &quot;&quot; #API keys
-authenticator = IAMAuthenticator(iam_apikey_s2t) # create a Speech To Text Adapter object
-s2t = SpeechToTextV1(authenticator=authenticator)
-s2t.set_service_url(url_s2t)
-!wget -O PolynomialRegressionandPipelines.mp3  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/PolynomialRegressionandPipelines.mp3
-filename=&#39;PolynomialRegressionandPipelines.mp3&#39;
-with open(filename, mode=&quot;rb&quot;)  as wav:
-    response = s2t.recognize(audio=wav, content_type=&#39;audio/mp3&#39;)
-response.result
-from pandas.io.json import json_normalize
-json_normalize(response.result[&#39;results&#39;],&quot;alternatives&quot;)
-response
-recognized_text=response.result[&#39;results&#39;][0][&quot;alternatives&quot;][0][&quot;transcript&quot;]
-</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">!pip install PyJWT==<span class="number">1.7</span><span class="number">.1</span> ibm_watson wget</span><br><span class="line"><span class="keyword">from</span> ibm_watson <span class="keyword">import</span> SpeechToTextV1 </span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> ibm_cloud_sdk_core.authenticators <span class="keyword">import</span> IAMAuthenticator</span><br><span class="line">url_s2t = <span class="string">&quot;&quot;</span> <span class="comment">#URL</span></span><br><span class="line">iam_apikey_s2t = <span class="string">&quot;&quot;</span> <span class="comment">#API keys</span></span><br><span class="line">authenticator = IAMAuthenticator(iam_apikey_s2t) <span class="comment"># create a Speech To Text Adapter object</span></span><br><span class="line">s2t = SpeechToTextV1(authenticator=authenticator)</span><br><span class="line">s2t.set_service_url(url_s2t)</span><br><span class="line">!wget -O PolynomialRegressionandPipelines.mp3  https://cf-courses-data.s3.us.cloud-<span class="built_in">object</span>-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%<span class="number">205</span>/data/PolynomialRegressionandPipelines.mp3</span><br><span class="line">filename=<span class="string">&#x27;PolynomialRegressionandPipelines.mp3&#x27;</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(filename, mode=<span class="string">&quot;rb&quot;</span>)  <span class="keyword">as</span> wav:</span><br><span class="line">    response = s2t.recognize(audio=wav, content_type=<span class="string">&#x27;audio/mp3&#x27;</span>)</span><br><span class="line">response.result</span><br><span class="line"><span class="keyword">from</span> pandas.io.json <span class="keyword">import</span> json_normalize</span><br><span class="line">json_normalize(response.result[<span class="string">&#x27;results&#x27;</span>],<span class="string">&quot;alternatives&quot;</span>)</span><br><span class="line">response</span><br><span class="line">recognized_text=response.result[<span class="string">&#x27;results&#x27;</span>][<span class="number">0</span>][<span class="string">&quot;alternatives&quot;</span>][<span class="number">0</span>][<span class="string">&quot;transcript&quot;</span>]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Translate the English version to a Spanish version using a Language Translator API</p>
-<pre><code class="python">from ibm_watson import LanguageTranslatorV3
-url_lt=&#39;https://gateway.watsonplatform.net/language-translator/api&#39;
-apikey_lt=&#39;&#39;
-version_lt=&#39;2018-05-01&#39;
-authenticator = IAMAuthenticator(apikey_lt)
-language_translator = LanguageTranslatorV3(version=version_lt,authenticator=authenticator)
-language_translator.set_service_url(url_lt)
-language_translator
-from pandas.io.json import json_normalize
-json_normalize(language_translator.list_identifiable_languages().get_result(), &quot;languages&quot;)
-translation_response = language_translator.translate(\
-    text=recognized_text, model_id=&#39;en-es&#39;)
-translation_response
-translation=translation_response.get_result()
-translation
-spanish_translation =translation[&#39;translations&#39;][0][&#39;translation&#39;]
-spanish_translation 
-translation_new = language_translator.translate(text=spanish_translation ,model_id=&#39;es-en&#39;).get_result()
-translation_eng=translation_new[&#39;translations&#39;][0][&#39;translation&#39;]
-translation_eng</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ibm_watson <span class="keyword">import</span> LanguageTranslatorV3</span><br><span class="line">url_lt=<span class="string">&#x27;https://gateway.watsonplatform.net/language-translator/api&#x27;</span></span><br><span class="line">apikey_lt=<span class="string">&#x27;&#x27;</span></span><br><span class="line">version_lt=<span class="string">&#x27;2018-05-01&#x27;</span></span><br><span class="line">authenticator = IAMAuthenticator(apikey_lt)</span><br><span class="line">language_translator = LanguageTranslatorV3(version=version_lt,authenticator=authenticator)</span><br><span class="line">language_translator.set_service_url(url_lt)</span><br><span class="line">language_translator</span><br><span class="line"><span class="keyword">from</span> pandas.io.json <span class="keyword">import</span> json_normalize</span><br><span class="line">json_normalize(language_translator.list_identifiable_languages().get_result(), <span class="string">&quot;languages&quot;</span>)</span><br><span class="line">translation_response = language_translator.translate(\</span><br><span class="line">    text=recognized_text, model_id=<span class="string">&#x27;en-es&#x27;</span>)</span><br><span class="line">translation_response</span><br><span class="line">translation=translation_response.get_result()</span><br><span class="line">translation</span><br><span class="line">spanish_translation =translation[<span class="string">&#x27;translations&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;translation&#x27;</span>]</span><br><span class="line">spanish_translation </span><br><span class="line">translation_new = language_translator.translate(text=spanish_translation ,model_id=<span class="string">&#x27;es-en&#x27;</span>).get_result()</span><br><span class="line">translation_eng=translation_new[<span class="string">&#x27;translations&#x27;</span>][<span class="number">0</span>][<span class="string">&#x27;translation&#x27;</span>]</span><br><span class="line">translation_eng</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="HTTP-and-Requests"><a href="#HTTP-and-Requests" class="headerlink" title="HTTP and Requests"></a>HTTP and Requests</h4><ul>
@@ -817,40 +661,12 @@ translation_eng</code></pre>
 <li><p>Uniform resource locator (URL) is the most popular way to find resources on the web.</p>
 </li>
 <li><p>Request：<code>GET</code>，<code>POST</code>，<code>PUT</code>，<code>DELETE</code> method</p>
-<pre><code class="python">import requests
-import os 
-from PIL import Image
-from IPython.display import IFrame
-url=&#39;https://www.ibm.com/&#39;
-r=requests.get(url)
-r.status_code #view the status code
-print(r.request.headers)
-print(&quot;request body:&quot;, r.request.body)
-header=r.headers #view the HTTP response header
-print(r.headers)
-header[&#39;date&#39;]
-header[&#39;Content-Type&#39;] #Content-Type indicates the type of data
-r.encoding #check the encoding
-r.text[0:100]
-# Use single quotation marks for defining string
-url=&#39;https://gitlab.com/ibm/skills-network/courses/placeholder101/-/raw/master/labs/module%201/images/IDSNlogo.png&#39;
-r=requests.get(url) #make a get request
-print(r.headers)
-r.headers[&#39;Content-Type&#39;]
-# An image is a response object that contains the image as a bytes-like object
-path=os.path.join(os.getcwd(),&#39;image.png&#39;)
-with open(path,&#39;wb&#39;) as f:
-    f.write(r.content)
-Image.open(path)  </code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> os </span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> IPython.display <span class="keyword">import</span> IFrame</span><br><span class="line">url=<span class="string">&#x27;https://www.ibm.com/&#x27;</span></span><br><span class="line">r=requests.get(url)</span><br><span class="line">r.status_code <span class="comment">#view the status code</span></span><br><span class="line"><span class="built_in">print</span>(r.request.headers)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;request body:&quot;</span>, r.request.body)</span><br><span class="line">header=r.headers <span class="comment">#view the HTTP response header</span></span><br><span class="line"><span class="built_in">print</span>(r.headers)</span><br><span class="line">header[<span class="string">&#x27;date&#x27;</span>]</span><br><span class="line">header[<span class="string">&#x27;Content-Type&#x27;</span>] <span class="comment">#Content-Type indicates the type of data</span></span><br><span class="line">r.encoding <span class="comment">#check the encoding</span></span><br><span class="line">r.text[<span class="number">0</span>:<span class="number">100</span>]</span><br><span class="line"><span class="comment"># Use single quotation marks for defining string</span></span><br><span class="line">url=<span class="string">&#x27;https://gitlab.com/ibm/skills-network/courses/placeholder101/-/raw/master/labs/module%201/images/IDSNlogo.png&#x27;</span></span><br><span class="line">r=requests.get(url) <span class="comment">#make a get request</span></span><br><span class="line"><span class="built_in">print</span>(r.headers)</span><br><span class="line">r.headers[<span class="string">&#x27;Content-Type&#x27;</span>]</span><br><span class="line"><span class="comment"># An image is a response object that contains the image as a bytes-like object</span></span><br><span class="line">path=os.path.join(os.getcwd(),<span class="string">&#x27;image.png&#x27;</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(path,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(r.content)</span><br><span class="line">Image.<span class="built_in">open</span>(path)  </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Write <code>wget</code></p>
-<pre><code>!wget -O /resources/data/Example1.txt https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/Example1.txt</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!wget -O /resources/data/Example1.txt https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/Example1.txt</span><br></pre></td></tr></table></figure>
 <p>Is Equal To:</p>
-<pre><code class="python">url=&#39;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/Example1.txt&#39;
-path=os.path.join(os.getcwd(),&#39;example1.txt&#39;)
-r=requests.get(url)
-with open(path,&#39;wb&#39;) as f:
-    f.write(r.content)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">url=<span class="string">&#x27;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/Example1.txt&#x27;</span></span><br><span class="line">path=os.path.join(os.getcwd(),<span class="string">&#x27;example1.txt&#x27;</span>)</span><br><span class="line">r=requests.get(url)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(path,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(r.content)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Get Request with URL Parameters</p>
 <ul>
@@ -858,89 +674,38 @@ with open(path,&#39;wb&#39;) as f:
 <li><code>url_get=&#39;http://httpbin.org/get&#39;</code></li>
 <li>A <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Query_string">query string</a> is a part of a uniform resource locator (URL), this sends other information to the web server.</li>
 </ul>
-<pre><code class="python">payload=&#123;&quot;name&quot;:&quot;Joseph&quot;,&quot;ID&quot;:&quot;123&quot;&#125;
-r=requests.get(url_get,params=payload)
-r.url
-print(&quot;request body:&quot;, r.request.body)
-print(r.status_code)
-print(r.text)
-r.headers[&#39;Content-Type&#39;]
-r.json()
-r.json()[&#39;args&#39;]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">payload=&#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;Joseph&quot;</span>,<span class="string">&quot;ID&quot;</span>:<span class="string">&quot;123&quot;</span>&#125;</span><br><span class="line">r=requests.get(url_get,params=payload)</span><br><span class="line">r.url</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;request body:&quot;</span>, r.request.body)</span><br><span class="line"><span class="built_in">print</span>(r.status_code)</span><br><span class="line"><span class="built_in">print</span>(r.text)</span><br><span class="line">r.headers[<span class="string">&#x27;Content-Type&#x27;</span>]</span><br><span class="line">r.json()</span><br><span class="line">r.json()[<span class="string">&#x27;args&#x27;</span>]</span><br></pre></td></tr></table></figure>
 </li>
-<li><p> <code>POST</code> is used to send data to a server, but the <code>POST</code> request sends the data in a request body.</p>
+<li><p><code>POST</code> is used to send data to a server, but the <code>POST</code> request sends the data in a request body.</p>
 </li>
 <li><p><code>url_post=&#39;http://httpbin.org/post&#39;</code></p>
 </li>
 <li><p>This endpoint will expect data as a file or as a form, a from is convenient way to configure an HTTP request to send data to a server.</p>
-<pre><code class="python"># To make a POST request we use the post() function, the variable payload is passed to the parameter data 
-r_post=requests.post(url_post,data=payload) 
-
-print(&quot;POST request URL:&quot;,r_post.url ) #the POST request has no name or value pairs
-print(&quot;GET request URL:&quot;,r.url)
-print(&quot;POST request body:&quot;,r_post.request.body) #compare the POST and GET 
-print(&quot;GET request body:&quot;,r.request.body)
-r_post.json()[&#39;form&#39;]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># To make a POST request we use the post() function, the variable payload is passed to the parameter data </span></span><br><span class="line">r_post=requests.post(url_post,data=payload) </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;POST request URL:&quot;</span>,r_post.url ) <span class="comment">#the POST request has no name or value pairs</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;GET request URL:&quot;</span>,r.url)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;POST request body:&quot;</span>,r_post.request.body) <span class="comment">#compare the POST and GET </span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;GET request body:&quot;</span>,r.request.body)</span><br><span class="line">r_post.json()[<span class="string">&#x27;form&#x27;</span>]</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Final-Project"><a href="#Final-Project" class="headerlink" title="Final Project"></a>Final Project</h3><h4 id="Analyzing-US-Economic-Data-and-Building-a-Dashboard"><a href="#Analyzing-US-Economic-Data-and-Building-a-Dashboard" class="headerlink" title="Analyzing US Economic Data and Building a Dashboard"></a>Analyzing US Economic Data and Building a Dashboard</h4><ul>
 <li><p><a target="_blank" rel="noopener" href="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/FinalModule_Coursera/PY0101EN_Coursera_FinalAssignment.ipynb">A template notebook is provided in the lab</a></p>
 </li>
 <li><p>Examine how changes in GDP impact the unemployment rate.</p>
-<pre><code class="python">import pandas as pd
-from bokeh.plotting import figure, output_file, show,output_notebook
-output_notebook()
-# Define the function make_dashboard
-def make_dashboard(x, gdp_change, unemployment, title, file_name):
-    output_file(file_name)
-    p = figure(title=title, x_axis_label=&#39;year&#39;, y_axis_label=&#39;%&#39;)
-    p.line(x.squeeze(), gdp_change.squeeze(), color=&quot;firebrick&quot;, line_width=4, legend=&quot;% GDP change&quot;)
-    p.line(x.squeeze(), unemployment.squeeze(), line_width=4, legend=&quot;% unemployed&quot;)
-    show(p)
-# The dictionary links contain the CSV files with all the data.    
-links=&#123;&#39;GDP&#39;:&#39;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/FinalModule_Coursera/data/clean_gdp.csv&#39;,\
-       &#39;unemployment&#39;:&#39;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/FinalModule_Coursera/data/clean_unemployment.csv&#39;&#125;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> bokeh.plotting <span class="keyword">import</span> figure, output_file, show,output_notebook</span><br><span class="line">output_notebook()</span><br><span class="line"><span class="comment"># Define the function make_dashboard</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">make_dashboard</span>(<span class="params">x, gdp_change, unemployment, title, file_name</span>):</span><br><span class="line">    output_file(file_name)</span><br><span class="line">    p = figure(title=title, x_axis_label=<span class="string">&#x27;year&#x27;</span>, y_axis_label=<span class="string">&#x27;%&#x27;</span>)</span><br><span class="line">    p.line(x.squeeze(), gdp_change.squeeze(), color=<span class="string">&quot;firebrick&quot;</span>, line_width=<span class="number">4</span>, legend=<span class="string">&quot;% GDP change&quot;</span>)</span><br><span class="line">    p.line(x.squeeze(), unemployment.squeeze(), line_width=<span class="number">4</span>, legend=<span class="string">&quot;% unemployed&quot;</span>)</span><br><span class="line">    show(p)</span><br><span class="line"><span class="comment"># The dictionary links contain the CSV files with all the data.    </span></span><br><span class="line">links=&#123;<span class="string">&#x27;GDP&#x27;</span>:<span class="string">&#x27;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/FinalModule_Coursera/data/clean_gdp.csv&#x27;</span>,\</span><br><span class="line">       <span class="string">&#x27;unemployment&#x27;</span>:<span class="string">&#x27;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/FinalModule_Coursera/data/clean_unemployment.csv&#x27;</span>&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Question 1: Create a dataframe that contains the GDP data and display the first five rows of the dataframe.</p>
-<pre><code class="python">csv_path=links[&#39;GDP&#39;]  # links[&quot;GDP&quot;] contains the path or name of the file.
-df=pd.read_csv(csv_path)
-df.head()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">csv_path=links[<span class="string">&#x27;GDP&#x27;</span>]  <span class="comment"># links[&quot;GDP&quot;] contains the path or name of the file.</span></span><br><span class="line">df=pd.read_csv(csv_path)</span><br><span class="line">df.head()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Question 2: Create a dataframe that contains the unemployment data. Display the first five rows of the dataframe.</p>
-<pre><code class="python">csv_path=links[&#39;unemployment&#39;]
-df=pd.read_csv(csv_path)
-df.head()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">csv_path=links[<span class="string">&#x27;unemployment&#x27;</span>]</span><br><span class="line">df=pd.read_csv(csv_path)</span><br><span class="line">df.head()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Question 3: Display a dataframe where unemployment was greater than 8.5%.</p>
-<pre><code class="python">csv_path=links[&#39;unemployment&#39;]
-df=pd.read_csv(csv_path)
-df1=df[df[&#39;unemployment&#39;]&gt;8.5]
-df1</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">csv_path=links[<span class="string">&#x27;unemployment&#x27;</span>]</span><br><span class="line">df=pd.read_csv(csv_path)</span><br><span class="line">df1=df[df[<span class="string">&#x27;unemployment&#x27;</span>]&gt;<span class="number">8.5</span>]</span><br><span class="line">df1</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Question 4: Use the function make_dashboard to make a dashboard</p>
-<pre><code class="python"># Create your dataframe with column date
-csv_path=links[&#39;GDP&#39;]
-gdp_dataframe=pd.read_csv(csv_path)
-x = pd.DataFrame(gdp_dataframe, columns=[&#39;date&#39;])
-x.head()
-# Create your dataframe with column change-current
-gdp_change = pd.DataFrame(gdp_dataframe, columns=[&#39;change-current&#39;])
-gdp_change.head()
-# Create your dataframe with column unemployment
-csv_path=links[&#39;unemployment&#39;]
-unemploy_dataframe= pd.read_csv(csv_path)
-unemployment = pd.DataFrame(unemploy_dataframe, columns=[&#39;unemployment&#39;])
-unemployment.head()
-# Give your dashboard a string title
-title = &quot;Unemployement stats &amp; GDP&quot;
-file_name = &quot;index.html&quot;
-# Fill up the parameters in the following function:
-make_dashboard(x=x, gdp_change=gdp_change, unemployment=unemployment, title=title, file_name=file_name)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create your dataframe with column date</span></span><br><span class="line">csv_path=links[<span class="string">&#x27;GDP&#x27;</span>]</span><br><span class="line">gdp_dataframe=pd.read_csv(csv_path)</span><br><span class="line">x = pd.DataFrame(gdp_dataframe, columns=[<span class="string">&#x27;date&#x27;</span>])</span><br><span class="line">x.head()</span><br><span class="line"><span class="comment"># Create your dataframe with column change-current</span></span><br><span class="line">gdp_change = pd.DataFrame(gdp_dataframe, columns=[<span class="string">&#x27;change-current&#x27;</span>])</span><br><span class="line">gdp_change.head()</span><br><span class="line"><span class="comment"># Create your dataframe with column unemployment</span></span><br><span class="line">csv_path=links[<span class="string">&#x27;unemployment&#x27;</span>]</span><br><span class="line">unemploy_dataframe= pd.read_csv(csv_path)</span><br><span class="line">unemployment = pd.DataFrame(unemploy_dataframe, columns=[<span class="string">&#x27;unemployment&#x27;</span>])</span><br><span class="line">unemployment.head()</span><br><span class="line"><span class="comment"># Give your dashboard a string title</span></span><br><span class="line">title = <span class="string">&quot;Unemployement stats &amp; GDP&quot;</span></span><br><span class="line">file_name = <span class="string">&quot;index.html&quot;</span></span><br><span class="line"><span class="comment"># Fill up the parameters in the following function:</span></span><br><span class="line">make_dashboard(x=x, gdp_change=gdp_change, unemployment=unemployment, title=title, file_name=file_name)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="My-Work"><a href="#My-Work" class="headerlink" title="My Work"></a>My Work</h4><ul>
 <li><p><a target="_blank" rel="noopener" href="https://jp-tok.dataplatform.cloud.ibm.com/analytics/notebooks/v2/86e30bef-41d8-4b38-a8f3-b0be3f7ca27d/view?access_token=7c7aa7dd80dcca2762f88c50a413cdaed865b0d218dded9d0afcf730680a7cf1">Final Assignment Notebook Url</a> (May not be accessible from Mainland China)</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/Python-for-DS&AI.png" alt="Unemployment stats &amp; GDP"></p>
+<p><img src="https://blog.zhuangzhihao.top/img/Python-for-DS&amp;AI.png" alt="Unemployment stats &amp; GDP"></p>
 </li>
 </ul>
 <h3 id="Assignments"><a href="#Assignments" class="headerlink" title="Assignments"></a>Assignments</h3><ul>
@@ -962,6 +727,10 @@ make_dashboard(x=x, gdp_change=gdp_change, unemployment=unemployment, title=titl
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Python-for-Data-Science/>http://blog.zhuangzhihao.top/Python-for-Data-Science/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -977,13 +746,6 @@ make_dashboard(x=x, gdp_change=gdp_change, unemployment=unemployment, title=titl
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
-    </a>
-  </div>
-
 
         
       
@@ -1000,77 +762,6 @@ make_dashboard(x=x, gdp_change=gdp_change, unemployment=unemployment, title=titl
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Python-for-Data-Science/&title=Python for Data Science, AI & Development - Bezhuang's Blog&summary=
-This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue to expand Python learning. The following are the notes I took during this course. Since that I’ve learned Python for everybody on Coursera before, so this note will only contain the necessary outlines and newly learned content.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Python-for-Data-Science/&title=Python for Data Science, AI & Development - Bezhuang's Blog&summary=
-This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue to expand Python learning. The following are the notes I took during this course. Since that I’ve learned Python for everybody on Coursera before, so this note will only contain the necessary outlines and newly learned content.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Python-for-Data-Science/&title=Python for Data Science, AI & Development - Bezhuang's Blog&summary=
-This course provided by IBM will not teach everything about Python, but it gives me the tools to work as a data scientist and enough knowledge to continue to expand Python learning. The following are the notes I took during this course. Since that I’ve learned Python for everybody on Coursera before, so this note will only contain the necessary outlines and newly learned content.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADrklEQVR42u3aQZLbMAwEQP//07v3pFQiBpANJ82bZYkimz5MAX79GNF4IQAHDhw4Axy4JXCvcPw14R/Xr+67eu5q/urn9H2n+wUHDhw4cODAgdsGV33x6fd3IKdg6YGkz1/uBxw4cODAgQMHbilcGkinA2w3eKf3364XHDhw4MCBAwfuH4O72/hpIbEaYE+BwYEDBw4cOHDgwNUCcVoI7cKn6wUHDhw4cODAgftWuHKDttmAPg2+aeGzOv/bOvngwIEDBw4cOHBDcNWRNpy3fI73Cw4cOHDgwIEDtwSuO54KntVgetoQb78XHDhw4MCBAwduCVwaEKcaydWDmArs1f2BAwcOHDhw4MBthZtqFE9tMA28U9cvvwcHDhw4cODAgVsCd/xAM2hObeSpIHzqAQ4cOHDgwIED961w3QB8N2/3vvTgToM1OHDgwIEDBw7cFrh0onSDaQHxqYJpHIDBgQMHDhw4cOA+DNcFOV3QVKGyG5zTHww4cODAgQMHDtw2uOrC0vu6BcZ2AbLZmAYHDhw4cODAgftWuHSB038A7Dawq/sCBw4cOHDgwIHbDpcWGKsB9m6eNABXG9rxZ3DgwIEDBw4cuGVw00GzHCzDxvNUo/r4OXDgwIEDBw4cuC+F6zaOTwNwen264DkWgMGBAwcOHDhw4B6CSzeYBtypwme1Id4ufIIDBw4cOHDgwC2BOx1TDenq56ehygcKDhw4cODAgQO3BO70xU9BlguJxQLoVCMdHDhw4MCBAwduK1xaSEw3XA247wrOt/OAAwcOHDhw4MAtg+s2bKfg0gJr9b7qDwIcOHDgwIEDB24b3OlCuoXFqYM4HdX1HwdjcODAgQMHDhy4JXBTjeO0IZwG2OqBv60hDQ4cOHDgwIED92G4KlQVbDp4d4PtWAAGBw4cOHDgwIH7ENxUofKpwJw2oqvPX64DHDhw4MCBAwduOVy18ft0AJ46sHZjGxw4cODAgQMHbglcd5w2lquN76cPqnoA4MCBAwcOHDhw2+CmgmG64G5hsTpvGpDBgQMHDhw4cOC2wlUDbxog0yCdBuFqAL69Dg4cOHDgwIEDtxQuLSCWC4LNQP16eFy+Fxw4cODAgQMH7j+FS6+fvj+dL25IgwMHDhw4cODAfTnc1IKrfxScamQfB29w4MCBAwcOHLilcOkfBquN3/T+auGzW0gFBw4cOHDgwIHbDjfVsK0CnBYi03mm5wMHDhw4cODAgdsCZxQLmwjAgQMHzgAH7rPjFyMTiB/CnYubAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Python-for-Data-Science/&text=Python for Data Science, AI & Development - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1189,17 +880,9 @@ This course provided by IBM will not teach everything about Python, but it gives
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1325,8 +1008,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1682,29 +1363,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1743,7 +1401,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1803,20 +1461,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -2029,6 +1673,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

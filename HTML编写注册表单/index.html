@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
+    </a>
+  </div>
 
 
           
@@ -506,7 +500,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：770字</p>
+      <p>字数：775字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -529,117 +523,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>freeCodeCamp 响应式网页设计的认证课程第四章。你可以使用 HTML 表单收集访问网页的用户的信息。在通过编写注册表单学习 HTML 表单的课程中，通过编写一个注册页学习 HTML 表单，学习如何控制人们在表单中可以输入的数据类型，以及使用一些新的 CSS 工具装饰你的页面。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、重点-HTML-代码"><a href="#一、重点-HTML-代码" class="headerlink" title="一、重点 HTML 代码"></a>一、重点 HTML 代码</h3><p>表格页面格式：</p>
-<pre><code class="HTML">&lt;body&gt;
-  &lt;h1&gt;Registration Form&lt;/h1&gt;
-  &lt;p&gt;Please fill out this form with the required information&lt;/p&gt;
-  &lt;form action=&#39;https://register-demo.freecodecamp.org&#39;&gt;
-    &lt;!--表格内容--&gt;
-  &lt;/form&gt;
-  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot; /&gt;
-&lt;/body&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Registration Form<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Please fill out this form with the required information<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&#x27;https://register-demo.freecodecamp.org&#x27;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--表格内容--&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;Submit&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>输入框：</p>
-<pre><code class="html">&lt;fieldset&gt;
-    &lt;label&gt;Enter Your First Name: &lt;input type=&quot;text&quot; name=&quot;first-name&quot; required /&gt;&lt;/label&gt;
-    &lt;label&gt;Enter Your Last Name: &lt;input type=&quot;text&quot; name=&quot;last-name&quot; required /&gt;&lt;/label&gt;
-    &lt;label&gt;Enter Your Email: &lt;input type=&quot;email&quot; name=&quot;email&quot; required /&gt;&lt;/label&gt;
-    &lt;label&gt;Create a New Password: &lt;input type=&quot;password&quot; name=&quot;password&quot; minlen=&quot;8&quot; pattern=&quot;[a-z0-5]&#123;8,&#125;&quot; required /&gt;&lt;/label&gt;
-&lt;/fieldset&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">label</span>&gt;</span>Enter Your First Name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;first-name&quot;</span> <span class="attr">required</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">label</span>&gt;</span>Enter Your Last Name: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;last-name&quot;</span> <span class="attr">required</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">label</span>&gt;</span>Enter Your Email: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;email&quot;</span> <span class="attr">name</span>=<span class="string">&quot;email&quot;</span> <span class="attr">required</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">label</span>&gt;</span>Create a New Password: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">minlen</span>=<span class="string">&quot;8&quot;</span> <span class="attr">pattern</span>=<span class="string">&quot;[a-z0-5]&#123;8,&#125;&quot;</span> <span class="attr">required</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>单选&amp;复选框：</p>
-<pre><code class="html">&lt;fieldset&gt;
-  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;account-type&quot; class=&quot;inline&quot; /&gt; Personal Account&lt;/label&gt;
-  &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;account-type&quot; class=&quot;inline&quot; /&gt; Business Account&lt;/label&gt;
-  &lt;label&gt;
-    &lt;input type=&quot;checkbox&quot; name=&quot;terms&quot; class=&quot;inline&quot; required /&gt; I accept the &lt;a href=&quot;https://www.freecodecamp.org/news/terms-of-service/&quot;&gt;terms and conditions&lt;/a&gt;
-  &lt;/label&gt;
-&lt;/fieldset&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;account-type&quot;</span> <span class="attr">class</span>=<span class="string">&quot;inline&quot;</span> /&gt;</span> Personal Account<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;account-type&quot;</span> <span class="attr">class</span>=<span class="string">&quot;inline&quot;</span> /&gt;</span> Business Account<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;terms&quot;</span> <span class="attr">class</span>=<span class="string">&quot;inline&quot;</span> <span class="attr">required</span> /&gt;</span> I accept the <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.freecodecamp.org/news/terms-of-service/&quot;</span>&gt;</span>terms and conditions<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>文件、数字、下拉栏、文本框输入：</p>
-<pre><code class="html">&lt;fieldset&gt;
-    &lt;label&gt;Upload a profile picture: &lt;input type=&quot;file&quot; name=&quot;file&quot; /&gt;&lt;/label&gt;
-    &lt;label&gt;Input your age (years): &lt;input type=&quot;number&quot; name=&quot;age&quot; min=&quot;13&quot; max=&quot;120&quot; /&gt;&lt;/label&gt;
-    &lt;label&gt;How did you hear about us?
-        &lt;select name=&quot;referrer&quot;&gt;
-        &lt;option value=&quot;&quot;&gt;(select one)&lt;/option&gt;
-        &lt;option value=&quot;1&quot;&gt;freeCodeCamp News&lt;/option&gt;
-         &lt;option value=&quot;2&quot;&gt;freeCodeCamp YouTube Channel&lt;/option&gt;
-      &lt;option value=&quot;3&quot;&gt;freeCodeCamp Forum&lt;/option&gt;
-      &lt;option value=&quot;4&quot;&gt;Other&lt;/option&gt;
-       &lt;/select&gt;
-  &lt;/label&gt;
-  &lt;label&gt;Provide a bio:
-      &lt;textarea name=&quot;bio&quot; rows=&quot;3&quot; cols=&quot;30&quot; placeholder=&quot;I like coding on the beach...&quot;&gt;&lt;/textarea&gt;
-    &lt;/label&gt;
-&lt;/fieldset&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">label</span>&gt;</span>Upload a profile picture: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;file&quot;</span> <span class="attr">name</span>=<span class="string">&quot;file&quot;</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">label</span>&gt;</span>Input your age (years): <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">name</span>=<span class="string">&quot;age&quot;</span> <span class="attr">min</span>=<span class="string">&quot;13&quot;</span> <span class="attr">max</span>=<span class="string">&quot;120&quot;</span> /&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">label</span>&gt;</span>How did you hear about us?</span><br><span class="line">		<span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;referrer&quot;</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>(select one)<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span>&gt;</span>freeCodeCamp News<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">     	<span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;2&quot;</span>&gt;</span>freeCodeCamp YouTube Channel<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;3&quot;</span>&gt;</span>freeCodeCamp Forum<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;4&quot;</span>&gt;</span>Other<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span>Provide a bio:</span><br><span class="line">  	<span class="tag">&lt;<span class="name">textarea</span> <span class="attr">name</span>=<span class="string">&quot;bio&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;3&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;30&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;I like coding on the beach...&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>pseudo-class（<code>:not(:last-of-type)</code>）：</p>
-<pre><code class="CSS">fieldset &#123;
-  border: none;
-    padding: 2rem 0;
-&#125;
-fieldset:not(:last-of-type) &#123;
-  border-bottom: 3px solid #3b3b4f;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">fieldset</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">	<span class="attribute">padding</span>: <span class="number">2rem</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">fieldset</span><span class="selector-pseudo">:not</span>(<span class="selector-pseudo">:last-of-type</span>) &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid <span class="number">#3b3b4f</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>unset 属性：</p>
-<pre><code class="css">.inline &#123;
-  width: unset;
-  margin: 0 0.5em 0 0;
-  vertical-align: middle;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.inline</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: unset;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">0.5em</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>CSS attribute selector：</p>
-<pre><code class="CSS">input[type=&quot;submit&quot;] &#123;
-  display: block;
-  width: 60%;
-  margin: 1em auto;
-  height: 2em;
-  font-size: 1.1rem;
-  background-color: #3b3b4f;
-  border-color: white;
-  min-width: 300px;
-&#125;
-input[type=&quot;file&quot;] &#123;
-  padding: 1px 2px;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">&quot;submit&quot;</span>]</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">60%</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">1em</span> auto;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">2em</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.1rem</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#3b3b4f</span>;</span><br><span class="line">  <span class="attribute">border-color</span>: white;</span><br><span class="line">  <span class="attribute">min-width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">&quot;file&quot;</span>]</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1px</span> <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>其他表单设置：</p>
-<pre><code class="css">body &#123;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-  background-color: #1b1b32;
-    color: #f5f6f7;
-  font-family: Tahoma;
-    font-size: 16px;
-&#125;
-h1, p &#123;
-  margin: 1em auto;
-  text-align: center;
-&#125;
-form &#123;
-  width: 60vw;
-    max-width: 500px;
-    min-width: 300px;
-    margin: 0 auto;
-  padding-bottom: 2em;
-&#125;
-label &#123;
-  display: block;
-    margin: 0.5rem 0;
-&#125;
-input,
-textarea,
-select &#123;
-  margin: 10px 0 0 0;
-    width: 100%;
-  min-height: 2em;
-&#125;
-input, textarea &#123;
-  background-color: #0a0a23;
-  border: 1px solid #0a0a23;
-  color: #ffffff;
-&#125;
-a&#123;
-  color: #dfdfe2;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#1b1b32</span>;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#f5f6f7</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: Tahoma;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span>, <span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">1em</span> auto;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">form</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">60vw</span>;</span><br><span class="line">	<span class="attribute">max-width</span>: <span class="number">500px</span>;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">padding-bottom</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">label</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">0.5rem</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">input</span>,</span><br><span class="line"><span class="selector-tag">textarea</span>,</span><br><span class="line">select &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">input</span>, <span class="selector-tag">textarea</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#0a0a23</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#0a0a23</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#ffffff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#dfdfe2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="https://free-code-camp-demo.vercel.app/通过编写注册表单学习HTML表单/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
 </div>
@@ -654,7 +554,7 @@ a&#123;
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -679,6 +579,10 @@ a&#123;
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/>http://blog.zhuangzhihao.top/HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -694,12 +598,8 @@ a&#123;
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML</p></a></div>
 
 
         
@@ -717,77 +617,6 @@ a&#123;
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/&title=通过编写注册表单学习 HTML 表单 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第四章。你可以使用 HTML 表单收集访问网页的用户的信息。在通过编写注册表单学习 HTML 表单的课程中，通过编写一个注册页学习 HTML 表单，学习如何控制人们在表单中可以输入的数据类型，以及使用一些新的 CSS 工具装饰你的页面。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/&title=通过编写注册表单学习 HTML 表单 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第四章。你可以使用 HTML 表单收集访问网页的用户的信息。在通过编写注册表单学习 HTML 表单的课程中，通过编写一个注册页学习 HTML 表单，学习如何控制人们在表单中可以输入的数据类型，以及使用一些新的 CSS 工具装饰你的页面。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/&title=通过编写注册表单学习 HTML 表单 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第四章。你可以使用 HTML 表单收集访问网页的用户的信息。在通过编写注册表单学习 HTML 表单的课程中，通过编写一个注册页学习 HTML 表单，学习如何控制人们在表单中可以输入的数据类型，以及使用一些新的 CSS 工具装饰你的页面。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEUklEQVR42u3aQXIjIQwFUN//0p79VKUafQmwk8fOcRrkRy8klV5va8t6IQAL1gILFqwF9gjsK1z/P1/9/LRvuv/T86v7xx5gwYIFCxYsWLBgj8IuJ8CLANPPrV5AF77rARYsWLBgwYIFC/YObFoQVOHSfXcVMmMeYMGCBQsWLFiwYL8CdjWhTxPxFLz7ooAFCxYsWLBgwYL9m7C79zv9GSxYsGDBggULFuxnw04l7GkhML1/F/baJAxYsGDBggULFizYJdhdgxDf+jn2AAsWLFiwYMGCBXsEdmqlifd0gj79fdkBLFiwYMGCBQsW7BHY7mBx9fvuBZ2KM30RwIIFCxYsWLBgwd6FrQa+OnCRPlc9HyxYsGDBggULFuzvhl0NePr79NzVFyKFTV8MsGDBggULFixYsHdgu4MTaeDdBna3sEgHTn7cHyxYsGDBggULFuwV2OkfVgWYLkC6jffqiwAWLFiwYMGCBQv2DGw1kOpgQ9rYLifmIUgKChYsWLBgwYIFC/YzYKcawFOJeVpIVPcdjxcsWLBgwYIFCxbsUdjuAMVU4dAdrKgOklQLorjyAgsWLFiwYMGCBTsKmx7cbVhPNdqn92/HDxYsWLBgwYIFC/Yq7DtcKcSuC+nuU71wsGDBggULFixYsHdgu43ip/+LG8jFBnWa8Hcb7WDBggULFixYsGDPwKaN39UAdiXmq8+l8bcLBLBgwYIFCxYsWLBXYatQaaI+NViRxtv9/WDBggULFixYsGDPwlYfTBvaU5+nLqo6oLJcwIAFCxYsWLBgwYI9CpsOMnQT92qDO724dP+xSRiwYMGCBQsWLFiwo7DVAKYC755fPWc6LrBgwYIFCxYsWLCfATs1iFHdZ3rg4lahAxYsWLBgwYIFC/YsbDXxnkrspxrOXfipxjtYsGDBggULFizYO7DVA9L/r15cmsjvGvB43BcsWLBgwYIFCxbsFdj34trd4F49P73Qblw/ngsWLFiwYMGCBQv2CGwK2g24mqB3G/BThcRjPGDBggULFixYsGCPwE4l/quJe3qh3YZ8OijSbnSDBQsWLFiwYMGC3QJbHYiYHrzo7lO98GriXz4HLFiwYMGCBQsW7BHY6Qb0VMBTje7uhVUb4GDBggULFixYsGDPwKYgXYBq4zmFWv0d1bU8CQMWLFiwYMGCBQt2C2x3VRPo3dDVv4/HCRYsWLBgwYIFC/YI7HSCnDa2pwuQ6oBHt+AACxYsWLBgwYIFewe2WhBUE+nqgMT0uVMFwON+YMGCBQsWLFiwYK/AdguC9AelhUkKkxZEcYEAFixYsGDBggUL9qNhVyFWf3C3QEhfhHjwGSxYsGDBggULFuxXwFYT+fT/ps5ZBYo9wIIFCxYsWLBgwV6B3T2wsT1BD0Grz33cJAxYsGDBggULFuwfhd2dmFcHINKGeNpwTxv0jwUCWLBgwYIFCxYs2C2w1uwCCxasBRYsWAvs1vUPxEBUWKtFi/gAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/&text=通过编写注册表单学习 HTML 表单 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -906,17 +735,9 @@ freeCodeCamp 响应式网页设计的认证课程第三章。为你的网页选�
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1042,8 +863,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1399,29 +1218,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1460,7 +1256,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1520,20 +1316,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1746,6 +1528,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

@@ -108,7 +108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -232,16 +232,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -364,16 +374,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -397,7 +417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -420,36 +440,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -483,6 +473,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91/">其他开发</a>
+    </a>
+  </div>
+
 
           
         
@@ -501,7 +498,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：707字</p>
+      <p>字数：704字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -524,8 +521,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，在云主机上搭建 LAMP 环境并部署 Wordpress 博客应用，仅供测试参考。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="连接服务器"><a href="#连接服务器" class="headerlink" title="连接服务器"></a>连接服务器</h3><ul>
 <li>打开Xshell，填写主机IP、用户名（root）、密码</li>
 <li>命令行出现：<code>Welcome to Alibaba Cloud Elastic Compute Service !</code></li>
@@ -534,10 +530,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>Apache是世界使用排名第一的Web服务器端软件，它可以运行在几乎所有广泛使用的计算机平台上，Apache由于其跨平台和安全性被广泛使用</p>
 </li>
 <li><p>安装Apache服务及其扩展包</p>
-<pre><code class="shell">yum -y install httpd httpd-manual mod_ssl mod_perl mod_auth_mysql</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install httpd httpd-manual mod_ssl mod_perl mod_auth_mysql</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>启动Apache服务</p>
-<pre><code class="shell">systemctl start httpd.service</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start httpd.service</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>访问IP地址，出现Apache测试页面</p>
 </li>
@@ -548,30 +544,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>使用wordpress搭建云上博客，需要使用MySQL数据库存储数据</p>
 </li>
 <li><p>下载并安装MySQL官方的<code>Yum Repository</code></p>
-<pre><code class="shell">wget http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
-//三行分开输入
-yum -y install mysql57-community-release-el7-10.noarch.rpm
-
-yum -y install mysql-community-server</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm</span><br><span class="line">//三行分开输入</span><br><span class="line">yum -y install mysql57-community-release-el7-10.noarch.rpm</span><br><span class="line"></span><br><span class="line">yum -y install mysql-community-server</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>启动 MySQL 数据库</p>
-<pre><code class="shell">systemctl start mysqld.service</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld.service</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>查看MySQL运行状态（显示<code>Active: active</code>）</p>
-<pre><code class="sh">systemctl status mysqld.service</code></pre>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysqld.service</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>查看MySQL初始密码</p>
-<pre><code class="shell">grep &quot;password&quot; /var/log/mysqld.log</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep &quot;password&quot; /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>登陆MySQL数据库</p>
-<pre><code class="shell">mysql -u root -p</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改MySQL密码</p>
-<pre><code class="mysql">ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;新密码&#39;;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;新密码&#x27;;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>创建wordpress数据库</p>
-<pre><code class="mysql">create database wordpress; 
-show databases;    #查看数据库是否已创建</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">create database wordpress; </span><br><span class="line">show databases;    #查看数据库是否已创建</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>输入<code>exit</code>退出数据库</p>
 </li>
@@ -580,45 +571,43 @@ show databases;    #查看数据库是否已创建</code></pre>
 <li><p>WordPress是使用PHP语言开发的博客平台，PHP是全世界最好的语言(→_→)</p>
 </li>
 <li><p>安装PHP环境</p>
-<pre><code class="shell">yum -y install php php-mysql gd php-gd gd-devel php-xml php-common php-mbstring php-ldap php-pear php-xmlrpc php-imap</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install php php-mysql gd php-gd gd-devel php-xml php-common php-mbstring php-ldap php-pear php-xmlrpc php-imap</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>创建PHP测试页面</p>
-<pre><code class="shell">echo &quot;&lt;?php phpinfo(); ?&gt;&quot; &gt; /var/www/html/phpinfo.php</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;&lt;?php phpinfo(); ?&gt;&quot; &gt; /var/www/html/phpinfo.php</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重启Apache服务</p>
-<pre><code class="shell">systemctl restart httpd</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart httpd</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>访问<code>IP地址/phpinfo.php</code>，显示PHP测试页面</p>
 </li>
 </ul>
 <h3 id="安装配置Wordpress"><a href="#安装配置Wordpress" class="headerlink" title="安装配置Wordpress"></a>安装配置Wordpress</h3><ul>
 <li><p>安装Wordpress</p>
-<pre><code class="shell">yum -y install wordpress</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wordpress</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>进入/usr/share/wordpress目录</p>
-<pre><code class="sh">cd /usr/share/wordpress</code></pre>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/share/wordpress</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改<code>wp-config.php</code>指向路径为绝对路径</p>
-<pre><code class="sh">ln -snf /etc/wordpress/wp-config.php wp-config.php</code></pre>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -snf /etc/wordpress/wp-config.php wp-config.php</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>使用<code>ll</code>查看修改后的目录结构</p>
 </li>
 <li><p>在Apache的根目录<code>/var/www/html</code>下，创建一个<code>wp-blog</code>文件夹</p>
-<pre><code class="shell">mkdir /var/www/html/wp-blog</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /var/www/html/wp-blog</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>移动wordpress到Apache根目录</p>
-<pre><code class="shell">mv * /var/www/html/wp-blog/</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv * /var/www/html/wp-blog/</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改<code>wp-config.php</code>配置文件</p>
-<pre><code class="shell">sed -i &#39;s/database_name_here/wordpress/&#39; /var/www/html/wp-blog/wp-config.php
-sed -i &#39;s/username_here/root/&#39; /var/www/html/wp-blog/wp-config.php
-sed -i &#39;s/password_here/数据库密码/&#39; /var/www/html/wp-blog/wp-config.php</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed -i &#x27;s/database_name_here/wordpress/&#x27; /var/www/html/wp-blog/wp-config.php</span><br><span class="line">sed -i &#x27;s/username_here/root/&#x27; /var/www/html/wp-blog/wp-config.php</span><br><span class="line">sed -i &#x27;s/password_here/数据库密码/&#x27; /var/www/html/wp-blog/wp-config.php</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>查看文件配置是否修改成功</p>
-<pre><code class="shell">cat -n /var/www/html/wp-blog/wp-config.php</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat -n /var/www/html/wp-blog/wp-config.php</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重启Apache服务</p>
-<pre><code class="shell">systemctl restart httpd</code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart httpd</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="测试Wordpress"><a href="#测试Wordpress" class="headerlink" title="测试Wordpress"></a>测试Wordpress</h3><ul>
@@ -638,7 +627,7 @@ sed -i &#39;s/password_here/数据库密码/&#39; /var/www/html/wp-blog/wp-confi
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -663,6 +652,10 @@ sed -i &#39;s/password_here/数据库密码/&#39; /var/www/html/wp-blog/wp-confi
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/>http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -678,13 +671,6 @@ sed -i &#39;s/password_here/数据库密码/&#39; /var/www/html/wp-blog/wp-confi
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91/">其他开发</a>
-    </a>
-  </div>
-
 
         
       
@@ -701,77 +687,6 @@ sed -i &#39;s/password_here/数据库密码/&#39; /var/www/html/wp-blog/wp-confi
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/&title=搭建 LAMP 环境安装部署 Wordpress - Bezhuang's Blog&summary=
-最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，在云主机上搭建 LAMP 环境并部署 Wordpress 博客应用，仅供测试参考。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/&title=搭建 LAMP 环境安装部署 Wordpress - Bezhuang's Blog&summary=
-最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，在云主机上搭建 LAMP 环境并部署 Wordpress 博客应用，仅供测试参考。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/&title=搭建 LAMP 环境安装部署 Wordpress - Bezhuang's Blog&summary=
-最近购买了阿里云学生机（轻量应用服务器，单核2G内存），预装载CentOS 7.6。官方推荐Putty连接，我使用的SSH软件为Xshell，用Xftp传输文件。第一次接触云服务器，在云主机上搭建 LAMP 环境并部署 Wordpress 博客应用，仅供测试参考。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEXElEQVR42u3aQXLjMAwEQP3/07v33UqJGICknWre4siS2PQBmMLzx9qyHgRgwVpgwYK1wB6BfcL1440Xr3+G1k/3+/fzt+umPMCCBQsWLFiwYMGehV0ugIvXdw9g9bnVA5jaH1iwYMGCBQsWLNjPgK2+WNpIdAvzVZDu52UPsGDBggULFixYsF8NWwVb3WC5YG82CGDBggULFixYsGB/N+x04J0OVKTgYMGCBQsWLFiwYL8bNi3Aq5/vGgR5e/5UIwIWLFiwYMGCBQv2M2DTgYnf+nfsARYsWLBgwYIFC/YI7HQhXn3R9L5pgzDdiPz3XLBgwYIFCxYsWLBHYNMCeTWoTiFXg+XqAac/lOX3AwsWLFiwYMGCBXsEtjqQkAbC6QBIepDp/dvfBwsWLFiwYMGCBXsEtjugsVrgTwXeacA9FdyXg26wYMGCBQsWLFiwR2FTyKnrq4V/CthtJMoNAliwYMGCBQsWLNgR2LTQrxb+3e9VN9gNzpchwYIFCxYsWLBgwV6FrQ4upIHxVIMwdf3UYAhYsGDBggULFizYz4BNC/SpAZDp95pqdJYHNsCCBQsWLFiwYMFegV3d8FRg3YWsNgjpDwEsWLBgwYIFCxbsZ8BOFdBVqNVCfhdIGuy/3hcsWLBgwYIFCxbsEdjdAxLVDXQD7KmgPg3iwYIFCxYsWLBgwd6B7W60++Ldv9NgfKyBAQsWLFiwYMGCBXsUthtgp4DTG64G9NUDKjcIYMGCBQsWLFiwYLfApqDpBtLCPgXpBvXV74EFCxYsWLBgwYI9A5sW8FWA7mDH1AHvuh4sWLBgwYIFCxbsHdg0wE4D825D0g22pwc1wIIFCxYsWLBgwd6BTQcqbg92dA+s+gMDCxYsWLBgwYIF+1mw6UamBjaWX7y5qgMb5fuABQsWLFiwYMGCPQJbLdTTB1Zhq43EroNYDerBggULFixYsGDBnoWdagCmvpc2Jt1gfCooBwsWLFiwYMGCBXsWdgqs2xhUC/30/lMNAliwYMGCBQsWLNg7sNWNVgvy6UGPbiNRBSuDgwULFixYsGDBgr0KW20QVv+fHmQXMm1cwIIFCxYsWLBgwX4XbDdorkKk13Whp0DBggULFixYsGDB3oVNA+y0IZgOprsDIulgCFiwYMGCBQsWLNi7sNUGoAqVFu5pg5BCvr0XWLBgwYIFCxYs2Luw3VV9gXQD3YB6Cv71c7BgwYIFCxYsWLBHYJ9wnQ6U00C8G7xXGxWwYMGCBQsWLFiwZ2G7QXJayKcH3A3KqwMpY5MwYMGCBQsWLFiwYLfATgfF1YZg+jnpDyM+MLBgwYIFCxYsWLBfBVsNorvB8+oBpQcXHyxYsGDBggULFizYr4KdGnjoFvxTP5D04MCCBQsWLFiwYMHega0W1t2NdjdcbVimDnb7JAxYsGDBggULFizYJdjqqkJ379Mt7NOBkfbABliwYMGCBQsWLNgtsNbsAgsWrAUWLFgL7Nb1FywXFYku6aFxAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/&text=搭建 LAMP 环境安装部署 Wordpress - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -890,17 +805,9 @@ In this course provided by IBM, I will assume the role of an Associate Data Anal
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1026,8 +933,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1383,29 +1288,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1444,7 +1326,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1504,20 +1386,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1730,6 +1598,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

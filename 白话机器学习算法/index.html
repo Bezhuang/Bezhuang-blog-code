@@ -107,7 +107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -231,16 +231,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -363,16 +373,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -396,7 +416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -419,36 +439,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -482,6 +472,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+    </a>
+  </div>
+
 
           
         
@@ -523,8 +520,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>机器学习算法是数据科学的力量之源，它和数据一起产生极其宝贵的知识并且帮助我们以新的方式利用已有信息。<a target="_blank" rel="noopener" href="https://book.douban.com/subject/30442187/">白话机器学习算法</a>一书用通俗易懂的语言以及大量有趣的示例和插图讲解10多种前沿的机器学习算法。内容涵盖k均值聚类、主成分分析、关联规则、社会网络分析等无监督学习算法，以及回归分析、k最近邻、支持向量机、决策树、随机森林、神经网络等监督学习算法，并概述强化学习算法的思想。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、基础知识"><a href="#一、基础知识" class="headerlink" title="一、基础知识"></a>一、基础知识</h3><p>我们为何需要数据科学？因为借助现代计算机和高级算法，我们能够从大型数据集中发现隐藏的趋势，能够充分利用发现的趋势做预测，能够计算每种结果出现的概率，能够快速获取准确结果。</p>
 <p>数据科学的研究有 4 个主要步骤：</p>
 <ol>
@@ -560,7 +556,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>回归指标：由于回归预测使用连续值，因此误差一般被量化成预测值和实际值之差，惩罚随误差大小而不同。</p>
 <ul>
-<li>  均方根误差：将每个误差都取平方，放大大误差，这使得均方根误差对异常值极其敏感，对这些值的惩罚力度也更大，避免较大的误差。</li>
+<li>均方根误差：将每个误差都取平方，放大大误差，这使得均方根误差对异常值极其敏感，对这些值的惩罚力度也更大，避免较大的误差。</li>
 </ul>
 <p>验证：评估模型对新数据的预测准确度，避免过拟合模型在面对当前数据表现良好而面对新数据时可能表现糟糕的情况。在评估模型时并不一定非要使用新数据，而是可以把当前的数据集划分成训练集（training dataset）和测试集（test dataset）。训练集用来生成和调整预测模型，测试集用来充当新数据并评估模型的预测准确度，最好的模型针对测试集所做的预测一定是最准确的。为了使验证（validation）过程行之有效，需要不带偏差的把数据点随机分派到数据集和测试集中。</p>
 <p>交叉验证（cross-validation）：使用同一个数据集进行训练和测试，避免因为原始数据集很小而无法留出足够的数据形成测试集的情况。把数据集划分成若干组用来对模型进行反复测试，在单次迭代中除了某一组外其他各组都被用来训练预测模型，然后留下来的那组被用来测试模型，这个过程重复进行直到每一个组都测试过模型，并且只测试过一次。</p>
@@ -587,7 +583,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>弥补局限性的方法：独立成分分析（不需要假设正交关系，在确定成分时还无需考虑数据的散度）</p>
 <h4 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h4><p>主成分分析是一种降维技巧，它使得我们可以使用较小的变量来描述数据，这些变量即为主成分。每个主成分都是原始变量的某种加权组合，最好的主成分可以用来改进数据分析和可视化。当信息最丰富的几个维度拥有最大的数据散度，并且彼此正交时，主成分分析能有最佳效果。</p>
 <h3 id="四、关联规则（association-rule）"><a href="#四、关联规则（association-rule）" class="headerlink" title="四、关联规则（association rule）"></a>四、关联规则（association rule）</h3><h4 id="支持度、置信度和提升度"><a href="#支持度、置信度和提升度" class="headerlink" title="支持度、置信度和提升度"></a>支持度、置信度和提升度</h4><p>识别关联规则的常用指标有3个：支持度、置信度和提升度。支持度是某个项集出现的频率，可以人为设定一个支持度阈值，当某个项集的支持度高于这个阈值时，就把它称为频繁项集。置信度是当 X 项出现时 Y 项同时出现的频率，记为 {X-&gt;Y} ，但它可能会错估某个关联规则的重要性。提升度是 X 项和 Y 项一同出现的频率，同时考虑这两项各自出现的频率。</p>
-<pre><code class="matlab">&#123;X-&gt;Y&#125; 的提升度 = &#123;X-&gt;Y&#125; 的置信度 / &#123;Y&#125; 的支持度</code></pre>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;X-&gt;Y&#125; 的提升度 = &#123;X-&gt;Y&#125; 的置信度 / &#123;Y&#125; 的支持度</span><br></pre></td></tr></table></figure>
 <h4 id="先验原则（apriori-principal）"><a href="#先验原则（apriori-principal）" class="headerlink" title="先验原则（apriori principal）"></a>先验原则（apriori principal）</h4><p>先验原则是指如果某个项集出现的不频繁那么包含它的任何更大的项集必定也出现的不频繁。</p>
 <p>寻找具有高支持度的项集：</p>
 <ol>
@@ -722,11 +718,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>A/B 测试由探索和利用前后两个阶段组成，而在 epsilon 递减策略中，探索阶段和利用阶段是分散的，并且一开始时探索得多一些，越接近尾声，探索得越少。</p>
 <h4 id="多臂老虎机"><a href="#多臂老虎机" class="headerlink" title="多臂老虎机"></a>多臂老虎机</h4><p>假设有两台老虎机 A 和 B 可供选择，玩2000个回合，每个回合要么赢1美元，要么没有收益，老虎机 A 的返还率为50%，老虎机 B 的则为40%，但我们事先并不知道这些信息，问要怎么玩才能多赢钱？</p>
 <ol>
-<li> 全探索：如果随机选择老虎机，平均会赢900美元。</li>
-<li> A/B 测试：用前200个回合探索哪台老虎机的返还率更高，然后在剩下的1800个回合中选择这台老虎机，平均会赢976美元，但由于两台老虎机的返还率接近，由此存在误判的可能性（误判概率8%）。</li>
-<li> 为降低误判的风险，可以把A/B 测试的探索范围扩大到500个回合，这样做可以把误判概率降到1%，但是平均中奖金额也会减少到963美元。</li>
-<li> epsilon 递减策略：如果采用 epsilon 递减策略边探索边利用，平均会赢984美元，并且误判概率为4%，通过增加探索比例（增加 epsilon 值）能够降低误判概率，但仍会减少平均中奖金额。</li>
-<li> 全利用：如果一开始就掌握内部消息并选择返还率最高的老虎机 A，平均会赢1000美元，但这个假设不现实。</li>
+<li>全探索：如果随机选择老虎机，平均会赢900美元。</li>
+<li>A/B 测试：用前200个回合探索哪台老虎机的返还率更高，然后在剩下的1800个回合中选择这台老虎机，平均会赢976美元，但由于两台老虎机的返还率接近，由此存在误判的可能性（误判概率8%）。</li>
+<li>为降低误判的风险，可以把A/B 测试的探索范围扩大到500个回合，这样做可以把误判概率降到1%，但是平均中奖金额也会减少到963美元。</li>
+<li>epsilon 递减策略：如果采用 epsilon 递减策略边探索边利用，平均会赢984美元，并且误判概率为4%，通过增加探索比例（增加 epsilon 值）能够降低误判概率，但仍会减少平均中奖金额。</li>
+<li>全利用：如果一开始就掌握内部消息并选择返还率最高的老虎机 A，平均会赢1000美元，但这个假设不现实。</li>
 </ol>
 <p>由此看到，在不掌握内部消息的情况下，采用 epsilon 递减策略的收益最高，而且由于存在收敛性这一数学特征，由此 epsilon 递减策略能确保在回合数足够多的情况下找出返还率最高的老虎机。</p>
 <p>胜者为先：范加尔在曼联采用了一个非常规策略来决定罚点球的球员，第一个被指定罚点球的球员会负责到底，除非他没有打进球，接下来新换的球员继续负责罚点球，如果没有罚进就再换一名球员，依此类推。</p>
@@ -763,6 +759,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E7%99%BD%E8%AF%9D%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/>http://blog.zhuangzhihao.top/%E7%99%BD%E8%AF%9D%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -778,13 +778,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
-    </a>
-  </div>
-
 
         
       
@@ -801,77 +794,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E7%99%BD%E8%AF%9D%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/&title=白话机器学习算法 - Bezhuang's Blog&summary=
-机器学习算法是数据科学的力量之源，它和数据一起产生极其宝贵的知识并且帮助我们以新的方式利用已有信息。白话机器学习算法一书用通俗易懂的语言以及大量有趣的示例和插图讲解10多种前沿的机器学习算法。内容涵盖k均值聚类、主成分分析、关联规则、社会网络分析等无监督学习算法，以及回归分析、k最近邻、支持向量机、决策树、随机森林、神经网络等监督学习算法，并概述强化学习算法的思想。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E7%99%BD%E8%AF%9D%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/&title=白话机器学习算法 - Bezhuang's Blog&summary=
-机器学习算法是数据科学的力量之源，它和数据一起产生极其宝贵的知识并且帮助我们以新的方式利用已有信息。白话机器学习算法一书用通俗易懂的语言以及大量有趣的示例和插图讲解10多种前沿的机器学习算法。内容涵盖k均值聚类、主成分分析、关联规则、社会网络分析等无监督学习算法，以及回归分析、k最近邻、支持向量机、决策树、随机森林、神经网络等监督学习算法，并概述强化学习算法的思想。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E7%99%BD%E8%AF%9D%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/&title=白话机器学习算法 - Bezhuang's Blog&summary=
-机器学习算法是数据科学的力量之源，它和数据一起产生极其宝贵的知识并且帮助我们以新的方式利用已有信息。白话机器学习算法一书用通俗易懂的语言以及大量有趣的示例和插图讲解10多种前沿的机器学习算法。内容涵盖k均值聚类、主成分分析、关联规则、社会网络分析等无监督学习算法，以及回归分析、k最近邻、支持向量机、决策树、随机森林、神经网络等监督学习算法，并概述强化学习算法的思想。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFJElEQVR42u3aS3bcMBADwLn/pZ0TzBMbDY4/Ke7sOBJZ1AYP/fqyvmW9EIAHb4EHb4EHbxXgX+GqbeTweU9/d/rv7/7u9PdbL/DgwYMHDx48ePDgm/BtqKeNnx7kCW57ca3fH58fPHjw4MGDBw8ePPgL8KcApz+nAWcamF6l1QpU4MGDBw8ePHjw4MH/BvhTuC1o6znTc4EHDx48ePDgwYMH/xfhU8DT56QXnO4DPHjw4MGDBw8ePPjfBJ8OKN0KVtOgtB2suj7QBR48ePDgwYMHDx58Eb41+PO//Bx7gQcPHjx48ODBgwdfgN+utIjYPn8L8/S8078fe4EHDx48ePDgwYMHX4Bvb7wN3N7P9IOoXyx48ODBgwcPHjx48EX4beBID5Be2Cnk6e9PA2BaiIAHDx48ePDgwYMH34SfAqUHTZ+33d90X9MLHe8fPHjw4MGDBw8ePPgL8NPBpDRgpIFmG6DSgaltMAQPHjx48ODBgwcPvgm/DRanxcl04+1iYztoNQV+ez7w4MGDBw8ePHjw4Avw7eDQDk7TfY0hhoXHNCCOkyt48ODBgwcPHjx48AH8dCCpHTRaANPgdvq8tJgBDx48ePDgwYMHD74Jf2ujaZCaDhi1Bqqm7wEPHjx48ODBgwcP/jvhU8B0A1Ow7Xu2QasVBMGDBw8ePHjw4MGDb8KfBpdtEZAWC+nfpUVL6nL8AYAHDx48ePDgwYMH/wH402AyDRLTg2xXu1hJzwsePHjw4MGDBw8efAM+BWwHjO3zWgXH9sOKGyjw4MGDBw8ePHjw4IO5mlZwOX1uOzi1Lrgd1B6LEPDgwYMHDx48ePDgF/Cn/3EbjLYbv1VkxMXG9MMADx48ePDgwYMHD/4i/DQYnR5kWjC03n/rvOPiBTx48ODBgwcPHjz4AvwpxBS0VZSk729d5DZAgQcPHjx48ODBgwf/Cfi00Jge9FMDRa1iJXUADx48ePDgwYMHD/4mfHsAqL3iwPKhgHQc0MCDBw8ePHjw4MGDL8LfCj4p2PYDSAestsFsXYSABw8ePHjw4MGDBz+A3xYH8UbCguO7LjgtQMCDBw8ePHjw4MGDb8JPi4LTwuFW0TC92GmAml7MOGiBBw8ePHjw4MGDB1+An75gWzBMg0ttkGgbfFoDVODBgwcPHjx48ODBF+HTYqFVPGwHib6Wa3ohaZACDx48ePDgwYMHD74J3wpG0yDTCirpvrcDU+PABx48ePDgwYMHDx58AT4dBEqLifTC2h/KNqDFg1/gwYMHDx48ePDgwRfgT4uJtECYFivbgmL6nvTDi98HHjx48ODBgwcPHnwRfhpETl+YFijT4uH071uFSBzswIMHDx48ePDgwYMvwqcBagu3LTq2F7I993hf4MGDBw8ePHjw4MEX4NsFRKvAmAa07b7SQmV8HvDgwYMHDx48ePDgC/C3gsx08GcazKYfwmmxc6tQAQ8ePHjw4MGDBw++Cf8KV6t4mMKkA0xpMGrvBzx48ODBgwcPHjz4JnwrgGwLg3XRUP6Q2vsGDx48ePDgwYMHD/4GfBogphtsXWR7kOm1XI8FC3jw4MGDBw8ePHjwPwh+W0y0glp6YfXC4917wIMHDx48ePDgwYP/gfDb4LJ9brrf0wtM3cCDBw8ePHjw4MGDvwk/DTYp9DSItILY9P9N9/XoAx48ePDgwYMHDx58Eb49uPN0kOnBToNPO9BNC5bH/YIHDx48ePDgwYMHX4C3PrvAgwdvgQdvgQdvLdY/vfwr3Xgzy2EAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E7%99%BD%E8%AF%9D%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/&text=白话机器学习算法 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -990,17 +912,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1126,8 +1040,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1483,29 +1395,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1544,7 +1433,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1604,20 +1493,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1830,6 +1705,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

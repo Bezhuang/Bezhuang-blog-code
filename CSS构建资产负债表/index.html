@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
+    </a>
+  </div>
 
 
           
@@ -529,215 +523,49 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>freeCodeCamp 响应式网页设计的认证课程第九章。可以使用 CSS 伪选择器来更改特定的 HTML 元素。在通过构建资产负债表了解有关 CSS 伪选择器的更多信息的课程中，使用伪选择器构建资产负债表，学习如何在将鼠标悬停在元素上时更改其样式，并触发网页上的其他事件。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、重点-HTML-代码"><a href="#一、重点-HTML-代码" class="headerlink" title="一、重点 HTML 代码"></a>一、重点 HTML 代码</h3><p>flex class：</p>
-<pre><code class="html">&lt;h1&gt;
-  &lt;span class=&quot;flex&quot;&gt;
-    &lt;span&gt;AcmeWidgetCorp&lt;/span&gt;
-    &lt;span&gt;Balance Sheet&lt;/span&gt;
-  &lt;/span&gt;
-&lt;/h1&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;flex&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>AcmeWidgetCorp<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>Balance Sheet<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>aria-hidden 属性：</p>
-<pre><code class="html">&lt;div id=&quot;years&quot; aria-hidden=&quot;true&quot;&gt;
-  &lt;span class=&quot;year&quot;&gt;2019&lt;/span&gt;
-  &lt;span class=&quot;year&quot;&gt;2020&lt;/span&gt;
-  &lt;span class=&quot;year&quot;&gt;2021&lt;/span&gt;
-&lt;/div&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;years&quot;</span> <span class="attr">aria-hidden</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;year&quot;</span>&gt;</span>2019<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;year&quot;</span>&gt;</span>2020<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;year&quot;</span>&gt;</span>2021<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>HTML table 标签:</p>
-<pre><code class="html">&lt;div class=&quot;table-wrap&quot;&gt;
-  &lt;table&gt;
-    &lt;caption&gt;Assets&lt;/caption&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;td&gt;&lt;/td&gt;
-        &lt;th&gt;&lt;span class=&quot;sr-only year&quot;&gt;2019&lt;/span&gt;&lt;/th&gt;
-        &lt;th&gt;&lt;span class=&quot;sr-only year&quot;&gt;2020&lt;/span&gt;&lt;/th&gt;
-        &lt;th class=&quot;current&quot;&gt;&lt;span class=&quot;sr-only year&quot;&gt;2021&lt;/span&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr class=&quot;data&quot;&gt;
-        &lt;th&gt;Cash &lt;span class=&quot;description&quot;&gt;This is the cash we currently have on hand.&lt;/span&gt;&lt;/th&gt;
-        &lt;td&gt;$25&lt;/td&gt;
-        &lt;td&gt;$30&lt;/td&gt;
-        &lt;td class=&quot;current&quot;&gt;$28&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr class=&quot;data&quot;&gt;
-        &lt;th&gt;Checking &lt;span class=&quot;description&quot;&gt;Our primary transactional account.&lt;/span&gt;&lt;/th&gt;
-        &lt;td&gt;$54&lt;/td&gt;
-        &lt;td&gt;$56&lt;/td&gt;
-        &lt;td class=&quot;current&quot;&gt;$53&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr class=&quot;data&quot;&gt;
-        &lt;th&gt;Savings &lt;span class=&quot;description&quot;&gt;Funds set aside for emergencies.&lt;/span&gt;&lt;/th&gt;
-        &lt;td&gt;$500&lt;/td&gt;
-        &lt;td&gt;$650&lt;/td&gt;
-        &lt;td class=&quot;current&quot;&gt;$728&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr class=&quot;total&quot;&gt;
-        &lt;th&gt;Total &lt;span class=&quot;sr-only&quot;&gt;Assets&lt;/span&gt;&lt;/th&gt;
-        &lt;td&gt;$579&lt;/td&gt;
-        &lt;td&gt;$736&lt;/td&gt;
-        &lt;td class=&quot;current&quot;&gt;$809&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-  &lt;!--同理多个&lt;table&gt;&lt;/table&gt;--&gt;
-&lt;/div&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;table-wrap&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">caption</span>&gt;</span>Assets<span class="tag">&lt;/<span class="name">caption</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;sr-only year&quot;</span>&gt;</span>2019<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;sr-only year&quot;</span>&gt;</span>2020<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span> <span class="attr">class</span>=<span class="string">&quot;current&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;sr-only year&quot;</span>&gt;</span>2021<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">tr</span> <span class="attr">class</span>=<span class="string">&quot;data&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Cash <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;description&quot;</span>&gt;</span>This is the cash we currently have on hand.<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>$25<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>$30<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;current&quot;</span>&gt;</span>$28<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">tr</span> <span class="attr">class</span>=<span class="string">&quot;data&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Checking <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;description&quot;</span>&gt;</span>Our primary transactional account.<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>$54<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>$56<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;current&quot;</span>&gt;</span>$53<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">tr</span> <span class="attr">class</span>=<span class="string">&quot;data&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Savings <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;description&quot;</span>&gt;</span>Funds set aside for emergencies.<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>$500<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>$650<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;current&quot;</span>&gt;</span>$728<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">tr</span> <span class="attr">class</span>=<span class="string">&quot;total&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">th</span>&gt;</span>Total <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;sr-only&quot;</span>&gt;</span>Assets<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>$579<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span>&gt;</span>$736<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;current&quot;</span>&gt;</span>$809<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--同理多个&lt;table&gt;&lt;/table&gt;--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>box-sizing 属性：</p>
-<pre><code class="CSS">html &#123;
-  box-sizing: border-box;
-&#125;
-body &#123;
-  font-family: sans-serif;
-  color: #0a0a23;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: sans-serif;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#0a0a23</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>The <code>span[class~=&quot;sr-only&quot;]</code> selector will select any <code>span</code> element whose <code>class</code> <em>includes</em> <code>sr-only</code>：</p>
-<pre><code class="css">span[class~=&quot;sr-only&quot;] &#123;
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  clip-path: inset(50%) !important;
-  -webkit-clip-path: inset(50%) !important;
-  height: 1px !important ;
-  width: 1px !important;
-  position: absolute !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
-  padding: 0 !important;
-  margin: -1px !important;
-&#125;
-/*
-The CSS clip property is used to define the visible portions of an element.
-The clip-path property determines the shape the clip property should take.
-use the !important keyword to ensure these properties are always applied, regardless of order or specificity.
-*/</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span><span class="selector-attr">[class~=<span class="string">&quot;sr-only&quot;</span>]</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">1px</span>, <span class="number">1px</span>, <span class="number">1px</span>, <span class="number">1px</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">clip-path</span>: <span class="built_in">inset</span>(<span class="number">50%</span>) <span class="meta">!important</span>;</span><br><span class="line">  -webkit-<span class="attribute">clip-path</span>: <span class="built_in">inset</span>(<span class="number">50%</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1px</span> <span class="meta">!important</span> ;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1px</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">white-space</span>: nowrap <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">margin</span>: -<span class="number">1px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">The CSS clip property is used to define the visible portions of an element.</span></span><br><span class="line"><span class="comment">The clip-path property determines the shape the clip property should take.</span></span><br><span class="line"><span class="comment">use the !important keyword to ensure these properties are always applied, regardless of order or specificity.</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 <p>flex-direction 属性：</p>
-<pre><code class="CSS">h1 &#123;
-  max-width: 37.25rem;
-  margin: 0 auto;
-  padding: 1.5rem 1.25rem;
-&#125;
-h1 .flex &#123;
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 1rem;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">37.25rem</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1.5rem</span> <span class="number">1.25rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span> <span class="selector-class">.flex</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-direction</span>: column-reverse;</span><br><span class="line">  <span class="attribute">gap</span>: <span class="number">1rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>The <code>:first-of-type</code> pseudo-selector is used to target the first element that matches the selector：</p>
-<pre><code class="CSS">h1 .flex span:first-of-type &#123;
-  font-size: 0.7em;
-&#125;
-/* The :last-of-type pseudo-selector does the exact opposite - it targets the last element that matches the selector. */
-h1 .flex span:last-of-type &#123;
-  font-size: 1.2em;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span> <span class="selector-class">.flex</span> <span class="selector-tag">span</span><span class="selector-pseudo">:first</span>-of-type &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">0.7em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* The :last-of-type pseudo-selector does the exact opposite - it targets the last element that matches the selector. */</span></span><br><span class="line"><span class="selector-tag">h1</span> <span class="selector-class">.flex</span> <span class="selector-tag">span</span><span class="selector-pseudo">:last-of-type</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.2em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>section、.table-wrap selector：</p>
-<pre><code class="CSS">section &#123;
-  max-width: 40rem;
-  margin: 0 auto;
-  border: 2px solid #d0d0d5;
-&#125;
-.table-wrap &#123;
-  padding: 0 0.75rem 1.5rem 0.75rem;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">section</span> &#123;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">40rem</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid <span class="number">#d0d0d5</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.table-wrap</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">0.75rem</span> <span class="number">1.5rem</span> <span class="number">0.75rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>The <code>calc()</code> function is a CSS function that allows you to calculate a value based on other values：</p>
-<pre><code class="CSS">#years &#123;
-  display: flex;
-  justify-content: flex-end;
-  position: sticky;
-  top: 0;
-  background: #0a0a23;
-  color: #fff;
-  z-index: 999;
-  margin: 0 -2px;
-  padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#years</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: flex-end;</span><br><span class="line">  <span class="attribute">position</span>: sticky;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#0a0a23</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">999</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> -<span class="number">2px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0.5rem</span> <span class="built_in">calc</span>(<span class="number">1.25rem</span> + <span class="number">2px</span>) <span class="number">0.5rem</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>The <code>span[class]</code> syntax will target any <code>span</code>element that has a <code>class</code> attribute set, regardless of the attribute’s value：</p>
-<pre><code class="CSS">#years span[class] &#123;
-  font-weight: bold;
-  width: 4.5rem;
-  text-align: right;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#years</span> <span class="selector-tag">span</span><span class="selector-attr">[class]</span> &#123;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">4.5rem</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>The <code>:not()</code> pseudo-selector is used to target all elements that do not match the selector：</p>
-<pre><code class="CSS">span:not(.sr-only) &#123;
-  font-weight: normal;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">span</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.sr-only</span>) &#123;</span><br><span class="line">  <span class="attribute">font-weight</span>: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>table selector：</p>
-<pre><code class="CSS">table &#123;
-  border-collapse: collapse; /* allow cell borders to collapse into a single border */
-  border: 0;
-  width: 100%;
-  position: relative;
-  margin-top: 3rem;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> &#123;</span><br><span class="line">  <span class="attribute">border-collapse</span>: collapse; <span class="comment">/* allow cell borders to collapse into a single border */</span></span><br><span class="line">  <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">3rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>caption selector：</p>
-<pre><code class="CSS">table caption &#123;
-  color: #356eaf;
-  font-size: 1.3em;
-  font-weight: normal;
-  position: absolute;
-  top: -2.25rem;
-  left: 0.5rem;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">caption</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#356eaf</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.3em</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: normal;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">2.25rem</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0.5rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>tbody selector：</p>
-<pre><code class="CSS">tbody td &#123;
-  width: 100vw; /* fill the viewport */
-  min-width: 4rem;
-  max-width: 4rem;
-&#125;
-tbody th &#123;
-  width: calc(100% - 12rem);
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tbody</span> <span class="selector-tag">td</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100vw</span>; <span class="comment">/* fill the viewport */</span></span><br><span class="line">  <span class="attribute">min-width</span>: <span class="number">4rem</span>;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">4rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">tbody</span> <span class="selector-tag">th</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">calc</span>(<span class="number">100%</span> - <span class="number">12rem</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>The <code>[attribute=&quot;value&quot;]</code> selector targets any element that has an attribute with a specific value：</p>
-<pre><code class="CSS">tr[class=&quot;total&quot;] th &#123;
-  text-align: left;
-  padding: 0.5rem 0 0.25rem 0.5rem;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tr</span><span class="selector-attr">[class=<span class="string">&quot;total&quot;</span>]</span> <span class="selector-tag">th</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: left;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0.5rem</span> <span class="number">0</span> <span class="number">0.25rem</span> <span class="number">0.5rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>The key difference between <code>tr[class=&quot;total&quot;]</code> and <code>tr.total</code> is that the first will select <code>tr</code> elements where the <em>only</em> class is <code>total</code>. The second will select <code>tr</code> elements where the class <em>includes</em> total：</p>
-<pre><code class="CSS">tr.total td &#123;
-  text-align: right;
-  padding: 0 0.25rem;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tr</span><span class="selector-class">.total</span> <span class="selector-tag">td</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: right;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">0.25rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>The <code>:nth-of-type()</code> pseudo-selector is used to target specific elements based on their order among siblings of the same type：</p>
-<pre><code class="CSS">tr.total td:nth-of-type(3) &#123;
-  padding-right: 0.5rem;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tr</span><span class="selector-class">.total</span> <span class="selector-tag">td</span><span class="selector-pseudo">:nth-of-type</span>(<span class="number">3</span>) &#123;</span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">0.5rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>其他 table 行/列属性：</p>
-<pre><code class="CSS">tr.total:hover &#123;
-  background-color: #99c9ff;
-&#125;
-td.current &#123;
-  font-style: italic;
-&#125;
-tr.data &#123;
-  background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
-&#125;
-tr.data th &#123;
-  text-align: left;
-  padding-top: 0.3rem;
-  padding-left: 0.5rem;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tr</span><span class="selector-class">.total</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#99c9ff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">td</span><span class="selector-class">.current</span> &#123;</span><br><span class="line">  <span class="attribute">font-style</span>: italic;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">tr</span><span class="selector-class">.data</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to bottom, <span class="number">#dfdfe2</span> <span class="number">1.845rem</span>, white <span class="number">1.845rem</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">tr</span><span class="selector-class">.data</span> <span class="selector-tag">th</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: left;</span><br><span class="line">  <span class="attribute">padding-top</span>: <span class="number">0.3rem</span>;</span><br><span class="line">  <span class="attribute">padding-left</span>: <span class="number">0.5rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>tr.data th .description</code> selector target the elements with the <code>class</code> set to <code>description</code> that are within your <code>th</code> elements in your <code>.data</code> table rows：</p>
-<pre><code class="CSS">tr.total:hover &#123;
-  background-color: #99c9ff;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tr</span><span class="selector-class">.total</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#99c9ff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>block display：</p>
-<pre><code class="CSS">tr.data th .description &#123;
-  display: block;
-  font-weight: normal;
-  font-style: italic;
-  padding: 1rem 0 0.75rem;
-  margin-right: -13.5rem;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tr</span><span class="selector-class">.data</span> <span class="selector-tag">th</span> <span class="selector-class">.description</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">font-weight</span>: normal;</span><br><span class="line">  <span class="attribute">font-style</span>: italic;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1rem</span> <span class="number">0</span> <span class="number">0.75rem</span>;</span><br><span class="line">  <span class="attribute">margin-right</span>: -<span class="number">13.5rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Vertically align the text to the top, horizontally align the text to the right：</p>
-<pre><code class="CSS">tr.data td &#123;
-  vertical-align: top;
-  padding: 0.3rem 0.25rem 0;
-  text-align: right;
-&#125;
-tr.data td:last-of-type &#123;
-  padding-right: 0.5rem;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tr</span><span class="selector-class">.data</span> <span class="selector-tag">td</span> &#123;</span><br><span class="line">  <span class="attribute">vertical-align</span>: top;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0.3rem</span> <span class="number">0.25rem</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">tr</span><span class="selector-class">.data</span> <span class="selector-tag">td</span><span class="selector-pseudo">:last-of-type</span> &#123;</span><br><span class="line">  <span class="attribute">padding-right</span>: <span class="number">0.5rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="https://free-code-camp-demo.vercel.app/通过构建资产负债表了解有关CSS伪选择器的更多信息/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
 </div>
@@ -753,7 +581,7 @@ tr.data td:last-of-type &#123;
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -778,6 +606,10 @@ tr.data td:last-of-type &#123;
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E8%B5%84%E4%BA%A7%E8%B4%9F%E5%80%BA%E8%A1%A8/>http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E8%B5%84%E4%BA%A7%E8%B4%9F%E5%80%BA%E8%A1%A8/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -793,12 +625,8 @@ tr.data td:last-of-type &#123;
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML</p></a></div>
 
 
         
@@ -816,77 +644,6 @@ tr.data td:last-of-type &#123;
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E8%B5%84%E4%BA%A7%E8%B4%9F%E5%80%BA%E8%A1%A8/&title=通过构建资产负债表了解有关 CSS 伪选择器的更多信息 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第九章。可以使用 CSS 伪选择器来更改特定的 HTML 元素。在通过构建资产负债表了解有关 CSS 伪选择器的更多信息的课程中，使用伪选择器构建资产负债表，学习如何在将鼠标悬停在元素上时更改其样式，并触发网页上的其他事件。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E8%B5%84%E4%BA%A7%E8%B4%9F%E5%80%BA%E8%A1%A8/&title=通过构建资产负债表了解有关 CSS 伪选择器的更多信息 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第九章。可以使用 CSS 伪选择器来更改特定的 HTML 元素。在通过构建资产负债表了解有关 CSS 伪选择器的更多信息的课程中，使用伪选择器构建资产负债表，学习如何在将鼠标悬停在元素上时更改其样式，并触发网页上的其他事件。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E8%B5%84%E4%BA%A7%E8%B4%9F%E5%80%BA%E8%A1%A8/&title=通过构建资产负债表了解有关 CSS 伪选择器的更多信息 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第九章。可以使用 CSS 伪选择器来更改特定的 HTML 元素。在通过构建资产负债表了解有关 CSS 伪选择器的更多信息的课程中，使用伪选择器构建资产负债表，学习如何在将鼠标悬停在元素上时更改其样式，并触发网页上的其他事件。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEbUlEQVR42u3aQW7cMBAEwP3/p517AEPTM0PKToo3G1pJLOrAbvDzZRwZHwRgwRpgwYI1wF6B/TTH37//7u/uddXrn57zNM/qdWUPsGDBggULFixYsFdhyxvgELY7ker9tp6/5gEWLFiwYMGCBQv2Fdj0xdMNelwcL0OnQSReSLBgwYIFCxYsWLC/Arb6+6f7dYvs6n2rzwELFixYsGDBggX7f8B2N+LTAxZbQebHJy+wYMGCBQsWLFiwRw5sTDfq3TE9kLFVyIMFCxYsWLBgwYJ9F3Y6sX/t77YHWLBgwYIFCxYs2Cuw07FVjHd/P33e1/IACxYsWLBgwYIFewc2neDpAxgpxHSDn77/oxNYsGDBggULFizYq7DphrsaGLZhpkHgeHEPFixYsGDBggUL9irs9oS3rks36KcWvPqhgQULFixYsGDBgr0Du3UwYitoVIHThZsGnrILWLBgwYIFCxYs2Cuw1Q16Cjjd0E+ftxUQYh+wYMGCBQsWLFiwPwo2BUk33tNA0S3otwIDWLBgwYIFCxYs2Luw3QJ5qxhON/Ld53c/pDgIgQULFixYsGDBgr0KO53A1gt3g8Dp4r4cIMCCBQsWLFiwYMFegZ0Ww2lB3n1eN1ikH0waeMCCBQsWLFiwYMG+CxsXuiFY9363DpCsBRSwYMGCBQsWLFiwV2C3YLqFdHVCaRG9HSyq7w0WLFiwYMGCBQv2Z8B24btF9nZw2D5I8vi+YMGCBQsWLFiwYK/ATg9GbAWF7Y36duAoLyxYsGDBggULFizYq7DdArh7MGMrIGwX5t3rwIIFCxYsWLBgwb4D2y2OnybSLca3D2ScOkBSTl5gwYIFCxYsWLBgV2HTDX134z6d0FZgmAabx/cDCxYsWLBgwYIFexW2OuG1jfSwsE6L82mQKBfhYMGCBQsWLFiwYK/ATovmNGicOoiR3qf7/o/zAAsWLFiwYMGCBXsFdrsIToPBdGLdgnqr6AYLFixYsGDBggX7DmxaAE8L8TQATIPL1gLHBzbAggULFixYsGDBXoFNC+ppkZwe+NhaiO1CHSxYsGDBggULFuw7sF3g9MHtAxBNoK3CPQ5MYMGCBQsWLFiwYK/ATovqdAG6o7qh/xRHd8EfFwQsWLBgwYIFCxbsFdjuRLrFczqqgSQtqrsfTJy8wIIFCxYsWLBgwR6FrQJ2DzhsB5KtALC10GDBggULFixYsGDfgZ0W0NUXry7YdEOfvm8alL79P1iwYMGCBQsWLNgrsFsb8GlR3QWqFvLdAJTODyxYsGDBggULFuxd2FOBoHsAYlpcnwoijx5gwYIFCxYsWLBgX4FNX7R7kCO9/9Z9ux9GeSHAggULFixYsGDB/grY6gZ/a0FS4FOF/PGAABYsWLBgwYIFC/YKbLdAngaIFKi7kOV5gwULFixYsGDBgn0FtrtRPxUUuhv6FHJtvmDBggULFixYsGCvwqZjuxhPoU7ddwwOFixYsGDBggUL9gqssTvAggVrgAUL1gB7dPwBS6dTZ/gtNT4AAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E8%B5%84%E4%BA%A7%E8%B4%9F%E5%80%BA%E8%A1%A8/&text=通过构建资产负债表了解有关 CSS 伪选择器的更多信息 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1005,17 +762,9 @@ freeCodeCamp 响应式网页设计的认证课程第八章。无障碍环境使�
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1141,8 +890,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1498,29 +1245,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1559,7 +1283,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1619,20 +1343,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1845,6 +1555,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

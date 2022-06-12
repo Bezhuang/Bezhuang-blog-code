@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
+    </a>
+  </div>
 
 
           
@@ -506,7 +500,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：283字</p>
+      <p>字数：287字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -529,62 +523,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>freeCodeCamp 响应式网页设计的认证课程第五章。每个 HTML 元素都是一个盒子，它拥有着自己的间距和边框，这叫作盒子模型。在通过创作罗斯科绘画学习 CSS 盒子模型的课程中，使用 CSS 和盒子模型，创作属于自己的罗斯科风格的矩形艺术作品。</p>
 </blockquote>
-<a id="more"></a>
-
-<h3 id="一、CSS-box-model"><a href="#一、CSS-box-model" class="headerlink" title="一、CSS box model"></a>一、CSS box model</h3><p><img src="https://cdn.freecodecamp.org/curriculum/css-box-model/diagram-3.png"></p>
+<span id="more"></span>
+<h3 id="一、CSS-box-model"><a href="#一、CSS-box-model" class="headerlink" title="一、CSS box model"></a>一、CSS box model</h3><p><img src="https://blog.zhuangzhihao.top/img/diagram-3.png" alt></p>
 <h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>Use padding to adjust the spacing within an element：</p>
-<pre><code class="CSS">.frame &#123;
-    border: 50px solid black;
-    width: 500px;
-    padding: 50px;
-    margin: 20px auto;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.frame</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">50px</span> solid black;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Use margins to adjust the spacing outside of an element：</p>
-<pre><code class="css">.one &#123;
-    width: 425px;
-    height: 150px;
-    background-color: #efb762;
-    margin: 20px auto;
-    box-shadow: 0 0 3px 3px #efb762;
-    border-radius: 9px;
-    transform: rotate(-0.6deg);
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.one</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">425px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#efb762</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">3px</span> <span class="number">3px</span> <span class="number">#efb762</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">9px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-<span class="number">0.6deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>overflow:hidden 溢出隐藏、清除浮动、解决外边距塌陷：</p>
-<pre><code class="CSS">.canvas &#123;
-    width: 500px;
-    height: 600px;
-    background-color: #4d0f00;
-    overflow: hidden;
-    filter: blur(2px);
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.canvas</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#4d0f00</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">blur</span>(<span class="number">2px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>filter 属性；box-shadow 属性；border-radius 属性；transform 属性：</p>
-<pre><code class="CSS">.two &#123;
-    width: 475px;
-    height: 200px;
-    background-color: #8f0401;
-    margin: 0 auto 20px;
-    box-shadow: 0 0 3px 3px #8f0401;
-    border-radius: 8px 10px;
-    transform: rotate(0.4deg);
-&#125;
-.one,
-.two &#123;
-    filter: blur(1px);
-&#125;
-.three &#123;
-    width: 91%;
-    height: 28%;
-    background-color: #b20403;
-    margin: auto;
-    filter: blur(2px);
-    box-shadow: 0 0 5px 5px #b20403;
-    border-radius: 30px 25px 60px 12px;
-    transform: rotate(-0.2deg);
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.two</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">475px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#8f0401</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">3px</span> <span class="number">3px</span> <span class="number">#8f0401</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">8px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">0.4deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.one</span>,</span><br><span class="line"><span class="selector-class">.two</span> &#123;</span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">blur</span>(<span class="number">1px</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.three</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">91%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">28%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#b20403</span>;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">blur</span>(<span class="number">2px</span>);</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">5px</span> <span class="number">#b20403</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">30px</span> <span class="number">25px</span> <span class="number">60px</span> <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-<span class="number">0.2deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="https://free-code-camp-demo.vercel.app/通过创作罗斯科绘画学习CSS盒子模型/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
 </div>
-
 
   
   
@@ -596,7 +547,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -621,6 +572,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/CSS%E5%88%9B%E4%BD%9C%E7%BD%97%E6%96%AF%E7%A7%91%E7%BB%98%E7%94%BB/>http://blog.zhuangzhihao.top/CSS%E5%88%9B%E4%BD%9C%E7%BD%97%E6%96%AF%E7%A7%91%E7%BB%98%E7%94%BB/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -636,12 +591,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
 
 
         
@@ -659,77 +610,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/CSS%E5%88%9B%E4%BD%9C%E7%BD%97%E6%96%AF%E7%A7%91%E7%BB%98%E7%94%BB/&title=通过创作罗斯科绘画学习 CSS 盒子模型 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第五章。每个 HTML 元素都是一个盒子，它拥有着自己的间距和边框，这叫作盒子模型。在通过创作罗斯科绘画学习 CSS 盒子模型的课程中，使用 CSS 和盒子模型，创作属于自己的罗斯科风格的矩形艺术作品。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/CSS%E5%88%9B%E4%BD%9C%E7%BD%97%E6%96%AF%E7%A7%91%E7%BB%98%E7%94%BB/&title=通过创作罗斯科绘画学习 CSS 盒子模型 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第五章。每个 HTML 元素都是一个盒子，它拥有着自己的间距和边框，这叫作盒子模型。在通过创作罗斯科绘画学习 CSS 盒子模型的课程中，使用 CSS 和盒子模型，创作属于自己的罗斯科风格的矩形艺术作品。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/CSS%E5%88%9B%E4%BD%9C%E7%BD%97%E6%96%AF%E7%A7%91%E7%BB%98%E7%94%BB/&title=通过创作罗斯科绘画学习 CSS 盒子模型 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第五章。每个 HTML 元素都是一个盒子，它拥有着自己的间距和边框，这叫作盒子模型。在通过创作罗斯科绘画学习 CSS 盒子模型的课程中，使用 CSS 和盒子模型，创作属于自己的罗斯科风格的矩形艺术作品。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEcUlEQVR42u3aQW7DMAwEwPz/0+29RSFxSclJMbo5SCx7lAO54OvLOrJeCMCCtcCCBWuBvQL7CtfP3//a4I/Plw9W3Ce9z+q5Yw+wYMGCBQsWLFiwV2GrD1yF2H3R1fN0D756XfYACxYsWLBgwYIF+whs2hDsNgjTv98t+LvX2wcHFixYsGDBggUL9iNgq4DTB5Y2ImkDBBYsWLBgwYIFC/Z/wE4V3ruB9m7gPXXAYMGCBQsWLFiwYD8DthtA31rVwn86yAcLFixYsGDBggX7HrDdF/tv17EHWLBgwYIFCxYs2Cuw3bXaKP19NQhPB0imF1iwYMGCBQsWLNg7sLvBcfWFdyHSQn6qwK8+/9IJLFiwYMGCBQsW7BXYtOCubpj+vtsIVP8g1d8vOy+wYMGCBQsWLFiwV2GrhXXaEKSF+6lgfPePBBYsWLBgwYIFC/a9YNNgOg2MTx1I2li0vw8WLFiwYMGCBQv2CuypjXYbiWqjkQbr6QFU3wssWLBgwYIFCxbss7BTgxZp49Ad+EgD/LTxAQsWLFiwYMGCBXsXtjvQcKtg7wbs6R+g3FiABQsWLFiwYMGCvQp7KoCuDmR0QboHnDYqYMGCBQsWLFiwYO/CVgvkdLBhqiDvQnYD/eXnYMGCBQsWLFiwYK/ApsFzOlCxG5hX79t9nqn9wIIFCxYsWLBgwd6BTUHTgYr0e9V9pwLxcqMCFixYsGDBggUL9gpsfINmcF1tULrX04PG5YlusGDBggULFixYsKOwXdCpQYmpxqMaVHcHUJadF1iwYMGCBQsWLNijsNPAU0F2WvBXG6Ay4G6DABYsWLBgwYIFC/YI7NQDdRuA0wMfu1CpC1iwYMGCBQsWLNhnYLuAu8Fx9X7VwHoqqE+DdbBgwYIFCxYsWLDPwKYDDN2GIC3kX8XVbSTKQTdYsGDBggULFizYI7DpIMMUfFrod+9THsTYHSgBCxYsWLBgwYIFewV2avCie11tLKYajWojsvweWLBgwYIFCxYs2CuwaSF96oW6QXS14akG/GDBggULFixYsGDfC7YbYFcfON0/PYjuAW8/N1iwYMGCBQsWLNgrsNUfTjUA3cA8LfCnBjr+fC+wYMGCBQsWLFiwV2C7oCnEV7i6hX/1ecvBN1iwYMGCBQsWLNgrsKcesHr/NFBP96l+b7sxAQsWLFiwYMGCBXsV9vSARfXzNLDuFvzt+4IFCxYsWLBgwYK9CtsNnquFfvVA08K/PYABFixYsGDBggUL9i1hTxXK5YD4UIBdhU0HOsCCBQsWLFiwYME+A1ttCLpBcjow0t2n24gs7wcWLFiwYMGCBQv2EdjdQr4biKcFetowdAc3tg8CLFiwYMGCBQsW7EfAVgvxdJBjqrHoBuTLa7BgwYIFCxYsWLAfBdst7Kf3nzqg8uAJWLBgwYIFCxYs2Edgqxt2Bx+mYaqA0+8LFixYsGDBggUL9i5sdXUHHrqDGN1Bj7RxAAsWLFiwYMGCBfsesNbsAgsWrAUWLFgL7NH1DdI7zyNuhVErAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/CSS%E5%88%9B%E4%BD%9C%E7%BD%97%E6%96%AF%E7%A7%91%E7%BB%98%E7%94%BB/&text=通过创作罗斯科绘画学习 CSS 盒子模型 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -848,17 +728,9 @@ freeCodeCamp 响应式网页设计的认证课程第四章。你可以使用 HTM
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -984,8 +856,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1341,29 +1211,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1402,7 +1249,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1462,20 +1309,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1688,6 +1521,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

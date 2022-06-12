@@ -109,7 +109,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -233,16 +233,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -365,16 +375,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -398,7 +418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -421,36 +441,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -484,8 +474,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/IDEA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>IDEA</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Java/">Java</a>
+    </a>
+  </div>
 
 
           
@@ -528,8 +522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>IntelliJ IDEA 被公认为是最好的 Java 开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE 支持、Ant、JUnit、CVS 整合、代码审查、创新的GUI 设计等方面的功能可以说是超常的。相较于 Eclipse 而言，IDEA 增加了强大的整合能力、好用的快捷键和代码模板以及精准搜索，一些新的特性非常有必要学习熟悉。我目前使用的是 IDEA Ultimate 2021.2 版本，本篇笔记也是对最新版 IDEA 项目的创建、模板的使用、断点调试、数据库的关联、插件的下载、Maven及版本控制工具的配置等内容的一些总结。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="安装目录"><a href="#安装目录" class="headerlink" title="安装目录"></a>安装目录</h3><ul>
 <li><code>bin</code>：容器，执行文件和启动参数等<ul>
 <li><code>idea.exe.vmoptions</code>：VM 配置文件</li>
@@ -590,10 +583,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 <li><p>Editor -&gt; File and Code Templates -&gt; Includes</p>
-<pre><code class="java">/** 
-@author Bezhuang
-@create $&#123;YEAR&#125;-$&#123;MONTH&#125;-$&#123;DAY&#125; $&#123;TIME&#125; 
-*/ </code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"><span class="doctag">@author</span> Bezhuang</span></span><br><span class="line"><span class="comment"><span class="doctag">@create</span> $&#123;YEAR&#125;-$&#123;MONTH&#125;-$&#123;DAY&#125; $&#123;TIME&#125; </span></span><br><span class="line"><span class="comment">*/</span> </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Editor -&gt; File Encodings</p>
 <ul>
@@ -608,14 +598,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 </ul>
-<h3 id="Keymap"><a href="#Keymap" class="headerlink" title="Keymap"></a>Keymap</h3><table>
+<h3 id="Keymap"><a href="#Keymap" class="headerlink" title="Keymap"></a>Keymap</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>快捷键</th>
 <th>实现效果</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>Ctrl + X</td>
 <td>删除当前行</td>
 </tr>
@@ -703,7 +695,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <td>Ctrl+Shift+Insert</td>
 <td>查看历史复制记录</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="Templates"><a href="#Templates" class="headerlink" title="Templates"></a>Templates</h3><ul>
 <li><p>Live Templates 可以自定义，而 Postfix Completion 不可以</p>
 </li>
@@ -730,10 +724,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <ul>
-<li><p>list.fori -&gt; 正序遍历</p>
-</li>
-<li><p>list.forr -&gt; 倒序遍历</p>
-</li>
+<li>list.fori -&gt; 正序遍历</li>
+<li>list.forr -&gt; 倒序遍历</li>
+</ul>
+<ul>
 <li><p>ifn -&gt; <code>if(xxx = null)</code></p>
 <ul>
 <li>inn -&gt; <code>if(xxx != null)</code></li>
@@ -840,6 +834,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/IDEA%E9%85%8D%E7%BD%AE/>http://blog.zhuangzhihao.top/IDEA%E9%85%8D%E7%BD%AE/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -855,12 +853,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Java/">Java</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/IDEA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>IDEA</p></a></div>
 
 
         
@@ -878,77 +872,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/IDEA%E9%85%8D%E7%BD%AE/&title=IntelliJ IDEA 的配置与使用总结 - Bezhuang's Blog&summary=
-IntelliJ IDEA 被公认为是最好的 Java 开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE 支持、Ant、JUnit、CVS 整合、代码审查、创新的GUI 设计等方面的功能可以说是超常的。相较于 Eclipse 而言，IDEA 增加了强大的整合能力、好用的快捷键和代码模板以及精准搜索，一些新的特性非常有必要学习熟悉。我目前使用的是 IDEA Ultimate 2021.2 版本，本篇笔记也是对最新版 IDEA 项目的创建、模板的使用、断点调试、数据库的关联、插件的下载、Maven及版本控制工具的配置等内容的一些总结。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/IDEA%E9%85%8D%E7%BD%AE/&title=IntelliJ IDEA 的配置与使用总结 - Bezhuang's Blog&summary=
-IntelliJ IDEA 被公认为是最好的 Java 开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE 支持、Ant、JUnit、CVS 整合、代码审查、创新的GUI 设计等方面的功能可以说是超常的。相较于 Eclipse 而言，IDEA 增加了强大的整合能力、好用的快捷键和代码模板以及精准搜索，一些新的特性非常有必要学习熟悉。我目前使用的是 IDEA Ultimate 2021.2 版本，本篇笔记也是对最新版 IDEA 项目的创建、模板的使用、断点调试、数据库的关联、插件的下载、Maven及版本控制工具的配置等内容的一些总结。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/IDEA%E9%85%8D%E7%BD%AE/&title=IntelliJ IDEA 的配置与使用总结 - Bezhuang's Blog&summary=
-IntelliJ IDEA 被公认为是最好的 Java 开发工具之一，尤其在智能代码助手、代码自动提示、重构、J2EE 支持、Ant、JUnit、CVS 整合、代码审查、创新的GUI 设计等方面的功能可以说是超常的。相较于 Eclipse 而言，IDEA 增加了强大的整合能力、好用的快捷键和代码模板以及精准搜索，一些新的特性非常有必要学习熟悉。我目前使用的是 IDEA Ultimate 2021.2 版本，本篇笔记也是对最新版 IDEA 项目的创建、模板的使用、断点调试、数据库的关联、插件的下载、Maven及版本控制工具的配置等内容的一些总结。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC+klEQVR42u3aQXLDMAgF0Nz/0u0B2kz0AWdC/LSLY0viacOAHj/Gv+OBAAwYMGDAgFkD8yiOPxM++f/0ebru6T7iecGAAQMGDBgw62COE6AX758GdBpw93caDxgwYMCAAQNmL0x34y8XLgZSTfzi98GAAQMGDBgwt4OpFrKmwMGAAQMGDBgwYKYTvKkGWdrgAwMGDBgwYMDcDyZuUIUXe7oJWrch+LZOJBgwYMCAAQPmbTDpuOqiz9TvcjxgwIABAwYMmDUw3VFN7F5BnxaspgcYMGDAgAEDZg9MNUFKA642ytJCVHX/YMCAAQMGDJi9MPEEYaNtKqBT+PKBgAEDBgwYMGDWwEw33qYSvPS7U6jjBA8MGDBgwIAB8/Ew1cJTNZGrft/dz/HBgQEDBgwYMGC+DqaaUHUvEF1VUBtL8MCAAQMGDBgwHwPTTdCqjbZuISs90KfvgQEDBgwYMGDWwHQnThtc1e/jRK26fzBgwIABAwbMOpjTgKqJYTfAamEq/h4MGDBgwIAB83UwaSGpW1iaKmzFBwwGDBgwYMCAWQdzCpIWnLoNt2rg6X7BgAEDBgwYMPtguoWjNODqumniVz5QMGDAgAEDBswamKsLU6eJWrvAFK4PBgwYMGDAgPkemKkAqxd3psCqBwsGDBgwYMCA2QdTXTB9L22wpQ207jxgwIABAwYMmL0wxw2p4gbKCVdzP/F7YMCAAQMGDJj1MN0Eq9pw615YqiaYYMCAAQMGDJj9MClImkB1G2NTjb6nz8GAAQMGDBgwa2C647RANBVo2vBLE0owYMCAAQMGzB6YR3GkBaH0/3R/3cIbGDBgwIABA2YvzFTD6hTg6gtKYwkeGDBgwIABA2YNTDWB6iaK1QtB0+uBAQMGDBgwYO4Hc3UiWG3kxRejwIABAwYMGDC3hZkuII0FfLovMGDAgAEDBsxamLThdvXzU4jqwYIBAwYMGDBg9sN0G1fpBtPEa3re44YbGDBgwIABA+ZjYQwwYMCAAQMGzLLxC0PqYrtEXE67AAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/IDEA%E9%85%8D%E7%BD%AE/&text=IntelliJ IDEA 的配置与使用总结 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1067,17 +990,9 @@ In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, R
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1203,8 +1118,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1560,29 +1473,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1621,7 +1511,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1681,20 +1571,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1907,6 +1783,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

@@ -106,7 +106,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -230,16 +230,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -362,16 +372,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -395,7 +415,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -418,36 +438,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -481,8 +471,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MySQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MySQL</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91/">其他开发</a>
+    </a>
+  </div>
 
 
           
@@ -502,7 +496,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：429字</p>
+      <p>字数：426字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -523,7 +517,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   <blockquote>
-<p>MySQL 是目前应用最广泛的开源关系数据库，在学习完 <a href="/SQL%E5%9F%BA%E7%A1%80">SQL 语言基础</a>后，需要使用 MySQL 进行学习、开发、测试，部署，本篇笔记是对 MySQL 的安装和使用的记录，可供参考。</p>
+<p>MySQL 是目前应用最广泛的开源关系数据库，在学习完 <a href="/SQL基础">SQL 语言基础</a>后，需要使用 MySQL 进行学习、开发、测试，部署，本篇笔记是对 MySQL 的安装和使用的记录，可供参考。</p>
 </blockquote>
 <h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://downloads.mysql.com/archives/community/">https://downloads.mysql.com/archives/community/</a></li>
@@ -536,44 +530,32 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h3 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h3><ul>
 <li><p>新建一个文本文件，内容如下：</p>
-<pre><code class="properties">[mysql]
-default-character-set=utf8
-
-[mysqld]
-character-set-server=utf8
-default-storage-engine=INNODB
-sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION</code></pre>
+  <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">[mysql]</span></span><br><span class="line"><span class="attr">default-character-set</span>=<span class="string">utf8</span></span><br><span class="line"></span><br><span class="line"><span class="attr">[mysqld]</span></span><br><span class="line"><span class="attr">character-set-server</span>=<span class="string">utf8</span></span><br><span class="line"><span class="attr">default-storage-engine</span>=<span class="string">INNODB</span></span><br><span class="line"><span class="attr">sql_mode</span>=<span class="string">STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>把上面的文本文件另存为 <code>my.ini</code>，存放的路径为 MySQL 的<code>根目录</code></p>
 </li>
-<li><p>上面代码意思就是配置数据库的默认编码集为utf-8和默认存储引擎为INNODB。</p>
-</li>
+<li>上面代码意思就是配置数据库的默认编码集为utf-8和默认存储引擎为INNODB。</li>
 </ul>
-<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><pre><code>mysqld --initialize-insecure</code></pre>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize-insecure</span><br></pre></td></tr></table></figure>
 <ul>
 <li>如果出现没有出现报错信息，则证明 data 目录初始化没有问题，此时再查看MySQL目录下已经有data目录生成。</li>
 </ul>
-<h3 id="注册-MySQL-服务"><a href="#注册-MySQL-服务" class="headerlink" title="注册 MySQL 服务"></a>注册 MySQL 服务</h3><pre><code>mysqld -install</code></pre>
+<h3 id="注册-MySQL-服务"><a href="#注册-MySQL-服务" class="headerlink" title="注册 MySQL 服务"></a>注册 MySQL 服务</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld -install</span><br></pre></td></tr></table></figure>
 <ul>
 <li>现在你的计算机上已经安装好了MySQL服务了</li>
 </ul>
-<h3 id="启动-MySQL-服务"><a href="#启动-MySQL-服务" class="headerlink" title="启动 MySQL 服务"></a>启动 MySQL 服务</h3><pre><code class="java">net start mysql  // 启动mysql服务
-
-net stop mysql  // 停止mysql服务</code></pre>
-<h3 id="默认账户密码"><a href="#默认账户密码" class="headerlink" title="默认账户密码"></a>默认账户密码</h3><pre><code>mysqladmin -u root password 1234</code></pre>
+<h3 id="启动-MySQL-服务"><a href="#启动-MySQL-服务" class="headerlink" title="启动 MySQL 服务"></a>启动 MySQL 服务</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net start mysql  <span class="comment">// 启动mysql服务</span></span><br><span class="line">    </span><br><span class="line">net stop mysql  <span class="comment">// 停止mysql服务</span></span><br></pre></td></tr></table></figure>
+<h3 id="默认账户密码"><a href="#默认账户密码" class="headerlink" title="默认账户密码"></a>默认账户密码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqladmin -u root password 1234</span><br></pre></td></tr></table></figure>
 <ul>
 <li>这里的 <code>1234</code> 就是指默认管理员（root 账户）的密码</li>
 </ul>
-<h3 id="登录-MySQL"><a href="#登录-MySQL" class="headerlink" title="登录 MySQL"></a>登录 MySQL</h3><pre><code>mysql -uroot -p1234</code></pre>
+<h3 id="登录-MySQL"><a href="#登录-MySQL" class="headerlink" title="登录 MySQL"></a>登录 MySQL</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p1234</span><br></pre></td></tr></table></figure>
 <ul>
 <li>下角为<code>mysql&gt;</code>，则登录成功</li>
 </ul>
-<h3 id="退出-MySQL"><a href="#退出-MySQL" class="headerlink" title="退出 MySQL"></a>退出 MySQL</h3><pre><code>exit
-quit</code></pre>
-<h3 id="登陆参数"><a href="#登陆参数" class="headerlink" title="登陆参数"></a>登陆参数</h3><pre><code>mysql -u用户名 -p密码 -h要连接的mysql服务器的ip地址(默认127.0.0.1) -P端口号(默认3306)</code></pre>
-<h3 id="卸载-MySQL"><a href="#卸载-MySQL" class="headerlink" title="卸载 MySQL"></a>卸载 MySQL</h3><pre><code>net stop mysql
-
-mysqld -remove mysql</code></pre>
+<h3 id="退出-MySQL"><a href="#退出-MySQL" class="headerlink" title="退出 MySQL"></a>退出 MySQL</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br><span class="line">quit</span><br></pre></td></tr></table></figure>
+<h3 id="登陆参数"><a href="#登陆参数" class="headerlink" title="登陆参数"></a>登陆参数</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u用户名 -p密码 -h要连接的mysql服务器的ip地址(默认127.0.0.1) -P端口号(默认3306)</span><br></pre></td></tr></table></figure>
+<h3 id="卸载-MySQL"><a href="#卸载-MySQL" class="headerlink" title="卸载 MySQL"></a>卸载 MySQL</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net stop mysql</span><br><span class="line"></span><br><span class="line">mysqld -remove mysql</span><br></pre></td></tr></table></figure>
 <ul>
 <li>删除MySQL目录及相关的环境变量。</li>
 </ul>
@@ -593,6 +575,10 @@ mysqld -remove mysql</code></pre>
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/MySQL%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/>http://blog.zhuangzhihao.top/MySQL%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -608,12 +594,8 @@ mysqld -remove mysql</code></pre>
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91/">其他开发</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MySQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MySQL</p></a></div>
 
 
         
@@ -631,71 +613,6 @@ mysqld -remove mysql</code></pre>
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/MySQL%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/&title=MySQL 的安装和使用 - Bezhuang's Blog&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/MySQL%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/&title=MySQL 的安装和使用 - Bezhuang's Blog&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/MySQL%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/&title=MySQL 的安装和使用 - Bezhuang's Blog&summary="
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADq0lEQVR42u3aQXLjMAwEQP//09n7VrlEDCAZcZo3OZFENnVAYfj6MaLxQgAOHDhwBjhwS+Be4fj//nfX797zdmLF56fzi9cLDhw4cODAgQO3DO64ALyAuYKqwlXh0/kfbyQ4cODAgQMHDtxSuG5BmU746UI8Xi84cODAgQMHDtyXwFUbkaeFbXWDuo1ScODAgQMHDhy4vwp39f9TzzktnMGBAwcOHDhw4P4aXDmgLTYau2DT1x9L8sGBAwcOHDhw4Ibg7gqCt17H6wUHDhw4cODAgVsCNzW6E66+J93I9jrBgQMHDhw4cOCWwFVfdNqQrAJUN6LaYD2dZzvJBwcOHDhw4MCBewiuu5ApwLtgTwvu4wOR4MCBAwcOHDhwS+CeDqRPge56bvu94MCBAwcOHDhwy+GqBWJaIN8VKHcL8ONAGhw4cODAgQMH7sNwaUH8MzRSsDRwTp8PDhw4cODAgQO3Ba5a0E41JKuB8nSjMt4ocODAgQMHDhy4JXBTBwmfboymBwm7oODAgQMHDhw4cFvhqgcK0wOI0793g+fj+YIDBw4cOHDgwC2BSwvc7v3dxmh1Y9IgvRxIgwMHDhw4cODAfQhuqrCcCrZPC+xuYXvcCAUHDhw4cODAgVsC121U3rWgaqCdfgjVBiw4cODAgQMHDtwWuG7AfPeCp667DU1w4MCBAwcOHLjfDnc6sW6w3A22u4H22+eCAwcOHDhw4MAtg6s2+O4OsqcK83RjjhuZ4MCBAwcOHDhwS+DSCVUblXc3JE/fU30+OHDgwIEDBw7cFri4oRcWkFMFdLlwHQrOwYEDBw4cOHDgfgvcdAGaBs/T1+mGggMHDhw4cODAbYHrBrVTjc0UvvoBtANycODAgQMHDhy4JXDVA3hPB8fd51VBL9cHDhw4cODAgQO3BO60wK02NqsjLayrBxnTghocOHDgwIEDB24b3OmDqwFvNeiuFqgf21hw4MCBAwcOHLglcN2RBs5pIzMt0NMPARw4cODAgQMHbivcVOPxFKoabKf3pwH65e/gwIEDBw4cOHDL4LoFbwp2F2haAF/OHxw4cODAgQMHbilcteCdCoC7CztdR1rYgwMHDhw4cODAfSvcVICdziMtzKv3gQMHDhw4cODAfQvc1MHAqUC6GkxXNwQcOHDgwIEDB24r3FSgfNfBxG5j9RT6sSQfHDhw4MCBAweuCTce3IYLPP179770QwEHDhw4cODAgdsCZxQDdQTgwIEDZ4AD99nxD8z5+I+xprjAAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/MySQL%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/&text=MySQL 的安装和使用 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -814,17 +731,9 @@ mysqld -remove mysql</code></pre>
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -950,8 +859,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1307,29 +1214,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1368,7 +1252,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1428,20 +1312,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1654,6 +1524,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

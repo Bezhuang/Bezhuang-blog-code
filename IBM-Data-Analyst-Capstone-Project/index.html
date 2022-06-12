@@ -109,7 +109,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -233,16 +233,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -365,16 +375,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -398,7 +418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -421,36 +441,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -484,8 +474,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
+    </a>
+  </div>
 
 
           
@@ -511,7 +505,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：13分钟</p>
+      <p>时长：12分钟</p>
     </a>
   </div>
 
@@ -528,8 +522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>In this course provided by IBM, I will assume the role of an Associate Data Analyst who has recently joined the organization and be presented with a business challenge that requires data analysis to be performed on real-world datasets. The capstone project will culminate with a presentation of your data analysis report, with an executive summary for the various stakeholders in the organization. I believe this project is a great opportunity to showcase Data Analytics skills, and demonstrate proficiency to potential employers. The following are the notes I took during this course.</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 
 
 	<div class="row">
@@ -540,11 +533,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-
 	<div class="row">
     <embed src="/pdf/Coursera-Data-Analyst-Capstone-Project.pdf" width="100%" height="550" type="application/pdf">
 	</div>
-
 
 
 
@@ -572,273 +563,80 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 <li><p>Requests in Python</p>
-<pre><code class="python">import requests
-import os 
-from PIL import Image
-from IPython.display import IFrame
-#GET request //# Use single quotation marks for defining string
-url=&#39;https://www.ibm.com/&#39;  
-r=requests.get(url)
-#status of the request
-r.status_code  
-#view request headers //r.request.body
-print(r.request.headers)  
-#HTTP response header
-header=r.headers  
-#obtain the date
-header[&#39;date&#39;]  
-#obtain the type of data
-header[&#39;Content-Type&#39;]  
-r.encoding
-#view text
-r.text[0:100]  
-#write content(image)
-path=os.path.join(os.getcwd(),&#39;image.png&#39;)
-with open(path,&#39;wb&#39;) as f:
-    f.write(r.content)
-Image.open(path)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> os </span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> IPython.display <span class="keyword">import</span> IFrame</span><br><span class="line"><span class="comment">#GET request //# Use single quotation marks for defining string</span></span><br><span class="line">url=<span class="string">&#x27;https://www.ibm.com/&#x27;</span>  </span><br><span class="line">r=requests.get(url)</span><br><span class="line"><span class="comment">#status of the request</span></span><br><span class="line">r.status_code  </span><br><span class="line"><span class="comment">#view request headers //r.request.body</span></span><br><span class="line"><span class="built_in">print</span>(r.request.headers)  </span><br><span class="line"><span class="comment">#HTTP response header</span></span><br><span class="line">header=r.headers  </span><br><span class="line"><span class="comment">#obtain the date</span></span><br><span class="line">header[<span class="string">&#x27;date&#x27;</span>]  </span><br><span class="line"><span class="comment">#obtain the type of data</span></span><br><span class="line">header[<span class="string">&#x27;Content-Type&#x27;</span>]  </span><br><span class="line">r.encoding</span><br><span class="line"><span class="comment">#view text</span></span><br><span class="line">r.text[<span class="number">0</span>:<span class="number">100</span>]  </span><br><span class="line"><span class="comment">#write content(image)</span></span><br><span class="line">path=os.path.join(os.getcwd(),<span class="string">&#x27;image.png&#x27;</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(path,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(r.content)</span><br><span class="line">Image.<span class="built_in">open</span>(path)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Get Request with URL Parameters</p>
 <ul>
 <li>You can use the <code>GET</code> method to modify the results of your query</li>
 </ul>
-<pre><code class="python">url_get=&#39;http://httpbin.org/get&#39;
-#To create a Query string, add a dictionary.
-payload=&#123;&quot;name&quot;:&quot;Joseph&quot;,&quot;ID&quot;:&quot;123&quot;&#125;  
-r=requests.get(url_get,params=payload)
-r.url  #&#39;http://httpbin.org/get?name=Joseph&amp;ID=123&#39;
-#key args in JSON format
-r.json()[&#39;args&#39;]  </code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">url_get=<span class="string">&#x27;http://httpbin.org/get&#x27;</span></span><br><span class="line"><span class="comment">#To create a Query string, add a dictionary.</span></span><br><span class="line">payload=&#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;Joseph&quot;</span>,<span class="string">&quot;ID&quot;</span>:<span class="string">&quot;123&quot;</span>&#125;  </span><br><span class="line">r=requests.get(url_get,params=payload)</span><br><span class="line">r.url  <span class="comment">#&#x27;http://httpbin.org/get?name=Joseph&amp;ID=123&#x27;</span></span><br><span class="line"><span class="comment">#key args in JSON format</span></span><br><span class="line">r.json()[<span class="string">&#x27;args&#x27;</span>]  </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Post Requests</p>
 <ul>
 <li>the <code>POST</code> request sends the data in a request body</li>
 </ul>
-<pre><code class="python">url_post=&#39;http://httpbin.org/post&#39;
-r_post=requests.post(url_post,data=payload)
-r_post.url 
-r_post.request.body
-r_post.json()[&#39;form&#39;]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">url_post=<span class="string">&#x27;http://httpbin.org/post&#x27;</span></span><br><span class="line">r_post=requests.post(url_post,data=payload)</span><br><span class="line">r_post.url </span><br><span class="line">r_post.request.body</span><br><span class="line">r_post.json()[<span class="string">&#x27;form&#x27;</span>]</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="Collecting-Data-Using-Webscraping"><a href="#Collecting-Data-Using-Webscraping" class="headerlink" title="Collecting Data Using Webscraping"></a>Collecting Data Using Webscraping</h4><ul>
 <li><p>Review of Webscraping</p>
-<pre><code class="python">from bs4 import BeautifulSoup  # this module helps in web scrapping.
-import requests  # this module helps us to download a web page
-url = &quot;http://www.ibm.com&quot;
-# get the contents of the webpage in text format and store in a variable called data
-data  = requests.get(url).text  
-# create a soup object using the variable &#39;data&#39;
-soup = BeautifulSoup(data,&quot;html5lib&quot;)  
-# in html anchor/link is represented by the tag &lt;a&gt;
-for link in soup.find_all(&#39;a&#39;):  
-    print(link.get(&#39;href&#39;))
-# in html image is represented by the tag &lt;img&gt;
-for link in soup.find_all(&#39;img&#39;):
-    print(link.get(&#39;src&#39;))</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup  <span class="comment"># this module helps in web scrapping.</span></span><br><span class="line"><span class="keyword">import</span> requests  <span class="comment"># this module helps us to download a web page</span></span><br><span class="line">url = <span class="string">&quot;http://www.ibm.com&quot;</span></span><br><span class="line"><span class="comment"># get the contents of the webpage in text format and store in a variable called data</span></span><br><span class="line">data  = requests.get(url).text  </span><br><span class="line"><span class="comment"># create a soup object using the variable &#x27;data&#x27;</span></span><br><span class="line">soup = BeautifulSoup(data,<span class="string">&quot;html5lib&quot;</span>)  </span><br><span class="line"><span class="comment"># in html anchor/link is represented by the tag &lt;a&gt;</span></span><br><span class="line"><span class="keyword">for</span> link <span class="keyword">in</span> soup.find_all(<span class="string">&#x27;a&#x27;</span>):  </span><br><span class="line">    <span class="built_in">print</span>(link.get(<span class="string">&#x27;href&#x27;</span>))</span><br><span class="line"><span class="comment"># in html image is represented by the tag &lt;img&gt;</span></span><br><span class="line"><span class="keyword">for</span> link <span class="keyword">in</span> soup.find_all(<span class="string">&#x27;img&#x27;</span>):</span><br><span class="line">    <span class="built_in">print</span>(link.get(<span class="string">&#x27;src&#x27;</span>))</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Scrape data from html table</p>
-<pre><code class="python">url = &quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/datasets/HTMLColorCodes.html&quot;
-# get the contents of the webpage in text format and store in a variable called data
-data  = requests.get(url).text  
-soup = BeautifulSoup(data,&quot;html5lib&quot;)
-# in html table is represented by the tag &lt;table&gt;
-table = soup.find(&#39;table&#39;) 
-# in html table row is represented by the tag &lt;tr&gt;
-for row in table.find_all(&#39;tr&#39;): 
-    # in html a column is represented by the tag &lt;td&gt;
-    cols = row.find_all(&#39;td&#39;) 
-    # store the value in column 3 as color_name
-    color_name = cols[2].getText() 
-    # store the value in column 4 as color_code
-    color_code = cols[3].getText() 
-    print(&quot;&#123;&#125;---&gt;&#123;&#125;&quot;.format(color_name,color_code))</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">url = <span class="string">&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/datasets/HTMLColorCodes.html&quot;</span></span><br><span class="line"><span class="comment"># get the contents of the webpage in text format and store in a variable called data</span></span><br><span class="line">data  = requests.get(url).text  </span><br><span class="line">soup = BeautifulSoup(data,<span class="string">&quot;html5lib&quot;</span>)</span><br><span class="line"><span class="comment"># in html table is represented by the tag &lt;table&gt;</span></span><br><span class="line">table = soup.find(<span class="string">&#x27;table&#x27;</span>) </span><br><span class="line"><span class="comment"># in html table row is represented by the tag &lt;tr&gt;</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> table.find_all(<span class="string">&#x27;tr&#x27;</span>): </span><br><span class="line">    <span class="comment"># in html a column is represented by the tag &lt;td&gt;</span></span><br><span class="line">    cols = row.find_all(<span class="string">&#x27;td&#x27;</span>) </span><br><span class="line">    <span class="comment"># store the value in column 3 as color_name</span></span><br><span class="line">    color_name = cols[<span class="number">2</span>].getText() </span><br><span class="line">    <span class="comment"># store the value in column 4 as color_code</span></span><br><span class="line">    color_code = cols[<span class="number">3</span>].getText() </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;---&gt;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(color_name,color_code))</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="Exploring-Data"><a href="#Exploring-Data" class="headerlink" title="Exploring Data"></a>Exploring Data</h4><ul>
 <li><p>Load the dataset</p>
-<pre><code class="python">import pandas as pd
-dataset_url = &quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m1_survey_data.csv&quot;
-df = pd.read_csv(dataset_url)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">dataset_url = <span class="string">&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m1_survey_data.csv&quot;</span></span><br><span class="line">df = pd.read_csv(dataset_url)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Explore the dataset</p>
-<pre><code class="python">#Display the top &amp; bottom 5 rows and columns from your dataset
-df.head()  
-df.tail()
-#The number of rows in the dataset.
-df.shape[0]  
-#The number of columns in the dataset.
-df.shape[1]  
-#Print the datatype of all columns.
-df.dtypes  
-#Print the mean age of the survey participants.
-df[&quot;Age&quot;].mean()
-#Print how many unique countries are there in the Country column.
-df[&quot;Country&quot;].nunique()  </code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Display the top &amp; bottom 5 rows and columns from your dataset</span></span><br><span class="line">df.head()  </span><br><span class="line">df.tail()</span><br><span class="line"><span class="comment">#The number of rows in the dataset.</span></span><br><span class="line">df.shape[<span class="number">0</span>]  </span><br><span class="line"><span class="comment">#The number of columns in the dataset.</span></span><br><span class="line">df.shape[<span class="number">1</span>]  </span><br><span class="line"><span class="comment">#Print the datatype of all columns.</span></span><br><span class="line">df.dtypes  </span><br><span class="line"><span class="comment">#Print the mean age of the survey participants.</span></span><br><span class="line">df[<span class="string">&quot;Age&quot;</span>].mean()</span><br><span class="line"><span class="comment">#Print how many unique countries are there in the Country column.</span></span><br><span class="line">df[<span class="string">&quot;Country&quot;</span>].nunique()  </span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Data-Wrangling"><a href="#Data-Wrangling" class="headerlink" title="Data Wrangling"></a>Data Wrangling</h3><ul>
 <li><p>Load the dataset</p>
-<pre><code class="python">import pandas as pd
-df = pd.read_csv(&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m1_survey_data.csv&quot;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_csv(<span class="string">&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m1_survey_data.csv&quot;</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Finding Duplicates</p>
-<pre><code class="python">#Find how many duplicate rows exist in the dataframe.
-df.duplicated(keep=&#39;first&#39;).sum()  
-#Show duplicated rows
-duplicateRows = df[df.duplicated()]  
-duplicateRows  
-#numbers of duplicate values in the column Respondent
-df[&quot;Respondent&quot;].duplicated(keep=&#39;first&#39;).sum()  </code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Find how many duplicate rows exist in the dataframe.</span></span><br><span class="line">df.duplicated(keep=<span class="string">&#x27;first&#x27;</span>).<span class="built_in">sum</span>()  </span><br><span class="line"><span class="comment">#Show duplicated rows</span></span><br><span class="line">duplicateRows = df[df.duplicated()]  </span><br><span class="line">duplicateRows  </span><br><span class="line"><span class="comment">#numbers of duplicate values in the column Respondent</span></span><br><span class="line">df[<span class="string">&quot;Respondent&quot;</span>].duplicated(keep=<span class="string">&#x27;first&#x27;</span>).<span class="built_in">sum</span>()  </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Removing Duplicates</p>
-<pre><code class="python">#Remove the duplicate rows from the dataframe.
-df.drop_duplicates(ignore_index=True, inplace=True)  
-#Verify if duplicates were actually dropped.
-df.duplicated(keep=&#39;first&#39;).sum()  
-#number of rows and columns left
-df.shape  
-#numbers of unique rows left in the column Respondent
-df[&quot;Respondent&quot;].nunique  </code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Remove the duplicate rows from the dataframe.</span></span><br><span class="line">df.drop_duplicates(ignore_index=<span class="literal">True</span>, inplace=<span class="literal">True</span>)  </span><br><span class="line"><span class="comment">#Verify if duplicates were actually dropped.</span></span><br><span class="line">df.duplicated(keep=<span class="string">&#x27;first&#x27;</span>).<span class="built_in">sum</span>()  </span><br><span class="line"><span class="comment">#number of rows and columns left</span></span><br><span class="line">df.shape  </span><br><span class="line"><span class="comment">#numbers of unique rows left in the column Respondent</span></span><br><span class="line">df[<span class="string">&quot;Respondent&quot;</span>].nunique  </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Finding Missing Values</p>
-<pre><code class="python">#Find the missing values for all columns.
-df.isnull().sum()  
-#Find out how many rows are missing in the column EdLevel
-df[&quot;EdLevel&quot;].isnull().sum()  </code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Find the missing values for all columns.</span></span><br><span class="line">df.isnull().<span class="built_in">sum</span>()  </span><br><span class="line"><span class="comment">#Find out how many rows are missing in the column EdLevel</span></span><br><span class="line">df[<span class="string">&quot;EdLevel&quot;</span>].isnull().<span class="built_in">sum</span>()  </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Determine Missing Values</p>
-<pre><code class="python">#Find the value counts for the column WorkLoc.
-df[&quot;WorkLoc&quot;].value_counts()  
-#Impute (replace) all the empty rows in the column WorkLoc with the value that you have identified as majority.
-df[&quot;WorkLoc&quot;].fillna(value=&quot;Office&quot;,inplace=True)  
-#After imputation there should ideally not be any empty rows in the WorkLoc column.
-df[&quot;WorkLoc&quot;].isnull().sum()  </code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Find the value counts for the column WorkLoc.</span></span><br><span class="line">df[<span class="string">&quot;WorkLoc&quot;</span>].value_counts()  </span><br><span class="line"><span class="comment">#Impute (replace) all the empty rows in the column WorkLoc with the value that you have identified as majority.</span></span><br><span class="line">df[<span class="string">&quot;WorkLoc&quot;</span>].fillna(value=<span class="string">&quot;Office&quot;</span>,inplace=<span class="literal">True</span>)  </span><br><span class="line"><span class="comment">#After imputation there should ideally not be any empty rows in the WorkLoc column.</span></span><br><span class="line">df[<span class="string">&quot;WorkLoc&quot;</span>].isnull().<span class="built_in">sum</span>()  </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Normalizing Data</p>
-<pre><code class="python">#List out the various categories in the column &#39;CompFreq&#39;
-df[&quot;CompFreq&quot;].unique()  
-#If the CompFreq is Yearly then use the exising value in CompTotal
-df[&quot;CompFreq&quot;].replace(to_replace=&quot;Yearly&quot;,value=1,inplace=True)  
-#If the CompFreq is Monthly then multiply the value in CompTotal with 12 (months in an year)
-df[&quot;CompFreq&quot;].replace(to_replace=&quot;Monthly&quot;,value=12,inplace=True)  
-#If the CompFreq is Weekly then multiply the value in CompTotal with 52 (weeks in an year)
-df[&quot;CompFreq&quot;].replace(to_replace=&quot;Weekly&quot;,value=52,inplace=True)  
-df[&quot;CompFreq&quot;].unique()
-df[&quot;CompFreq&quot;].value_counts()
-#it makes comparison of salaries easy.
-df[&#39;NormalizedAnnualCompensation&#39;] = df[&quot;CompTotal&quot;] * df[&quot;CompFreq&quot;]  
-df[&quot;Respondent&quot;].nunique()
-df[&quot;ConvertedComp&quot;].describe()
-df[&quot;ConvertedComp&quot;].hist(figsize=(15,4))
-df[&#39;NormalizedAnnualCompensation&#39;].median()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#List out the various categories in the column &#x27;CompFreq&#x27;</span></span><br><span class="line">df[<span class="string">&quot;CompFreq&quot;</span>].unique()  </span><br><span class="line"><span class="comment">#If the CompFreq is Yearly then use the exising value in CompTotal</span></span><br><span class="line">df[<span class="string">&quot;CompFreq&quot;</span>].replace(to_replace=<span class="string">&quot;Yearly&quot;</span>,value=<span class="number">1</span>,inplace=<span class="literal">True</span>)  </span><br><span class="line"><span class="comment">#If the CompFreq is Monthly then multiply the value in CompTotal with 12 (months in an year)</span></span><br><span class="line">df[<span class="string">&quot;CompFreq&quot;</span>].replace(to_replace=<span class="string">&quot;Monthly&quot;</span>,value=<span class="number">12</span>,inplace=<span class="literal">True</span>)  </span><br><span class="line"><span class="comment">#If the CompFreq is Weekly then multiply the value in CompTotal with 52 (weeks in an year)</span></span><br><span class="line">df[<span class="string">&quot;CompFreq&quot;</span>].replace(to_replace=<span class="string">&quot;Weekly&quot;</span>,value=<span class="number">52</span>,inplace=<span class="literal">True</span>)  </span><br><span class="line">df[<span class="string">&quot;CompFreq&quot;</span>].unique()</span><br><span class="line">df[<span class="string">&quot;CompFreq&quot;</span>].value_counts()</span><br><span class="line"><span class="comment">#it makes comparison of salaries easy.</span></span><br><span class="line">df[<span class="string">&#x27;NormalizedAnnualCompensation&#x27;</span>] = df[<span class="string">&quot;CompTotal&quot;</span>] * df[<span class="string">&quot;CompFreq&quot;</span>]  </span><br><span class="line">df[<span class="string">&quot;Respondent&quot;</span>].nunique()</span><br><span class="line">df[<span class="string">&quot;ConvertedComp&quot;</span>].describe()</span><br><span class="line">df[<span class="string">&quot;ConvertedComp&quot;</span>].hist(figsize=(<span class="number">15</span>,<span class="number">4</span>))</span><br><span class="line">df[<span class="string">&#x27;NormalizedAnnualCompensation&#x27;</span>].median()</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Exploratory-Data-Analysis"><a href="#Exploratory-Data-Analysis" class="headerlink" title="Exploratory Data Analysis"></a>Exploratory Data Analysis</h3><ul>
 <li><p>Import necessary modules</p>
-<pre><code class="python">import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-%matplotlib inline
-df = pd.read_csv(&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m2_survey_data.csv&quot;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line">%matplotlib inline</span><br><span class="line">df = pd.read_csv(<span class="string">&quot;https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m2_survey_data.csv&quot;</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Distribution: Determine how the data is distributed</p>
-<pre><code class="python">  #Plot the distribution curve for the column ConvertedComp
-  plt.figure(figsize=(10,5))
-  sns.distplot(a=df[&quot;ConvertedComp&quot;],bins=20,hist=False)
-  plt.show()
-  #Plot the histogram for the column ConvertedComp
-  plt.figure(figsize=(10,5))
-  sns.distplot(a=df[&quot;ConvertedComp&quot;],bins=20,kde=False)
-  plt.show()
-  #the median of the column ConvertedComp
-  df[&quot;ConvertedComp&quot;].median()
-  #number of responders identified themselves only as a Man
-  df[&quot;Gender&quot;].value_counts()
-  #the median number of ConvertedComp of responders identified themselves only as a Woman
-  woman = df[df[&quot;Gender&quot;] == &quot;Woman&quot;]
-  woman[&quot;ConvertedComp&quot;].median()
-  #five number summary for the column Age
-  df[&quot;Age&quot;].describe()</code></pre>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Plot the distribution curve for the column ConvertedComp</span></span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>,<span class="number">5</span>))</span><br><span class="line">sns.distplot(a=df[<span class="string">&quot;ConvertedComp&quot;</span>],bins=<span class="number">20</span>,hist=<span class="literal">False</span>)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#Plot the histogram for the column ConvertedComp</span></span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>,<span class="number">5</span>))</span><br><span class="line">sns.distplot(a=df[<span class="string">&quot;ConvertedComp&quot;</span>],bins=<span class="number">20</span>,kde=<span class="literal">False</span>)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#the median of the column ConvertedComp</span></span><br><span class="line">df[<span class="string">&quot;ConvertedComp&quot;</span>].median()</span><br><span class="line"><span class="comment">#number of responders identified themselves only as a Man</span></span><br><span class="line">df[<span class="string">&quot;Gender&quot;</span>].value_counts()</span><br><span class="line"><span class="comment">#the median number of ConvertedComp of responders identified themselves only as a Woman</span></span><br><span class="line">woman = df[df[<span class="string">&quot;Gender&quot;</span>] == <span class="string">&quot;Woman&quot;</span>]</span><br><span class="line">woman[<span class="string">&quot;ConvertedComp&quot;</span>].median()</span><br><span class="line"><span class="comment">#five number summary for the column Age</span></span><br><span class="line">df[<span class="string">&quot;Age&quot;</span>].describe()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Outliers</p>
-<pre><code class="python">#Find out if outliers exist in the column ConvertedComp using a box plot
-plt.figure(figsize=(10,5))
-sns.boxplot(x=df.ConvertedComp, data=df)
-plt.show()
-#Find out the Inter Quartile Range for the column ConvertedComp
-df[&quot;ConvertedComp&quot;].describe()
-#Find out the upper and lower bounds.
-Q1 = df[&quot;ConvertedComp&quot;].quantile(0.25)
-Q3 = df[&quot;ConvertedComp&quot;].quantile(0.75)
-IQR = Q3 - Q1
-print(IQR)
-#Identify how many outliers are there in the ConvertedComp column
-outliers = (df[&quot;ConvertedComp&quot;] &lt; (Q1 - 1.5 * IQR)) | (df[&quot;ConvertedComp&quot;] &gt; (Q3 + 1.5 * IQR))
-outliers.value_counts()
-less = (df[&quot;ConvertedComp&quot;] &lt; (Q1 - 1.5 * IQR))
-less.value_counts()
-more = (df[&quot;ConvertedComp&quot;] &gt; (Q3 + 1.5 * IQR))
-more.value_counts()
-#Create a new dataframe by removing the outliers from the ConvertedComp column
-RemoveConvertedcomp = df[~(df[&quot;ConvertedComp&quot;] &gt; (Q3 + 1.5 * IQR))]
-RemoveConvertedcomp.head()
-RemoveConvertedcomp[&quot;ConvertedComp&quot;].median()
-RemoveConvertedcomp[&quot;ConvertedComp&quot;].mean()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Find out if outliers exist in the column ConvertedComp using a box plot</span></span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>,<span class="number">5</span>))</span><br><span class="line">sns.boxplot(x=df.ConvertedComp, data=df)</span><br><span class="line">plt.show()</span><br><span class="line"><span class="comment">#Find out the Inter Quartile Range for the column ConvertedComp</span></span><br><span class="line">df[<span class="string">&quot;ConvertedComp&quot;</span>].describe()</span><br><span class="line"><span class="comment">#Find out the upper and lower bounds.</span></span><br><span class="line">Q1 = df[<span class="string">&quot;ConvertedComp&quot;</span>].quantile(<span class="number">0.25</span>)</span><br><span class="line">Q3 = df[<span class="string">&quot;ConvertedComp&quot;</span>].quantile(<span class="number">0.75</span>)</span><br><span class="line">IQR = Q3 - Q1</span><br><span class="line"><span class="built_in">print</span>(IQR)</span><br><span class="line"><span class="comment">#Identify how many outliers are there in the ConvertedComp column</span></span><br><span class="line">outliers = (df[<span class="string">&quot;ConvertedComp&quot;</span>] &lt; (Q1 - <span class="number">1.5</span> * IQR)) | (df[<span class="string">&quot;ConvertedComp&quot;</span>] &gt; (Q3 + <span class="number">1.5</span> * IQR))</span><br><span class="line">outliers.value_counts()</span><br><span class="line">less = (df[<span class="string">&quot;ConvertedComp&quot;</span>] &lt; (Q1 - <span class="number">1.5</span> * IQR))</span><br><span class="line">less.value_counts()</span><br><span class="line">more = (df[<span class="string">&quot;ConvertedComp&quot;</span>] &gt; (Q3 + <span class="number">1.5</span> * IQR))</span><br><span class="line">more.value_counts()</span><br><span class="line"><span class="comment">#Create a new dataframe by removing the outliers from the ConvertedComp column</span></span><br><span class="line">RemoveConvertedcomp = df[~(df[<span class="string">&quot;ConvertedComp&quot;</span>] &gt; (Q3 + <span class="number">1.5</span> * IQR))]</span><br><span class="line">RemoveConvertedcomp.head()</span><br><span class="line">RemoveConvertedcomp[<span class="string">&quot;ConvertedComp&quot;</span>].median()</span><br><span class="line">RemoveConvertedcomp[<span class="string">&quot;ConvertedComp&quot;</span>].mean()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Correlation: Find the correlation between all numerical columns</p>
-<pre><code class="python">df.corr()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.corr()</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Data-Visualization"><a href="#Data-Visualization" class="headerlink" title="Data Visualization"></a>Data Visualization</h3><ul>
 <li><p>Work with Database</p>
-<pre><code class="python">!wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m4_survey_data.sqlite
-import sqlite3
-import pandas as pd
-# open a database connection
-conn = sqlite3.connect(&quot;m4_survey_data.sqlite&quot;) 
-# print how many rows are there in the table named &#39;master&#39;
-QUERY = &quot;&quot;&quot;
-SELECT COUNT(*)
-FROM master
-&quot;&quot;&quot;
-# the read_sql_query runs the sql query and returns the data as a dataframe
-df = pd.read_sql_query(QUERY,conn)
-df.head()
-# print all the tables names in the database
-QUERY = &quot;&quot;&quot;
-SELECT name as Table_Name FROM
-sqlite_master WHERE
-type = &#39;table&#39;
-&quot;&quot;&quot;
-# the read_sql_query runs the sql query and returns the data as a dataframe
-pd.read_sql_query(QUERY,conn)
-#run a group by query
-QUERY = &quot;&quot;&quot;
-SELECT Age,COUNT(*) as count
-FROM master
-group by age
-order by age
-&quot;&quot;&quot;
-pd.read_sql_query(QUERY,conn)
-#Describe a table
-table_name = &#39;master&#39;  # the table you wish to describe
-QUERY = &quot;&quot;&quot;
-SELECT sql FROM sqlite_master
-WHERE name= &#39;&#123;&#125;&#39;
-&quot;&quot;&quot;.format(table_name)
-df = pd.read_sql_query(QUERY,conn)
-print(df.iat[0,0])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">!wget https://cf-courses-data.s3.us.cloud-<span class="built_in">object</span>-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m4_survey_data.sqlite</span><br><span class="line"><span class="keyword">import</span> sqlite3</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="comment"># open a database connection</span></span><br><span class="line">conn = sqlite3.connect(<span class="string">&quot;m4_survey_data.sqlite&quot;</span>) </span><br><span class="line"><span class="comment"># print how many rows are there in the table named &#x27;master&#x27;</span></span><br><span class="line">QUERY = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">SELECT COUNT(*)</span></span><br><span class="line"><span class="string">FROM master</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># the read_sql_query runs the sql query and returns the data as a dataframe</span></span><br><span class="line">df = pd.read_sql_query(QUERY,conn)</span><br><span class="line">df.head()</span><br><span class="line"><span class="comment"># print all the tables names in the database</span></span><br><span class="line">QUERY = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">SELECT name as Table_Name FROM</span></span><br><span class="line"><span class="string">sqlite_master WHERE</span></span><br><span class="line"><span class="string">type = &#x27;table&#x27;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># the read_sql_query runs the sql query and returns the data as a dataframe</span></span><br><span class="line">pd.read_sql_query(QUERY,conn)</span><br><span class="line"><span class="comment">#run a group by query</span></span><br><span class="line">QUERY = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">SELECT Age,COUNT(*) as count</span></span><br><span class="line"><span class="string">FROM master</span></span><br><span class="line"><span class="string">group by age</span></span><br><span class="line"><span class="string">order by age</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">pd.read_sql_query(QUERY,conn)</span><br><span class="line"><span class="comment">#Describe a table</span></span><br><span class="line">table_name = <span class="string">&#x27;master&#x27;</span>  <span class="comment"># the table you wish to describe</span></span><br><span class="line">QUERY = <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">SELECT sql FROM sqlite_master</span></span><br><span class="line"><span class="string">WHERE name= &#x27;&#123;&#125;&#x27;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span>.<span class="built_in">format</span>(table_name)</span><br><span class="line">df = pd.read_sql_query(QUERY,conn)</span><br><span class="line"><span class="built_in">print</span>(df.iat[<span class="number">0</span>,<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Visualizing Distribution of Data</p>
 </li>
-<li><p>Relationship</p>
-</li>
-<li><p>Composition</p>
-</li>
-<li><p>Comparison</p>
-</li>
+<li>Relationship</li>
+<li>Composition</li>
+<li>Comparison</li>
 </ul>
 <h3 id="Dashboard-Creation"><a href="#Dashboard-Creation" class="headerlink" title="Dashboard Creation"></a>Dashboard Creation</h3><ul>
 <li>IBM Cognos Dashboard Embedded (CDE) is an AI-fueled business intelligence service that supports the entire data analytics cycle, from discovery to operationalization. It provides users with data discovery capabilities to visually explore and interact with their data to identify the key insights for improving data driven decisions. Users can perform data discovery and then quickly assemble that information into interactive, visually appealing dashboards; all without the need of formal training.</li>
@@ -871,7 +669,13 @@ print(df.iat[0,0])</code></pre>
 </ul>
 </li>
 <li><p>Final Presentation</p>
-<iframe src="https://onedrive.live.com/embed?resid=5B712C0081A6168C%21873&amp;authkey=%21ALfYamiV2mOnskw&amp;em=2&amp;wdAr=1.7777777777777777" width="1186px" height="691px" frameborder="0">这是嵌入 <a target="_blank" href="https://office.com">Microsoft Office</a> 演示文稿，由 <a target="_blank" href="https://office.com/webapps">Office</a> 提供支持。</iframe>
+
+
+	<div class="row">
+    <embed src="/pdf/Capstone_Story.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
 
 </li>
 </ul>
@@ -894,6 +698,10 @@ print(df.iat[0,0])</code></pre>
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/IBM-Data-Analyst-Capstone-Project/>http://blog.zhuangzhihao.top/IBM-Data-Analyst-Capstone-Project/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -909,12 +717,8 @@ print(df.iat[0,0])</code></pre>
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL</p></a></div>
 
 
         
@@ -932,77 +736,6 @@ print(df.iat[0,0])</code></pre>
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/IBM-Data-Analyst-Capstone-Project/&title=IBM Data Analyst Capstone Project - Bezhuang's Blog&summary=
-In this course provided by IBM, I will assume the role of an Associate Data Analyst who has recently joined the organization and be presented with a business challenge that requires data analysis to be performed on real-world datasets. The capstone project will culminate with a presentation of your data analysis report, with an executive summary for the various stakeholders in the organization. I believe this project is a great opportunity to showcase Data Analytics skills, and demonstrate proficiency to potential employers. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/IBM-Data-Analyst-Capstone-Project/&title=IBM Data Analyst Capstone Project - Bezhuang's Blog&summary=
-In this course provided by IBM, I will assume the role of an Associate Data Analyst who has recently joined the organization and be presented with a business challenge that requires data analysis to be performed on real-world datasets. The capstone project will culminate with a presentation of your data analysis report, with an executive summary for the various stakeholders in the organization. I believe this project is a great opportunity to showcase Data Analytics skills, and demonstrate proficiency to potential employers. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/IBM-Data-Analyst-Capstone-Project/&title=IBM Data Analyst Capstone Project - Bezhuang's Blog&summary=
-In this course provided by IBM, I will assume the role of an Associate Data Analyst who has recently joined the organization and be presented with a business challenge that requires data analysis to be performed on real-world datasets. The capstone project will culminate with a presentation of your data analysis report, with an executive summary for the various stakeholders in the organization. I believe this project is a great opportunity to showcase Data Analytics skills, and demonstrate proficiency to potential employers. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADr0lEQVR42u3aS3LcMAwFQN//0sk+VS4SD5AGdpq7+UgEW5tXgL7+WNH6QgAOHDhwFjhwS+C+wnW90eG6f7+//Xxbx+n66nnBgQMHDhw4cOC2wVUhTkDHAg773kJXH1j3vODAgQMHDhw4cFvhqgeuBtRbsDR4d+s9/h8cOHDgwIEDB+6XwcWNwWJQrdbbvR4cOHDgwIEDB+63w3Vhp+6XBmJw4MCBAwcOHLifDjf1ol46eK42RqvXrZnkgwMHDhw4cODADcF1G5E/7XN8XnDgwIEDBw4cuCVw3dUNvLf3T/ep7nesBxw4cODAgQMHbglcd4B829BMD1zd76nrwIEDBw4cOHDgtsGlATUFqhaaNizT74/XgQMHDhw4cODALYNLX/C7Beo2Rk/7P/WC43EgDQ4cOHDgwIED9yG4qcFu9cBp4J4aoKcBGhw4cODAgQMHbhtcuqqNxakGarf+6vXgwIEDBw4cOHBb4cpB8LLxFzcMw4HxawNpcODAgQMHDhy4D8OlG1YblVONzrTx2q0PHDhw4MCBAwduO1wK0x1QV7+fDtTtAAwOHDhw4MCBA/dhuOlgmTY+n3og3cE6OHDgwIEDBw7cVrhuwd0XD9P/TQ2kjw8UHDhw4MCBAwduGdxUkKwOjJ8KwFMB/BiAwYEDBw4cOHDgPgRXbQxWA2c3gKYD8u5A+tjIBAcOHDhw4MCBWwL3VkNy6r5p3dUg/G0jExw4cODAgQMH7sNw3WCbwt2CTe1b/V95kg8OHDhw4MCBA7cEbqoBOX3/tHGZBvLjJB8cOHDgwIEDB24pXHcAPN0ITf9XPR84cODAgQMHDtxPhbsdAHcHxbdBtztATwfucQcYHDhw4MCBAwfuYbj0Bt3BdfmFvibQWHAGBw4cOHDgwIFbBlctsFpIFSgNxink9fnBgQMHDhw4cOCWwqUNxhSsepAqdDVoXw+kwYEDBw4cOHDglsF1P08Pmt8elJcH0uDAgQMHDhw4cB+C665qAE0bp28/sG/PBQ4cOHDgwIEDtwRuKiB2XxCcakimAf76QYMDBw4cOHDgwC2DSwNveuDboHu7z1sDb3DgwIEDBw4cuK1w3QOnQfitBmk76IMDBw4cOHDgwP1ncN2GYvd+U8EbHDhw4MCBAwfut8FNHSxtnKaNzGpABwcOHDhw4MCB2wqXFvJWw7MKnjYsH5/kgwMHDhw4cODADcGlG00VdPsgnq7z+Ds4cODAgQMHDtwSOKvY4EQADhw4cBY4cJ9dfwFEgf1EonFgeQAAAABJRU5ErkJggg==">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/IBM-Data-Analyst-Capstone-Project/&text=IBM Data Analyst Capstone Project - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1121,17 +854,9 @@ This Data Analysis with Python course provided by IBM is designed to teach futur
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1257,8 +982,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1614,29 +1337,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1675,7 +1375,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1735,20 +1435,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1961,6 +1647,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

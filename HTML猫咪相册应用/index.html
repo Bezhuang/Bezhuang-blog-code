@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
+    </a>
+  </div>
 
 
           
@@ -506,7 +500,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：500字</p>
+      <p>字数：504字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -529,41 +523,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>freeCodeCamp 响应式网页设计的认证课程第一章。HTML 标签赋予了网页结构。你可以使用 HTML 标签添加照片、按钮和其它元素到你的网页。在通过编写猫咪相册应用学习 HTML 的课程中，通过编写一个猫咪相册应用，学习最常见的 HTML 标签。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、重点代码"><a href="#一、重点代码" class="headerlink" title="一、重点代码"></a>一、重点代码</h3><p>页面格式：</p>
-<pre><code class="HTML">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-  &lt;header&gt;&lt;title&gt;CatPhotoApp&lt;/title&gt;&lt;/header&gt;
-    &lt;body&gt;
-      &lt;main&gt;
-        &lt;section&gt;&lt;/section&gt;  &lt;!--多个分块--&gt;
-      &lt;/main&gt;
-      &lt;footer&gt;&lt;p&gt;Copyright&lt;/p&gt;&lt;/footer&gt;
-    &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span><span class="tag">&lt;<span class="name">title</span>&gt;</span>CatPhotoApp<span class="tag">&lt;/<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">main</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">section</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span>  <span class="comment">&lt;!--多个分块--&gt;</span></span><br><span class="line">  	<span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>Copyright<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>figure 标签，用于规定独立的流内容（图像、图表、照片、代码等）：</p>
-<pre><code class="html">&lt;figure&gt;
-    &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg&quot; alt=&quot;A slice of lasagna on a plate.&quot;&gt;   &lt;!--img 标签自闭和--&gt;
-    &lt;figcaption&gt;Cats &lt;em&gt;love&lt;/em&gt; lasagna.&lt;/figcaption&gt;
-&lt;/figure&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">figure</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;A slice of lasagna on a plate.&quot;</span>&gt;</span>   <span class="comment">&lt;!--img 标签自闭和--&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">figcaption</span>&gt;</span>Cats <span class="tag">&lt;<span class="name">em</span>&gt;</span>love<span class="tag">&lt;/<span class="name">em</span>&gt;</span> lasagna.<span class="tag">&lt;/<span class="name">figcaption</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>form 表单提交：</p>
-<pre><code class="html">&lt;form action=&quot;https://freecatphotoapp.com/submit-cat-photo&quot;&gt;
-  &lt;input type=&quot;text&quot; name=&quot;catphotourl&quot; placeholder=&quot;cat photo URL&quot; required&gt;
-  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;https://freecatphotoapp.com/submit-cat-photo&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;catphotourl&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;cat photo URL&quot;</span> <span class="attr">required</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span>Submit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>用 fieldset 标签对表单进行分组，一个表单可以有多个 fieldset：</p>
-<pre><code class="html">&lt;fieldset&gt;
-    &lt;legend&gt;Is your cat an indoor or outdoor cat?&lt;/legend&gt;
-    &lt;label&gt;&lt;input id=&quot;indoor&quot; type=&quot;radio&quot; name=&quot;indoor-outdoor&quot; value=&quot;indoor&quot; checked&gt; Indoor&lt;/label&gt;
-    &lt;label&gt;&lt;input id=&quot;outdoor&quot; type=&quot;radio&quot; name=&quot;indoor-outdoor&quot; value=&quot;outdoor&quot;&gt; Outdoor&lt;/label&gt;
-&lt;/fieldset&gt;
-&lt;fieldset&gt;
-    &lt;legend&gt;What&#39;s your cat&#39;s personality?&lt;/legend&gt;
-    &lt;input id=&quot;loving&quot; type=&quot;checkbox&quot; name=&quot;personality&quot; value=&quot;loving&quot; checked&gt; &lt;label for=&quot;loving&quot;&gt;Loving&lt;/label&gt;
-    &lt;input id=&quot;lazy&quot; type=&quot;checkbox&quot; name=&quot;personality&quot; value=&quot;lazy&quot;&gt; &lt;label for=&quot;lazy&quot;&gt;Lazy&lt;/label&gt;
-    &lt;input id=&quot;energetic&quot; type=&quot;checkbox&quot; name=&quot;personality&quot; value=&quot;energetic&quot;&gt; &lt;label for=&quot;energetic&quot;&gt;Energetic&lt;/label&gt;
-&lt;/fieldset&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">legend</span>&gt;</span>Is your cat an indoor or outdoor cat?<span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;indoor&quot;</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;indoor-outdoor&quot;</span> <span class="attr">value</span>=<span class="string">&quot;indoor&quot;</span> <span class="attr">checked</span>&gt;</span> Indoor<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;outdoor&quot;</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;indoor-outdoor&quot;</span> <span class="attr">value</span>=<span class="string">&quot;outdoor&quot;</span>&gt;</span> Outdoor<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">fieldset</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">legend</span>&gt;</span>What&#x27;s your cat&#x27;s personality?<span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;loving&quot;</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;personality&quot;</span> <span class="attr">value</span>=<span class="string">&quot;loving&quot;</span> <span class="attr">checked</span>&gt;</span> <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;loving&quot;</span>&gt;</span>Loving<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;lazy&quot;</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;personality&quot;</span> <span class="attr">value</span>=<span class="string">&quot;lazy&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;lazy&quot;</span>&gt;</span>Lazy<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">&quot;energetic&quot;</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;personality&quot;</span> <span class="attr">value</span>=<span class="string">&quot;energetic&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;energetic&quot;</span>&gt;</span>Energetic<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="二、页面展示"><a href="#二、页面展示" class="headerlink" title="二、页面展示"></a>二、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="https://free-code-camp-demo.vercel.app/通过编写猫咪相册应用学习HTML/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
 </div>
@@ -578,7 +546,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -603,6 +571,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/HTML%E7%8C%AB%E5%92%AA%E7%9B%B8%E5%86%8C%E5%BA%94%E7%94%A8/>http://blog.zhuangzhihao.top/HTML%E7%8C%AB%E5%92%AA%E7%9B%B8%E5%86%8C%E5%BA%94%E7%94%A8/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -618,12 +590,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML</p></a></div>
 
 
         
@@ -641,77 +609,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/HTML%E7%8C%AB%E5%92%AA%E7%9B%B8%E5%86%8C%E5%BA%94%E7%94%A8/&title=通过编写猫咪相册应用学习 HTML - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第一章。HTML 标签赋予了网页结构。你可以使用 HTML 标签添加照片、按钮和其它元素到你的网页。在通过编写猫咪相册应用学习 HTML 的课程中，通过编写一个猫咪相册应用，学习最常见的 HTML 标签。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/HTML%E7%8C%AB%E5%92%AA%E7%9B%B8%E5%86%8C%E5%BA%94%E7%94%A8/&title=通过编写猫咪相册应用学习 HTML - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第一章。HTML 标签赋予了网页结构。你可以使用 HTML 标签添加照片、按钮和其它元素到你的网页。在通过编写猫咪相册应用学习 HTML 的课程中，通过编写一个猫咪相册应用，学习最常见的 HTML 标签。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/HTML%E7%8C%AB%E5%92%AA%E7%9B%B8%E5%86%8C%E5%BA%94%E7%94%A8/&title=通过编写猫咪相册应用学习 HTML - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第一章。HTML 标签赋予了网页结构。你可以使用 HTML 标签添加照片、按钮和其它元素到你的网页。在通过编写猫咪相册应用学习 HTML 的课程中，通过编写一个猫咪相册应用，学习最常见的 HTML 标签。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEcElEQVR42u3aQXIbMQwEQP//08k9KZeAAchdJ82bLYmkmnsgoPn6ZRwZXwjAgjXAggVrgL0C+xWOPz//1wLh+757/bv5ttcfe4AFCxYsWLBgwYK9Clu+AH/YYHWj1S9Whazut3sg7fnBggULFixYsGDBPgKbFgSnLtyfDjC9+FcLifaDARYsWLBgwYIFC/ZHwG6DTf9O9w8WLFiwYMGCBQv2/4adFg7pF761DliwYMGCBQsWLNh3wm4FIE59wWoDvBoweW0SBixYsGDBggULFmwJNm1Y/6t/xx5gwYIFCxYsWLBgr8BOx7RgqDbMu0GQaaEQe4AFCxYsWLBgwYK9ArsVtOg2prcu5FsPQLpu/AsCWLBgwYIFCxYs2FXYLaitQqILtT0/WLBgwYIFCxYs2HfDdhvN1Q2lhUh1vvRz3X2U5wcLFixYsGDBggX7CGy3cdyF3moop4XC1jrlwAZYsGDBggULFizYV8CmG6q+nkJMgbegwYIFCxYsWLBgwd6BnTaUuxfpNGhx6vNpYfMxsAEWLFiwYMGCBQv2Cmw1wNFdMP1/FXALZjo/WLBgwYIFCxYs2Luw6ULbBUMKvdVA7wZWyoENsGDBggULFixYsEdgp8GL9ILdDXZMD767z/TBAgsWLFiwYMGCBXsHNg04bF2wuw3uU4309IA+NrrBggULFixYsGDBHoVNJ5oeRLp+t9Hdvuin7wMLFixYsGDBggX7Cti0QT29qKfzpweezttOwoAFCxYsWLBgwYJdhU0bwdsN6a0v2AVce6DAggULFixYsGDBXoVNL9jdxvK0Ab7dME8PpN3oBgsWLFiwYMGCBbsK2234pg3s7jxT0LSx3X1AwIIFCxYsWLBgwT4Dux2oOLXxU4XBtNHdTsKABQsWLFiwYMGCPQqbAqYN7e0DmQZG4mAIWLBgwYIFCxYs2CuwW0GFNMCxHZzYKkTiggMsWLBgwYIFCxbsFdjqhtJAxNaFfavBPQ2EfPweYMGCBQsWLFiwYK/Adi/i3UBDOsoBiWaBkQY4quuDBQsWLFiwYMGCvQO7HZyYAnQPfHrh3y6EwIIFCxYsWLBgwd6FTRvft2CmoNNCJv4FASxYsGDBggULFuwrcgVxA3ipwZxe/LsPSLwuWLBgwYIFCxYs2FfAVhvV6evphXxaQKQBj7UkDFiwYMGCBQsWLNgRbBpwmAY2ug3obqGxFUhpN8DBggULFixYsGDBXoGdjrQxvt2gngY10veVKy+wYMGCBQsWLFiwq7DTi3EabJg22Lcv/OnBggULFixYsGDBgn0WNi0IphfwU4VA933ThjtYsGDBggULFizYZ2G3AxHVDU7XTxvwx5MwYMGCBQsWLFiwYF8JmzauTxcOWw9C+wDBggULFixYsGDB/ijYNKiRNpxPFSTTQAlYsGDBggULFizYZ2BPAaSN6C5It0G9HuQACxYsWLBgwYIFexU2DSp04baDElvrdxvs5cAGWLBgwYIFCxYs2COwxu4ACxasARYsWAPs0fEbIygeAswPpVIAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/HTML%E7%8C%AB%E5%92%AA%E7%9B%B8%E5%86%8C%E5%BA%94%E7%94%A8/&text=通过编写猫咪相册应用学习 HTML - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -732,10 +629,10 @@ freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏
         </a>
       
       
-        <a class='next' href='/%E6%B5%85%E8%B0%88%E6%8C%87%E9%92%88/'>
-          <p class='title'>浅谈 C 语言指针<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='next' href='/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%20typedef/'>
+          <p class='title'>结构体与 typedef 的使用<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
-计算机内存区域中的每字节都对应一个编号，这个编号就是“地址”。如果在程序中定义了一个变量，那么在对程序进行编译时，系统就会给这个变量分配内存单元。如果我们在程序中需要将某个整型、浮点型或字符型...</p>
+在我们编写程序时，有时候需要将不同类型的数据组合为一个整体，以便于引用。例如，一名学生有学号、姓名、性别、年龄、地址等属性，如果针对学生的学号、姓名、年龄等都单独定义一个变量，那么在有多名学生...</p>
         </a>
       
     </div>
@@ -830,17 +727,9 @@ freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -966,8 +855,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1323,29 +1210,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1384,7 +1248,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1444,20 +1308,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1670,6 +1520,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

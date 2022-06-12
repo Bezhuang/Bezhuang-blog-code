@@ -108,7 +108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -232,16 +232,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -364,16 +374,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -397,7 +417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -420,36 +440,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -483,6 +473,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/C-C/">C/C++</a>
+    </a>
+  </div>
+
 
           
         
@@ -524,10 +521,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>1972 年，为了移植与开发 UNIX 操作系统，丹尼斯·里奇在贝尔电话实验室设计开发了 C 语言。C 语言是一种通用的、面向过程式的计算机程序设计语言，它与 Java 编程语言一样普及，二者在现代软件程序员之间都得到广泛使用。强烈推荐郝斌老师的<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1os411h77o">C语言自学教程</a>，在入门 C 语言时给了我很大的启发和帮助。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="C编程预备"><a href="#C编程预备" class="headerlink" title="C编程预备"></a>C编程预备</h3><p>整数： <code>int</code>，<code>short int</code>，<code>long int</code>。</p>
-<p>浮点数（实数）：<code>float</code>，<code> double</code>。</p>
+<p>浮点数（实数）：<code>float</code>，<code>double</code>。</p>
 <p>字符 ：<code>char</code>。</p>
 <p>变量：本质就是内存中一段存储空间，变量必须的初始化。</p>
 <p>定义变量： <code>数据类型变量名 = 要赋的值;</code>。</p>
@@ -544,12 +540,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>变量不能被重复定义。</p>
 <h3 id="输入和输出函数"><a href="#输入和输出函数" class="headerlink" title="输入和输出函数"></a>输入和输出函数</h3><p>输入函数：<code>printf(&quot;输出控制符&quot;, 输出参数);</code>。</p>
 <p>逻辑运算符：<code>!=</code>  <code>==</code>  <code>&amp;&amp;</code>。</p>
-<p>输出控制符：<code>%d </code>, <code>%ld</code>, <code>%c </code>, <code>%lf</code>, <code>%x</code>, <code>%o</code>, <code>%s</code>。</p>
+<p>输出控制符：<code>%d</code>, <code>%ld</code>, <code>%c</code>, <code>%lf</code>, <code>%x</code>, <code>%o</code>, <code>%s</code>。</p>
 <p>输出函数：<code>scanf(&quot;输入控制符&quot;, 输入参数);</code>。</p>
 <p>处理非法输入：</p>
-<pre><code class="C">char ch;
-while ( (ch=getchar0) != ’\n’）
-continue;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> ch;</span><br><span class="line"><span class="keyword">while</span> ( (ch=getchar0) != ’\n’）</span><br><span class="line"><span class="keyword">continue</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><p>流程控制：程序代码执行的顺序。流程控制的分类：顺序、选择、定义。</p>
 <p>if 语句：<code>if...else...</code></p>
 <ul>
@@ -597,7 +591,7 @@ continue;</code></pre>
 <p>在一个函数内部如果定义的局部变量的名字和全局变量名一样时， 局部变量会屏蔽掉全局变量。</p>
 <p>静态变量；自动变量；寄存器变量。</p>
 <h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><p>指针：表示一些复杂的数据结构，快速的传递数据，减少内存的耗用，使函数返回一个以上的值，能直接访问硬件，能够方便的处理字符串，是理解面向对象语言中引用的基础，是C语言的灵魂。</p>
-<pre><code class="c">typedef int (*fun_ptr)(int,int); // 声明一个指向同样参数、返回值的函数指针类型</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="title function_">int</span> <span class="params">(*fun_ptr)</span><span class="params">(<span class="type">int</span>,<span class="type">int</span>)</span>; <span class="comment">// 声明一个指向同样参数、返回值的函数指针类型</span></span><br></pre></td></tr></table></figure>
 <p>地址：内存单元的编号，从零开始的非负整数，范围: <code>4G [0—4G-1]</code>。指针就是地址， 地址就是指针。</p>
 <p>指针变量就是存放内存单元编号的变量，或者说指针变量就是存放地址的变量。</p>
 <p>指针和指针变量是两个不同的概念。指针的本质就是一个操作受限的非负整数。</p>
@@ -609,13 +603,13 @@ continue;</code></pre>
 <li>形参必须为指针变量</li>
 <li>在被调函数中通过</li>
 </ol>
-<p><code>*形参名 = </code> 的方式就可以修改主调函数相关变量的值。</p>
+<p><code>*形参名 =</code> 的方式就可以修改主调函数相关变量的值。</p>
 <p>指针和一维数组：</p>
 <ul>
-<li>  一维数组名 a[0] 是个指针常量，存放的是一维数组第一个元素的地址。</li>
-<li>  下标和指针的关系：如果 P 是个指针变量， 则 <code>p[i]</code> 永远等价于 <code>*(P+i)</code>。</li>
-<li>  确定一个一维数组需要两个参数：数组第一个元素的地址和数组的长度。</li>
-<li>  指针变量不能相加不能相乘也不能相除。如果两个指针变量指向的是同一块连续空间中的不同存储单元，则这两个指针变量才可以相减。</li>
+<li>一维数组名 a[0] 是个指针常量，存放的是一维数组第一个元素的地址。</li>
+<li>下标和指针的关系：如果 P 是个指针变量， 则 <code>p[i]</code> 永远等价于 <code>*(P+i)</code>。</li>
+<li>确定一个一维数组需要两个参数：数组第一个元素的地址和数组的长度。</li>
+<li>指针变量不能相加不能相乘也不能相除。如果两个指针变量指向的是同一块连续空间中的不同存储单元，则这两个指针变量才可以相减。</li>
 </ul>
 <p><code>sizeof(数据类型)</code>：返回值就是该数据类型所占的字节数。指针变量，无论它指向的变量占几个字节，该指针变量本身只占四个字节。</p>
 <p>一个变量的地址是用该变量首字节的地址来表示。</p>
@@ -633,37 +627,36 @@ continue;</code></pre>
 <p><code>int *p = (int *)malloc(50);</code> 表示将系统分配好的 50 个字节的第一个字节的地址转化为 <code>int *</code> 型的地址。更准确的说是把第一个字节的地址转化为四个字节的地址，这样 P 就指向了第一个的四个字节，P+1 就指向了第2个的四个字节，p+i 就指向了第 i+1 个的4个字节。p[0] 就是第一个元素，p[i] 就是第 i+1 个元素。</p>
 <p><code>free(p)</code>表示把P所指向的内存给释放掉。</p>
 <p>静态内存是由系统自动分配，由系统自动释放，静态内存是在栈分配的。动态内存是由程序员手动分配，手动释放，动态内存是在堆分配的。静态内存不可以跨函数使用。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">函数</th>
-<th align="left">描述</th>
+<th style="text-align:left">函数</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left"><strong>void *calloc(int num, int size);</strong></td>
-<td align="left">在内存中动态地分配 num 个长度为 size 的连续空间，并将每一个字节都初始化为 0。所以它的结果是分配了 num*size 个字节长度的内存空间，并且每个字节的值都是0。</td>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>void *calloc(int num, int size);</strong></td>
+<td style="text-align:left">在内存中动态地分配 num 个长度为 size 的连续空间，并将每一个字节都初始化为 0。所以它的结果是分配了 num*size 个字节长度的内存空间，并且每个字节的值都是0。</td>
 </tr>
 <tr>
-<td align="left"><strong>void free(void *address);</strong></td>
-<td align="left">释放 address 所指向的内存块,释放的是动态分配的内存空间。</td>
+<td style="text-align:left"><strong>void free(void *address);</strong></td>
+<td style="text-align:left">释放 address 所指向的内存块,释放的是动态分配的内存空间。</td>
 </tr>
 <tr>
-<td align="left"><strong>void *malloc(int num);</strong></td>
-<td align="left">在堆区分配一块指定大小的内存空间，用来存放数据。这块内存空间在函数执行完成后不会被初始化，它们的值是未知的。</td>
+<td style="text-align:left"><strong>void *malloc(int num);</strong></td>
+<td style="text-align:left">在堆区分配一块指定大小的内存空间，用来存放数据。这块内存空间在函数执行完成后不会被初始化，它们的值是未知的。</td>
 </tr>
 <tr>
-<td align="left"><strong>void *realloc(void *address, int newsize);</strong></td>
-<td align="left">重新分配内存，把内存扩展到 <strong>newsize</strong>。</td>
+<td style="text-align:left"><strong>void *realloc(void *address, int newsize);</strong></td>
+<td style="text-align:left">重新分配内存，把内存扩展到 <strong>newsize</strong>。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><p>结构体：为了表示一些复杂的事物，而普通的基本类型无法满足实际要求，把一些基本类型数据组合在一起形成的一个新的复合数据类型，这个叫做结构体。</p>
-<pre><code class="c">struct tag &#123; 
-    member-list
-    member-list 
-    member-list  
-    ...
-&#125; variable-list ;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">tag</span> &#123;</span> </span><br><span class="line">    member-<span class="built_in">list</span></span><br><span class="line">    member-<span class="built_in">list</span> </span><br><span class="line">    member-<span class="built_in">list</span>  </span><br><span class="line">    ...</span><br><span class="line">&#125; variable-<span class="built_in">list</span> ;</span><br></pre></td></tr></table></figure>
 <p>定义结构体：结构体变量定义的同时可以整体赋初值，如果定义完之后， 则只能单个的赋初值。</p>
 <p>取出结构体变量中的每一个成员：</p>
 <ol>
@@ -672,22 +665,13 @@ continue;</code></pre>
 </ol>
 <p>使用结构体指针变量作为函数参数来传递。结构体变量不能相加减乘除，但结构体变量可以相互赋值。</p>
 <p>共用体：</p>
-<pre><code class="C">union [union tag]
-&#123;
-   member definition;
-   member definition;
-   ...
-   member definition;
-&#125; [one or more union variables];</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">union</span> [<span class="title">union</span> <span class="title">tag</span>]</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">   member definition;</span><br><span class="line">   member definition;</span><br><span class="line">   ...</span><br><span class="line">   member definition;</span><br><span class="line">&#125; [one or more <span class="class"><span class="keyword">union</span> <span class="title">variables</span>];</span></span><br></pre></td></tr></table></figure>
 <p>位域声明：</p>
-<pre><code class="c">struct
-&#123;
-  type [member_name] : width ;
-&#125;;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  type [member_name] : width ;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>typedef：</p>
-<pre><code class="C">typedef unsigned char byte;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">char</span> byte;</span><br></pre></td></tr></table></figure>
 <h3 id="枚举和补码"><a href="#枚举和补码" class="headerlink" title="枚举和补码"></a>枚举和补码</h3><p>枚举：把一个事物所有可能的取值一一列举出来。</p>
-<pre><code class="c">enum　枚举名　&#123;枚举元素1,枚举元素2,……&#125;;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">enum</span>　枚举名　&#123;</span>枚举元素<span class="number">1</span>,枚举元素<span class="number">2</span>,……&#125;;</span><br></pre></td></tr></table></figure>
 <p>原码：也叫符号-绝对值码，最髙位 0 表示正，1表示负，其余二进制位是该数字的绝对值的二进制位。原码简单易懂，加减运算复杂，存在加减乘除四种运算，增加了CPU的复杂度，零的表示不唯一。</p>
 <p>反码：反码运算不便，没有在计算机中应用。</p>
 <p>移码：移码表示数值平移 n 位，n 称为移码量。移码主要用于浮点数的阶码的存储。</p>
@@ -708,7 +692,7 @@ continue;</code></pre>
 <p>二进制全部为零的含义 <code>—0000000000000</code> 的含义：</p>
 <ol>
 <li>数值零；</li>
-<li>字符串结束标记符 <code> \0</code>；</li>
+<li>字符串结束标记符 <code>\0</code>；</li>
 <li>空指针 <code>NULL</code>。<code>NULL</code> 本质也是零，但这个零不代表数字零，而表示的是内存单元的编号零。以零为编号的存储单元的内容不可读，不可写。</li>
 </ol>
 <p>位运算符：</p>
@@ -720,30 +704,34 @@ continue;</code></pre>
 <li>按位左移 <code>&lt;&lt;</code> ；</li>
 <li>按位右移 <code>&gt;&gt;</code> 。</li>
 </ul>
-<h3 id="C-输入输出"><a href="#C-输入输出" class="headerlink" title="C 输入输出"></a>C 输入输出</h3><table>
+<h3 id="C-输入输出"><a href="#C-输入输出" class="headerlink" title="C 输入输出"></a>C 输入输出</h3><div class="table-container">
+<table>
 <thead>
 <tr>
-<th align="left">标准文件</th>
-<th align="left">文件指针</th>
-<th align="left">设备</th>
+<th style="text-align:left">标准文件</th>
+<th style="text-align:left">文件指针</th>
+<th style="text-align:left">设备</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">标准输入</td>
-<td align="left">stdin</td>
-<td align="left">键盘</td>
+<tbody>
+<tr>
+<td style="text-align:left">标准输入</td>
+<td style="text-align:left">stdin</td>
+<td style="text-align:left">键盘</td>
 </tr>
 <tr>
-<td align="left">标准输出</td>
-<td align="left">stdout</td>
-<td align="left">屏幕</td>
+<td style="text-align:left">标准输出</td>
+<td style="text-align:left">stdout</td>
+<td style="text-align:left">屏幕</td>
 </tr>
 <tr>
-<td align="left">标准错误</td>
-<td align="left">stderr</td>
-<td align="left">您的屏幕</td>
+<td style="text-align:left">标准错误</td>
+<td style="text-align:left">stderr</td>
+<td style="text-align:left">您的屏幕</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><code>getchar()</code> &amp; <code>putchar()</code> 函数；</li>
 <li><code>gets()</code> &amp; <code>puts()</code> 函数；</li>
@@ -752,109 +740,76 @@ continue;</code></pre>
 <h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><p>文件指针<code>fp</code>：<code>fopen(文件名, 使用方式);</code>、<code>fclose(文件名, 使用方式);</code>。</p>
 <p>文件读取：</p>
 <ul>
-<li>  <code>fgets(str,n,fp)</code>、<code>fputs(str,fp)</code>；</li>
-<li>  <code>fprintf(文件指针,格式字符串,输出表列)</code>、<code>fscanf(文件指针,格式字符串,输入表列)</code>；</li>
-<li>  <code>fread(buffer,size,count,fp)</code>、<code>fwrite(buffer,size,count,fp)</code>；</li>
-<li>  <code>ferror(fp);</code>、<code>clearerr(fp)</code>。</li>
+<li><code>fgets(str,n,fp)</code>、<code>fputs(str,fp)</code>；</li>
+<li><code>fprintf(文件指针,格式字符串,输出表列)</code>、<code>fscanf(文件指针,格式字符串,输入表列)</code>；</li>
+<li><code>fread(buffer,size,count,fp)</code>、<code>fwrite(buffer,size,count,fp)</code>；</li>
+<li><code>ferror(fp);</code>、<code>clearerr(fp)</code>。</li>
 </ul>
 <p><code>fopen()</code>函数原型：</p>
-<pre><code class="c">FILE *fopen( const char * filename, const char * mode );</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FILE *<span class="title function_">fopen</span><span class="params">( <span class="type">const</span> <span class="type">char</span> * filename, <span class="type">const</span> <span class="type">char</span> * mode )</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="C-预处理器（C-Preprocessor）"><a href="#C-预处理器（C-Preprocessor）" class="headerlink" title="C 预处理器（C Preprocessor）"></a>C 预处理器（C Preprocessor）</h3><p>C 预处理器不是编译器的组成部分，但是它是编译过程中一个单独的步骤，它们会指示编译器在实际编译之前完成所需的预处理。</p>
 <p>所有的预处理器命令都是以井号（#）开头。它必须是第一个非空字符，为了增强可读性，预处理器指令应从第一列开始。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="left">指令</th>
-<th align="left">描述</th>
+<th style="text-align:left">指令</th>
+<th style="text-align:left">描述</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">#define</td>
-<td align="left">定义宏</td>
+<tbody>
+<tr>
+<td style="text-align:left">#define</td>
+<td style="text-align:left">定义宏</td>
 </tr>
 <tr>
-<td align="left">#include</td>
-<td align="left">包含一个源代码文件</td>
+<td style="text-align:left">#include</td>
+<td style="text-align:left">包含一个源代码文件</td>
 </tr>
 <tr>
-<td align="left">#undef</td>
-<td align="left">取消已定义的宏</td>
+<td style="text-align:left">#undef</td>
+<td style="text-align:left">取消已定义的宏</td>
 </tr>
 <tr>
-<td align="left">#ifdef</td>
-<td align="left">如果宏已经定义，则返回真</td>
+<td style="text-align:left">#ifdef</td>
+<td style="text-align:left">如果宏已经定义，则返回真</td>
 </tr>
 <tr>
-<td align="left">#ifndef</td>
-<td align="left">如果宏没有定义，则返回真</td>
+<td style="text-align:left">#ifndef</td>
+<td style="text-align:left">如果宏没有定义，则返回真</td>
 </tr>
 <tr>
-<td align="left">#if</td>
-<td align="left">如果给定条件为真，则编译下面代码</td>
+<td style="text-align:left">#if</td>
+<td style="text-align:left">如果给定条件为真，则编译下面代码</td>
 </tr>
 <tr>
-<td align="left">#else</td>
-<td align="left">#if 的替代方案</td>
+<td style="text-align:left">#else</td>
+<td style="text-align:left">#if 的替代方案</td>
 </tr>
 <tr>
-<td align="left">#elif</td>
-<td align="left">如果前面的 #if 给定条件不为真，当前条件为真，则编译下面代码</td>
+<td style="text-align:left">#elif</td>
+<td style="text-align:left">如果前面的 #if 给定条件不为真，当前条件为真，则编译下面代码</td>
 </tr>
 <tr>
-<td align="left">#endif</td>
-<td align="left">结束一个 #if……#else 条件编译块</td>
+<td style="text-align:left">#endif</td>
+<td style="text-align:left">结束一个 #if……#else 条件编译块</td>
 </tr>
 <tr>
-<td align="left">#error</td>
-<td align="left">当遇到标准错误时，输出错误消息</td>
+<td style="text-align:left">#error</td>
+<td style="text-align:left">当遇到标准错误时，输出错误消息</td>
 </tr>
 <tr>
-<td align="left">#pragma</td>
-<td align="left">使用标准化方法，向编译器发布特殊的命令到编译器中</td>
+<td style="text-align:left">#pragma</td>
+<td style="text-align:left">使用标准化方法，向编译器发布特殊的命令到编译器中</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="C-错误处理"><a href="#C-错误处理" class="headerlink" title="C 错误处理"></a>C 错误处理</h3><p>C 语言不提供对错误处理的直接支持，但是作为一种系统编程语言，它以返回值的形式允许您访问底层数据。</p>
 <p>在发生错误时，大多数的 C 或 UNIX 函数调用返回 1 或 NULL，同时会设置一个错误代码 <code>errno</code>，该错误代码是全局变量，表示在函数调用期间发生了错误。您可以在 <code>errno.h</code> 头文件中找到各种各样的错误代码。</p>
 <p>C 语言提供了 <code>perror()</code> 和 <code>strerror()</code> 函数来显示与 <code>errno</code> 相关的文本消息。</p>
 <h3 id="C-命令行参数"><a href="#C-命令行参数" class="headerlink" title="C 命令行参数"></a>C 命令行参数</h3><p>执行程序时，可以从命令行传值给 C 程序，这些值被称为命令行参数，它们对程序很重要，特别是当您想从外部控制程序，而不是在代码内对这些值进行硬编码时，就显得尤为重要了。命令行参数是使用 main() 函数参数来处理的，其中，<code>argc</code> 是指传入参数的个数，<code>argv[]</code> 是一个指针数组，指向传递给程序的每个参数。</p>
-<p>对命令行参数解析：</p>
-<pre><code class="C">int main(int argc, char *argv[])
-&#123;
-    char *optstr = &quot;p:n:m:c:&quot;;
-    struct option opts[] = &#123;
-        &#123;&quot;path&quot;, 1, NULL, &#39;p&#39;&#125;,
-        &#123;&quot;name&quot;, 1, NULL, &#39;n&#39;&#125;,
-        &#123;&quot;mtime&quot;, 1, NULL, &#39;m&#39;&#125;,
-        &#123;&quot;ctime&quot;, 1, NULL, &#39;c&#39;&#125;,
-        &#123;0, 0, 0, 0&#125;,
-    &#125;;
-    int opt;
-    while((opt = getopt_long(argc, argv, optstr, opts, NULL)) != -1)&#123;
-        switch(opt) &#123;
-            case &#39;p&#39;:
-                strcpy(path, optarg);
-                break;
-            case &#39;n&#39;:
-                strcpy(targetname, optarg);
-                break;
-            case &#39;m&#39;:
-                modifiedtime = atoi(optarg);
-                break;
-            case &#39;c&#39;:
-                changetime = atoi(optarg);
-                break;
-            case &#39;?&#39;:
-                if(strchr(optstr, optopt) == NULL)&#123;
-                    fprintf(stderr, &quot;unknown option &#39;-%c&#39;\n&quot;, optopt);
-                &#125;else&#123;
-                    fprintf(stderr, &quot;option requires an argument &#39;-%c&#39;\n&quot;, optopt);
-                &#125;
-                return 1;
-        &#125;
-    &#125;
-    findInDir(path);
-    return 0;
-&#125;</code></pre>
+<p>对命令行参数解析：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> *optstr = <span class="string">&quot;p:n:m:c:&quot;</span>;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">option</span> <span class="title">opts</span>[] =</span> &#123;</span><br><span class="line">        &#123;<span class="string">&quot;path&quot;</span>, <span class="number">1</span>, <span class="literal">NULL</span>, <span class="string">&#x27;p&#x27;</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;name&quot;</span>, <span class="number">1</span>, <span class="literal">NULL</span>, <span class="string">&#x27;n&#x27;</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;mtime&quot;</span>, <span class="number">1</span>, <span class="literal">NULL</span>, <span class="string">&#x27;m&#x27;</span>&#125;,</span><br><span class="line">        &#123;<span class="string">&quot;ctime&quot;</span>, <span class="number">1</span>, <span class="literal">NULL</span>, <span class="string">&#x27;c&#x27;</span>&#125;,</span><br><span class="line">        &#123;<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>&#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="type">int</span> opt;</span><br><span class="line">    <span class="keyword">while</span>((opt = getopt_long(argc, argv, optstr, opts, <span class="literal">NULL</span>)) != <span class="number">-1</span>)&#123;</span><br><span class="line">        <span class="keyword">switch</span>(opt) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;p&#x27;</span>:</span><br><span class="line">                <span class="built_in">strcpy</span>(path, optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;n&#x27;</span>:</span><br><span class="line">                <span class="built_in">strcpy</span>(targetname, optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;m&#x27;</span>:</span><br><span class="line">                modifiedtime = atoi(optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;c&#x27;</span>:</span><br><span class="line">                changetime = atoi(optarg);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;?&#x27;</span>:</span><br><span class="line">                <span class="keyword">if</span>(<span class="built_in">strchr</span>(optstr, optopt) == <span class="literal">NULL</span>)&#123;</span><br><span class="line">                    <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;unknown option &#x27;-%c&#x27;\n&quot;</span>, optopt);</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">&quot;option requires an argument &#x27;-%c&#x27;\n&quot;</span>, optopt);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    findInDir(path);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="C-库函数"><a href="#C-库函数" class="headerlink" title="C 库函数"></a>C 库函数</h3><p><a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-standard-library.html">C 标准库</a>是一组 C 内置函数、常量和头文件，比如 <code>&lt;stdio.h&gt;</code>、<code>&lt;stdlib.h&gt;</code>、<code>&lt;math.h&gt;</code>，等等。</p>
 
   
@@ -867,7 +822,7 @@ continue;</code></pre>
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -892,6 +847,10 @@ continue;</code></pre>
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/>http://blog.zhuangzhihao.top/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -907,13 +866,6 @@ continue;</code></pre>
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/C-C/">C/C++</a>
-    </a>
-  </div>
-
 
         
       
@@ -930,77 +882,6 @@ continue;</code></pre>
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/&title=C 语言基础知识总结 - Bezhuang's Blog&summary=
-1972 年，为了移植与开发 UNIX 操作系统，丹尼斯·里奇在贝尔电话实验室设计开发了 C 语言。C 语言是一种通用的、面向过程式的计算机程序设计语言，它与 Java 编程语言一样普及，二者在现代软件程序员之间都得到广泛使用。强烈推荐郝斌老师的C语言自学教程，在入门 C 语言时给了我很大的启发和帮助。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/&title=C 语言基础知识总结 - Bezhuang's Blog&summary=
-1972 年，为了移植与开发 UNIX 操作系统，丹尼斯·里奇在贝尔电话实验室设计开发了 C 语言。C 语言是一种通用的、面向过程式的计算机程序设计语言，它与 Java 编程语言一样普及，二者在现代软件程序员之间都得到广泛使用。强烈推荐郝斌老师的C语言自学教程，在入门 C 语言时给了我很大的启发和帮助。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/&title=C 语言基础知识总结 - Bezhuang's Blog&summary=
-1972 年，为了移植与开发 UNIX 操作系统，丹尼斯·里奇在贝尔电话实验室设计开发了 C 语言。C 语言是一种通用的、面向过程式的计算机程序设计语言，它与 Java 编程语言一样普及，二者在现代软件程序员之间都得到广泛使用。强烈推荐郝斌老师的C语言自学教程，在入门 C 语言时给了我很大的启发和帮助。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADpUlEQVR42u3ZQXbCMAwEUO5/6fYEvFgjBZT2e0dJg/3DYhi9fqxovRCAAwcOnAUO3BK4V7im///d69PrqveP9wsOHDhw4MCBA7cM7jgAXlzffb8Kk8Kl5wUHDhw4cODAgdsKVw2sadCsHjwNuOk+wYEDBw4cOHDg/jpcdePVQrEaVLvQ4MCBAwcOHDhw/xXuroN2Fzhw4MCBAwcO3F+HmxoUTw2C0wH2+kk+OHDgwIEDBw7cENx0oNz+Oj4vOHDgwIEDBw7cErjuqg6Uq39PA25asF6eFxw4cODAgQMHbglcdcNVoGqRmAbWU+DugwYHDhw4cODAgdsKVx04n0JMD67ToN09Fzhw4MCBAwcO3Ba4qeKwe780GE8H88t9gAMHDhw4cODALYXrBtDuQLpaZE4H7zgAgwMHDhw4cODAfQmuuvFusC0PgpsD7jQgvx1IgwMHDhw4cODALYHrDqTTgJoG6ruC8uUXAhw4cODAgQMHbincdIGZBudqwJ4uPMGBAwcOHDhw4LbDpYVjdcPVA91VRJ5+3tv3wYEDBw4cOHDglsFNDaanNprevzroLhem4MCBAwcOHDhwy+C6ENOBN73/9Beh/MsBHDhw4MCBAwfuQ3DVIvD0dbyx4QdV/UIcF5ngwIEDBw4cOHBfhrvrgN0B9un9qtd1B+bgwIEDBw4cOHBb4KqD4+mDpgdKC9JucQsOHDhw4MCBA7cNLg3CaQCuXjd9nzjIgwMHDhw4cODALYE73eBx0dccKKdQ1X3HhSo4cODAgQMHDtwSuNON3l1spkXm1AMBBw4cOHDgwIF7Gly1OJwqGKsPpFq0poPty88BBw4cOHDgwIF7KFx3sNsddHcfVPvBggMHDhw4cODALYGbKhyr0N2AXQ3Ep+cEBw4cOHDgwIF7Klw6cG4PeoeKxuogGhw4cODAgQMH7qlwabBMIasFZgp02wMBBw4cOHDgwIFbAtddV7CnB64Cn35uWmjGvxzAgQMHDhw4cOA+BNcNhukAu3q/uHhs3h8cOHDgwIEDB247XBp4q9dNH7gdaLsNMDhw4MCBAwcO3BK4NPB2A253kJwWnO0iExw4cODAgQMH7qFwaZDuDri7QToN8uDAgQMHDhw4cP8NLg3CpwVk9/rjBwEOHDhw4MCBA7cUrjuQrhaGx4PgcNCc7vPjk3xw4MCBAwcOHLgQrjsATovFtNicLlCPfwCAAwcOHDhw4MAtgbOKsAjAgQMHzgIH7rvrF1z6/yYUBV7aAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/&text=C 语言基础知识总结 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1122,17 +1003,9 @@ MySQL 是目前应用最广泛的开源关系数据库，在学习完 SQL 语言
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1258,8 +1131,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1615,29 +1486,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1676,7 +1524,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1736,20 +1584,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1962,6 +1796,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

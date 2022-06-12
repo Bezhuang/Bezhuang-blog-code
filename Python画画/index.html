@@ -108,7 +108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -232,16 +232,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -364,16 +374,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -397,7 +417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -420,36 +440,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -483,6 +473,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Python/">Python</a>
+    </a>
+  </div>
+
 
           
         
@@ -501,7 +498,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：3.5k字</p>
+      <p>字数：3.4k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -524,906 +521,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>turtle 库是 Python 的标准库之一，属于入门级的图形绘制函数库，其原理是让一只海龟在画布上游走，走过的轨迹形成了绘制的图形，海龟由程序控制，可以自由改变颜色、方向宽度等。我们也可以依赖这个库完成一些简单的画画，以下为一些经典图像的代码实现笔记，可供参考。</p>
 </blockquote>
-<a id="more"></a>
-
-<h3 id="turtle-简介"><a href="#turtle-简介" class="headerlink" title="turtle 简介"></a>turtle 简介</h3><pre><code class="python">import turtle
-# 设置窗体大小
-turtle.setup(width,height,startx,starty)    #后两个参数非必选参数
-#turtle的移动
-turtle.goto(x,y)
-#画圆
-turtle.circle(r,angle)
-#当前距离后退
-turtle.bk(d)
-#当前距离前进
-turtle.fd(d)    #turtle.forward(d)
-#改变海龟行进方向，angle为绝对角度
-turtle.seth(angle)    #只改变呢方向不行进
-#向左右前进
-turtle.right(angle)
-turtle.left(angle)
-#抬起画笔
-turtle.pu()    #turtle.penup()
-#画笔落下
-turtle.pd()    #turtle.pendown()
-#画笔宽度
-turtle.width(width)    #turtle.pensize(width)
-#画笔颜色
-turtle.pencolor(color):color</code></pre>
-<h3 id="画笑脸"><a href="#画笑脸" class="headerlink" title="画笑脸"></a>画笑脸</h3><pre><code class="python">import turtle as fucksisu
-def eye(col, rad):
-    fucksisu.down()
-    fucksisu.fillcolor(col)
-    fucksisu.begin_fill()
-    fucksisu.circle(rad)
-    fucksisu.end_fill()
-    fucksisu.up()
-fucksisu.fillcolor(&#39;yellow&#39;)
-fucksisu.begin_fill()
-fucksisu.circle(100)
-fucksisu.end_fill()
-fucksisu.up()
-fucksisu.goto(-40, 120)
-eye(&#39;white&#39;, 15)
-fucksisu.goto(-37, 125)
-eye(&#39;black&#39;, 5)
-fucksisu.goto(40, 120)
-eye(&#39;white&#39;, 15)
-fucksisu.goto(40, 125)
-eye(&#39;black&#39;, 5)
-fucksisu.goto(0, 75)
-eye(&#39;black&#39;, 8)
-fucksisu.goto(-40, 85)
-fucksisu.down()
-fucksisu.right(90)
-fucksisu.circle(40, 180)
-fucksisu.up()
-fucksisu.goto(-10, 45)
-fucksisu.down()
-fucksisu.right(180)
-fucksisu.fillcolor(&#39;red&#39;)
-fucksisu.begin_fill()
-fucksisu.circle(10, 180)
-fucksisu.end_fill()
-fucksisu.hideturtle()</code></pre>
-<h3 id="画柱状图"><a href="#画柱状图" class="headerlink" title="画柱状图"></a>画柱状图</h3><pre><code class="python">import turtle
-turtle.title(&quot;柱状图名称&quot;)
-heights = [834, 620,460,260,105]
-def main():
-    t = turtle.Turtle()
-    t.hideturtle()
-    for i in range(5):
-        drawFilledRectangle(t,-200+(76*i),0,76,heights[i]/4,&quot;black&quot;,&quot;light blue&quot;)
-    displayText(t)
-def drawFilledRectangle(t,x,y,w,h,colorP=&quot;black&quot;,colorF=&quot;white&quot;):
-    t.pencolor(colorP)
-    t.fillcolor(colorF)
-    t.up()
-    t.goto(x,y)
-    t.down()
-    t.begin_fill()
-    t.goto(x+w,y)
-    t.goto(x+w,y+h)
-    t.goto(x,y+h)
-    t.goto(x,y)
-    t.end_fill()
-def displayText(t):
-    languages = [&quot;柱状图1&quot;, &quot;柱状图2&quot;, &quot;柱状图3&quot;, &quot;柱状图4&quot;, &quot;柱状图5&quot;]
-    t.pencolor(&quot;blue&quot;)
-    t.up()
-    for i in range(5):
-        t.goto((-162+76*i),heights[i] / 4)
-        t.write(str(heights[i]),align=&quot;center&quot;,font=(&quot;Arial&quot;,10,&quot;normal&quot;))
-        t.goto((-162+76*i),10)
-        t.write(languages[i],align=&quot;center&quot;,font=(&quot;Arial&quot;,10,&quot;normal&quot;))
-        t.goto(-200,-25)
-        t.write(&quot;柱状图1名称&quot;,font=(&quot;Arial&quot;,10,&quot;normal&quot;))
-        t.goto(-200,-45)
-        t.write(&#39;(柱状图1注解)&#39;,font=(&quot;Arial&quot;,10,&quot;normal&quot;))
-main()</code></pre>
-<h3 id="画皮卡丘"><a href="#画皮卡丘" class="headerlink" title="画皮卡丘"></a>画皮卡丘</h3><pre><code class="python">import turtle
-def sisuisrubbishl(x, y):
-    turtle.setx(x)
-    turtle.sety(y)
-    print(x, y)
-class Cartoon:
-    def __init__(self):
-        self.t = turtle.Turtle()
-        t = self.t
-        t.pensize(3)
-        t.speed(9)
-        t.ondrag(sisuisrubbishl)
-    def meme(self, x, y):
-        self.t.penup()
-        self.t.goto(x, y)
-        self.t.pendown()
-    def ihatesisu1(self, x, y):
-        self.meme(x, y)
-        t = self.t
-        t.seth(0)
-        t.fillcolor(&#39;#333333&#39;)
-        t.begin_fill()
-        t.circle(22)
-        t.end_fill()
-        self.meme(x, y + 10)
-        t.fillcolor(&#39;#000000&#39;)
-        t.begin_fill()
-        t.circle(10)
-        t.end_fill()
-        self.meme(x + 6, y + 22)
-        t.fillcolor(&#39;#ffffff&#39;)
-        t.begin_fill()
-        t.circle(10)
-        t.end_fill()
-    def ihatesisu2(self, x, y):
-        self.meme(x, y)
-        t = self.t
-        t.seth(0)
-        t.fillcolor(&#39;#333333&#39;)
-        t.begin_fill()
-        t.circle(22)
-        t.end_fill()
-        self.meme(x, y + 10)
-        t.fillcolor(&#39;#000000&#39;)
-        t.begin_fill()
-        t.circle(10)
-        t.end_fill()
-        self.meme(x - 6, y + 22)
-        t.fillcolor(&#39;#ffffff&#39;)
-        t.begin_fill()
-        t.circle(10)
-        t.end_fill()
-    def fucksisu(self, x, y):
-        self.meme(x, y)
-        t = self.t
-        t.fillcolor(&#39;#88141D&#39;)
-        t.begin_fill()
-        l1 = []
-        l2 = []
-        t.seth(190)
-        a = 0.7
-        for i in range(28):
-            a += 0.1
-            t.right(3)
-            t.fd(a)
-            l1.append(t.position())
-        self.meme(x, y)
-        t.seth(10)
-        a = 0.7
-        for i in range(28):
-            a += 0.1
-            t.left(3)
-            t.fd(a)
-            l2.append(t.position())
-        t.seth(10)
-        t.circle(50, 15)
-        t.left(180)
-        t.circle(-50, 15)
-        t.circle(-50, 40)
-        t.seth(233)
-        t.circle(-50, 55)
-        t.left(180)
-        t.circle(50, 12.1)
-        t.end_fill()
-        self.meme(17, 54)
-        t.fillcolor(&#39;#DD716F&#39;)
-        t.begin_fill()
-        t.seth(145)
-        t.circle(40, 86)
-        t.penup()
-        for pos in reversed(l1[:20]):
-            t.goto(pos[0], pos[1] + 1.5)
-        for pos in l2[:20]:
-            t.goto(pos[0], pos[1] + 1.5)
-        t.pendown()
-        t.end_fill()
-        self.meme(-17, 94)
-        t.seth(8)
-        t.fd(4)
-        t.back(8)
-    def fucksisu4(self, x, y):
-        turtle.tracer(False)
-        t = self.t
-        self.meme(x, y)
-        t.seth(300)
-        t.fillcolor(&#39;#DD4D28&#39;)
-        t.begin_fill()
-        a = 2.3
-        for i in range(120):
-            if 0 &lt;= i &lt; 30 or 60 &lt;= i &lt; 90:
-                a -= 0.05
-                t.lt(3)
-                t.fd(a)
-            else:
-                a += 0.05
-                t.lt(3)
-                t.fd(a)
-        t.end_fill()
-        turtle.tracer(True)
-    def fucksisu5(self, x, y):
-        t = self.t
-        turtle.tracer(False)
-        self.meme(x, y)
-        t.seth(60)
-        t.fillcolor(&#39;#DD4D28&#39;)
-        t.begin_fill()
-        a = 2.3
-        for i in range(120):
-            if 0 &lt;= i &lt; 30 or 60 &lt;= i &lt; 90:
-                a -= 0.05
-                t.lt(3)
-                t.fd(a)
-            else:
-                a += 0.05
-                t.lt(3)
-                t.fd(a)
-        t.end_fill()
-        turtle.tracer(True)
-    def fucksisu6(self, x, y):
-        t = self.t
-        self.meme(x, y)
-        t.fillcolor(&#39;#000000&#39;)
-        t.begin_fill()
-        t.seth(330)
-        t.circle(100, 35)
-        t.seth(219)
-        t.circle(-300, 19)
-        t.seth(110)
-        t.circle(-30, 50)
-        t.circle(-300, 10)
-        t.end_fill()
-    def fucksisu7(self, x, y):
-        t = self.t
-        self.meme(x, y)
-        t.fillcolor(&#39;#000000&#39;)
-        t.begin_fill()
-        t.seth(300)
-        t.circle(-100, 30)
-        t.seth(35)
-        t.circle(300, 15)
-        t.circle(30, 50)
-        t.seth(190)
-        t.circle(300, 17)
-        t.end_fill()
-    def fucksisu8(self):
-        t = self.t
-        t.fillcolor(&#39;#F6D02F&#39;)
-        t.begin_fill()
-        t.penup()
-        t.circle(130, 40)
-        t.pendown()
-        t.circle(100, 105)
-        t.left(180)
-        t.circle(-100, 5)
-        t.seth(20)
-        t.circle(300, 30)
-        t.circle(30, 50)
-        t.seth(190)
-        t.circle(300, 36)
-        t.seth(150)
-        t.circle(150, 70)
-        t.seth(200)
-        t.circle(300, 40)
-        t.circle(30, 50)
-        t.seth(20)
-        t.circle(300, 35) 
-        t.seth(240)
-        t.circle(105, 95)
-        t.left(180)
-        t.circle(-105, 5)
-        t.seth(210)
-        t.circle(500, 18)
-        t.seth(200)
-        t.fd(10)
-        t.seth(280)
-        t.fd(7)
-        t.seth(210)
-        t.fd(10)
-        t.seth(300)
-        t.circle(10, 80)
-        t.seth(220)
-        t.fd(10)
-        t.seth(300)
-        t.circle(10, 80)
-        t.seth(240)
-        t.fd(12)
-        t.seth(0)
-        t.fd(13)
-        t.seth(240)
-        t.circle(10, 70)
-        t.seth(10)
-        t.circle(10, 70)
-        t.seth(10)
-        t.circle(300, 18)
-        t.seth(75)
-        t.circle(500, 8)
-        t.left(180)
-        t.circle(-500, 15)
-        t.seth(250)
-        t.circle(100, 65)
-        t.seth(320)
-        t.circle(100, 5)
-        t.left(180)
-        t.circle(-100, 5)
-        t.seth(220)
-        t.circle(200, 20)
-        t.circle(20, 70)
-        t.seth(60)
-        t.circle(-100, 20)
-        t.left(180)
-        t.circle(100, 20)
-        t.seth(300)
-        t.circle(10, 70)
-        t.seth(60)
-        t.circle(-100, 20)
-        t.left(180)
-        t.circle(100, 20)
-        t.seth(10)
-        t.circle(100, 60)
-        t.seth(180)
-        t.circle(-100, 10)
-        t.left(180)
-        t.circle(100, 10)
-        t.seth(5)
-        t.circle(100, 10)
-        t.circle(-100, 40)
-        t.circle(100, 35)
-        t.left(180)
-        t.circle(-100, 10)
-        t.seth(290)
-        t.circle(100, 55)
-        t.circle(10, 50)
-        t.seth(120)
-        t.circle(100, 20)
-        t.left(180)
-        t.circle(-100, 20)
-        t.seth(0)
-        t.circle(10, 50)
-        t.seth(110)
-        t.circle(100, 20)
-        t.left(180)
-        t.circle(-100, 20)
-        t.seth(30)
-        t.circle(20, 50)
-        t.seth(100)
-        t.circle(100, 40)
-        t.seth(200)
-        t.circle(-100, 5)
-        t.left(180)
-        t.circle(100, 5)
-        t.left(30)
-        t.circle(100, 75)
-        t.right(15)
-        t.circle(-300, 21)
-        t.left(180)
-        t.circle(300, 3)
-        t.seth(43)
-        t.circle(200, 60)
-        t.right(10)
-        t.fd(10)
-        t.circle(5, 160)
-        t.seth(90)
-        t.circle(5, 160)
-        t.seth(90)
-        t.fd(10)
-        t.seth(90)
-        t.circle(5, 180)
-        t.fd(10)
-        t.left(180)
-        t.left(20)
-        t.fd(10)
-        t.circle(5, 170)
-        t.fd(10)
-        t.seth(240)
-        t.circle(50, 30)
-        t.end_fill()
-        self.meme(130, 125)
-        t.seth(-20)
-        t.fd(5)
-        t.circle(-5, 160)
-        t.fd(5)
-        self.meme(166, 130)
-        t.seth(-90)
-        t.fd(3)
-        t.circle(-4, 180)
-        t.fd(3)
-        t.seth(-90)
-        t.fd(3)
-        t.circle(-4, 180)
-        t.fd(3)
-        self.meme(168, 134)
-        t.fillcolor(&#39;#F6D02F&#39;)
-        t.begin_fill()
-        t.seth(40)
-        t.fd(200)
-        t.seth(-80)
-        t.fd(150)
-        t.seth(210)
-        t.fd(150)
-        t.left(90)
-        t.fd(100)
-        t.right(95)
-        t.fd(100)
-        t.left(110)
-        t.fd(70)
-        t.right(110)
-        t.fd(80)
-        t.left(110)
-        t.fd(30)
-        t.right(110)
-        t.fd(32)
-        t.right(106)
-        t.circle(100, 25)
-        t.right(15)
-        t.circle(-300, 2)
-        ############## 
-        t.seth(30)
-        t.fd(40)
-        t.left(100)
-        t.fd(70)
-        t.right(100)
-        t.fd(80)
-        t.left(100)
-        t.fd(46)
-        t.seth(66)
-        t.circle(200, 38)
-        t.right(10)
-        t.fd(10)
-        t.end_fill()
-        t.fillcolor(&#39;#923E24&#39;)
-        self.meme(126.82, -156.84)
-        t.begin_fill()
-        t.seth(30)
-        t.fd(40)
-        t.left(100)
-        t.fd(40)
-        t.pencolor(&#39;#923e24&#39;)
-        t.seth(-30)
-        t.fd(30)
-        t.left(140)
-        t.fd(20)
-        t.right(150)
-        t.fd(20)
-        t.left(150)
-        t.fd(20)
-        t.right(150)
-        t.fd(20)
-        t.left(130)
-        t.fd(18)
-        t.pencolor(&#39;#000000&#39;)
-        t.seth(-45)
-        t.fd(67)
-        t.right(110)
-        t.fd(80)
-        t.left(110)
-        t.fd(30)
-        t.right(110)
-        t.fd(32)
-        t.right(106)
-        t.circle(100, 25)
-        t.right(15)
-        t.circle(-300, 2)
-        t.end_fill()
-        self.fucksisu9(-134.07, 147.81)
-        self.fucksisu(-5, 25)
-        self.fucksisu4(-126, 32)
-        self.fucksisu5(107, 63)
-        self.fucksisu6(-250, 100)
-        self.fucksisu7(140, 270)
-        self.ihatesisu1(-85, 90)
-        self.ihatesisu2(50, 110)
-        t.hideturtle()
-    def fucksisu9(self, x, y):
-        self.meme(x, y)
-        t = self.t
-        t.fillcolor(&#39;#CD0000&#39;)
-        t.begin_fill()
-        t.seth(200)
-        t.circle(400, 7)
-        t.left(180)
-        t.circle(-400, 30)
-        t.circle(30, 60)
-        t.fd(50)
-        t.circle(30, 45)
-        t.fd(60)
-        t.left(5)
-        t.circle(30, 70)
-        t.right(20)
-        t.circle(200, 70)
-        t.circle(30, 60)
-        t.fd(70) 
-        t.right(35)
-        t.fd(50)
-        t.circle(8, 100)
-        t.end_fill()
-        self.meme(-168.47, 185.52)
-        t.seth(36)
-        t.circle(-270, 54)
-        t.left(180)
-        t.circle(270, 27)
-        t.circle(-80, 98)
-        t.fillcolor(&#39;#444444&#39;)
-        t.begin_fill()
-        t.left(180)
-        t.circle(80, 197)
-        t.left(58)
-        t.circle(200, 45)
-        t.end_fill()
-        self.meme(-58, 270)
-        t.pencolor(&#39;#228B22&#39;)
-        t.dot(35)
-        self.meme(-30, 280)
-        t.fillcolor(&#39;#228B22&#39;)
-        t.begin_fill()
-        t.seth(100)
-        t.circle(30, 180)
-        t.seth(190)
-        t.fd(15)
-        t.seth(100)
-        t.circle(-45, 180)
-        t.right(90)
-        t.fd(15)
-        t.end_fill()
-        t.pencolor(&#39;#000000&#39;)
-    def start(self):
-        self.fucksisu8()
-def main():
-    turtle.screensize(800, 600)
-    turtle.title(&#39;皮卡丘&#39;)
-    cartoon = Cartoon()
-    cartoon.start()
-    turtle.mainloop()
-if __name__ == &#39;__main__&#39;:
-    main()</code></pre>
-<h3 id="画哆啦A梦"><a href="#画哆啦A梦" class="headerlink" title="画哆啦A梦"></a>画哆啦A梦</h3><pre><code class="python">import turtle
-from turtle import *
-turtle.title(&quot;哆啦A梦&quot;)
-def fucksisu1(x, y):
-    penup()
-    goto(x, y)
-    pendown()
-def fucksisu2():
-    fillcolor(&quot;#ffffff&quot;)
-    begin_fill()
-    tracer(False)
-    a = 2.5
-    for i in range(120):
-        if 0 &lt;= i &lt; 30 or 60 &lt;= i &lt; 90:
-            a -= 0.05
-            lt(3)
-            fd(a)
-        else:
-            a += 0.05
-            lt(3)
-            fd(a)
-    tracer(True)
-    end_fill()
-def fucksisu3():
-    fucksisu1(-32, 135)
-    seth(165)
-    fd(60)
-    fucksisu1(-32, 125)
-    seth(180)
-    fd(60)
-    fucksisu1(-32, 115)
-    seth(193)
-    fd(60)
-    fucksisu1(37, 135)
-    seth(15)
-    fd(60)
-    fucksisu1(37, 125)
-    seth(0)
-    fd(60)
-    fucksisu1(37, 115)
-    seth(-13)
-    fd(60)
-def fucksisu4():
-    fucksisu1(5, 148)
-    seth(270)
-    fd(100)
-    seth(0)
-    circle(120, 50)
-    seth(230)
-    circle(-120, 100)
-def fucksisu5():
-    fillcolor(&#39;#e70010&#39;)
-    begin_fill()
-    seth(0)
-    fd(200)
-    circle(-5, 90)
-    fd(10)
-    circle(-5, 90)
-    fd(207)
-    circle(-5, 90)
-    fd(10)
-    circle(-5, 90)
-    end_fill()
-def fucksisu6():
-    fucksisu1(-10, 158)
-    seth(315)
-    fillcolor(&#39;#e70010&#39;)
-    begin_fill()
-    circle(20)
-    end_fill()
-def black_fucksisu2():
-    seth(0)
-    fucksisu1(-20, 195)
-    fillcolor(&#39;#000000&#39;)
-    begin_fill()
-    circle(13)
-    end_fill()
-    pensize(6)
-    fucksisu1(20, 205)
-    seth(75)
-    circle(-10, 150)
-    pensize(3)
-    fucksisu1(-17, 200)
-    seth(0)
-    fillcolor(&#39;#ffffff&#39;)
-    begin_fill()
-    circle(5)
-    end_fill()
-    fucksisu1(0, 0)
-def face():
-    fd(183)
-    lt(45)
-    fillcolor(&#39;#ffffff&#39;)
-    begin_fill()
-    circle(120, 100)
-    seth(180)
-    fd(121)
-    pendown()
-    seth(215)
-    circle(120, 100)
-    end_fill()
-    fucksisu1(63.56, 218.24)
-    seth(90)
-    fucksisu2()
-    seth(180)
-    penup()
-    fd(60)
-    pendown()
-    seth(90)
-    fucksisu2()
-    penup()
-    seth(180)
-    fd(64)
-def fucksisu7():
-    penup()
-    circle(150, 40)
-    pendown()
-    fillcolor(&#39;#00a0de&#39;)
-    begin_fill()
-    circle(150, 280)
-    end_fill()
-def fucksisu8():
-    fucksisu7()
-    fucksisu5()
-    face()
-    fucksisu6()
-    fucksisu4()
-    fucksisu3()
-    fucksisu1(0, 0)
-    seth(0)
-    penup()
-    circle(150, 50)
-    pendown()
-    seth(30)
-    fd(40)
-    seth(70)
-    circle(-30, 270)
-    fillcolor(&#39;#00a0de&#39;)
-    begin_fill()
-    seth(230)
-    fd(80)
-    seth(90)
-    circle(1000, 1)
-    seth(-89)
-    circle(-1000, 10)
-    seth(180)
-    fd(70)
-    seth(90)
-    circle(30, 180)
-    seth(180)
-    fd(70)
-    seth(100)
-    circle(-1000, 9)
-    seth(-86)
-    circle(1000, 2)
-    seth(230)
-    fd(40)
-    circle(-30, 230)
-    seth(45)
-    fd(81)
-    seth(0)
-    fd(203)
-    circle(5, 90)
-    fd(10)
-    circle(5, 90)
-    fd(7)
-    seth(40)
-    circle(150, 10)
-    seth(30)
-    fd(40)
-    end_fill()
-    seth(70)
-    fillcolor(&#39;#ffffff&#39;)
-    begin_fill()
-    circle(-30)
-    end_fill()
-    fucksisu1(103.74, -182.59)
-    seth(0)
-    fillcolor(&#39;#ffffff&#39;)
-    begin_fill()
-    fd(15)
-    circle(-15, 180)
-    fd(90)
-    circle(-15, 180)
-    fd(10)
-    end_fill()
-    fucksisu1(-96.26, -182.59)
-    seth(180)
-    fillcolor(&#39;#ffffff&#39;)
-    begin_fill()
-    fd(15)
-    circle(15, 180)
-    fd(90)
-    circle(15, 180)
-    fd(10)
-    end_fill()
-    fucksisu1(-133.97, -91.81)
-    seth(50)
-    fillcolor(&#39;#ffffff&#39;)
-    begin_fill()
-    circle(30)
-    end_fill()
-    fucksisu1(-103.42, 15.09)
-    seth(0)
-    fd(38)
-    seth(230)
-    begin_fill()
-    circle(90, 260)
-    end_fill()
-    fucksisu1(5, -40)
-    seth(0)
-    fd(70)
-    seth(-90)
-    circle(-70, 180)
-    seth(0)
-    fd(70)
-    fucksisu1(-103.42, 15.09)
-    fd(90)
-    seth(70)
-    fillcolor(&#39;#ffd200&#39;)
-    begin_fill()
-    circle(-20)
-    end_fill()
-    seth(170)
-    fillcolor(&#39;#ffd200&#39;)
-    begin_fill()
-    circle(-2, 180)
-    seth(10)
-    circle(-100, 22)
-    circle(-2, 180)
-    seth(180 - 10)
-    circle(100, 22)
-    end_fill()
-    goto(-13.42, 15.09)
-    seth(250)
-    circle(20, 110)
-    seth(90)
-    fd(15)
-    dot(10)
-    fucksisu1(0, -150)
-    black_fucksisu2()
-if __name__ == &#39;__main__&#39;:
-    screensize(800, 600, &quot;#f0f0f0&quot;)
-    pensize(3)
-    speed(9)
-    fucksisu8()
-    mainloop()</code></pre>
-<h3 id="钢铁侠"><a href="#钢铁侠" class="headerlink" title="钢铁侠"></a>钢铁侠</h3><pre><code class="python">import turtle
-fucksisu1 = [[(-40, 120), (-70, 260), (-130, 230), (-170, 200), (-170, 100), (-160, 40), (-170, 10), (-150, -10), (-140, 10),
-           (-40, -20), (0, -20)],
-          [(0, -20), (40, -20), (140, 10), (150, -10), (170, 10), (160, 40), (170, 100), (170, 200), (130, 230), (70, 260),
-           (40, 120), (0, 120)]]
-fucksisu2 = [[(-40, -30), (-50, -40), (-100, -46), (-130, -40), (-176, 0), (-186, -30), (-186, -40), (-120, -170), (-110, -210),
-           (-80, -230), (-64, -210), (0, -210)],
-          [(0, -210), (64, -210), (80, -230), (110, -210), (120, -170), (186, -40), (186, -30), (176, 0), (130, -40),
-           (100, -46), (50, -40), (40, -30), (0, -30)]]
-fucksisu3 = [[(-60, -220), (-80, -240), (-110, -220), (-120, -250), (-90, -280), (-60, -260), (-30, -260), (-20, -250),
-           (0, -250)],
-          [(0, -250), (20, -250), (30, -260), (60, -260), (90, -280), (120, -250), (110, -220), (80, -240), (60, -220),
-           (0, -220)]]
-turtle.hideturtle()
-turtle.bgcolor(&#39;#ba161e&#39;)  # Dark Red
-turtle.setup(500, 600)
-turtle.title(&quot;钢铁侠&quot;)
-fucksisu1Goto = (0, 120)
-fucksisu2Goto = (0, -30)
-fucksisu3Goto = (0, -220)
-turtle.speed(2)
-def logo(a, b):
-    turtle.penup()
-    turtle.goto(b)
-    turtle.pendown()
-    turtle.color(&#39;#fab104&#39;)  # Light Yellow
-    turtle.begin_fill()
-    for i in range(len(a[0])):
-        x, y = a[0][i]
-        turtle.goto(x, y)
-    for i in range(len(a[1])):
-        x, y = a[1][i]
-        turtle.goto(x, y)
-    turtle.end_fill()
-logo(fucksisu1, fucksisu1Goto)
-logo(fucksisu2, fucksisu2Goto)
-logo(fucksisu3, fucksisu3Goto)
-turtle.hideturtle()
-turtle.done()</code></pre>
-<h3 id="蝙蝠侠"><a href="#蝙蝠侠" class="headerlink" title="蝙蝠侠"></a>蝙蝠侠</h3><pre><code class="python">import turtle
-import math
-turtle.title(&quot;蝙蝠侠&quot;)
-fucksisu1 = turtle.Turtle()
-fucksisu1.speed(500)
-window = turtle.Screen()
-window.bgcolor(&quot;#000000&quot;)
-fucksisu1.color(&quot;yellow&quot;)
-fucksisu2 = 20
-fucksisu1.left(90)
-fucksisu1.penup()
-fucksisu1.goto(-7 * fucksisu2, 0)
-fucksisu1.pendown()
-for a in range(-7 * fucksisu2, -3 * fucksisu2, 1):
-    x = a / fucksisu2
-    rel = math.fabs(x)
-    y = 1.5 * math.sqrt((-math.fabs(rel - 1)) * math.fabs(3 - rel) / ((rel - 1) * (3 - rel))) * (
-                1 + math.fabs(rel - 3) / (rel - 3)) * math.sqrt(1 - (x / 7) ** 2) + (
-                    4.5 + 0.75 * (math.fabs(x - 0.5) + math.fabs(x + 0.5)) - 2.75 * (
-                        math.fabs(x - 0.75) + math.fabs(x + 0.75))) * (1 + math.fabs(1 - rel) / (1 - rel))
-    fucksisu1.goto(a, y * fucksisu2)
-for a in range(-3 * fucksisu2, -1 * fucksisu2 - 1, 1):
-    x = a / fucksisu2
-    rel = math.fabs(x)
-    y = (2.71052 + 1.5 - 0.5 * rel - 1.35526 * math.sqrt(4 - (rel - 1) ** 2)) * math.sqrt(
-        math.fabs(rel - 1) / (rel - 1))
-    fucksisu1.goto(a, y * fucksisu2)
-fucksisu1.goto(-1 * fucksisu2, 3 * fucksisu2)
-fucksisu1.goto(int(-0.5 * fucksisu2), int(2.2 * fucksisu2))
-fucksisu1.goto(int(0.5 * fucksisu2), int(2.2 * fucksisu2))
-fucksisu1.goto(1 * fucksisu2, 3 * fucksisu2)
-for a in range(1 * fucksisu2 + 1, 3 * fucksisu2 + 1, 1):
-    x = a / fucksisu2
-    rel = math.fabs(x)
-    y = (2.71052 + 1.5 - 0.5 * rel - 1.35526 * math.sqrt(4 - (rel - 1) ** 2)) * math.sqrt(
-        math.fabs(rel - 1) / (rel - 1))
-    fucksisu1.goto(a, y * fucksisu2)
-for a in range(3 * fucksisu2 + 1, 7 * fucksisu2 + 1, 1):
-    x = a / fucksisu2
-    rel = math.fabs(x)
-    y = 1.5 * math.sqrt((-math.fabs(rel - 1)) * math.fabs(3 - rel) / ((rel - 1) * (3 - rel))) * (
-                1 + math.fabs(rel - 3) / (rel - 3)) * math.sqrt(1 - (x / 7) ** 2) + (
-                    4.5 + 0.75 * (math.fabs(x - 0.5) + math.fabs(x + 0.5)) - 2.75 * (
-                        math.fabs(x - 0.75) + math.fabs(x + 0.75))) * (1 + math.fabs(1 - rel) / (1 - rel))
-    fucksisu1.goto(a, y * fucksisu2)
-for a in range(7 * fucksisu2, 4 * fucksisu2, -1):
-    x = a / fucksisu2
-    rel = math.fabs(x)
-    y = (-3) * math.sqrt(1 - (x / 7) ** 2) * math.sqrt(math.fabs(rel - 4) / (rel - 4))
-    fucksisu1.goto(a, y * fucksisu2)
-for a in range(4 * fucksisu2, -4 * fucksisu2, -1):
-    x = a / fucksisu2
-    rel = math.fabs(x)
-    y = math.fabs(x / 2) - 0.0913722 * x ** 2 - 3 + math.sqrt(1 - (math.fabs(rel - 2) - 1) ** 2)
-    fucksisu1.goto(a, y * fucksisu2)
-for a in range(-4 * fucksisu2 - 1, -7 * fucksisu2 - 1, -1):
-    x = a / fucksisu2
-    rel = math.fabs(x)
-    y = (-3) * math.sqrt(1 - (x / 7) ** 2) * math.sqrt(math.fabs(rel - 4) / (rel - 4))
-    fucksisu1.goto(a, y * fucksisu2)
-fucksisu1.penup()
-fucksisu1.goto(300, 300)
-turtle.done()</code></pre>
+<span id="more"></span>
+<h3 id="turtle-简介"><a href="#turtle-简介" class="headerlink" title="turtle 简介"></a>turtle 简介</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"><span class="comment"># 设置窗体大小</span></span><br><span class="line">turtle.setup(width,height,startx,starty)    <span class="comment">#后两个参数非必选参数</span></span><br><span class="line"><span class="comment">#turtle的移动</span></span><br><span class="line">turtle.goto(x,y)</span><br><span class="line"><span class="comment">#画圆</span></span><br><span class="line">turtle.circle(r,angle)</span><br><span class="line"><span class="comment">#当前距离后退</span></span><br><span class="line">turtle.bk(d)</span><br><span class="line"><span class="comment">#当前距离前进</span></span><br><span class="line">turtle.fd(d)    <span class="comment">#turtle.forward(d)</span></span><br><span class="line"><span class="comment">#改变海龟行进方向，angle为绝对角度</span></span><br><span class="line">turtle.seth(angle)    <span class="comment">#只改变呢方向不行进</span></span><br><span class="line"><span class="comment">#向左右前进</span></span><br><span class="line">turtle.right(angle)</span><br><span class="line">turtle.left(angle)</span><br><span class="line"><span class="comment">#抬起画笔</span></span><br><span class="line">turtle.pu()    <span class="comment">#turtle.penup()</span></span><br><span class="line"><span class="comment">#画笔落下</span></span><br><span class="line">turtle.pd()    <span class="comment">#turtle.pendown()</span></span><br><span class="line"><span class="comment">#画笔宽度</span></span><br><span class="line">turtle.width(width)    <span class="comment">#turtle.pensize(width)</span></span><br><span class="line"><span class="comment">#画笔颜色</span></span><br><span class="line">turtle.pencolor(color):color</span><br></pre></td></tr></table></figure>
+<h3 id="画笑脸"><a href="#画笑脸" class="headerlink" title="画笑脸"></a>画笑脸</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle <span class="keyword">as</span> fucksisu</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">eye</span>(<span class="params">col, rad</span>):</span><br><span class="line">	fucksisu.down()</span><br><span class="line">	fucksisu.fillcolor(col)</span><br><span class="line">	fucksisu.begin_fill()</span><br><span class="line">	fucksisu.circle(rad)</span><br><span class="line">	fucksisu.end_fill()</span><br><span class="line">	fucksisu.up()</span><br><span class="line">fucksisu.fillcolor(<span class="string">&#x27;yellow&#x27;</span>)</span><br><span class="line">fucksisu.begin_fill()</span><br><span class="line">fucksisu.circle(<span class="number">100</span>)</span><br><span class="line">fucksisu.end_fill()</span><br><span class="line">fucksisu.up()</span><br><span class="line">fucksisu.goto(-<span class="number">40</span>, <span class="number">120</span>)</span><br><span class="line">eye(<span class="string">&#x27;white&#x27;</span>, <span class="number">15</span>)</span><br><span class="line">fucksisu.goto(-<span class="number">37</span>, <span class="number">125</span>)</span><br><span class="line">eye(<span class="string">&#x27;black&#x27;</span>, <span class="number">5</span>)</span><br><span class="line">fucksisu.goto(<span class="number">40</span>, <span class="number">120</span>)</span><br><span class="line">eye(<span class="string">&#x27;white&#x27;</span>, <span class="number">15</span>)</span><br><span class="line">fucksisu.goto(<span class="number">40</span>, <span class="number">125</span>)</span><br><span class="line">eye(<span class="string">&#x27;black&#x27;</span>, <span class="number">5</span>)</span><br><span class="line">fucksisu.goto(<span class="number">0</span>, <span class="number">75</span>)</span><br><span class="line">eye(<span class="string">&#x27;black&#x27;</span>, <span class="number">8</span>)</span><br><span class="line">fucksisu.goto(-<span class="number">40</span>, <span class="number">85</span>)</span><br><span class="line">fucksisu.down()</span><br><span class="line">fucksisu.right(<span class="number">90</span>)</span><br><span class="line">fucksisu.circle(<span class="number">40</span>, <span class="number">180</span>)</span><br><span class="line">fucksisu.up()</span><br><span class="line">fucksisu.goto(-<span class="number">10</span>, <span class="number">45</span>)</span><br><span class="line">fucksisu.down()</span><br><span class="line">fucksisu.right(<span class="number">180</span>)</span><br><span class="line">fucksisu.fillcolor(<span class="string">&#x27;red&#x27;</span>)</span><br><span class="line">fucksisu.begin_fill()</span><br><span class="line">fucksisu.circle(<span class="number">10</span>, <span class="number">180</span>)</span><br><span class="line">fucksisu.end_fill()</span><br><span class="line">fucksisu.hideturtle()</span><br></pre></td></tr></table></figure>
+<h3 id="画柱状图"><a href="#画柱状图" class="headerlink" title="画柱状图"></a>画柱状图</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line">turtle.title(<span class="string">&quot;柱状图名称&quot;</span>)</span><br><span class="line">heights = [<span class="number">834</span>, <span class="number">620</span>,<span class="number">460</span>,<span class="number">260</span>,<span class="number">105</span>]</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    t = turtle.Turtle()</span><br><span class="line">    t.hideturtle()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">        drawFilledRectangle(t,-<span class="number">200</span>+(<span class="number">76</span>*i),<span class="number">0</span>,<span class="number">76</span>,heights[i]/<span class="number">4</span>,<span class="string">&quot;black&quot;</span>,<span class="string">&quot;light blue&quot;</span>)</span><br><span class="line">    displayText(t)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">drawFilledRectangle</span>(<span class="params">t,x,y,w,h,colorP=<span class="string">&quot;black&quot;</span>,colorF=<span class="string">&quot;white&quot;</span></span>):</span><br><span class="line">    t.pencolor(colorP)</span><br><span class="line">    t.fillcolor(colorF)</span><br><span class="line">    t.up()</span><br><span class="line">    t.goto(x,y)</span><br><span class="line">    t.down()</span><br><span class="line">    t.begin_fill()</span><br><span class="line">    t.goto(x+w,y)</span><br><span class="line">    t.goto(x+w,y+h)</span><br><span class="line">    t.goto(x,y+h)</span><br><span class="line">    t.goto(x,y)</span><br><span class="line">    t.end_fill()</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">displayText</span>(<span class="params">t</span>):</span><br><span class="line">    languages = [<span class="string">&quot;柱状图1&quot;</span>, <span class="string">&quot;柱状图2&quot;</span>, <span class="string">&quot;柱状图3&quot;</span>, <span class="string">&quot;柱状图4&quot;</span>, <span class="string">&quot;柱状图5&quot;</span>]</span><br><span class="line">    t.pencolor(<span class="string">&quot;blue&quot;</span>)</span><br><span class="line">    t.up()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">        t.goto((-<span class="number">162</span>+<span class="number">76</span>*i),heights[i] / <span class="number">4</span>)</span><br><span class="line">        t.write(<span class="built_in">str</span>(heights[i]),align=<span class="string">&quot;center&quot;</span>,font=(<span class="string">&quot;Arial&quot;</span>,<span class="number">10</span>,<span class="string">&quot;normal&quot;</span>))</span><br><span class="line">        t.goto((-<span class="number">162</span>+<span class="number">76</span>*i),<span class="number">10</span>)</span><br><span class="line">        t.write(languages[i],align=<span class="string">&quot;center&quot;</span>,font=(<span class="string">&quot;Arial&quot;</span>,<span class="number">10</span>,<span class="string">&quot;normal&quot;</span>))</span><br><span class="line">        t.goto(-<span class="number">200</span>,-<span class="number">25</span>)</span><br><span class="line">        t.write(<span class="string">&quot;柱状图1名称&quot;</span>,font=(<span class="string">&quot;Arial&quot;</span>,<span class="number">10</span>,<span class="string">&quot;normal&quot;</span>))</span><br><span class="line">        t.goto(-<span class="number">200</span>,-<span class="number">45</span>)</span><br><span class="line">        t.write(<span class="string">&#x27;(柱状图1注解)&#x27;</span>,font=(<span class="string">&quot;Arial&quot;</span>,<span class="number">10</span>,<span class="string">&quot;normal&quot;</span>))</span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
+<h3 id="画皮卡丘"><a href="#画皮卡丘" class="headerlink" title="画皮卡丘"></a>画皮卡丘</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sisuisrubbishl</span>(<span class="params">x, y</span>):</span><br><span class="line">    turtle.setx(x)</span><br><span class="line">    turtle.sety(y)</span><br><span class="line">    <span class="built_in">print</span>(x, y)</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cartoon</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        self.t = turtle.Turtle()</span><br><span class="line">        t = self.t</span><br><span class="line">        t.pensize(<span class="number">3</span>)</span><br><span class="line">        t.speed(<span class="number">9</span>)</span><br><span class="line">        t.ondrag(sisuisrubbishl)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">meme</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        self.t.penup()</span><br><span class="line">        self.t.goto(x, y)</span><br><span class="line">        self.t.pendown()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">ihatesisu1</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        self.meme(x, y)</span><br><span class="line">        t = self.t</span><br><span class="line">        t.seth(<span class="number">0</span>)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#333333&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.circle(<span class="number">22</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        self.meme(x, y + <span class="number">10</span>)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#000000&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.circle(<span class="number">10</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        self.meme(x + <span class="number">6</span>, y + <span class="number">22</span>)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#ffffff&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.circle(<span class="number">10</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">ihatesisu2</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        self.meme(x, y)</span><br><span class="line">        t = self.t</span><br><span class="line">        t.seth(<span class="number">0</span>)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#333333&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.circle(<span class="number">22</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        self.meme(x, y + <span class="number">10</span>)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#000000&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.circle(<span class="number">10</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        self.meme(x - <span class="number">6</span>, y + <span class="number">22</span>)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#ffffff&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.circle(<span class="number">10</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fucksisu</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        self.meme(x, y)</span><br><span class="line">        t = self.t</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#88141D&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        l1 = []</span><br><span class="line">        l2 = []</span><br><span class="line">        t.seth(<span class="number">190</span>)</span><br><span class="line">        a = <span class="number">0.7</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">28</span>):</span><br><span class="line">            a += <span class="number">0.1</span></span><br><span class="line">            t.right(<span class="number">3</span>)</span><br><span class="line">            t.fd(a)</span><br><span class="line">            l1.append(t.position())</span><br><span class="line">        self.meme(x, y)</span><br><span class="line">        t.seth(<span class="number">10</span>)</span><br><span class="line">        a = <span class="number">0.7</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">28</span>):</span><br><span class="line">            a += <span class="number">0.1</span></span><br><span class="line">            t.left(<span class="number">3</span>)</span><br><span class="line">            t.fd(a)</span><br><span class="line">            l2.append(t.position())</span><br><span class="line">        t.seth(<span class="number">10</span>)</span><br><span class="line">        t.circle(<span class="number">50</span>, <span class="number">15</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(-<span class="number">50</span>, <span class="number">15</span>)</span><br><span class="line">        t.circle(-<span class="number">50</span>, <span class="number">40</span>)</span><br><span class="line">        t.seth(<span class="number">233</span>)</span><br><span class="line">        t.circle(-<span class="number">50</span>, <span class="number">55</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(<span class="number">50</span>, <span class="number">12.1</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        self.meme(<span class="number">17</span>, <span class="number">54</span>)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#DD716F&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.seth(<span class="number">145</span>)</span><br><span class="line">        t.circle(<span class="number">40</span>, <span class="number">86</span>)</span><br><span class="line">        t.penup()</span><br><span class="line">        <span class="keyword">for</span> pos <span class="keyword">in</span> <span class="built_in">reversed</span>(l1[:<span class="number">20</span>]):</span><br><span class="line">            t.goto(pos[<span class="number">0</span>], pos[<span class="number">1</span>] + <span class="number">1.5</span>)</span><br><span class="line">        <span class="keyword">for</span> pos <span class="keyword">in</span> l2[:<span class="number">20</span>]:</span><br><span class="line">            t.goto(pos[<span class="number">0</span>], pos[<span class="number">1</span>] + <span class="number">1.5</span>)</span><br><span class="line">        t.pendown()</span><br><span class="line">        t.end_fill()</span><br><span class="line">        self.meme(-<span class="number">17</span>, <span class="number">94</span>)</span><br><span class="line">        t.seth(<span class="number">8</span>)</span><br><span class="line">        t.fd(<span class="number">4</span>)</span><br><span class="line">        t.back(<span class="number">8</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fucksisu4</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        turtle.tracer(<span class="literal">False</span>)</span><br><span class="line">        t = self.t</span><br><span class="line">        self.meme(x, y)</span><br><span class="line">        t.seth(<span class="number">300</span>)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#DD4D28&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        a = <span class="number">2.3</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">120</span>):</span><br><span class="line">            <span class="keyword">if</span> <span class="number">0</span> &lt;= i &lt; <span class="number">30</span> <span class="keyword">or</span> <span class="number">60</span> &lt;= i &lt; <span class="number">90</span>:</span><br><span class="line">                a -= <span class="number">0.05</span></span><br><span class="line">                t.lt(<span class="number">3</span>)</span><br><span class="line">                t.fd(a)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                a += <span class="number">0.05</span></span><br><span class="line">                t.lt(<span class="number">3</span>)</span><br><span class="line">                t.fd(a)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        turtle.tracer(<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fucksisu5</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        t = self.t</span><br><span class="line">        turtle.tracer(<span class="literal">False</span>)</span><br><span class="line">        self.meme(x, y)</span><br><span class="line">        t.seth(<span class="number">60</span>)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#DD4D28&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        a = <span class="number">2.3</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">120</span>):</span><br><span class="line">            <span class="keyword">if</span> <span class="number">0</span> &lt;= i &lt; <span class="number">30</span> <span class="keyword">or</span> <span class="number">60</span> &lt;= i &lt; <span class="number">90</span>:</span><br><span class="line">                a -= <span class="number">0.05</span></span><br><span class="line">                t.lt(<span class="number">3</span>)</span><br><span class="line">                t.fd(a)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                a += <span class="number">0.05</span></span><br><span class="line">                t.lt(<span class="number">3</span>)</span><br><span class="line">                t.fd(a)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        turtle.tracer(<span class="literal">True</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fucksisu6</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        t = self.t</span><br><span class="line">        self.meme(x, y)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#000000&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.seth(<span class="number">330</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">35</span>)</span><br><span class="line">        t.seth(<span class="number">219</span>)</span><br><span class="line">        t.circle(-<span class="number">300</span>, <span class="number">19</span>)</span><br><span class="line">        t.seth(<span class="number">110</span>)</span><br><span class="line">        t.circle(-<span class="number">30</span>, <span class="number">50</span>)</span><br><span class="line">        t.circle(-<span class="number">300</span>, <span class="number">10</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fucksisu7</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        t = self.t</span><br><span class="line">        self.meme(x, y)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#000000&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.seth(<span class="number">300</span>)</span><br><span class="line">        t.circle(-<span class="number">100</span>, <span class="number">30</span>)</span><br><span class="line">        t.seth(<span class="number">35</span>)</span><br><span class="line">        t.circle(<span class="number">300</span>, <span class="number">15</span>)</span><br><span class="line">        t.circle(<span class="number">30</span>, <span class="number">50</span>)</span><br><span class="line">        t.seth(<span class="number">190</span>)</span><br><span class="line">        t.circle(<span class="number">300</span>, <span class="number">17</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fucksisu8</span>(<span class="params">self</span>):</span><br><span class="line">        t = self.t</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#F6D02F&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.penup()</span><br><span class="line">        t.circle(<span class="number">130</span>, <span class="number">40</span>)</span><br><span class="line">        t.pendown()</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">105</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(-<span class="number">100</span>, <span class="number">5</span>)</span><br><span class="line">        t.seth(<span class="number">20</span>)</span><br><span class="line">        t.circle(<span class="number">300</span>, <span class="number">30</span>)</span><br><span class="line">        t.circle(<span class="number">30</span>, <span class="number">50</span>)</span><br><span class="line">        t.seth(<span class="number">190</span>)</span><br><span class="line">        t.circle(<span class="number">300</span>, <span class="number">36</span>)</span><br><span class="line">        t.seth(<span class="number">150</span>)</span><br><span class="line">        t.circle(<span class="number">150</span>, <span class="number">70</span>)</span><br><span class="line">        t.seth(<span class="number">200</span>)</span><br><span class="line">        t.circle(<span class="number">300</span>, <span class="number">40</span>)</span><br><span class="line">        t.circle(<span class="number">30</span>, <span class="number">50</span>)</span><br><span class="line">        t.seth(<span class="number">20</span>)</span><br><span class="line">        t.circle(<span class="number">300</span>, <span class="number">35</span>) </span><br><span class="line">        t.seth(<span class="number">240</span>)</span><br><span class="line">        t.circle(<span class="number">105</span>, <span class="number">95</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(-<span class="number">105</span>, <span class="number">5</span>)</span><br><span class="line">        t.seth(<span class="number">210</span>)</span><br><span class="line">        t.circle(<span class="number">500</span>, <span class="number">18</span>)</span><br><span class="line">        t.seth(<span class="number">200</span>)</span><br><span class="line">        t.fd(<span class="number">10</span>)</span><br><span class="line">        t.seth(<span class="number">280</span>)</span><br><span class="line">        t.fd(<span class="number">7</span>)</span><br><span class="line">        t.seth(<span class="number">210</span>)</span><br><span class="line">        t.fd(<span class="number">10</span>)</span><br><span class="line">        t.seth(<span class="number">300</span>)</span><br><span class="line">        t.circle(<span class="number">10</span>, <span class="number">80</span>)</span><br><span class="line">        t.seth(<span class="number">220</span>)</span><br><span class="line">        t.fd(<span class="number">10</span>)</span><br><span class="line">        t.seth(<span class="number">300</span>)</span><br><span class="line">        t.circle(<span class="number">10</span>, <span class="number">80</span>)</span><br><span class="line">        t.seth(<span class="number">240</span>)</span><br><span class="line">        t.fd(<span class="number">12</span>)</span><br><span class="line">        t.seth(<span class="number">0</span>)</span><br><span class="line">        t.fd(<span class="number">13</span>)</span><br><span class="line">        t.seth(<span class="number">240</span>)</span><br><span class="line">        t.circle(<span class="number">10</span>, <span class="number">70</span>)</span><br><span class="line">        t.seth(<span class="number">10</span>)</span><br><span class="line">        t.circle(<span class="number">10</span>, <span class="number">70</span>)</span><br><span class="line">        t.seth(<span class="number">10</span>)</span><br><span class="line">        t.circle(<span class="number">300</span>, <span class="number">18</span>)</span><br><span class="line">        t.seth(<span class="number">75</span>)</span><br><span class="line">        t.circle(<span class="number">500</span>, <span class="number">8</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(-<span class="number">500</span>, <span class="number">15</span>)</span><br><span class="line">        t.seth(<span class="number">250</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">65</span>)</span><br><span class="line">        t.seth(<span class="number">320</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">5</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(-<span class="number">100</span>, <span class="number">5</span>)</span><br><span class="line">        t.seth(<span class="number">220</span>)</span><br><span class="line">        t.circle(<span class="number">200</span>, <span class="number">20</span>)</span><br><span class="line">        t.circle(<span class="number">20</span>, <span class="number">70</span>)</span><br><span class="line">        t.seth(<span class="number">60</span>)</span><br><span class="line">        t.circle(-<span class="number">100</span>, <span class="number">20</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">20</span>)</span><br><span class="line">        t.seth(<span class="number">300</span>)</span><br><span class="line">        t.circle(<span class="number">10</span>, <span class="number">70</span>)</span><br><span class="line">        t.seth(<span class="number">60</span>)</span><br><span class="line">        t.circle(-<span class="number">100</span>, <span class="number">20</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">20</span>)</span><br><span class="line">        t.seth(<span class="number">10</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">60</span>)</span><br><span class="line">        t.seth(<span class="number">180</span>)</span><br><span class="line">        t.circle(-<span class="number">100</span>, <span class="number">10</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">10</span>)</span><br><span class="line">        t.seth(<span class="number">5</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">10</span>)</span><br><span class="line">        t.circle(-<span class="number">100</span>, <span class="number">40</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">35</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(-<span class="number">100</span>, <span class="number">10</span>)</span><br><span class="line">        t.seth(<span class="number">290</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">55</span>)</span><br><span class="line">        t.circle(<span class="number">10</span>, <span class="number">50</span>)</span><br><span class="line">        t.seth(<span class="number">120</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">20</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(-<span class="number">100</span>, <span class="number">20</span>)</span><br><span class="line">        t.seth(<span class="number">0</span>)</span><br><span class="line">        t.circle(<span class="number">10</span>, <span class="number">50</span>)</span><br><span class="line">        t.seth(<span class="number">110</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">20</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(-<span class="number">100</span>, <span class="number">20</span>)</span><br><span class="line">        t.seth(<span class="number">30</span>)</span><br><span class="line">        t.circle(<span class="number">20</span>, <span class="number">50</span>)</span><br><span class="line">        t.seth(<span class="number">100</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">40</span>)</span><br><span class="line">        t.seth(<span class="number">200</span>)</span><br><span class="line">        t.circle(-<span class="number">100</span>, <span class="number">5</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">5</span>)</span><br><span class="line">        t.left(<span class="number">30</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">75</span>)</span><br><span class="line">        t.right(<span class="number">15</span>)</span><br><span class="line">        t.circle(-<span class="number">300</span>, <span class="number">21</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(<span class="number">300</span>, <span class="number">3</span>)</span><br><span class="line">        t.seth(<span class="number">43</span>)</span><br><span class="line">        t.circle(<span class="number">200</span>, <span class="number">60</span>)</span><br><span class="line">        t.right(<span class="number">10</span>)</span><br><span class="line">        t.fd(<span class="number">10</span>)</span><br><span class="line">        t.circle(<span class="number">5</span>, <span class="number">160</span>)</span><br><span class="line">        t.seth(<span class="number">90</span>)</span><br><span class="line">        t.circle(<span class="number">5</span>, <span class="number">160</span>)</span><br><span class="line">        t.seth(<span class="number">90</span>)</span><br><span class="line">        t.fd(<span class="number">10</span>)</span><br><span class="line">        t.seth(<span class="number">90</span>)</span><br><span class="line">        t.circle(<span class="number">5</span>, <span class="number">180</span>)</span><br><span class="line">        t.fd(<span class="number">10</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.left(<span class="number">20</span>)</span><br><span class="line">        t.fd(<span class="number">10</span>)</span><br><span class="line">        t.circle(<span class="number">5</span>, <span class="number">170</span>)</span><br><span class="line">        t.fd(<span class="number">10</span>)</span><br><span class="line">        t.seth(<span class="number">240</span>)</span><br><span class="line">        t.circle(<span class="number">50</span>, <span class="number">30</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        self.meme(<span class="number">130</span>, <span class="number">125</span>)</span><br><span class="line">        t.seth(-<span class="number">20</span>)</span><br><span class="line">        t.fd(<span class="number">5</span>)</span><br><span class="line">        t.circle(-<span class="number">5</span>, <span class="number">160</span>)</span><br><span class="line">        t.fd(<span class="number">5</span>)</span><br><span class="line">        self.meme(<span class="number">166</span>, <span class="number">130</span>)</span><br><span class="line">        t.seth(-<span class="number">90</span>)</span><br><span class="line">        t.fd(<span class="number">3</span>)</span><br><span class="line">        t.circle(-<span class="number">4</span>, <span class="number">180</span>)</span><br><span class="line">        t.fd(<span class="number">3</span>)</span><br><span class="line">        t.seth(-<span class="number">90</span>)</span><br><span class="line">        t.fd(<span class="number">3</span>)</span><br><span class="line">        t.circle(-<span class="number">4</span>, <span class="number">180</span>)</span><br><span class="line">        t.fd(<span class="number">3</span>)</span><br><span class="line">        self.meme(<span class="number">168</span>, <span class="number">134</span>)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#F6D02F&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.seth(<span class="number">40</span>)</span><br><span class="line">        t.fd(<span class="number">200</span>)</span><br><span class="line">        t.seth(-<span class="number">80</span>)</span><br><span class="line">        t.fd(<span class="number">150</span>)</span><br><span class="line">        t.seth(<span class="number">210</span>)</span><br><span class="line">        t.fd(<span class="number">150</span>)</span><br><span class="line">        t.left(<span class="number">90</span>)</span><br><span class="line">        t.fd(<span class="number">100</span>)</span><br><span class="line">        t.right(<span class="number">95</span>)</span><br><span class="line">        t.fd(<span class="number">100</span>)</span><br><span class="line">        t.left(<span class="number">110</span>)</span><br><span class="line">        t.fd(<span class="number">70</span>)</span><br><span class="line">        t.right(<span class="number">110</span>)</span><br><span class="line">        t.fd(<span class="number">80</span>)</span><br><span class="line">        t.left(<span class="number">110</span>)</span><br><span class="line">        t.fd(<span class="number">30</span>)</span><br><span class="line">        t.right(<span class="number">110</span>)</span><br><span class="line">        t.fd(<span class="number">32</span>)</span><br><span class="line">        t.right(<span class="number">106</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">25</span>)</span><br><span class="line">        t.right(<span class="number">15</span>)</span><br><span class="line">        t.circle(-<span class="number">300</span>, <span class="number">2</span>)</span><br><span class="line">        <span class="comment">############## </span></span><br><span class="line">        t.seth(<span class="number">30</span>)</span><br><span class="line">        t.fd(<span class="number">40</span>)</span><br><span class="line">        t.left(<span class="number">100</span>)</span><br><span class="line">        t.fd(<span class="number">70</span>)</span><br><span class="line">        t.right(<span class="number">100</span>)</span><br><span class="line">        t.fd(<span class="number">80</span>)</span><br><span class="line">        t.left(<span class="number">100</span>)</span><br><span class="line">        t.fd(<span class="number">46</span>)</span><br><span class="line">        t.seth(<span class="number">66</span>)</span><br><span class="line">        t.circle(<span class="number">200</span>, <span class="number">38</span>)</span><br><span class="line">        t.right(<span class="number">10</span>)</span><br><span class="line">        t.fd(<span class="number">10</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#923E24&#x27;</span>)</span><br><span class="line">        self.meme(<span class="number">126.82</span>, -<span class="number">156.84</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.seth(<span class="number">30</span>)</span><br><span class="line">        t.fd(<span class="number">40</span>)</span><br><span class="line">        t.left(<span class="number">100</span>)</span><br><span class="line">        t.fd(<span class="number">40</span>)</span><br><span class="line">        t.pencolor(<span class="string">&#x27;#923e24&#x27;</span>)</span><br><span class="line">        t.seth(-<span class="number">30</span>)</span><br><span class="line">        t.fd(<span class="number">30</span>)</span><br><span class="line">        t.left(<span class="number">140</span>)</span><br><span class="line">        t.fd(<span class="number">20</span>)</span><br><span class="line">        t.right(<span class="number">150</span>)</span><br><span class="line">        t.fd(<span class="number">20</span>)</span><br><span class="line">        t.left(<span class="number">150</span>)</span><br><span class="line">        t.fd(<span class="number">20</span>)</span><br><span class="line">        t.right(<span class="number">150</span>)</span><br><span class="line">        t.fd(<span class="number">20</span>)</span><br><span class="line">        t.left(<span class="number">130</span>)</span><br><span class="line">        t.fd(<span class="number">18</span>)</span><br><span class="line">        t.pencolor(<span class="string">&#x27;#000000&#x27;</span>)</span><br><span class="line">        t.seth(-<span class="number">45</span>)</span><br><span class="line">        t.fd(<span class="number">67</span>)</span><br><span class="line">        t.right(<span class="number">110</span>)</span><br><span class="line">        t.fd(<span class="number">80</span>)</span><br><span class="line">        t.left(<span class="number">110</span>)</span><br><span class="line">        t.fd(<span class="number">30</span>)</span><br><span class="line">        t.right(<span class="number">110</span>)</span><br><span class="line">        t.fd(<span class="number">32</span>)</span><br><span class="line">        t.right(<span class="number">106</span>)</span><br><span class="line">        t.circle(<span class="number">100</span>, <span class="number">25</span>)</span><br><span class="line">        t.right(<span class="number">15</span>)</span><br><span class="line">        t.circle(-<span class="number">300</span>, <span class="number">2</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        self.fucksisu9(-<span class="number">134.07</span>, <span class="number">147.81</span>)</span><br><span class="line">        self.fucksisu(-<span class="number">5</span>, <span class="number">25</span>)</span><br><span class="line">        self.fucksisu4(-<span class="number">126</span>, <span class="number">32</span>)</span><br><span class="line">        self.fucksisu5(<span class="number">107</span>, <span class="number">63</span>)</span><br><span class="line">        self.fucksisu6(-<span class="number">250</span>, <span class="number">100</span>)</span><br><span class="line">        self.fucksisu7(<span class="number">140</span>, <span class="number">270</span>)</span><br><span class="line">        self.ihatesisu1(-<span class="number">85</span>, <span class="number">90</span>)</span><br><span class="line">        self.ihatesisu2(<span class="number">50</span>, <span class="number">110</span>)</span><br><span class="line">        t.hideturtle()</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fucksisu9</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        self.meme(x, y)</span><br><span class="line">        t = self.t</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#CD0000&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.seth(<span class="number">200</span>)</span><br><span class="line">        t.circle(<span class="number">400</span>, <span class="number">7</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(-<span class="number">400</span>, <span class="number">30</span>)</span><br><span class="line">        t.circle(<span class="number">30</span>, <span class="number">60</span>)</span><br><span class="line">        t.fd(<span class="number">50</span>)</span><br><span class="line">        t.circle(<span class="number">30</span>, <span class="number">45</span>)</span><br><span class="line">        t.fd(<span class="number">60</span>)</span><br><span class="line">        t.left(<span class="number">5</span>)</span><br><span class="line">        t.circle(<span class="number">30</span>, <span class="number">70</span>)</span><br><span class="line">        t.right(<span class="number">20</span>)</span><br><span class="line">        t.circle(<span class="number">200</span>, <span class="number">70</span>)</span><br><span class="line">        t.circle(<span class="number">30</span>, <span class="number">60</span>)</span><br><span class="line">        t.fd(<span class="number">70</span>) </span><br><span class="line">        t.right(<span class="number">35</span>)</span><br><span class="line">        t.fd(<span class="number">50</span>)</span><br><span class="line">        t.circle(<span class="number">8</span>, <span class="number">100</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        self.meme(-<span class="number">168.47</span>, <span class="number">185.52</span>)</span><br><span class="line">        t.seth(<span class="number">36</span>)</span><br><span class="line">        t.circle(-<span class="number">270</span>, <span class="number">54</span>)</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(<span class="number">270</span>, <span class="number">27</span>)</span><br><span class="line">        t.circle(-<span class="number">80</span>, <span class="number">98</span>)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#444444&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.left(<span class="number">180</span>)</span><br><span class="line">        t.circle(<span class="number">80</span>, <span class="number">197</span>)</span><br><span class="line">        t.left(<span class="number">58</span>)</span><br><span class="line">        t.circle(<span class="number">200</span>, <span class="number">45</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        self.meme(-<span class="number">58</span>, <span class="number">270</span>)</span><br><span class="line">        t.pencolor(<span class="string">&#x27;#228B22&#x27;</span>)</span><br><span class="line">        t.dot(<span class="number">35</span>)</span><br><span class="line">        self.meme(-<span class="number">30</span>, <span class="number">280</span>)</span><br><span class="line">        t.fillcolor(<span class="string">&#x27;#228B22&#x27;</span>)</span><br><span class="line">        t.begin_fill()</span><br><span class="line">        t.seth(<span class="number">100</span>)</span><br><span class="line">        t.circle(<span class="number">30</span>, <span class="number">180</span>)</span><br><span class="line">        t.seth(<span class="number">190</span>)</span><br><span class="line">        t.fd(<span class="number">15</span>)</span><br><span class="line">        t.seth(<span class="number">100</span>)</span><br><span class="line">        t.circle(-<span class="number">45</span>, <span class="number">180</span>)</span><br><span class="line">        t.right(<span class="number">90</span>)</span><br><span class="line">        t.fd(<span class="number">15</span>)</span><br><span class="line">        t.end_fill()</span><br><span class="line">        t.pencolor(<span class="string">&#x27;#000000&#x27;</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">start</span>(<span class="params">self</span>):</span><br><span class="line">        self.fucksisu8()</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    turtle.screensize(<span class="number">800</span>, <span class="number">600</span>)</span><br><span class="line">    turtle.title(<span class="string">&#x27;皮卡丘&#x27;</span>)</span><br><span class="line">    cartoon = Cartoon()</span><br><span class="line">    cartoon.start()</span><br><span class="line">    turtle.mainloop()</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h3 id="画哆啦A梦"><a href="#画哆啦A梦" class="headerlink" title="画哆啦A梦"></a>画哆啦A梦</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"><span class="keyword">from</span> turtle <span class="keyword">import</span> *</span><br><span class="line">turtle.title(<span class="string">&quot;哆啦A梦&quot;</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fucksisu1</span>(<span class="params">x, y</span>):</span><br><span class="line">    penup()</span><br><span class="line">    goto(x, y)</span><br><span class="line">    pendown()</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fucksisu2</span>():</span><br><span class="line">    fillcolor(<span class="string">&quot;#ffffff&quot;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    tracer(<span class="literal">False</span>)</span><br><span class="line">    a = <span class="number">2.5</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">120</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="number">0</span> &lt;= i &lt; <span class="number">30</span> <span class="keyword">or</span> <span class="number">60</span> &lt;= i &lt; <span class="number">90</span>:</span><br><span class="line">            a -= <span class="number">0.05</span></span><br><span class="line">            lt(<span class="number">3</span>)</span><br><span class="line">            fd(a)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            a += <span class="number">0.05</span></span><br><span class="line">            lt(<span class="number">3</span>)</span><br><span class="line">            fd(a)</span><br><span class="line">    tracer(<span class="literal">True</span>)</span><br><span class="line">    end_fill()</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fucksisu3</span>():</span><br><span class="line">    fucksisu1(-<span class="number">32</span>, <span class="number">135</span>)</span><br><span class="line">    seth(<span class="number">165</span>)</span><br><span class="line">    fd(<span class="number">60</span>)</span><br><span class="line">    fucksisu1(-<span class="number">32</span>, <span class="number">125</span>)</span><br><span class="line">    seth(<span class="number">180</span>)</span><br><span class="line">    fd(<span class="number">60</span>)</span><br><span class="line">    fucksisu1(-<span class="number">32</span>, <span class="number">115</span>)</span><br><span class="line">    seth(<span class="number">193</span>)</span><br><span class="line">    fd(<span class="number">60</span>)</span><br><span class="line">    fucksisu1(<span class="number">37</span>, <span class="number">135</span>)</span><br><span class="line">    seth(<span class="number">15</span>)</span><br><span class="line">    fd(<span class="number">60</span>)</span><br><span class="line">    fucksisu1(<span class="number">37</span>, <span class="number">125</span>)</span><br><span class="line">    seth(<span class="number">0</span>)</span><br><span class="line">    fd(<span class="number">60</span>)</span><br><span class="line">    fucksisu1(<span class="number">37</span>, <span class="number">115</span>)</span><br><span class="line">    seth(-<span class="number">13</span>)</span><br><span class="line">    fd(<span class="number">60</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fucksisu4</span>():</span><br><span class="line">    fucksisu1(<span class="number">5</span>, <span class="number">148</span>)</span><br><span class="line">    seth(<span class="number">270</span>)</span><br><span class="line">    fd(<span class="number">100</span>)</span><br><span class="line">    seth(<span class="number">0</span>)</span><br><span class="line">    circle(<span class="number">120</span>, <span class="number">50</span>)</span><br><span class="line">    seth(<span class="number">230</span>)</span><br><span class="line">    circle(-<span class="number">120</span>, <span class="number">100</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fucksisu5</span>():</span><br><span class="line">    fillcolor(<span class="string">&#x27;#e70010&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    seth(<span class="number">0</span>)</span><br><span class="line">    fd(<span class="number">200</span>)</span><br><span class="line">    circle(-<span class="number">5</span>, <span class="number">90</span>)</span><br><span class="line">    fd(<span class="number">10</span>)</span><br><span class="line">    circle(-<span class="number">5</span>, <span class="number">90</span>)</span><br><span class="line">    fd(<span class="number">207</span>)</span><br><span class="line">    circle(-<span class="number">5</span>, <span class="number">90</span>)</span><br><span class="line">    fd(<span class="number">10</span>)</span><br><span class="line">    circle(-<span class="number">5</span>, <span class="number">90</span>)</span><br><span class="line">    end_fill()</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fucksisu6</span>():</span><br><span class="line">    fucksisu1(-<span class="number">10</span>, <span class="number">158</span>)</span><br><span class="line">    seth(<span class="number">315</span>)</span><br><span class="line">    fillcolor(<span class="string">&#x27;#e70010&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    circle(<span class="number">20</span>)</span><br><span class="line">    end_fill()</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">black_fucksisu2</span>():</span><br><span class="line">    seth(<span class="number">0</span>)</span><br><span class="line">    fucksisu1(-<span class="number">20</span>, <span class="number">195</span>)</span><br><span class="line">    fillcolor(<span class="string">&#x27;#000000&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    circle(<span class="number">13</span>)</span><br><span class="line">    end_fill()</span><br><span class="line">    pensize(<span class="number">6</span>)</span><br><span class="line">    fucksisu1(<span class="number">20</span>, <span class="number">205</span>)</span><br><span class="line">    seth(<span class="number">75</span>)</span><br><span class="line">    circle(-<span class="number">10</span>, <span class="number">150</span>)</span><br><span class="line">    pensize(<span class="number">3</span>)</span><br><span class="line">    fucksisu1(-<span class="number">17</span>, <span class="number">200</span>)</span><br><span class="line">    seth(<span class="number">0</span>)</span><br><span class="line">    fillcolor(<span class="string">&#x27;#ffffff&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    circle(<span class="number">5</span>)</span><br><span class="line">    end_fill()</span><br><span class="line">    fucksisu1(<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">face</span>():</span><br><span class="line">    fd(<span class="number">183</span>)</span><br><span class="line">    lt(<span class="number">45</span>)</span><br><span class="line">    fillcolor(<span class="string">&#x27;#ffffff&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    circle(<span class="number">120</span>, <span class="number">100</span>)</span><br><span class="line">    seth(<span class="number">180</span>)</span><br><span class="line">    fd(<span class="number">121</span>)</span><br><span class="line">    pendown()</span><br><span class="line">    seth(<span class="number">215</span>)</span><br><span class="line">    circle(<span class="number">120</span>, <span class="number">100</span>)</span><br><span class="line">    end_fill()</span><br><span class="line">    fucksisu1(<span class="number">63.56</span>, <span class="number">218.24</span>)</span><br><span class="line">    seth(<span class="number">90</span>)</span><br><span class="line">    fucksisu2()</span><br><span class="line">    seth(<span class="number">180</span>)</span><br><span class="line">    penup()</span><br><span class="line">    fd(<span class="number">60</span>)</span><br><span class="line">    pendown()</span><br><span class="line">    seth(<span class="number">90</span>)</span><br><span class="line">    fucksisu2()</span><br><span class="line">    penup()</span><br><span class="line">    seth(<span class="number">180</span>)</span><br><span class="line">    fd(<span class="number">64</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fucksisu7</span>():</span><br><span class="line">    penup()</span><br><span class="line">    circle(<span class="number">150</span>, <span class="number">40</span>)</span><br><span class="line">    pendown()</span><br><span class="line">    fillcolor(<span class="string">&#x27;#00a0de&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    circle(<span class="number">150</span>, <span class="number">280</span>)</span><br><span class="line">    end_fill()</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fucksisu8</span>():</span><br><span class="line">    fucksisu7()</span><br><span class="line">    fucksisu5()</span><br><span class="line">    face()</span><br><span class="line">    fucksisu6()</span><br><span class="line">    fucksisu4()</span><br><span class="line">    fucksisu3()</span><br><span class="line">    fucksisu1(<span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">    seth(<span class="number">0</span>)</span><br><span class="line">    penup()</span><br><span class="line">    circle(<span class="number">150</span>, <span class="number">50</span>)</span><br><span class="line">    pendown()</span><br><span class="line">    seth(<span class="number">30</span>)</span><br><span class="line">    fd(<span class="number">40</span>)</span><br><span class="line">    seth(<span class="number">70</span>)</span><br><span class="line">    circle(-<span class="number">30</span>, <span class="number">270</span>)</span><br><span class="line">    fillcolor(<span class="string">&#x27;#00a0de&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    seth(<span class="number">230</span>)</span><br><span class="line">    fd(<span class="number">80</span>)</span><br><span class="line">    seth(<span class="number">90</span>)</span><br><span class="line">    circle(<span class="number">1000</span>, <span class="number">1</span>)</span><br><span class="line">    seth(-<span class="number">89</span>)</span><br><span class="line">    circle(-<span class="number">1000</span>, <span class="number">10</span>)</span><br><span class="line">    seth(<span class="number">180</span>)</span><br><span class="line">    fd(<span class="number">70</span>)</span><br><span class="line">    seth(<span class="number">90</span>)</span><br><span class="line">    circle(<span class="number">30</span>, <span class="number">180</span>)</span><br><span class="line">    seth(<span class="number">180</span>)</span><br><span class="line">    fd(<span class="number">70</span>)</span><br><span class="line">    seth(<span class="number">100</span>)</span><br><span class="line">    circle(-<span class="number">1000</span>, <span class="number">9</span>)</span><br><span class="line">    seth(-<span class="number">86</span>)</span><br><span class="line">    circle(<span class="number">1000</span>, <span class="number">2</span>)</span><br><span class="line">    seth(<span class="number">230</span>)</span><br><span class="line">    fd(<span class="number">40</span>)</span><br><span class="line">    circle(-<span class="number">30</span>, <span class="number">230</span>)</span><br><span class="line">    seth(<span class="number">45</span>)</span><br><span class="line">    fd(<span class="number">81</span>)</span><br><span class="line">    seth(<span class="number">0</span>)</span><br><span class="line">    fd(<span class="number">203</span>)</span><br><span class="line">    circle(<span class="number">5</span>, <span class="number">90</span>)</span><br><span class="line">    fd(<span class="number">10</span>)</span><br><span class="line">    circle(<span class="number">5</span>, <span class="number">90</span>)</span><br><span class="line">    fd(<span class="number">7</span>)</span><br><span class="line">    seth(<span class="number">40</span>)</span><br><span class="line">    circle(<span class="number">150</span>, <span class="number">10</span>)</span><br><span class="line">    seth(<span class="number">30</span>)</span><br><span class="line">    fd(<span class="number">40</span>)</span><br><span class="line">    end_fill()</span><br><span class="line">    seth(<span class="number">70</span>)</span><br><span class="line">    fillcolor(<span class="string">&#x27;#ffffff&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    circle(-<span class="number">30</span>)</span><br><span class="line">    end_fill()</span><br><span class="line">    fucksisu1(<span class="number">103.74</span>, -<span class="number">182.59</span>)</span><br><span class="line">    seth(<span class="number">0</span>)</span><br><span class="line">    fillcolor(<span class="string">&#x27;#ffffff&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    fd(<span class="number">15</span>)</span><br><span class="line">    circle(-<span class="number">15</span>, <span class="number">180</span>)</span><br><span class="line">    fd(<span class="number">90</span>)</span><br><span class="line">    circle(-<span class="number">15</span>, <span class="number">180</span>)</span><br><span class="line">    fd(<span class="number">10</span>)</span><br><span class="line">    end_fill()</span><br><span class="line">    fucksisu1(-<span class="number">96.26</span>, -<span class="number">182.59</span>)</span><br><span class="line">    seth(<span class="number">180</span>)</span><br><span class="line">    fillcolor(<span class="string">&#x27;#ffffff&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    fd(<span class="number">15</span>)</span><br><span class="line">    circle(<span class="number">15</span>, <span class="number">180</span>)</span><br><span class="line">    fd(<span class="number">90</span>)</span><br><span class="line">    circle(<span class="number">15</span>, <span class="number">180</span>)</span><br><span class="line">    fd(<span class="number">10</span>)</span><br><span class="line">    end_fill()</span><br><span class="line">    fucksisu1(-<span class="number">133.97</span>, -<span class="number">91.81</span>)</span><br><span class="line">    seth(<span class="number">50</span>)</span><br><span class="line">    fillcolor(<span class="string">&#x27;#ffffff&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    circle(<span class="number">30</span>)</span><br><span class="line">    end_fill()</span><br><span class="line">    fucksisu1(-<span class="number">103.42</span>, <span class="number">15.09</span>)</span><br><span class="line">    seth(<span class="number">0</span>)</span><br><span class="line">    fd(<span class="number">38</span>)</span><br><span class="line">    seth(<span class="number">230</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    circle(<span class="number">90</span>, <span class="number">260</span>)</span><br><span class="line">    end_fill()</span><br><span class="line">    fucksisu1(<span class="number">5</span>, -<span class="number">40</span>)</span><br><span class="line">    seth(<span class="number">0</span>)</span><br><span class="line">    fd(<span class="number">70</span>)</span><br><span class="line">    seth(-<span class="number">90</span>)</span><br><span class="line">    circle(-<span class="number">70</span>, <span class="number">180</span>)</span><br><span class="line">    seth(<span class="number">0</span>)</span><br><span class="line">    fd(<span class="number">70</span>)</span><br><span class="line">    fucksisu1(-<span class="number">103.42</span>, <span class="number">15.09</span>)</span><br><span class="line">    fd(<span class="number">90</span>)</span><br><span class="line">    seth(<span class="number">70</span>)</span><br><span class="line">    fillcolor(<span class="string">&#x27;#ffd200&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    circle(-<span class="number">20</span>)</span><br><span class="line">    end_fill()</span><br><span class="line">    seth(<span class="number">170</span>)</span><br><span class="line">    fillcolor(<span class="string">&#x27;#ffd200&#x27;</span>)</span><br><span class="line">    begin_fill()</span><br><span class="line">    circle(-<span class="number">2</span>, <span class="number">180</span>)</span><br><span class="line">    seth(<span class="number">10</span>)</span><br><span class="line">    circle(-<span class="number">100</span>, <span class="number">22</span>)</span><br><span class="line">    circle(-<span class="number">2</span>, <span class="number">180</span>)</span><br><span class="line">    seth(<span class="number">180</span> - <span class="number">10</span>)</span><br><span class="line">    circle(<span class="number">100</span>, <span class="number">22</span>)</span><br><span class="line">    end_fill()</span><br><span class="line">    goto(-<span class="number">13.42</span>, <span class="number">15.09</span>)</span><br><span class="line">    seth(<span class="number">250</span>)</span><br><span class="line">    circle(<span class="number">20</span>, <span class="number">110</span>)</span><br><span class="line">    seth(<span class="number">90</span>)</span><br><span class="line">    fd(<span class="number">15</span>)</span><br><span class="line">    dot(<span class="number">10</span>)</span><br><span class="line">    fucksisu1(<span class="number">0</span>, -<span class="number">150</span>)</span><br><span class="line">    black_fucksisu2()</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    screensize(<span class="number">800</span>, <span class="number">600</span>, <span class="string">&quot;#f0f0f0&quot;</span>)</span><br><span class="line">    pensize(<span class="number">3</span>)</span><br><span class="line">    speed(<span class="number">9</span>)</span><br><span class="line">    fucksisu8()</span><br><span class="line">    mainloop()</span><br></pre></td></tr></table></figure>
+<h3 id="钢铁侠"><a href="#钢铁侠" class="headerlink" title="钢铁侠"></a>钢铁侠</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line">fucksisu1 = [[(-<span class="number">40</span>, <span class="number">120</span>), (-<span class="number">70</span>, <span class="number">260</span>), (-<span class="number">130</span>, <span class="number">230</span>), (-<span class="number">170</span>, <span class="number">200</span>), (-<span class="number">170</span>, <span class="number">100</span>), (-<span class="number">160</span>, <span class="number">40</span>), (-<span class="number">170</span>, <span class="number">10</span>), (-<span class="number">150</span>, -<span class="number">10</span>), (-<span class="number">140</span>, <span class="number">10</span>),</span><br><span class="line">           (-<span class="number">40</span>, -<span class="number">20</span>), (<span class="number">0</span>, -<span class="number">20</span>)],</span><br><span class="line">          [(<span class="number">0</span>, -<span class="number">20</span>), (<span class="number">40</span>, -<span class="number">20</span>), (<span class="number">140</span>, <span class="number">10</span>), (<span class="number">150</span>, -<span class="number">10</span>), (<span class="number">170</span>, <span class="number">10</span>), (<span class="number">160</span>, <span class="number">40</span>), (<span class="number">170</span>, <span class="number">100</span>), (<span class="number">170</span>, <span class="number">200</span>), (<span class="number">130</span>, <span class="number">230</span>), (<span class="number">70</span>, <span class="number">260</span>),</span><br><span class="line">           (<span class="number">40</span>, <span class="number">120</span>), (<span class="number">0</span>, <span class="number">120</span>)]]</span><br><span class="line">fucksisu2 = [[(-<span class="number">40</span>, -<span class="number">30</span>), (-<span class="number">50</span>, -<span class="number">40</span>), (-<span class="number">100</span>, -<span class="number">46</span>), (-<span class="number">130</span>, -<span class="number">40</span>), (-<span class="number">176</span>, <span class="number">0</span>), (-<span class="number">186</span>, -<span class="number">30</span>), (-<span class="number">186</span>, -<span class="number">40</span>), (-<span class="number">120</span>, -<span class="number">170</span>), (-<span class="number">110</span>, -<span class="number">210</span>),</span><br><span class="line">           (-<span class="number">80</span>, -<span class="number">230</span>), (-<span class="number">64</span>, -<span class="number">210</span>), (<span class="number">0</span>, -<span class="number">210</span>)],</span><br><span class="line">          [(<span class="number">0</span>, -<span class="number">210</span>), (<span class="number">64</span>, -<span class="number">210</span>), (<span class="number">80</span>, -<span class="number">230</span>), (<span class="number">110</span>, -<span class="number">210</span>), (<span class="number">120</span>, -<span class="number">170</span>), (<span class="number">186</span>, -<span class="number">40</span>), (<span class="number">186</span>, -<span class="number">30</span>), (<span class="number">176</span>, <span class="number">0</span>), (<span class="number">130</span>, -<span class="number">40</span>),</span><br><span class="line">           (<span class="number">100</span>, -<span class="number">46</span>), (<span class="number">50</span>, -<span class="number">40</span>), (<span class="number">40</span>, -<span class="number">30</span>), (<span class="number">0</span>, -<span class="number">30</span>)]]</span><br><span class="line">fucksisu3 = [[(-<span class="number">60</span>, -<span class="number">220</span>), (-<span class="number">80</span>, -<span class="number">240</span>), (-<span class="number">110</span>, -<span class="number">220</span>), (-<span class="number">120</span>, -<span class="number">250</span>), (-<span class="number">90</span>, -<span class="number">280</span>), (-<span class="number">60</span>, -<span class="number">260</span>), (-<span class="number">30</span>, -<span class="number">260</span>), (-<span class="number">20</span>, -<span class="number">250</span>),</span><br><span class="line">           (<span class="number">0</span>, -<span class="number">250</span>)],</span><br><span class="line">          [(<span class="number">0</span>, -<span class="number">250</span>), (<span class="number">20</span>, -<span class="number">250</span>), (<span class="number">30</span>, -<span class="number">260</span>), (<span class="number">60</span>, -<span class="number">260</span>), (<span class="number">90</span>, -<span class="number">280</span>), (<span class="number">120</span>, -<span class="number">250</span>), (<span class="number">110</span>, -<span class="number">220</span>), (<span class="number">80</span>, -<span class="number">240</span>), (<span class="number">60</span>, -<span class="number">220</span>),</span><br><span class="line">           (<span class="number">0</span>, -<span class="number">220</span>)]]</span><br><span class="line">turtle.hideturtle()</span><br><span class="line">turtle.bgcolor(<span class="string">&#x27;#ba161e&#x27;</span>)  <span class="comment"># Dark Red</span></span><br><span class="line">turtle.setup(<span class="number">500</span>, <span class="number">600</span>)</span><br><span class="line">turtle.title(<span class="string">&quot;钢铁侠&quot;</span>)</span><br><span class="line">fucksisu1Goto = (<span class="number">0</span>, <span class="number">120</span>)</span><br><span class="line">fucksisu2Goto = (<span class="number">0</span>, -<span class="number">30</span>)</span><br><span class="line">fucksisu3Goto = (<span class="number">0</span>, -<span class="number">220</span>)</span><br><span class="line">turtle.speed(<span class="number">2</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">logo</span>(<span class="params">a, b</span>):</span><br><span class="line">    turtle.penup()</span><br><span class="line">    turtle.goto(b)</span><br><span class="line">    turtle.pendown()</span><br><span class="line">    turtle.color(<span class="string">&#x27;#fab104&#x27;</span>)  <span class="comment"># Light Yellow</span></span><br><span class="line">    turtle.begin_fill()</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(a[<span class="number">0</span>])):</span><br><span class="line">        x, y = a[<span class="number">0</span>][i]</span><br><span class="line">        turtle.goto(x, y)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(a[<span class="number">1</span>])):</span><br><span class="line">        x, y = a[<span class="number">1</span>][i]</span><br><span class="line">        turtle.goto(x, y)</span><br><span class="line">    turtle.end_fill()</span><br><span class="line">logo(fucksisu1, fucksisu1Goto)</span><br><span class="line">logo(fucksisu2, fucksisu2Goto)</span><br><span class="line">logo(fucksisu3, fucksisu3Goto)</span><br><span class="line">turtle.hideturtle()</span><br><span class="line">turtle.done()</span><br></pre></td></tr></table></figure>
+<h3 id="蝙蝠侠"><a href="#蝙蝠侠" class="headerlink" title="蝙蝠侠"></a>蝙蝠侠</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line">turtle.title(<span class="string">&quot;蝙蝠侠&quot;</span>)</span><br><span class="line">fucksisu1 = turtle.Turtle()</span><br><span class="line">fucksisu1.speed(<span class="number">500</span>)</span><br><span class="line">window = turtle.Screen()</span><br><span class="line">window.bgcolor(<span class="string">&quot;#000000&quot;</span>)</span><br><span class="line">fucksisu1.color(<span class="string">&quot;yellow&quot;</span>)</span><br><span class="line">fucksisu2 = <span class="number">20</span></span><br><span class="line">fucksisu1.left(<span class="number">90</span>)</span><br><span class="line">fucksisu1.penup()</span><br><span class="line">fucksisu1.goto(-<span class="number">7</span> * fucksisu2, <span class="number">0</span>)</span><br><span class="line">fucksisu1.pendown()</span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">range</span>(-<span class="number">7</span> * fucksisu2, -<span class="number">3</span> * fucksisu2, <span class="number">1</span>):</span><br><span class="line">    x = a / fucksisu2</span><br><span class="line">    rel = math.fabs(x)</span><br><span class="line">    y = <span class="number">1.5</span> * math.sqrt((-math.fabs(rel - <span class="number">1</span>)) * math.fabs(<span class="number">3</span> - rel) / ((rel - <span class="number">1</span>) * (<span class="number">3</span> - rel))) * (</span><br><span class="line">                <span class="number">1</span> + math.fabs(rel - <span class="number">3</span>) / (rel - <span class="number">3</span>)) * math.sqrt(<span class="number">1</span> - (x / <span class="number">7</span>) ** <span class="number">2</span>) + (</span><br><span class="line">                    <span class="number">4.5</span> + <span class="number">0.75</span> * (math.fabs(x - <span class="number">0.5</span>) + math.fabs(x + <span class="number">0.5</span>)) - <span class="number">2.75</span> * (</span><br><span class="line">                        math.fabs(x - <span class="number">0.75</span>) + math.fabs(x + <span class="number">0.75</span>))) * (<span class="number">1</span> + math.fabs(<span class="number">1</span> - rel) / (<span class="number">1</span> - rel))</span><br><span class="line">    fucksisu1.goto(a, y * fucksisu2)</span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">range</span>(-<span class="number">3</span> * fucksisu2, -<span class="number">1</span> * fucksisu2 - <span class="number">1</span>, <span class="number">1</span>):</span><br><span class="line">    x = a / fucksisu2</span><br><span class="line">    rel = math.fabs(x)</span><br><span class="line">    y = (<span class="number">2.71052</span> + <span class="number">1.5</span> - <span class="number">0.5</span> * rel - <span class="number">1.35526</span> * math.sqrt(<span class="number">4</span> - (rel - <span class="number">1</span>) ** <span class="number">2</span>)) * math.sqrt(</span><br><span class="line">        math.fabs(rel - <span class="number">1</span>) / (rel - <span class="number">1</span>))</span><br><span class="line">    fucksisu1.goto(a, y * fucksisu2)</span><br><span class="line">fucksisu1.goto(-<span class="number">1</span> * fucksisu2, <span class="number">3</span> * fucksisu2)</span><br><span class="line">fucksisu1.goto(<span class="built_in">int</span>(-<span class="number">0.5</span> * fucksisu2), <span class="built_in">int</span>(<span class="number">2.2</span> * fucksisu2))</span><br><span class="line">fucksisu1.goto(<span class="built_in">int</span>(<span class="number">0.5</span> * fucksisu2), <span class="built_in">int</span>(<span class="number">2.2</span> * fucksisu2))</span><br><span class="line">fucksisu1.goto(<span class="number">1</span> * fucksisu2, <span class="number">3</span> * fucksisu2)</span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span> * fucksisu2 + <span class="number">1</span>, <span class="number">3</span> * fucksisu2 + <span class="number">1</span>, <span class="number">1</span>):</span><br><span class="line">    x = a / fucksisu2</span><br><span class="line">    rel = math.fabs(x)</span><br><span class="line">    y = (<span class="number">2.71052</span> + <span class="number">1.5</span> - <span class="number">0.5</span> * rel - <span class="number">1.35526</span> * math.sqrt(<span class="number">4</span> - (rel - <span class="number">1</span>) ** <span class="number">2</span>)) * math.sqrt(</span><br><span class="line">        math.fabs(rel - <span class="number">1</span>) / (rel - <span class="number">1</span>))</span><br><span class="line">    fucksisu1.goto(a, y * fucksisu2)</span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span> * fucksisu2 + <span class="number">1</span>, <span class="number">7</span> * fucksisu2 + <span class="number">1</span>, <span class="number">1</span>):</span><br><span class="line">    x = a / fucksisu2</span><br><span class="line">    rel = math.fabs(x)</span><br><span class="line">    y = <span class="number">1.5</span> * math.sqrt((-math.fabs(rel - <span class="number">1</span>)) * math.fabs(<span class="number">3</span> - rel) / ((rel - <span class="number">1</span>) * (<span class="number">3</span> - rel))) * (</span><br><span class="line">                <span class="number">1</span> + math.fabs(rel - <span class="number">3</span>) / (rel - <span class="number">3</span>)) * math.sqrt(<span class="number">1</span> - (x / <span class="number">7</span>) ** <span class="number">2</span>) + (</span><br><span class="line">                    <span class="number">4.5</span> + <span class="number">0.75</span> * (math.fabs(x - <span class="number">0.5</span>) + math.fabs(x + <span class="number">0.5</span>)) - <span class="number">2.75</span> * (</span><br><span class="line">                        math.fabs(x - <span class="number">0.75</span>) + math.fabs(x + <span class="number">0.75</span>))) * (<span class="number">1</span> + math.fabs(<span class="number">1</span> - rel) / (<span class="number">1</span> - rel))</span><br><span class="line">    fucksisu1.goto(a, y * fucksisu2)</span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">7</span> * fucksisu2, <span class="number">4</span> * fucksisu2, -<span class="number">1</span>):</span><br><span class="line">    x = a / fucksisu2</span><br><span class="line">    rel = math.fabs(x)</span><br><span class="line">    y = (-<span class="number">3</span>) * math.sqrt(<span class="number">1</span> - (x / <span class="number">7</span>) ** <span class="number">2</span>) * math.sqrt(math.fabs(rel - <span class="number">4</span>) / (rel - <span class="number">4</span>))</span><br><span class="line">    fucksisu1.goto(a, y * fucksisu2)</span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span> * fucksisu2, -<span class="number">4</span> * fucksisu2, -<span class="number">1</span>):</span><br><span class="line">    x = a / fucksisu2</span><br><span class="line">    rel = math.fabs(x)</span><br><span class="line">    y = math.fabs(x / <span class="number">2</span>) - <span class="number">0.0913722</span> * x ** <span class="number">2</span> - <span class="number">3</span> + math.sqrt(<span class="number">1</span> - (math.fabs(rel - <span class="number">2</span>) - <span class="number">1</span>) ** <span class="number">2</span>)</span><br><span class="line">    fucksisu1.goto(a, y * fucksisu2)</span><br><span class="line"><span class="keyword">for</span> a <span class="keyword">in</span> <span class="built_in">range</span>(-<span class="number">4</span> * fucksisu2 - <span class="number">1</span>, -<span class="number">7</span> * fucksisu2 - <span class="number">1</span>, -<span class="number">1</span>):</span><br><span class="line">    x = a / fucksisu2</span><br><span class="line">    rel = math.fabs(x)</span><br><span class="line">    y = (-<span class="number">3</span>) * math.sqrt(<span class="number">1</span> - (x / <span class="number">7</span>) ** <span class="number">2</span>) * math.sqrt(math.fabs(rel - <span class="number">4</span>) / (rel - <span class="number">4</span>))</span><br><span class="line">    fucksisu1.goto(a, y * fucksisu2)</span><br><span class="line">fucksisu1.penup()</span><br><span class="line">fucksisu1.goto(<span class="number">300</span>, <span class="number">300</span>)</span><br><span class="line">turtle.done()</span><br></pre></td></tr></table></figure>
 
   
   
@@ -1435,7 +540,7 @@ turtle.done()</code></pre>
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -1460,6 +565,10 @@ turtle.done()</code></pre>
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Python%E7%94%BB%E7%94%BB/>http://blog.zhuangzhihao.top/Python%E7%94%BB%E7%94%BB/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -1475,13 +584,6 @@ turtle.done()</code></pre>
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Python/">Python</a>
-    </a>
-  </div>
-
 
         
       
@@ -1498,77 +600,6 @@ turtle.done()</code></pre>
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Python%E7%94%BB%E7%94%BB/&title=使用 Python 程序画画 - Bezhuang's Blog&summary=
-turtle 库是 Python 的标准库之一，属于入门级的图形绘制函数库，其原理是让一只海龟在画布上游走，走过的轨迹形成了绘制的图形，海龟由程序控制，可以自由改变颜色、方向宽度等。我们也可以依赖这个库完成一些简单的画画，以下为一些经典图像的代码实现笔记，可供参考。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Python%E7%94%BB%E7%94%BB/&title=使用 Python 程序画画 - Bezhuang's Blog&summary=
-turtle 库是 Python 的标准库之一，属于入门级的图形绘制函数库，其原理是让一只海龟在画布上游走，走过的轨迹形成了绘制的图形，海龟由程序控制，可以自由改变颜色、方向宽度等。我们也可以依赖这个库完成一些简单的画画，以下为一些经典图像的代码实现笔记，可供参考。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Python%E7%94%BB%E7%94%BB/&title=使用 Python 程序画画 - Bezhuang's Blog&summary=
-turtle 库是 Python 的标准库之一，属于入门级的图形绘制函数库，其原理是让一只海龟在画布上游走，走过的轨迹形成了绘制的图形，海龟由程序控制，可以自由改变颜色、方向宽度等。我们也可以依赖这个库完成一些简单的画画，以下为一些经典图像的代码实现笔记，可供参考。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADk0lEQVR42u3aS3LjMAwFQN//0sl+plzCjxbkNHdyRRTZ1OIF0OvHKI0XAnDgwIEzwIFbAvcqjnf3//t79Pq/BTafF503vV9w4MCBAwcOHLhlcOEAOARSnbd6sGP7BQcOHDhw4MCBWwrXXUg2iGYPKBqMswcU3i84cODAgQMHDtyXwGUXVg3G01DgwIEDBw4cOHB/HS4Lc6oR3Q3s4MCBAwcOHDhwT4f7dAEyO7rzrOnkgwMHDhw4cODADcGd+nBv63V5v+DAgQMHDhw4cEvgpke2ABndULfQObY/cODAgQMHDhy4JXDRD/qiG+sWDqMFzGxjO/vhYfg/B3DgwIEDBw4cuJvgqgEyW0A81bDOHmj3hQAHDhw4cODAgdsC121AX8Gf3mD24KLrfTsvOHDgwIEDBw7cMrhsIbC78C5QNjBX5wUHDhw4cODAgdsOd2oB6YUNB+5swfZyPeDAgQMHDhw4cMvhpq+nNtwN7tWCJjhw4MCBAwcO3Da4cCM22UCOzpN9zumCZTgAgwMHDhw4cODA3QxXDYinG9Xdg6nu7/LvwYEDBw4cOHDglsFVC4jZRvZUwM5ueAoSHDhw4MCBAwduC9wUSLcgOR5Uhwqxlw1pcODAgQMHDhy4m+CqD+gG3myBMgs+3UAHBw4cOHDgwIHbBncqYGbHqUZ490UABw4cOHDgwIF7GlwVqFsYPRVgu41scODAgQMHDhy4bXBjjdokaHdD3YMaqwCDAwcOHDhw4MDdDJcFmQ6k1QZ39fdswxwcOHDgwIEDB24r3FRhcqqRPF3o7MKDAwcOHDhw4MBtg0sHwEON6C5AN8CHXwBw4MCBAwcOHLglcNUgeGpEg201iLdBwYEDBw4cOHDglsJNfWiYDdblQFoM7uMBGBw4cODAgQMH7ia4btCcLnRWwafA3l6DAwcOHDhw4MA9FK4Klf2A8fQHhtkBDhw4cODAgQO3DW66gXwKcBq02tAGBw4cOHDgwIHbAtcOhM37uo3xbkE2/Rxw4MCBAwcOHLhlcNnAW21IVwNot1B5LACDAwcOHDhw4MAtgZsOrtnG8+n72/ODAwcOHDhw4MB9GVw0WH6q4T0WeMGBAwcOHDhw4L4U7tOg1UZ1dT3gwIEDBw4cOHBPgcs2pMeC5dA6ugdw+eKAAwcOHDhw4MAtg5tq3EYLitnAOhVgq8DgwIEDBw4cOHDb4IwkJAJw4MCBM8CBu3f8Ao03/jWsow9YAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Python%E7%94%BB%E7%94%BB/&text=使用 Python 程序画画 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1687,17 +718,9 @@ Data Science Math Skills course provided by DUKE UNIVERSITY is designed to teach
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1823,8 +846,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -2180,29 +1201,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -2241,7 +1239,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -2301,20 +1299,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -2527,6 +1511,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

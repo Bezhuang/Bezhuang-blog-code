@@ -109,7 +109,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -233,16 +233,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -365,16 +375,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -398,7 +418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -421,36 +441,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -484,8 +474,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Maven/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Maven</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Java/">Java</a>
+    </a>
+  </div>
 
 
           
@@ -511,7 +505,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：5分钟</p>
+      <p>时长：6分钟</p>
     </a>
   </div>
 
@@ -528,34 +522,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、Maven-概述"><a href="#一、Maven-概述" class="headerlink" title="一、Maven 概述"></a>一、Maven 概述</h3><p>Maven 是专门用于管理和构建 Java 项目的工具，它提供了一套标准化的项目结构，提供了一套标准化的构建流程（编译，测试，打包，发布……），提供了一套依赖管理机制。</p>
 <p>标准化的项目结构：每一个开发工具（IDE）都有自己不同的项目结构，它们互相之间不通用。在 Eclipse 中创建的目录，无法在 IDEA 中进行使用，这就造成了很大的不方便，而 Maven 提供了一套标准化的项目结构，所有的 IDE 使用 Maven 构建的项目完全一样，所以 IDE 创建的 Maven 项目可以通用。</p>
 <p>标准化的构建流程：开发了一套系统，代码需要进行编译、测试、打包、发布，这些操作如果需要反复进行就显得特别麻烦，而 Maven 提供了一套简单的命令来完成项目构建。</p>
 <p>依赖管理：管理你项目所依赖的第三方资源（jar包、插件），而 Maven 使用标准的坐标配置来管理各种依赖，只需要简单的配置就可以完成依赖管理。</p>
 <p>Maven 模型：</p>
 <ol>
-<li>  项目对象模型（Project Object Model）：将我们自己抽象成一个对象模型，有自己专属的坐标。</li>
+<li>项目对象模型（Project Object Model）：将我们自己抽象成一个对象模型，有自己专属的坐标。</li>
 </ol>
-<pre><code class="xml">&lt;groupId&gt;com.itheima&lt;/groupId&gt;
-&lt;artifactId&gt;maven&lt;/artifactId&gt;
-&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</code></pre>
-<ol start="2">
-<li>  依赖管理模型（Dependency）：使用坐标来描述当前项目依赖哪儿些第三方jar包。</li>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.itheima<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>依赖管理模型（Dependency）：使用坐标来描述当前项目依赖哪儿些第三方jar包。</li>
 </ol>
-<pre><code class="xml">&lt;dependency&gt;
-        &lt;groupId&gt;mysql&lt;/groupId&gt;
-        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
-        &lt;version&gt;5.1.32&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.32<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>Maven 仓库</p>
 <ul>
 <li>本地仓库：自己计算机上的一个目录。</li>
-<li>中央仓库：由 Maven 团队维护的全球唯一的仓库： <a target="_blank" rel="noopener" href="https://repo1.maven.org/maven2/%E3%80%82">https://repo1.maven.org/maven2/。</a></li>
+<li>中央仓库：由 Maven 团队维护的全球唯一的仓库： <a target="_blank" rel="noopener" href="https://repo1.maven.org/maven2/。">https://repo1.maven.org/maven2/。</a></li>
 <li>远程仓库(私服)：一般由公司团队搭建的私有仓库。</li>
 <li>当项目中使用坐标引入对应依赖 jar 包后，首先会查找本地仓库中是否有对应的 jar 包，如果有，则在项目直接引用；如果没有，则去中央仓库中下载对应的jar包到本地仓库。</li>
-<li>如果还可以搭建远程仓库，将来jar包的查找顺序则变为：本地仓库 –&gt; 远程仓库–&gt; 中央仓库。</li>
+<li>如果还可以搭建远程仓库，将来jar包的查找顺序则变为：本地仓库 —&gt; 远程仓库—&gt; 中央仓库。</li>
 </ul>
 <p>Maven 安装配置</p>
 <ul>
@@ -577,7 +564,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>site ： 产生报告，发布站点等。这套声明周期一般不会使用。</p>
 </li>
 </ul>
-<p>同一套生命周期内，执行后边的命令，前面的所有命令会自动执行。当我们执行 <code>install</code>（安装）命令时，它会先执行 <code>compile</code>命令，再执行 <code>test </code> 命令，再执行 <code>package</code> 命令，最后执行 <code>install</code> 命令；当我们执行 <code>package</code> （打包）命令时，它会先执行 <code>compile</code> 命令，再执行 <code>test</code> 命令，最后执行 <code>package</code> 命令。</p>
+<p>同一套生命周期内，执行后边的命令，前面的所有命令会自动执行。当我们执行 <code>install</code>（安装）命令时，它会先执行 <code>compile</code>命令，再执行 <code>test</code> 命令，再执行 <code>package</code> 命令，最后执行 <code>install</code> 命令；当我们执行 <code>package</code> （打包）命令时，它会先执行 <code>compile</code> 命令，再执行 <code>test</code> 命令，最后执行 <code>package</code> 命令。</p>
 <h4 id="Maven-坐标详解"><a href="#Maven-坐标详解" class="headerlink" title="Maven 坐标详解"></a>Maven 坐标详解</h4><p>Maven 中的坐标是资源的唯一标识，资源可以是插件、依赖、当前项目。</p>
 <p>使用坐标来定义项目或引入项目中需要的依赖。</p>
 <p>Maven 坐标主要组成：</p>
@@ -590,25 +577,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <p>我们的项目如果被其他的项目依赖时，也是需要坐标来引入的。</p>
-<h3 id="三、Maven-依赖管理"><a href="#三、Maven-依赖管理" class="headerlink" title="三、Maven 依赖管理"></a>三、Maven 依赖管理</h3><h4 id="使用坐标引入-jar-包"><a href="#使用坐标引入-jar-包" class="headerlink" title="使用坐标引入 jar 包"></a>使用坐标引入 jar 包</h4><p>在项目的 pom.xml 中编写<code> &lt;dependencies&gt;</code> 标签。</p>
-<p>在 <code>&lt;dependencies&gt; </code>标签中 使用 <code>&lt;dependency&gt;</code> 引入坐标。</p>
-<p>定义坐标的 <code> groupId</code>，<code>artifactId</code>，<code>version</code>。</p>
-<pre><code class="xml">&lt;dependencies&gt;
-    &lt;dependency&gt;
-        &lt;groupId&gt;mysql&lt;/groupId&gt;
-        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
-        &lt;version&gt;5.1.32&lt;/version&gt;
-    &lt;/dependency&gt;
-&lt;/dependencies&gt;</code></pre>
+<h3 id="三、Maven-依赖管理"><a href="#三、Maven-依赖管理" class="headerlink" title="三、Maven 依赖管理"></a>三、Maven 依赖管理</h3><h4 id="使用坐标引入-jar-包"><a href="#使用坐标引入-jar-包" class="headerlink" title="使用坐标引入 jar 包"></a>使用坐标引入 jar 包</h4><p>在项目的 pom.xml 中编写<code>&lt;dependencies&gt;</code> 标签。</p>
+<p>在 <code>&lt;dependencies&gt;</code>标签中 使用 <code>&lt;dependency&gt;</code> 引入坐标。</p>
+<p>定义坐标的 <code>groupId</code>，<code>artifactId</code>，<code>version</code>。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.32<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="依赖范围"><a href="#依赖范围" class="headerlink" title="依赖范围"></a>依赖范围</h4><p>通过设置坐标的依赖范围（scope），可以设置对应 jar 包的作用范围：编译环境、测试环境、运行环境。</p>
 <p>通过 <code>scope</code> 标签指定依赖的作用范围。 那么这个依赖就只能作用在测试环境，其他环境下不能使用。</p>
-<pre><code class="xml">&lt;dependency&gt;
-        &lt;groupId&gt;mysql&lt;/groupId&gt;
-        &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
-        &lt;version&gt;5.1.32&lt;/version&gt;
-    &lt;scope&gt;test&lt;/scope&gt;
-&lt;/dependency&gt;</code></pre>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.32<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><code>scope</code> 的取值：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -619,7 +596,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <th>例子</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><strong>compile</strong></td>
 <td>Y</td>
 <td>Y</td>
@@ -654,7 +632,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <td>-</td>
 <td>存储在本地的jar包</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <p>compile：作用于编译环境、测试环境、运行环境。</p>
 <p>test：作用于测试环境。典型的就是 Junit 坐标，以后使用 Junit 时，都会将 scope 指定为该值。</p>
 <p>provided：作用于编译环境、测试环境。我们后面会学习 <code>servlet-api</code> ，在使用它时，必须将 <code>scope</code> 设置为该值，不然运行时就会报错。</p>
@@ -671,7 +651,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -696,6 +676,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/>http://blog.zhuangzhihao.top/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -711,12 +695,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Java/">Java</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Maven/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Maven</p></a></div>
 
 
         
@@ -734,77 +714,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/&title=Maven 项目管理知识总结 - Bezhuang's Blog&summary=
-Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/&title=Maven 项目管理知识总结 - Bezhuang's Blog&summary=
-Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/&title=Maven 项目管理知识总结 - Bezhuang's Blog&summary=
-Maven 是 Apache 下的一个纯 Java 开发的开源项目。基于项目对象模型（缩写：POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。Maven 是一个项目管理工具，可以对 Java 项目进行构建、依赖管理，也可被用于构建和管理其他语言编写的各种项目，例如 C#，Ruby，Scala。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADn0lEQVR42u3aQW7DMAwEQP//0+29RWBxSTdsMLqlcGRq1MOCzPVlRetCAA4cOHAWOHBL4K5w/fz+rxe8eC7dP93vVV1xPeDAgQMHDhw4cMvgjgNg8/kpmLvnTt9frh8cOHDgwIEDB24pXBp4qwe+gzvdt7pfGx4cOHDgwIEDB+5D4E4PXg2gp5BpYAYHDhw4cODAgQNXC7BpsH1qgA4OHDhw4MCBA/cpcN0BcxpQ033TOt4+yQcHDhw4cODAgRuCmw6U2z/H5wUHDhw4cODAgVsC111V4DTApkH7a3iBAwcOHDhw4MBtgasOkquB8RRi+nM6yB7rAIMDBw4cOHDgwD0Mlw5mpwfVXYCpxuZt/eDAgQMHDhw4cEvg0kZk9wBViKkgnjZUwYEDBw4cOHDgtsKljce0gPQ9acN06nlw4MCBAwcOHLgtcFWIU5DpwfVT+5SfAwcOHDhw4MCBWwJXLSSFPB0IdwfZXdjb94IDBw4cOHDgwC2Fe1djcSrIVi+2fA5w4MCBAwcOHLglcHeFdwfPTwXa03q7AR0cOHDgwIEDB+6/wk0FyurFPNVgvcIFDhw4cODAgQO3De60sXjaeKw2KKvBNL2YKvTL/cCBAwcOHDhw4JbBdRuX6YC5GrCnG53lCwQHDhw4cODAgVsCFw9mw6BbbhwO/X2qcQoOHDhw4MCBA7cFLh0wVwNtOihOG45T5wAHDhw4cODAgdsONzXofXpQXR2gV4N8uQMMDhw4cODAgQP3JrinBs2ngTYNuOkPBtv/MODAgQMHDhw4cMvg0uCYBuHTQqcaqmN1gAMHDhw4cODALYG7wjUFWR1onwbmqf3AgQMHDhw4cOC2w50OgqcKrAbb6mB6OviCAwcOHDhw4MBtg+sOaruD5G4js/r+9sAdHDhw4MCBAwduOVw60I0LChupp0DV84ADBw4cOHDgwG2H6w6k00DcDdhPXcht3eDAgQMHDhw4cEvguisNwF2g9CK6jVVw4MCBAwcOHLgtcNMBsRpMu4Ptpy4MHDhw4MCBAwfuv8BNDXRPC+o2MtOgnDY6wYEDBw4cOHDgtsOlA+hqAE5/8NcNyt3zgQMHDhw4cODAfQrcXwNONTKr0ODAgQMHDhw4cJ8K1y1saiCd1nV8PnDgwIEDBw4cuKVwaUCtBtY0mKZwp5C3dYADBw4cOHDgwC2Dq65uQO1eQLpP93lw4MCBAwcOHLgtcFYxOCMABw4cOAscuPeub7v+gJewvULeAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/&text=Maven 项目管理知识总结 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -923,17 +832,9 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1059,8 +960,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1416,29 +1315,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1477,7 +1353,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1537,20 +1413,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1763,6 +1625,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

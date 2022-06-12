@@ -108,7 +108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -232,16 +232,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -364,16 +374,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -397,7 +417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -420,36 +440,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -483,6 +473,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Python/">Python</a>
+    </a>
+  </div>
+
 
           
         
@@ -524,8 +521,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>Python 是由 Guido van Rossum 在八十年代末和九十年代初，在荷兰国家数学和计算机科学研究所设计的一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。Python 的设计具有很强的可读性，相比其他语言经常使用英文关键字，其他语言的一些标点符号，它具有比其他语言更有特色语法结构。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="计算机的使用方式"><a href="#计算机的使用方式" class="headerlink" title="计算机的使用方式"></a>计算机的使用方式</h3><ul>
 <li>Interface 交互界面</li>
 <li>TUI（文本交互界面）和 GUI（图形化交互界面）</li>
@@ -659,10 +655,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><code>len()</code>，所取长度 = 最后一位索引+1</li>
 <li>列表<code>[0:8:2]</code>，<code>起始：结束：间隔</code>，包含开始不包含结束，间隔若为负数则从后往前取</li>
 <li><code>min()</code>，<code>max()</code>，<code>in</code>，<code>not in</code></li>
-<li><code>xxx.index(&#39;n&#39;,0,8)</code> 获取指定元素在列表中的位置，<code>xxx.count() </code>统计元素在列表中出现次数</li>
-<li><code>xxx.append(x) </code>插入元素到末尾，<code>s.insert(&#39;x&#39;, 2) </code>插入元素+插入索引位置，<code>x.extend([x,y,z]) </code>插入列表</li>
-<li><code>del [1:2] = x.remove(1)</code>，<code>xxx[0:2] = [&#39;x&#39;,&#39;y&#39;] </code>替换元素，<code>x.pop(2) </code>删除索引位置的元素并返回此元素</li>
-<li><code>x.reverse() </code>反转，<code>x.sort() </code>排序，默认升序，<code>x.sort(reverse=True) </code>为降序</li>
+<li><code>xxx.index(&#39;n&#39;,0,8)</code> 获取指定元素在列表中的位置，<code>xxx.count()</code>统计元素在列表中出现次数</li>
+<li><code>xxx.append(x)</code>插入元素到末尾，<code>s.insert(&#39;x&#39;, 2)</code>插入元素+插入索引位置，<code>x.extend([x,y,z])</code>插入列表</li>
+<li><code>del [1:2] = x.remove(1)</code>，<code>xxx[0:2] = [&#39;x&#39;,&#39;y&#39;]</code>替换元素，<code>x.pop(2)</code>删除索引位置的元素并返回此元素</li>
+<li><code>x.reverse()</code>反转，<code>x.sort()</code>排序，默认升序，<code>x.sort(reverse=True)</code>为降序</li>
 <li><code>for x in xlist</code> 遍历序列，<code>range()</code> 函数生成自然数列</li>
 </ul>
 <h3 id="元组（tuple）"><a href="#元组（tuple）" class="headerlink" title="元组（tuple）"></a>元组（tuple）</h3><ul>
@@ -679,7 +675,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 <li>列表就是一个可变对象</li>
 <li>一般只有在为变量赋值时才是修改变量，其余的都是修改对象</li>
-<li><code>==</code>、<code>!= </code>比较对象的值，<code>is</code>、<code>is not</code> 比较对象的 <code>id</code></li>
+<li><code>==</code>、<code>!=</code>比较对象的值，<code>is</code>、<code>is not</code> 比较对象的 <code>id</code></li>
 </ul>
 <h3 id="字典（dict）"><a href="#字典（dict）" class="headerlink" title="字典（dict）"></a>字典（dict）</h3><ul>
 <li>字典属于一种新的数据结构，称为映射（mapping）</li>
@@ -698,7 +694,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><code>&#123;key : value, key : value&#125;</code>、<code>d = dict(k1 = v1 , k2 = v2 , k3 = v3)</code>、<code>d = dict[ (k1 , v1) , (k2 , v2) , (k3 , v3) ]</code></li>
 <li><code>d[key]</code>、<code>d.get(key , 默认值)</code> 如不存在 key 则返回默认值、<code>d[key] = value</code></li>
 <li><code>in</code>、<code>not in</code> 检查键 key、</li>
-<li><code>.setdefault(key[ , default ]) </code>如果 key 存在，返回 key 的值，如果 key 不存在，添加并返回默认值</li>
+<li><code>.setdefault(key[ , default ])</code>如果 key 存在，返回 key 的值，如果 key 不存在，添加并返回默认值</li>
 <li><code>.update([other])</code> 将其他字典中的 key-value 添加到当前字典，若 key 重复则替换</li>
 <li><code>.popiterm()</code> 默认删除最后一个键值对，返回的是元组<code>(key,value)</code>，<code>pop(key , 默认值)</code>返回 value 或默认值</li>
 <li><code>.clear()</code>清空、<code>.copy()</code>用于对字典进行浅复制（复制后的对象和原对象相互独立）（不复制可变对象）</li>
@@ -714,8 +710,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 <li><code>set()</code>、<code>&#123;&#125;</code>、<code>s = set(&#39;Hello&#39;) → &#123;&#39;H&#39; , &#39;e&#39; , &#39;l&#39; , &#39;o&#39;&#125;</code></li>
 <li><code>.add()</code>向集合中添加元素、<code>.update()</code>将集合/元组/字典(key)中元素添加至集合中</li>
-<li><code>.pop()</code>随机删除并返回元素、<code>.remove()</code>删除指定元素、<code>copy() </code>浅复制</li>
-<li><code>s &amp; s2</code> 交集运算，<code>s | s2</code> 并集运算，<code>s - s2 </code>差集运算，<code>s ^ s2 </code>亦或运算</li>
+<li><code>.pop()</code>随机删除并返回元素、<code>.remove()</code>删除指定元素、<code>copy()</code>浅复制</li>
+<li><code>s &amp; s2</code> 交集运算，<code>s | s2</code> 并集运算，<code>s - s2</code>差集运算，<code>s ^ s2</code>亦或运算</li>
 </ul>
 <h3 id="函数（function）"><a href="#函数（function）" class="headerlink" title="函数（function）"></a>函数（function）</h3><ul>
 <li>函数也是一个对象</li>
@@ -768,7 +764,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>全局命名空间用来保存全局变量，函数命名空间用来保存函数的变量</li>
 <li><code>locals()</code>用来获取当前作用域的命名空间</li>
 <li><code>scope[&#39;c&#39;] = ...</code>向字典中添加 key-value 等于在当前作用域中创建了一个变量</li>
-<li><code>global() </code>在任意位置获取全局命名空间</li>
+<li><code>global()</code>在任意位置获取全局命名空间</li>
 </ul>
 <h3 id="函数式编程"><a href="#函数式编程" class="headerlink" title="函数式编程"></a>函数式编程</h3><ul>
 <li>递归式函数（自己调用自己）<ol>
@@ -785,11 +781,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 </li>
 <li>高阶函数（接收函数作为参数或将函数作为返回值的函数）<ul>
-<li><code>filter() </code>从序列中过滤出符合条件的元素并保存到新的序列（可迭代结构）</li>
+<li><code>filter()</code>从序列中过滤出符合条件的元素并保存到新的序列（可迭代结构）</li>
 </ul>
 </li>
 <li>匿名函数<ul>
-<li>lambda 函数表达式（<code> lambda 参数列表: 返回值</code>）<code>(lambda a,b : a+b)</code></li>
+<li>lambda 函数表达式（<code>lambda 参数列表: 返回值</code>）<code>(lambda a,b : a+b)</code></li>
 <li>匿名函数也可以直接赋值给一个变量</li>
 <li><code>map()</code> 函数可以对可跌倒对象中的元素修改并添加到新变量并返回</li>
 <li>匿名函数一般作为参数使用</li>
@@ -846,8 +842,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>类就是对象的图纸</li>
 <li>我们也称对象是类的实例（instance）</li>
 <li>如果多个对象是通过一个类创建的，我们称这些对象是一类对象</li>
-<li>像 <code>int()</code>, <code>float()</code>, <code>bool()</code>, <code> str()</code>, <code> list()</code>,  <code>dict()</code> …. 这些都是类</li>
-<li><code>a = int(10)</code> # 创建一个 <code>int</code> 类的实例 等价于 <code> a= 10</code></li>
+<li>像 <code>int()</code>, <code>float()</code>, <code>bool()</code>, <code>str()</code>, <code>list()</code>,  <code>dict()</code> …. 这些都是类</li>
+<li><code>a = int(10)</code> # 创建一个 <code>int</code> 类的实例 等价于 <code>a= 10</code></li>
 <li>我们自定义的类都需要使用大写字母开头，使用大驼峰命名法（帕斯卡命名法）来对类命名</li>
 <li>类也是一个对象</li>
 <li>类就是一个用来创建对象的对象</li>
@@ -905,8 +901,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>将对象的 id 赋值给变量</li>
 </ol>
 </li>
-<li><code>init </code>会在对象创建以后立刻执行</li>
-<li><code>init </code>可以用来向新创建的对象中初始化属性<code>（self.name）</code></li>
+<li><code>init</code>会在对象创建以后立刻执行</li>
+<li><code>init</code>可以用来向新创建的对象中初始化属性<code>（self.name）</code></li>
 <li>直接通过 对象.属性 的方式可以来修改属性的值，但这样对象中的属性可以随意修改</li>
 </ul>
 <h3 id="类的基本结构"><a href="#类的基本结构" class="headerlink" title="类的基本结构"></a>类的基本结构</h3><ul>
@@ -957,11 +953,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 <li>父类中所有方法（包括特殊方法）都会被子类继承，也可以重写特殊方法</li>
-<li><code>super()</code> 可以用来获取当前类的父类，并且通过 <code>super() </code>返回对象调用父类方法时，不需要传递 <code>self</code></li>
+<li><code>super()</code> 可以用来获取当前类的父类，并且通过 <code>super()</code>返回对象调用父类方法时，不需要传递 <code>self</code></li>
 </ul>
 <h3 id="多重继承"><a href="#多重继承" class="headerlink" title="多重继承"></a>多重继承</h3><ul>
 <li>在 Python 中是支持多重继承的，也就是我们可以为一个类同时指定多个父类</li>
-<li>可以在类名的 <code>() </code>中添加多个类，来实现多重继承</li>
+<li>可以在类名的 <code>()</code>中添加多个类，来实现多重继承</li>
 <li>多重继承，会使子类同时拥有多个父类，并且会获取到所有父类中的方法</li>
 <li>在开发中没有特殊的情况，应该尽量避免使用多重继承，因为多重继承会让我们的代码过于复杂</li>
 <li>如果多个父类中有同名的方法，则从前往后查找，即前边父类的方法会覆盖后边父类的方法</li>
@@ -978,7 +974,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 <li>对象通过 <code>len()</code> 来获取长度，是因为对象中有<code>__len__</code>特殊方法</li>
-<li>只要对象中具有<code>__len__</code>特殊方法，就可以通过 <code>len() </code>来获取长度</li>
+<li>只要对象中具有<code>__len__</code>特殊方法，就可以通过 <code>len()</code>来获取长度</li>
 </ul>
 <h3 id="面向对象的三大特征的总结"><a href="#面向对象的三大特征的总结" class="headerlink" title="面向对象的三大特征的总结"></a>面向对象的三大特征的总结</h3><ul>
 <li>封装<ul>
@@ -1003,7 +999,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 <li>实例属性和方法<ul>
 <li>通过实例对象添加到属性属于实例属性</li>
-<li>在类中定义，以 <code>self </code>为第一个参数的方法是实例方法</li>
+<li>在类中定义，以 <code>self</code>为第一个参数的方法是实例方法</li>
 <li>实例方法在调用时，Python 会调用对象作为 <code>self</code>传入</li>
 <li>实例方法可以通过实例和类去调用<ul>
 <li>当通过实例调用时，会自动将当前调用对象作为 <code>self</code> 传入</li>
@@ -1117,7 +1113,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><code>sys.exit()</code> 函数用来退出程序</li>
 <li><code>os</code> 模块让我们可以对操作系统进行访问</li>
 <li><code>os.environ</code>. 通过这个属性可以获取到系统的环境变量</li>
-<li><code>os.system()</code> 可以用来执行操作系统的名字<code> os.system(&#39;dir&#39;) os.system(&#39;notepad&#39;)</code></li>
+<li><code>os.system()</code> 可以用来执行操作系统的名字<code>os.system(&#39;dir&#39;) os.system(&#39;notepad&#39;)</code></li>
 </ul>
 <h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><ul>
 <li>程序在运行过程当中，不可避免的会出现一些错误，比如：使用了没有赋值过的变量，使用了不存在的索引，除 0 等</li>
@@ -1130,14 +1126,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>Python 是希望在出现异常时，我们可以编写代码来对异常进行处理</p>
 </li>
 <li><p>try 语句</p>
-<pre><code class="python">try:
-代码块（可能出现错误的语句）
-except 异常类型 as 异常名:
-代码块（出现错误以后的处理方式）
-else：
-代码块（没出错时要执行的语句）  
-finally:
-代码块（该代码块总会执行）</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">代码块（可能出现错误的语句）</span><br><span class="line"><span class="keyword">except</span> 异常类型 <span class="keyword">as</span> 异常名:</span><br><span class="line">代码块（出现错误以后的处理方式）</span><br><span class="line"><span class="keyword">else</span>：</span><br><span class="line">代码块（没出错时要执行的语句）  </span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">代码块（该代码块总会执行）</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>try 是必须的；else 语句有没有都行；except 和 finally 至少有一个</p>
 </li>
@@ -1188,7 +1177,7 @@ finally:
 <li>绝对路径应该从磁盘的根目录开始书写</li>
 </ul>
 </li>
-<li><code>file_obj = open(file_name) </code>打开 <code>file_name</code> 对应的文件</li>
+<li><code>file_obj = open(file_name)</code>打开 <code>file_name</code> 对应的文件</li>
 <li>调用 <code>close()</code> 方法来关闭文件</li>
 <li><code>open()</code> 打开文件时，默认是以文本文件的形式打开的，但是 <code>open()</code> 默认的编码为 None</li>
 <li>所以处理文本文件时，必须要指定文件的编码</li>
@@ -1257,7 +1246,7 @@ finally:
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -1288,6 +1277,10 @@ finally:
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Python%E5%9F%BA%E7%A1%80/>http://blog.zhuangzhihao.top/Python%E5%9F%BA%E7%A1%80/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -1303,13 +1296,6 @@ finally:
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Python/">Python</a>
-    </a>
-  </div>
-
 
         
       
@@ -1326,77 +1312,6 @@ finally:
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Python%E5%9F%BA%E7%A1%80/&title=Python 基础知识总结 - Bezhuang's Blog&summary=
-Python 是由 Guido van Rossum 在八十年代末和九十年代初，在荷兰国家数学和计算机科学研究所设计的一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。Python 的设计具有很强的可读性，相比其他语言经常使用英文关键字，其他语言的一些标点符号，它具有比其他语言更有特色语法结构。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Python%E5%9F%BA%E7%A1%80/&title=Python 基础知识总结 - Bezhuang's Blog&summary=
-Python 是由 Guido van Rossum 在八十年代末和九十年代初，在荷兰国家数学和计算机科学研究所设计的一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。Python 的设计具有很强的可读性，相比其他语言经常使用英文关键字，其他语言的一些标点符号，它具有比其他语言更有特色语法结构。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Python%E5%9F%BA%E7%A1%80/&title=Python 基础知识总结 - Bezhuang's Blog&summary=
-Python 是由 Guido van Rossum 在八十年代末和九十年代初，在荷兰国家数学和计算机科学研究所设计的一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。Python 的设计具有很强的可读性，相比其他语言经常使用英文关键字，其他语言的一些标点符号，它具有比其他语言更有特色语法结构。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADsUlEQVR42u3aS3LjMAwFQN//0jP7VLmIn0I4bu6kiiiymcUzoNc/ozReCMCBAwfOAAduCdyrOH4+H70+3X+3ruj948a7+wUHDhw4cODAgVsGFw6Ah41EoarX0web3i84cODAgQMHDtxSuOpCshvNBuToPNUDDO8XHDhw4MCBAwfuj8BF73fnfTp4gwMHDhw4cODAfRtctjCYbRh3AcGBAwcOHDhw4L4FLtugrX5QeAquWdju+n+9kw8OHDhw4MCBAzcElx3ZgLnturxfcODAgQMHDhy4JXBPj1PgrB5U9v7YfsCBAwcOHDhw4JbAVT8IrG6wW1CMFjK7Hx6GfzmAAwcOHDhw4MAthes2irPAU6DdBvnbvwcHDhw4cODAgVsC1w2+UwXLqQJndT3RQiw4cODAgQMHDtwWuGxQ7G5wuiEdDczVecGBAwcOHDhw4LbCTcNUG7/Vg+wedHo94MCBAwcOHDhwS+CqBb1qIO1u+LfXc+zkgwMHDhw4cODAXYLrQnWDbvR+dEw1vNOdfHDgwIEDBw4cuEtw3cJkt2CYBYkG4+h1uyENDhw4cODAgQN3Ca46cTUgZ0GzG6wWLMGBAwcOHDhw4D4NLhp8uwXEbOG022juBuxjQxocOHDgwIEDB+4yXLeQWIWfer4beMPX4MCBAwcOHDhwS+CyHwpWA/NUQTTbmO42xsGBAwcOHDhw4LbDPQXwVIDtApYLruDAgQMHDhw4cMvguh/qRQ8g++HgVAGyCw8OHDhw4MCBA7cNbqqBO1WorL43e7960ODAgQMHDhw4cFvgqi+agswG12qhM7uet/OCAwcOHDhw4MAtgYsWGruFyNvzVgP38ZcDOHDgwIEDBw7cJbjoRNlCY7fRnA3cUwH5uE9w4MCBAwcOHLhlcNnG7hRodp5yI/mpAAwOHDhw4MCBA3cZLvuCqUZvFrb74WM2UIMDBw4cOHDgwH0K3FSBsRuwb31gePwHAAcOHDhw4MCBWwI33Yg+QVQD8zRo+cDBgQMHDhw4cOCWwLUDYbKxXAXOHlj1YI/PgwMHDhw4cODALYObDrzZgma0ANltjI8HYHDgwIEDBw4cuCVw2cBbDa7dAmb1+fb84MCBAwcOHDhwXwbXLXhWN9oOvODAgQMHDhw4cH8Urlv4zM5bbVRX3wsOHDhw4MCBA/cpcFmIanCdPpDpYP14Jx8cOHDgwIEDB24Irtu4zS4wG1inAmw2WIMDBw4cOHDgwG2FM5LBGQE4cODAGeDA3R3/ASNt/UTQW2hRAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Python%E5%9F%BA%E7%A1%80/&text=Python 基础知识总结 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1515,17 +1430,9 @@ JavaScript 是一门跨平台、面向对象的脚本语言，它能使网页可
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1651,8 +1558,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -2008,29 +1913,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -2069,7 +1951,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -2129,20 +2011,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -2355,6 +2223,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

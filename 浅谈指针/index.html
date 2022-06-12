@@ -107,7 +107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -231,16 +231,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -363,16 +373,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -396,7 +416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -419,36 +439,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -482,6 +472,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/C-C/">C/C++</a>
+    </a>
+  </div>
+
 
           
         
@@ -523,74 +520,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>计算机内存区域中的每字节都对应一个编号，这个编号就是“地址”。如果在程序中定义了一个变量，那么在对程序进行编译时，系统就会给这个变量分配内存单元。如果我们在程序中需要将某个整型、浮点型或字符型数据变量的地址保存下来，需要用到 C 语言为我们提供的指针。在 C 语言中，指针变量是一种特殊的变量，它用来存放变量地址。掌握指针，对于学习操作系统、理解操作系统原理会有非常大的帮助。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、取地址操作符和取值操作符"><a href="#一、取地址操作符和取值操作符" class="headerlink" title="一、取地址操作符和取值操作符"></a>一、取地址操作符和取值操作符</h3><p>取地址操作符为 <code>&amp;</code>，也称引用，通过该操作符我们可以获取一个变量的地址值；取值操作符为 <code>*</code>，也称解引用，通过该操作符我们可以得到一个地址对应的数据。取地址操作符和取值操作符优先级相同，按照自右向左的顺序相结合。</p>
-<pre><code class="c">int main()
-&#123;
-  int i = 10;
-  int *p; //p就是一个指针变量，可以用来存储地址，类型是整型指针
-  p = &amp;i; //初始化赋值
-  printf(&quot;i = %d\n&quot;, i); //直接访问
-  printf(&quot;*p = %d\n&quot;, *p); //间接访问
-&#125;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> i = <span class="number">10</span>;</span><br><span class="line">  <span class="type">int</span> *p; <span class="comment">//p就是一个指针变量，可以用来存储地址，类型是整型指针</span></span><br><span class="line">  p = &amp;i; <span class="comment">//初始化赋值</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;i = %d\n&quot;</span>, i); <span class="comment">//直接访问</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;*p = %d\n&quot;</span>, *p); <span class="comment">//间接访问</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>指针变量前面的表示该变量为指针型变量，例如 <code>float **pointer_1;</code> 的指针变量名是 <code>pointer_1</code>。在定义指针变量时必须指定其类型，只有整型变量的地址才能放到指向整型变量的指针变量中。</p>
 <h3 id="二、指针的传递和偏移"><a href="#二、指针的传递和偏移" class="headerlink" title="二、指针的传递和偏移"></a>二、指针的传递和偏移</h3><p>C 语言中的函数调用均为值传递。指针的传递将变量 i 的地址传递给 change 函数时，实际效果是 <code>j=&amp;i</code>，这时 j 是一个指针变量，依然是值传递, 只是 j 内部存储的是变量 i 的地址，所以通过 <code>*j</code> 就间接访问到了与变量 i 相同的区域，通过 <code>*j=5</code> 就实现了对变量 i 的值的改变。</p>
-<pre><code class="c">void change(int* j)
-&#123;
-  *j = 5; //间接访问得到变量 i
-&#125;
-int main() //指针的传递
-&#123;
-  int i = 10;
-    printf(&quot;before change i=%d\n&quot;, i);
-    change(&amp;i); //传递变量 i 的地址
-    printf(&quot;after change i=%d\n&quot;, i);
-&#125;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">change</span><span class="params">(<span class="type">int</span>* j)</span></span><br><span class="line">&#123;</span><br><span class="line">  *j = <span class="number">5</span>; <span class="comment">//间接访问得到变量 i</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> <span class="comment">//指针的传递</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> i = <span class="number">10</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;before change i=%d\n&quot;</span>, i);</span><br><span class="line">	change(&amp;i); <span class="comment">//传递变量 i 的地址</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;after change i=%d\n&quot;</span>, i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>我们把对指针的加减称为指针的偏移，加就是向后偏移，减就是向前偏移，但对指针进行乘除是没有意义的。</p>
-<pre><code class="c">//指针的偏移
-int main()
-&#123;
-  int a[5]=&#123;1,2,3,4,5&#125;;
-  int *p;
-  int i;
-  p = a; //保证等号两边的数值类型一致
-  for(i=0; i&lt;5; i++) //正序输出
-  &#123;
-      printf(&quot;%3d&quot;, *(p+i));
-  &#125;
-  p = &amp;a[4]; //让 p 指向最后一个元素
-    for(i=0; i&lt;5; i++) //逆序输出
-    &#123;
-    printf(&quot;%3d&quot;,*(p-i));
-  &#125;
-&#125;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//指针的偏移</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> a[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">  <span class="type">int</span> *p;</span><br><span class="line">  <span class="type">int</span> i;</span><br><span class="line">  p = a; <span class="comment">//保证等号两边的数值类型一致</span></span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++) <span class="comment">//正序输出</span></span><br><span class="line">  &#123;</span><br><span class="line">  	<span class="built_in">printf</span>(<span class="string">&quot;%3d&quot;</span>, *(p+i));</span><br><span class="line">  &#125;</span><br><span class="line">  p = &amp;a[<span class="number">4</span>]; <span class="comment">//让 p 指向最后一个元素</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;<span class="number">5</span>; i++) <span class="comment">//逆序输出</span></span><br><span class="line">	&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%3d&quot;</span>,*(p-i));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="三、指针与一维数组"><a href="#三、指针与一维数组" class="headerlink" title="三、指针与一维数组"></a>三、指针与一维数组</h3><p>数组在传递时弱化为指针。这是由于一维数组名中存储的是数组的首地址，因此一维数组在函数调用进行传递时，它的长度子函数无法知道。定义一个指针变量时，指针变量的类型要和数组的数据类型保持一致，通过取值操作, 就可获取数组元素, 这种方法称为指针法。也可以通过取下标的方式来获取数组元素并进行修改，这种方法称为下标法。</p>
-<pre><code class="c">void change(char *d)  //*d 为形参
-&#123;
-  *d = &#39;H&#39;; //指针法
-  d[1] = &#39;E&#39;; //下标法
-  *(d+2) = &#39;L&#39;; //指针的偏移
-&#125;
-int main()
-&#123;
-  char c[10] = &#39;hello&#39;;
-  change(c); //c 为实参
-  printf(&quot;%c\n&quot;, c);
-&#125;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">change</span><span class="params">(<span class="type">char</span> *d)</span>  <span class="comment">//*d 为形参</span></span><br><span class="line">&#123;</span><br><span class="line">  *d = <span class="string">&#x27;H&#x27;</span>; <span class="comment">//指针法</span></span><br><span class="line">  d[<span class="number">1</span>] = <span class="string">&#x27;E&#x27;</span>; <span class="comment">//下标法</span></span><br><span class="line">  *(d+<span class="number">2</span>) = <span class="string">&#x27;L&#x27;</span>; <span class="comment">//指针的偏移</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">char</span> c[<span class="number">10</span>] = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">  change(c); <span class="comment">//c 为实参</span></span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;%c\n&quot;</span>, c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="四、指针与动态内存申请"><a href="#四、指针与动态内存申请" class="headerlink" title="四、指针与动态内存申请"></a>四、指针与动态内存申请</h3><p>C 语言的数组长度固定是因为其定义的整型、浮点型、字符型变量、数组变量都在栈空间中，而栈空间的大小在编译时是确定的。如果使用的空间大小不确定，那么就要使用堆空间申请动态内存申请。栈空间由系统自动管理，而堆空间的申请和释放需要自行管理，所以在具体例子中需要通过 free 函数释放堆空间。</p>
 <p>栈是计算机系统提供的数据结构，计算机会在底层对栈提供支持：分配专门的寄存器存放栈的地址，压栈操作、出栈操作都有专门的指令执行，这就决定了栈的效率比较高；堆则是 C/C++ 函数库提供的数据结构，它的机制很复杂，例如为了分配一块内存，库函数会按照一定的算法在堆内存中搜索可用的足够大小的空间，如果没有足够大小的空间（可能由于内存碎片太多）那么就有可能调用系统功能去增加程序数据段的内存空间，这样就有机会分到足够大小的内存，然后返回。显然，堆的效率要比栈低得多。</p>
-<pre><code class="c">int main()
-&#123;
-  int i;
-  char *p;
-  scanf(&quot;%d&quot;, &amp;i); //输入要申请的空间大小
-  p = (char*)malloc(i)；//使用 malloc 动态申请堆空间，(char *)是强制类型转换
-  strcpy(p, &quot;malloc success&quot;);
-  puts(p);
-  free(p)；//free 时必须使用 malloc 申请时返回的指针值，不能进行任何偏移
-  p = NULL; //消除野指针
-&#125;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">int</span> i;</span><br><span class="line">  <span class="type">char</span> *p;</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;i); <span class="comment">//输入要申请的空间大小</span></span><br><span class="line">  p = (<span class="type">char</span>*)<span class="built_in">malloc</span>(i)；<span class="comment">//使用 malloc 动态申请堆空间，(char *)是强制类型转换</span></span><br><span class="line">  <span class="built_in">strcpy</span>(p, <span class="string">&quot;malloc success&quot;</span>);</span><br><span class="line">  <span class="built_in">puts</span>(p);</span><br><span class="line">  <span class="built_in">free</span>(p)；<span class="comment">//free 时必须使用 malloc 申请时返回的指针值，不能进行任何偏移</span></span><br><span class="line">  p = <span class="literal">NULL</span>; <span class="comment">//消除野指针</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>C 初始动态分配 vs C++ 初始动态分配</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C 初始动态分配</span></span><br><span class="line">L.data = (ElemType *)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(Elemtype) *InitSize);</span><br><span class="line"><span class="type">int</span> *p = (<span class="type">int</span> *)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(<span class="type">int</span>) *<span class="number">10</span>);</span><br><span class="line"><span class="comment">// C++ 初始动态分配</span></span><br><span class="line">L.data = <span class="keyword">new</span> Elemtype[InitSize];</span><br></pre></td></tr></table></figure>
 
   
   
@@ -602,7 +546,7 @@ int main()
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -627,6 +571,10 @@ int main()
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E6%B5%85%E8%B0%88%E6%8C%87%E9%92%88/>http://blog.zhuangzhihao.top/%E6%B5%85%E8%B0%88%E6%8C%87%E9%92%88/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -642,13 +590,6 @@ int main()
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/C-C/">C/C++</a>
-    </a>
-  </div>
-
 
         
       
@@ -665,77 +606,6 @@ int main()
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E6%B5%85%E8%B0%88%E6%8C%87%E9%92%88/&title=浅谈 C 语言指针 - Bezhuang's Blog&summary=
-计算机内存区域中的每字节都对应一个编号，这个编号就是“地址”。如果在程序中定义了一个变量，那么在对程序进行编译时，系统就会给这个变量分配内存单元。如果我们在程序中需要将某个整型、浮点型或字符型数据变量的地址保存下来，需要用到 C 语言为我们提供的指针。在 C 语言中，指针变量是一种特殊的变量，它用来存放变量地址。掌握指针，对于学习操作系统、理解操作系统原理会有非常大的帮助。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E6%B5%85%E8%B0%88%E6%8C%87%E9%92%88/&title=浅谈 C 语言指针 - Bezhuang's Blog&summary=
-计算机内存区域中的每字节都对应一个编号，这个编号就是“地址”。如果在程序中定义了一个变量，那么在对程序进行编译时，系统就会给这个变量分配内存单元。如果我们在程序中需要将某个整型、浮点型或字符型数据变量的地址保存下来，需要用到 C 语言为我们提供的指针。在 C 语言中，指针变量是一种特殊的变量，它用来存放变量地址。掌握指针，对于学习操作系统、理解操作系统原理会有非常大的帮助。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E6%B5%85%E8%B0%88%E6%8C%87%E9%92%88/&title=浅谈 C 语言指针 - Bezhuang's Blog&summary=
-计算机内存区域中的每字节都对应一个编号，这个编号就是“地址”。如果在程序中定义了一个变量，那么在对程序进行编译时，系统就会给这个变量分配内存单元。如果我们在程序中需要将某个整型、浮点型或字符型数据变量的地址保存下来，需要用到 C 语言为我们提供的指针。在 C 语言中，指针变量是一种特殊的变量，它用来存放变量地址。掌握指针，对于学习操作系统、理解操作系统原理会有非常大的帮助。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADpklEQVR42u3ay3XDMAwEQPffdFJADgIWkEw7w5s/ksChD/sAv36saL0QgAMHDpwFDtwhcK9wXV3/54HF66rPu7r/1nP/XA8OHDhw4MCBA3cYXDkAXhRSvW5rI1d1VOHL+wUHDhw4cODAgTsUrhtA1wtbCuDTQAwOHDhw4MCBA/ftcNXCrr7/dAMVHDhw4MCBAwfuv8NtDYi3AzM4cODAgQMHDtx/g+sWXg203eDaHTRv1f/YJB8cOHDgwIEDB24JbtpQ/LTX8X7BgQMHDhw4cOAOgTtlpcE4bajGdYIDBw4cOHDgwB0Cd/XAbkDc2kja4OweRHtADQ4cOHDgwIEDdyhcNYBuB98UpHtd9wdSDsDgwIEDBw4cOHAPw5WDXxiAp/fp1jc9gMuDBQcOHDhw4MCBOwQuDcDTBuH0PncNvG9vZIIDBw4cOHDgwC3BpYPgKsj2ddPBd7dRCw4cOHDgwIED96lw25BbgfeuBuklJDhw4MCBAwcO3GFw3ULSYJo2NtOB9fQPheVJPjhw4MCBAwcO3MNwaVBNG4dpwN0O6Gl94MCBAwcOHDhwnwqXBs0qfLrRu4I5OHDgwIEDBw7cqXDThuA0AE8HzNuw40k+OHDgwIEDBw7cm+C2Brfp/a/e737ebXC2J/ngwIEDBw4cOHBvgusGy7RBubXx7obXgcGBAwcOHDhw4A6D6w6k0wHvVgM1HZhPG5vgwIEDBw4cOHCnwKUBc9qQrB5QNwhPD/TyueDAgQMHDhw4cIfDTQPk9PPpYHwr2Jcn+eDAgQMHDhw4cA/DdQPudCPpc6aNzPUADA4cOHDgwIED92a49I+CXbjtRmQVfitwgwMHDhw4cODAnQaXFpjCdwutHly3nu5BgwMHDhw4cODAnQqXFnTX97uD5m5QT78PDhw4cODAgQN3Glza0JwG4m5DM32dHgQ4cODAgQMHDtynwE0H0NuD47Qh2a2//Dxw4MCBAwcOHLhD4LYG0d2N3gWZDrjLDVVw4MCBAwcOHLhD4KYBcdpIrAJNB+ZrA3Vw4MCBAwcOHLjD4NIGZDdATgPxdqN1HIDBgQMHDhw4cOAOgZsG3nIBzffTA5kGe3DgwIEDBw4cuG+H6w6M06D9eOAFBw4cOHDgwIH7Urg0oKYNzXQgnTZMwYEDBw4cOHDgPgUu3WA6SH5qw2sNTnDgwIEDBw4cuMPgpoPbp1+ng+v1RiY4cODAgQMHDtyb4KzmoBwBOHDgwFngwL13/QIKaftiBU4kngAAAABJRU5ErkJggg==">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E6%B5%85%E8%B0%88%E6%8C%87%E9%92%88/&text=浅谈 C 语言指针 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -749,10 +619,10 @@ int main()
   
     <div class="prev-next">
       
-        <a class='prev' href='/HTML%E7%8C%AB%E5%92%AA%E7%9B%B8%E5%86%8C%E5%BA%94%E7%94%A8/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>通过编写猫咪相册应用学习 HTML</p>
+        <a class='prev' href='/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%20typedef/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>结构体与 typedef 的使用</p>
           <p class='content'>
-freeCodeCamp 响应式网页设计的认证课程第一章。HTML 标签赋予了网页结构。你可以使用 HTML 标签添加照片、按钮和其它元素到你的网页。在通过编写猫咪相册应用学习 HTML 的课...</p>
+在我们编写程序时，有时候需要将不同类型的数据组合为一个整体，以便于引用。例如，一名学生有学号、姓名、性别、年龄、地址等属性，如果针对学生的学号、姓名、年龄等都单独定义一个变量，那么在有多名学生...</p>
         </a>
       
       
@@ -854,17 +724,9 @@ C 语言标准输入 scanf 在通过 %s 读取字符串时遇到空格就认为�
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -990,8 +852,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1347,29 +1207,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1408,7 +1245,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1468,20 +1305,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1694,6 +1517,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

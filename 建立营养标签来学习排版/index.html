@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
+    </a>
+  </div>
 
 
           
@@ -506,7 +500,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：993字</p>
+      <p>字数：1k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -529,138 +523,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>freeCodeCamp 响应式网页设计的认证课程第七章。排版是将文本样式设置为易于阅读并适合其目的的艺术。在通过建立营养标签来学习排版的课程中，你将使用排版来构建营养标签网页。你将学习如何使用 CSS 设置文本样式、调整行高和定位文本。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、重点-HTML-代码"><a href="#一、重点-HTML-代码" class="headerlink" title="一、重点 HTML 代码"></a>一、重点 HTML 代码</h3><p>head：</p>
-<pre><code class="html">&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Nutrition Label&lt;/title&gt;
-    &lt;link href=&quot;https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&quot; rel=&quot;stylesheet&quot;&gt;
-    &lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;/head&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Nutrition Label<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;styles.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>body：</p>
-<pre><code class="html">&lt;body&gt;
-    &lt;div class=&quot;label&quot;&gt;
-        &lt;header&gt;
-            &lt;h1 class=&quot;bold&quot;&gt;Nutrition Facts&lt;/h1&gt;
-            &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-            &lt;p&gt;8 servings per container&lt;/p&gt;
-            &lt;p class=&quot;bold&quot;&gt;Serving size &lt;span class=&quot;right&quot;&gt;2/3 cup (55g)&lt;/span&gt;&lt;/p&gt;
-        &lt;/header&gt;
-        &lt;div class=&quot;divider lg&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;calories-info&quot;&gt;
-            &lt;p class=&quot;bold sm-text&quot;&gt;Amount per serving&lt;/p&gt;
-            &lt;h1&gt;Calories &lt;span class=&quot;right&quot;&gt;230&lt;/span&gt;&lt;/h1&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;divider md&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;daily-value sm-text&quot;&gt;
-            &lt;p class=&quot;right bold no-divider&quot;&gt;% Daily Value *&lt;/p&gt;
-            &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-            &lt;p&gt;&lt;span class=&quot;bold&quot;&gt;Total Fat&lt;/span&gt; 8g &lt;span class=&quot;bold right&quot;&gt;10%&lt;/span&gt;&lt;/p&gt;
-            &lt;p class=&quot;indent no-divider&quot;&gt;Saturated Fat 1g &lt;span class=&quot;bold right&quot;&gt;5%&lt;/span&gt;&lt;/p&gt;
-            &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-            &lt;p class=&quot;indent no-divider&quot;&gt;&lt;i&gt;Trans&lt;/i&gt; Fat 0g&lt;/p&gt;
-            &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-            &lt;p&gt;&lt;span class=&quot;bold&quot;&gt;Cholesterol&lt;/span&gt; 0mg &lt;span class=&quot;right bold&quot;&gt;0%&lt;/span&gt;&lt;/p&gt;
-            &lt;p&gt;&lt;span class=&quot;bold&quot;&gt;Sodium&lt;/span&gt; 160mg &lt;span class=&quot;right bold&quot;&gt;7%&lt;/span&gt;&lt;/p&gt;
-            &lt;p&gt;&lt;span class=&quot;bold&quot;&gt;Total Carbohydrate&lt;/span&gt; 37g &lt;span class=&quot;right bold&quot;&gt;13%&lt;/span&gt;&lt;/p&gt;
-            &lt;p class=&quot;indent no-divider&quot;&gt;Dietary Fiber 4g&lt;/p&gt;
-            &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-            &lt;p class=&quot;indent no-divider&quot;&gt;Total Sugars 12g&lt;/p&gt;
-            &lt;div class=&quot;divider dbl-indent&quot;&gt;&lt;/div&gt;
-            &lt;p class=&quot;dbl-indent no-divider&quot;&gt;Includes 10g Added Sugars &lt;span class=&quot;right bold&quot;&gt;20%&lt;/span&gt;
-            &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;
-            &lt;p class=&quot;no-divider&quot;&gt;&lt;span class=&quot;bold&quot;&gt;Protein&lt;/span&gt; 3g&lt;/p&gt;
-            &lt;div class=&quot;divider lg&quot;&gt;&lt;/div&gt;
-            &lt;p&gt;Vitamin D 2mcg &lt;span class=&quot;right&quot;&gt;10%&lt;/span&gt;&lt;/p&gt;
-            &lt;p&gt;Calcium 260mg &lt;span class=&quot;right&quot;&gt;20%&lt;/span&gt;&lt;/p&gt;
-            &lt;p&gt;Iron 8mg &lt;span class=&quot;right&quot;&gt;45%&lt;/span&gt;&lt;/p&gt;
-            &lt;p class=&quot;no-divider&quot;&gt;Potassium 235mg &lt;span class=&quot;right&quot;&gt;6%&lt;/span&gt;&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;divider md&quot;&gt;&lt;/div&gt;
-        &lt;p class=&quot;note&quot;&gt;* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a
-            daily diet. 2,000 calories a day is used for general nutrition advice.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/body&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;label&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Nutrition Facts<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>8 servings per container<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Serving size <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span>2/3 cup (55g)<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider lg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;calories-info&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;bold sm-text&quot;</span>&gt;</span>Amount per serving<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Calories <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span>230<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider md&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;daily-value sm-text&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;right bold no-divider&quot;</span>&gt;</span>% Daily Value *<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Total Fat<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 8g <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold right&quot;</span>&gt;</span>10%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;indent no-divider&quot;</span>&gt;</span>Saturated Fat 1g <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold right&quot;</span>&gt;</span>5%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;indent no-divider&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span>Trans<span class="tag">&lt;/<span class="name">i</span>&gt;</span> Fat 0g<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Cholesterol<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 0mg <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;right bold&quot;</span>&gt;</span>0%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Sodium<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 160mg <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;right bold&quot;</span>&gt;</span>7%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Total Carbohydrate<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 37g <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;right bold&quot;</span>&gt;</span>13%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;indent no-divider&quot;</span>&gt;</span>Dietary Fiber 4g<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;indent no-divider&quot;</span>&gt;</span>Total Sugars 12g<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider dbl-indent&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;dbl-indent no-divider&quot;</span>&gt;</span>Includes 10g Added Sugars <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;right bold&quot;</span>&gt;</span>20%<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;no-divider&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;bold&quot;</span>&gt;</span>Protein<span class="tag">&lt;/<span class="name">span</span>&gt;</span> 3g<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider lg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Vitamin D 2mcg <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span>10%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Calcium 260mg <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span>20%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>Iron 8mg <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span>45%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;no-divider&quot;</span>&gt;</span>Potassium 235mg <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;right&quot;</span>&gt;</span>6%<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;divider md&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;note&quot;</span>&gt;</span>* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a</span><br><span class="line">            daily diet. 2,000 calories a day is used for general nutrition advice.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>box-sizing 属性：</p>
-<pre><code class="CSS">* &#123;
-    box-sizing: border-box;
-&#125;
-
-html &#123;
-    font-size: 16px;
-&#125;
-
-body &#123;
-    font-family: &#39;Open Sans&#39;, sans-serif;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;Open Sans&#x27;</span>, sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>letter-spacing 属性：</p>
-<pre><code class="css">.label &#123;
-    border: 2px solid black;
-    width: 270px;
-    margin: 20px auto;
-    padding: 0 7px;
-&#125;
-header h1 &#123;
-    text-align: center;
-    margin: -4px 0;
-    letter-spacing: 0.15px
-&#125;
-p &#123;
-    margin: 0;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.label</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> solid black;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">270px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span> auto;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">7px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">header</span> <span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">margin</span>: -<span class="number">4px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">letter-spacing</span>: <span class="number">0.15px</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>divider 分隔栏：</p>
-<pre><code class="CSS">.divider &#123;
-    border-bottom: 1px solid #888989;
-    margin: 2px 0;
-    clear: right;
-&#125;
-.bold &#123;
-    font-weight: 800;
-&#125;
-.right &#123;
-    float: right;
-&#125;
-.lg &#123;
-    height: 10px;
-&#125;
-.lg,
-.md &#123;
-    background-color: black;
-    border: 0;
-&#125;
-.md &#123;
-    height: 5px;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.divider</span> &#123;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#888989</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">2px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">clear</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bold</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">800</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.right</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.lg</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.lg</span>,</span><br><span class="line"><span class="selector-class">.md</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: black;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.md</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>calories-info：</p>
-<pre><code class="CSS">.sm-text &#123;
-    font-size: 0.85rem;
-&#125;
-.calories-info h1 &#123;
-    margin: -5px -2px;
-    overflow: hidden;
-&#125;
-.calories-info span &#123;
-    font-size: 1.2em;
-    margin-top: -7px;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.sm-text</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0.85rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.calories-info</span> <span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: -<span class="number">5px</span> -<span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.calories-info</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.2em</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">7px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>indent 缩进：</p>
-<pre><code class="CSS">.indent &#123;
-    margin-left: 1em;
-&#125;
-.dbl-indent &#123;
-    margin-left: 2em;
-&#125;
-.note &#123;
-    font-size: 0.6rem;
-    margin: 5px 0;
-    padding: 0 8px;
-    text-indent: -8px;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.indent</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">1em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.dbl-indent</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.note</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0.6rem</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">8px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">8px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>:not</code> pseudo-selector：</p>
-<pre><code class="CSS">.daily-value p:not(.no-divider) &#123;
-    border-bottom: 1px solid #888989;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.daily-value</span> <span class="selector-tag">p</span><span class="selector-pseudo">:not</span>(<span class="selector-class">.no-divider</span>) &#123;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#888989</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="https://free-code-camp-demo.vercel.app/通过建立营养标签来学习排版/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
 </div>
@@ -675,7 +554,7 @@ p &#123;
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -700,6 +579,10 @@ p &#123;
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E5%BB%BA%E7%AB%8B%E8%90%A5%E5%85%BB%E6%A0%87%E7%AD%BE%E6%9D%A5%E5%AD%A6%E4%B9%A0%E6%8E%92%E7%89%88/>http://blog.zhuangzhihao.top/%E5%BB%BA%E7%AB%8B%E8%90%A5%E5%85%BB%E6%A0%87%E7%AD%BE%E6%9D%A5%E5%AD%A6%E4%B9%A0%E6%8E%92%E7%89%88/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -715,12 +598,8 @@ p &#123;
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
 
 
         
@@ -738,77 +617,6 @@ p &#123;
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E5%BB%BA%E7%AB%8B%E8%90%A5%E5%85%BB%E6%A0%87%E7%AD%BE%E6%9D%A5%E5%AD%A6%E4%B9%A0%E6%8E%92%E7%89%88/&title=通过建立营养标签来学习排版 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第七章。排版是将文本样式设置为易于阅读并适合其目的的艺术。在通过建立营养标签来学习排版的课程中，你将使用排版来构建营养标签网页。你将学习如何使用 CSS 设置文本样式、调整行高和定位文本。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E5%BB%BA%E7%AB%8B%E8%90%A5%E5%85%BB%E6%A0%87%E7%AD%BE%E6%9D%A5%E5%AD%A6%E4%B9%A0%E6%8E%92%E7%89%88/&title=通过建立营养标签来学习排版 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第七章。排版是将文本样式设置为易于阅读并适合其目的的艺术。在通过建立营养标签来学习排版的课程中，你将使用排版来构建营养标签网页。你将学习如何使用 CSS 设置文本样式、调整行高和定位文本。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E5%BB%BA%E7%AB%8B%E8%90%A5%E5%85%BB%E6%A0%87%E7%AD%BE%E6%9D%A5%E5%AD%A6%E4%B9%A0%E6%8E%92%E7%89%88/&title=通过建立营养标签来学习排版 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第七章。排版是将文本样式设置为易于阅读并适合其目的的艺术。在通过建立营养标签来学习排版的课程中，你将使用排版来构建营养标签网页。你将学习如何使用 CSS 设置文本样式、调整行高和定位文本。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,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">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E5%BB%BA%E7%AB%8B%E8%90%A5%E5%85%BB%E6%A0%87%E7%AD%BE%E6%9D%A5%E5%AD%A6%E4%B9%A0%E6%8E%92%E7%89%88/&text=通过建立营养标签来学习排版 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -927,17 +735,9 @@ freeCodeCamp 响应式网页设计的认证课程第六章。通过弹性盒子�
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1063,8 +863,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1420,29 +1218,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1481,7 +1256,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1541,20 +1316,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1767,6 +1528,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

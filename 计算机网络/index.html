@@ -108,7 +108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -232,16 +232,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -364,16 +374,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -397,7 +417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -420,36 +440,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -483,6 +473,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/">计算机科学与技术</a>
+    </a>
+  </div>
+
 
           
         
@@ -524,8 +521,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>计算机网络是计算机专业必修的重要课程之一，与现实世界结合得相当紧密，也是考研408计算机学科专业基础综合考试中的一门课程。计算机网络学习的核心内容就是网络协议的学习。网络协议是为计算机网络中进行数据交换而建立的规则、标准或者说是约定的集合。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="计算机网络体系结构"><a href="#计算机网络体系结构" class="headerlink" title="计算机网络体系结构"></a>计算机网络体系结构</h3><h4 id="计算机网络概述"><a href="#计算机网络概述" class="headerlink" title="计算机网络概述"></a>计算机网络概述</h4><ul>
 <li>计算机网络就是一些互联的、自治的计算机系统的集合。</li>
 <li>自治计算机就是能够进行自我管理、配置和维护的计算机。</li>
@@ -586,12 +582,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>带宽表示在单位时间内从网络中的某一点到另一点所能通过的最高数据率（网络的通信线路所能传送数据的能力）。单位比特每秒（bit/s）。</li>
 <li>在通信领域，带宽是指信号最高频率与最低频率之差（Hz）。因此将模拟信号转换成数字信号时，采样频率必须大于等于最大频率f的2倍。</li>
 <li>奈奎斯特定理给出了在无噪声情况下码元的最大传输速率。f表示理想低通信道的带宽。N表示每个码元的离散电平的数目。<ul>
-<li>$C_{\max }=f_1<em>\log _{2}N=2f</em>\log _{2}N$</li>
+<li>$C<em>{\max }=f_1*\log </em>{2}N=2f*\log _{2}N$</li>
 </ul>
 </li>
 <li>信噪比是信号的平均功率和噪声的平均功率之比。S/N（dB）‘</li>
 <li>香农公式给出了信号传输速率的极限。W为信道的带宽。<ul>
-<li>$C_{\max }=W*\log _{2}\left( 1+\dfrac{S}{N}\right)$</li>
+<li>$C<em>{\max }=W*\log </em>{2}\left( 1+\dfrac{S}{N}\right)$</li>
 </ul>
 </li>
 <li>要使信息的极限传输速率提高，就必须提高信道的带宽或信道中的信噪比。实际信道的传输速率要比极限速率低不少。</li>
@@ -814,8 +810,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <h4 id="无分类编制CIDR"><a href="#无分类编制CIDR" class="headerlink" title="无分类编制CIDR"></a>无分类编制CIDR</h4><ul>
-<li><p>CIDR取消了传统的A类、B类和C类地址以及划分子网的概念，并且用网络前缀代替网络号和子网号，后面的部分指明主机。因此，CIDR使IP地址从三级地址(使用子网掩码)，又回到了两级地址（无分类的两级编址）。</p>
-</li>
+<li>CIDR取消了传统的A类、B类和C类地址以及划分子网的概念，并且用网络前缀代替网络号和子网号，后面的部分指明主机。因此，CIDR使IP地址从三级地址(使用子网掩码)，又回到了两级地址（无分类的两级编址）。</li>
 <li><p>CIDR把网络前缀相同的连续的IP地址组成一个”CIDR地址块”只要知道CIDR地址块中的任何一个地址，就可以知道这地址块的起始地址(即最小地址)和最大地址，以及地址块中的地址数。具体看如下例子</p>
 </li>
 <li><p>地址掩码：是一连串的1和0组成，而1的个数救赎网络前缀长度。在斜线记法中。斜线后面的数字就是地址掩码中1的个数。</p>
@@ -837,10 +832,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <ul>
-<li><p>ICMP询问报文</p>
-</li>
-<li><p>ICMP的应用在于分组网间探测PING，以用来测试两台主机之间的连通性。</p>
-</li>
+<li>ICMP询问报文</li>
+</ul>
+<ul>
+<li>ICMP的应用在于分组网间探测PING，以用来测试两台主机之间的连通性。</li>
 </ul>
 <h4 id="互联网的路由选择协议"><a href="#互联网的路由选择协议" class="headerlink" title="互联网的路由选择协议"></a>互联网的路由选择协议</h4><ul>
 <li><p>路由选择协议分为两大类：</p>
@@ -850,8 +845,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <ul>
-<li><p>外部网关协议</p>
-</li>
+<li>外部网关协议</li>
+</ul>
+<ul>
 <li><p>内部网关协议</p>
 <ul>
 <li>RIP是内部网关协议中最先得到广泛应用的协议，也被称为路由信息协议，但是其很少被使用。其主要特点如下：<ul>
@@ -998,28 +994,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <ul>
 <li><p>慢开始与拥塞窗口</p>
 <ul>
-<li><p>TCP 采用基于窗口的方法进行拥塞控制。该方法属于闭环控制方法。</p>
-</li>
-<li><p>TCP发送方维持一个拥塞窗口 cwnd</p>
-</li>
+<li>TCP 采用基于窗口的方法进行拥塞控制。该方法属于闭环控制方法。</li>
+<li>TCP发送方维持一个拥塞窗口 cwnd</li>
 <li><p>发送端利用拥塞窗口根据网络的拥塞情况调整发送的数据量。</p>
 </li>
 <li><p>发送窗口大小不仅取决于接收方窗口，还取决于网络的拥塞状况</p>
 </li>
-<li><p>只要网络没有出现拥塞，拥塞窗口就可以再增大一些，以便把更多的分组发送出去，这样就可以提高网络的利用率。</p>
-</li>
-<li><p>但只要网络出现拥塞或有可能出现拥塞，就必须把拥塞窗口减小一些，以减少注入到网络中的分组数，以便缓解网络出现的拥塞。</p>
-</li>
-<li><p>其中，对于拥塞的判断，有以下两个指标：1.重传定时器超时。2.收到三个重复的ACK。</p>
-</li>
+<li>只要网络没有出现拥塞，拥塞窗口就可以再增大一些，以便把更多的分组发送出去，这样就可以提高网络的利用率。</li>
+<li>但只要网络出现拥塞或有可能出现拥塞，就必须把拥塞窗口减小一些，以减少注入到网络中的分组数，以便缓解网络出现的拥塞。</li>
+<li>其中，对于拥塞的判断，有以下两个指标：1.重传定时器超时。2.收到三个重复的ACK。</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <h3 id="应用层协议"><a href="#应用层协议" class="headerlink" title="应用层协议"></a>应用层协议</h3><ul>
-<li><p>应用层协议主要定义运行在不同端系统上的应用程序进程之间如何相互传递信息</p>
-</li>
+<li>应用层协议主要定义运行在不同端系统上的应用程序进程之间如何相互传递信息</li>
 <li><p>常用的几种协议：DNS、FTP、HTTP、DHCP 的作用</p>
 <ul>
 <li>DNS：域名系统DNS是互联网使用的命名系统，用来把便于人们使用的机器名字转换为IP地址。DNS同时占用TCP协议与UDP协议的53号端口。</li>
@@ -1031,10 +1021,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 <li><p>在应用层，用到DNS协议，作用是域名解析，HTTP协议浏览器和服务器之间的交互访问协议。</p>
 </li>
-<li><p>在传输层，运用UDP域名解析协议使用的运输层协议，TCP浏览器和WWW服务器之间建立连接，提供可靠的数据传输。</p>
-</li>
-<li><p>在网际层IP，IP数据报传输和路由选择，ICMP提供网络传输中的差错检测，ARP将本机缺省的网关IP地址映射成物理地址（MAC地址）</p>
-</li>
+<li>在传输层，运用UDP域名解析协议使用的运输层协议，TCP浏览器和WWW服务器之间建立连接，提供可靠的数据传输。</li>
+<li>在网际层IP，IP数据报传输和路由选择，ICMP提供网络传输中的差错检测，ARP将本机缺省的网关IP地址映射成物理地址（MAC地址）</li>
 </ul>
 
   
@@ -1052,6 +1040,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/>http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -1067,13 +1059,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/">计算机科学与技术</a>
-    </a>
-  </div>
-
 
         
       
@@ -1090,77 +1075,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/&title=计算机网络 - Bezhuang's Blog&summary=
-计算机网络是计算机专业必修的重要课程之一，与现实世界结合得相当紧密，也是考研408计算机学科专业基础综合考试中的一门课程。计算机网络学习的核心内容就是网络协议的学习。网络协议是为计算机网络中进行数据交换而建立的规则、标准或者说是约定的集合。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/&title=计算机网络 - Bezhuang's Blog&summary=
-计算机网络是计算机专业必修的重要课程之一，与现实世界结合得相当紧密，也是考研408计算机学科专业基础综合考试中的一门课程。计算机网络学习的核心内容就是网络协议的学习。网络协议是为计算机网络中进行数据交换而建立的规则、标准或者说是约定的集合。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/&title=计算机网络 - Bezhuang's Blog&summary=
-计算机网络是计算机专业必修的重要课程之一，与现实世界结合得相当紧密，也是考研408计算机学科专业基础综合考试中的一门课程。计算机网络学习的核心内容就是网络协议的学习。网络协议是为计算机网络中进行数据交换而建立的规则、标准或者说是约定的集合。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEXUlEQVR42u3aQXLjMAwEQP//08kLXCIGICW5mjfvOqLYzAGY4PNnbVkfBGDBWmDBgrXAHoH9hOtygy/f//Z5elXfa8oDLFiwYMGCBQsW7FnY5QK4CXsFnO67fPDmPpfnAAsWLFiwYMGCBXsLbPXF0gaiW5ivXlQVsu0BFixYsGDBggUL9tWwu6DSC0obBLBgwYIFCxYsWLC/DTsdjKcDFWkjABYsWLBgwYIFC/bdsOUBhWLAvXqg7poGPz4JAxYsWLBgwYIFC3YJNg2mf/Vz7AEWLFiwYMGCBQv2COx0IV590W7wXW0Qug3B5b5gwYIFCxYsWLBgj8CmBXI1AK8W5mlQvrpf9UKX3w8sWLBgwYIFCxbsEdh0gKF6wKkLqb7X1IUv/zxYsGDBggULFizYI7DpwdMCPm0IdgfjYwE7WLBgwYIFCxYs2FtgqwV69QWmA+jVi93VSCw3CGDBggULFixYsGBHYbsFdHrw1YvsNhC7oL9+DyxYsGDBggULFuxR2O4gwypcevAuVBq4l/8dLFiwYMGCBQsW7CNgpwLwFLbakKT7Vn/+6/uCBQsWLFiwYMGCvRV2KvDuFvDdIL06AAIWLFiwYMGCBQv2HbDVwYQ0AE9BpwY9poN8sGDBggULFixYsM+CnWoYuoMQ3UagG8ynvyhgwYIFCxYsWLBgz8B2A+pqwZ4+Py3k0+A7boDAggULFixYsGDBHoHtBsdTAXl1re6Xnq/aiIAFCxYsWLBgwYK9BzZ94WnAaZDqvukFgwULFixYsGDBgj0LWz3gVCHeDpSb7zX9fbBgwYIFCxYsWLD3wk4duBoUp/9fbTBWG4PqvmDBggULFixYsGDPwq4+eGygIRwM6cJODYKABQsWLFiwYMGCfSZsd0AiHaiownUD97RRuHwOWLBgwYIFCxYs2Ftg00I6DcCnL3j6IsqDJ2DBggULFixYsGCPwFYL/enGYWogpBu8pwF/eRIGLFiwYMGCBQsW7Chs+QHNwYi00O/CdRsFsGDBggULFixYsM+ATQv06mBEd6Bj1y9C2jCU/4IAFixYsGDBggUL9ghsFWqq0O4G19MDJWDBggULFixYsGDfAZsesAuRfq/bWEyBggULFixYsGDBgn0WbFqYrxbqu4Lp9ILajQVYsGDBggULFizYR8BWN54q7NNGIh0YqV7kWOcFFixYsGDBggULNoLtrnIQXCz000J9VzB+eQ6wYMGCBQsWLFiwR2C7g8OrMNOFfbfAr35ebljAggULFixYsGDBHoXtBtJpUDy9qoV/t0EACxYsWLBgwYIF+wzYboFdHfCYGsToNiZjFwYWLFiwYMGCBQv2VbDVILobPE8NmkzvCxYsWLBgwYIFC/ZdsN2GoBtIT11o9/3BggULFixYsGDB3gNbLaxXIXZdVLVhmbrY7ZMwYMGCBQsWLFiwYJdgqyuFTp/TLeyrhf/YwAZYsGDBggULFizYLbDW7AILFqwFFixYC+zW9Q+5PROnpjIGswAAAABJRU5ErkJggg==">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/&text=计算机网络 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1332,17 +1246,9 @@ The Accenture Know-the-Code Virtual Experience Program covers the fundamentals o
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1468,8 +1374,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1825,29 +1729,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1886,7 +1767,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1946,20 +1827,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -2172,6 +2039,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

@@ -107,7 +107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -231,16 +231,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -363,16 +373,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -396,7 +416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -419,36 +439,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -482,6 +472,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/">计算机科学与技术</a>
+    </a>
+  </div>
+
 
           
         
@@ -523,8 +520,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p> 操作系统（OS）是管理和控制计算机硬件与软件资源，是计算机上直接运行的最基本的系统软件，任何其他软件都必须在操作系统的支持下才能运行。操作系统是用户和计算机的接口，同时也是计算机硬件和其他软件的接口。操作系统的功能包括管理计算机系统的硬件、软件及数据资源，控制程序运行，提供人机交互界面，为其它应用软件提供支持等。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h3><h4 id="操作系统基本概念"><a href="#操作系统基本概念" class="headerlink" title="操作系统基本概念"></a>操作系统基本概念</h4><ul>
 <li>冯诺依曼模型：运算器、存储器、控制器、输入设备和输出设备</li>
 <li>引入操作系统的目的：提供一个计算机用户与计算机硬件系统之间的接口、有效的控制和管理计算机系统中的各种硬件和软件资源、合理地组织计算机系统的工作流程</li>
@@ -593,23 +589,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <h3 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h3><h4 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h4><ul>
-<li><p>在计算机操作系统中，进程是资源分配的基本单位，也是独立运行的基本单位</p>
-<ul>
+<li>在计算机操作系统中，进程是资源分配的基本单位，也是独立运行的基本单位<ul>
 <li>程序顺序执行时的特征：顺序性，封闭性，可再现性</li>
 <li>程序的并发执行的特征：间断性，失去封闭性，不可再现性</li>
 </ul>
 </li>
-<li><p>程序并发执行且其结果具有可再现性的条件（Bernstein 条件）</p>
-<ul>
+<li>程序并发执行且其结果具有可再现性的条件（Bernstein 条件）<ul>
 <li>R(p1) ∩ W(p2) = ∅</li>
 <li>R(p2) ∩ W(p1) = ∅</li>
 <li>W(p1) ∩ W(p2) = ∅</li>
 </ul>
 </li>
-<li><p>进程的特征：动态性、并发性、独立性、异步性、结构特征（程序段、数据段和进程控制块）</p>
-</li>
-<li><p>进程和程序的关系</p>
-<ul>
+<li>进程的特征：动态性、并发性、独立性、异步性、结构特征（程序段、数据段和进程控制块）</li>
+<li>进程和程序的关系<ul>
 <li>进程和程序的关系程序是静止的</li>
 <li>进程是暂时的，程序是永久的</li>
 <li>进程的组成包括程序段、数据块和进程控制块（Process Control Block）</li>
@@ -617,13 +609,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>进程可创建其他进程，而程序不能形成新的程序</li>
 </ul>
 </li>
-<li><p>由程序段、相关数据段和PCB三部分构成的是进程映像，也叫进程实体</p>
-<ul>
+<li>由程序段、相关数据段和PCB三部分构成的是进程映像，也叫进程实体<ul>
 <li>映像是静态的，进程是动态的，进程是进程实体的运行过程</li>
 </ul>
 </li>
-<li><p>进程和作业的区别</p>
-<ul>
+<li>进程和作业的区别<ul>
 <li>作业是用户需要计算机完成某项任务而要求计算机所做的工作的集合</li>
 <li>作业提交、作业收容、作业执行、作业完成</li>
 <li>进程是已提交完毕的作业的执行过程，是资源分配的基本单位</li>
@@ -631,8 +621,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>这个作业可由多个进程组成，而必须至少由一个进程组成，但一个进程不能构成多个作业</li>
 </ul>
 </li>
-<li><p>进程的组成</p>
-<ul>
+<li>进程的组成<ul>
 <li>进程控制块（PCB）：标识进程的存在，刻画执行瞬间特征的数据机构</li>
 <li>其他组成部分：程序段、数据段、进程标识符（PID）、进程当前状态、进程队列指针、程序和数据地址，进程优先级、CPU 现场保护区、通信信息、家族联系、占有资源清单</li>
 </ul>
@@ -651,33 +640,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>进程状态是唯一的</li>
 </ul>
 </li>
-<li><p>进程的创建</p>
-<ul>
+<li>进程的创建<ul>
 <li>进程创建是通过创建原语实现的</li>
 <li>申请一个空闲 PCB，并指定唯一的 PID -&gt; 分配必要的资源 -&gt; 将新进程的PCB初始化 -&gt; 插入到就绪队列</li>
 <li>导致进程创建的事件：用户登录、作业调度和请求服务</li>
 </ul>
 </li>
-<li><p>撤销一个进程：撤销原语</p>
-<ul>
+<li>撤销一个进程：撤销原语<ul>
 <li>找到被撤销进程的PCB -&gt; 停止该进程的执行 -&gt; 回收被撤销进程所占用的资源 -&gt; 回收PCB</li>
 </ul>
 </li>
-<li><p>进程的阻塞与唤醒：两条低级进程通讯原语</p>
-<ul>
+<li>进程的阻塞与唤醒：两条低级进程通讯原语<ul>
 <li>阻塞原语（P 原语）的功能是将进行进程由执行状态转为阻塞状态</li>
 <li>唤醒原语（V 原语）的功能是将进程由阻塞状态变为就绪状态</li>
 <li>一个进程由执行状态变为阻塞状态，是由这个进程自己调用阻塞原语去完成的</li>
 <li>进程由阻塞状态变为就绪状态，是由另一个发现者进程调用唤醒原语去实现的。一般这个发现者进程与被唤醒进程是合作的并发进程</li>
 </ul>
 </li>
-<li><p>调度是决定将系统资源分配给哪个进程，进程切换是实际分配系统资源</p>
-<ul>
+<li>调度是决定将系统资源分配给哪个进程，进程切换是实际分配系统资源<ul>
 <li>进程切换一定会产生中断，但处理器模式切换不一定产生进程切换</li>
 </ul>
 </li>
-<li><p>进程的互斥与同步就是一种进程间的通信方式</p>
-<ul>
+<li>进程的互斥与同步就是一种进程间的通信方式<ul>
 <li>高级进程通信方式：共享存储器系、消息传递系统、管道（共享文件）通信系统</li>
 </ul>
 </li>
@@ -771,10 +755,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <h4 id="同步与互斥"><a href="#同步与互斥" class="headerlink" title="同步与互斥"></a>同步与互斥</h4><ul>
-<li><p>互斥是间接相互制约关系，而同步是直接相互制约关系</p>
-</li>
-<li><p>只要是同类进程即为互斥关系，不同类进程即为同步关系</p>
-</li>
+<li>互斥是间接相互制约关系，而同步是直接相互制约关系</li>
+<li>只要是同类进程即为互斥关系，不同类进程即为同步关系</li>
 <li><p>临界资源：同时仅允许一个进程使用的资源</p>
 <ul>
 <li>进入区、临界区、退出区、剩余区</li>
@@ -785,8 +767,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 <li><p>互斥的要求：空闲让进，忙则等待，有限等待，让权等待</p>
 </li>
-<li><p>互斥实现方法</p>
-<ul>
+<li>互斥实现方法<ul>
 <li>软件实现方法</li>
 <li>互斥实现的硬件方法：中断屏蔽、硬件指令</li>
 <li>硬件方法适用范围广，支持多个临界区，但不能实现让权等待</li>
@@ -797,7 +778,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>信号量 <code>(s,q)</code> 及同步原语<ul>
 <li>整型变量 s 表示系统中某类资源的数目，q 是一个初始状态为空的队列</li>
 <li>信号量的值仅能由 P 操作（wait）操作和 V 操作（signal）操作改变，操作系统利用它的状态对进程和资源进行管理</li>
-<li> P 操作相当于申请资源，V 操作相当于释放资源</li>
+<li>P 操作相当于申请资源，V 操作相当于释放资源</li>
 </ul>
 </li>
 <li>信号量分为整型信号量和记录型信号量（资源信号量）<ul>
@@ -831,7 +812,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 <li>实现同步互斥的 P、V 操作必须成对出现，先进行 P 操作进入临界区，后进行 V 操作退出临界区</li>
-<li> P、V操作要分别紧靠临界区的头尾部</li>
+<li>P、V操作要分别紧靠临界区的头尾部</li>
 <li>通常用于互斥的信号量初值设为 1</li>
 </ul>
 <h4 id="管程"><a href="#管程" class="headerlink" title="管程"></a>管程</h4><ul>
@@ -1038,8 +1019,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <h4 id="虚拟内存的基本概念"><a href="#虚拟内存的基本概念" class="headerlink" title="虚拟内存的基本概念"></a>虚拟内存的基本概念</h4><ul>
-<li><p>在真实的操作系统中，通常采用段页式存储管理，段面向用户，页面向硬件</p>
-</li>
+<li>在真实的操作系统中，通常采用段页式存储管理，段面向用户，页面向硬件</li>
 <li><p>虚拟内存解决的问题</p>
 <ul>
 <li>一次性：作业必须一次性全部装入内存后才能开始运行。这会造成两个问题：①作业很大时，不能全部装入内存，导致大作业无法运行；②当大量作业要求运行时，由于内存无法容纳所有作业，因此只有少量作业能运行，导致多道程序并发度下降</li>
@@ -1061,8 +1041,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>理解缺页，缺页就像货架上缺少了商品，需要从仓库里调取商品，就先暂停这个货架的销售，等商品调取完毕再重新出售。</li>
 </ul>
 <h4 id="页面置换算法"><a href="#页面置换算法" class="headerlink" title="页面置换算法"></a>页面置换算法</h4><ul>
-<li><p>置换算法的评价指标是：缺页的次数，某种算法让缺页次数最低，调度效率最高，那就是最优的算法</p>
-</li>
+<li>置换算法的评价指标是：缺页的次数，某种算法让缺页次数最低，调度效率最高，那就是最优的算法</li>
 <li><p>最佳置换算法：每次淘汰的页面都是以后永久不用或最长时间不使用的页面，保证最低的缺页率。显然，这种需要预测未来的算法不可能实现。</p>
 </li>
 <li><p>先进先出算法FIFO：缺页时，淘汰最早进入的页面。算法简单，但局限性也明显，例如某些经常使用的页面一直被换进换出，和使用频率低的页面有相同的被换出的机会。</p>
@@ -1097,8 +1076,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>多级索引顺序文件：在索引顺序文件的基础上再增加层次深度，可以减少查找的次数(顺序查找范围缩小了)</li>
 </ul>
 <h4 id="文件目录"><a href="#文件目录" class="headerlink" title="文件目录"></a>文件目录</h4><ul>
-<li><p>文件目录可以分为：单级目录结构、两级目录结构、多级目录结构(树形目录结构)</p>
-</li>
+<li>文件目录可以分为：单级目录结构、两级目录结构、多级目录结构(树形目录结构)</li>
 <li><p>单极目录结构：顾名思义，所有的文件放在一个目录中，类似于一个仓库把所有文件不加整理的堆放在一起，显然效率会很低下</p>
 </li>
 <li><p>两级目录结构:主要分为主文件目录和用户文件目录。类似于仓库中加了几个员工货架，不同员工的货物放在不同货架，但在一个货架中文件还是采用堆砌式的存储。</p>
@@ -1132,12 +1110,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <ul>
-<li><p>显式：直观理解就是在隐式的基础上添加了一张表，从表上能看出不同物理块号的下一块的地址</p>
-</li>
-<li><p>结论：采用链式分配（显式链接）方式的文件，支持顺序访问，也支持随机访问（想访问i 号逻辑块时，并不需要依次访问之前的0 ~ i-1号逻辑块），由于块号转换的过程不需要访问磁盘，因此相比于隐式链接来说，访问速度快很多</p>
-</li>
-<li><p>显式链接也不会产生外部碎片，也可以很方便地对文件进行拓展。</p>
-</li>
+<li>显式：直观理解就是在隐式的基础上添加了一张表，从表上能看出不同物理块号的下一块的地址</li>
+<li>结论：采用链式分配（显式链接）方式的文件，支持顺序访问，也支持随机访问（想访问i 号逻辑块时，并不需要依次访问之前的0 ~ i-1号逻辑块），由于块号转换的过程不需要访问磁盘，因此相比于隐式链接来说，访问速度快很多</li>
+<li>显式链接也不会产生外部碎片，也可以很方便地对文件进行拓展。</li>
+</ul>
+<ul>
 <li><p>索引分配</p>
 <ul>
 <li>索引就是文件分成不同的物理块存入磁盘，对每个物理块都有一个索引与之对应，需要读写时就通过索引表查询其物理地址进行相关操作</li>
@@ -1165,8 +1142,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>那么很可能磁头就会如图所示的移动，也会存在饥饿问题：磁头只在一个小区域移动，而不能满足需要远距离移动的需求。例如不断有18-&gt;38，38-&gt;18的需求，那磁头就不会执行18-&gt;150的请求，从而产生饥饿</li>
 </ul>
 </li>
-<li><p>扫描算法</p>
-<ul>
+<li>扫描算法<ul>
 <li>核心思想，只有磁头移动到最外侧磁道的时候才能往内侧移动，移动到最内侧的时候才能向外侧移动。这样就不会产生饥饿问题。</li>
 </ul>
 </li>
@@ -1192,8 +1168,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <h4 id="I-O设备"><a href="#I-O设备" class="headerlink" title="I/O设备"></a>I/O设备</h4><ul>
-<li><p>I/O就是输入输出，I/O设备就是可以将数据输入到计算机或将计算机数据输出的设备，常见的：鼠标、键盘、音响、显示器、打印机、话筒、摄像头等等。</p>
-</li>
+<li>I/O就是输入输出，I/O设备就是可以将数据输入到计算机或将计算机数据输出的设备，常见的：鼠标、键盘、音响、显示器、打印机、话筒、摄像头等等。</li>
 <li><p>I/O控制器:CPU无法直接控制I/O设备，需要一个电子部件去充当中间人，这个部件就是I/O控制器，CPU控制I/O控制器，I/O控制器控制I/O设备。</p>
 </li>
 <li><p>假如我们的CPU能够控制I/O设备，那不同的厂商、不同型号的设备，都要对应进行编码，显然是不切实际的，所以CPU要采用通用调度方式调度I/O设备从而需要I/O控制器。</p>
@@ -1217,6 +1192,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/>http://blog.zhuangzhihao.top/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -1232,13 +1211,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/">计算机科学与技术</a>
-    </a>
-  </div>
-
 
         
       
@@ -1255,77 +1227,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/&title=操作系统 - Bezhuang's Blog&summary=
- 操作系统（OS）是管理和控制计算机硬件与软件资源，是计算机上直接运行的最基本的系统软件，任何其他软件都必须在操作系统的支持下才能运行。操作系统是用户和计算机的接口，同时也是计算机硬件和其他软件的接口。操作系统的功能包括管理计算机系统的硬件、软件及数据资源，控制程序运行，提供人机交互界面，为其它应用软件提供支持等。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/&title=操作系统 - Bezhuang's Blog&summary=
- 操作系统（OS）是管理和控制计算机硬件与软件资源，是计算机上直接运行的最基本的系统软件，任何其他软件都必须在操作系统的支持下才能运行。操作系统是用户和计算机的接口，同时也是计算机硬件和其他软件的接口。操作系统的功能包括管理计算机系统的硬件、软件及数据资源，控制程序运行，提供人机交互界面，为其它应用软件提供支持等。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/&title=操作系统 - Bezhuang's Blog&summary=
- 操作系统（OS）是管理和控制计算机硬件与软件资源，是计算机上直接运行的最基本的系统软件，任何其他软件都必须在操作系统的支持下才能运行。操作系统是用户和计算机的接口，同时也是计算机硬件和其他软件的接口。操作系统的功能包括管理计算机系统的硬件、软件及数据资源，控制程序运行，提供人机交互界面，为其它应用软件提供支持等。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADsUlEQVR42u3aQZYaMQwEUO5/6eQAefPaJckgJt87kqHb/rAoSv36Y5XWCwE4cODAWeDALYF7FddP70+v+8/GDu/30/ue/r19XnDgwIEDBw4cuGVwxwEwhDt9PQ2e3vf4vODAgQMHDhw4cEvh0gBaDbTd96V/N3ZecODAgQMHDhy4XwJ3Wih2QdN9pkEcHDhw4MCBAwfuf4PrHmi6mJzeLzhw4MCBAwcO3LfApQPaU4jq308Vqusm+eDAgQMHDhw4cENw6bodSN8deI/PCw4cOHDgwIEDtwRuat0uFNP7VQPv4znBgQMHDhw4cOCWwJ0Wk2kgTh9ITA+cDrTTBw+PfzmAAwcOHDhw4MB9GG56wDu18XRAnYKffiHAgQMHDhw4cOC2wVVvkEJVB9zp9bsfwOMHCw4cOHDgwIEDtwSuO8hNgauFZHfAPPYFAAcOHDhw4MCBWwJ3HPyaRWE3yFaL1Grwbf9yAAcOHDhw4MCBezNcWizeKkTT+1eDeAwJDhw4cODAgQO3BK77IF4amNOAfGuf5XOBAwcOHDhw4MB9KdytwrBaUFaLznKxCg4cOHDgwIEDtwzu9kangu+tBxhPzwsOHDhw4MCBA7cNrhpQb4FXi8apAN4eSIMDBw4cOHDgwL0JLg2u3SB6GnyrMFW48V8O4MCBAwcOHDhwl+HS4DkVkKcG3enrcpAHBw4cOHDgwIFbAndrcNyF7A6Qu+uxyAQHDhw4cODAgVsCl15wqtDsFpmnoGNBGhw4cODAgQMHbhlc9YbVA0xBdz/o032CAwcOHDhw4MB9C9xpMKwWm2kxeWvgHQdvcODAgQMHDhy4JXBpkE2LxeNgWYSvDrqr1wUHDhw4cODAgdsGVw2qKWi32Ez/f6pIBQcOHDhw4MCB2wo39QDh1PvTgvH0g732ywEcOHDgwIEDB+5DcNWBdHfAfOt1+oU4vj44cODAgQMHDtxyuKmNdjdcHZS/mitugMGBAwcOHDhw4N4M111dsCpAtYg8HXA/FpngwIEDBw4cOHAfhusGxOlCswvYDfCP1wMHDhw4cODAgVsGlwbe6us0gHYD+PUADA4cOHDgwIEDtwQuDbzdwnKq8KyCxoNzcODAgQMHDhy4XwbXDaKnQfvtgRccOHDgwIEDB+6XwlUHu9VCszqQntoXOHDgwIEDBw7cVrg0mJaDZBhwuwPrsYITHDhw4MCBAwduGVx3cNstKLvA1fu1i0xw4MCBAwcOHLgPwVnZAgcOHDhwFjhwH15/ASNPf6Z3OmeCAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/&text=操作系统 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1444,17 +1345,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1580,8 +1473,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1937,29 +1828,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1998,7 +1866,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -2058,20 +1926,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -2284,6 +2138,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
+    </a>
+  </div>
 
 
           
@@ -506,7 +500,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：474字</p>
+      <p>字数：483字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -529,81 +523,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>freeCodeCamp 响应式网页设计的认证课程第三章。为你的网页选择正确的颜色可以大大提高对读者的审美吸引力。在通过构建一组彩色标记来学习 CSS 颜色的课程中，构建一组彩色标记，学习设置颜色值的不同方法以及如何将颜色相互配对。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、重点-HTML-代码"><a href="#一、重点-HTML-代码" class="headerlink" title="一、重点 HTML 代码"></a>一、重点 HTML 代码</h3><p>head 标签：</p>
-<pre><code class="html">&lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;Colored Markers&lt;/title&gt;
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot;&gt;
-&lt;/head&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Colored Markers<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">href</span>=<span class="string">&quot;styles.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>含多个 CSS class 的 div 标签：</p>
-<pre><code class="html">&lt;body&gt;
-    &lt;h1&gt;CSS Color Markers&lt;/h1&gt;
-    &lt;div class=&quot;container&quot;&gt;
-        &lt;div class=&quot;marker red&quot;&gt;
-            &lt;div class=&quot;cap&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;sleeve&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;marker green&quot;&gt;
-            &lt;div class=&quot;cap&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;sleeve&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;marker blue&quot;&gt;
-            &lt;div class=&quot;cap&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;sleeve&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/body&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>CSS Color Markers<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;marker red&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;cap&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;sleeve&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;marker green&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;cap&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;sleeve&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;marker blue&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;cap&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;sleeve&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>padding 属性：</p>
-<pre><code class="CSS">.container &#123;
-    background-color: rgb(255, 255, 255);
-    padding: 10px 0;
-&#125;
-.marker &#123;
-    width: 200px;
-    height: 25px;
-    margin: 10px auto;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>);</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.marker</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p> opacity 属性：</p>
-<pre><code class="CSS">.sleeve &#123;
-  opacity: 0.5;
-  width: 110px;
-  height: 25px;
-  background-color: white;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.sleeve</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">110px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: white;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>border-left 属性：</p>
-<pre><code class="CSS">.cap &#123;
-    width: 60px;
-    height: 25px;
-&#125;
-.sleeve &#123;
-    width: 110px;
-    height: 25px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-left: 10px double rgba(0, 0, 0, 0.75);
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.cap</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.sleeve</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">110px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.5</span>);</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">10px</span> double <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.75</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>多层 CSS class selector：</p>
-<pre><code class="CSS">.cap,
-.sleeve &#123;
-    display: inline-block;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.cap</span>,</span><br><span class="line"><span class="selector-class">.sleeve</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>linear-gradient 属性：</p>
-<pre><code class="CSS">.red &#123;
-    background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
-    box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.red</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="built_in">rgb</span>(<span class="number">122</span>, <span class="number">74</span>, <span class="number">14</span>), <span class="built_in">rgb</span>(<span class="number">245</span>, <span class="number">62</span>, <span class="number">113</span>), <span class="built_in">rgb</span>(<span class="number">162</span>, <span class="number">27</span>, <span class="number">27</span>));</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">20px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">83</span>, <span class="number">14</span>, <span class="number">14</span>, <span class="number">0.8</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>box-shadow 属性：</p>
-<pre><code class="css">.green &#123;
-    background: linear-gradient(#55680D, #71F53E, #116C31);
-    box-shadow: 0 0 20px 0 #3B7E20CC;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.green</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="number">#55680D</span>, <span class="number">#71F53E</span>, <span class="number">#116C31</span>);</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">20px</span> <span class="number">0</span> <span class="number">#3B7E20CC</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>HSL color model：</p>
-<pre><code class="CSS">.blue &#123;
-    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
-    box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.blue</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(<span class="built_in">hsl</span>(<span class="number">186</span>, <span class="number">76%</span>, <span class="number">16%</span>), <span class="built_in">hsl</span>(<span class="number">223</span>, <span class="number">90%</span>, <span class="number">60%</span>), <span class="built_in">hsl</span>(<span class="number">240</span>, <span class="number">56%</span>, <span class="number">42%</span>));</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">20px</span> <span class="number">0</span> <span class="built_in">hsla</span>(<span class="number">223</span>, <span class="number">59%</span>, <span class="number">31%</span>, <span class="number">0.8</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="https://free-code-camp-demo.vercel.app/通过构建一组彩色标记学习CSS颜色/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
 </div>
@@ -618,7 +556,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -643,6 +581,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/>http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -658,12 +600,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
 
 
         
@@ -681,77 +619,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/&title=通过构建一组彩色标记来学习 CSS 颜色 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第三章。为你的网页选择正确的颜色可以大大提高对读者的审美吸引力。在通过构建一组彩色标记来学习 CSS 颜色的课程中，构建一组彩色标记，学习设置颜色值的不同方法以及如何将颜色相互配对。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/&title=通过构建一组彩色标记来学习 CSS 颜色 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第三章。为你的网页选择正确的颜色可以大大提高对读者的审美吸引力。在通过构建一组彩色标记来学习 CSS 颜色的课程中，构建一组彩色标记，学习设置颜色值的不同方法以及如何将颜色相互配对。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/&title=通过构建一组彩色标记来学习 CSS 颜色 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第三章。为你的网页选择正确的颜色可以大大提高对读者的审美吸引力。在通过构建一组彩色标记来学习 CSS 颜色的课程中，构建一组彩色标记，学习设置颜色值的不同方法以及如何将颜色相互配对。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXgAAAF4CAAAAAB79r16AAAFI0lEQVR42u3cQW4jMQwEQP//07sPCAyLzdYkBkq3BLaGKs2ll8y+/lm/sl4IwIO3wIO3wIO3CvCvcL37/qd93xZ0+P20jtN9W3W9rQc8ePDgwYMHDx48+CL8cQA4/Hx6kO2+2xdkWv+0XvDgwYMHDx48ePDgb8CfHiC9iG3AmV7oto40UIEHDx48ePDgwYMH/5fhT4PQ9qDTi0gvpvWigAcPHjx48ODBgwf/DfCtRkhrwGr7M3jw4MGDBw8ePHjw3wSfBpFWIJkOEKWB6vZAF3jw4MGDBw8ePHjwT8D/dmD5tp9jL/DgwYMHDx48ePDgC/C3VtoISQNUOrjUCmLHLuDBgwcPHjx48ODBF+DTxsRTg0FPBbwp+PTFAg8ePHjw4MGDBw++CZ8GnDQgpYNNLYht0JruDx48ePDgwYMHDx78E/CnDYI0yJwGlmmwaTVA0sB4XBd48ODBgwcPHjx48AX4dIAnbZikF9yCmzZGpp/7eE7w4MGDBw8ePHjw4Avw6T/sbwPSFDIOLOV6t40d8ODBgwcPHjx48OAb8OlG6YHSRkjaKHlqgOrYBzx48ODBgwcPHjz4AvxvBY02+On30oZOGtjAgwcPHjx48ODBg78Bv21ctFb63DTIpAHreiMEPHjw4MGDBw8ePPjBQNP0wesgMfx9q9HyVIPn7f7gwYMHDx48ePDgwRfgtwNDrYbJ9CJbAa3dIAEPHjx48ODBgwcP/gn4LeQ2ON0aSEqD07QxMw5U4MGDBw8ePHjw4MEX4LcHvz1w1IY6HWhK6/jYUAEPHjx48ODBgwcPvgA/DQLtQaXXpXUK26rn+KLAgwcPHjx48ODBgy/Cp8Gk3ehIn5/uuw2O07rBgwcPHjx48ODBg2/Cn24whZ4eNK0nrevW+ePkCh48ePDgwYMHDx784A+Mpw2E1qBR64JiiOHn04AGHjx48ODBgwcPHnwT/unGxrbRkMK2gtw6kIEHDx48ePDgwYMHX4TfHqAF1Qb/BHv6AqTfBw8ePHjw4MGDBw/+JvzpxtvgdFzg8udpPe3gCB48ePDgwYMHDx78E/BPFz5twEwPmNaX1hUPNIEHDx48ePDgwYMHH8CnDYPtgdqA0+CTBqR08Ak8ePDgwYMHDx48+Bvw2+Czvbj0otKBo9aLNn4uePDgwYMHDx48ePAF+G3DY1p4+vtWA6M90DQ+H3jw4MGDBw8ePHjwBfjTBsM0mEz3nUJuA8+2zrg+8ODBgwcPHjx48OCL8K3GyLSg9IDpQNX0vKlLPNAEHjx48ODBgwcPHvwCPj3g9qKmF3arEZJexLgRAh48ePDgwYMHDx784j8KmjY6tiBpI2Lb8JjuNwUHDx48ePDgwYMHD/5J+GnwSYNVCjd97jaoTes63hc8ePDgwYMHDx48+AL8rQZAa4BoPDC03L/d6DnuQIEHDx48ePDgwYMHP4DfrhZYq4FxGnBOz9V+Pnjw4MGDBw8ePHjwDfhtUIgbAqUBolbDZvpiTYMYePDgwYMHDx48ePA34FsDQLcGn1owaRBMAxR48ODBgwcPHjx48E/ApxDbAaFtoGsNYE2D3viFAw8ePHjw4MGDBw/+C+DTQm/VdRr82gERPHjw4MGDBw8ePPi/BL890OmBpwe8FYTWgQ08ePDgwYMHDx48+AvwaZDYDhhtA9D0BZrWnXr8+Dx48ODBgwcPHjx48EX47cDQFPz2gNP0RUhflPGFggcPHjx48ODBgwdfgLeeXeDBg7fAg7fAg7cW6z8JVnI0mbA6eAAAAABJRU5ErkJggg==">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/&text=通过构建一组彩色标记来学习 CSS 颜色 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -870,17 +737,9 @@ freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1006,8 +865,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1363,29 +1220,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1424,7 +1258,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1484,20 +1318,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1710,6 +1530,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

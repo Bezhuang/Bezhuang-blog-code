@@ -22,9 +22,13 @@
 
   <!-- 页面元数据 -->
   
-  <title>留言板 - Bezhuang&#39;s Blog</title>
+  <title>结构体与 typedef 的使用 - Bezhuang&#39;s Blog</title>
   
 
+  
+    <meta name="description" content="
+在我们编写程序时，有时候需要将不同类型的数据组合为一个整体，以便于引用。例如，一名学生有学号、姓名、性别、年龄、地址等属性，如果针对学生的学号、姓名、年龄等都单独定义一个变量，那么在有多名学生时，变量就难以分清。为此，C 语言提供结构体来管理不同类型的数据组合。
+">
   
 
   <!-- feed -->
@@ -104,13 +108,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur "  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
       <p class="title"></p>
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
       </ul>
     </div>
@@ -226,16 +232,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -358,16 +374,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -389,9 +415,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper artitalk search' style="display: ;">
+        <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -415,36 +441,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='menu navigation'>
       <div class='list-h'>
         
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
-        
       </div>
     </div>
   </div>
@@ -460,8 +456,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-<div class='l_main no_sidebar'>
-    <article class="article post white-box reveal md shadow article-type-artitalk" id="artitalk" itemscope itemprop="blogPost">
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
   
 
 
@@ -470,22 +466,172 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
+      <h1 class="title">
+        结构体与 typedef 的使用
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/C-C/">C/C++</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>本文发布于：2022年5月11日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>字数：1.3k字</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>时长：5分钟</p>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
   </div>
 
 
   
-    <div id="artitalk_main"></div>
   
-  
-  <div class="checkbox times red checked"><input type="checkbox" checked="checked">
-            <p>若说说（留言板）内容未显示，请 <a href="javascript:location.reload();">刷新</a> 页面</p>
-            </div>
+  <blockquote>
+<p>在我们编写程序时，有时候需要将不同类型的数据组合为一个整体，以便于引用。例如，一名学生有学号、姓名、性别、年龄、地址等属性，如果针对学生的学号、姓名、年龄等都单独定义一个变量，那么在有多名学生时，变量就难以分清。为此，C 语言提供结构体来管理不同类型的数据组合。</p>
+</blockquote>
+<span id="more"></span>
+<h3 id="一、结构体的定义"><a href="#一、结构体的定义" class="headerlink" title="一、结构体的定义"></a>一、结构体的定义</h3><p>先声明一个结构体类型，再定义变量名。结构体类型声明要放在 main 函数之前，这样 main 函数中才可以使用这个结构体，工作中往往把结构体声明放在头文件中。</p>
+<p>注意，结构体类型声明最后一定要加分号，否则会编译不通。另外，定义结构体变量时，使用 struct student 来定义，不能只有 struct 或 student，否则也会编译不通。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">    <span class="type">float</span> score;</span><br><span class="line">    <span class="type">char</span> addr[<span class="number">30</span>];</span><br><span class="line">&#125;; <span class="comment">//结构体类型声明，注意最后一定要加分号</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">s</span> =</span> &#123;<span class="number">1001</span>, <span class="string">&quot;lele&quot;</span>, <span class="string">&#x27;M&#x27;</span>, <span class="number">20</span>, <span class="number">85.4</span>, <span class="string">&quot;Shenzhen&quot;</span>&#125;; <span class="comment">//定义及初始化</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">sarr</span>[3];</span></span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d%s %c %d %f %s\n&quot;</span>, s.num, s.name, s.sex, s.age, s.score, s.addr);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%s %c%d%f%s&quot;</span>, &amp;sarr[i].num, sarr[i].name, &amp;sarr[i].sex, &amp;sarr[i].age, &amp;sarr[i].score, sarr[i].addr);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d %s %c %d %f %s\n&quot;</span>, sarr[i].num, sarr[i].name, sarr[i].sex, sarr[i].age, sarr[i].score, sarr[i].addr);</span><br><span class="line">    &#125;</span><br><span class="line">    system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>sarr 是结构体数组变量。结构体的初始化只能在一开始定义，如果 <code>struct student s=&#123;1001,&quot;lele&quot;,&#39;M&#39;,20,85.4,&quot;Shenzhen&quot;&#125;</code> 已经执行，即 <code>struct student s</code> 已经定义，就不能再执行 <code>s=&#123;1001,&quot;lele&quot;,&#39;M&#39;,20,85.4,&quot;Shenzhen&quot;&#125;</code>。如果结构体变量已经定义, 那么只能对它的每个成员单独赋值，如 <code>s.num=1003</code>。</p>
+<p>采用 <code>结构体变量名,成员名</code> 的形式来访问结构体成员，例如用 <code>s.num</code> 访问学号。</p>
+<p>在进行打印输出时，必须访问到成员，而且 <code>printf</code> 中的 <code>%</code> 类型要与各成员匹配。使用 <code>scanf</code> 读取标准输入时，也必须是各成员取地址，然后进行存储，不可以写成 <code>&amp;s</code>，即不可以直接对结构体变量取地址。整型数据（<code>%d</code>）、浮点型数据（<code>%f</code>）、字符串型数据（<code>%s</code>）都会忽略空格，但是字符型数据（<code>%c</code>）不会忽略空格，所以如果要读取字符型数据，那么就要在待读取的字符数据与其他数据之间加入空格。</p>
+<h3 id="二、结构体指针"><a href="#二、结构体指针" class="headerlink" title="二、结构体指针"></a>二、结构体指针</h3><p>一个结构体变量的指针就是该变量所占据的内存段的起始地址。可以设置一个指针变量，用它指向一个结构体变量，此时该指针变量的值是结构体变量的起始地址。指针变量也可以用来指向结构体数组中的元素。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//结构体指针</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">s</span> =</span> &#123;<span class="number">1001</span>, <span class="string">&quot;wangle&quot;</span>, <span class="string">&quot;M&quot;</span>&#125;;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> <span class="title">sarr</span>[3] =</span> &#123;<span class="number">1001</span>, <span class="string">&quot;lilei&quot;</span>, <span class="string">&#x27;M&#x27;</span>, <span class="number">1005</span>, <span class="string">&quot;zhangsan&quot;</span>, <span class="string">&#x27;M&#x27;</span>, <span class="number">1007</span>, <span class="string">&quot;lili&quot;</span>, <span class="string">&#x27;F&#x27;</span>&#125;;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span> *<span class="title">p</span>;</span> <span class="comment">//定义结构体指针</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    p = &amp;s;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %c\n&quot;</span>, p-&gt;num, p-&gt;name, p-&gt;sex);</span><br><span class="line">    p = sarr;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %c\n&quot;</span>, (*p).num, (*p).name, (*p).sex); <span class="comment">//方式一获取成员</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %s %c\n&quot;</span>, p-&gt;num, p-&gt;name, p-&gt;sex);       <span class="comment">//方式二获取成员</span></span><br><span class="line">    num = p-&gt;num++;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;num=%d,p-&gt;num=%d\n&quot;</span>, num, p-&gt;num);</span><br><span class="line">    num = p++-&gt;num;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;num=%d,p-&gt;num=%d\n&quot;</span>, num, p-&gt;num);</span><br><span class="line">    system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到，p 就是一个结构体指针，可以对结构体 s 取地址并赋给 p，这样借助成员选择操作符，就可以通过 p 访问结构体的每个成员，然后进行打印。我们知道数组名中存储的是数据的首地址，所以可以将 <code>sarr</code> 赋给 p，这样就可以通过两种方式访问对应的成员。</p>
+<p>使用 <code>(*p).num</code> 访问成员为什么要加括号呢？原因是 “<code>.</code>” 成员选择的优先级高于 “<code>*</code>”（即取值）运算符，所以必须加括号，通过 <code>*p</code> 得到 <code>sarr[0]</code>，然后获取对应的成员。</p>
+<h3 id="三、typedef-的使用"><a href="#三、typedef-的使用" class="headerlink" title="三、typedef 的使用"></a>三、typedef 的使用</h3><p>使用 typedef 声明新的类型名来代替已有的类型名。使用 stu 定义结构体变量和使用 struct student 定义结构体变量是等价的；使用 INTEGER 定义变量 ⅰ 和使用 int 定义变量i是等价的；pstu 等价于 <code>struct student*</code>，所以 p 是结构体指针变量。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="comment">//结构体指针</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">&#125; stu, *pstu; <span class="comment">// pstu 等价于 struct student *</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> INTEGER;  <span class="comment">//代码即注释</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    stu s = &#123;<span class="number">1001</span>, <span class="string">&quot;wangle&quot;</span>, <span class="string">&#x27;M&#x27;</span>&#125;;</span><br><span class="line">    pstu p;  <span class="comment">//也可写为 stu *p，此时 p 也是结构体指针</span></span><br><span class="line">    INTEGER i = <span class="number">10</span>;</span><br><span class="line">    p = &amp;s;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;i=%d,p-&gt;num=%d\n&quot;</span>, i, p-&gt;num);</span><br><span class="line">    system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   
   
+    
+    <div class='footer'>
+      
+        <div class='references'>
+          <section class='header'>
+            
+              <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
+            
+            <span>参考资料（References）：</span>
+          </section>
+          <section class='body'>
+            <ul>
+              
+                <li>
+                  <a href="https://weread.qq.com/web/reader/1bf323f071f02f351bf2985" rel="external nofollow noopener noreferrer" target="_blank">
+                  跟“龙哥”学C语言编程
+                  </a>
+                </li>
+              
+            </ul>
+          </section>
+        </div>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+
+              
+            
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%20typedef/>http://blog.zhuangzhihao.top/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%20typedef/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          
+
+        
+      
+        
+          
+<div class='new-meta-item author'>
+  <a class='author' href="/about" rel="nofollow">
+    <img no-lazy src="https://cn.bing.com/th?id=AMMS_fc8f99fd41ebd737a71c4e13806db9a0&w=110&h=110&c=7&rs=1&qlt=80&pcl=f9f9f9&cdv=1&dpr=2&pid=16.1">
+    <p>Bezhuang</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+    </div>
+  </div>
+
+
   
   
 
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/HTML%E7%8C%AB%E5%92%AA%E7%9B%B8%E5%86%8C%E5%BA%94%E7%94%A8/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>通过编写猫咪相册应用学习 HTML</p>
+          <p class='content'>
+freeCodeCamp 响应式网页设计的认证课程第一章。HTML 标签赋予了网页结构。你可以使用 HTML 标签添加照片、按钮和其它元素到你的网页。在通过编写猫咪相册应用学习 HTML 的课...</p>
+        </a>
+      
+      
+        <a class='next' href='/%E6%B5%85%E8%B0%88%E6%8C%87%E9%92%88/'>
+          <p class='title'>浅谈 C 语言指针<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+计算机内存区域中的每字节都对应一个编号，这个编号就是“地址”。如果在程序中定义了一个变量，那么在对程序进行编译时，系统就会给这个变量分配内存单元。如果我们在程序中需要将某个整型、浮点型或字符型...</p>
+        </a>
+      
+    </div>
   
 </article>
 
@@ -509,40 +655,55 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </div>
 <aside class='l_side'>
   
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">一、结构体的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%BB%93%E6%9E%84%E4%BD%93%E6%8C%87%E9%92%88"><span class="toc-text">二、结构体指针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81typedef-%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">三、typedef 的使用</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
 
 </aside>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/artitalk"></script>
-<script>
-    new Artitalk(Object.assign({"appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","enable":true,"lang":"zh","pageSize":50,"shuoPla":"在编辑说说的输入框中的占位符","avatarPla":"自定义头像url的输入框的占位符","motion":0,"bgImg":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/006.jpg"}, {}))
-</script>
-<style>
-#artitalk_main #lazy{background: transparent !important}
-</style>
 		  
 		  <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="结构体与 typedef 的使用";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>
@@ -562,17 +723,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -698,8 +851,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1055,29 +1206,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1116,7 +1244,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1176,20 +1304,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1402,6 +1516,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

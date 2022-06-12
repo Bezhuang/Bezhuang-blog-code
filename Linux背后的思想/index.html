@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%84%9F%E6%83%B3/">观点与感想</a>
+    </a>
+  </div>
 
 
           
@@ -530,7 +524,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>Linus Torvalds，一个任何极客都不会陌生的名字，Linux之父、Git之父，大神在计算机领域的影响力可以说是划时代的。那么在这些传奇的背后蕴藏着怎样的思想呢？下面这个Linus2016年时在TED上接受的一次访谈或许能让我们对Linux背后的思想略窥一二。</p>
 </blockquote>
 <span id="more"></span>
-
 <h3 id="一、传奇的诞生"><a href="#一、传奇的诞生" class="headerlink" title="一、传奇的诞生"></a>一、传奇的诞生</h3><p>1991年的8月25日，一个刚进入赫尔辛基大学不久的21岁学生在学校的邮箱列表中公开了这样一封邮件：“What would you like to see most in minix —— small poll for my new operation system”，在邮件中他这么写道：“我正在开发一个（免费的）操作系统 …… 这只是出于爱好，不会像gnu那样庞大和专业 …… 我现在已经移植了bash和gcc …… 看起来几个月之内就会有实质性的进展”。1991年9月，他通过大学的FTP服务器发布了这个叫Freax的操作系统，随后它被重新命名为我们今天所熟知的名字：Linux。</p>
 <p>时至今日，我想我们已无需再多去赘述Linux产生的影响和它划时代的意义，我更想来聊聊的是Linus另一个对世界影响至深的理念——开源。</p>
 <p>Software is like sex, It‘s better when it’s free. —— Linus Torvalds</p>
@@ -541,34 +534,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>时至今日，开源机制能够运转良好，其中很重要的一个缘故是代码可以将所有的事情都转化为黑和白（1和0）。通常这样利于作出决定，代码要么执行，要么不执行，因此意味着更少的争议空间。当然，你也能将同样的原则应用到其它领域的一些地方（比如科研、学术），因为黑色和白色混合在一起不只是变成灰色，而是很多不同的颜色。</p>
 <h3 id="三、优雅的品味"><a href="#三、优雅的品味" class="headerlink" title="三、优雅的品味"></a>三、优雅的品味</h3><p>在Coding的领域，你不仅仅只需要打代码，还要对代码有好的品位。我们可以看看下面这个调用单向链表的例子：</p>
 <p>你是希望用if语句有一个特殊情况处理一个特殊情况，</p>
-<pre><code class="c">void remove_list_entry(entry)
-&#123;
-    prev = NULL;
-    walk = head;    // Walk the list
-    while (walk != entry)&#123;
-        prev = walk;
-        walk = walk-&gt;next;
-    &#125;    //Remove the entry by updating the head or the previous entry
-    if(!prev)
-        head = entry-&gt;next;
-    else
-        prev-&gt;next = entry-&gt;next;
-&#125;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">remove_list_entry</span><span class="params">(entry)</span></span><br><span class="line">&#123;</span><br><span class="line">    prev = <span class="literal">NULL</span>;</span><br><span class="line">    walk = head;    <span class="comment">// Walk the list</span></span><br><span class="line">    <span class="keyword">while</span> (walk != entry)&#123;</span><br><span class="line">        prev = walk;</span><br><span class="line">        walk = walk-&gt;next;</span><br><span class="line">    &#125;    <span class="comment">//Remove the entry by updating the head or the previous entry</span></span><br><span class="line">    <span class="keyword">if</span>(!prev)</span><br><span class="line">        head = entry-&gt;next;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        prev-&gt;next = entry-&gt;next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>还是直接通过指针变量指向next地址？</p>
-<pre><code class="c">void remove_list_entry(entry)
-&#123;
-    //The &quot;indirect&quot; pointer points to the address of the thing we&#39;ll update
-    indirect = &amp;head;
-    //Walk the list,looking for the thing that points to the entry we want to remove
-    while ((*indirect) != entry)
-        indirect = &amp;(*indirect)-&gt;next;
-        *indirect = entry-&gt;next    // .. and just remove it
-&#125;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">remove_list_entry</span><span class="params">(entry)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//The &quot;indirect&quot; pointer points to the address of the thing we&#x27;ll update</span></span><br><span class="line">    indirect = &amp;head;</span><br><span class="line">    <span class="comment">//Walk the list,looking for the thing that points to the entry we want to remove</span></span><br><span class="line">    <span class="keyword">while</span> ((*indirect) != entry)</span><br><span class="line">        indirect = &amp;(*indirect)-&gt;next;</span><br><span class="line">        *indirect = entry-&gt;next    <span class="comment">// .. and just remove it</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>CS 101，当碰到一个问题时，可以通过不同的方式被重写，移除一个特殊的情形恢复正常，就是好的代码。</p>
 <p>“Good taste is much bigger than clever or stupid. Good taste is about really seeing the big patterns and kind of instinctively knowing what’s the right way to do things.” </p>
 <h3 id="四、脚踏实地"><a href="#四、脚踏实地" class="headerlink" title="四、脚踏实地"></a>四、脚踏实地</h3><p>人们常常把特斯拉和爱迪生拿来对比。特斯拉是有远见的有疯狂创意的科学家，人们爱特斯拉（不然怎么满大街的毛豆3呢）。爱迪生则是一个常常被批评为乏味的人。但大神更崇尚后者，“Genius is one percent inspiration and 99 percent perspiration”，爱迪生也许不是一个很好的人，但他的努力帮助他完成很多不平凡的事情。</p>
 <p>“I am not a visionary, I do not have a five-year plan. I’m an engineer. And I’m perfectly happy with all the people who are walking around and just staring at the clouds and looking at the stars and saying, ‘I want to go there’. But I’m looking at the ground, and I want to fix the pothole that’s right in front of me before I fall in. This is the kind of person I am“。</p>
-<h3 id="五、笔者的其他一些废话"><a href="#五、笔者的其他一些废话" class="headerlink" title="五、笔者的其他一些废话"></a>五、笔者的其他一些废话</h3><p>“I do code for fun, but I also want to code for something meaningful”，纵观整篇访谈，这是让我印象最深的一句话。技术是为了实现目标、解决问题而存在的，我始终相信，我们创造出的每一个程序都应该有自己存在的价值和意义。大家是不是都听过一种说法，CV工程师，复制–&gt;粘贴，每天重复、机械的劳动，就和10年前的文员一样，整天CRUD，却离自己的初心渐行渐远。这是在尊重技术，还是只是为了名和利呢？</p>
+<h3 id="五、笔者的其他一些废话"><a href="#五、笔者的其他一些废话" class="headerlink" title="五、笔者的其他一些废话"></a>五、笔者的其他一些废话</h3><p>“I do code for fun, but I also want to code for something meaningful”，纵观整篇访谈，这是让我印象最深的一句话。技术是为了实现目标、解决问题而存在的，我始终相信，我们创造出的每一个程序都应该有自己存在的价值和意义。大家是不是都听过一种说法，CV工程师，复制—&gt;粘贴，每天重复、机械的劳动，就和10年前的文员一样，整天CRUD，却离自己的初心渐行渐远。这是在尊重技术，还是只是为了名和利呢？</p>
 <p>在知乎上看到这样一句话，让人感慨良多，它是这么说的：开源让更多人获取到技术，同时也让该技术和会该技术的劳动力变的廉价，以至于在资本家的眼里，那根本不叫技术。可能这的确是事实，大环境也决并非独立个体所能改变的，我们改变不了攫取价值的资本家，所能做的只是尽力向Linus那样去创造价值、贡献价值，To Make Someting Useful and Meaningful。我想，我们努力奋斗是为了更好地实践、创造和分享，这才是我们应有的初衷，这才是我们存在的意义。</p>
 <p>第一次写长文，难免有些生疏，有些语句不通也请见谅。遗憾自己书读的还是不够多，见识还是不够广，唯有加紧努力让拥有的能力赶上自己的心气。访谈的原视频放在下面了，有什么问题欢迎及时指正。</p>
 <h3 id="六、TED-访谈视频"><a href="#六、TED-访谈视频" class="headerlink" title="六、TED 访谈视频"></a>六、TED 访谈视频</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
@@ -590,6 +563,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Linux%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E6%83%B3/>http://blog.zhuangzhihao.top/Linux%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E6%83%B3/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -605,12 +582,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%84%9F%E6%83%B3/">观点与感想</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div>
 
 
         
@@ -628,77 +601,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Linux%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E6%83%B3/&title=听林纳斯聊聊 Linux 背后的思想 - Bezhuang's Blog&summary=
-Linus Torvalds，一个任何极客都不会陌生的名字，Linux之父、Git之父，大神在计算机领域的影响力可以说是划时代的。那么在这些传奇的背后蕴藏着怎样的思想呢？下面这个Linus2016年时在TED上接受的一次访谈或许能让我们对Linux背后的思想略窥一二。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Linux%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E6%83%B3/&title=听林纳斯聊聊 Linux 背后的思想 - Bezhuang's Blog&summary=
-Linus Torvalds，一个任何极客都不会陌生的名字，Linux之父、Git之父，大神在计算机领域的影响力可以说是划时代的。那么在这些传奇的背后蕴藏着怎样的思想呢？下面这个Linus2016年时在TED上接受的一次访谈或许能让我们对Linux背后的思想略窥一二。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Linux%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E6%83%B3/&title=听林纳斯聊聊 Linux 背后的思想 - Bezhuang's Blog&summary=
-Linus Torvalds，一个任何极客都不会陌生的名字，Linux之父、Git之父，大神在计算机领域的影响力可以说是划时代的。那么在这些传奇的背后蕴藏着怎样的思想呢？下面这个Linus2016年时在TED上接受的一次访谈或许能让我们对Linux背后的思想略窥一二。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEbElEQVR42u3ay44qMQwEUP7/p+/dj4Swy04apJPdPGjSp1nERb3+WUfWCwFYsBZYsGAtsFdgX+H6+/p3P3/6v/T36T7f/X3tfcCCBQsWLFiwYMFehS0fgJv/XwVLwat/r97H1AMsWLBgwYIFCxbsM7DdgSCF24JPB4nq/tqvBwsWLFiwYMGCBfsTsN3AeBo8TweGTwMAWLBgwYIFCxYsWLCVA/p0cEgLIluvAwsWLFiwYMGCBfsdsO2CQvOGp9edFkJ+pgkDFixYsGDBggULtgTbXSnIr/wce4AFCxYsWLBgwYK9Ajtd6QbSQHvruulA8NEDLFiwYMGCBQsW7BXY6sa6BYbTB/P0A7A1CIy/QQALFixYsGDBggW7Ctu9gSl8CpcWR6YfJLBgwYIFCxYsWLDfCXsq0E4D53QQmR7048EDLFiwYMGCBQsW7BXY9AamB+7pdbYC9O5gAxYsWLBgwYIFC/Y7YJ8KmKuQ6f5S4PXJCyxYsGDBggULFuxR2FMFjvSAP4VMA+xXuMCCBQsWLFiwYME+A/vUQX8afKdB9/YDAAsWLFiwYMGCBXsXNgXeuuEuSAqUfoDahRSwYMGCBQsWLFiwV2C7F+gOCFsH/jQo33pA5cEGLFiwYMGCBQsW7BXYKWC5yLAE1w2i08JIGpyDBQsWLFiwYMGCvQtbvcEqUHpA375udSDoDh7jbxDAggULFixYsGDBHoHtbqRb5NgKmrsPejvA/xh0gwULFixYsGDBgj0C24U8HWxvF0m6A0f6YMGCBQsWLFiwYMHehe0GvtOBIg2+t4P4dD8fBxmwYMGCBQsWLFiwV2C3igynChDTwaS73zYkWLBgwYIFCxYs2Edg04C5W9Cowm0H7NMDf/cDBRYsWLBgwYIFC/YubLegkAbWW++XDhTTB9r+BgEsWLBgwYIFCxbsUditoHor2D5VJNkK0sGCBQsWLFiwYME+C5sWGrqBcxdkWhTZGhDaHziwYMGCBQsWLFiwj8CmBYa0+DEFqMJUg/Tuvt4WNsCCBQsWLFiwYMEehd0KklPQreA8LXykg8Lb9wULFixYsGDBggV7BTYtJqQbmA4M6UCzHZCXJy+wYMGCBQsWLFiwR2BTmK2AOT2ITwecrX23Jy+wYMGCBQsWLFiwR2C7xeIUYiuIngbc0wcLFixYsGDBggUL9hnY6Q12ixvTIkg3kJ4WO9o+YMGCBQsWLFiwYK/ATtfWQTw98HcHmmkBZO0bBLBgwYIFCxYsWLAj2Fsbngbj3eLFqUFkLegGCxYsWLBgwYIFuwK7fUNpUJ0WPdIHtfWAwIIFCxYsWLBgwT4Lmx6gpwfxafC8VRBJiytgwYIFCxYsWLBgfws2LWCMD+LLoNP9gAULFixYsGDBgv1N2LTQkQbbU5hpYaRd2AALFixYsGDBggV7FDYtONwqSFSvnxZE0sIJWLBgwYIFCxYs2Gdg0wJD9cB+O9DeHmDKgxJYsGDBggULFizYK7DW7gILFqwFFixYC+zR9R8puBZ6yAeuKAAAAABJRU5ErkJggg==">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Linux%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E6%83%B3/&text=听林纳斯聊聊 Linux 背后的思想 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -817,17 +719,9 @@ Linus Torvalds，一个任何极客都不会陌生的名字，Linux之父、Git�
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -953,8 +847,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1310,29 +1202,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1371,7 +1240,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1431,20 +1300,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1657,6 +1512,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
+    </a>
+  </div>
 
 
           
@@ -506,7 +500,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：549字</p>
+      <p>字数：560字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -529,116 +523,39 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏览器如何展示你的网页。你可以使用 CSS 设置 HTML 元素的颜色、字体、大小等属性。在通过编写咖啡店菜单学习基础 CSS 课程中，通过为一个咖啡店网站设计菜单页来学习 CSS。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、重点-HTML-代码"><a href="#一、重点-HTML-代码" class="headerlink" title="一、重点 HTML 代码"></a>一、重点 HTML 代码</h3><p>meta 标签（自闭和）：</p>
-<pre><code class="HTML">&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-&lt;/head&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>head 中 link CSS 文件 <code>styles.css</code>：</p>
-<pre><code class="html">&lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;styles.css&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <p>header 标签：</p>
-<pre><code class="html">&lt;body&gt;
-  &lt;header&gt;
-        &lt;h1&gt;CAMPER CAFE&lt;/h1&gt;
-        &lt;p class=&quot;established&quot;&gt;Est. 2020&lt;/p&gt;
-    &lt;/header&gt;
-  &lt;hr&gt;
-&lt;/body&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">h1</span>&gt;</span>CAMPER CAFE<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;established&quot;</span>&gt;</span>Est. 2020<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>div 标签：</p>
-<pre><code class="html">&lt;div class=&quot;menu&quot;&gt;
-  &lt;!--header + main + footer--&gt;
-&lt;/div&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;menu&quot;</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--header + main + footer--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>article 标签：</p>
-<pre><code class="html">&lt;section&gt;
-    &lt;h2&gt;Coffee&lt;/h2&gt;
-    &lt;img src=&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg&quot; alt=&quot;coffee icon&quot;/&gt;
-    &lt;article class=&quot;item&quot;&gt;
-    &lt;p class=&quot;flavor&quot;&gt;French Vanilla&lt;/p&gt;&lt;p class=&quot;price&quot;&gt;3.00&lt;/p&gt;
-    &lt;/article&gt;
-&lt;section&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h2</span>&gt;</span>Coffee<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;coffee icon&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;flavor&quot;</span>&gt;</span>French Vanilla<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;price&quot;</span>&gt;</span>3.00<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>footer 标签：</p>
-<pre><code class="html">&lt;hr class=&quot;bottom-line&quot;&gt;
-&lt;footer&gt;
-    &lt;p&gt;
-    &lt;a href=&quot;https://www.freecodecamp.org&quot; target=&quot;_blank&quot;&gt;Visit our website&lt;/a&gt;
-    &lt;/p&gt;
-    &lt;p class=&quot;address&quot;&gt;123 Free Code Camp Drive&lt;/p&gt;
-&lt;/footer&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">hr</span> <span class="attr">class</span>=<span class="string">&quot;bottom-line&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.freecodecamp.org&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>Visit our website<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;address&quot;</span>&gt;</span>123 Free Code Camp Drive<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>CSS type selector：</p>
-<pre><code class="html">&lt;head&gt;
-  &lt;style&gt;
-        h1, h2, p &#123;
-            text-align: center;
-        &#125;
-    &lt;/style&gt;
-&lt;/head&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">		<span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">			<span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">		&#125;</span></span><br><span class="line"><span class="language-css">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>CSS 注释：</p>
-<pre><code class="CSS">/* FOOTER */</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* FOOTER */</span></span><br></pre></td></tr></table></figure>
 <p>background-image 属性：</p>
-<pre><code class="CSS">body &#123;
-    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
-    font-family: sans-serif;
-    padding: 20px;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg</span>);</span><br><span class="line">    <span class="attribute">font-family</span>: sans-serif;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>CSS class selector：</p>
-<pre><code class="CSS">.menu &#123;
-    width: 80%;
-    background-color: burlywood;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    max-width: 500px;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.menu</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: burlywood;</span><br><span class="line">    <span class="attribute">margin-left</span>: auto;</span><br><span class="line">    <span class="attribute">margin-right</span>: auto;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>多层 CSS style selector：</p>
-<pre><code class="CSS">h1, h2, p &#123;
-    text-align: center;
-&#125;
-h1, h2 &#123;
-    font-family: Impact, serif;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span>, <span class="selector-tag">h2</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: Impact, serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>多层 CSS class selector：</p>
-<pre><code class="CSS">.flavor, .dessert &#123;
-    text-align: left;
-    width: 75%;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.flavor</span>, <span class="selector-class">.dessert</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: left;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">75%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>display 属性：</p>
-<pre><code class="css">.item p &#123;
-    display: inline-block;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 18px;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>CSS pseudo-selector：</p>
-<pre><code class="CSS">a &#123;
-    color: black;
-&#125;
-a:visited &#123;
-    color: black;
-&#125;
-a:hover &#123;
-    color: brown;
-&#125;
-a:active &#123;
-    color: brown;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: brown;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:active</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: brown;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>给 img 和 hr 设置属性：</p>
-<pre><code class="CSS">img &#123;
-    margin: -25px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-&#125;
-hr &#123;
-    height: 2px;
-    background-color: brown;
-    border-color: brown;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: -<span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">margin-left</span>: auto;</span><br><span class="line">    <span class="attribute">margin-right</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line">hr &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: brown;</span><br><span class="line">    <span class="attribute">border-color</span>: brown;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>font-size 属性：</p>
-<pre><code class="CSS">footer &#123;
-    font-size: 14px;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">footer</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="https://free-code-camp-demo.vercel.app/通过编写咖啡店菜单学习基础CSS/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
 </div>
@@ -653,7 +570,7 @@ hr &#123;
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -678,6 +595,10 @@ hr &#123;
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/>http://blog.zhuangzhihao.top/CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -693,12 +614,8 @@ hr &#123;
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div>
 
 
         
@@ -716,77 +633,6 @@ hr &#123;
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/&title=通过编写咖啡店菜单学习基础 CSS - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏览器如何展示你的网页。你可以使用 CSS 设置 HTML 元素的颜色、字体、大小等属性。在通过编写咖啡店菜单学习基础 CSS 课程中，通过为一个咖啡店网站设计菜单页来学习 CSS。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/&title=通过编写咖啡店菜单学习基础 CSS - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏览器如何展示你的网页。你可以使用 CSS 设置 HTML 元素的颜色、字体、大小等属性。在通过编写咖啡店菜单学习基础 CSS 课程中，通过为一个咖啡店网站设计菜单页来学习 CSS。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/&title=通过编写咖啡店菜单学习基础 CSS - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第二章。CSS 负责告诉浏览器如何展示你的网页。你可以使用 CSS 设置 HTML 元素的颜色、字体、大小等属性。在通过编写咖啡店菜单学习基础 CSS 课程中，通过为一个咖啡店网站设计菜单页来学习 CSS。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEVUlEQVR42u3aQXLjQAgF0Nz/0jMHmEqp+dDInnq9S8qWmkcWQPj541w5PwjAgnXAggXrgF2B/QnP0/ePL/LwvN8+n35u6nu/eoAFCxYsWLBgwYJdhf0UiKf3niZ66ueyB1iwYMGCBQsWLNhXYKsXfwKuNg7TDUoaR+oBFixYsGDBggUL9jtgqwX/aSNwmrhqAQ8WLFiwYMGCBQsWbAekWvBXE1IdnIMFCxYsWLBgwYL9bti04K4ualRBbw/SP24TBixYsGDBggULFuwRbDew/+3n2AMsWLBgwYIFCxbsCmz3pIV7mrjqoDot/GMPsGDBggULFixYsCuw3UWK7oA4bTymB+bd94AFCxYsWLBgwYLdhU0L66mLVxOYAkwltDzoBgsWLFiwYMGCBXsFttoQpIPo6oW7DUY6GE+fAxYsWLBgwYIFC/Zd2O7ixa0FkDRxKVz8ebBgwYIFCxYsWLCrsFXIcuE8nIDTe003II/vAQsWLFiwYMGCBbsCW4XrFvS3B9vpgkYaB1iwYMGCBQsWLNh3YFPI6gtvJ+j0edcH6WDBggULFixYsGBXYdMLVi+SvrfaEKQD8Or3HxsEsGDBggULFixYsFdgT1+YDoarjUU30WlCxgb/YMGCBQsWLFiwYFdhq4V2dwGjG2i18E8L/vKAHSxYsGDBggULFuwq7BTo1EJwF3J64H48OAcLFixYsGDBggW7Anu8UBsOlqu/TxPSHcynz/nnc2DBggULFixYsGBXYI8L32HAtCDvNhLdP6D2fxDAggULFixYsGDBjsJWC+E08LTQrxb8acLajQ9YsGDBggULFizYj4DtBnYKfdqoTA3KryUeLFiwYMGCBQsW7Cuwt4HTgr4K0G2A4sSBBQsWLFiwYMGC/QjY6QI+DaBbyHcbieOEgAULFixYsGDBgl2FPW0EbsFNL2JUF03G4gULFixYsGDBggW7Ant98Ht5IF4NPF3IOIYGCxYsWLBgwYIFuwJ7ClAFrQ7Gq3DVhY403nLDABYsWLBgwYIFC/ZV2GqAW4sZ3Yah27iABQsWLFiwYMGC/UzYaiBpgV1NVJqwtPFJGx6wYMGCBQsWLFiwO7DpYDhtLKoXTxcrqo3L2B8KWLBgwYIFCxYs2BXY7gC4Wqh3B+bpQkg6wAcLFixYsGDBggX72bDdxYYu3PRJG4L03mDBggULFixYsGDfgU3PVIGeDs67z00bELBgwYIFCxYsWLDvwk4V4NUBeRrg9GC820D8OugGCxYsWLBgwYIFuwKbNgSnA+ApwOnFj24j8tgggAULFixYsGDBgl2BvVWATwHcHqy34wcLFixYsGDBggX7FbCnBXT1eSnUVCOT3gcsWLBgwYIFCxbsd8GOXWw5sdOJAQsWLFiwYMGCBfsObDpAThcxHi9ahKnGMx0vWLBgwYIFCxYs2F3Y6qkW0inE1CLFVOMAFixYsGDBggUL9jNgndkDFixYByxYsA7Yq+cvEgfR9rFvpf4AAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/&text=通过编写咖啡店菜单学习基础 CSS - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -905,17 +751,9 @@ freeCodeCamp 响应式网页设计的认证课程第一章。HTML 标签赋予�
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1041,8 +879,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1398,29 +1234,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1459,7 +1272,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1519,20 +1332,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1745,6 +1544,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

@@ -108,7 +108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -232,16 +232,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -364,16 +374,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -397,7 +417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -420,36 +440,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -483,6 +473,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Java/">Java</a>
+    </a>
+  </div>
+
 
           
         
@@ -524,117 +521,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>双色球是最常见的一种彩票。双色球投注区分为红球号码区和蓝球号码区，红球号码范围为01～33，蓝球号码范围为01～16。双色球每期从33个红球中开出6个号码，从16个蓝球中开出1个号码作为中奖号码，双色球玩法即是竞猜开奖号码的6个红球号码和1个蓝球号码，顺序不限。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、系统原理和设计"><a href="#一、系统原理和设计" class="headerlink" title="一、系统原理和设计"></a>一、系统原理和设计</h3><p>随机一组中奖号码：中奖号码由6个红球和1个蓝球组成。定义随机方法用于返回一组中奖号码（7个数据），返回的形式是一个整型数组。</p>
 <p>随机的6个中奖的红球号码不能重复：每次随机一个红球号码后去数组中判断是否存在，如果存在则需要重新随机一个数字直到不重复为止。</p>
 <p>用户输入一组双色球号码：定义一个方法录入用户输入的6个红球和1个蓝球号码，该方法最终需要返回一个数组，数组中就是用户录入的号码（7位）。</p>
 <p>中奖情况判断：定义一个方法接收中奖号码的数组，用户选号的数组，根据命中红球数和篮球数判断最终的中奖情况并输出详情和中奖金额。</p>
 <p>统计红球的命中数量：遍历用户的每个选号，然后遍历中奖号码的数组，看当前选号是否在中奖号码中存在，存在则命中数量加1。</p>
-<h3 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h3><pre><code class="java">public class DoubleChromosphere &#123;
-    public static void main(String[] args) &#123;
-        // 随机6个红球号码（1-33，不能重复），随机一个蓝球号码（1-16），用数组装起来作为中奖号码
-        int[] luckNumbers = createLuckNumber();
-        // printArray(luckNumbers);
-        // 录入用户选中的号码
-        int[] userNumbers = userInputNumbers();
-        // 判断中奖情况
-        judge(luckNumbers, userNumbers);
-    &#125;
-    public static void judge(int[] luckNumbers, int[] userNumbers )&#123;
-        // 判断是否中奖      
-        // 定义2个变量分别存储红球命中的个数，以及蓝球命中的个数
-        int redHitNumbers = 0;
-        int blueHitNumbers = 0;
-        // 判断红球命中了几个，开始统计
-        for (int i = 0; i &lt; userNumbers.length - 1; i++) &#123;
-            for (int j = 0; j &lt; luckNumbers.length - 1; j++) &#123;
-                // 每次找到了相等了，意味着当前号码命中了
-                if(userNumbers[i] == luckNumbers[j])&#123;
-                    redHitNumbers ++ ;
-                    break;
-                &#125;
-            &#125;
-        &#125;
-        // 蓝球号码是否命中
-        blueHitNumbers = luckNumbers[6] == userNumbers[6] ? 1 : 0;
-        System.out.println(&quot;中奖号码是：&quot;  );
-        printArray(luckNumbers);
-        System.out.println(&quot;您投注号码是：&quot;  );
-        printArray(userNumbers);
-        System.out.println(&quot;您命中了几个红球：&quot; + redHitNumbers);
-        System.out.println(&quot;您是否命中蓝球：&quot; + ( blueHitNumbers == 1 ? &quot;是&quot;: &quot;否&quot; ) );
-        // 判断中奖情况
-        if(blueHitNumbers == 1 &amp;&amp; redHitNumbers &lt; 3)&#123;
-            System.out.println(&quot;恭喜您，中了5元小奖！&quot;);
-        &#125;else if(blueHitNumbers == 1 &amp;&amp; redHitNumbers == 3
-                || blueHitNumbers == 0 &amp;&amp; redHitNumbers == 4)&#123;
-            System.out.println(&quot;恭喜您，中了10元小奖！&quot;);
-        &#125;else if(blueHitNumbers == 1 &amp;&amp; redHitNumbers == 4
-                || blueHitNumbers == 0 &amp;&amp; redHitNumbers == 5)&#123;
-            System.out.println(&quot;恭喜您，中了200元！&quot;);
-        &#125;else if(blueHitNumbers == 1 &amp;&amp; redHitNumbers == 5)&#123;
-            System.out.println(&quot;恭喜您，中了3000元大奖！&quot;);
-        &#125;else if(blueHitNumbers == 0 &amp;&amp; redHitNumbers == 6)&#123;
-            System.out.println(&quot;恭喜您，中了500万超级大奖！&quot;);
-        &#125;else if(blueHitNumbers == 1 &amp;&amp; redHitNumbers == 6)&#123;
-            System.out.println(&quot;恭喜您，中了1000万巨奖！可以开始享受人生，诗和远方！！&quot;);
-        &#125;else &#123;
-            System.out.println(&quot;感谢您为福利事业做出的突出贡献！！&quot;);
-        &#125;
-    &#125;
-    public static int[] userInputNumbers()&#123;
-        // 动态初始化一个数组，长度为7
-        int[] numbers = new int[7];
-        Scanner sc = new Scanner(System.in);
-        for (int i = 0; i &lt; numbers.length - 1; i++) &#123;
-            System.out.println(&quot;请您输入第&quot;+(i + 1)+&quot;个红球号码（1-33、不重复）：&quot;);
-            int data = sc.nextInt();
-            numbers[i] = data;
-        &#125;
-        // 录入一个蓝球号码
-        System.out.println(&quot;请您输入一个蓝球号码（1-16）：&quot;);
-        int data = sc.nextInt();
-        numbers[numbers.length - 1] = data;
-        return numbers;
-    &#125;
-    public static void printArray(int[] arr)&#123;
-        for (int i = 0; i &lt; arr.length; i++) &#123;
-            System.out.print(arr[i] + &quot; &quot;);
-        &#125;
-        System.out.println();
-    &#125;
-    public static int[] createLuckNumber()&#123;
-        // 定义一个动态初始化的数组，存储7个数字
-        int[] numbers = new int[7];  
-        // 遍历数组，为每个位置生成对应的号码。(注意：遍历前6个位置，生成6个不重复的红球号码，范围是1-33)
-        Random r = new Random();
-        for (int i = 0; i &lt; numbers.length - 1; i++) &#123;
-            // 为当前位置找出一个不重复的1-33之间的数字
-            while (true) &#123;
-                int data = r.nextInt(33) + 1; 
-                // 注意：必须判断当前随机的这个号码之前是否出现过，出现过要重新随机一个，直到不重复为止，才可以存入数组中去
-                // 定义一个flag变量，默认认为data是没有重复的
-                boolean flag = true;
-                for (int j = 0; j &lt; i; j++) &#123;
-                    if(numbers[j] == data) &#123;
-                        // data当前这个数据之前出现过，不能用
-                        flag = false;
-                        break;
-                    &#125;
-                &#125;
-                if(flag) &#123;
-                    // data这个数据之前没有出现过，可以使用了
-                    numbers[i] = data;
-                    break;
-                &#125;
-            &#125;
-        &#125;
-        // 为第7个位置生成一个1-16的号码作为蓝球号码
-        numbers[numbers.length - 1] = r.nextInt(16) + 1;
-        return numbers;
-    &#125;
-&#125;</code></pre>
+<h3 id="二、代码实现"><a href="#二、代码实现" class="headerlink" title="二、代码实现"></a>二、代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DoubleChromosphere</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 随机6个红球号码（1-33，不能重复），随机一个蓝球号码（1-16），用数组装起来作为中奖号码</span></span><br><span class="line">        <span class="type">int</span>[] luckNumbers = createLuckNumber();</span><br><span class="line">        <span class="comment">// printArray(luckNumbers);</span></span><br><span class="line">        <span class="comment">// 录入用户选中的号码</span></span><br><span class="line">        <span class="type">int</span>[] userNumbers = userInputNumbers();</span><br><span class="line">        <span class="comment">// 判断中奖情况</span></span><br><span class="line">        judge(luckNumbers, userNumbers);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">judge</span><span class="params">(<span class="type">int</span>[] luckNumbers, <span class="type">int</span>[] userNumbers )</span>&#123;</span><br><span class="line">        <span class="comment">// 判断是否中奖      </span></span><br><span class="line">        <span class="comment">// 定义2个变量分别存储红球命中的个数，以及蓝球命中的个数</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">redHitNumbers</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">blueHitNumbers</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 判断红球命中了几个，开始统计</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; userNumbers.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; luckNumbers.length - <span class="number">1</span>; j++) &#123;</span><br><span class="line">                <span class="comment">// 每次找到了相等了，意味着当前号码命中了</span></span><br><span class="line">                <span class="keyword">if</span>(userNumbers[i] == luckNumbers[j])&#123;</span><br><span class="line">                    redHitNumbers ++ ;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 蓝球号码是否命中</span></span><br><span class="line">        blueHitNumbers = luckNumbers[<span class="number">6</span>] == userNumbers[<span class="number">6</span>] ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;中奖号码是：&quot;</span>  );</span><br><span class="line">        printArray(luckNumbers);</span><br><span class="line">        System.out.println(<span class="string">&quot;您投注号码是：&quot;</span>  );</span><br><span class="line">        printArray(userNumbers);</span><br><span class="line">        System.out.println(<span class="string">&quot;您命中了几个红球：&quot;</span> + redHitNumbers);</span><br><span class="line">        System.out.println(<span class="string">&quot;您是否命中蓝球：&quot;</span> + ( blueHitNumbers == <span class="number">1</span> ? <span class="string">&quot;是&quot;</span>: <span class="string">&quot;否&quot;</span> ) );</span><br><span class="line">        <span class="comment">// 判断中奖情况</span></span><br><span class="line">        <span class="keyword">if</span>(blueHitNumbers == <span class="number">1</span> &amp;&amp; redHitNumbers &lt; <span class="number">3</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;恭喜您，中了5元小奖！&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(blueHitNumbers == <span class="number">1</span> &amp;&amp; redHitNumbers == <span class="number">3</span></span><br><span class="line">                || blueHitNumbers == <span class="number">0</span> &amp;&amp; redHitNumbers == <span class="number">4</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;恭喜您，中了10元小奖！&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(blueHitNumbers == <span class="number">1</span> &amp;&amp; redHitNumbers == <span class="number">4</span></span><br><span class="line">                || blueHitNumbers == <span class="number">0</span> &amp;&amp; redHitNumbers == <span class="number">5</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;恭喜您，中了200元！&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(blueHitNumbers == <span class="number">1</span> &amp;&amp; redHitNumbers == <span class="number">5</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;恭喜您，中了3000元大奖！&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(blueHitNumbers == <span class="number">0</span> &amp;&amp; redHitNumbers == <span class="number">6</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;恭喜您，中了500万超级大奖！&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(blueHitNumbers == <span class="number">1</span> &amp;&amp; redHitNumbers == <span class="number">6</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;恭喜您，中了1000万巨奖！可以开始享受人生，诗和远方！！&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;感谢您为福利事业做出的突出贡献！！&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span>[] userInputNumbers()&#123;</span><br><span class="line">        <span class="comment">// 动态初始化一个数组，长度为7</span></span><br><span class="line">        <span class="type">int</span>[] numbers = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">7</span>];</span><br><span class="line">        <span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; numbers.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;请您输入第&quot;</span>+(i + <span class="number">1</span>)+<span class="string">&quot;个红球号码（1-33、不重复）：&quot;</span>);</span><br><span class="line">            <span class="type">int</span> <span class="variable">data</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            numbers[i] = data;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 录入一个蓝球号码</span></span><br><span class="line">        System.out.println(<span class="string">&quot;请您输入一个蓝球号码（1-16）：&quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">data</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">        numbers[numbers.length - <span class="number">1</span>] = data;</span><br><span class="line">        <span class="keyword">return</span> numbers;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">printArray</span><span class="params">(<span class="type">int</span>[] arr)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.print(arr[i] + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span>[] createLuckNumber()&#123;</span><br><span class="line">        <span class="comment">// 定义一个动态初始化的数组，存储7个数字</span></span><br><span class="line">        <span class="type">int</span>[] numbers = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">7</span>];  </span><br><span class="line">        <span class="comment">// 遍历数组，为每个位置生成对应的号码。(注意：遍历前6个位置，生成6个不重复的红球号码，范围是1-33)</span></span><br><span class="line">        <span class="type">Random</span> <span class="variable">r</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Random</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; numbers.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="comment">// 为当前位置找出一个不重复的1-33之间的数字</span></span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">data</span> <span class="operator">=</span> r.nextInt(<span class="number">33</span>) + <span class="number">1</span>; </span><br><span class="line">                <span class="comment">// 注意：必须判断当前随机的这个号码之前是否出现过，出现过要重新随机一个，直到不重复为止，才可以存入数组中去</span></span><br><span class="line">                <span class="comment">// 定义一个flag变量，默认认为data是没有重复的</span></span><br><span class="line">                <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span>(numbers[j] == data) &#123;</span><br><span class="line">                        <span class="comment">// data当前这个数据之前出现过，不能用</span></span><br><span class="line">                        flag = <span class="literal">false</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(flag) &#123;</span><br><span class="line">                    <span class="comment">// data这个数据之前没有出现过，可以使用了</span></span><br><span class="line">                    numbers[i] = data;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 为第7个位置生成一个1-16的号码作为蓝球号码</span></span><br><span class="line">        numbers[numbers.length - <span class="number">1</span>] = r.nextInt(<span class="number">16</span>) + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> numbers;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   
   
@@ -649,6 +542,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
                 <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
 
+              
+            
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E5%8F%8C%E8%89%B2%E7%90%83/>http://blog.zhuangzhihao.top/%E5%8F%8C%E8%89%B2%E7%90%83/</a></p>
               
             
           </blockquote>
@@ -666,13 +563,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Java/">Java</a>
-    </a>
-  </div>
-
 
         
       
@@ -689,77 +579,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E5%8F%8C%E8%89%B2%E7%90%83/&title=Java 实现双色球系统 - Bezhuang's Blog&summary=
-双色球是最常见的一种彩票。双色球投注区分为红球号码区和蓝球号码区，红球号码范围为01～33，蓝球号码范围为01～16。双色球每期从33个红球中开出6个号码，从16个蓝球中开出1个号码作为中奖号码，双色球玩法即是竞猜开奖号码的6个红球号码和1个蓝球号码，顺序不限。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E5%8F%8C%E8%89%B2%E7%90%83/&title=Java 实现双色球系统 - Bezhuang's Blog&summary=
-双色球是最常见的一种彩票。双色球投注区分为红球号码区和蓝球号码区，红球号码范围为01～33，蓝球号码范围为01～16。双色球每期从33个红球中开出6个号码，从16个蓝球中开出1个号码作为中奖号码，双色球玩法即是竞猜开奖号码的6个红球号码和1个蓝球号码，顺序不限。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E5%8F%8C%E8%89%B2%E7%90%83/&title=Java 实现双色球系统 - Bezhuang's Blog&summary=
-双色球是最常见的一种彩票。双色球投注区分为红球号码区和蓝球号码区，红球号码范围为01～33，蓝球号码范围为01～16。双色球每期从33个红球中开出6个号码，从16个蓝球中开出1个号码作为中奖号码，双色球玩法即是竞猜开奖号码的6个红球号码和1个蓝球号码，顺序不限。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADqUlEQVR42u3aMXIjMQwEQP3/074HOCAHwHpxqmZmWVqTTQdTA31+rNL6IAAHDhw4Cxy4JXCf4vr1wPD1099PP3/7++55wYEDBw4cOHDgtsFdB8ADULyRw8FuIU77mTovOHDgwIEDBw7cVrjqQasHSy/g9qAp/PV5wYEDBw4cOHDgvgxu6v23AbYKDA4cOHDgwIEDBy47YFocTgXk8YsHBw4cOHDgwIFbChcPaIeKyqliNH3+a5N8cODAgQMHDhy4Ibh0TQ2o3/q5fF5w4MCBAwcOHLglcN2VDoTTojMN2N0i9bhvcODAgQMHDhy4JXBTX9xLD5IOkLvBtXs+cODAgQMHDhy4bXDdoDo9MK4Owm//bnUQDQ4cOHDgwIEDtxWuGxynL6AanKuD9Nv9ggMHDhw4cODAbYVLHzw9cK4Wpenzy8EbHDhw4MCBAwduCVw38Ka/n4J+en/HAAwOHDhw4MCBA/cy3FQB2Q2uafFYDbDtQA0OHDhw4MCBA7cErjronS5Cp74Y+PSgHBw4cODAgQMHbgtcCpQGzBS6WkQ+NYgGBw4cOHDgwIHbDtfd6O2Gnyokp77IePw8OHDgwIEDBw7cErj0C3rVIrIbjKtBdrxYBQcOHDhw4MCBWwY3FWi7xWT3ItJ/hPhz4MCBAwcOHDhwy+C6wTQNoLcX1i0qxwM8OHDgwIEDBw7cErhu4Vc9aDe4VovYxyf54MCBAwcOHDhwS+DSoHtbaFYHyFNBvRyIwYEDBw4cOHDglsClQfH29WpAnvp5OqiDAwcOHDhw4MD9L3DV4vI2sHYHzH816AYHDhw4cODAgdsKlx6wGjirrz81cL59/7EBBgcOHDhw4MCBewluemDbLRSrQbc6+E4H7+DAgQMHDhw4cNvhqhuuBuKpAXM3+B7fBw4cOHDgwIEDtxSuG0jTojAdgHcL0fY+wIEDBw4cOHDglsOlsN3BdbV47Abb+KLBgQMHDhw4cOCWwE0foBqQU/BucC4XseDAgQMHDhw4cEvgugGxWyxWB87pxXYH1eDAgQMHDhw4cFvhpjZSLTa7BWl6kWkxCw4cOHDgwIEDtx0uDoTNYvL24roD8O4CBw4cOHDgwIH7dri0QOwWj9P7Ou4HHDhw4MCBAwfuy+CqxWY6+J4uMuOCExw4cODAgQMHbilcWiiWNxAOirsFaPU54MCBAwcOHDhw2+HKA9rm56qD6qf2GQdgcODAgQMHDhy4l+CssOBEAA4cOHAWOHDvrn9c8n+mLKfmoQAAAABJRU5ErkJggg==">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E5%8F%8C%E8%89%B2%E7%90%83/&text=Java 实现双色球系统 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -878,17 +697,9 @@ Java 语言是 SUN (Stanford University Network) 公司于1995年推出的一门
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1014,8 +825,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1371,29 +1180,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1432,7 +1218,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1492,20 +1278,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1718,6 +1490,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

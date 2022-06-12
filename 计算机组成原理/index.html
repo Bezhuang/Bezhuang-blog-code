@@ -107,7 +107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -231,16 +231,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -363,16 +373,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -396,7 +416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -419,36 +439,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -482,6 +472,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/">计算机科学与技术</a>
+    </a>
+  </div>
+
 
           
         
@@ -523,8 +520,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>计算机组成原理是计算机专业本科教学中的重要课程，它可以帮助我们系统地理解计算机硬件系统的组织结构和工作原理、掌握计算机硬件系统的基本分析与设计方法以及建立计算机系统的整体概念，为进一步学习计算机设计实践课程、培养系统开发、调试以及设计创新能力奠定良好的基础。计组是考研的最重最难点，在408计算机学科专业基础综合考试中占有45分。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="计算机系统概述"><a href="#计算机系统概述" class="headerlink" title="计算机系统概述"></a>计算机系统概述</h3><h4 id="计算机系统的多层次结构"><a href="#计算机系统的多层次结构" class="headerlink" title="计算机系统的多层次结构"></a>计算机系统的多层次结构</h4><ul>
 <li>硬件：<ol>
 <li>微程序机器层M0（微指令系统），由硬件直接执行微指令</li>
@@ -539,20 +535,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <h4 id="冯·诺依曼机"><a href="#冯·诺依曼机" class="headerlink" title="冯·诺依曼机"></a>冯·诺依曼机</h4><ul>
-<li><p>基本工作方式：控制流驱动方式</p>
-</li>
-<li><p>最根本的特征：采用存储程序原理，即按地址访问并顺序执行指令</p>
-</li>
-<li><p>指令和数据均以二进制形式存放在存储器中</p>
-</li>
-<li><p>CPU区分依据是：指令周期的不同阶段</p>
-</li>
-<li><p>冯·诺依曼计算机：以运算器为中心</p>
-</li>
-<li><p>现代的计算器：以存储器为中心</p>
-</li>
-<li><p>5大部件：存储器、运算器、控制器、输入设备、输出设备（适配器）</p>
-</li>
+<li>基本工作方式：控制流驱动方式</li>
+<li>最根本的特征：采用存储程序原理，即按地址访问并顺序执行指令</li>
+<li>指令和数据均以二进制形式存放在存储器中</li>
+<li>CPU区分依据是：指令周期的不同阶段</li>
+<li>冯·诺依曼计算机：以运算器为中心</li>
+<li>现代的计算器：以存储器为中心</li>
+<li>5大部件：存储器、运算器、控制器、输入设备、输出设备（适配器）</li>
 <li><p>三大部分：CPU（运算器、控制器）、I/O设备（输入设备、输出设备）、主存储器</p>
 </li>
 <li><p>哈佛结构：将指令和数据放在两个独立的存储器，允许在一个机器周期内同时获得指令和操作数，提高了执行速度</p>
@@ -655,20 +644,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>补码、移码：-128—+127</li>
 </ul>
 <h4 id="标准IEEE-754标准"><a href="#标准IEEE-754标准" class="headerlink" title="标准IEEE 754标准"></a>标准IEEE 754标准</h4><ul>
-<li><p>现代计算机中，浮点数一般采用IEEE制定的国际标准：</p>
-</li>
-<li><p>常用的浮点数有三种：阶码用移码表示</p>
-</li>
+<li>现代计算机中，浮点数一般采用IEEE制定的国际标准：</li>
+<li>常用的浮点数有三种：阶码用移码表示</li>
 <li><p>短实数、长实数、临时实数的偏移量用十六进制数表示分别为7FH（127）、3FFH、3FFFH</p>
 </li>
 <li><p>尾数部分通常是用原码、规格化表示，即非“0”的有效位最高位总是“1”，但在IEEE标准中，有效位呈如下形式：1▲ff…ffff</p>
 </li>
-<li><p>其中▲表示假想的二进制小数点。在实际表示中，对短实数和长实数，这个整数位的1省略，称隐藏位；对于临时实数不采用隐藏位方案</p>
-</li>
+<li>其中▲表示假想的二进制小数点。在实际表示中，对短实数和长实数，这个整数位的1省略，称隐藏位；对于临时实数不采用隐藏位方案</li>
 </ul>
 <h3 id="存储器层次结构"><a href="#存储器层次结构" class="headerlink" title="存储器层次结构"></a>存储器层次结构</h3><h4 id="存储器的层次化结构"><a href="#存储器的层次化结构" class="headerlink" title="存储器的层次化结构"></a>存储器的层次化结构</h4><ul>
-<li><p>存储器主要性能指标：速度、容量、每位价格（位价）</p>
-</li>
+<li>存储器主要性能指标：速度、容量、每位价格（位价）</li>
 <li><p>一般来说，速度越高，位价越高；容量越大，位价越低；容量越大，速度越低。</p>
 </li>
 <li><p>层次结构主要体现在缓存-主存和主存-辅存这两个层次上。</p>
@@ -771,8 +756,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>存取一个扇区的时间：T=每个扇区位数 / (转速×扇区数)</li>
 <li>平均存取时间=平均寻道时间 + 平均等待时间 + 传输时间</li>
 <li>每个记录面的磁道数：K=[(外直径-内直径)/2]*磁道密度</li>
-<li>盘组格式化容量：C = 记录面数 * K * 每个扇区字节数 * 扇区数</li>
-<li>盘组非格式化容量：CN = 记录面数 * K * 最内圈磁道周长 * 内层位密度</li>
+<li>盘组格式化容量：C = 记录面数 <em> K </em> 每个扇区字节数 * 扇区数</li>
+<li>盘组非格式化容量：CN = 记录面数 <em> K </em> 最内圈磁道周长 * 内层位密度</li>
 <li>WE 为写允许信号：低电平0为写，高电平1为读</li>
 <li>CS为片选信号：低电平0有效</li>
 <li>借位/进位C：1=结果的最高位发生了进位，0=结果的最高位未发生进位</li>
@@ -1210,7 +1195,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -1235,6 +1220,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/>http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -1250,13 +1239,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/">计算机科学与技术</a>
-    </a>
-  </div>
-
 
         
       
@@ -1273,77 +1255,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/&title=计算机组成原理 - Bezhuang's Blog&summary=
-计算机组成原理是计算机专业本科教学中的重要课程，它可以帮助我们系统地理解计算机硬件系统的组织结构和工作原理、掌握计算机硬件系统的基本分析与设计方法以及建立计算机系统的整体概念，为进一步学习计算机设计实践课程、培养系统开发、调试以及设计创新能力奠定良好的基础。计组是考研的最重最难点，在408计算机学科专业基础综合考试中占有45分。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/&title=计算机组成原理 - Bezhuang's Blog&summary=
-计算机组成原理是计算机专业本科教学中的重要课程，它可以帮助我们系统地理解计算机硬件系统的组织结构和工作原理、掌握计算机硬件系统的基本分析与设计方法以及建立计算机系统的整体概念，为进一步学习计算机设计实践课程、培养系统开发、调试以及设计创新能力奠定良好的基础。计组是考研的最重最难点，在408计算机学科专业基础综合考试中占有45分。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/&title=计算机组成原理 - Bezhuang's Blog&summary=
-计算机组成原理是计算机专业本科教学中的重要课程，它可以帮助我们系统地理解计算机硬件系统的组织结构和工作原理、掌握计算机硬件系统的基本分析与设计方法以及建立计算机系统的整体概念，为进一步学习计算机设计实践课程、培养系统开发、调试以及设计创新能力奠定良好的基础。计组是考研的最重最难点，在408计算机学科专业基础综合考试中占有45分。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEdElEQVR42u3aQZLbMAwEQP//0849KdUCA4iyN81bElkimzwQyLzexi3jhQAsWAMsWLAG2COwr3D8/fvLD138+9V7rr7Tne9P85m+/9IDLFiwYMGCBQsW7FHY8gW4CDJ9rrvg6vyq64k9wIIFCxYsWLBgwT4CO114d8LVjZgWFtsHByxYsGDBggULFux3w6YN4a0L+dY8wIIFCxYsWLBgwf5fsOlFvRusuPt5sGDBggULFixYsN8NO72gp43sbuCjGsjobsDHJGHAggULFixYsGDBlmDTRvFv/XPsARYsWLBgwYIFC/YI7HRUC4ZPaVS/bx5gwYIFCxYsWLBgz8CmDeXpxbu7EdPfVTeu+504CQMWLFiwYMGCBQt2BXY7wDBtlG8DbB+QOLABFixYsGDBggULdgV260KeBhzShvR2Y7z73fL/IIAFCxYsWLBgwYK9BbY7wa0CYQqcfqf63XijwIIFCxYsWLBgwR6B7QYqToGkGzk9CGngBCxYsGDBggULFuyzsFuFQNpATwMc6bzSAgYsWLBgwYIFCxbsZ8FOF9ZdYFqIxIGKELBaMIAFCxYsWLBgwYI9Axu/oBmI6BYMVYgp9PQgXBYIYMGCBQsWLFiwYI/C3nVxn170ty7+7QBGc71gwYIFCxYsWLBgz8BOJ5ZOYLqQ7nu3GvdgwYIFCxYsWLBgPxO2usCtAHHaaK++d1oAtQsVsGDBggULFixYsI/ATgMO3Qv/1oW9ujHT4PGPBwMsWLBgwYIFCxbsI7DbgFuFSNpYn/5+vdENFixYsGDBggULdgV2O3jxao5t8K3nug17sGDBggULFixYsJ8Bm16sqw3r7vvTxvzWwSlvFFiwYMGCBQsWLNijsGmA4V0c6fPVQmJ7Q7sbBhYsWLBgwYIFC/YsbPuHw4JiqzCYNtbT9f44P7BgwYIFCxYsWLBHYNMJTS/81Yb5NnQKWT44YMGCBQsWLFiwYI/CThvQ08b5tLG+FTCZbgRYsGDBggULFizYM7BdsG6De7sQ2AqWVOfdnidYsGDBggULFizYI7BbF+h2QzgMXmwFLaYFyuV3wYIFCxYsWLBgwR6BTQuEbqN8WkikgYz4op9uGFiwYMGCBQsWLNgjsFuQ0wBHFXIrUDItVMaVF1iwYMGCBQsWLNgRbLqwakM7DU5sAXY3tPvcP+sHCxYsWLBgwYIFexQ2nWDawE4bzNWN7M4vLQzAggULFixYsGDBPgubjrRQ2CpEtgqUtY0GCxYsWLBgwYIFewR264I8DUhML/zTwiMNcFwGNsCCBQsWLFiwYMEegU0nOIVPgyLdi34XPD44YMGCBQsWLFiwYB+B7QYUug3pFCAtaNL5xQERsGDBggULFixYsF8Bmz7XBd8OeHS/W14nWLBgwYIFCxYs2K+CnQYhtjd2GvRINwYsWLBgwYIFCxbsM7B3BRzixvFN0NP1Xv49WLBgwYIFCxYs2KOw0yDEtDE9vpiHByTdCLBgwYIFCxYsWLDPwhq7AyxYsAZYsGANsLeOP43bUYU1mtJAAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/&text=计算机组成原理 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1462,17 +1373,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1598,8 +1501,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1955,29 +1856,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -2016,7 +1894,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -2076,20 +1954,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -2302,6 +2166,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

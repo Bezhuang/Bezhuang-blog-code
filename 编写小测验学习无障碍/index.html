@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
+    </a>
+  </div>
 
 
           
@@ -529,276 +523,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>freeCodeCamp 响应式网页设计的认证课程第八章。无障碍环境使你的网页便于所有人使用，甚至是残疾人。在通过编写小测验学习无障碍的课程中，建立一个测验网页，学习诸如键盘快捷键、ARIA 属性和设计最佳实践等无障碍工具。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、重点-HTML-代码"><a href="#一、重点-HTML-代码" class="headerlink" title="一、重点 HTML 代码"></a>一、重点 HTML 代码</h3><p>head：</p>
-<pre><code class="html">&lt;head&gt;
-  &lt;meta charset=&quot;UTF-8&quot; /&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-  &lt;meta name=&quot;description&quot; content=&quot;freeCodeCamp Accessibility Quiz practice project&quot; /&gt;
-  &lt;title&gt;Accessibility Quiz&lt;/title&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;
-&lt;/head&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;freeCodeCamp Accessibility Quiz practice project&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Accessibility Quiz<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;styles.css&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>header：</p>
-<pre><code class="html">&lt;header&gt;
-  &lt;img id=&quot;logo&quot; src=&quot;https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg&quot;&gt;
-  &lt;h1&gt;HTML/CSS Quiz&lt;/h1&gt;
-  &lt;nav&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#student-info&quot; accesskey=&quot;i&quot;&gt;INFO&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#html-questions&quot; accesskey=&quot;h&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#css-questions&quot; accesskey=&quot;c&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">&quot;logo&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h1</span>&gt;</span>HTML/CSS Quiz<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">nav</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#student-info&quot;</span> <span class="attr">accesskey</span>=<span class="string">&quot;i&quot;</span>&gt;</span>INFO<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#html-questions&quot;</span> <span class="attr">accesskey</span>=<span class="string">&quot;h&quot;</span>&gt;</span>HTML<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#css-questions&quot;</span> <span class="attr">accesskey</span>=<span class="string">&quot;c&quot;</span>&gt;</span>CSS<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>student-info:</p>
-<pre><code class="html">&lt;section role=&quot;region&quot; aria-labelledby=&quot;student-info&quot;&gt;
-  &lt;h2 id=&quot;student-info&quot;&gt;Student Info&lt;/h2&gt;
-  &lt;div class=&quot;info&quot;&gt;
-    &lt;label for=&quot;student-name&quot;&gt;Name:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;student-name&quot; id=&quot;student-name&quot; /&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;info&quot;&gt;
-    &lt;label for=&quot;student-email&quot;&gt;Email:&lt;/label&gt;
-    &lt;input type=&quot;email&quot; name=&quot;student-email&quot; id=&quot;student-email&quot; /&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;info&quot;&gt;
-    &lt;label for=&quot;birth-date&quot;&gt;D.O.B.&lt;span class=&quot;sr-only&quot;&gt;(Date of Birth)&lt;/span&gt;&lt;/label&gt;
-    &lt;input type=&quot;date&quot; name=&quot;birth-date&quot; id=&quot;birth-date&quot; /&gt;
-  &lt;/div&gt;
-&lt;/section&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">role</span>=<span class="string">&quot;region&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;student-info&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">&quot;student-info&quot;</span>&gt;</span>Student Info<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;student-name&quot;</span>&gt;</span>Name:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;student-name&quot;</span> <span class="attr">id</span>=<span class="string">&quot;student-name&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;student-email&quot;</span>&gt;</span>Email:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;email&quot;</span> <span class="attr">name</span>=<span class="string">&quot;student-email&quot;</span> <span class="attr">id</span>=<span class="string">&quot;student-email&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;birth-date&quot;</span>&gt;</span>D.O.B.<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;sr-only&quot;</span>&gt;</span>(Date of Birth)<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;date&quot;</span> <span class="attr">name</span>=<span class="string">&quot;birth-date&quot;</span> <span class="attr">id</span>=<span class="string">&quot;birth-date&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>html-questions：</p>
-<pre><code class="html">&lt;section role=&quot;region&quot; aria-labelledby=&quot;html-questions&quot;&gt;
-  &lt;h2 id=&quot;html-questions&quot;&gt;HTML&lt;/h2&gt;
-  &lt;div class=&quot;question-block&quot;&gt;
-    &lt;p&gt;1&lt;/p&gt;
-    &lt;fieldset class=&quot;question&quot; name=&quot;html-question-one&quot;&gt;
-      &lt;legend&gt;
-        The legend element represents a caption for the content of its
-        parent fieldset element
-      &lt;/legend&gt;
-      &lt;ul class=&quot;answers-list&quot;&gt;
-        &lt;li&gt;
-          &lt;label for=&quot;q1-a1&quot;&gt;
-            &lt;input type=&quot;radio&quot; id=&quot;q1-a1&quot; name=&quot;q1&quot; value=&quot;true&quot; /&gt;
-            True
-          &lt;/label&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;label for=&quot;q1-a2&quot;&gt;
-            &lt;input type=&quot;radio&quot; id=&quot;q1-a2&quot; name=&quot;q1&quot; value=&quot;false&quot; /&gt;
-            False
-          &lt;/label&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/fieldset&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;question-block&quot;&gt;
-    &lt;p&gt;2&lt;/p&gt;
-    &lt;fieldset class=&quot;question&quot; name=&quot;html-question-two&quot;&gt;
-      &lt;legend&gt;
-        A label element nesting an input element is required to have a
-        for attribute with the same value as the input&#39;s id
-      &lt;/legend&gt;
-      &lt;ul class=&quot;answers-list&quot;&gt;
-        &lt;li&gt;
-          &lt;label for=&quot;q2-a1&quot;&gt;
-            &lt;input type=&quot;radio&quot; id=&quot;q2-a1&quot; name=&quot;q2&quot; value=&quot;true&quot; /&gt;
-            True
-          &lt;/label&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-          &lt;label for=&quot;q2-a2&quot;&gt;
-            &lt;input type=&quot;radio&quot; id=&quot;q2-a2&quot; name=&quot;q2&quot; value=&quot;false&quot; /&gt;
-            False
-          &lt;/label&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/fieldset&gt;
-  &lt;/div&gt;
-&lt;/section&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">role</span>=<span class="string">&quot;region&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;html-questions&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">&quot;html-questions&quot;</span>&gt;</span>HTML<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;question-block&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>1<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">fieldset</span> <span class="attr">class</span>=<span class="string">&quot;question&quot;</span> <span class="attr">name</span>=<span class="string">&quot;html-question-one&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">legend</span>&gt;</span></span><br><span class="line">        The legend element represents a caption for the content of its</span><br><span class="line">        parent fieldset element</span><br><span class="line">      <span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;answers-list&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;q1-a1&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">id</span>=<span class="string">&quot;q1-a1&quot;</span> <span class="attr">name</span>=<span class="string">&quot;q1&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">            True</span><br><span class="line">          <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;q1-a2&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">id</span>=<span class="string">&quot;q1-a2&quot;</span> <span class="attr">name</span>=<span class="string">&quot;q1&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span> /&gt;</span></span><br><span class="line">            False</span><br><span class="line">          <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;question-block&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>2<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">fieldset</span> <span class="attr">class</span>=<span class="string">&quot;question&quot;</span> <span class="attr">name</span>=<span class="string">&quot;html-question-two&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">legend</span>&gt;</span></span><br><span class="line">        A label element nesting an input element is required to have a</span><br><span class="line">        for attribute with the same value as the input&#x27;s id</span><br><span class="line">      <span class="tag">&lt;/<span class="name">legend</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;answers-list&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;q2-a1&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">id</span>=<span class="string">&quot;q2-a1&quot;</span> <span class="attr">name</span>=<span class="string">&quot;q2&quot;</span> <span class="attr">value</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line">            True</span><br><span class="line">          <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;q2-a2&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">id</span>=<span class="string">&quot;q2-a2&quot;</span> <span class="attr">name</span>=<span class="string">&quot;q2&quot;</span> <span class="attr">value</span>=<span class="string">&quot;false&quot;</span> /&gt;</span></span><br><span class="line">            False</span><br><span class="line">          <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">fieldset</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>css-questions：</p>
-<pre><code class="html">&lt;section role=&quot;region&quot; aria-labelledby=&quot;css-questions&quot;&gt;
-  &lt;h2 id=&quot;css-questions&quot;&gt;CSS&lt;/h2&gt;
-  &lt;div class=&quot;formrow&quot;&gt;
-    &lt;div class=&quot;question-block&quot;&gt;
-      &lt;label for=&quot;customer&quot;&gt;Are you a frontend developer?&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;answer&quot;&gt;
-      &lt;select name=&quot;customer&quot; id=&quot;customer&quot; required&gt;
-        &lt;option value=&quot;&quot;&gt;Select an option&lt;/option&gt;
-        &lt;option value=&quot;yes&quot;&gt;Yes&lt;/option&gt;
-        &lt;option value=&quot;no&quot;&gt;No&lt;/option&gt;
-      &lt;/select&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;question-block&quot;&gt;
-      &lt;label for=&quot;css-questions&quot;&gt;Do you have any questions:&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;answer&quot;&gt;
-      &lt;textarea id=&quot;css-questions&quot; name=&quot;css-questions&quot; rows=&quot;5&quot; cols=&quot;24&quot;
-                placeholder=&quot;Who is flexbox...&quot;&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/section&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">role</span>=<span class="string">&quot;region&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;css-questions&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">&quot;css-questions&quot;</span>&gt;</span>CSS<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;formrow&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;question-block&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;customer&quot;</span>&gt;</span>Are you a frontend developer?<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;answer&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;customer&quot;</span> <span class="attr">id</span>=<span class="string">&quot;customer&quot;</span> <span class="attr">required</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>Select an option<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;yes&quot;</span>&gt;</span>Yes<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;no&quot;</span>&gt;</span>No<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;question-block&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;css-questions&quot;</span>&gt;</span>Do you have any questions:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;answer&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">&quot;css-questions&quot;</span> <span class="attr">name</span>=<span class="string">&quot;css-questions&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;5&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;24&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">placeholder</span>=<span class="string">&quot;Who is flexbox...&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>footer：</p>
-<pre><code class="html">&lt;footer&gt;
-  &lt;address&gt;
-    &lt;a href=&quot;https://freecodecamp.org&quot;&gt;freeCodeCamp&lt;/a&gt;&lt;br /&gt;
-    San Francisco&lt;br /&gt;
-    California&lt;br /&gt;
-    USA
-  &lt;/address&gt;
-&lt;/footer&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">address</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://freecodecamp.org&quot;</span>&gt;</span>freeCodeCamp<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">    San Francisco<span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">    California<span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">    USA</span><br><span class="line">  <span class="tag">&lt;/<span class="name">address</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="二、重点-CSS-代码"><a href="#二、重点-CSS-代码" class="headerlink" title="二、重点 CSS 代码"></a>二、重点 CSS 代码</h3><p>@media 属性：</p>
-<pre><code class="CSS">@media (prefers-reduced-motion: no-preference) &#123;
-    * &#123;
-        scroll-behavior: smooth;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@media</span> (<span class="attribute">prefers-reduced-motion</span>: no-preference) &#123;</span><br><span class="line">    * &#123;</span><br><span class="line">        scroll-behavior: smooth;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>body，header：</p>
-<pre><code class="css">body &#123;
-    background: #f5f6f7;
-    color: #1b1b32;
-    font-family: Helvetica;
-    margin: 0;
-&#125;
-header &#123;
-    width: 100%;
-    height: 50px;
-    background-color: #1b1b32;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#f5f6f7</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#1b1b32</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: Helvetica;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">header</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#1b1b32</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>logo，nav：</p>
-<pre><code class="CSS">#logo &#123;
-    width: max(100px, 18vw);
-    background-color: #0a0a23;
-    aspect-ratio: 35 / 4;
-    padding: 0.4rem;
-&#125;
-h1 &#123;
-    color: #f1be32;
-    font-size: min(5vw, 1.2em);
-    text-align: center;
-&#125;
-nav &#123;
-    width: 50%;
-    max-width: 300px;
-    height: 50px;
-&#125;
-nav&gt;ul &#123;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-inline-start: 0;
-    margin-block: 0;
-    height: 100%;
-&#125;
-nav&gt;ul&gt;li &#123;
-    color: #dfdfe2;
-    margin: 0 0.2rem;
-    padding: 0.2rem;
-    display: block;
-&#125;
-nav&gt;ul&gt;li:hover &#123;
-    background-color: #dfdfe2;
-    color: #1b1b32;
-    cursor: pointer;
-&#125;
-li&gt;a &#123;
-    color: inherit;
-    text-decoration: none;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#logo</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">max</span>(<span class="number">100px</span>, <span class="number">18vw</span>);</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#0a0a23</span>;</span><br><span class="line">    aspect-ratio: <span class="number">35</span> / <span class="number">4</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0.4rem</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#f1be32</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="built_in">min</span>(<span class="number">5vw</span>, <span class="number">1.2em</span>);</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">nav</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">nav</span>&gt;<span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-evenly;</span><br><span class="line">    <span class="attribute">flex-wrap</span>: wrap;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">padding-inline-start</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin-block</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">nav</span>&gt;<span class="selector-tag">ul</span>&gt;<span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#dfdfe2</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">0.2rem</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0.2rem</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">nav</span>&gt;<span class="selector-tag">ul</span>&gt;<span class="selector-tag">li</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#dfdfe2</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#1b1b32</span>;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">li</span>&gt;<span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: inherit;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>表单 1：</p>
-<pre><code class="CSS">main &#123;
-    padding-top: 50px;
-&#125;
-section &#123;
-    width: 80%;
-    margin: 0 auto 10px auto;
-    max-width: 600px;
-&#125;
-h1,
-h2 &#123;
-    font-family: Verdana, Tahoma;
-&#125;
-h2 &#123;
-    border-bottom: 4px solid #dfdfe2;
-    margin-top: 0px;
-    padding-top: 60px;
-&#125;
-.info &#123;
-    padding: 10px 0 0 5px;
-&#125;
-.formrow &#123;
-    margin-top: 30px;
-    padding: 0px 15px;
-&#125;
-input &#123;
-    font-size: 16px;
-&#125;
-.info label,
-.info input &#123;
-    display: inline-block;
-    text-align: right;
-&#125;
-.info input &#123;
-    width: 50%;
-    text-align: left;
-&#125;
-.info label &#123;
-    width: 10%;
-    min-width: 55px;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">main</span> &#123;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">section</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto <span class="number">10px</span> auto;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">600px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span>,</span><br><span class="line"><span class="selector-tag">h2</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: Verdana, Tahoma;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h2</span> &#123;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">4px</span> solid <span class="number">#dfdfe2</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">60px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.info</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.formrow</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span> <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">input</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.info</span> <span class="selector-tag">label</span>,</span><br><span class="line"><span class="selector-class">.info</span> <span class="selector-tag">input</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">text-align</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.info</span> <span class="selector-tag">input</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.info</span> <span class="selector-tag">label</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">10%</span>;</span><br><span class="line">    <span class="attribute">min-width</span>: <span class="number">55px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>表单 2、3：</p>
-<pre><code class="CSS">.question-block &#123;
-    text-align: left;
-    display: block;
-    width: 100%;
-    margin-top: 20px;
-    padding-top: 5px;
-&#125;
-p &#123;
-    margin-top: 5px;
-    padding-left: 15px;
-    font-size: 20px;
-&#125;
-p::before &#123;
-    content: &quot;Question #&quot;;
-&#125;
-.question &#123;
-    border: none;
-    padding-bottom: 0;
-&#125;
-.answers-list &#123;
-    list-style: none;
-    padding: 0;
-&#125;
-button &#123;
-    display: block;
-    margin: 40px auto;
-    width: 40%;
-    padding: 15px;
-    font-size: 23px;
-    background: #d0d0d5;
-    border: 3px solid #3b3b4f;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.question-block</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: left;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;Question #&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.question</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: none;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.answers-list</span> &#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">button</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">40px</span> auto;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">40%</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">23px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#d0d0d5</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">3px</span> solid <span class="number">#3b3b4f</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>.sr-only selector：</p>
-<pre><code class="CSS">.sr-only &#123;
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-&#125;</code></pre>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.sr-only</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin</span>: -<span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">clip</span>: <span class="built_in">rect</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="三、页面展示"><a href="#三、页面展示" class="headerlink" title="三、页面展示"></a>三、页面展示</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
     <iframe src="https://free-code-camp-demo.vercel.app/通过编写小测验学习无障碍/index.html" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe>
 </div>
@@ -814,7 +563,7 @@ button &#123;
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -839,6 +588,10 @@ button &#123;
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E7%BC%96%E5%86%99%E5%B0%8F%E6%B5%8B%E9%AA%8C%E5%AD%A6%E4%B9%A0%E6%97%A0%E9%9A%9C%E7%A2%8D/>http://blog.zhuangzhihao.top/%E7%BC%96%E5%86%99%E5%B0%8F%E6%B5%8B%E9%AA%8C%E5%AD%A6%E4%B9%A0%E6%97%A0%E9%9A%9C%E7%A2%8D/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -854,12 +607,8 @@ button &#123;
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTML/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTML</p></a></div>
 
 
         
@@ -877,77 +626,6 @@ button &#123;
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E7%BC%96%E5%86%99%E5%B0%8F%E6%B5%8B%E9%AA%8C%E5%AD%A6%E4%B9%A0%E6%97%A0%E9%9A%9C%E7%A2%8D/&title=通过编写小测验学习无障碍 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第八章。无障碍环境使你的网页便于所有人使用，甚至是残疾人。在通过编写小测验学习无障碍的课程中，建立一个测验网页，学习诸如键盘快捷键、ARIA 属性和设计最佳实践等无障碍工具。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E7%BC%96%E5%86%99%E5%B0%8F%E6%B5%8B%E9%AA%8C%E5%AD%A6%E4%B9%A0%E6%97%A0%E9%9A%9C%E7%A2%8D/&title=通过编写小测验学习无障碍 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第八章。无障碍环境使你的网页便于所有人使用，甚至是残疾人。在通过编写小测验学习无障碍的课程中，建立一个测验网页，学习诸如键盘快捷键、ARIA 属性和设计最佳实践等无障碍工具。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E7%BC%96%E5%86%99%E5%B0%8F%E6%B5%8B%E9%AA%8C%E5%AD%A6%E4%B9%A0%E6%97%A0%E9%9A%9C%E7%A2%8D/&title=通过编写小测验学习无障碍 - Bezhuang's Blog&summary=
-freeCodeCamp 响应式网页设计的认证课程第八章。无障碍环境使你的网页便于所有人使用，甚至是残疾人。在通过编写小测验学习无障碍的课程中，建立一个测验网页，学习诸如键盘快捷键、ARIA 属性和设计最佳实践等无障碍工具。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZgAAAGYCAAAAABaUKuJAAAGDklEQVR42u3cS05EMRADwLn/pWEPGiV29wMkKjvm8yZJZWM54vVh/MnxsgVgDDBgDDBgDDDGEeZVjq/fP/399fW3Ezt8/91zTvNL37+dd/u8t/MBAwYMGDBgwIABAwbMNcx1ACo3vt2g9jm33zt9fuv3r/cTDBgwYMCAAQMGDBgwMUwbKFOwFqANgumBma673k8wYMCAAQMGDBgwYMA8DvPTQbIt6qbrTYMsGDBgwIABAwYMGDBg/i5MCzEt2Lafd/v57QuLYMCAAQMGDBgwYMCAmcOkP3y7kO0gOC2+0ot96fp//SYmGDBgwIABAwYMGDD/AKYNcP7uAvXb/QQDBgwYMCDAgAEDBswRZmtswW0HvPaAbRVt8T6CAQMGDBgwYMCAAQPmCHO7MekCb9+fBrPpuIVtC8R4f8CAAQMGDBgwYMCAARP3MbfBqQ1y6e9Ni7un19Ue2OOFPzBgwIABAwYMGDBgwBxhth7cvp5+rg2KWwH5qWAKBgwYMGDAgAEDBgyYM0wbyKZFVLqx04uF6QXE9nMxBBgwYMCAAQMGDBgwYGqY6UZOg2IL1wK1wbpd//VBAQMGDBgwYMCAAQMGzBhma8OnC32q6GoDdBsgj6+DAQMGDBgwYMCAAQPmCNMGsXYBaQHVBs0Wuj0IbUH2NmCCAQMGDBgwYMCAAQPmCNMGxTSotb+bBrW2CJzCjg8mGDBgwIABAwYMGDBgjjBpkbRVQD0FP53v0wH4+HkwYMCAAQMGDBgwYMBc3yvbDnjToiwt6j7KkQbC9GCkQRYMGDBgwIABAwYMGDBnmGkwup341vNvg+F2YTY9MNfrBQMGDBgwYMCAAQMGTAwzvfj2WwVWOt/pBm8XbmDAgAEDBgwYMGDAgMlhti/ebQXNFLgOduEGp/O4LiTBgAEDBgwYMGDAgAFzhJkCtcVVurHtRm+Ndr7xxUAwYMCAAQMGDBgwYMAcYaYbMQ1W7UFIf38reG7Pp24wwYABAwYMGDBgwIABUwfFbbi2iJuCTi8KpvOpG0wwYMCAAQMGDBgwYMCML/zFASrckNvnTQu9NnC2+wMGDBgwYMCAAQMGDJg9mOmDnwqG2/PZDtLT9YMBAwYMGDBgwIABAyaH2Sqati6+bRVz0wM0DabjogwMGDBgwIABAwYMGDDXMNMglW7MUwtPC8H0wK0HbTBgwIABAwYMGDBgwMRF2fT1NrilByM9OO33tgPssbgDAwYMGDBgwIABAwbMESa9GLd1ka+9sLdVdLXBNt239ECAAQMGDBgwYMCAAQNmH+b6B4aFVrvh7bzb96eF2lrABAMGDBgwYMCAAQPmH8G0QWoaqFLYNgBPA2+7/vb5YMCAAQMGDBgwYMCAuYdpi6d0gi3I9sXB6fceKxLBgAEDBgwYMGDAgAET9zFPBcg2MD61ge0GP7VPYMCAAQMGDBgwYMCAuYfZKpq2AthPgU6Lrq2gCQYMGDBgwIABAwYMmBwmneh2odVePGyLqTSotsVbuy9gwIABAwYMGDBgwIDZ+wcM00DWbsxWgXZ7sNqCa7p+MGDAgAEDBgwYMGDA9DBtQJyOaTBtg+w0ELYHDAwYMGDAgAEDBgwYMHOY6YKmxVK64dMgOj1AWwcDDBgwYMCAAQMGDBgwc5jpxbkUdroxLWQLvBVQwYABAwYMGDBgwIAB08NMg9/txm8VcK9wTAut10PjWJSBAQMGDBgwYMCAAQPmGDC3A990Y7eCbAuX/l5brH37PBgwYMCAAQMGDBgwYI4wWwEpDVJbAbctrLbfb+cTJ38wYMCAAQMGDBgwYMDM//HZ8sZOi7X0ILXP3foeGDBgwIABAwYMGDBg5jDxBbWl4msaZNPvbRVt04B+LMrAgAEDBgwYMGDAgAHzGExbVE2DXBv4tt9PAd7OHwwYMGDAgAEDBgwYMI/DtIVaCtduSFsEboHHBw0MGDBgwIABAwYMGDAxTLrh6QJbyNuAOZ1v+7nbeR4PEhgwYMCAAQMGDBgwYK5hphfqtoqjNqCmhdp2AZZeULwuysCAAQMGDBgwYMCAAfMNxvhbAwwYAwwYAwwYA4zxdnwCzK+ExA7mq8UAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E7%BC%96%E5%86%99%E5%B0%8F%E6%B5%8B%E9%AA%8C%E5%AD%A6%E4%B9%A0%E6%97%A0%E9%9A%9C%E7%A2%8D/&text=通过编写小测验学习无障碍 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1066,17 +744,9 @@ freeCodeCamp 响应式网页设计的认证课程第七章。排版是将文本�
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1202,8 +872,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1559,29 +1227,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1620,7 +1265,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1680,20 +1325,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1906,6 +1537,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

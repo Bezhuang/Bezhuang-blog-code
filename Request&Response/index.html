@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Servlet/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Servlet</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Java/">Java</a>
+    </a>
+  </div>
 
 
           
@@ -495,7 +489,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>本文发布于：2022年4月30日</p>
+    <p>本文发布于：2022年4月10日</p>
   </a>
 </div>
 
@@ -512,7 +506,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：21分钟</p>
+      <p>时长：22分钟</p>
     </a>
   </div>
 
@@ -529,8 +523,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>Java Web 核心第二章。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、Request-和-Response-对象的使用"><a href="#一、Request-和-Response-对象的使用" class="headerlink" title="一、Request 和 Response 对象的使用"></a>一、Request 和 Response 对象的使用</h3><p>Request 和 Response 这两个参数的作用是什么?</p>
 <p>Request：获取请求数据</p>
 <ul>
@@ -548,201 +541,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>浏览器最终解析结果，把内容展示在浏览器给用户浏览。</li>
 </ul>
 <p>初步体验下 Request 和 Response 对象的使用案例。</p>
-<pre><code class="java">@WebServlet(&quot;/demo3&quot;)
-public class ServletDemo3 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        //使用request对象 获取请求数据
-        String name = request.getParameter(&quot;name&quot;);//url?name=zhangsan
-
-        //使用response对象 设置响应数据
-        response.setHeader(&quot;content-type&quot;,&quot;text/html;charset=utf-8&quot;);
-        response.getWriter().write(&quot;&lt;h1&gt;&quot;+name+&quot;,欢迎您！&lt;/h1&gt;&quot;);
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        System.out.println(&quot;Post...&quot;);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/demo3&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo3</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//使用request对象 获取请求数据</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> request.getParameter(<span class="string">&quot;name&quot;</span>);<span class="comment">//url?name=zhangsan</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//使用response对象 设置响应数据</span></span><br><span class="line">        response.setHeader(<span class="string">&quot;content-type&quot;</span>,<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line">        response.getWriter().write(<span class="string">&quot;&lt;h1&gt;&quot;</span>+name+<span class="string">&quot;,欢迎您！&lt;/h1&gt;&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Post...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="二、Request-对象"><a href="#二、Request-对象" class="headerlink" title="二、Request 对象"></a>二、Request 对象</h3><h4 id="Request-继承体系"><a href="#Request-继承体系" class="headerlink" title="Request 继承体系"></a>Request 继承体系</h4><p>当我们的 Servlet 类实现的是 Servlet 接口的时候，service 方法中的参数是 ServletRequest 和 ServletResponse，当我们的 Servlet 类继承的是 HttpServlet 类的时候，doGet 和 doPost 方法中的参数就变成 HttpServletRequest 和 HttpServletReponse。</p>
 <p>Request 的继承体系：</p>
-<pre><code class="mermaid">graph BT
-RequestFacade --&gt; HttpServletRequest --&gt; ServletRequest</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph BT</span><br><span class="line">RequestFacade --&gt; HttpServletRequest --&gt; ServletRequest</span><br></pre></td></tr></table></figure>
 <p>ServletRequest 和 HttpServletRequest 是继承关系，并且两个都是接口，接口是无法创建对象，需要用到 RequestFacade：该类实现了 HttpServletRequest 接口，也间接实现了ServletRequest接口。Servlet 类中的 service 方法、doGet 方法或者是 doPost 方法最终都是由 Web 服务器来调用的，所以 Tomcat 提供了方法参数接口的具体实现类，并完成了对象的创建。</p>
 <p>要想了解 RequestFacade 中都提供了哪些方法，我们可以直接查看 JavaEE API 文档中关于 ServletRequest 和 HttpServletRequest 的接口文档，因为 RequestFacade 实现了其接口就需要重写接口中的方法。</p>
-<pre><code class="java">@WebServlet(&quot;/demo2&quot;)
-public class ServletDemo2 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        System.out.println(request);
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/demo2&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo2</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(request);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="Request-获取请求数据"><a href="#Request-获取请求数据" class="headerlink" title="Request 获取请求数据"></a>Request 获取请求数据</h4><p>获取请求行数据：请求行包含三块内容，分别是 <code>请求方式</code>、<code>请求资源路径</code>、<code>HTTP协议及版本</code>。</p>
-<pre><code class="java">@WebServlet(&quot;/req1&quot;)
-public class RequestDemo1 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-        // String getMethod()：获取请求方式： GET
-        String method = req.getMethod();
-        System.out.println(method);//GET
-        // String getContextPath()：获取虚拟目录(项目访问路径)：/request-demo
-        String contextPath = req.getContextPath();
-        System.out.println(contextPath);
-        // StringBuffer getRequestURL(): 获取URL(统一资源定位符)：http://localhost:8080/request-demo/req1
-        StringBuffer url = req.getRequestURL();
-        System.out.println(url.toString());
-        // String getRequestURI()：获取URI(统一资源标识符)： /request-demo/req1
-        String uri = req.getRequestURI();
-        System.out.println(uri);
-        // String getQueryString()：获取请求参数（GET方式）： username=zhangsan
-        String queryString = req.getQueryString();
-        System.out.println(queryString);
-    &#125;
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/req1&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestDemo1</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">// String getMethod()：获取请求方式： GET</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">method</span> <span class="operator">=</span> req.getMethod();</span><br><span class="line">        System.out.println(method);<span class="comment">//GET</span></span><br><span class="line">        <span class="comment">// String getContextPath()：获取虚拟目录(项目访问路径)：/request-demo</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">contextPath</span> <span class="operator">=</span> req.getContextPath();</span><br><span class="line">        System.out.println(contextPath);</span><br><span class="line">        <span class="comment">// StringBuffer getRequestURL(): 获取URL(统一资源定位符)：http://localhost:8080/request-demo/req1</span></span><br><span class="line">        <span class="type">StringBuffer</span> <span class="variable">url</span> <span class="operator">=</span> req.getRequestURL();</span><br><span class="line">        System.out.println(url.toString());</span><br><span class="line">        <span class="comment">// String getRequestURI()：获取URI(统一资源标识符)： /request-demo/req1</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">uri</span> <span class="operator">=</span> req.getRequestURI();</span><br><span class="line">        System.out.println(uri);</span><br><span class="line">        <span class="comment">// String getQueryString()：获取请求参数（GET方式）： username=zhangsan</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">queryString</span> <span class="operator">=</span> req.getQueryString();</span><br><span class="line">        System.out.println(queryString);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>获取请求头数据：请求头的数据格式为 <code>key: value</code>。</p>
-<pre><code class="java">@WebServlet(&quot;/req1&quot;)
-public class RequestDemo1 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-        //获取请求头: user-agent: 浏览器的版本信息
-        String agent = req.getHeader(&quot;user-agent&quot;);
-        System.out.println(agent);
-    &#125;
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/req1&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestDemo1</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//获取请求头: user-agent: 浏览器的版本信息</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">agent</span> <span class="operator">=</span> req.getHeader(<span class="string">&quot;user-agent&quot;</span>);</span><br><span class="line">		System.out.println(agent);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>获取请求体数据：浏览器在发送 GET 请求的时候是没有请求体的，所以需要把请求方式变更为 POST。</p>
 <ol>
-<li><p>  如果前端发送的是字节数据，比如传递的是文件数据，则使用 <code>getInputStream()</code> 方法获取字节输入流。</p>
+<li><p>如果前端发送的是字节数据，比如传递的是文件数据，则使用 <code>getInputStream()</code> 方法获取字节输入流。</p>
 </li>
-<li><p>  如果前端发送的是纯文本数据，则使用 <code>getReader()</code> 方法获取字符输入流。</p>
+<li><p>如果前端发送的是纯文本数据，则使用 <code>getReader()</code> 方法获取字符输入流。</p>
 </li>
 </ol>
-<pre><code class="java">@WebServlet(&quot;/req1&quot;)
-public class RequestDemo1 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-    &#125;
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-         //获取post 请求体：请求参数
-        //1. 获取字符输入流
-        BufferedReader br = req.getReader();
-        //2. 读取数据
-        String line = br.readLine();
-        System.out.println(line);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/req1&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestDemo1</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">         <span class="comment">//获取post 请求体：请求参数</span></span><br><span class="line">        <span class="comment">//1. 获取字符输入流</span></span><br><span class="line">        <span class="type">BufferedReader</span> <span class="variable">br</span> <span class="operator">=</span> req.getReader();</span><br><span class="line">        <span class="comment">//2. 读取数据</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">line</span> <span class="operator">=</span> br.readLine();</span><br><span class="line">        System.out.println(line);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>BufferedReader 流是通过 request 对象来获取的，当请求完成后 request 对象就会被销毁，request 对象被销毁后，BufferedReader 流就会自动关闭，所以此处就不需要手动关闭流了。</p>
 <h4 id="获取请求参数的通用方式"><a href="#获取请求参数的通用方式" class="headerlink" title="获取请求参数的通用方式"></a>获取请求参数的通用方式</h4><p>请求参数是请求数据中的部分内容（如：用户名和密码），请求数据则是包含请求行、请求头和请求体的所有数据，如果是 GET 请求，请求参数在请求行中，如果是 POST 请求，请求参数一般在请求体中。</p>
 <ol>
-<li><p>  GET 方式获取请求参数：<code>String getQueryString()</code></p>
+<li><p>GET 方式获取请求参数：<code>String getQueryString()</code></p>
 </li>
-<li><p>  POST 方式获取请求参数：<code>BufferedReader getReader();</code></p>
+<li><p>POST 方式获取请求参数：<code>BufferedReader getReader();</code></p>
 </li>
 </ol>
-<pre><code class="java">@WebServlet(&quot;/req1&quot;)
-public class RequestDemo1 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-                //GET 方式获取请求参数
-        String result = req.getQueryString();
-        System.out.println(result);
-    &#125;
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-        // POST 方式获取请求参数
-          BufferedReader br = req.getReader();
-        String result = br.readLine();
-        System.out.println(result);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/req1&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestDemo1</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">				<span class="comment">//GET 方式获取请求参数</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> req.getQueryString();</span><br><span class="line">        System.out.println(result);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">// POST 方式获取请求参数</span></span><br><span class="line">      	<span class="type">BufferedReader</span> <span class="variable">br</span> <span class="operator">=</span> req.getReader();</span><br><span class="line">        <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> br.readLine();</span><br><span class="line">        System.out.println(result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>GET 请求方式和 POST 请求方式区别主要在于获取请求参数的方式不一样，为了统一获取请求参数，Request 对象为我们提供了如下方法：</p>
 <ol>
-<li><p>  获取所有参数Map集合：<code>Map&lt;String,String[]&gt; getParameterMap()</code></p>
+<li><p>获取所有参数Map集合：<code>Map&lt;String,String[]&gt; getParameterMap()</code></p>
 </li>
-<li><p>  根据名称获取参数值（数组）：<code>String[] getParameterValues(String name)</code></p>
+<li><p>根据名称获取参数值（数组）：<code>String[] getParameterValues(String name)</code></p>
 </li>
-<li><p>  根据名称获取参数值（单个值）：<code>String getParameter(String name)</code></p>
+<li><p>根据名称获取参数值（单个值）：<code>String getParameter(String name)</code></p>
 </li>
 </ol>
-<pre><code class="java">/**
- * request 通用方式获取请求参数
- */
-@WebServlet(&quot;/req2&quot;)
-public class RequestDemo2 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-        //GET请求逻辑
-        System.out.println(&quot;get....&quot;);
-        //1. 获取所有参数的Map集合
-        Map&lt;String, String[]&gt; map = req.getParameterMap();
-        for (String key : map.keySet()) &#123;
-            // username:zhangsan lisi
-            System.out.print(key+&quot;:&quot;);
-            //获取值
-            String[] values = map.get(key);
-            for (String value : values) &#123;
-                System.out.print(value + &quot; &quot;);
-            &#125;
-            System.out.println();
-        &#125;
-        //2. 获取GET请求参数中的爱好，结果是数组值
-        System.out.println(&quot;------------&quot;);
-        String[] hobbies = req.getParameterValues(&quot;hobby&quot;);
-        for (String hobby : hobbies) &#123;
-            System.out.println(hobby);
-        &#125;
-          //3. 获取GET请求参数中的用户名和密码，结果是单个值
-        String username = req.getParameter(&quot;username&quot;);
-        String password = req.getParameter(&quot;password&quot;);
-        System.out.println(username);
-        System.out.println(password);
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * request 通用方式获取请求参数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@WebServlet(&quot;/req2&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestDemo2</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//GET请求逻辑</span></span><br><span class="line">        System.out.println(<span class="string">&quot;get....&quot;</span>);</span><br><span class="line">        <span class="comment">//1. 获取所有参数的Map集合</span></span><br><span class="line">        Map&lt;String, String[]&gt; map = req.getParameterMap();</span><br><span class="line">        <span class="keyword">for</span> (String key : map.keySet()) &#123;</span><br><span class="line">            <span class="comment">// username:zhangsan lisi</span></span><br><span class="line">            System.out.print(key+<span class="string">&quot;:&quot;</span>);</span><br><span class="line">            <span class="comment">//获取值</span></span><br><span class="line">            String[] values = map.get(key);</span><br><span class="line">            <span class="keyword">for</span> (String value : values) &#123;</span><br><span class="line">                System.out.print(value + <span class="string">&quot; &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//2. 获取GET请求参数中的爱好，结果是数组值</span></span><br><span class="line">        System.out.println(<span class="string">&quot;------------&quot;</span>);</span><br><span class="line">        String[] hobbies = req.getParameterValues(<span class="string">&quot;hobby&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (String hobby : hobbies) &#123;</span><br><span class="line">            System.out.println(hobby);</span><br><span class="line">        &#125;</span><br><span class="line">      	<span class="comment">//3. 获取GET请求参数中的用户名和密码，结果是单个值</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> req.getParameter(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> req.getParameter(<span class="string">&quot;password&quot;</span>);</span><br><span class="line">        System.out.println(username);</span><br><span class="line">        System.out.println(password);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>req.getParameter()</code> 方法使用的频率会比较高，以后我们再写代码的时候，就只需要按照如下格式来编写：</p>
-<pre><code class="java">public class RequestDemo1 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-       //采用request提供的获取请求参数的通用方式来获取请求参数
-       //编写其他的业务代码...
-    &#125;
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-        this.doGet(req,resp);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestDemo1</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">       <span class="comment">//采用request提供的获取请求参数的通用方式来获取请求参数</span></span><br><span class="line">       <span class="comment">//编写其他的业务代码...</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(req,resp);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="请求参数中文乱码问题"><a href="#请求参数中文乱码问题" class="headerlink" title="请求参数中文乱码问题"></a>请求参数中文乱码问题</h4><p>POST 的请求参数是通过 request 的 <code>getReader()</code> 来获取流中的数据，Tomcat 在获取流的时候采用的编码是ISO-8859-1（不支持中文），需要通过 <code>request.setCharacterEncoding(&quot;UTF-8&quot;)</code> 把 Tomcat 在获取流数据之前的编码设置为UTF-8。</p>
-<pre><code class="java">@WebServlet(&quot;/req4&quot;)
-public class RequestDemo4 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        //1. 解决乱码: POST getReader()
-        //设置字符输入流的编码，设置的字符集要和页面保持一致
-        request.setCharacterEncoding(&quot;UTF-8&quot;);
-       //2. 获取username
-       String username = request.getParameter(&quot;username&quot;);
-       System.out.println(username);
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/req4&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestDemo4</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//1. 解决乱码: POST getReader()</span></span><br><span class="line">        <span class="comment">//设置字符输入流的编码，设置的字符集要和页面保持一致</span></span><br><span class="line">        request.setCharacterEncoding(<span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">       <span class="comment">//2. 获取username</span></span><br><span class="line">       <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> request.getParameter(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">       System.out.println(username);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>GET 请求获取请求参数的方式是 <code>request.getQueryString()</code>，并没有通过流的方式获取数据，所以 GET 请求不能用设置编码的方式来解决中文乱码问题。</p>
 <p>GET 请求中文参数出现乱码的原因，是浏览器把中文参数按照  <code>UTF-8</code>  进行 URL 编码，而后台的 Tomcat 对获取到的内容进行 <code>ISO-8859-1</code> 的 URL 解码，我们可以按照 ISO-8859-1 编码获取乱码对应的字节数组，再按照 UTF-8 编码获取字节数组对应的字符串，在转换的过程中它们的编码一致，就可以解决中文乱码问题。</p>
 <p>URL编码实现方式:</p>
@@ -752,121 +592,28 @@ public class RequestDemo4 extends HttpServlet &#123;
 <li><p>解码：<code>URLDecoder.decode(s,&quot;ISO-8859-1&quot;);</code></p>
 </li>
 </ul>
-<pre><code class="java">public class URLDemo &#123;
-
-  public static void main(String[] args) throws UnsupportedEncodingException &#123;
-        String username = &quot;张三&quot;;
-        //1. URL编码
-        String encode = URLEncoder.encode(username, &quot;utf-8&quot;);
-        System.out.println(encode);
-        //2. URL解码
-        String decode = URLDecoder.decode(encode, &quot;ISO-8859-1&quot;);
-
-        System.out.println(decode); //此处打印的是对应的乱码数据
-
-        //3. 转换为字节数据,编码
-        byte[] bytes = decode.getBytes(&quot;ISO-8859-1&quot;);
-        for (byte b : bytes) &#123;
-            System.out.print(b + &quot; &quot;);
-        &#125;
-        //此处打印的是:-27 -68 -96 -28 -72 -119
-        //4. 将字节数组转为字符串，解码
-        String s = new String(bytes, &quot;utf-8&quot;);
-        System.out.println(s); //此处打印的是张三
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">URLDemo</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> UnsupportedEncodingException &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> <span class="string">&quot;张三&quot;</span>;</span><br><span class="line">        <span class="comment">//1. URL编码</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">encode</span> <span class="operator">=</span> URLEncoder.encode(username, <span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">        System.out.println(encode);</span><br><span class="line">        <span class="comment">//2. URL解码</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">decode</span> <span class="operator">=</span> URLDecoder.decode(encode, <span class="string">&quot;ISO-8859-1&quot;</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(decode); <span class="comment">//此处打印的是对应的乱码数据</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//3. 转换为字节数据,编码</span></span><br><span class="line">        <span class="type">byte</span>[] bytes = decode.getBytes(<span class="string">&quot;ISO-8859-1&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">byte</span> b : bytes) &#123;</span><br><span class="line">            System.out.print(b + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">		<span class="comment">//此处打印的是:-27 -68 -96 -28 -72 -119</span></span><br><span class="line">        <span class="comment">//4. 将字节数组转为字符串，解码</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(bytes, <span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">        System.out.println(s); <span class="comment">//此处打印的是张三</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>通用中文乱码解决方案：先解码，再编码。</p>
-<pre><code class="java">@WebServlet(&quot;/req4&quot;)
-public class RequestDemo4 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        //1. 解决乱码：POST，getReader()
-        //request.setCharacterEncoding(&quot;UTF-8&quot;);//设置字符输入流的编码
-
-        //2. 获取username
-        String username = request.getParameter(&quot;username&quot;);
-        System.out.println(&quot;解决乱码前：&quot;+username);
-
-        //3. GET,获取参数的方式：getQueryString
-        // 乱码原因：tomcat进行URL解码，默认的字符集ISO-8859-1
-       /* //3.1 先对乱码数据进行编码：转为字节数组
-        byte[] bytes = username.getBytes(StandardCharsets.ISO_8859_1);
-        //3.2 字节数组解码
-        username = new String(bytes, StandardCharsets.UTF_8);*/
-
-        username  = new String(username.getBytes(StandardCharsets.ISO_8859_1),StandardCharsets.UTF_8);
-
-        System.out.println(&quot;解决乱码后：&quot;+username);
-
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/req4&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestDemo4</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//1. 解决乱码：POST，getReader()</span></span><br><span class="line">        <span class="comment">//request.setCharacterEncoding(&quot;UTF-8&quot;);//设置字符输入流的编码</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//2. 获取username</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> request.getParameter(<span class="string">&quot;username&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;解决乱码前：&quot;</span>+username);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//3. GET,获取参数的方式：getQueryString</span></span><br><span class="line">        <span class="comment">// 乱码原因：tomcat进行URL解码，默认的字符集ISO-8859-1</span></span><br><span class="line">       <span class="comment">/* //3.1 先对乱码数据进行编码：转为字节数组</span></span><br><span class="line"><span class="comment">        byte[] bytes = username.getBytes(StandardCharsets.ISO_8859_1);</span></span><br><span class="line"><span class="comment">        //3.2 字节数组解码</span></span><br><span class="line"><span class="comment">        username = new String(bytes, StandardCharsets.UTF_8);*/</span></span><br><span class="line"></span><br><span class="line">        username  = <span class="keyword">new</span> <span class="title class_">String</span>(username.getBytes(StandardCharsets.ISO_8859_1),StandardCharsets.UTF_8);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;解决乱码后：&quot;</span>+username);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>把 <code>request.setCharacterEncoding(&quot;UTF-8&quot;)</code> 代码注释掉后，会发现 GET 请求参数乱码解决方案同时也可也把 POST 请求参数乱码的问题也解决了，只不过对于 POST 请求参数一般都会比较多，采用这种方式解决乱码起来比较麻烦，所以对于 POST 请求还是建议使用设置编码的方式进行。</p>
 <p>Tomcat 8.0 之后的版本已将 GET 请求乱码问题解决，设置默认的解码方式为 UTF-8。</p>
 <h4 id="Request-请求转发"><a href="#Request-请求转发" class="headerlink" title="Request 请求转发"></a>Request 请求转发</h4><p>请求转发（forward）是一种在服务器内部的资源跳转方式。</p>
 <p>请求转发的实现方式：<code>req.getRequestDispatcher(&quot;资源B路径&quot;).forward(req,resp);</code>。</p>
-<pre><code class="java">@WebServlet(&quot;/req5&quot;)
-public class RequestDemo5 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        System.out.println(&quot;demo5...&quot;);
-        //请求转发
-        request.getRequestDispatcher(&quot;/req6&quot;).forward(request,response);
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/req5&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestDemo5</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;demo5...&quot;</span>);</span><br><span class="line">        <span class="comment">//请求转发</span></span><br><span class="line">        request.getRequestDispatcher(<span class="string">&quot;/req6&quot;</span>).forward(request,response);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>请求转发资源间共享数据：使用 Request 对象。</p>
 <ol>
-<li><p>  存储数据到 request 域中：<code>void setAttribute(String name,Object o);</code></p>
+<li><p>存储数据到 request 域中：<code>void setAttribute(String name,Object o);</code></p>
 </li>
-<li><p>  根据 key 获取值：<code>Object getAttribute(String name);</code></p>
+<li><p>根据 key 获取值：<code>Object getAttribute(String name);</code></p>
 </li>
-<li><p>  根据 key 删除该键值对：<code>void removeAttribute(String name);</code></p>
+<li><p>根据 key 删除该键值对：<code>void removeAttribute(String name);</code></p>
 </li>
 </ol>
-<pre><code class="java">@WebServlet(&quot;/req5&quot;)
-public class RequestDemo5 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        System.out.println(&quot;demo5...&quot;);
-        //存储数据
-        request.setAttribute(&quot;msg&quot;,&quot;hello&quot;);
-        //请求转发
-        request.getRequestDispatcher(&quot;/req6&quot;).forward(request,response);
-    &#125;
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;
-
-@WebServlet(&quot;/req6&quot;)
-public class RequestDemo6 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        System.out.println(&quot;demo6...&quot;);
-        //获取数据
-        Object msg = request.getAttribute(&quot;msg&quot;);
-        System.out.println(msg);
-    &#125;
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/req5&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestDemo5</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;demo5...&quot;</span>);</span><br><span class="line">        <span class="comment">//存储数据</span></span><br><span class="line">        request.setAttribute(<span class="string">&quot;msg&quot;</span>,<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">        <span class="comment">//请求转发</span></span><br><span class="line">        request.getRequestDispatcher(<span class="string">&quot;/req6&quot;</span>).forward(request,response);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WebServlet(&quot;/req6&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RequestDemo6</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;demo6...&quot;</span>);</span><br><span class="line">        <span class="comment">//获取数据</span></span><br><span class="line">        <span class="type">Object</span> <span class="variable">msg</span> <span class="operator">=</span> request.getAttribute(<span class="string">&quot;msg&quot;</span>);</span><br><span class="line">        System.out.println(msg);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>请求转发的特点：浏览器地址栏路径不发生变化，只能转发到当前服务器的内部资源，而不能从一个服务器通过转发访问另一台服务器。一次请求可以在转发资源间使用 request 共享数据。</p>
 <h3 id="三、Response-对象"><a href="#三、Response-对象" class="headerlink" title="三、Response 对象"></a>三、Response 对象</h3><p>Reponse 的继承体系和 Request 的继承体系非常相似</p>
 <p>Servlet -&gt; <code>service(request, response)</code></p>
-<pre><code class="mermaid">graph BT
-ReponseFacade --&gt; HttpServletReponse --&gt; ServletReponse</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph BT</span><br><span class="line">ReponseFacade --&gt; HttpServletReponse --&gt; ServletReponse</span><br></pre></td></tr></table></figure>
 <h4 id="Response-设置响应数据"><a href="#Response-设置响应数据" class="headerlink" title="Response 设置响应数据"></a>Response 设置响应数据</h4><p>HTTP响应数据总共分为三部分内容，分别是响应行、响应头、响应体，对于这三部分内容的数据，respone 对象都提供了哪些方法来进行设置?</p>
 <p>对于响应头，比较常用的就是设置响应状态码：<code>void setStatus(int sc);</code>。</p>
 <p>设置响应头键值对：<code>void setHeader(String name,String value);</code>。</p>
@@ -874,74 +621,23 @@ ReponseFacade --&gt; HttpServletReponse --&gt; ServletReponse</code></pre>
 <p>介绍完这些方法后，后面我们会通过案例把这些方法都用一用，首先先来完成下重定向的功能开发。</p>
 <h4 id="Respones-请求重定向"><a href="#Respones-请求重定向" class="headerlink" title="Respones 请求重定向"></a>Respones 请求重定向</h4><p>Response 重定向（redirect）是一种资源跳转方式。浏览器发送请求给服务器，服务器中对应的资源 A 接收到请求。当资源 A 现在无法处理该请求，就会给浏览器响应一个 302 的状态码 + location 的一个访问资源 B 的路径。浏览器接收到响应状态码为 302 就会重新发送请求到 location 对应的访问地址去访问资源 B。资源 B 接收到请求后进行处理并最终给浏览器响应结果，这整个过程就叫重定向。</p>
 <p>重定向的实现方式：</p>
-<pre><code class="http">resp.setStatus(302);
-resp.setHeader(&quot;location&quot;,&quot;资源B的访问路径&quot;);</code></pre>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">resp.setStatus(302);</span><br><span class="line">resp.setHeader(&quot;location&quot;,&quot;资源B的访问路径&quot;);</span><br></pre></td></tr></table></figure>
 <ol>
-<li>  具体使用，我们先创建 ResponseDemo1 类</li>
+<li>具体使用，我们先创建 ResponseDemo1 类</li>
 </ol>
-<pre><code class="java">@WebServlet(&quot;/resp1&quot;)
-public class ResponseDemo1 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        System.out.println(&quot;resp1....&quot;);
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;</code></pre>
-<ol start="2">
-<li>  创建 ResponseDemo2 类</li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/resp1&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ResponseDemo1</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;resp1....&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>创建 ResponseDemo2 类</li>
 </ol>
-<pre><code class="java">@WebServlet(&quot;/resp2&quot;)
-public class ResponseDemo2 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        System.out.println(&quot;resp2....&quot;);
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;</code></pre>
-<ol start="3">
-<li>  在 ResponseDemo1 的 doGet 方法中给前端响应数据</li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/resp2&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ResponseDemo2</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;resp2....&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>在 ResponseDemo1 的 doGet 方法中给前端响应数据</li>
 </ol>
-<pre><code class="java">@WebServlet(&quot;/resp1&quot;)
-public class ResponseDemo1 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        System.out.println(&quot;resp1....&quot;);
-        //重定向
-        //1.设置响应状态码 302
-        response.setStatus(302);
-        //2. 设置响应头 Location
-        response.setHeader(&quot;Location&quot;,&quot;/request-demo/resp2&quot;);
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;</code></pre>
-<ol start="4">
-<li>  虽然功能已经实现，但是从设置重定向的两行代码来看，会发现除了重定向的地址不一样，其他的内容都是一模一样，所以request对象给我们提供了简化的编写方式为：<code>resposne.sendRedirect(&quot;/request-demo/resp2&quot;)</code>。</li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/resp1&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ResponseDemo1</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;resp1....&quot;</span>);</span><br><span class="line">        <span class="comment">//重定向</span></span><br><span class="line">        <span class="comment">//1.设置响应状态码 302</span></span><br><span class="line">        response.setStatus(<span class="number">302</span>);</span><br><span class="line">        <span class="comment">//2. 设置响应头 Location</span></span><br><span class="line">        response.setHeader(<span class="string">&quot;Location&quot;</span>,<span class="string">&quot;/request-demo/resp2&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>虽然功能已经实现，但是从设置重定向的两行代码来看，会发现除了重定向的地址不一样，其他的内容都是一模一样，所以request对象给我们提供了简化的编写方式为：<code>resposne.sendRedirect(&quot;/request-demo/resp2&quot;)</code>。</li>
 </ol>
-<pre><code class="java">@WebServlet(&quot;/resp1&quot;)
-public class ResponseDemo1 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        System.out.println(&quot;resp1....&quot;);
-        //重定向
-        resposne.sendRedirect(&quot;/request-demo/resp2&quot;)；
-    &#125;
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/resp1&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ResponseDemo1</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;resp1....&quot;</span>);</span><br><span class="line">        <span class="comment">//重定向</span></span><br><span class="line">        resposne.sendRedirect(<span class="string">&quot;/request-demo/resp2&quot;</span>)；</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>重定向的特点</p>
 <ul>
 <li><p>浏览器地址栏路径发送变化：当进行重定向访问的时候，由于是由浏览器发送的两次请求，所以地址会发生变化。</p>
@@ -954,129 +650,41 @@ public class ResponseDemo1 extends HttpServlet &#123;
 <h4 id="路径问题"><a href="#路径问题" class="headerlink" title="路径问题"></a>路径问题</h4><ol>
 <li><p>转发的时候路径上没有加 <code>/request-demo</code> 而重定向加了，因为对于转发来说，因为是在服务端进行的，所以不需要加虚拟目录。对于重定向来说，路径最终是由浏览器来发送请求，就需要添加虚拟目录。</p>
 </li>
-<li><p>在重定向的代码中，<code>/request-demo</code> 是固定编码的，如果后期通过 Tomcat 插件配置了项目的访问路径，那么所有需要重定向的地方都需要重新修改，因此我们可以在代码中动态去获取项目访问的虚拟目录进行优化，具体可以借助 request 对象 <code>getContextPath() </code>方法，修改后的代码如下：</p>
+<li><p>在重定向的代码中，<code>/request-demo</code> 是固定编码的，如果后期通过 Tomcat 插件配置了项目的访问路径，那么所有需要重定向的地方都需要重新修改，因此我们可以在代码中动态去获取项目访问的虚拟目录进行优化，具体可以借助 request 对象 <code>getContextPath()</code>方法，修改后的代码如下：</p>
 </li>
 </ol>
-<pre><code class="java">@WebServlet(&quot;/resp1&quot;)
-public class ResponseDemo1 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        System.out.println(&quot;resp1....&quot;);
-
-        //简化方式完成重定向
-        //动态获取虚拟目录
-        String contextPath = request.getContextPath();
-        response.sendRedirect(contextPath+&quot;/resp2&quot;);
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/resp1&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ResponseDemo1</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;resp1....&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//简化方式完成重定向</span></span><br><span class="line">        <span class="comment">//动态获取虚拟目录</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">contextPath</span> <span class="operator">=</span> request.getContextPath();</span><br><span class="line">        response.sendRedirect(contextPath+<span class="string">&quot;/resp2&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>重新启动访问测试，功能依然能够实现，此时就可以动态获取项目访问的虚拟路径，从而降低代码的耦合度。</p>
 <h4 id="Response-响应字符数据"><a href="#Response-响应字符数据" class="headerlink" title="Response 响应字符数据"></a>Response 响应字符数据</h4><p>要想将字符数据写回到浏览器，我们需要两个步骤：首先通过 Response 对象获取字符输出流（<code>PrintWriter writer = resp.getWriter();</code>），再通过字符输出流写数据（<code>writer.write(&quot;aaa&quot;);</code>）</p>
 <ol>
 <li>返回一个简单的字符串 <code>aaa</code>。</li>
 </ol>
-<pre><code class="java">/**
- * 响应字符数据：设置字符数据的响应体
- */
-@WebServlet(&quot;/resp3&quot;)
-public class ResponseDemo3 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        response.setContentType(&quot;text/html;charset=utf-8&quot;);
-        //1. 获取字符输出流
-        PrintWriter writer = response.getWriter();
-         writer.write(&quot;aaa&quot;);
-    &#125;
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;</code></pre>
-<ol start="2">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 响应字符数据：设置字符数据的响应体</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@WebServlet(&quot;/resp3&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ResponseDemo3</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line">        <span class="comment">//1. 获取字符输出流</span></span><br><span class="line">        <span class="type">PrintWriter</span> <span class="variable">writer</span> <span class="operator">=</span> response.getWriter();</span><br><span class="line">		 writer.write(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
 <li>返回一串 html 字符串，并且能被浏览器解析。</li>
 </ol>
-<pre><code class="java">PrintWriter writer = response.getWriter();
-//content-type，告诉浏览器返回的数据类型是HTML类型数据，这样浏览器才会解析HTML标签
-response.setHeader(&quot;content-type&quot;,&quot;text/html&quot;);
-writer.write(&quot;&lt;h1&gt;aaa&lt;/h1&gt;&quot;);
-//一次请求响应结束后，response 对象就会被销毁掉，所以不要手动关闭流。</code></pre>
-<ol start="3">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">PrintWriter</span> <span class="variable">writer</span> <span class="operator">=</span> response.getWriter();</span><br><span class="line"><span class="comment">//content-type，告诉浏览器返回的数据类型是HTML类型数据，这样浏览器才会解析HTML标签</span></span><br><span class="line">response.setHeader(<span class="string">&quot;content-type&quot;</span>,<span class="string">&quot;text/html&quot;</span>);</span><br><span class="line">writer.write(<span class="string">&quot;&lt;h1&gt;aaa&lt;/h1&gt;&quot;</span>);</span><br><span class="line"><span class="comment">//一次请求响应结束后，response 对象就会被销毁掉，所以不要手动关闭流。</span></span><br></pre></td></tr></table></figure>
+<ol>
 <li>返回一个中文的字符串 <code>你好</code>，需要注意设置响应数据的编码为 <code>utf-8</code></li>
 </ol>
-<pre><code class="java">//设置响应的数据格式及数据的编码
-response.setContentType(&quot;text/html;charset=utf-8&quot;);
-writer.write(&quot;你好&quot;);</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置响应的数据格式及数据的编码</span></span><br><span class="line">response.setContentType(<span class="string">&quot;text/html;charset=utf-8&quot;</span>);</span><br><span class="line">writer.write(<span class="string">&quot;你好&quot;</span>);</span><br></pre></td></tr></table></figure>
 <h4 id="Response-响应字节数据"><a href="#Response-响应字节数据" class="headerlink" title="Response 响应字节数据"></a>Response 响应字节数据</h4><p>要想将字节数据写回到浏览器，我们需要两个步骤：首先通过Response对象获取字节输出流（<code>ServletOutputStream outputStream = resp.getOutputStream();</code>），再通过字节输出流写数据（<code>outputStream.write(字节数据);</code>）。</p>
 <p>响应字符数据的实际应用：</p>
 <ol>
 <li>返回一个图片文件到浏览器</li>
 </ol>
-<pre><code class="java">/**
- * 响应字节数据：设置字节数据的响应体
- */
-@WebServlet(&quot;/resp4&quot;)
-public class ResponseDemo4 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        //1. 读取文件
-        FileInputStream fis = new FileInputStream(&quot;d://a.jpg&quot;);
-        //2. 获取response字节输出流
-        ServletOutputStream os = response.getOutputStream();
-        //3. 完成流的copy
-        byte[] buff = new byte[1024];
-        int len = 0;
-        while ((len = fis.read(buff))!= -1)&#123;
-            os.write(buff,0,len);
-        &#125;
-        fis.close();
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 响应字节数据：设置字节数据的响应体</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@WebServlet(&quot;/resp4&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ResponseDemo4</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//1. 读取文件</span></span><br><span class="line">        <span class="type">FileInputStream</span> <span class="variable">fis</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(<span class="string">&quot;d://a.jpg&quot;</span>);</span><br><span class="line">        <span class="comment">//2. 获取response字节输出流</span></span><br><span class="line">        <span class="type">ServletOutputStream</span> <span class="variable">os</span> <span class="operator">=</span> response.getOutputStream();</span><br><span class="line">        <span class="comment">//3. 完成流的copy</span></span><br><span class="line">        <span class="type">byte</span>[] buff = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">1024</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> ((len = fis.read(buff))!= -<span class="number">1</span>)&#123;</span><br><span class="line">            os.write(buff,<span class="number">0</span>,len);</span><br><span class="line">        &#125;</span><br><span class="line">        fis.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>上述代码中，对于流的 copy 的代码还是比较复杂的，所以我们可以使用别人提供好的方法来简化代码的开发，具体的步骤是：</p>
 <ol>
-<li>  pom.xml 添加依赖</li>
+<li>pom.xml 添加依赖</li>
 </ol>
-<pre><code class="xml">&lt;dependency&gt;
-    &lt;groupId&gt;commons-io&lt;/groupId&gt;
-    &lt;artifactId&gt;commons-io&lt;/artifactId&gt;
-    &lt;version&gt;2.6&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
-<ol start="2">
-<li>  调用工具类方法</li>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>调用工具类方法</li>
 </ol>
-<pre><code class="java">//fis:输入流
-//os:输出流
-IOUtils.copy(fis,os);</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//fis:输入流</span></span><br><span class="line"><span class="comment">//os:输出流</span></span><br><span class="line">IOUtils.copy(fis,os);</span><br></pre></td></tr></table></figure>
 <p>优化后的代码：</p>
-<pre><code class="java">/**
- * 响应字节数据：设置字节数据的响应体
- */
-@WebServlet(&quot;/resp4&quot;)
-public class ResponseDemo4 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        //1. 读取文件
-        FileInputStream fis = new FileInputStream(&quot;d://a.jpg&quot;);
-        //2. 获取response字节输出流
-        ServletOutputStream os = response.getOutputStream();
-        //3. 完成流的copy
-          IOUtils.copy(fis,os);
-        fis.close();
-    &#125;
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        this.doGet(request, response);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 响应字节数据：设置字节数据的响应体</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@WebServlet(&quot;/resp4&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ResponseDemo4</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//1. 读取文件</span></span><br><span class="line">        <span class="type">FileInputStream</span> <span class="variable">fis</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(<span class="string">&quot;d://a.jpg&quot;</span>);</span><br><span class="line">        <span class="comment">//2. 获取response字节输出流</span></span><br><span class="line">        <span class="type">ServletOutputStream</span> <span class="variable">os</span> <span class="operator">=</span> response.getOutputStream();</span><br><span class="line">        <span class="comment">//3. 完成流的copy</span></span><br><span class="line">      	IOUtils.copy(fis,os);</span><br><span class="line">        fis.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="built_in">this</span>.doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   
   
@@ -1088,7 +696,7 @@ public class ResponseDemo4 extends HttpServlet &#123;
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -1113,6 +721,10 @@ public class ResponseDemo4 extends HttpServlet &#123;
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Request&Response/>http://blog.zhuangzhihao.top/Request&Response/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -1128,12 +740,8 @@ public class ResponseDemo4 extends HttpServlet &#123;
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Java/">Java</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Servlet/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Servlet</p></a></div>
 
 
         
@@ -1151,77 +759,6 @@ public class ResponseDemo4 extends HttpServlet &#123;
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Request&Response/&title=Request 和 Response 对象详解 - Bezhuang's Blog&summary=
-Java Web 核心第二章。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Request&Response/&title=Request 和 Response 对象详解 - Bezhuang's Blog&summary=
-Java Web 核心第二章。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Request&Response/&title=Request 和 Response 对象详解 - Bezhuang's Blog&summary=
-Java Web 核心第二章。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTTP 请求，会针对每一次请求分别创建一个用于代表请求的 Request 对象和代表响应的 Response 对象。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC90lEQVR42u3aQZbjIAwFwNz/0jMXaD+jL7kbnGKXGDtQzuI/ic8/48fxQQAGDBgwYMAcA/MJx939ywsJ77+a194PGDBgwIABA+Y4mOpGut9fXb8Dupo/tR8wYMCAAQMGzLkwq4GuCzB9fWo/YMCAAQMGDJjvgekGtLtC03RgBAMGDBgwYMCA6Ta+pjYMBgwYMGDAgAETN6ge+tw9iPTnnUgwYMCAAQMGzK/BdA9A7/Z5m5PhYMCAAQMGDJjHYLojDWir4N3AV94PGDBgwIABA+YYmKmDON0Fp4DVYDdWwQMDBgwYMGDAbAeTHsiZguwGwnbwBAMGDBgwYMAcA9MFSYNdNyiuvtDyHwAMGDBgwIABcwxMXNBZDHxTIKvBr10YAwMGDBgwYMAcA9PdWLWQNFWg6hbUbhtuYMCAAQMGDJjtYaYCXjVIVYPj1HNv7wMDBgwYMGDAHAOTPjgNet1gmcLEhSowYMCAAQMGzLYwTx8Eqi40LWRN7QcMGDBgwIAB8x6YarCbCoqr89MDTe2ABwYMGDBgwID5c5ipws9vAT1eEAMDBgwYMGDAHAdT3WAavFavV383bSCCAQMGDBgwYN4Lkx7omdp4+qLiFw8GDBgwYMCAOQamWkBK51efu/qi0gbb5TwwYMCAAQMGzPEw1UZbNYilgbLbILxdBxgwYMCAAQPmGJi0ADV14Gfqd6vrAQMGDBgwYMC8H6a6gemDQNV1VK+DAQMGDBgwYM6FSRtq1YZYtaH2VGOvfHAIDBgwYMCAAbMtTHdUFzBV8EoD3u18MGDAgAEDBswxMI8FpeFCVbrx8eQLBgwYMGDAgNkOphroqhDVhU7DgQEDBgwYMGDeD5MWntIDRNXg123E3QZEMGDAgAEDBszXwHQDWbyB4rzlAAoGDBgwYMCA+VqY7rxu4awa8MCAAQMGDBgw74FJG25poOoGx+6LAgMGDBgwYMCcD5M2rqrX0/u661sOiGDAgAEDBgyYY2CMi4BngAEDBgwYMLuO/y+NoYqSbcfRAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Request&Response/&text=Request 和 Response 对象详解 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1235,10 +772,10 @@ Java Web 核心第二章。在 Java Servlet 中，Request 对象是用来封装�
   
     <div class="prev-next">
       
-        <a class='prev' href='/gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>gets 函数与 puts 函数</p>
+        <a class='prev' href='/JSP/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>JSP - Java Server Pages</p>
           <p class='content'>
-C 语言标准输入 scanf 在通过 %s 读取字符串时遇到空格就认为读取结束，这样没办法把一行带有空格的字符串存入到一个字符数组中。所以当需要输入的字符串中含有空格时，我们需要使用 gets...</p>
+Java Web 核心第三章。JSP（Java Server Pages）是由 Sun Microsystems 公司主导创建的一种动态网页技术标准。JSP 部署于网络服务器上，可以响应客户端...</p>
         </a>
       
       
@@ -1340,17 +877,9 @@ Java Web 核心第一章。Java Web 是用 Java 技术来解决相关 web 互联
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1476,8 +1005,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1833,29 +1360,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1894,7 +1398,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1954,20 +1458,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -2180,6 +1670,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

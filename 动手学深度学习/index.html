@@ -107,7 +107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -231,16 +231,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -363,16 +373,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -396,7 +416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -419,36 +439,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -482,6 +472,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+    </a>
+  </div>
+
 
           
         
@@ -523,8 +520,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>机器学习（machine learning，ML）是一类强大的可以从经验中学习的技术。 通常采用观测数据或与环境交互的形式，机器学习算法会积累更多的经验，其性能也会逐步提高就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="日常生活中的机器学习"><a href="#日常生活中的机器学习" class="headerlink" title="日常生活中的机器学习"></a>日常生活中的机器学习</h3><ul>
 <li>Hey, Siri：收集一个包含音频样本的巨大的数据集（dataset），并对包含和不包含唤醒词的样本进行标记</li>
 <li>通过机器学习算法，我们不需要设计一个“明确地”识别唤醒词的系统。 相反，我们定义一个灵活的程序算法，其输出由许多参数（parameter）决定。 然后我们使用数据集来确定当下的“最佳参数集”，这些参数通过某种性能度量来获取完成任务的最佳性能</li>
@@ -543,7 +539,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <h3 id="机器学习的关键组件"><a href="#机器学习的关键组件" class="headerlink" title="机器学习的关键组件"></a>机器学习的关键组件</h3><h4 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h4><ul>
 <li>每个数据集由一个个样本（example, sample）组成，大多时候，它们遵循独立同分布（independently and identically distributed, i.i.d.）</li>
-<li> 样本有时也叫做数据点（data point）或者数据实例（data instance），通常每个样本由一组称为特征（features，或<em>协变量</em>（covariates））的属性组成，机器学习模型会根据这些属性进行预测</li>
+<li>样本有时也叫做数据点（data point）或者数据实例（data instance），通常每个样本由一组称为特征（features，或<em>协变量</em>（covariates））的属性组成，机器学习模型会根据这些属性进行预测</li>
 <li>在监督学习问题中，要预测的是一个特殊的属性，它被称为标签（label，或目标（target））</li>
 <li>当每个样本的特征类别数量都是相同的时候，其特征向量是固定长度的，这个长度被称为数据的维数（dimensionality）。 固定长度的特征向量是一个方便的属性，它有助于我们量化学习大量样本</li>
 <li>然而，并不是所有的数据都可以用“固定长度”的向量表示，例如文本数据。与传统机器学习方法相比，深度学习的一个主要优势是可以处理不同长度的数据</li>
@@ -706,24 +702,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>安装环境：Ubuntu 18.04 + build-essential + Python 3.8 + </p>
 </li>
 <li><p>安装 Miniconda 到 <code>\root\miniconda3</code></p>
-<pre><code class="bash">wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.11.0-Linux-x86_64.sh
-bash Miniconda3-py38_4.11.0-Linux-x86_64.sh</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.11.0-Linux-x86_64.sh</span><br><span class="line">bash Miniconda3-py38_4.11.0-Linux-x86_64.sh</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>安装其他软件包</p>
-<pre><code class="bash">pip install jupyter d2l torch torchvision</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install jupyter d2l torch torchvision</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>拷贝 Jupyter 记事本</p>
-<pre><code class="bash">wget https://zh-v2.d2l.ai/d2l-zh.zip
-git clone git@github.com:d2l-ai/d2l-zh-pytorch-slides.git</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://zh-v2.d2l.ai/d2l-zh.zip</span><br><span class="line">git <span class="built_in">clone</span> git@github.com:d2l-ai/d2l-zh-pytorch-slides.git</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>远程运行 Jupyter Notebook</p>
-<pre><code class="bash">jupyter notebook --allow-root</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --allow-root</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>将远端 localhost 映射到本地 localhost（端口 :8888）</p>
-<pre><code class="bash">ssh -L8888:localhost:8888 root@106.15.200.147</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -L8888:localhost:8888 root@106.15.200.147</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>安装 jupyter 插件</p>
-<pre><code class="bash">pip install rise</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install rise</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
@@ -744,7 +738,7 @@ git clone git@github.com:d2l-ai/d2l-zh-pytorch-slides.git</code></pre>
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -769,6 +763,10 @@ git clone git@github.com:d2l-ai/d2l-zh-pytorch-slides.git</code></pre>
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/>http://blog.zhuangzhihao.top/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -784,13 +782,6 @@ git clone git@github.com:d2l-ai/d2l-zh-pytorch-slides.git</code></pre>
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
-    </a>
-  </div>
-
 
         
       
@@ -807,77 +798,6 @@ git clone git@github.com:d2l-ai/d2l-zh-pytorch-slides.git</code></pre>
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/&title=机器学习和深度学习介绍及入门 - Bezhuang's Blog&summary=
-机器学习（machine learning，ML）是一类强大的可以从经验中学习的技术。 通常采用观测数据或与环境交互的形式，机器学习算法会积累更多的经验，其性能也会逐步提高就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/&title=机器学习和深度学习介绍及入门 - Bezhuang's Blog&summary=
-机器学习（machine learning，ML）是一类强大的可以从经验中学习的技术。 通常采用观测数据或与环境交互的形式，机器学习算法会积累更多的经验，其性能也会逐步提高就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/&title=机器学习和深度学习介绍及入门 - Bezhuang's Blog&summary=
-机器学习（machine learning，ML）是一类强大的可以从经验中学习的技术。 通常采用观测数据或与环境交互的形式，机器学习算法会积累更多的经验，其性能也会逐步提高就在过去的五年里，深度学习给世界带来了惊喜，推动了计算机视觉、自然语言处理、自动语音识别、强化学习和统计建模等领域的快速发展。我选择动手学深度学习 v2 课程来开启机器学习之旅，并特别关注深度学习（deep learning，DL）的基础知识深度学习。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEaklEQVR42u3aQY4bMQwEQP//08k9gWGySWnWi9LNhkcjlXwQiX79MY6MFwKwYA2wYMEaYK/AvsLx7/PvPv/34vA9Hzf04bnq/GMPsGDBggULFixYsFdhuxvowla/Tzf8ab7qPsceYMGCBQsWLFiwYB+B7S48vaBXgbtw1QKl+7m8HrBgwYIFCxYsWLBfAds9gHEgYqlB3YUHCxYsWLBgwYIF+7tgu43o7YDF1u/BggULFixYsGDBfjfs9ILeXVA6poGMrcIGLFiwYMGCBQsW7LOw0439ts+xB1iwYMGCBQsWLNgrsKcDFGmDvHvR7wZKTgVLwIIFCxYsWLBgwd6BrS5kq1BID2L6XDdI0m3kgwULFixYsGDBgn0WthxMGDaI06DHKei1PwhYsGDBggULFizYK7BbC00b0dUFTxvk1cInbbCDBQsWLFiwYMGCvQubNobTAEb14t+dv9uwP3ZQYMGCBQsWLFiwYK/CpgGJbqHR3cD2BT8tZMrgYMGCBQsWLFiwYK/AToMMW43v9CC3CohpUAQsWLBgwYIFCxbss7DdhXYXlDaQtwIf3d+1/1hgwYIFCxYsWLBgr8DGwYQmwLRx3i1cuu+dNuLBggULFixYsGDB/izYUxf8bqGxdQBp47z8PViwYMGCBQsWLNgrsNWFTYMU28+l86SjXHiABQsWLFiwYMGCvQK7Hcw9tYG0QJiuszsPWLBgwYIFCxYs2Luw3Y1NA8nTRvRWEKPbWP/4HFiwYMGCBQsWLNgrsKcXnl6404v+9ADHgRSwYMGCBQsWLFiwV2GrC0oX0A0Epxf06funfxCwYMGCBQsWLFiwd2G3GsPpAVR/nxYapwIh5coLLFiwYMGCBQsW7CrsVkM6BWtfwJcb6NMDAQsWLFiwYMGCBfsMbBrESAuEtJBIC5juuqbBEbBgwYIFCxYsWLB3YNMLdfVF6Xxd6DSosV2wgAULFixYsGDBgr0LO71YTwuMLth2Y3zrIMCCBQsWLFiwYME+A1u9MHcXeqoQmP4uXefbecGCBQsWLFiwYMFegU3BxsGGpYJiWoCkBwQWLFiwYMGCBQv2Z8BWH9wqLE4FMrYKlHhfYMGCBQsWLFiwYK/AphN34aeBkOmBpwGUdsECFixYsGDBggUL9gpst9E9bYCnBcfW76fztSsvsGDBggULFixYsEdh0yDGNkR6QGlhsDXAggULFixYsGDBPgObju1gRhXm9vrLBwYWLFiwYMGCBQv2Cuz4QhwWFu+ev90QTwMi5SQMWLBgwYIFCxYs2KOw6YX6VFAj/X4LLj4YsGDBggULFixYsI/AngpobDWsp8GSNLhRPgiwYMGCBQsWLFiwXwGbBoKfDn6kBcxHD7BgwYIFCxYsWLBfBZtudLqRreBItUH+cX1gwYIFCxYsWLBgH4FNG83TBa1d0IdBke6BlRvdYMGCBQsWLFiwYI/Adkf3xWnBUT2QrWDJODgCFixYsGDBggUL9gqssTvAggVrgAUL1gB7dPwFHQ9RhUPLQicAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/&text=机器学习和深度学习介绍及入门 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -996,17 +916,9 @@ Java 数据库连接，JDBC（Java Database Connectivity），是 Java 语言编
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1132,8 +1044,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1489,29 +1399,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1550,7 +1437,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1610,20 +1497,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1836,6 +1709,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

@@ -108,7 +108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -232,16 +232,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -364,16 +374,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -397,7 +417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -420,36 +440,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -483,6 +473,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%85%95%E8%AF%BEMOOC/">慕课MOOC</a>
+    </a>
+  </div>
+
 
           
         
@@ -524,20 +521,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。</p>
 </blockquote>
-<a id="more"></a>
-
-<h3 id="矩阵的列空间"><a href="#矩阵的列空间" class="headerlink" title="矩阵的列空间"></a>矩阵的列空间</h3><h4 id="常用矩阵"><a href="#常用矩阵" class="headerlink" title="常用矩阵"></a>常用矩阵</h4><ul>
-<li><p>$A_{0}=\begin{bmatrix}<br>1 &amp; 3 &amp; 2 \<br>4 &amp; 12 &amp; 8 \<br>2 &amp; 6 &amp; 4<br>\end{bmatrix}$</p>
+<span id="more"></span>
+<h3 id="矩阵的列空间"><a href="#矩阵的列空间" class="headerlink" title="矩阵的列空间"></a>矩阵的列空间</h3><h4 id="常用矩阵"><a href="#常用矩阵" class="headerlink" title="常用矩阵"></a>常用矩阵</h4><p>$A_{0}=\begin{bmatrix}<br>1 &amp; 3 &amp; 2 \<br>4 &amp; 12 &amp; 8 \<br>2 &amp; 6 &amp; 4<br>\end{bmatrix}$</p>
 <ul>
 <li>$A_{0}$ 所有的行向量在同一个方向并且所有的列向量在同一个方向</li>
 </ul>
-</li>
-<li><p>$A_{1}=\begin{bmatrix}<br>1 &amp; 4 &amp; 2 \<br>4 &amp; 1 &amp; 3 \<br>5 &amp; 5 &amp; 5<br>\end{bmatrix}$</p>
+<p>$A_{1}=\begin{bmatrix}<br>1 &amp; 4 &amp; 2 \<br>4 &amp; 1 &amp; 3 \<br>5 &amp; 5 &amp; 5<br>\end{bmatrix}$</p>
 <ul>
 <li>$A_{1}$ 第一行加第二行等于第三行</li>
 </ul>
-</li>
-<li><p>对称矩阵</p>
+<p>对称矩阵</p>
 <ul>
 <li><p>$S_{2}=\begin{bmatrix}<br>2 &amp; -1 \<br>-1 &amp; 2<br>\end{bmatrix}$</p>
 </li>
@@ -546,19 +539,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>$S_{4}=\begin{bmatrix}<br>2 &amp; -1 &amp; 0 \<br>-1 &amp; 2 &amp; -1 \<br>0 &amp; -1 &amp; 2<br>\end{bmatrix}$</p>
 </li>
 </ul>
-</li>
-<li><p>正交矩阵</p>
+<p>正交矩阵</p>
 <ul>
 <li>$Q_{5}=\begin{bmatrix}<br>\cos \theta  &amp; -\sin \theta  \<br>sin\theta  &amp; \cos \theta<br>\end{bmatrix}$</li>
 </ul>
-</li>
-<li><p>$A_{6}=\begin{bmatrix}<br>3 &amp; 0 \<br>4 &amp; 5<br>\end{bmatrix}$</p>
-</li>
-</ul>
-<h4 id="A-的列空间（列的所有线性组合）"><a href="#A-的列空间（列的所有线性组合）" class="headerlink" title="A 的列空间（列的所有线性组合）"></a>A 的列空间（列的所有线性组合）</h4><ul>
-<li><p>将矩阵乘以向量</p>
+<p>$A_{6}=\begin{bmatrix}<br>3 &amp; 0 \<br>4 &amp; 5<br>\end{bmatrix}$</p>
+<h4 id="A-的列空间（列的所有线性组合）"><a href="#A-的列空间（列的所有线性组合）" class="headerlink" title="A 的列空间（列的所有线性组合）"></a>A 的列空间（列的所有线性组合）</h4><p>将矩阵乘以向量</p>
 <ul>
-<li><p>$Ax=\begin{bmatrix} 1 &amp; 4 &amp; 5 \ 3 &amp; 2 &amp; 5 \ 2 &amp; 1 &amp; 3 \end{bmatrix}\begin{bmatrix} x_{1} \ x_{2} \ x_{3} \end{bmatrix}=\begin{bmatrix} 1 \ 3 \ 2 \end{bmatrix}x_{1}+\begin{bmatrix} x \ 2 \ 1 \end{bmatrix}x_{2}+\begin{bmatrix} 5 \ 5 \ 3 \end{bmatrix}x_{3}$</p>
+<li><p>$Ax=\begin{bmatrix} 1 &amp; 4 &amp; 5 \ 3 &amp; 2 &amp; 5 \ 2 &amp; 1 &amp; 3 \end{bmatrix}\begin{bmatrix} x<em>{1} \ x</em>{2} \ x<em>{3} \end{bmatrix}=\begin{bmatrix} 1 \ 3 \ 2 \end{bmatrix}x</em>{1}+\begin{bmatrix} x \ 2 \ 1 \end{bmatrix}x<em>{2}+\begin{bmatrix} 5 \ 5 \ 3 \end{bmatrix}x</em>{3}$</p>
 </li>
 <li><p>$Ax$ 为一种特殊的列的线性组合</p>
 </li>
@@ -567,10 +555,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>$C(A)$ 是一个平面</p>
 </li>
 </ul>
-</li>
-</ul>
-<h4 id="列空间的基"><a href="#列空间的基" class="headerlink" title="列空间的基"></a>列空间的基</h4><ul>
-<li><p>$A=CR=\begin{bmatrix}<br>1 &amp; 4 \<br>3 &amp; 2 \<br>2 &amp; 1<br>\end{bmatrix}\begin{bmatrix}<br>1 &amp; 0 &amp; 1 \<br>0 &amp; 1 &amp; 1<br>\end{bmatrix}$</p>
+<h4 id="列空间的基"><a href="#列空间的基" class="headerlink" title="列空间的基"></a>列空间的基</h4><p>$A=CR=\begin{bmatrix}<br>1 &amp; 4 \<br>3 &amp; 2 \<br>2 &amp; 1<br>\end{bmatrix}\begin{bmatrix}<br>1 &amp; 0 &amp; 1 \<br>0 &amp; 1 &amp; 1<br>\end{bmatrix}$</p>
 <ul>
 <li><p>行秩 = 列秩 = r = 2</p>
 </li>
@@ -579,89 +564,65 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>R 的 r 行是行空间的一组基</p>
 </li>
 </ul>
-</li>
-<li><p>$A = CR$ 表明 A 的行秩等于列秩 </p>
+<p>$A = CR$ 表明 A 的行秩等于列秩 </p>
 <ul>
 <li>C 的 r 列相互线性独立（由定义可知）</li>
 <li>A 的每一列都是（C 的）这 r 列的线性组合（因为 A = CR）</li>
 <li>R 的 r 行相互线性独立（这 r 列包含了 r × r 的矩阵 I ）</li>
 <li>A 的每一行都是（C 的）这 r 行的线性组合（因为 A = CR）</li>
 </ul>
-</li>
-<li><p>核心内容 </p>
+<p>核心内容 </p>
 <ul>
 <li>C 的 r 列组成了 A 的列空间的基：维度 r </li>
 <li>R 的 r 列组成了 A 的行空间的基：维度 r</li>
 </ul>
-</li>
-<li><p>基包含两个向量 </p>
+<p>基包含两个向量 </p>
 <ul>
 <li>A 的秩等于 r = 2 </li>
 <li>$n − r = 3 − 2 = 1$</li>
 </ul>
-</li>
-<li><p>计数定理 </p>
+<p>计数定理 </p>
 <ul>
 <li>$Ax = 0$ 有一组解 $x = (1, 1, −1)$ 有 $n − r$ 组独立解可使 $Ax = 0$ 成立</li>
 </ul>
-</li>
-</ul>
-<h4 id="秩为-1-的矩阵-A"><a href="#秩为-1-的矩阵-A" class="headerlink" title="秩为 1 的矩阵 A"></a>秩为 1 的矩阵 A</h4><ul>
-<li>如果 A 的任意一列均为第一列的若干倍，那么 A 的每一行均为某行的若干倍</li>
-<li>用 A = CR 来证明<ul>
+<h4 id="秩为-1-的矩阵-A"><a href="#秩为-1-的矩阵-A" class="headerlink" title="秩为 1 的矩阵 A"></a>秩为 1 的矩阵 A</h4><p>如果 A 的任意一列均为第一列的若干倍，那么 A 的每一行均为某行的若干倍</p>
+<p>用 A = CR 来证明</p>
+<ul>
 <li>C 当中的一列 $v$ ⇒ R 当中的一行 $w$</li>
 <li>$A=\left[ v\right] ^{\left[ w\right] }$ ⇒ 每一行都是 $w$ 的倍数</li>
 </ul>
-</li>
-</ul>
-<h4 id="A-CR-的优良性质"><a href="#A-CR-的优良性质" class="headerlink" title="A = CR 的优良性质"></a>A = CR 的优良性质</h4><ul>
-<li>C 的列直接来源于 A：体现了此公式的内涵</li>
-<li>R 变成了A 的行化简阶梯形</li>
-<li>“行秩 = 列秩”这一结论变得显然：C = 列的基，R = 行的基</li>
-</ul>
-<h4 id="A-CR-不好的性质"><a href="#A-CR-不好的性质" class="headerlink" title="A = CR 不好的性质"></a>A = CR 不好的性质</h4><ul>
-<li>C 和 R 可能是病态矩阵</li>
-<li>如果 A 是可逆的，则有 C = A 和 R = I ⇒ A = AI，原地打转</li>
-</ul>
-<h3 id="线性代数概览"><a href="#线性代数概览" class="headerlink" title="线性代数概览"></a>线性代数概览</h3><h4 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h4><ul>
-<li>若 $Ax = 0$ 则有 $\begin{bmatrix} 1 \ \vdots \ m \end{bmatrix}\left[ x\right]=\begin{bmatrix} 0 \ \vdots \ 0 \end{bmatrix}$，x 与 A 的各列均正交<ul>
+<h4 id="A-CR-的优良性质"><a href="#A-CR-的优良性质" class="headerlink" title="A = CR 的优良性质"></a>A = CR 的优良性质</h4><p>C 的列直接来源于 A：体现了此公式的内涵</p>
+<p>R 变成了A 的行化简阶梯形</p>
+<p>“行秩 = 列秩”这一结论变得显然：C = 列的基，R = 行的基</p>
+<h4 id="A-CR-不好的性质"><a href="#A-CR-不好的性质" class="headerlink" title="A = CR 不好的性质"></a>A = CR 不好的性质</h4><p>C 和 R 可能是病态矩阵</p>
+<p>如果 A 是可逆的，则有 C = A 和 R = I ⇒ A = AI，原地打转</p>
+<h3 id="线性代数概览"><a href="#线性代数概览" class="headerlink" title="线性代数概览"></a>线性代数概览</h3><h4 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h4><p>若 $Ax = 0$ 则有 $\begin{bmatrix} 1 \ \vdots \ m \end{bmatrix}\left[ x\right]=\begin{bmatrix} 0 \ \vdots \ 0 \end{bmatrix}$，x 与 A 的各列均正交</p>
+<ul>
 <li>每个处于 A 的零空间当中的 x 都与 A 的行空间正交 </li>
 <li>每个处于 $A^T$ 的零空间当中的 y 都与 A 的列空间正交</li>
 </ul>
-</li>
-<li>$N\left( A\right) \bot C\left( A^{T}\right) $ 与 $N\left( A^{T}\right) \bot C\left( A\right) $<ul>
+<p>$N\left( A\right) \bot C\left( A^{T}\right) $ 与 $N\left( A^{T}\right) \bot C\left( A\right) $</p>
+<ul>
 <li>两对正交子空间，其中一对子空间的维度之和等于 n，另一对等于 m</li>
 </ul>
-</li>
+<h4 id="宏观视角下的线性代数"><a href="#宏观视角下的线性代数" class="headerlink" title="宏观视角下的线性代数"></a>宏观视角下的线性代数</h4><p><img src="https://blog.zhuangzhihao.top/img/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B001.png" style="zoom:67%;"></p>
+<p>一对子空间处于 $R<em>{n}$ 之中，另一对处于$R</em>{m}$ 当中</p>
+<p>从行空间变换为列空间——由此可知 A 是可逆的</p>
+<h4 id="列与行相乘（六组因式）"><a href="#列与行相乘（六组因式）" class="headerlink" title="列与行相乘（六组因式）"></a>列与行相乘（六组因式）</h4><p>A = BC = 秩为 1 的矩阵之和（列乘以行：外积）</p>
+<p>对矩阵相乘的全新理解（高层次），每次拿一列乘以一行是低层次的</p>
+<ul>
+<li><img src="https://blog.zhuangzhihao.top/img/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B002.png" style="zoom:67%;"></li>
 </ul>
-<h4 id="宏观视角下的线性代数"><a href="#宏观视角下的线性代数" class="headerlink" title="宏观视角下的线性代数"></a>宏观视角下的线性代数</h4><ul>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B001.png" style="zoom:67%;"></li>
-<li>一对子空间处于 $R_{n}$ 之中，另一对处于$R_{m}$ 当中</li>
-<li>从行空间变换为列空间——由此可知 A 是可逆的</li>
-</ul>
-<h4 id="列与行相乘（六组因式）"><a href="#列与行相乘（六组因式）" class="headerlink" title="列与行相乘（六组因式）"></a>列与行相乘（六组因式）</h4><ul>
-<li>A = BC = 秩为 1 的矩阵之和（列乘以行：外积）</li>
-<li>对矩阵相乘的全新理解（高层次），每次拿一列乘以一行是低层次的<ul>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B002.png" style="zoom:67%;"></li>
-</ul>
-</li>
-<li>$A=\begin{bmatrix} 2 &amp; 3 \ 4 &amp; 7 \end{bmatrix}=\begin{bmatrix} 1 &amp; 0 \ 2 &amp; 1 \end{bmatrix}\begin{bmatrix} 2 &amp; 3 \ 0 &amp; 1 \end{bmatrix}=LU$ （将矩阵拆分成上下两个三角矩阵）<ul>
+<p>$A=\begin{bmatrix} 2 &amp; 3 \ 4 &amp; 7 \end{bmatrix}=\begin{bmatrix} 1 &amp; 0 \ 2 &amp; 1 \end{bmatrix}\begin{bmatrix} 2 &amp; 3 \ 0 &amp; 1 \end{bmatrix}=LU$ （将矩阵拆分成上下两个三角矩阵）</p>
+<ul>
 <li>$2x+3y=7$ ， $4x+7y=15$  ⇒ $x=2,y=1$</li>
 <li>若两行发生交换，则 $PA = LU$ （P 指的是排列矩阵）</li>
 </ul>
-</li>
-</ul>
-<h4 id="用消元来解Ax-b（因式-A-LU）"><a href="#用消元来解Ax-b（因式-A-LU）" class="headerlink" title="用消元来解Ax = b（因式 A = LU）"></a>用消元来解Ax = b（因式 A = LU）</h4><ul>
-<li>下三角矩阵 L 乘以上三角矩阵 U</li>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B003.png" style="zoom:67%;">
-
-</li>
-</ul>
-<h3 id="正交向量"><a href="#正交向量" class="headerlink" title="正交向量"></a>正交向量</h3><h4 id="正交向量-–-矩阵-–-子空间"><a href="#正交向量-–-矩阵-–-子空间" class="headerlink" title="正交向量 – 矩阵 – 子空间"></a>正交向量 – 矩阵 – 子空间</h4><ul>
-<li>$X^{T}y=0,y^{T}x=0,\left( x+y\right) ^{T}\left( x+y\right)=x^{T}<em>{x}+y^{T}</em>{y}$ （直角三角形）</li>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B004.png" style="zoom:67%;"></li>
-<li>$Q=\dfrac{1}{3}\begin{bmatrix} -1 &amp; 2 \ 2 &amp; -1 \ 2 &amp; 2 \end{bmatrix}$ ，$Q^{T}Q=I,QQ^{T}\neq I$ ，$QQ^TQQ^T = QQ^T$</li>
-</ul>
+<h4 id="用消元来解Ax-b（因式-A-LU）"><a href="#用消元来解Ax-b（因式-A-LU）" class="headerlink" title="用消元来解Ax = b（因式 A = LU）"></a>用消元来解Ax = b（因式 A = LU）</h4><p>下三角矩阵 L 乘以上三角矩阵 U</p>
+<p><img src="https://blog.zhuangzhihao.top/img/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B003.png" style="zoom:67%;"></p>
+<h3 id="正交向量"><a href="#正交向量" class="headerlink" title="正交向量"></a>正交向量</h3><h4 id="正交向量-–-矩阵-–-子空间"><a href="#正交向量-–-矩阵-–-子空间" class="headerlink" title="正交向量 – 矩阵 – 子空间"></a>正交向量 – 矩阵 – 子空间</h4><p>$X^{T}y=0,y^{T}x=0,\left( x+y\right) ^{T}\left( x+y\right)=x^{T}<em>{x}+y^{T}</em>{y}$ （直角三角形）</p>
+<p><img src="https://blog.zhuangzhihao.top/img/%E4%BB%8E2020%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B004.png" style="zoom:67%;"></p>
+<p>$Q=\dfrac{1}{3}\begin{bmatrix} -1 &amp; 2 \ 2 &amp; -1 \ 2 &amp; 2 \end{bmatrix}$ ，$Q^{T}Q=I,QQ^{T}\neq I$ ，$QQ^TQQ^T = QQ^T$</p>
 <h4 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h4><h3 id="特征值和特征向量"><a href="#特征值和特征向量" class="headerlink" title="特征值和特征向量"></a>特征值和特征向量</h3><h3 id="奇异值和奇异向量"><a href="#奇异值和奇异向量" class="headerlink" title="奇异值和奇异向量"></a>奇异值和奇异向量</h3>
   
   
@@ -676,6 +637,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
                 <p>This work is licensed under a <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
 
+              
+            
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E4%BB%8E2020%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/>http://blog.zhuangzhihao.top/%E4%BB%8E2020%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</a></p>
               
             
           </blockquote>
@@ -693,13 +658,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%85%95%E8%AF%BEMOOC/">慕课MOOC</a>
-    </a>
-  </div>
-
 
         
       
@@ -716,77 +674,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E4%BB%8E2020%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/&title=从 2020 年的视角看线性代数 - Bezhuang's Blog&summary=
-2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E4%BB%8E2020%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/&title=从 2020 年的视角看线性代数 - Bezhuang's Blog&summary=
-2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E4%BB%8E2020%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/&title=从 2020 年的视角看线性代数 - Bezhuang's Blog&summary=
-2020 年 MIT 数学教授 Gilbert Strang 录制了一个关于线性代数的学习和教学的一个新的、启发性的课程，从矩阵 A 的列空间和组合这些列的乘法 Ax 开始，包括了线性代数的概览、正交向量、特征值和特征向量、以及奇异值和奇异向量等方面的内容。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZgAAAGYCAAAAABaUKuJAAAF80lEQVR42u3cS25kOQwEQN//0j0HMApSJqkaL0I7u/30YWiToNA//4w/OX6UAIwBBowBBowBxjjC/JTj0/e/Fvrw+0//flqvnf/TOrfnmO7/up5gwIABAwYMGDBgwIC5hmk30m44LeT2RWrPuTX/xzqBAQMGDBgwYMCAAQMmhtleOIV7BZyCp0Bb9QQDBgwYMGDAgAEDBsx7mO2Nb4F+q+DTxh8YMGDAgAEDBgwYMGD+P5jpw7620NOHienvpw1CMGDAgAEDBgwYMGDA7MNsLZw2qF41yF6d53a+eH0wYMCAAQMGDBgwYMBcw0yDm5+X6gkGDBgwYECAAQMGDJgjzHS0DbXpAacBbxqAXw0wYMCAAQMGDBgwYMCcYaYP9bYe8qX7aeHaxtu3GoVgwIABAwYMGDBgwIDpYeqJh8Fw+/vtv5vOf/weDBgwYMCAAQMGDBgwR5hpQ2waxNILMr0YaaG2AzcYMGDAgAEDBgwYMGDmMFsNrPS7rcZWOs/reccXFAwYMGDAgAEDBgwYMDHMbUOqDYLT4JkG09v124Zaut7xOzBgwIABAwYMGDBgwBxhXhcgbXS10GljrF2/Pc/192DAgAEDBgwYMGDAgFmHSTecBrv0Ikz/vW2wbV9EMGDAgAEDBgwYMGDA5DDTg241utpAmQa6NjhOYeOACQYMGDBgwIABAwYMmGPAbIPkNmwb2KaNtfTitRcgTv5gwIABAwYMGDBgwIBZf/DXPhBsG23TAr6GrC8yGDBgwIABAwYMGDBgxjCvGkMpUAqYFmQrQI8vGBgwYMCAAQMGDBgwYI4w6cbT726DaxtQt//uNrBunx8MGDBgwIABAwYMGDD3MLcLTRtG0/Xag6f7jx/oDUec/MGAAQMGDBgwYMCAAXNdsHbDbaDbaoxtX6TpOsc6gAEDBgwYMGDAgAEDJoZpA1QaENOD/TwabeNre30wYMCAAQMGDBgwYMDcw7QTbD18awHbIDgNtG0j7/rvwYABAwYMGDBgwIABc4SZNsimDay2YZUWrA2cbRCu1wUDBgwYMGDAgAEDBswRZjtgbgXHtqE1LXTbEFt7+AgGDBgwYMCAAQMGDJhrmGlAijcQNrBeBcXtdccBGwwYMGDAgAEDBgwYMEeY9mHaWmMoLFzbQGsf5G0Fyet5wIABAwYMGDBgwIABE8OkD/e2xrSBtfWAsS7o1kUAAwYMGDBgwIABAwbMEWYbJD3ItADpRWnXSxte44AJBgwYMGDAgAEDBgyYYz9mWvB0g9PguQUx/f00yIIBAwYMGDBgwIABAyaHaQPm6wJNG2HTfU+h6gsMBgwYMGDAgAEDBgyYOmDeHmwrOE4DX9uYas/dnv8IBwYMGDBgwIABAwYMmGuY7YCXBs20wNOLs3XBti8IGDBgwIABAwYMGDBg7mHWFygD2VZjrj1XGiy36wgGDBgwYMCAAQMGDJgzzPTArzaaBsDt4NoG3fbigQEDBgwYMGDAgAEDpn/wNw1cWwW6hd0u+LcuxMd9gQEDBgwYMGDAgAEDZgyTFiYNiCnoVrBN97X1/TGogwEDBgwYMGDAgAED5hrm9oBtkNsKpGnjLoVu55teEDBgwIABAwYMGDBgwPQw6QG2AuO3GluvLkjaULtulIEBAwYMGDBgwIABA+YXTBuUvvX3aQG3Au3t/n/KAQYMGDBgwIABAwYMmB5mOtrAOIXYegDYBtC2wXisExgwYMCAAQMGDBgwYOqAOW1MTRtt05/bhlYbfNuff60DBgwYMGDAgAEDBgyYa5hpoHx18HTe6XmmFzKdHwwYMGDAgAEDBgwYMHOY+IFa+H3bSGsDcdqQawNl29gDAwYMGDBgwIABAwbM92G2gtpWY+o0z1Zjb6s+YMCAAQMGDBgwYMCA+TswbSBtAab7awNiGqiP84EBAwYMGDBgwIABAyaGmR58q4E1XX/a8EqDZlq/OGCCAQMGDBgwYMCAAQPm2X/AsB3Mpg2waZBMg29bLzBgwIABAwYMGDBgwNzDGH9rgAFjgAFjgAFjgDE+jv8Ab356aSU8UhgAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E4%BB%8E2020%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/&text=从 2020 年的视角看线性代数 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -958,17 +845,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1094,8 +973,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1451,29 +1328,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1512,7 +1366,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1572,20 +1426,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1798,6 +1638,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

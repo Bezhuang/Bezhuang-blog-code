@@ -109,7 +109,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -233,16 +233,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -365,16 +375,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -398,7 +418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -421,36 +441,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -484,8 +474,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTTP/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTTP</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Servlet/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Servlet</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Java/">Java</a>
+    </a>
+  </div>
 
 
           
@@ -528,8 +522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>Java Web 核心第一章。Java Web 是用 Java 技术来解决相关 web 互联网领域的技术栈，国内很多大型网站公司也是首选 Java 语言来解决 web 互联网相关的问题。要了解 Java Web 开发的技术栈，首先需要理解 HTTP 协议和 HTTP 请求与响应数据的格式，理解 Servlet 的执行流程和生命周期，掌握 Servlet 的使用和相关配置。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、HTTP-协议"><a href="#一、HTTP-协议" class="headerlink" title="一、HTTP 协议"></a>一、HTTP 协议</h3><p>HyperText Transfer Protocol（超文本传输协议）规定了浏览器和服务器之间数据传输的规则。数据传输的规则指的是请求数据和响应数据需要按照指定的格式进行传输。</p>
 <p>HTTP 协议是基于 TCP 的协议，TCP 是一种面向连接的（建立连接前是需经过三次握手）、可靠的、基于字节流的传输层通信协议，在数据传输方面更安全。</p>
 <p>HTTP 同样也是基于请求—响应模型的，一次请求对应一次响应，请求和响应是一一对应关系。</p>
@@ -537,20 +530,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>请求之间无法共享数据会引发的问题，如电商网站加入购物车和去购物车结算是两次请求，加入购物车请求响应结束后，并未记录加入购物车是何商品，发起去购物车结算的请求后，因为无法获取哪些商品加入了购物车，会导致此次请求无法正确展示数据，在 Java Web 中要使用会话技术（Cookie、Session）来解决这个问题。</p>
 <h4 id="请求数据格式"><a href="#请求数据格式" class="headerlink" title="请求数据格式"></a>请求数据格式</h4><p>HTTP 请求数据总共分为三部分内容，分别是请求行、请求头、请求体，请求方式有七种，最常用的是 GET 和 POST 方法。</p>
 <p>请求行是 HTTP 请求中的第一行数据，请求行包含三块内容，分别是 <code>[请求方式] /[请求URL路径] / [HTTP协议及版本]</code>。</p>
-<pre><code class="http">GET / HTTP/1.1</code></pre>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/</span> <span class="meta">HTTP/1.1</span></span><br></pre></td></tr></table></figure>
 <p>请求头从第二行开始，格式均为 <code>key: value</code> 形式，请求头中会包含若干个属性。</p>
-<pre><code class="HTTP">Host: 请求的主机名
-User-Agent: 浏览器版本, Mozilla/5.0 Chrome/79
-Accept：表示浏览器能接收的资源类型，如text/*，image/*或者*/*表示所有
-Accept-Language：表示浏览器偏好的语言，服务器可以据此返回不同语言的网页
-Accept-Encoding：表示浏览器可以支持的压缩类型，例如gzip, deflate等</code></pre>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>请求的主机名</span><br><span class="line"><span class="attribute">User-Agent</span><span class="punctuation">: </span>浏览器版本, Mozilla/5.0 Chrome/79</span><br><span class="line">Accept：表示浏览器能接收的资源类型，如text/*，image/*或者*/*表示所有</span><br><span class="line">Accept-Language：表示浏览器偏好的语言，服务器可以据此返回不同语言的网页</span><br><span class="line">Accept-Encoding：表示浏览器可以支持的压缩类型，例如gzip, deflate等</span><br></pre></td></tr></table></figure>
 <p>服务端可以根据请求头中的内容来获取客户端的相关信息，有了这些信息服务端就可以处理不同的业务需求，比如浏览器兼容问题。</p>
 <p>请求体是 POST 请求的最后一部分，存储请求参数，请求体和请求头之间是有一个空行隔开。</p>
-<pre><code class="http">username=bezhuang@password=1234</code></pre>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">username=bezhuang@password=1234</span><br></pre></td></tr></table></figure>
 <p>GET 和 POST 两个请求的区别：GET 请求请求参数在请求行中，没有请求体，POST 请求请求参数在请求体中，GET 请求请求参数大小有限制，POST 没有。</p>
 <h4 id="响应数据格式"><a href="#响应数据格式" class="headerlink" title="响应数据格式"></a>响应数据格式</h4><p>响应数据总共分为三部分内容，分别是响应行、响应头、响应体。</p>
 <p>响应行是响应数据的第一行，响应行包含三块内容，分别是 <code>[HTTP协议及版本] [响应状态码] [状态码的描述]</code>。</p>
-<pre><code class="http">HTTP/1.1 200 OK</code></pre>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">HTTP/1.1</span> <span class="number">200</span> OK</span><br></pre></td></tr></table></figure>
 <p>响应状态码</p>
 <ul>
 <li>200  ok 客户端请求成功</li>
@@ -558,166 +547,35 @@ Accept-Encoding：表示浏览器可以支持的压缩类型，例如gzip, defla
 <li>500 Internal Server Error 服务端发生不可预期的错误</li>
 </ul>
 <p>响应头从第二行开始，格式也为 <code>key：value</code> 形式，响应头中会包含若干个属性。</p>
-<pre><code class="http">Content-Type：表示该响应内容的类型，例如text/html，image/jpeg；
-Content-Length：表示该响应内容的长度（字节数）；
-Content-Encoding：表示该响应压缩算法，例如gzip；
-Cache-Control：指示客户端应如何缓存，例如max-age=300表示可以最多缓存300秒</code></pre>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Content-Type：表示该响应内容的类型，例如text/html，image/jpeg；</span><br><span class="line">Content-Length：表示该响应内容的长度（字节数）；</span><br><span class="line">Content-Encoding：表示该响应压缩算法，例如gzip；</span><br><span class="line">Cache-Control：指示客户端应如何缓存，例如max-age=300表示可以最多缓存300秒</span><br></pre></td></tr></table></figure>
 <p>响应体是最后一部分，存放响应数据，<code>&lt;html&gt;数据内容&lt;/html&gt;</code>。</p>
 <h4 id="自定义服务器"><a href="#自定义服务器" class="headerlink" title="自定义服务器"></a>自定义服务器</h4><p>可以使用 Java 编写服务器，用来接受页面发送的请求和响应数据给前端浏览器，主要使用到的是 <code>ServerSocket</code> 和 <code>Socket</code>。</p>
-<pre><code class="java">package com.itheima;
-import sun.misc.IOUtils;
-import java.io.*;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-
-public class Server &#123;
-    public static void main(String[] args) throws IOException &#123;
-        ServerSocket ss = new ServerSocket(8080); // 监听指定端口
-        System.out.println(&quot;server is running...&quot;);
-        while (true)&#123;
-            Socket sock = ss.accept();
-            System.out.println(&quot;connected from &quot; + sock.getRemoteSocketAddress());
-            Thread t = new Handler(sock);
-            t.start();
-        &#125;
-    &#125;
-&#125;
-class Handler extends Thread &#123;
-    Socket sock;
-
-    public Handler(Socket sock) &#123;
-        this.sock = sock;
-    &#125;
-    public void run() &#123;
-        try (InputStream input = this.sock.getInputStream()) &#123;
-            try (OutputStream output = this.sock.getOutputStream()) &#123;
-                handle(input, output);
-            &#125;
-        &#125; catch (Exception e) &#123;
-            try &#123;
-                this.sock.close();
-            &#125; catch (IOException ioe) &#123;
-            &#125;
-            System.out.println(&quot;client disconnected.&quot;);
-        &#125;
-    &#125;
-    private void handle(InputStream input, OutputStream output) throws IOException &#123;
-        BufferedReader reader = new BufferedReader(new InputStreamReader(input, StandardCharsets.UTF_8));
-        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output, StandardCharsets.UTF_8));
-        // 读取HTTP请求:
-        boolean requestOk = false;
-        String first = reader.readLine();
-        if (first.startsWith(&quot;GET / HTTP/1.&quot;)) &#123;
-            requestOk = true;
-        &#125;
-        for (;;) &#123;
-            String header = reader.readLine();
-            if (header.isEmpty()) &#123; // 读取到空行时, HTTP Header读取完毕
-                break;
-            &#125;
-            System.out.println(header);
-        &#125;
-        System.out.println(requestOk ? &quot;Response OK&quot; : &quot;Response Error&quot;);
-        if (!requestOk) &#123;
-            // 发送错误响应:
-            writer.write(&quot;HTTP/1.0 404 Not Found\r\n&quot;);
-            writer.write(&quot;Content-Length: 0\r\n&quot;);
-            writer.write(&quot;\r\n&quot;);
-            writer.flush();
-        &#125; else &#123;
-            // 发送成功响应:
-            //读取html文件，转换为字符串
-            BufferedReader br = new BufferedReader(new FileReader(&quot;http/html/a.html&quot;));
-            StringBuilder data = new StringBuilder();
-            String line = null;
-            while ((line = br.readLine()) != null)&#123;
-                data.append(line);
-            &#125;
-            br.close();
-            int length = data.toString().getBytes(StandardCharsets.UTF_8).length;
-            writer.write(&quot;HTTP/1.1 200 OK\r\n&quot;);
-            writer.write(&quot;Connection: keep-alive\r\n&quot;);
-            writer.write(&quot;Content-Type: text/html\r\n&quot;);
-            writer.write(&quot;Content-Length: &quot; + length + &quot;\r\n&quot;);
-            writer.write(&quot;\r\n&quot;); // 空行标识Header和Body的分隔
-            writer.write(data.toString());
-            writer.flush();
-        &#125;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima;</span><br><span class="line"><span class="keyword">import</span> sun.misc.IOUtils;</span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.net.ServerSocket;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"><span class="keyword">import</span> java.nio.charset.StandardCharsets;</span><br><span class="line"><span class="keyword">import</span> java.nio.file.Files;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Server</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="type">ServerSocket</span> <span class="variable">ss</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ServerSocket</span>(<span class="number">8080</span>); <span class="comment">// 监听指定端口</span></span><br><span class="line">        System.out.println(<span class="string">&quot;server is running...&quot;</span>);</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>)&#123;</span><br><span class="line">            <span class="type">Socket</span> <span class="variable">sock</span> <span class="operator">=</span> ss.accept();</span><br><span class="line">            System.out.println(<span class="string">&quot;connected from &quot;</span> + sock.getRemoteSocketAddress());</span><br><span class="line">            <span class="type">Thread</span> <span class="variable">t</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Handler</span>(sock);</span><br><span class="line">            t.start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Handler</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    Socket sock;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Handler</span><span class="params">(Socket sock)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.sock = sock;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> (<span class="type">InputStream</span> <span class="variable">input</span> <span class="operator">=</span> <span class="built_in">this</span>.sock.getInputStream()) &#123;</span><br><span class="line">            <span class="keyword">try</span> (<span class="type">OutputStream</span> <span class="variable">output</span> <span class="operator">=</span> <span class="built_in">this</span>.sock.getOutputStream()) &#123;</span><br><span class="line">                handle(input, output);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="built_in">this</span>.sock.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException ioe) &#123;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">&quot;client disconnected.&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">handle</span><span class="params">(InputStream input, OutputStream output)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="type">BufferedReader</span> <span class="variable">reader</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">InputStreamReader</span>(input, StandardCharsets.UTF_8));</span><br><span class="line">        <span class="type">BufferedWriter</span> <span class="variable">writer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedWriter</span>(<span class="keyword">new</span> <span class="title class_">OutputStreamWriter</span>(output, StandardCharsets.UTF_8));</span><br><span class="line">        <span class="comment">// 读取HTTP请求:</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">requestOk</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">first</span> <span class="operator">=</span> reader.readLine();</span><br><span class="line">        <span class="keyword">if</span> (first.startsWith(<span class="string">&quot;GET / HTTP/1.&quot;</span>)) &#123;</span><br><span class="line">            requestOk = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">header</span> <span class="operator">=</span> reader.readLine();</span><br><span class="line">            <span class="keyword">if</span> (header.isEmpty()) &#123; <span class="comment">// 读取到空行时, HTTP Header读取完毕</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(header);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(requestOk ? <span class="string">&quot;Response OK&quot;</span> : <span class="string">&quot;Response Error&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (!requestOk) &#123;</span><br><span class="line">            <span class="comment">// 发送错误响应:</span></span><br><span class="line">            writer.write(<span class="string">&quot;HTTP/1.0 404 Not Found\r\n&quot;</span>);</span><br><span class="line">            writer.write(<span class="string">&quot;Content-Length: 0\r\n&quot;</span>);</span><br><span class="line">            writer.write(<span class="string">&quot;\r\n&quot;</span>);</span><br><span class="line">            writer.flush();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 发送成功响应:</span></span><br><span class="line">            <span class="comment">//读取html文件，转换为字符串</span></span><br><span class="line">            <span class="type">BufferedReader</span> <span class="variable">br</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">FileReader</span>(<span class="string">&quot;http/html/a.html&quot;</span>));</span><br><span class="line">            <span class="type">StringBuilder</span> <span class="variable">data</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">            <span class="type">String</span> <span class="variable">line</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">while</span> ((line = br.readLine()) != <span class="literal">null</span>)&#123;</span><br><span class="line">                data.append(line);</span><br><span class="line">            &#125;</span><br><span class="line">            br.close();</span><br><span class="line">            <span class="type">int</span> <span class="variable">length</span> <span class="operator">=</span> data.toString().getBytes(StandardCharsets.UTF_8).length;</span><br><span class="line">            writer.write(<span class="string">&quot;HTTP/1.1 200 OK\r\n&quot;</span>);</span><br><span class="line">            writer.write(<span class="string">&quot;Connection: keep-alive\r\n&quot;</span>);</span><br><span class="line">            writer.write(<span class="string">&quot;Content-Type: text/html\r\n&quot;</span>);</span><br><span class="line">            writer.write(<span class="string">&quot;Content-Length: &quot;</span> + length + <span class="string">&quot;\r\n&quot;</span>);</span><br><span class="line">            writer.write(<span class="string">&quot;\r\n&quot;</span>); <span class="comment">// 空行标识Header和Body的分隔</span></span><br><span class="line">            writer.write(data.toString());</span><br><span class="line">            writer.flush();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="二、Tomcat-服务器"><a href="#二、Tomcat-服务器" class="headerlink" title="二、Tomcat 服务器"></a>二、Tomcat 服务器</h3><p>Web 服务器是一个安装在服务器端的对 HTTP 协议的操作进行封装的应用程序，使得程序员不必直接对协议进行操作，让 Web 开发更加便捷，当Web服务器软件启动后，部署在Web服务器软件中的页面就可以直接通过浏览器来访问了。</p>
 <p>Tomcat 是 Apache 软件基金会一个核心项目，是一个开源免费的轻量级 Web 服务器，支持 Servlet/JSP 少量 JavaEE 规范。JavaEE 规范是指 Java 企业级开发的技术规范总和。因为 Tomcat 支持 Servlet/JSP 规范，所以 Tomcat 也被称为Web容器、Servlet容器。Servlet需要依赖 Tomcat 才能运行。</p>
 <p>使用 Maven 工具能更加简单快捷的把 Web 项目给创建出来，创建方式有两种：使用骨架和不使用骨架。使用骨架，默认没有 java 和 resources 目录，需要手动完成创建补齐，不使用骨架要在 pom.xml 设置打包方式为 war、补齐 Maven Web 项目缺失 webapp 的目录结构和 WEB-INF/web.xml 的目录结构。</p>
 <p>Maven Web 项目创建成功后，通过 Maven 的 package 命令可以将项目打包成 war 包，将 war 文件拷贝到 Tomcat 的 webapps 目录下，启动 Tomcat 就可以将项目部署成功，然后通过浏览器进行访问即可。</p>
 <p>在 IDEA 中可以直接使用 Maven 中的 Tomcat 插件来部署项目，即在 pom.xml 中添加 Tomcat 插件，再使用 Maven Helper 插件快速启动项目。</p>
-<pre><code class="xml">&lt;build&gt;
-    &lt;plugins&gt;
-        &lt;!--Tomcat插件 --&gt;
-        &lt;plugin&gt;
-            &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
-            &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
-            &lt;version&gt;2.2&lt;/version&gt;
-            &lt;configuration&gt;
-                &lt;port&gt;80&lt;/port&gt;&lt;!--访问端口号 --&gt;
-                &lt;!--项目访问路径
-                    未配置访问路径: http://localhost:80/tomcat-demo2/a.html
-                    配置/后访问路径: http://localhost:80/a.html
-                    如果配置成 /hello,访问路径会变成什么?
-                        答案: http://localhost:80/hello/a.html
-                --&gt;
-                &lt;path&gt;/&lt;/path&gt;
-            &lt;/configuration&gt;
-        &lt;/plugin&gt;
-    &lt;/plugins&gt;
-&lt;/build&gt;</code></pre>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">    	<span class="comment">&lt;!--Tomcat插件 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.tomcat.maven<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tomcat7-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">            	<span class="tag">&lt;<span class="name">port</span>&gt;</span>80<span class="tag">&lt;/<span class="name">port</span>&gt;</span><span class="comment">&lt;!--访问端口号 --&gt;</span></span><br><span class="line">                <span class="comment">&lt;!--项目访问路径</span></span><br><span class="line"><span class="comment">					未配置访问路径: http://localhost:80/tomcat-demo2/a.html</span></span><br><span class="line"><span class="comment">					配置/后访问路径: http://localhost:80/a.html</span></span><br><span class="line"><span class="comment">					如果配置成 /hello,访问路径会变成什么?</span></span><br><span class="line"><span class="comment">						答案: http://localhost:80/hello/a.html</span></span><br><span class="line"><span class="comment">				--&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">path</span>&gt;</span>/<span class="tag">&lt;/<span class="name">path</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="三、Servlet"><a href="#三、Servlet" class="headerlink" title="三、Servlet"></a>三、Servlet</h3><p>Servlet 是 Java Web 最为核心的内容，它是 Java 提供的一门动态 web 资源开发技术。使用 Servlet 就可以实现根据不同的登录用户在页面上动态显示不同内容。Servlet 是 JavaEE 规范之一，其实就是一个接口，将来我们需要定义 Servlet 类实现 Servlet 接口，并由 web 服务器运行 Servlet。</p>
 <h4 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h4><p>编写一个 Servlet 类，并使用 IDEA 中 Tomcat 插件进行部署，最终通过浏览器访问所编写的 Servlet 程序。具体的实现步骤如下：</p>
 <ol>
 <li>创建 Web 项目 <code>web-demo</code>，导入 Servlet 依赖坐标。</li>
 </ol>
-<pre><code class="xml">&lt;dependency&gt;
-    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
-    &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
-    &lt;version&gt;3.1.0&lt;/version&gt;
-    &lt;!--
-      此处为什么需要添加该标签?
-      provided指的是在编译和测试过程中有效,最后生成的war包时不会加入
-       因为Tomcat的lib目录中已经有servlet-api这个jar包，如果在生成war包的时候生效就会和Tomcat中的jar包冲突，导致报错
-    --&gt;
-    &lt;scope&gt;provided&lt;/scope&gt;
-&lt;/dependency&gt;</code></pre>
-<ol start="2">
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.1.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">      此处为什么需要添加该标签?</span></span><br><span class="line"><span class="comment">      provided指的是在编译和测试过程中有效,最后生成的war包时不会加入</span></span><br><span class="line"><span class="comment">       因为Tomcat的lib目录中已经有servlet-api这个jar包，如果在生成war包的时候生效就会和Tomcat中的jar包冲突，导致报错</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol>
 <li>创建：定义一个类，实现 Servlet 接口，并重写接口中所有方法，并在 service 方法中输入一句话。</li>
 </ol>
-<pre><code class="java">package com.itheima.web;
-import javax.servlet.*;
-import java.io.IOException;
-public class ServletDemo1 implements Servlet &#123;
-    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException &#123;
-        System.out.println(&quot;servlet hello world~&quot;);
-    &#125;
-    public void init(ServletConfig servletConfig) throws ServletException &#123;
-    &#125;
-    public ServletConfig getServletConfig() &#123;
-        return null;
-    &#125;
-    public String getServletInfo() &#123;
-        return null;
-    &#125;
-    public void destroy() &#123;
-    &#125;
-&#125;</code></pre>
-<ol start="3">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.web;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo1</span> <span class="keyword">implements</span> <span class="title class_">Servlet</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">service</span><span class="params">(ServletRequest servletRequest, ServletResponse servletResponse)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;servlet hello world~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">(ServletConfig servletConfig)</span> <span class="keyword">throws</span> ServletException &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> ServletConfig <span class="title function_">getServletConfig</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getServletInfo</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
 <li>配置：在类上使用 <code>@WebServlet</code> 注解，配置该 Servlet 的访问路径。</li>
 </ol>
-<pre><code class="java">@WebServlet(&quot;/demo1&quot;)</code></pre>
-<ol start="4">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/demo1&quot;)</span></span><br></pre></td></tr></table></figure>
+<ol>
 <li>访问：启动 Tomcat，浏览器中输入 URL 地址访问该 Servlet。</li>
 </ol>
-<pre><code class="http">http://localhost:8080/web-demo/demo1</code></pre>
-<ol start="5">
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8080/web-demo/demo1</span><br></pre></td></tr></table></figure>
+<ol>
 <li>通过浏览器访问后，在控制台会打印 <code>servlet hello world~</code> ，说明 servlet 程序已经成功运行。</li>
 </ol>
 <h4 id="执行流程"><a href="#执行流程" class="headerlink" title="执行流程"></a>执行流程</h4><p>Servlet 的执行流程：浏览器发出 <code>http://localhost:8080/web-demo/demo1</code> 请求，从请求中可以解析出三部分内容，分别是 <code>localhost:8080</code>、<code>web-demo</code>、<code>demo1</code>，根据 <code>localhost:8080</code> 可以找到要访问的 Tomcat Web 服务器，根据 <code>web-demo</code> 可以找到部署在 Tomcat 服务器上的 web-demo 项目，根据 <code>demo1</code> 可以找到要访问的是项目中的哪个 Servlet 类，根据 <code>@WebServlet</code> 后面的值进行匹配。</p>
@@ -730,445 +588,85 @@ public class ServletDemo1 implements Servlet &#123;
 <ol>
 <li>加载和实例化：默认情况下，当 Servlet 第一次被访问时，由容器创建 Servlet 对象，，但是如果创建 Servlet 比较耗时的话，那么第一个访问的人等待的时间就比较长，用户的体验就比较差，那么我们可以把 Servlet 的创建放到服务器启动的时候来创建。</li>
 </ol>
-<pre><code class="java">@WebServlet(urlPatterns = &quot;/demo1&quot;,loadOnStartup = 1)
-/*
-loadOnstartup的取值有两类情况
-    （1）负整数:第一次访问时创建Servlet对象
-    （2）0或正整数:服务器启动时创建Servlet对象，数字越小优先级越高
-*/</code></pre>
-<ol start="2">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(urlPatterns = &quot;/demo1&quot;,loadOnStartup = 1)</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">loadOnstartup的取值有两类情况</span></span><br><span class="line"><span class="comment">	（1）负整数:第一次访问时创建Servlet对象</span></span><br><span class="line"><span class="comment">	（2）0或正整数:服务器启动时创建Servlet对象，数字越小优先级越高</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<ol>
 <li>初始化：在 Servlet 实例化之后，容器将调用 Servlet 的 <code>init()</code> 方法初始化这个对象，完成一些如加载配置文件、创建连接等初始化的工作。该方法只调用一次。</li>
 <li>请求处理：每次请求 Servlet 时，Servlet 容器都会调用 Servlet 的 <code>service()</code> 方法对请求进行处理</li>
 <li>服务终止：当需要释放内存或者容器关闭时，容器就会调用 Servlet 实例的 <code>destroy()</code> 方法完成资源的释放。在 <code>destroy()</code> 方法调用之后，容器会释放这个 Servlet 实例，该实例随后会被 Java 的垃圾收集器所回收。</li>
 </ol>
 <p>通过案例演示 Servlet 生命周期方法</p>
-<pre><code class="java">package com.itheima.web;
-import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
-import java.io.IOException;
-/**
-* Servlet生命周期方法
-*/
-@WebServlet(urlPatterns = &quot;/demo2&quot;,loadOnStartup = 1)
-public class ServletDemo2 implements Servlet &#123;
-    /**
-     *  初始化方法
-     *  1.调用时机：默认情况下，Servlet被第一次访问时，调用
-     *      * loadOnStartup: 默认为-1，修改为0或者正整数，则会在服务器启动的时候，调用
-     *  2.调用次数: 1次
-     * @param config
-     * @throws ServletException
-     */
-    public void init(ServletConfig config) throws ServletException &#123;
-        System.out.println(&quot;init...&quot;);
-    &#125;
-    /**
-     * 提供服务
-     * 1.调用时机:每一次Servlet被访问时，调用
-     * 2.调用次数: 多次
-     * @param req
-     * @param res
-     * @throws ServletException
-     * @throws IOException
-     */
-    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException &#123;
-        System.out.println(&quot;servlet hello world~&quot;);
-    &#125;
-    /**
-     * 销毁方法
-     * 1.调用时机：内存释放或者服务器关闭的时候，Servlet对象会被销毁，调用
-     * 2.调用次数: 1次
-     */
-    public void destroy() &#123;
-        System.out.println(&quot;destroy...&quot;);
-    &#125;
-    public ServletConfig getServletConfig() &#123;
-        return null;
-    &#125;
-    public String getServletInfo() &#123;
-        return null;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.web;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* Servlet生命周期方法</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@WebServlet(urlPatterns = &quot;/demo2&quot;,loadOnStartup = 1)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo2</span> <span class="keyword">implements</span> <span class="title class_">Servlet</span> &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *  初始化方法</span></span><br><span class="line"><span class="comment">     *  1.调用时机：默认情况下，Servlet被第一次访问时，调用</span></span><br><span class="line"><span class="comment">     *      * loadOnStartup: 默认为-1，修改为0或者正整数，则会在服务器启动的时候，调用</span></span><br><span class="line"><span class="comment">     *  2.调用次数: 1次</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> config</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> ServletException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">(ServletConfig config)</span> <span class="keyword">throws</span> ServletException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;init...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 提供服务</span></span><br><span class="line"><span class="comment">     * 1.调用时机:每一次Servlet被访问时，调用</span></span><br><span class="line"><span class="comment">     * 2.调用次数: 多次</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> req</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> res</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> ServletException</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IOException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">service</span><span class="params">(ServletRequest req, ServletResponse res)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;servlet hello world~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 销毁方法</span></span><br><span class="line"><span class="comment">     * 1.调用时机：内存释放或者服务器关闭的时候，Servlet对象会被销毁，调用</span></span><br><span class="line"><span class="comment">     * 2.调用次数: 1次</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;destroy...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> ServletConfig <span class="title function_">getServletConfig</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getServletInfo</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Servlet 对象默认是第一次访问的时候被创建，可以使用 <code>@WebServlet(urlPatterns = &quot;/demo2&quot;,loadOnStartup = 1)</code> 的 loadOnStartup 修改成在服务器启动的时候创建。</p>
 <p>Servlet 生命周期中涉及到三个方法，分别是 <code>init()</code>、<code>service()</code>、<code>destroy()</code>，<code>init</code> 方法在 Servlet 对象被创建的时候执行，只执行 1 次，service 方法在 Servlet 被访问的时候调用，每访问 1 次就调用 1 次，destroy 方法在 Servlet 对象被销毁的时候调用，只执行 1 次。</p>
-<h4 id="方法介绍"><a href="#方法介绍" class="headerlink" title="方法介绍"></a>方法介绍</h4><p>Servlet 中总共有5个方法，我们已经介绍过其中的三个，剩下的两个方法为 <code>getServletInfo()</code> 和 <code>getServletConfig() </code>。</p>
+<h4 id="方法介绍"><a href="#方法介绍" class="headerlink" title="方法介绍"></a>方法介绍</h4><p>Servlet 中总共有5个方法，我们已经介绍过其中的三个，剩下的两个方法为 <code>getServletInfo()</code> 和 <code>getServletConfig()</code>。</p>
 <ol>
 <li>初始化方法，在 Servlet 被创建时执行，只执行一次。</li>
 </ol>
-<pre><code class="java">void init(ServletConfig config) </code></pre>
-<ol start="2">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">init</span><span class="params">(ServletConfig config)</span> </span><br></pre></td></tr></table></figure>
+<ol>
 <li>提供服务方法， 每次 Servlet 被访问，都会调用该方法。</li>
 </ol>
-<pre><code class="java">void service(ServletRequest req, ServletResponse res)</code></pre>
-<ol start="3">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">service</span><span class="params">(ServletRequest req, ServletResponse res)</span></span><br></pre></td></tr></table></figure>
+<ol>
 <li>销毁方法，当 Servlet 被销毁时，调用该方法。在内存释放或服务器关闭时销毁 Servlet。</li>
 </ol>
-<pre><code class="java">void destroy() </code></pre>
-<ol start="4">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> </span><br></pre></td></tr></table></figure>
+<ol>
 <li>获取 Servlet 信息方法</li>
 </ol>
-<pre><code class="java">String getServletInfo() 
-//该方法用来返回Servlet的相关信息，没有什么太大的用处，一般我们返回一个空字符串即可
-public String getServletInfo() &#123;
-    return &quot;&quot;;
-&#125;</code></pre>
-<ol start="5">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String <span class="title function_">getServletInfo</span><span class="params">()</span> </span><br><span class="line"><span class="comment">//该方法用来返回Servlet的相关信息，没有什么太大的用处，一般我们返回一个空字符串即可</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">getServletInfo</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
 <li>获取 ServletConfig 对象方法</li>
 </ol>
-<pre><code class="java">ServletConfig getServletConfig()</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServletConfig <span class="title function_">getServletConfig</span><span class="params">()</span></span><br></pre></td></tr></table></figure>
 <p>ServletConfig 对象在 init 方法的参数中有，而 Tomcat Web 服务器在创建 Servlet 对象的时候会调用 init 方法，必定会传入一个  ServletConfig 对象，我们只需要将服务器传过来的 ServletConfig 进行返回即可。</p>
-<pre><code class="java">package com.itheima.web;
-import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
-import java.io.IOException;
-/**
- * Servlet方法介绍
- */
-@WebServlet(urlPatterns = &quot;/demo3&quot;,loadOnStartup = 1)
-public class ServletDemo3 implements Servlet &#123;
-    private ServletConfig servletConfig;
-    /**
-     *  初始化方法
-     *  1.调用时机：默认情况下，Servlet被第一次访问时，调用
-     *      * loadOnStartup: 默认为-1，修改为0或者正整数，则会在服务器启动的时候，调用
-     *  2.调用次数: 1次
-     * @param config
-     * @throws ServletException
-     */
-    public void init(ServletConfig config) throws ServletException &#123;
-        this.servletConfig = config;
-        System.out.println(&quot;init...&quot;);
-    &#125;
-    public ServletConfig getServletConfig() &#123;
-        return servletConfig;
-    &#125;
-    /**
-     * 提供服务
-     * 1.调用时机:每一次Servlet被访问时，调用
-     * 2.调用次数: 多次
-     * @param req
-     * @param res
-     * @throws ServletException
-     * @throws IOException
-     */
-    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException &#123;
-        System.out.println(&quot;servlet hello world~&quot;);
-    &#125;
-    /**
-     * 销毁方法
-     * 1.调用时机：内存释放或者服务器关闭的时候，Servlet对象会被销毁，调用
-     * 2.调用次数: 1次
-     */
-    public void destroy() &#123;
-        System.out.println(&quot;destroy...&quot;);
-    &#125;    
-    public String getServletInfo() &#123;
-        return &quot;&quot;;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.web;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Servlet方法介绍</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@WebServlet(urlPatterns = &quot;/demo3&quot;,loadOnStartup = 1)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo3</span> <span class="keyword">implements</span> <span class="title class_">Servlet</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> ServletConfig servletConfig;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *  初始化方法</span></span><br><span class="line"><span class="comment">     *  1.调用时机：默认情况下，Servlet被第一次访问时，调用</span></span><br><span class="line"><span class="comment">     *      * loadOnStartup: 默认为-1，修改为0或者正整数，则会在服务器启动的时候，调用</span></span><br><span class="line"><span class="comment">     *  2.调用次数: 1次</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> config</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> ServletException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">(ServletConfig config)</span> <span class="keyword">throws</span> ServletException &#123;</span><br><span class="line">        <span class="built_in">this</span>.servletConfig = config;</span><br><span class="line">        System.out.println(<span class="string">&quot;init...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> ServletConfig <span class="title function_">getServletConfig</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> servletConfig;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 提供服务</span></span><br><span class="line"><span class="comment">     * 1.调用时机:每一次Servlet被访问时，调用</span></span><br><span class="line"><span class="comment">     * 2.调用次数: 多次</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> req</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> res</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> ServletException</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IOException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">service</span><span class="params">(ServletRequest req, ServletResponse res)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;servlet hello world~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 销毁方法</span></span><br><span class="line"><span class="comment">     * 1.调用时机：内存释放或者服务器关闭的时候，Servlet对象会被销毁，调用</span></span><br><span class="line"><span class="comment">     * 2.调用次数: 1次</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;destroy...&quot;</span>);</span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getServletInfo</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h4><p>B/S 架构的 web 项目都是针对 HTTP 协议，所以我们自定义 Servlet，会通过继承 HttpServlet，具体的编写格式如下:</p>
-<pre><code class="java">@WebServlet(&quot;/demo4&quot;)
-public class ServletDemo4 extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-        //TODO GET 请求方式处理逻辑
-        System.out.println(&quot;get...&quot;);
-    &#125;
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException &#123;
-        //TODO Post 请求方式处理逻辑
-        System.out.println(&quot;post...&quot;);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/demo4&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo4</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//TODO GET 请求方式处理逻辑</span></span><br><span class="line">        System.out.println(<span class="string">&quot;get...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//TODO Post 请求方式处理逻辑</span></span><br><span class="line">        System.out.println(<span class="string">&quot;post...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>要想发送一个 GET 请求，请求该 Servlet，只需要通过浏览器发送 <code>http://localhost:8080/web-demo/demo4</code>，就能看到 doGet 方法被执行了。</p>
 <p>要想发送一个 POST 请求，请求该 Servlet，单单通过浏览器是无法实现的，这个时候就需要编写一个 form 表单来发送请求，在 webapp 下创建一个 <code>a.html</code> 页面，启动测试，即可看到 doPost 方法被执行了。</p>
-<pre><code class="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;Title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;form action=&quot;/web-demo/demo4&quot; method=&quot;post&quot;&gt;
-        &lt;input name=&quot;username&quot;/&gt;&lt;input type=&quot;submit&quot;/&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/web-demo/demo4&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span>/&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>因为前端发送 GET 和 POST 请求的时候，参数的位置不一致，GET 请求参数在请求行中，POST 请求参数在请求体中，为了能处理不同的请求方式，我们得在 service 方法中进行判断，然后写不同的业务处理。</p>
-<pre><code class="java">package com.itheima.web;
-import javax.servlet.*;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-@WebServlet(&quot;/demo5&quot;)
-public class ServletDemo5 implements Servlet &#123;
-    public void init(ServletConfig config) throws ServletException &#123;
-    &#125;
-    public ServletConfig getServletConfig() &#123;
-        return null;
-    &#125;
-    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException &#123;
-        //如何调用?
-        //获取请求方式，根据不同的请求方式进行不同的业务处理
-        HttpServletRequest request = (HttpServletRequest)req;
-       //1. 获取请求方式
-        String method = request.getMethod();
-        //2. 判断
-        if(&quot;GET&quot;.equals(method))&#123;
-            // get方式的处理逻辑
-        &#125;else if(&quot;POST&quot;.equals(method))&#123;
-            // post方式的处理逻辑
-        &#125;
-    &#125;
-    public String getServletInfo() &#123;
-        return null;
-    &#125;
-    public void destroy() &#123;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.web;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServlet;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletResponse;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="meta">@WebServlet(&quot;/demo5&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo5</span> <span class="keyword">implements</span> <span class="title class_">Servlet</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">(ServletConfig config)</span> <span class="keyword">throws</span> ServletException &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> ServletConfig <span class="title function_">getServletConfig</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">service</span><span class="params">(ServletRequest req, ServletResponse res)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//如何调用?</span></span><br><span class="line">        <span class="comment">//获取请求方式，根据不同的请求方式进行不同的业务处理</span></span><br><span class="line">        <span class="type">HttpServletRequest</span> <span class="variable">request</span> <span class="operator">=</span> (HttpServletRequest)req;</span><br><span class="line">       <span class="comment">//1. 获取请求方式</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">method</span> <span class="operator">=</span> request.getMethod();</span><br><span class="line">        <span class="comment">//2. 判断</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="string">&quot;GET&quot;</span>.equals(method))&#123;</span><br><span class="line">            <span class="comment">// get方式的处理逻辑</span></span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">&quot;POST&quot;</span>.equals(method))&#123;</span><br><span class="line">            <span class="comment">// post方式的处理逻辑</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getServletInfo</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这样能实现，但是每个 Servlet 类中都将有相似的代码，针对这个问题，我们可以对 Servlet 接口进行继承封装，来简化代码开发。</p>
-<pre><code class="java">package com.itheima.web;
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
-public class MyHttpServlet implements Servlet &#123;
-    public void init(ServletConfig config) throws ServletException &#123;
-    &#125;
-    public ServletConfig getServletConfig() &#123;
-        return null;
-    &#125;
-    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException &#123;
-        HttpServletRequest request = (HttpServletRequest)req;
-        //1. 获取请求方式
-        String method = request.getMethod();
-        //2. 判断
-        if(&quot;GET&quot;.equals(method))&#123;
-            // get方式的处理逻辑
-            doGet(req,res);
-        &#125;else if(&quot;POST&quot;.equals(method))&#123;
-            // post方式的处理逻辑
-            doPost(req,res);
-        &#125;
-    &#125;
-    protected void doPost(ServletRequest req, ServletResponse res) &#123;
-    &#125;
-    protected void doGet(ServletRequest req, ServletResponse res) &#123;
-    &#125;
-    public String getServletInfo() &#123;
-        return null;
-    &#125;
-    public void destroy() &#123;
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.web;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.*;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyHttpServlet</span> <span class="keyword">implements</span> <span class="title class_">Servlet</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">(ServletConfig config)</span> <span class="keyword">throws</span> ServletException &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> ServletConfig <span class="title function_">getServletConfig</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">service</span><span class="params">(ServletRequest req, ServletResponse res)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="type">HttpServletRequest</span> <span class="variable">request</span> <span class="operator">=</span> (HttpServletRequest)req;</span><br><span class="line">        <span class="comment">//1. 获取请求方式</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">method</span> <span class="operator">=</span> request.getMethod();</span><br><span class="line">        <span class="comment">//2. 判断</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="string">&quot;GET&quot;</span>.equals(method))&#123;</span><br><span class="line">            <span class="comment">// get方式的处理逻辑</span></span><br><span class="line">            doGet(req,res);</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">&quot;POST&quot;</span>.equals(method))&#123;</span><br><span class="line">            <span class="comment">// post方式的处理逻辑</span></span><br><span class="line">            doPost(req,res);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getServletInfo</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>有了 MyHttpServlet 这个类，以后我们再编写 Servlet 类的时候，只需要继承 MyHttpServlet，重写父类中的 doGet 和 doPost 方法，就可以用来处理 GET 和 POST 请求的业务逻辑。</p>
-<pre><code class="java">@WebServlet(&quot;/demo5&quot;)
-public class ServletDemo5 extends MyHttpServlet &#123;
-    @Override
-    protected void doGet(ServletRequest req, ServletResponse res) &#123;
-        System.out.println(&quot;get...&quot;);
-    &#125;
-    @Override
-    protected void doPost(ServletRequest req, ServletResponse res) &#123;
-        System.out.println(&quot;post...&quot;);
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/demo5&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo5</span> <span class="keyword">extends</span> <span class="title class_">MyHttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;get...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;post...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>将来页面发送的是 GET 请求，则会进入到 doGet 方法中进行执行，如果是 POST 请求，则进入到 doPost 方法。这样代码在编写的时候就相对来说更加简单快捷。</p>
 <p>类似 MyHttpServlet 这样的类 Servlet 中已经为我们提供好了，就是 HttpServlet。</p>
-<pre><code class="java">protected void service(HttpServletRequest req, HttpServletResponse resp)
-        throws ServletException, IOException
-    &#123;
-        String method = req.getMethod();
-        if (method.equals(METHOD_GET)) &#123;
-            long lastModified = getLastModified(req);
-            if (lastModified == -1) &#123;
-                // servlet doesn&#39;t support if-modified-since, no reason
-                // to go through further expensive logic
-                doGet(req, resp);
-            &#125; else &#123;
-                long ifModifiedSince = req.getDateHeader(HEADER_IFMODSINCE);
-                if (ifModifiedSince &lt; lastModified) &#123;
-                    // If the servlet mod time is later, call doGet()
-                    // Round down to the nearest second for a proper compare
-                    // A ifModifiedSince of -1 will always be less
-                    maybeSetLastModified(resp, lastModified);
-                    doGet(req, resp);
-                &#125; else &#123;
-                    resp.setStatus(HttpServletResponse.SC_NOT_MODIFIED);
-                &#125;
-            &#125;
-        &#125; else if (method.equals(METHOD_HEAD)) &#123;
-            long lastModified = getLastModified(req);
-            maybeSetLastModified(resp, lastModified);
-            doHead(req, resp);
-        &#125; else if (method.equals(METHOD_POST)) &#123;
-            doPost(req, resp);
-        &#125; else if (method.equals(METHOD_PUT)) &#123;
-            doPut(req, resp);
-        &#125; else if (method.equals(METHOD_DELETE)) &#123;
-            doDelete(req, resp);
-        &#125; else if (method.equals(METHOD_OPTIONS)) &#123;
-            doOptions(req,resp);
-        &#125; else if (method.equals(METHOD_TRACE)) &#123;
-            doTrace(req,resp);       
-        &#125; else &#123;
-            //
-            // Note that this means NO servlet supports whatever
-            // method was requested, anywhere on this server.
-            //
-            String errMsg = lStrings.getString(&quot;http.method_not_implemented&quot;);
-            Object[] errArgs = new Object[1];
-            errArgs[0] = method;
-            errMsg = MessageFormat.format(errMsg, errArgs);
-            resp.sendError(HttpServletResponse.SC_NOT_IMPLEMENTED, errMsg);
-        &#125;
-    &#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">service</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span></span><br><span class="line">        <span class="keyword">throws</span> ServletException, IOException</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">method</span> <span class="operator">=</span> req.getMethod();</span><br><span class="line">        <span class="keyword">if</span> (method.equals(METHOD_GET)) &#123;</span><br><span class="line">            <span class="type">long</span> <span class="variable">lastModified</span> <span class="operator">=</span> getLastModified(req);</span><br><span class="line">            <span class="keyword">if</span> (lastModified == -<span class="number">1</span>) &#123;</span><br><span class="line">                <span class="comment">// servlet doesn&#x27;t support if-modified-since, no reason</span></span><br><span class="line">                <span class="comment">// to go through further expensive logic</span></span><br><span class="line">                doGet(req, resp);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="type">long</span> <span class="variable">ifModifiedSince</span> <span class="operator">=</span> req.getDateHeader(HEADER_IFMODSINCE);</span><br><span class="line">                <span class="keyword">if</span> (ifModifiedSince &lt; lastModified) &#123;</span><br><span class="line">                    <span class="comment">// If the servlet mod time is later, call doGet()</span></span><br><span class="line">                    <span class="comment">// Round down to the nearest second for a proper compare</span></span><br><span class="line">                    <span class="comment">// A ifModifiedSince of -1 will always be less</span></span><br><span class="line">                    maybeSetLastModified(resp, lastModified);</span><br><span class="line">                    doGet(req, resp);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    resp.setStatus(HttpServletResponse.SC_NOT_MODIFIED);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (method.equals(METHOD_HEAD)) &#123;</span><br><span class="line">            <span class="type">long</span> <span class="variable">lastModified</span> <span class="operator">=</span> getLastModified(req);</span><br><span class="line">            maybeSetLastModified(resp, lastModified);</span><br><span class="line">            doHead(req, resp);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (method.equals(METHOD_POST)) &#123;</span><br><span class="line">            doPost(req, resp);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (method.equals(METHOD_PUT)) &#123;</span><br><span class="line">            doPut(req, resp);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (method.equals(METHOD_DELETE)) &#123;</span><br><span class="line">            doDelete(req, resp);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (method.equals(METHOD_OPTIONS)) &#123;</span><br><span class="line">            doOptions(req,resp);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (method.equals(METHOD_TRACE)) &#123;</span><br><span class="line">            doTrace(req,resp);       </span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//</span></span><br><span class="line">            <span class="comment">// Note that this means NO servlet supports whatever</span></span><br><span class="line">            <span class="comment">// method was requested, anywhere on this server.</span></span><br><span class="line">            <span class="comment">//</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">errMsg</span> <span class="operator">=</span> lStrings.getString(<span class="string">&quot;http.method_not_implemented&quot;</span>);</span><br><span class="line">            Object[] errArgs = <span class="keyword">new</span> <span class="title class_">Object</span>[<span class="number">1</span>];</span><br><span class="line">            errArgs[<span class="number">0</span>] = method;</span><br><span class="line">            errMsg = MessageFormat.format(errMsg, errArgs);</span><br><span class="line">            resp.sendError(HttpServletResponse.SC_NOT_IMPLEMENTED, errMsg);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>HttpServlet 的使用步骤是先继承 HttpServlet，再重写 doGet、doPost 或其他方法。HttpServlet 的原理就是获取请求方式，并根据不同的请求方式，调用不同的 doXxx 方法。</p>
 <h4 id="urlPattern-配置"><a href="#urlPattern-配置" class="headerlink" title="urlPattern 配置"></a>urlPattern 配置</h4><p>Servlet 类编写好后，要想被访问到，就需要配置其访问路径（urlPattern），一个 Servlet，可以配置多个 urlPattern。</p>
-<pre><code class="java">package com.itheima.web;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebServlet;
-/**
-* urlPattern: 一个 Servlet 可以配置多个访问路径
-*/
-@WebServlet(urlPatterns = &#123;&quot;/demo7&quot;,&quot;/demo8&quot;&#125;)
-public class ServletDemo7 extends MyHttpServlet &#123;
-    @Override
-    protected void doGet(ServletRequest req, ServletResponse res) &#123;
-        System.out.println(&quot;demo7 get...&quot;);
-    &#125;
-    @Override
-    protected void doPost(ServletRequest req, ServletResponse res) &#123;
-    &#125;
-&#125;
-// 在浏览器上输入 http://localhost:8080/web-demo/demo7, http://localhost:8080/web-demo/demo8 这两个地址都能访问到 ServletDemo7 的 doGet 方法</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.web;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletResponse;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* urlPattern: 一个 Servlet 可以配置多个访问路径</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">@WebServlet(urlPatterns = &#123;&quot;/demo7&quot;,&quot;/demo8&quot;&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo7</span> <span class="keyword">extends</span> <span class="title class_">MyHttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;demo7 get...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 在浏览器上输入 http://localhost:8080/web-demo/demo7, http://localhost:8080/web-demo/demo8 这两个地址都能访问到 ServletDemo7 的 doGet 方法</span></span><br></pre></td></tr></table></figure>
 <p>urlPattern 总共有四种配置方式，分别是精确匹配、目录匹配、扩展名匹配、任意匹配，配置的优先级为 精确匹配 &gt; 目录匹配 &gt; 扩展名匹配 &gt; <code>/*</code> &gt; <code>/</code> 。</p>
 <ol>
 <li>精确匹配</li>
 </ol>
-<pre><code class="java">@WebServlet(urlPatterns = &quot;/user/select&quot;)
-public class ServletDemo8 extends MyHttpServlet &#123;
-    @Override
-    protected void doGet(ServletRequest req, ServletResponse res) &#123;
-        System.out.println(&quot;demo8 get...&quot;);
-    &#125;
-    @Override
-    protected void doPost(ServletRequest req, ServletResponse res) &#123;
-    &#125;
-&#125; //访问路径：http://localhost:8080/web-demo/user/select</code></pre>
-<ol start="2">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(urlPatterns = &quot;/user/select&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo8</span> <span class="keyword">extends</span> <span class="title class_">MyHttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;demo8 get...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="comment">//访问路径：http://localhost:8080/web-demo/user/select</span></span><br></pre></td></tr></table></figure>
+<ol>
 <li>目录匹配：<code>/*</code></li>
 </ol>
-<pre><code class="java">package com.itheima.web;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebServlet;
-@WebServlet(urlPatterns = &quot;/user/*&quot;)
-public class ServletDemo9 extends MyHttpServlet &#123;
-    @Override
-    protected void doGet(ServletRequest req, ServletResponse res) &#123;
-        System.out.println(&quot;demo9 get...&quot;);
-    &#125;
-    @Override
-    protected void doPost(ServletRequest req, ServletResponse res) &#123;
-    &#125;
-&#125; //访问路径：http://localhost:8080/web-demo/user/任意</code></pre>
-<ol start="3">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.web;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletResponse;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="meta">@WebServlet(urlPatterns = &quot;/user/*&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo9</span> <span class="keyword">extends</span> <span class="title class_">MyHttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;demo9 get...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="comment">//访问路径：http://localhost:8080/web-demo/user/任意</span></span><br></pre></td></tr></table></figure>
+<ol>
 <li>扩展名匹配：<code>*.do</code></li>
 </ol>
-<pre><code class="java">package com.itheima.web;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebServlet;
-@WebServlet(urlPatterns = &quot;*.do&quot;)
-public class ServletDemo10 extends MyHttpServlet &#123;
-    @Override
-    protected void doGet(ServletRequest req, ServletResponse res) &#123;
-        System.out.println(&quot;demo10 get...&quot;);
-    &#125;
-    @Override
-    protected void doPost(ServletRequest req, ServletResponse res) &#123;
-    &#125;
-&#125;  //访问路径：http://localhost:8080/web-demo/任意.do</code></pre>
-<ol start="4">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.web;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletResponse;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="meta">@WebServlet(urlPatterns = &quot;*.do&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo10</span> <span class="keyword">extends</span> <span class="title class_">MyHttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;demo10 get...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;  <span class="comment">//访问路径：http://localhost:8080/web-demo/任意.do</span></span><br></pre></td></tr></table></figure>
+<ol>
 <li>任意匹配：<code>/</code> 或 <code>/*</code></li>
 </ol>
-<pre><code class="java">package com.itheima.web;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebServlet;
-@WebServlet(urlPatterns = &quot;/&quot;)
-public class ServletDemo11 extends MyHttpServlet &#123;
-    @Override
-    protected void doGet(ServletRequest req, ServletResponse res) &#123;
-        System.out.println(&quot;demo11 get...&quot;);
-    &#125;
-    @Override
-    protected void doPost(ServletRequest req, ServletResponse res) &#123;
-    &#125;
-&#125; //访问路径：http://localhost:8080/demo-web/任意</code></pre>
-<pre><code class="java">package com.itheima.web;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebServlet;
-@WebServlet(urlPatterns = &quot;/*&quot;)
-public class ServletDemo12 extends MyHttpServlet &#123;
-    @Override
-    protected void doGet(ServletRequest req, ServletResponse res) &#123;
-        System.out.println(&quot;demo12 get...&quot;);
-    &#125;
-    @Override
-    protected void doPost(ServletRequest req, ServletResponse res) &#123;
-    &#125;
-&#125; // 访问路径：http://localhost:8080/demo-web/任意</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.web;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletResponse;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="meta">@WebServlet(urlPatterns = &quot;/&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo11</span> <span class="keyword">extends</span> <span class="title class_">MyHttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;demo11 get...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="comment">//访问路径：http://localhost:8080/demo-web/任意</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.web;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletResponse;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="meta">@WebServlet(urlPatterns = &quot;/*&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo12</span> <span class="keyword">extends</span> <span class="title class_">MyHttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;demo12 get...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="comment">// 访问路径：http://localhost:8080/demo-web/任意</span></span><br></pre></td></tr></table></figure>
 <p>当我们的项目中的 Servlet 配置了 <code>/</code>，会覆盖掉 tomcat 中的 DefaultServlet，当其他的 url-pattern 都匹配不上时都会走这个 Servlet。当我们的项目中配置了 <code>/*</code>，意味着匹配任意访问路径。</p>
 <p>DefaultServlet 是用来处理静态资源，如果配置了 <code>/</code> 会把默认的覆盖掉，就会引发请求静态资源的时候没有走默认的而是走了自定义的 Servlet 类，最终导致静态资源不能被访问。</p>
 <h4 id="XML-配置"><a href="#XML-配置" class="headerlink" title="XML 配置"></a>XML 配置</h4><p>一般情况下 Servlet 使用的是注解配置 <code>@WebServlet</code>，但 3.0 版本前只支持 XML 配置文件的配置方法。对于 XML 的配置步骤有两步：</p>
 <ol>
 <li>编写Servlet类。</li>
 </ol>
-<pre><code class="java">package com.itheima.web;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebServlet;
-public class ServletDemo13 extends MyHttpServlet &#123;
-    @Override
-    protected void doGet(ServletRequest req, ServletResponse res) &#123;
-        System.out.println(&quot;demo13 get...&quot;);
-    &#125;
-    @Override
-    protected void doPost(ServletRequest req, ServletResponse res) &#123;
-    &#125;
-&#125;</code></pre>
-<ol start="2">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.itheima.web;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletRequest;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.ServletResponse;</span><br><span class="line"><span class="keyword">import</span> javax.servlet.annotation.WebServlet;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletDemo13</span> <span class="keyword">extends</span> <span class="title class_">MyHttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;demo13 get...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(ServletRequest req, ServletResponse res)</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
 <li>在 web.xml 中配置该 Servlet。</li>
 </ol>
-<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
-         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&quot;
-         version=&quot;4.0&quot;&gt;
-    &lt;!-- 
-        Servlet 全类名
-    --&gt;
-    &lt;servlet&gt;
-        &lt;!-- servlet的名称，名字任意--&gt;
-        &lt;servlet-name&gt;demo13&lt;/servlet-name&gt;
-        &lt;!--servlet的类全名--&gt;
-        &lt;servlet-class&gt;com.itheima.web.ServletDemo13&lt;/servlet-class&gt;
-    &lt;/servlet&gt;
-    &lt;!-- 
-        Servlet 访问路径
-    --&gt;
-    &lt;servlet-mapping&gt;
-        &lt;!-- servlet的名称，要和上面的名称一致--&gt;
-        &lt;servlet-name&gt;demo13&lt;/servlet-name&gt;
-        &lt;!-- servlet的访问路径--&gt;
-        &lt;url-pattern&gt;/demo13&lt;/url-pattern&gt;
-    &lt;/servlet-mapping&gt;
-&lt;/web-app&gt;</code></pre>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">version</span>=<span class="string">&quot;4.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">        Servlet 全类名</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- servlet的名称，名字任意--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>demo13<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--servlet的类全名--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>com.itheima.web.ServletDemo13<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">        Servlet 访问路径</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- servlet的名称，要和上面的名称一致--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>demo13<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- servlet的访问路径--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/demo13<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
   
   
@@ -1180,7 +678,7 @@ public class ServletDemo13 extends MyHttpServlet &#123;
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -1205,6 +703,10 @@ public class ServletDemo13 extends MyHttpServlet &#123;
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/HTTP&Servlet/>http://blog.zhuangzhihao.top/HTTP&Servlet/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -1220,12 +722,8 @@ public class ServletDemo13 extends MyHttpServlet &#123;
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Java/">Java</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/HTTP/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>HTTP</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Servlet/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Servlet</p></a></div>
 
 
         
@@ -1243,77 +741,6 @@ public class ServletDemo13 extends MyHttpServlet &#123;
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/HTTP&Servlet/&title=HTTP 协议和 Servlet - Bezhuang's Blog&summary=
-Java Web 核心第一章。Java Web 是用 Java 技术来解决相关 web 互联网领域的技术栈，国内很多大型网站公司也是首选 Java 语言来解决 web 互联网相关的问题。要了解 Java Web 开发的技术栈，首先需要理解 HTTP 协议和 HTTP 请求与响应数据的格式，理解 Servlet 的执行流程和生命周期，掌握 Servlet 的使用和相关配置。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/HTTP&Servlet/&title=HTTP 协议和 Servlet - Bezhuang's Blog&summary=
-Java Web 核心第一章。Java Web 是用 Java 技术来解决相关 web 互联网领域的技术栈，国内很多大型网站公司也是首选 Java 语言来解决 web 互联网相关的问题。要了解 Java Web 开发的技术栈，首先需要理解 HTTP 协议和 HTTP 请求与响应数据的格式，理解 Servlet 的执行流程和生命周期，掌握 Servlet 的使用和相关配置。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/HTTP&Servlet/&title=HTTP 协议和 Servlet - Bezhuang's Blog&summary=
-Java Web 核心第一章。Java Web 是用 Java 技术来解决相关 web 互联网领域的技术栈，国内很多大型网站公司也是首选 Java 语言来解决 web 互联网相关的问题。要了解 Java Web 开发的技术栈，首先需要理解 HTTP 协议和 HTTP 请求与响应数据的格式，理解 Servlet 的执行流程和生命周期，掌握 Servlet 的使用和相关配置。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC9ElEQVR42u3aSXLDMAwEQP//08k9S4kDQHYQN29WQopsXVAYPj6MH8cDARgwYMCAAbMG5lEc3xYs/t9vf0/nTZ0HDBgwYMCAAbMP5rgA+rrQ4QF/3UgIlf6OzwMGDBgwYMCAWQtzWQCFMNOF4Sl0+TxgwIABAwYMmLeHSQurFAwMGDBgwIABA6a7ULURlTas0mAODBgwYMCAAfN+MN3CrFrI3R0APj2JBAMGDBgwYMA8DSYdpxt71e/yecCAAQMGDBgwa2C6I73wM1WwVYO+y/eDAQMGDBgwYNbATG186vl0sHcavIEBAwYMGDBg9sKcNnLSjVbnpUHdKcTlPDBgwIABAwbMephqQypdL33evuAMBgwYMGDAgHlbmG5B1Q3KqoXn7QUeGDBgwIABA+ZlMGnBdPdIP0gXDgwYMGDAgAGzD+auDZw+7zamug0tMGDAgAEDBsz/gWkHVjcXbKeNrvKHAwMGDBgwYMCsg7k7YKsesLrPaiMMDBgwYMCAAbMHpts46haIaSE4/UHAgAEDBgwYMHthpgu8041NXSjqgj6tUQUGDBgwYMCAuQ0mffFUMFdthMVBWrXAAwMGDBgwYMCsg6kWUun8aiCXNsCO1wUDBgwYMGDArIGZDrCqB0gLwOkgEAwYMGDAgAGzF6YawE0FZGkjKi3wjhtkYMCAAQMGDJi1MHcFWtONqW5AFxd4YMCAAQMGDJh1MN2NV4O66oerNrTAgAEDBgwYMHth0gZQFyZtaHULu+P9gQEDBgwYMGDWwHRHGnxNX1CqXly6bFSBAQMGDBgwYP48zKM4poKxKejqfDBgwIABAwbMfphqQVd93n1P9UNd/gYDBgwYMGDArIVJC6hqwNYt8LqBW1zggQEDBgwYMGDeBiaFmG5IlQM/MGDAgAEDBgyY5sWf00ZUGqyBAQMGDBgwYP4vzFQQdrpOCn97QAcGDBgwYMCAWQfTDa7SxtH0/BTkOHADAwYMGDBgwPxZGAMMGDBgwIABs2x8As2ro2xDu4IGAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/HTTP&Servlet/&text=HTTP 协议和 Servlet - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1432,17 +859,9 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1568,8 +987,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1925,29 +1342,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1986,7 +1380,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -2046,20 +1440,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -2272,6 +1652,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

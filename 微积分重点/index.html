@@ -108,7 +108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -232,16 +232,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -364,16 +374,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -397,7 +417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -420,36 +440,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -483,6 +473,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%85%95%E8%AF%BEMOOC/">慕课MOOC</a>
+    </a>
+  </div>
+
 
           
         
@@ -524,39 +521,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览，以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。</p>
 </blockquote>
-<a id="more"></a>
-
-<h3 id="微积分总览"><a href="#微积分总览" class="headerlink" title="微积分总览"></a>微积分总览</h3><ul>
-<li><p>微积分是函数（1）和函数（2）之间的桥梁</p>
+<span id="more"></span>
+<h3 id="微积分总览"><a href="#微积分总览" class="headerlink" title="微积分总览"></a>微积分总览</h3><p>微积分是函数（1）和函数（2）之间的桥梁</p>
 <ul>
 <li><p>距离 $f\left( t\right)$ 、速度 $\dfrac{df}{dt}$</p>
 </li>
 <li><p>高度 $y\left( x\right)$ 、斜率 $\dfrac{dy}{dx}$</p>
 </li>
 </ul>
-</li>
-<li><p>匀速情况下，$速度=\dfrac{距离}{时间}$，即 $斜率=\dfrac{垂直}{水平}$，即 $s=\dfrac{f}{t}$</p>
+<p>匀速情况下，$速度=\dfrac{距离}{时间}$，即 $斜率=\dfrac{垂直}{水平}$，即 $s=\dfrac{f}{t}$</p>
 <ul>
 <li>若要求中间一段时间或距离的速度，$s=\dfrac{\Delta f}{\Delta t}$</li>
 </ul>
-</li>
-<li><p>匀变速情况下，函数图像均为曲线</p>
+<p>匀变速情况下，函数图像均为曲线</p>
 <ul>
 <li><p>微分学就是已知 $距离-时间$ 函数求 $速度-时间$ 函数</p>
 </li>
 <li><p>积分学就是已知 $速度-时间$ 函数求 $距离-时间$ 函数</p>
 </li>
-<li><p> $速度-时间$ 函数 $s=at$ 下面积 $\dfrac{1}{2}t\left( at\right)$ 就是 $距离-时间$ 函数 $\dfrac{1}{2}at^{2}$</p>
+<li><p>$速度-时间$ 函数 $s=at$ 下面积 $\dfrac{1}{2}t\left( at\right)$ 就是 $距离-时间$ 函数 $\dfrac{1}{2}at^{2}$</p>
 </li>
 <li><p>速度 $s=\dfrac{df}{dt}$ 就是 $f=\int s\left( t\right) dt$ 的导数</p>
 </li>
 </ul>
-</li>
-</ul>
-<h3 id="导数总览"><a href="#导数总览" class="headerlink" title="导数总览"></a>导数总览</h3><ul>
-<li><p>已知距离 $f\left( t\right)$  如何求速度 $\dfrac{df}{dt}$，即已知高度 $y\left( x\right)$  如何求斜率 $\dfrac{dy}{dx}$</p>
-</li>
-<li><p>三个重要函数的斜率</p>
+<h3 id="导数总览"><a href="#导数总览" class="headerlink" title="导数总览"></a>导数总览</h3><p>已知距离 $f\left( t\right)$  如何求速度 $\dfrac{df}{dt}$，即已知高度 $y\left( x\right)$  如何求斜率 $\dfrac{dy}{dx}$</p>
+<p>三个重要函数的斜率</p>
 <ul>
 <li><p>幂函数 $y=x^{n}$ ：$\dfrac{dy}{dx}=nx^{n-1}$</p>
 </li>
@@ -565,8 +554,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>指数函数 $y=e^{x}$ ：$\dfrac{dy}{dx}=e^{x}$</p>
 </li>
 </ul>
-</li>
-<li><p>$y=x^2$ 斜率的含义</p>
+<p>$y=x^2$ 斜率的含义</p>
 <ul>
 <li><p>$平均斜率\dfrac{\left( \Delta x\right) ^{2}}{\Delta x}$，即 $\dfrac{\Delta y}{\Delta x}$ $\rightarrow$ $瞬时斜率\dfrac{dy}{dx}$</p>
 </li>
@@ -575,17 +563,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>求导：$\dfrac{dy}{dx}=\lim\dfrac{\Delta y}{\Delta x}=2x$</p>
 </li>
 </ul>
-</li>
-<li><p>任意 $x$ 处，$y=\sin x 的斜率\rightarrow \dfrac{dy}{dx}=\cos x$</p>
-</li>
-</ul>
-<h3 id="极值及二阶导数"><a href="#极值及二阶导数" class="headerlink" title="极值及二阶导数"></a>极值及二阶导数</h3><ul>
-<li><p>二阶导数：导数的导数</p>
+<p>任意 $x$ 处，$y=\sin x 的斜率\rightarrow \dfrac{dy}{dx}=\cos x$</p>
+<h3 id="极值及二阶导数"><a href="#极值及二阶导数" class="headerlink" title="极值及二阶导数"></a>极值及二阶导数</h3><p>二阶导数：导数的导数</p>
 <ul>
 <li>一阶导数用于确认极值点，二阶导数表明曲线弯曲方向</li>
 </ul>
-</li>
-<li><p>二阶导数的例子：加速度</p>
+<p>二阶导数的例子：加速度</p>
 <ul>
 <li><p>距离 $f\left( t\right)$ 、速度 $\dfrac{df}{dt}$、加速度 $\dfrac{d^{2}f}{dt^{2}}$</p>
 </li>
@@ -594,12 +577,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>$sinx$ 的二阶导数为 $-sinx$</p>
 </li>
 </ul>
-</li>
-<li><p>凸函数和凹函数：$f’’ &gt;0$ 为凸，表示向上弯曲，相对的凹为 $f’’ &lt;0$</p>
-</li>
-<li><p>拐点：二阶导数为 0 的点，表示弯曲方向改变</p>
-</li>
-<li><p>对于函数 $y=x^{3}-x^{2}$ $\rightarrow$ $y’=3x^{2}-2x$，$y’’=6x-2$</p>
+<p>凸函数和凹函数：$f’’ &gt;0$ 为凸，表示向上弯曲，相对的凹为 $f’’ &lt;0$</p>
+<p>拐点：二阶导数为 0 的点，表示弯曲方向改变</p>
+<p>对于函数 $y=x^{3}-x^{2}$ $\rightarrow$ $y’=3x^{2}-2x$，$y’’=6x-2$</p>
 <ul>
 <li><p>求极值点：令 $y’=3x^{2}-2x=0$，$x= 0或x=\dfrac{2}{3}$</p>
 </li>
@@ -608,12 +588,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>$x=\dfrac{2}{3}$ 处，二阶导数为正，取局部最小值（极小值）</p>
 </li>
 </ul>
-</li>
-<li><p>应用：上班的最短时间</p>
+<p>应用：上班的最短时间</p>
 <ul>
 <li><p>设高速总长 $b$，家垂直上高速距离为 $a$，没走的高速距离为 $x$</p>
 </li>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B901.png" style="zoom: 33%;">
+<li><p><img src="https://blog.zhuangzhihao.top/img/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B901.png" style="zoom: 33%;"></p>
 </li>
 <li><p>$时间t=\dfrac{b-x}{60}+\dfrac{\sqrt{a^{2}+x^{2}}}{30}$</p>
 </li>
@@ -622,16 +601,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>$f’=-\dfrac{1}{60}+\dfrac{1}{30}\cdot \dfrac{1}{2}\cdot \dfrac{2x}{\sqrt{a^{2}+x^{2}}}=0$ $\rightarrow$ $x=\dfrac{a}{\sqrt{3}}$</p>
 </li>
 </ul>
-</li>
-<li><p>最值的一般求法：比较所有驻点（$f’=0$）处及边界点函数值，得到最大或最小值即函数最值</p>
-</li>
-<li><p>$f’’$ 的符号可通过 $f’$ 的单调性求出：$x&gt;0$ 时，$f’(x)&gt;f’(0)$ ，斜率变化率为正，$f’’&gt;0$</p>
-</li>
-</ul>
-<h3 id="指数函数-e-x"><a href="#指数函数-e-x" class="headerlink" title="指数函数 $e^x$"></a>指数函数 $e^x$</h3><ul>
-<li><p>最简单的微分方程：$y=\dfrac{dy}{dx}$</p>
-</li>
-<li><p>指数函数：通过微积分构造的函数</p>
+<p>最值的一般求法：比较所有驻点（$f’=0$）处及边界点函数值，得到最大或最小值即函数最值</p>
+<p>$f’’$ 的符号可通过 $f’$ 的单调性求出：$x&gt;0$ 时，$f’(x)&gt;f’(0)$ ，斜率变化率为正，$f’’&gt;0$</p>
+<h3 id="指数函数-e-x"><a href="#指数函数-e-x" class="headerlink" title="指数函数 $e^x$"></a>指数函数 $e^x$</h3><p>最简单的微分方程：$y=\dfrac{dy}{dx}$</p>
+<p>指数函数：通过微积分构造的函数</p>
 <ul>
 <li><p>重要性质一：指数函数的导数就是其自身</p>
 </li>
@@ -646,16 +619,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>$e$ 等于 $x=1$ 时指数级数的值：$e=1+1+\dfrac{1}{2}+\dfrac{1}{6}+\ldots \dfrac{1}{n!}+\ldots\approx 2.71828\ldots$</p>
 </li>
 </ul>
-</li>
-<li><p>指数函数的图像</p>
+<p>指数函数的图像</p>
 <ul>
 <li><p>由重要性质二可得：$e^{-x}=\dfrac{1}{e^{x}}$</p>
 </li>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B902.png" style="zoom:50%;">
+<li><p><img src="https://blog.zhuangzhihao.top/img/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B902.png" style="zoom:50%;"></p>
 </li>
 </ul>
-</li>
-<li><p>应用：计算存款复利</p>
+<p>应用：计算存款复利</p>
 <ul>
 <li><p>假设利率为 100%，1 美元存一年得到 2 美元或更多</p>
 </li>
@@ -664,38 +635,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>解常微分方程：$\dfrac{dy}{dx}=cy$ $\rightarrow$ $y\left( x\right) =e^{cx}$</p>
 </li>
 </ul>
+<h3 id="积分总览"><a href="#积分总览" class="headerlink" title="积分总览"></a>积分总览</h3><p>函数二 $\dfrac{dy}{dx}=nx^{n-1}$ 是函数一 $y=x^{n}$ 的导数</p>
+<p>函数一 $y=\dfrac{x^{n+1}}{n+1}$ 是函数二 $\dfrac{dy}{dx}=x^{n}$ 的积分</p>
+<p>求原函数：$y\left( x\right) =\int s\left( x\right) dx$</p>
+<p>求积分方法A：反过来看什么函数的导数能得到要积分的函数</p>
+<p>例：通过代数方法求函数一</p>
+<ul>
+<li><p><img src="https://blog.zhuangzhihao.top/img/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B903.png" style="zoom:67%;"></p>
+</li>
+<li><p>相加求和：$\sum \Delta y=y<em>{终}-y</em>{始}$</p>
 </li>
 </ul>
-<h3 id="积分总览"><a href="#积分总览" class="headerlink" title="积分总览"></a>积分总览</h3><ul>
-<li><p>函数二 $\dfrac{dy}{dx}=nx^{n-1}$ 是函数一 $y=x^{n}$ 的导数</p>
-</li>
-<li><p>函数一 $y=\dfrac{x^{n+1}}{n+1}$ 是函数二 $\dfrac{dy}{dx}=x^{n}$ 的积分</p>
-</li>
-<li><p>求原函数：$y\left( x\right) =\int s\left( x\right) dx$</p>
-</li>
-<li><p>求积分方法A：反过来看什么函数的导数能得到要积分的函数</p>
-</li>
-<li><p>例：通过代数方法求函数一</p>
+<p>例：通过微积分方法求函数一</p>
 <ul>
-<li><img src="https://cdn.jsdelivr.net/gh/Bezhuang/Imgbed/blogimg/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B903.png" style="zoom:67%;">
-</li>
-<li><p>相加求和：$\sum \Delta y=y_{终}-y_{始}$</p>
-</li>
-</ul>
-</li>
-<li><p>例：通过微积分方法求函数一</p>
-<ul>
-<li><p>同时乘除 $\Delta x$：$\sum \left( \dfrac{\Delta y}{\Delta x}\right) \Delta x=y_{终}-y_{始}$</p>
+<li><p>同时乘除 $\Delta x$：$\sum \left( \dfrac{\Delta y}{\Delta x}\right) \Delta x=y<em>{终}-y</em>{始}$</p>
 </li>
 <li><p>在 $\Delta x\rightarrow 0$ 的极限情况下，求和转化为积分：$\int \dfrac{dy}{dx}dx$</p>
 </li>
 </ul>
-</li>
-<li><p>求积分方法B：$积分=函数一=函数二图像下的面积$</p>
+<p>求积分方法B：$积分=函数一=函数二图像下的面积$</p>
 <ul>
 <li>斜率为 $s=2-2x$，对应的高度 $y=2x-x^2$</li>
-</ul>
-</li>
 </ul>
 
   
@@ -713,6 +673,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B9/>http://blog.zhuangzhihao.top/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B9/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -728,13 +692,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%85%95%E8%AF%BEMOOC/">慕课MOOC</a>
-    </a>
-  </div>
-
 
         
       
@@ -751,77 +708,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B9/&title=微积分重点 - Bezhuang's Blog&summary=
-微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览，以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B9/&title=微积分重点 - Bezhuang's Blog&summary=
-微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览，以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B9/&title=微积分重点 - Bezhuang's Blog&summary=
-微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览，以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEZElEQVR42u3aQW7cMAwF0Ln/pdt9i0DiJyV7gqddBrYsPWZBEvz8sY6sDwKwYC2wYMFaYK/AfsL134Y//L77XPc7//7+0z6r73Q9wIIFCxYsWLBgwd6F3U6AF8/vAk3Bb1+4GJD0vGDBggULFixYsGCfgU0POFUwpIXCbsB3C4jUAyxYsGDBggULFux3wVYPOg15umAACxYsWLBgwYIF+7thu43pFL4a4KnAgwULFixYsGDBgn0HbLcxPT2IsXueNFBpgx4sWLBgwYIFCxbsO2C7Cfxv+zv2AAsWLFiwYMGCBXsFdmqlBUDa6K4m+lMFwdIBLFiwYMGCBQsW7BXYdAAjTbBvDVZU4dL3wIIFCxYsWLBgwT4Lmw44dAchdt+rFiDpudJCBSxYsGDBggULFuwzsKf+fksDeqoBvwwUWLBgwYIFCxYs2CuwpwYxqgn81IXThnY14MsCASxYsGDBggULFuxV2CpENSBpozxN9E9BlwsEsGDBggULFixYsKOw6aBF2rieHsxIE/mpwIAFCxYsWLBgwYJ9BvZ24j/eWC4CTt932egGCxYsWLBgwYIFewT21Ae6jeMufLWB3S2UwIIFCxYsWLBgwT4DuwuXAqaQ3X2r92wHGixYsGDBggULFuwjsCl0NwFPG+e75zlVICwb3WDBggULFixYsGCPwKaN5RQkfa47iNEdCNl+HixYsGDBggULFuwV2G5i3R3oSBvu3X2OvQ8WLFiwYMGCBQv2Kmw1IZ6+YPU73XN0B0+2BzbAggULFixYsGDBHoFNE/4qSHcw4nRgpp4HCxYsWLBgwYIF+w7YasFQhasm8NUG+O49xu4HFixYsGDBggUL9ipsmvB3BzaqAdgtOLrnTgMOFixYsGDBggUL9hnYaiLf3ac7mFEd3OgGcPk7WLBgwYIFCxYs2Kuw1Q3SxH2q0ZwOllTPWS4swIIFCxYsWLBgwV6FrTaQpyFODXqkDfG0gQ8WLFiwYMGCBQv2DuzuRdOBi9uDFV3YtOAACxYsWLBgwYIF+wzsdIO6WoBMw6eDJdV9lgUCWLBgwYIFCxYs2COwuwl4OghRHXyoJupTAUtBwYIFCxYsWLBgwT4Dmyb0aUO7GoA08U8HRrqNfrBgwYIFCxYsWLB3YNMDdRvTUwn+VKFTXduVF1iwYMGCBQsWLNgjsFMFwlTCnb7fTfC7AQULFixYsGDBggV7F3Y6Ua42wqcHOKYLh3IjHixYsGDBggULFuwV2E+4UvAqaApZLTzShv6y8gILFixYsGDBggV7FLZ7sDQg1cb3VGO+ux9YsGDBggULFizYd8F2BzS6jerp/dLBjvQfAixYsGDBggULFux3wE4NbKQDFd2GezeQYMGCBQsWLFiwYL8Tdhqg2lif/l71XGDBggULFixYsGDfAds9ULfASBvQn3B177k9sAEWLFiwYMGCBQv2CGx6oLRR3R2kSBP9bmDBggULFixYsGDBvgPWml1gwYK1wIIFa4E9uv4CEHxWOhAzXggAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B9/&text=微积分重点 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -993,17 +879,9 @@ Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1129,8 +1007,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1486,29 +1362,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1547,7 +1400,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1607,20 +1460,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1833,6 +1672,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

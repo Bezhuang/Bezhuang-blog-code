@@ -110,7 +110,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -234,16 +234,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -366,16 +376,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -399,7 +419,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -422,36 +442,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -485,8 +475,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Servlet/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Servlet</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JDBC/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>JDBC</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Tomcat/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Tomcat</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Java/">Java</a>
+    </a>
+  </div>
 
 
           
@@ -529,9 +523,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>在阿里云开发者社区中看到有<a target="_blank" rel="noopener" href="https://developer.aliyun.com/learning/trainingcamp/java/1?spm=a2c6h.21110250.J_3925608520.1.73b63c67PXfMgE">Java新手训练营</a>（5天突破Java面向对象编程）的课程，采用直播授课的形式，希望能在侠客大佬的指导下有更好的学习效果吧。当然，直播时间有限，所以这篇日志并不是对Java知识点完全系统的梳理，主要记录一些开发中常用的语法和概念和在面试时会遇到的问题，以<a target="_blank" rel="noopener" href="https://github.com/Bezhuang/LearnCS/tree/main/Java%E8%AE%AD%E7%BB%83%E8%90%A5">训练</a>和熟悉特性为主。</p>
 </blockquote>
-<a id="more"></a>
-
-<p><img src="https://ucc-image.oss-cn-beijing.aliyuncs.com/credential/22/87e768f5aca640b3ad57813564f6cdb8.png"></p>
+<span id="more"></span>
+<p><img src="https://blog.zhuangzhihao.top/img/Java第一期训练营.png" alt></p>
 <h3 id="Java知识点"><a href="#Java知识点" class="headerlink" title="Java知识点"></a>Java知识点</h3><ol>
 <li>Java语言的发展历史</li>
 <li>Java语言的优势和特点</li>
@@ -544,45 +537,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>文件操作：调用封装好的类库 <code>File</code></li>
 <li>网络编程：Socket TCP IP、SMTP邮件传输协议等</li>
 <li>数据库连接：ADO.NET , JDBC等连接库NoSQL</li>
-<li>网站框架：```PHP`、ASP、JSP、ASP.NET、Spring MVC、Node</li>
+<li>网站框架：<code>``PHP</code>、ASP、JSP、ASP.NET、Spring MVC、Node</li>
 </ol>
 <h4 id="Java语言特性"><a href="#Java语言特性" class="headerlink" title="Java语言特性"></a>Java语言特性</h4><ul>
-<li><p>IDE：Eclipse 或者IntelliJ IDEA、MyEclipse</p>
-</li>
+<li>IDE：Eclipse 或者IntelliJ IDEA、MyEclipse</li>
 <li><p>JDK（Java Development Kit）：Java开发工具包，包含JAVA的运行环境和开发工具</p>
 <ul>
 <li>Java虚拟机（JVM+Java系统类库）、Java编译器、Java调试工具、Java分析工具</li>
 <li>安装和配置：JDK环境变量和 classpath</li>
 </ul>
 </li>
-<li><p>Src：源代码文件夹，Source；Bin文件夹：保存编译后的二进制文件</p>
-</li>
+<li>Src：源代码文件夹，Source；Bin文件夹：保存编译后的二进制文件</li>
 </ul>
-<h4 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h4><pre><code class="java">package come.alibiba;
-public class Test &#123;
-    public static void main(String[] args) &#123;
-        System.out.println(&quot;Hello World&quot;);   //println：输出行
-    &#125;
-&#125;</code></pre>
+<h4 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> come.alibiba;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;Hello World&quot;</span>);   <span class="comment">//println：输出行</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="Java代码执行顺序"><a href="#Java代码执行顺序" class="headerlink" title="Java代码执行顺序"></a>Java代码执行顺序</h4><ol>
 <li><p>编译原理：Java源代码 词法分析、语法分析</p>
 </li>
 <li><p>编译后的文件 <code>.class</code> 文件， ByteCode 字节码格式</p>
 </li>
-<li><p>JVM 类装载器 ClassLoader 装载执行的类文件</p>
-</li>
-<li><p>代码检验：符合JVM规范和类型安全等</p>
-</li>
-<li><p>Java中间代码 IR（Intermediate Representation）IL</p>
-</li>
-<li><p>准备：准备方法表、静态字段等需要的内存空间</p>
-</li>
-<li><p>JIT 即时编译器执行二次编译 IR 中间代码</p>
-</li>
-<li><p>转换为机器码</p>
-</li>
-<li><p>CPU 以 线程Thread 身份执行机器码</p>
-</li>
+<li>JVM 类装载器 ClassLoader 装载执行的类文件</li>
+<li>代码检验：符合JVM规范和类型安全等</li>
+<li>Java中间代码 IR（Intermediate Representation）IL</li>
+<li>准备：准备方法表、静态字段等需要的内存空间</li>
+<li>JIT 即时编译器执行二次编译 IR 中间代码</li>
+<li>转换为机器码</li>
+<li>CPU 以 线程Thread 身份执行机器码</li>
 </ol>
 <h4 id="Java-9新特性"><a href="#Java-9新特性" class="headerlink" title="Java 9新特性"></a>Java 9新特性</h4><ol>
 <li>Jigsaw 项目：模块化，包，仿C#的程序集<code>dll</code>概念</li>
@@ -636,31 +615,15 @@ public class Test &#123;
 <li><p>大写关键字 <code>Enum</code>，小写关键字 <code>enum</code></p>
 </li>
 <li><p><code>Enum</code> 抽象类，所有枚举类型的基类，<code>enum</code> 继承自  <code>Enum</code></p>
-<pre><code class="java">public enum Season &#123; SPRING, SUMMER, AUTUM, WINTER &#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="title class_">Season</span> &#123; SPRING, SUMMER, AUTUM, WINTER &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="条件和循环语句"><a href="#条件和循环语句" class="headerlink" title="条件和循环语句"></a>条件和循环语句</h3><h4 id="if条件"><a href="#if条件" class="headerlink" title="if条件"></a>if条件</h4><pre><code class="java">int num = 10000;
-if (num &gt; 10000000) &#123; System.out.println(&quot;超级富豪程序员&quot;); &#125; 
-else if (num &gt; 1000000) &#123; System.out.println(&quot;富豪程序员&quot;); &#125;
-else &#123; System.out.println(&quot;码畜&quot;); &#125;</code></pre>
-<h4 id="switch条件"><a href="#switch条件" class="headerlink" title="switch条件"></a>switch条件</h4><pre><code class="java">System.out.println(&quot;输入星期查询&quot;);
-Scanner sin = new Scanner(System.in);
-int day = sin.nextInt();
-switch (day)&#123;
-    case 6:
-        System.out.println(&quot;休息&quot;);
-        break;
-    default:
-        System.out.println(&quot;上班&quot;);
-        break;&#125;</code></pre>
-<h4 id="for循环，for-each循环"><a href="#for循环，for-each循环" class="headerlink" title="for循环，for each循环"></a>for循环，for each循环</h4><pre><code class="java">int sum = 0;
-for (int i = 1; i &lt;= 100; i++) &#123; sum = sum + i; &#125; System.out.println(sum);
-for (String s : list)&#123; System.out.println(s); &#125;  //foreach循环</code></pre>
-<h4 id="while循环，do-while循环"><a href="#while循环，do-while循环" class="headerlink" title="while循环，do while循环"></a>while循环，do while循环</h4><pre><code class="java">int age = 18;
-while(age&lt;100) &#123; age=age+1; System.out.println(age); &#125;
-do&#123; age++; System.out.println(age); &#125;while (age&lt;100)</code></pre>
+<h3 id="条件和循环语句"><a href="#条件和循环语句" class="headerlink" title="条件和循环语句"></a>条件和循环语句</h3><h4 id="if条件"><a href="#if条件" class="headerlink" title="if条件"></a>if条件</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">10000</span>;</span><br><span class="line"><span class="keyword">if</span> (num &gt; <span class="number">10000000</span>) &#123; System.out.println(<span class="string">&quot;超级富豪程序员&quot;</span>); &#125; </span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (num &gt; <span class="number">1000000</span>) &#123; System.out.println(<span class="string">&quot;富豪程序员&quot;</span>); &#125;</span><br><span class="line"><span class="keyword">else</span> &#123; System.out.println(<span class="string">&quot;码畜&quot;</span>); &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="switch条件"><a href="#switch条件" class="headerlink" title="switch条件"></a>switch条件</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;输入星期查询&quot;</span>);</span><br><span class="line"><span class="type">Scanner</span> <span class="variable">sin</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="type">int</span> <span class="variable">day</span> <span class="operator">=</span> sin.nextInt();</span><br><span class="line"><span class="keyword">switch</span> (day)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">        System.out.println(<span class="string">&quot;休息&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        System.out.println(<span class="string">&quot;上班&quot;</span>);</span><br><span class="line">        <span class="keyword">break</span>;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="for循环，for-each循环"><a href="#for循环，for-each循环" class="headerlink" title="for循环，for each循环"></a>for循环，for each循环</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= <span class="number">100</span>; i++) &#123; sum = sum + i; &#125; System.out.println(sum);</span><br><span class="line"><span class="keyword">for</span> (String s : list)&#123; System.out.println(s); &#125;  <span class="comment">//foreach循环</span></span><br></pre></td></tr></table></figure>
+<h4 id="while循环，do-while循环"><a href="#while循环，do-while循环" class="headerlink" title="while循环，do while循环"></a>while循环，do while循环</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">18</span>;</span><br><span class="line"><span class="keyword">while</span>(age&lt;<span class="number">100</span>) &#123; age=age+<span class="number">1</span>; System.out.println(age); &#125;</span><br><span class="line"><span class="keyword">do</span>&#123; age++; System.out.println(age); &#125;<span class="keyword">while</span> (age&lt;<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
 <h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><ul>
-<li>算数运算符，二进制位运算符（ <code>&amp;</code>  与，<code>|</code>  或，<code>^ </code>异或，<code>〜 </code>按位取反），逻辑运算符（<code>&amp;&amp;</code> and，<code>||</code> or，<code>!</code> not），赋值运算符（<code>/= </code>除和），条件运算符 （三元运算符）<code>(a=1)?1:2</code></li>
+<li>算数运算符，二进制位运算符（ <code>&amp;</code>  与，<code>|</code>  或，<code>^</code>异或，<code>〜</code>按位取反），逻辑运算符（<code>&amp;&amp;</code> and，<code>||</code> or，<code>!</code> not），赋值运算符（<code>/=</code>除和），条件运算符 （三元运算符）<code>(a=1)?1:2</code></li>
 </ul>
 <h3 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h3><ul>
 <li><p>Object Oriented Programming</p>
@@ -693,7 +656,7 @@ do&#123; age++; System.out.println(age); &#125;while (age&lt;100)</code></pre>
 <li>封装 Encapsulation：相比之前Function功能，把数据和行为功能代码打包在一起，形成一个封闭Class类。代码封装单位。</li>
 <li>在C#和Java中，类是支持对象封装的工具，对象则是封装的基本单元。</li>
 </ul>
-<ol start="3">
+<ol>
 <li>类和结构是 .NET 和 Java 中的常规类型系统的基本构造，本质上都属于数据结构，封装着一个逻辑单位的数据和行为。</li>
 </ol>
 <ul>
@@ -704,11 +667,7 @@ do&#123; age++; System.out.println(age); &#125;while (age&lt;100)</code></pre>
 <li>为了更好的代码重用</li>
 <li>在Java中，子类可以继承父类，所有的方法都是默认 <code>Virtual</code> 的</li>
 </ul>
-<pre><code class="java">public class Dog extends Animal&#123;
-    @Override               //重写
-    public void Run()
-    &#123;System.out.println(&quot;Hello dog run...&quot;);&#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span>               <span class="comment">//重写</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Run</span><span class="params">()</span></span><br><span class="line">    &#123;System.out.println(<span class="string">&quot;Hello dog run...&quot;</span>);&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>构造函数，创建对象，实例化，构造对象，通过对象，调用行为，功能、方法</li>
 </ul>
@@ -722,12 +681,7 @@ do&#123; age++; System.out.println(age); &#125;while (age&lt;100)</code></pre>
 <li><p>Java和C#提供三种多态能力：接口多态、继承多态、抽象多态</p>
 </li>
 <li><p>接口：部分约束、合约、约定</p>
-<pre><code class="java">public interface IBike //声明一个接口 叫功能
-&#123;void Call();&#125;  //定义Call方法
-public class Cat : IBike //猫类实现接口
-&#123;public void Call()&#123;     
-    Console.WriteLine(&quot;喵喵喵&quot;);&#125;  //实现Call方法
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">IBike</span> <span class="comment">//声明一个接口 叫功能</span></span><br><span class="line">&#123;<span class="keyword">void</span> <span class="title function_">Call</span><span class="params">()</span>;&#125;  <span class="comment">//定义Call方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Cat</span> : IBike <span class="comment">//猫类实现接口</span></span><br><span class="line">&#123;<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Call</span><span class="params">()</span>&#123;     </span><br><span class="line">    Console.WriteLine(<span class="string">&quot;喵喵喵&quot;</span>);&#125;  <span class="comment">//实现Call方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="多态的实现方式"><a href="#多态的实现方式" class="headerlink" title="多态的实现方式"></a>多态的实现方式</h4><ul>
@@ -737,52 +691,25 @@ public class Cat : IBike //猫类实现接口
 </ul>
 <h4 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h4><ul>
 <li><p>抽象的类型，无法具体化接口，约束合约</p>
-<pre><code class="java">package com.frankxulei; //接口表示一种约束，电源接口、USB接口
-    public interface IFly &#123; void Fly(); &#125;
-    public class Dog extends Animal implements IFly &#123; //继承抽象类和接口
-    @Override
-    public void Run() &#123; System.out.println(&quot;Hello dog run...&quot;); &#125;
-    @Override
-    public void Fly() &#123; System.out.println(&quot;Hello dog fly...&quot;); &#125; &#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.frankxulei; <span class="comment">//接口表示一种约束，电源接口、USB接口</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">IFly</span> &#123; <span class="keyword">void</span> <span class="title function_">Fly</span><span class="params">()</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">extends</span> <span class="title class_">Animal</span> <span class="keyword">implements</span> <span class="title class_">IFly</span> &#123; <span class="comment">//继承抽象类和接口</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Run</span><span class="params">()</span> &#123; System.out.println(<span class="string">&quot;Hello dog run...&quot;</span>); &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Fly</span><span class="params">()</span> &#123; System.out.println(<span class="string">&quot;Hello dog fly...&quot;</span>); &#125; &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="抽象类和接口的区别"><a href="#抽象类和接口的区别" class="headerlink" title="抽象类和接口的区别"></a>抽象类和接口的区别</h4><ol>
-<li><p>实例方法：创建对象才能调用的方法</p>
-</li>
-<li><p>静态方法：<code>Static</code> 修饰的方法，属于类<code>Class</code>，不需要实例化</p>
-</li>
+<li>实例方法：创建对象才能调用的方法</li>
+<li>静态方法：<code>Static</code> 修饰的方法，属于类<code>Class</code>，不需要实例化</li>
 <li><p>虚方法：<code>virtual</code>，介于抽象和实体方法之间，可以重写</p>
 </li>
 <li><p>除了 <code>static</code>、<code>final</code>、<code>private</code> 修饰的所有方法都是抽象类</p>
 </li>
-<li><p><code>Abstract</code> 抽象类不可以被实例化，<code>interface</code> 接口也不可以</p>
-</li>
-<li><p>抽象类只允许单继承，接口可以多继承</p>
-</li>
-<li><p><code>Abstract</code> 抽象类有具体方法实现，接口只有方法声明</p>
-</li>
-<li><p>抽象类使用关键字 <code>extends</code>，接口继承使用 <code>implements</code></p>
-</li>
-<li><p>抽象类代表同一类别， 接口代表一种部分约束</p>
-</li>
+<li><code>Abstract</code> 抽象类不可以被实例化，<code>interface</code> 接口也不可以</li>
+<li>抽象类只允许单继承，接口可以多继承</li>
+<li><code>Abstract</code> 抽象类有具体方法实现，接口只有方法声明</li>
+<li>抽象类使用关键字 <code>extends</code>，接口继承使用 <code>implements</code></li>
+<li>抽象类代表同一类别， 接口代表一种部分约束</li>
 </ol>
 <h4 id="虚方法，抽象方法和重写"><a href="#虚方法，抽象方法和重写" class="headerlink" title="虚方法，抽象方法和重写"></a>虚方法，抽象方法和重写</h4><ul>
 <li><p>父类不希望子类重写我</p>
-<pre><code class="java">abstract class Car
-    &#123;public void Run()//虚方法
-    &#123;Console.WriteLine(&quot;BaseClass.VirtualMethod&quot;);&#125;
-    public abstract void AddPower();&#125; //抽象方法
-class BMWCar : Car
-    &#123; @override //重写虚方法
-      public void Run()&#123; Console.WriteLine(&quot;SubClass.VirtualMethod&quot;);&#125;
-       @override
-      public void AddPower()&#123; Console.WriteLine(“加油&quot;); &#125;&#125;
-class Test
-&#123; static void Main()&#123;
-Car baseClass = new BMWCar(); //声明类型为基类，实际类型为子类
-//由实际类型决定调用子类还是父类方法，实际是SubClass类的对象：SubClass.VirtualMethod
-baseClass. Run();
-baseClass. AddPower(); &#125;&#125;//重写抽象方法</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Car</span></span><br><span class="line">	&#123;<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Run</span><span class="params">()</span><span class="comment">//虚方法</span></span><br><span class="line">	&#123;Console.WriteLine(<span class="string">&quot;BaseClass.VirtualMethod&quot;</span>);&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">AddPower</span><span class="params">()</span>;&#125; <span class="comment">//抽象方法</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BMWCar</span> : Car</span><br><span class="line">	&#123; <span class="meta">@override</span> <span class="comment">//重写虚方法</span></span><br><span class="line">	  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">Run</span><span class="params">()</span>&#123; Console.WriteLine(<span class="string">&quot;SubClass.VirtualMethod&quot;</span>);&#125;</span><br><span class="line"> 	  <span class="meta">@override</span></span><br><span class="line">	  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">AddPower</span><span class="params">()</span>&#123; Console.WriteLine(“加油<span class="string">&quot;); &#125;&#125;</span></span><br><span class="line"><span class="string">class Test</span></span><br><span class="line"><span class="string">&#123; static void Main()&#123;</span></span><br><span class="line"><span class="string">Car baseClass = new BMWCar(); //声明类型为基类，实际类型为子类</span></span><br><span class="line"><span class="string">//由实际类型决定调用子类还是父类方法，实际是SubClass类的对象：SubClass.VirtualMethod</span></span><br><span class="line"><span class="string">baseClass. Run();</span></span><br><span class="line"><span class="string">baseClass. AddPower(); &#125;&#125;//重写抽象方法</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="简易计算器"><a href="#简易计算器" class="headerlink" title="简易计算器"></a>简易计算器</h4><ul>
@@ -792,16 +719,11 @@ baseClass. AddPower(); &#125;&#125;//重写抽象方法</code></pre>
 <li>方法重载</li>
 </ul>
 <h3 id="文件编程"><a href="#文件编程" class="headerlink" title="文件编程"></a>文件编程</h3><h4 id="File文件流和IO读写文件工具类"><a href="#File文件流和IO读写文件工具类" class="headerlink" title="File文件流和IO读写文件工具类"></a>File文件流和IO读写文件工具类</h4><ul>
-<li><p><code>Java.io</code> 包几乎包含了所有操作输入、输出需要的类，所有这些流类代表了输入源和输出目标</p>
-</li>
-<li><p><code>Java.io</code> 包，File文件类库的流支持很多格式（基本类型、对象、本地化字符集等）</p>
-</li>
-<li><p>一个流可以理解为一个数据的序列，输入流表示从一个源读取数据，输出流表示向一个目标写数据</p>
-</li>
+<li><code>Java.io</code> 包几乎包含了所有操作输入、输出需要的类，所有这些流类代表了输入源和输出目标</li>
+<li><code>Java.io</code> 包，File文件类库的流支持很多格式（基本类型、对象、本地化字符集等）</li>
+<li>一个流可以理解为一个数据的序列，输入流表示从一个源读取数据，输出流表示向一个目标写数据</li>
 <li><p>Java为I/O提供了强大而灵活的支持（类库），使其更广泛地应用到文件传输和网络编程中</p>
-<pre><code class="java">import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.FileReader;</span><br><span class="line"><span class="keyword">import</span> java.io.FileWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="Java-IO读写文件工具类"><a href="#Java-IO读写文件工具类" class="headerlink" title="Java IO读写文件工具类"></a>Java IO读写文件工具类</h4><ul>
@@ -821,10 +743,7 @@ import java.io.IOException;</code></pre>
 <li><p>数组是一种数据结构，它包含若干相同类型的变量。</p>
 </li>
 <li><p>数组元素，通过下标，0开始计数</p>
-<pre><code class="java">int[10] array1 = new int[10];
-int[1]=2;
-int[] array2 = new int[] &#123; 1, 3, 5, 7, 9 &#125;;
-String[] nameArray = &#123;“C”,”Java”,”C++”&#125;;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[<span class="number">10</span>] array1 = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">10</span>];</span><br><span class="line"><span class="type">int</span>[<span class="number">1</span>]=<span class="number">2</span>;</span><br><span class="line"><span class="type">int</span>[] array2 = <span class="keyword">new</span> <span class="title class_">int</span>[] &#123; <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span> &#125;;</span><br><span class="line">String[] nameArray = &#123;“C”,”Java”,”C++”&#125;;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="数组特点"><a href="#数组特点" class="headerlink" title="数组特点"></a>数组特点</h4><ul>
@@ -843,16 +762,11 @@ String[] nameArray = &#123;“C”,”Java”,”C++”&#125;;</code></pre>
 <li>单链表和双链表</li>
 </ul>
 <h4 id="数据列表（ArrayList）"><a href="#数据列表（ArrayList）" class="headerlink" title="数据列表（ArrayList）"></a>数据列表（ArrayList）</h4><ul>
-<li><p>Array 数组: 一组连续的物理空间，一组元素，不可变长度，查找性能高，但是插入和删除需要移动位置，性能低</p>
-</li>
+<li>Array 数组: 一组连续的物理空间，一组元素，不可变长度，查找性能高，但是插入和删除需要移动位置，性能低</li>
 <li><p>ArrayList：可变长度的数组</p>
 </li>
 <li><p>使用 <code>ArrayList</code> 类 <code>Add</code>、<code>AddRange</code> 和 <code>ToArray</code> 方法的项代码：</p>
-<pre><code class="java">public static void Main() &#123;
-    ArrayList myAL = new ArrayList();// 创建和初始化ArrayList.
-    myAL.Add(&quot;The&quot;); //添加一个元素
-    myAL.AddRange(new string[] &#123; &quot;the&quot;, &quot;lazy&quot;,&quot;dog&quot; &#125;);//添加一组元素
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">Main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">ArrayList</span> <span class="variable">myAL</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>();<span class="comment">// 创建和初始化ArrayList.</span></span><br><span class="line">    myAL.Add(<span class="string">&quot;The&quot;</span>); <span class="comment">//添加一个元素</span></span><br><span class="line">    myAL.AddRange(<span class="keyword">new</span> <span class="title class_">string</span>[] &#123; <span class="string">&quot;the&quot;</span>, <span class="string">&quot;lazy&quot;</span>,<span class="string">&quot;dog&quot;</span> &#125;);<span class="comment">//添加一组元素</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="集合（Set）接口"><a href="#集合（Set）接口" class="headerlink" title="集合（Set）接口"></a>集合（Set）接口</h4><ul>
@@ -867,12 +781,7 @@ String[] nameArray = &#123;“C”,”Java”,”C++”&#125;;</code></pre>
 <li><p>对于某些集合，可以指定键Key，则放入集合中的所有对象，以便可以快速检索对象</p>
 </li>
 <li><p>集合是类，因此必须 <code>new</code> 新集合后，才能添加元素</p>
-<pre><code class="java">Set&lt;Integer&gt; set = new HashSet&lt;Integer&gt;();
-    for(int i = 0; i &lt; 100; i++) &#123;
-    set.add(i);&#125;
-System.out.println(set);
-TreeSet sortedSet = new TreeSet&lt;Integer&gt;(set); //有序集
-System.out.println(sortedSet);</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Set&lt;Integer&gt; set = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</span><br><span class="line">    set.add(i);&#125;</span><br><span class="line">System.out.println(set);</span><br><span class="line"><span class="type">TreeSet</span> <span class="variable">sortedSet</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;Integer&gt;(set); <span class="comment">//有序集</span></span><br><span class="line">System.out.println(sortedSet);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="哈希映射（HashMap）"><a href="#哈希映射（HashMap）" class="headerlink" title="哈希映射（HashMap）"></a>哈希映射（HashMap）</h4><ul>
@@ -885,10 +794,7 @@ System.out.println(sortedSet);</code></pre>
 <li><p>提供了 <code>get( )</code>  和 <code>put( )</code> 方法，HashMap 是无序的，即不会记录插入的顺序</p>
 </li>
 <li><p>HashMap 与 Hashtable 基本一样，但是不同步，允许为 <code>null</code></p>
-<pre><code class="java">HashMap&lt;Integer, String&gt; hashmap = new HashMap&lt;Integer, String&gt;();
-System.out.println(hashmap.put(1, “C&quot;) ); //添加Key,Value
-System.out.println(hashmap.put(2, “C++&quot;) ); //添加Key,Value
-System.out.println(hashmap.put(3, “Java&quot;) ); //添加Key,Value</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;Integer, String&gt; hashmap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Integer, String&gt;();</span><br><span class="line">System.out.println(hashmap.put(<span class="number">1</span>, “C<span class="string">&quot;) ); //添加Key,Value</span></span><br><span class="line"><span class="string">System.out.println(hashmap.put(2, “C++&quot;</span>) ); <span class="comment">//添加Key,Value</span></span><br><span class="line">System.out.println(hashmap.put(<span class="number">3</span>, “Java<span class="string">&quot;) ); //添加Key,Value</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="哈希表（Hashtable）"><a href="#哈希表（Hashtable）" class="headerlink" title="哈希表（Hashtable）"></a>哈希表（Hashtable）</h4><ul>
@@ -905,20 +811,19 @@ System.out.println(hashmap.put(3, “Java&quot;) ); //添加Key,Value</code></pr
 <li><p>Hashtable 类的初始默认容量为11，而 loadFactor 为0.75。</p>
 </li>
 <li><p>在Java版本2中，重写了Hashtable类以实现Map接口，并使它成为 Java Collection Framework的成员</p>
-<pre><code class="java">Hashtable&lt;Integer, String&gt; hashtable = new Hashtable&lt;Integer, String&gt;();
-System.out.println( hashtable.put(1, “C&quot;) ); //添加Key,Value
-System.out.println( hashtable.put(2, “C++&quot;) ); //添加Key,Value
-System.out.println( hashtable.put(3, “Java&quot;) ); //添加Key,Value</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Hashtable&lt;Integer, String&gt; hashtable = <span class="keyword">new</span> <span class="title class_">Hashtable</span>&lt;Integer, String&gt;();</span><br><span class="line">System.out.println( hashtable.put(<span class="number">1</span>, “C<span class="string">&quot;) ); //添加Key,Value</span></span><br><span class="line"><span class="string">System.out.println( hashtable.put(2, “C++&quot;</span>) ); <span class="comment">//添加Key,Value</span></span><br><span class="line">System.out.println( hashtable.put(<span class="number">3</span>, “Java<span class="string">&quot;) ); //添加Key,Value</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="HashMap-和-HashTable的区别"><a href="#HashMap-和-HashTable的区别" class="headerlink" title="HashMap 和 HashTable的区别"></a>HashMap 和 HashTable的区别</h4><table>
+<h4 id="HashMap-和-HashTable的区别"><a href="#HashMap-和-HashTable的区别" class="headerlink" title="HashMap 和 HashTable的区别"></a>HashMap 和 HashTable的区别</h4><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>HashMap</th>
 <th>Hashtable</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>非同步synchronized</td>
 <td>同步synchronized</td>
 </tr>
@@ -946,7 +851,9 @@ System.out.println( hashtable.put(3, “Java&quot;) ); //添加Key,Value</code><
 <td>并发高</td>
 <td>并发低</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="其他复杂数据类型"><a href="#其他复杂数据类型" class="headerlink" title="其他复杂数据类型"></a>其他复杂数据类型</h4><ul>
 <li>枚举（ Enumeration）</li>
 <li>向量（ Vector）</li>
@@ -964,20 +871,8 @@ System.out.println( hashtable.put(3, “Java&quot;) ); //添加Key,Value</code><
 <li>实际编译的代码不包含类型信息 <code>type erasure</code></li>
 <li><code>ArrayList&lt;E&gt;</code> 和<code>HashMap&lt;k,v&gt;</code>都是典型的泛型类型</li>
 </ul>
-<h4 id="泛型定义"><a href="#泛型定义" class="headerlink" title="泛型定义"></a>泛型定义</h4><pre><code class="java">// Java泛型定义和C#泛型List定义语法一样
-public class List&lt;T&gt; &#123;
-    private t;
-    public void add(T t) &#123;
-    this.t = t;&#125;
-public T get() &#123;
-    return t;&#125;
-&#125;</code></pre>
-<h4 id="泛型实战"><a href="#泛型实战" class="headerlink" title="泛型实战"></a>泛型实战</h4><pre><code class="java">System.out.println(&quot;Java泛型实战&quot;);
-ArrayList&lt;String&gt; listNames = new ArrayList&lt;String&gt;();
-Class c2 = listNames.getClass();
-listNames.add(“阿里Java训练营&quot;); listNames.add(“阿里云大学&quot;);
-System.out.println(c1 == c2);
-for (String s : listNames) &#123; System.out.println(s); &#125;</code></pre>
+<h4 id="泛型定义"><a href="#泛型定义" class="headerlink" title="泛型定义"></a>泛型定义</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java泛型定义和C#泛型List定义语法一样</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">List</span>&lt;T&gt; &#123;</span><br><span class="line">    <span class="keyword">private</span> t;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(T t)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.t = t;&#125;</span><br><span class="line"><span class="keyword">public</span> T <span class="title function_">get</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> t;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="泛型实战"><a href="#泛型实战" class="headerlink" title="泛型实战"></a>泛型实战</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">&quot;Java泛型实战&quot;</span>);</span><br><span class="line">ArrayList&lt;String&gt; listNames = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;String&gt;();</span><br><span class="line"><span class="type">Class</span> <span class="variable">c2</span> <span class="operator">=</span> listNames.getClass();</span><br><span class="line">listNames.add(“阿里Java训练营<span class="string">&quot;); listNames.add(“阿里云大学&quot;</span>);</span><br><span class="line">System.out.println(c1 == c2);</span><br><span class="line"><span class="keyword">for</span> (String s : listNames) &#123; System.out.println(s); &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><h4 id="ODBC开放数据库连接"><a href="#ODBC开放数据库连接" class="headerlink" title="ODBC开放数据库连接"></a>ODBC开放数据库连接</h4><ul>
 <li>微软提出的数据库接口标准：Open Database Connectivity，简称ODBC</li>
 <li>开放数据库连接技术，解决不同异构数据库连接的问题，主要是Windows系统来用，支持多种数据库</li>
@@ -1004,64 +899,18 @@ for (String s : listNames) &#123; System.out.println(s); &#125;</code></pre>
 </ul>
 <h4 id="JDBC编程5大步骤"><a href="#JDBC编程5大步骤" class="headerlink" title="JDBC编程5大步骤"></a>JDBC编程5大步骤</h4><ul>
 <li><p>JDBC 连接MySQL 对应的驱动包，工具类</p>
-<pre><code class="xml">&lt;!--在pom.xml文件中添加驱动dependency--&gt;
-&lt;!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java --&gt;
-&lt;dependency&gt;
-  &lt;groupId&gt;mysql&lt;/groupId&gt;
-  &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
-  &lt;version&gt;5.1.46&lt;/version&gt;
-&lt;/dependency&gt;</code></pre>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--在pom.xml文件中添加驱动dependency--&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.46<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>手动引用到项目中，Maven自动化构建工具</p>
 </li>
 </ul>
-<pre><code class="java">package com.alibaba.AlibabaJava07JDBCMySQLDemo;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Connection;
-import java.sql.SQLException;
-
-public class Test&#123;
- public static void main(String[] args) throws ClassNotFoundException, SQLException &#123; 
-  // 1.加载驱动 JSP连接MySQL
-  Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
-  // 2.连接数据
-  String url = &quot;jdbc:mysql://localhost:3306/taobao?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&quot;;
-  String username = &quot;root&quot;;
-  String password = &quot;990312&quot;;
-  Connection con = DriverManager.getConnection(url, username, password);
-  // 3.SQL命令
-  String sql = &quot;select * from users order by Id&quot;;
-  java.sql.Statement statement = con.createStatement();
-  // 4.执行SQL命令
-  ResultSet result = statement.executeQuery(sql);
-  // 5.结果处理
-  while (result.next()) &#123;
-   String id = result.getString(&quot;id&quot;);
-   String name = result.getString(&quot;name&quot;);
-   String psw = result.getString(&quot;password&quot;);
-   System.out.println(id+&quot; : &quot;+ name + &quot; : &quot; + psw); &#125;
-  // 6.结束运行
-  result.close();
-  statement.close();
-  con.close();  &#125;  &#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.alibaba.AlibabaJava07JDBCMySQLDemo;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test</span>&#123;</span><br><span class="line"> <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException, SQLException &#123; </span><br><span class="line">  <span class="comment">// 1.加载驱动 JSP连接MySQL</span></span><br><span class="line">  Class.forName(<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>);</span><br><span class="line">  <span class="comment">// 2.连接数据</span></span><br><span class="line">  <span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql://localhost:3306/taobao?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&quot;</span>;</span><br><span class="line">  <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> <span class="string">&quot;root&quot;</span>;</span><br><span class="line">  <span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> <span class="string">&quot;990312&quot;</span>;</span><br><span class="line">  <span class="type">Connection</span> <span class="variable">con</span> <span class="operator">=</span> DriverManager.getConnection(url, username, password);</span><br><span class="line">  <span class="comment">// 3.SQL命令</span></span><br><span class="line">  <span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span> <span class="string">&quot;select * from users order by Id&quot;</span>;</span><br><span class="line">  java.sql.<span class="type">Statement</span> <span class="variable">statement</span> <span class="operator">=</span> con.createStatement();</span><br><span class="line">  <span class="comment">// 4.执行SQL命令</span></span><br><span class="line">  <span class="type">ResultSet</span> <span class="variable">result</span> <span class="operator">=</span> statement.executeQuery(sql);</span><br><span class="line">  <span class="comment">// 5.结果处理</span></span><br><span class="line">  <span class="keyword">while</span> (result.next()) &#123;</span><br><span class="line">   <span class="type">String</span> <span class="variable">id</span> <span class="operator">=</span> result.getString(<span class="string">&quot;id&quot;</span>);</span><br><span class="line">   <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> result.getString(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">   <span class="type">String</span> <span class="variable">psw</span> <span class="operator">=</span> result.getString(<span class="string">&quot;password&quot;</span>);</span><br><span class="line">   System.out.println(id+<span class="string">&quot; : &quot;</span>+ name + <span class="string">&quot; : &quot;</span> + psw); &#125;</span><br><span class="line">  <span class="comment">// 6.结束运行</span></span><br><span class="line">  result.close();</span><br><span class="line">  statement.close();</span><br><span class="line">  con.close();  &#125;  &#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>加载（注册）数据库驱动库 -&gt; 建立链接 -&gt; 执行SQL语句 -&gt; 处理结果集RecordSet -&gt; 关闭数据库</li>
 </ul>
-<pre><code class="java">// 3.SQL命令
-String sql = &quot;INSERT INTO `users` (`id`,`name`,`password`) VALUES(?,?,?);&quot;;
-// 4.准备命令
-PreparedStatement statement = connection.prepareStatement(sql);
-// 5.设置参数
-statement.setInt(1, id);
-statement.setString(2, name);
-statement.setString(3, password);
-// 6.执行SQL命令
-statement.execute();
-// 7.关闭连接
-statement.close();
-connection.close();</code></pre>
-<h4 id="JDBC驱动和数据库URL"><a href="#JDBC驱动和数据库URL" class="headerlink" title="JDBC驱动和数据库URL"></a>JDBC驱动和数据库URL</h4><table>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 3.SQL命令</span></span><br><span class="line"><span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span> <span class="string">&quot;INSERT INTO `users` (`id`,`name`,`password`) VALUES(?,?,?);&quot;</span>;</span><br><span class="line"><span class="comment">// 4.准备命令</span></span><br><span class="line"><span class="type">PreparedStatement</span> <span class="variable">statement</span> <span class="operator">=</span> connection.prepareStatement(sql);</span><br><span class="line"><span class="comment">// 5.设置参数</span></span><br><span class="line">statement.setInt(<span class="number">1</span>, id);</span><br><span class="line">statement.setString(<span class="number">2</span>, name);</span><br><span class="line">statement.setString(<span class="number">3</span>, password);</span><br><span class="line"><span class="comment">// 6.执行SQL命令</span></span><br><span class="line">statement.execute();</span><br><span class="line"><span class="comment">// 7.关闭连接</span></span><br><span class="line">statement.close();</span><br><span class="line">connection.close();</span><br></pre></td></tr></table></figure>
+<h4 id="JDBC驱动和数据库URL"><a href="#JDBC驱动和数据库URL" class="headerlink" title="JDBC驱动和数据库URL"></a>JDBC驱动和数据库URL</h4><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>数据库</th>
@@ -1069,7 +918,8 @@ connection.close();</code></pre>
 <th>URL格式</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>MySQL</td>
 <td>com.mysql.jdbc.Driver</td>
 <td>jdbc:mysql://hostname/databaseName</td>
@@ -1094,7 +944,9 @@ connection.close();</code></pre>
 <td>com.sybase.jdbc.SybDriver</td>
 <td>jdbc:sybase:Tds:hostname:portNumber/databaseName</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="Java三层架构"><a href="#Java三层架构" class="headerlink" title="Java三层架构"></a>Java三层架构</h4><ol>
 <li>UI展示层Presentation Layer：Swing、网页、WP、IOS、安卓</li>
 <li>Services 业务逻辑层</li>
@@ -1131,21 +983,11 @@ connection.close();</code></pre>
 </ol>
 <h4 id="Java写网页"><a href="#Java写网页" class="headerlink" title="Java写网页"></a>Java写网页</h4><ul>
 <li><p>内嵌 Java语言代码 <code>&lt;%Java代码%&gt;</code></p>
-<pre><code class="html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=utf-8&quot; pageEncoding=&quot;utf-8&quot;%&gt;
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;
-&lt;title&gt;Java实战训练营&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;img alt=&quot;&quot; src=&quot;Images/mongodb.png&quot;&gt;
-&lt;% out.println(“阿里巴巴Java实战训练营&quot;); %&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=utf-8&quot; pageEncoding=&quot;utf-8&quot;%&gt;</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span> <span class="keyword">PUBLIC</span> <span class="string">&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;</span> <span class="string">&quot;http://www.w3.org/TR/html4/loose.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;Content-Type&quot;</span> <span class="attr">content</span>=<span class="string">&quot;text/html; charset=utf-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Java实战训练营<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> <span class="attr">src</span>=<span class="string">&quot;Images/mongodb.png&quot;</span>&gt;</span></span><br><span class="line">&lt;% out.println(“阿里巴巴Java实战训练营&quot;); %&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="JSP网页9大内置对象"><a href="#JSP网页9大内置对象" class="headerlink" title="JSP网页9大内置对象"></a>JSP网页9大内置对象</h4><table>
+<h4 id="JSP网页9大内置对象"><a href="#JSP网页9大内置对象" class="headerlink" title="JSP网页9大内置对象"></a>JSP网页9大内置对象</h4><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>对象</th>
@@ -1153,7 +995,8 @@ connection.close();</code></pre>
 <th>描述</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>request</td>
 <td>请求</td>
 <td>HttpServletRequest类的实例，用户请求</td>
@@ -1198,7 +1041,9 @@ connection.close();</code></pre>
 <td>异常</td>
 <td>Exception类的对象，代表发生错误的JSP页面中对应的异常对象</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h4 id="Session跨页面传递数据"><a href="#Session跨页面传递数据" class="headerlink" title="Session跨页面传递数据"></a>Session跨页面传递数据</h4><ul>
 <li>Session会话对象</li>
 <li>用于用户访问网站期间的临时数据的缓存</li>
@@ -1230,45 +1075,10 @@ connection.close();</code></pre>
 <li><p>包引用只存入Web目录下就可以了</p>
 </li>
 <li><p>命名空间</p>
-<pre><code class="html">&lt;%@ page import=&quot;java.io.*,java.util.*,java.sql.*&quot;%&gt;
-&lt;%@ page import=&quot;javax.servlet.http.*,javax.servlet.*&quot; %&gt;
-&lt;%@page import=&quot;java.sql.Connection&quot; %&gt;
-&lt;%@page import=&quot;java.sql.DriverManager&quot; %&gt;
-&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;
-&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/sql&quot; prefix=&quot;sql&quot;%&gt;</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page import=&quot;java.io.*,java.util.*,java.sql.*&quot;%&gt;</span><br><span class="line">&lt;%@ page import=&quot;javax.servlet.http.*,javax.servlet.*&quot; %&gt;</span><br><span class="line">&lt;%@page import=&quot;java.sql.Connection&quot; %&gt;</span><br><span class="line">&lt;%@page import=&quot;java.sql.DriverManager&quot; %&gt;</span><br><span class="line">&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;</span><br><span class="line">&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/sql&quot; prefix=&quot;sql&quot;%&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="JSP连接MYSQL代码"><a href="#JSP连接MYSQL代码" class="headerlink" title="JSP连接MYSQL代码"></a>JSP连接MYSQL代码</h4><pre><code class="html">&lt;table class=&quot;table&quot;&gt;
-&lt;tr&gt;
-  &lt;th&gt;编号&lt;/th&gt;
-  &lt;th&gt;标题&lt;/th&gt;
-  &lt;th&gt;阅读次数&lt;/th&gt;
-&lt;/tr&gt;
-  &lt;%
-    String driverClass=&quot;com.mysql.jdbc.Driver&quot;;
-    String url=&quot;jdbc:mysql://localhost:3306/taobao&quot;;
-    String user=&quot;root&quot;;
-    String password=&quot;1234qwer&quot;;
-    Connection conn;
-    try&#123;
-    Class.forName(driverClass);
-    conn=DriverManager.getConnection(url,user,password);
-    Statement stmt=conn.createStatement();
-    String sql=&quot;select * from news order by Id desc&quot;;
-    ResultSet rs=stmt.executeQuery(sql);
-    while(rs.next())&#123;
-  %&gt;
-  &lt;tr&gt;
-  &lt;td&gt;&lt;%=rs.getString(&quot;Id&quot;) %&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;%=rs.getString(&quot;Title&quot;) %&gt;&lt;/td&gt;
-  &lt;td&gt;&lt;%=rs.getInt(&quot;ViewTimes&quot;) %&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;%
-  &#125;
-  &#125;
-  catch(Exception ex)&#123; ex.printStackTrace(); &#125;
-  %&gt;
-&lt;/table&gt;</code></pre>
+<h4 id="JSP连接MYSQL代码"><a href="#JSP连接MYSQL代码" class="headerlink" title="JSP连接MYSQL代码"></a>JSP连接MYSQL代码</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">&quot;table&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">th</span>&gt;</span>编号<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">th</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">th</span>&gt;</span>阅读次数<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  &lt;%</span><br><span class="line">    String driverClass=&quot;com.mysql.jdbc.Driver&quot;;</span><br><span class="line">    String url=&quot;jdbc:mysql://localhost:3306/taobao&quot;;</span><br><span class="line">    String user=&quot;root&quot;;</span><br><span class="line">    String password=&quot;1234qwer&quot;;</span><br><span class="line">    Connection conn;</span><br><span class="line">    try&#123;</span><br><span class="line">	Class.forName(driverClass);</span><br><span class="line">	conn=DriverManager.getConnection(url,user,password);</span><br><span class="line">	Statement stmt=conn.createStatement();</span><br><span class="line">	String sql=&quot;select * from news order by Id desc&quot;;</span><br><span class="line">	ResultSet rs=stmt.executeQuery(sql);</span><br><span class="line">	while(rs.next())&#123;</span><br><span class="line">  %&gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>&lt;%=rs.getString(&quot;Id&quot;) %&gt;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>&lt;%=rs.getString(&quot;Title&quot;) %&gt;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>&lt;%=rs.getInt(&quot;ViewTimes&quot;) %&gt;<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  &lt;%</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  catch(Exception ex)&#123; ex.printStackTrace(); &#125;</span><br><span class="line">  %&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="JSP实战新闻编辑"><a href="#JSP实战新闻编辑" class="headerlink" title="JSP实战新闻编辑"></a>JSP实战新闻编辑</h4><ol>
 <li>用户选择编辑，id传递</li>
 <li>编辑页面接收id,</li>
@@ -1294,8 +1104,8 @@ connection.close();</code></pre>
 <li>官方网站：<a target="_blank" rel="noopener" href="http://tomcat.apache.org/">http://tomcat.apache.org/</a></li>
 </ul>
 <h4 id="Tomcat的核心组件（架构）"><a href="#Tomcat的核心组件（架构）" class="headerlink" title="Tomcat的核心组件（架构）"></a>Tomcat的核心组件（架构）</h4><ul>
-<li>Web容器—处理静态页面</li>
-<li>catalina — servlet容器—–处理servlet</li>
+<li>Web容器—-处理静态页面</li>
+<li>catalina —- servlet容器——-处理servlet</li>
 <li>JSP容器，它就是把jsp页面翻译成一般的servlet</li>
 </ul>
 <h3 id="课程代码"><a href="#课程代码" class="headerlink" title="课程代码"></a>课程代码</h3><ul>
@@ -1317,6 +1127,10 @@ connection.close();</code></pre>
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/>http://blog.zhuangzhihao.top/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -1332,12 +1146,8 @@ connection.close();</code></pre>
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Java/">Java</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Servlet/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Servlet</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JDBC/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>JDBC</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Tomcat/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Tomcat</p></a></div>
 
 
         
@@ -1355,77 +1165,6 @@ connection.close();</code></pre>
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/&title=2021 阿里云 Java 训练营第一期 - Bezhuang's Blog&summary=
-在阿里云开发者社区中看到有Java新手训练营（5天突破Java面向对象编程）的课程，采用直播授课的形式，希望能在侠客大佬的指导下有更好的学习效果吧。当然，直播时间有限，所以这篇日志并不是对Java知识点完全系统的梳理，主要记录一些开发中常用的语法和概念和在面试时会遇到的问题，以训练和熟悉特性为主。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/&title=2021 阿里云 Java 训练营第一期 - Bezhuang's Blog&summary=
-在阿里云开发者社区中看到有Java新手训练营（5天突破Java面向对象编程）的课程，采用直播授课的形式，希望能在侠客大佬的指导下有更好的学习效果吧。当然，直播时间有限，所以这篇日志并不是对Java知识点完全系统的梳理，主要记录一些开发中常用的语法和概念和在面试时会遇到的问题，以训练和熟悉特性为主。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/&title=2021 阿里云 Java 训练营第一期 - Bezhuang's Blog&summary=
-在阿里云开发者社区中看到有Java新手训练营（5天突破Java面向对象编程）的课程，采用直播授课的形式，希望能在侠客大佬的指导下有更好的学习效果吧。当然，直播时间有限，所以这篇日志并不是对Java知识点完全系统的梳理，主要记录一些开发中常用的语法和概念和在面试时会遇到的问题，以训练和熟悉特性为主。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEaElEQVR42u3aS3LjMAwFQN//0pkDTKlEPICkk2ru4sj6NLUA4Pf5sbasDwKwYC2wYMFaYI/AfsL13wlfjlv93tPxT39X7696P1UPsGDBggULFixYsGdhlwvgl+OrD1bdsBRi9X67HmDBggULFixYsGDvwFYL/W6B3gVOP+82ImDBggULFixYsGD/Bmz1+6uFeBcULFiwYMGCBQsWLNjJwfB0MGR1oD3VyIAFCxYsWLBgwYL9LthyQGFoIL76oOkG/rokDFiwYMGCBQsWLNgl2LRw/6t/xx5gwYIFCxYsWLBgj8B2V7UAn25M0qBHtwF5vC5YsGDBggULFizYI7BpgVwdNFcL83SjqoP01fMs3x9YsGDBggULFizYK7DdB+qetztg7w6yV8+3/AsCWLBgwYIFCxYs2COw1RN2H/it8O42KOngvno9sGDBggULFixYsHdgywPdcCC8a3C+uzFZfmHAggULFixYsGDBHoWt3kD1uCp4N/gx3WAsXx8sWLBgwYIFCxbsEdjpB5jekF0vQHUtvwhgwYIFCxYsWLBgr8JWbyi98XTAPTVQ757/MbABFixYsGDBggUL9itgqysdXHcDG2lwY7UxAgsWLFiwYMGCBfudsGkQY1fDkQ62p4Mfy+cBCxYsWLBgwYIFexQ2bRTSgXcXLC3o0/Mtv3hgwYIFCxYsWLBgj8BOBRmmAx/Vwr26QavnK79oYMGCBQsWLFiwYI/AdhuD7gNNBS++tvMCCxYsWLBgwYIFewV2LMgQNgjTGz+9wIIFCxYsWLBgwd6FnRoIpw1E9bq3AxuPn4MFCxYsWLBgwYI9AlsNRHQDFKuNQrcxmGo8yoN2sGDBggULFixYsFdhq4Hc3YHhLmx3IN5OdIMFCxYsWLBgwYIdhU0H2tXgxq4gRjc4XF2v1wMLFixYsGDBggV7BDaFTIPEuxqQ7kZ0gx5gwYIFCxYsWLBg78BOP3D1827BPjUYr3q8/oIAFixYsGDBggUL9ghsOvjeDTv1vfQFiZMwYMGCBQsWLFiwYLfCdgvyLvhUMCNtbLqNBFiwYMGCBQsWLNi7sN0bTwv4qetWG59qoOM1kAIWLFiwYMGCBQv2Cmw3ELEryJECV1c6GAcLFixYsGDBggV7F7ZaGO8aOMcF+qbGph3YAAsWLFiwYMGCBXsUtjoAPjXgXm1YukGMcrADLFiwYMGCBQsW7BHYXYPh6nFpQ5K+IN0B+uP5wYIFCxYsWLBgwR6B/YSrWqivNhy7NiZtTMqND1iwYMGCBQsWLNijsGlDkIKmG9MNVHQ37PU5wIIFCxYsWLBgwV6B3VVAd0GmGo80iLK8UWDBggULFixYsGB/FezqjU41Cj/DqxvsAAsWLFiwYMGCBfu7YdMCP/3/FNRUowAWLFiwYMGCBQv2DmwK9HZ8t/CvDtSrG17d2O1JGLBgwYIFCxYsWLBLsNVVbSjSoMdq4T/daKSNAliwYMGCBQsWLNgzsNbsAgsWrAUWLFgL7Nb1D+qMDRAEfb72AAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/&text=2021 阿里云 Java 训练营第一期 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1544,17 +1283,9 @@ This course provided by IBM will not teach everything about Python, but it gives
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1680,8 +1411,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -2037,29 +1766,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -2098,7 +1804,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -2158,20 +1864,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -2384,6 +2076,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

@@ -107,7 +107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -231,16 +231,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -363,16 +373,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -396,7 +416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -419,36 +439,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -482,6 +472,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
+    </a>
+  </div>
+
 
           
         
@@ -500,7 +497,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：2.1k字</p>
+      <p>字数：2k字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -523,14 +520,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>One of the key skills of a data scientist is the ability to tell a compelling story, visualizing data and findings in an approachable and stimulating way. Learning how to leverage a software tool to visualize data will helps one understand the data better, and make more effective decisions. The main goal of this Data Visualization with Python course provided by IBM is to use various techniques and several data visualization libraries in Python, namely Matplotlib, Seaborn, and Folium for presenting data visually. The following are the notes I took during this course.</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 
 
 	<div class="row">
     <embed src="/pdf/Coursera-Data-Visualization-with-Py.pdf" width="100%" height="550" type="application/pdf">
 	</div>
-
 
 
 
@@ -551,56 +546,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li>Artist Layer is comprised of one main object - Artist. Title, lines, tick labels, images all correspond to individual Artist instances.</li>
 <li>Two types of Artist objects: Primitive (Line2D, Rectangle, Circle and Text), Composite (Axis, Tick, Axes and Figure)</li>
 </ul>
-<pre><code class="python">from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas # import FigureCanvas
-frim matplotlib.figure import Figure # import Figure artist
-fig = Figure()
-canvvas = FigureCanvas(fig)
-import numpy as np #create 10000 random numbers using numpy
-x = np.random.randn(10000)
-ax = fig.add_subplot(111) # create an axes artist
-ax.hist(x, 100) # generate a histogram of the 10000 numbers
-ax.set_title(&#39;Normal distribution with $\mu=0, \sigma=1$&#39;) # add a title to the figure and save it
-fig.savefig(&#39;matplotlib_histogram.png&#39;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib.backends.backend_agg <span class="keyword">import</span> FigureCanvasAgg <span class="keyword">as</span> FigureCanvas <span class="comment"># import FigureCanvas</span></span><br><span class="line">frim matplotlib.figure <span class="keyword">import</span> Figure <span class="comment"># import Figure artist</span></span><br><span class="line">fig = Figure()</span><br><span class="line">canvvas = FigureCanvas(fig)</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np <span class="comment">#create 10000 random numbers using numpy</span></span><br><span class="line">x = np.random.randn(<span class="number">10000</span>)</span><br><span class="line">ax = fig.add_subplot(<span class="number">111</span>) <span class="comment"># create an axes artist</span></span><br><span class="line">ax.hist(x, <span class="number">100</span>) <span class="comment"># generate a histogram of the 10000 numbers</span></span><br><span class="line">ax.set_title(<span class="string">&#x27;Normal distribution with $\mu=0, \sigma=1$&#x27;</span>) <span class="comment"># add a title to the figure and save it</span></span><br><span class="line">fig.savefig(<span class="string">&#x27;matplotlib_histogram.png&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Scripting Layer is comprised mainly of pyplot, ascripting interface that is lighter that the Artist layer.</li>
 </ul>
-<pre><code class="python">import matplotlib.pyplot as plt
-import numpy as np
-x = np.random.randn(10000)
-plt.hist(x, 100)
-plt.title(r&#39;Normal distribution with $\mu=0, \sigma=1$&#39;)         plt.savefig(&#39;matplotlib_histogram.png&#39;)
-plt.show()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x = np.random.randn(<span class="number">10000</span>)</span><br><span class="line">plt.hist(x, <span class="number">100</span>)</span><br><span class="line">plt.title(<span class="string">r&#x27;Normal distribution with $\mu=0, \sigma=1$&#x27;</span>)         plt.savefig(<span class="string">&#x27;matplotlib_histogram.png&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Basic Plotting with Matplotlib</p>
 <ul>
 <li>Plot Function</li>
 </ul>
-<pre><code class="python">%matplotlib inline # pass in inline as the backend to enforce plots to be rendered within the browser
-import matplotlib.pyplot as plt
-plt.plot(5, 5, &#39;o&#39;)
-plt.ylabel(&quot;Y&quot;)
-plt.xlabel(&quot;x&quot;)
-plt.title(&quot;Plotting Example&quot;)
-plt.show()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline <span class="comment"># pass in inline as the backend to enforce plots to be rendered within the browser</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.plot(<span class="number">5</span>, <span class="number">5</span>, <span class="string">&#x27;o&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Y&quot;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;x&quot;</span>)</span><br><span class="line">plt.title(<span class="string">&quot;Plotting Example&quot;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Matplotlib - Pandas</li>
 </ul>
-<pre><code class="python">df.plot(kind=&quot;line&quot;) # create a line plot
-df[&quot;column&quot;].plot(kind=&quot;hist&quot;) # create a histogram</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df.plot(kind=<span class="string">&quot;line&quot;</span>) <span class="comment"># create a line plot</span></span><br><span class="line">df[<span class="string">&quot;column&quot;</span>].plot(kind=<span class="string">&quot;hist&quot;</span>) <span class="comment"># create a histogram</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Line Plots</p>
 <ul>
 <li>A line plot is a type of plot which displays information as a series of data points called ‘makers’ connected by straight line segments.</li>
 <li>Creating line plots</li>
 </ul>
-<pre><code class="python">import matplotlib as mpl
-import matplotlib.pyplot as plt
-years = list(map(str, range(1980, 2014)))
-df_canada.loc[&#39;Haiti&#39;, years].plot(kind=&#39;line&#39;)
-plt.title(&#39;Immigration from Haiti&#39;)
-plt.ylabel(&quot;Number of immigrants&quot;)
-plt.xlabel(&quot;Years&quot;)
-plt.show()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> mpl</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">years = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">str</span>, <span class="built_in">range</span>(<span class="number">1980</span>, <span class="number">2014</span>)))</span><br><span class="line">df_canada.loc[<span class="string">&#x27;Haiti&#x27;</span>, years].plot(kind=<span class="string">&#x27;line&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Immigration from Haiti&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Number of immigrants&quot;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;Years&quot;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Basic-and-Specialized-Visualization-Tools"><a href="#Basic-and-Specialized-Visualization-Tools" class="headerlink" title="Basic and Specialized Visualization Tools"></a>Basic and Specialized Visualization Tools</h3><ul>
@@ -609,58 +576,27 @@ plt.show()</code></pre>
 <li>Also known as area chart or area graph, is commonly used to represent cumulated totals using numbers or percentages over time</li>
 <li>Area plots are stacked by default.</li>
 </ul>
-<pre><code class="python">import matplotlib as mpl
-import matplotlib.pyplot as plt
-years=list(map(str,range(1980,2014)))
-df_canada.sort_values([&#39;Total&#39;], ascending=False, axis=0, inplace=True)
-df_top5=df_canada.head()
-df_top5=df_top5[years].transpose()
-df_top5.plot(kind=&#39;area&#39;)
-plt.title(&#39;Immigration trend of top 5 countries&#39;)
-plt.ylabel(&quot;Number of immigrants&quot;)
-plt.xlabel(&quot;Years&quot;)
-plt.show()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> mpl</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">years=<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">str</span>,<span class="built_in">range</span>(<span class="number">1980</span>,<span class="number">2014</span>)))</span><br><span class="line">df_canada.sort_values([<span class="string">&#x27;Total&#x27;</span>], ascending=<span class="literal">False</span>, axis=<span class="number">0</span>, inplace=<span class="literal">True</span>)</span><br><span class="line">df_top5=df_canada.head()</span><br><span class="line">df_top5=df_top5[years].transpose()</span><br><span class="line">df_top5.plot(kind=<span class="string">&#x27;area&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Immigration trend of top 5 countries&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Number of immigrants&quot;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;Years&quot;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Histograms</p>
 <ul>
 <li>A histogram is a way of representing the frequency distribution of a numeric dataset.</li>
 </ul>
-<pre><code class="python">import matplotlib as mpl
-import matplotlib.pyplot as plt
-import numpy as np
-count, bin_edges=np.histogram(df_canada[&#39;2013&#39;]) # numpy function
-df_canada[&#39;2013&#39;].plot(kind=&#39;hist&#39;, xticks=bin_edges)
-plt.title(&#39;Histogram of Immigration from 195 countries in 2013&#39;)
-plt.ylabel(&quot;Number of Countries&quot;)
-plt.xlabel(&quot;Number of immigrants&quot;)
-plt.show()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> mpl</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">count, bin_edges=np.histogram(df_canada[<span class="string">&#x27;2013&#x27;</span>]) <span class="comment"># numpy function</span></span><br><span class="line">df_canada[<span class="string">&#x27;2013&#x27;</span>].plot(kind=<span class="string">&#x27;hist&#x27;</span>, xticks=bin_edges)</span><br><span class="line">plt.title(<span class="string">&#x27;Histogram of Immigration from 195 countries in 2013&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Number of Countries&quot;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;Number of immigrants&quot;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Bar Charts</p>
 <ul>
 <li>Unlike a histogram, a bar chart is a type of plot where the length of each bar is proportional to the value of the item that it represents.</li>
 <li>It is commonly used to compare the values of a variable at a given point in time. </li>
 </ul>
-<pre><code class="python">import matplotlib as mpl
-import matplotlib.pyplot as plt
-years=list(map(str,range(1980,2014)))
-df_iceland=df_canada.loc[&#39;Iceland&#39;,years]
-df_iceland.plot(kind=&#39;bar&#39;)
-plt.title(&#39;Icelandic immigrants to Canada from 1980 to 2013&#39;)
-plt.ylabel(&quot;Year&quot;)
-plt.xlabel(&quot;Number of immigrants&quot;)
-plt.show()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> mpl</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">years=<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">str</span>,<span class="built_in">range</span>(<span class="number">1980</span>,<span class="number">2014</span>)))</span><br><span class="line">df_iceland=df_canada.loc[<span class="string">&#x27;Iceland&#x27;</span>,years]</span><br><span class="line">df_iceland.plot(kind=<span class="string">&#x27;bar&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Icelandic immigrants to Canada from 1980 to 2013&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Year&quot;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;Number of immigrants&quot;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Pie Charts</p>
 <ul>
 <li>A pie chart is a circular statistical graphic divided into slices to illustrate numerical proportion.</li>
 <li><a target="_blank" rel="noopener" href="http://www.surveygizmo.com/resources/blog/pie-chart-or-bar-graph">Arguments against pie charts</a></li>
 </ul>
-<pre><code class="python">import matplotlib as mpl
-import matplotlib.pyplot as plt
-df_continents=df_canada.groupby(&#39;Continent&#39;, axis=0).sum()
-df_continents[&#39;Total&#39;].plot(kind=&#39;pie&#39;)
-plt.title(&#39;Immigration to Canada by Continent&#39;)
-plt.show()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> mpl</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">df_continents=df_canada.groupby(<span class="string">&#x27;Continent&#x27;</span>, axis=<span class="number">0</span>).<span class="built_in">sum</span>()</span><br><span class="line">df_continents[<span class="string">&#x27;Total&#x27;</span>].plot(kind=<span class="string">&#x27;pie&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Immigration to Canada by Continent&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Box Plots</p>
 <ul>
@@ -669,26 +605,14 @@ plt.show()</code></pre>
 <li>IQR (Inter Quartile Range): between First Quartile and Third Quartile</li>
 <li><code>Function = plot, and Parameter = kind with value = &quot;box&quot;</code></li>
 </ul>
-<pre><code class="python">import matplotlib as mpl
-import matplotlib.pyplot as plt
-df_japan=df_canada.loc(&#39;Japan&#39;, years).transpose()
-df_japan.plot(kind=&#39;box&#39;)
-plt.title(&#39;Box plot of Japanese Immigrants from 1980 to 2013&#39;)
-plt.ylabel(&#39;Number of Immigrants&#39;)
-plt.show()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> mpl</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">df_japan=df_canada.loc(<span class="string">&#x27;Japan&#x27;</span>, years).transpose()</span><br><span class="line">df_japan.plot(kind=<span class="string">&#x27;box&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Box plot of Japanese Immigrants from 1980 to 2013&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Number of Immigrants&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Scatter Plots</p>
 <ul>
 <li>A scatter plot is a type of plot that displays values pertaining to typically two variables against each other. </li>
 <li>Usually it is a dependent variable to be plotted against an independent variable in order to determine if any correlation between the two variables exists.</li>
 </ul>
-<pre><code class="python">import matplotlib as mpl
-import matplotlib.pyplot as plt
-df_total.plot&#123;kind=&#39;scatter&#39;,x=&#39;year&#39;,y=&#39;total&#39;&#125;
-plt.title(&#39;Total immigrant population to Canada from 1980 to 2013&#39;)
-plt.ylabel(&quot;Year&quot;)
-plt.xlabel(&quot;Number of immigrants&quot;)
-plt.show()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> mpl</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">df_total.plot&#123;kind=<span class="string">&#x27;scatter&#x27;</span>,x=<span class="string">&#x27;year&#x27;</span>,y=<span class="string">&#x27;total&#x27;</span>&#125;</span><br><span class="line">plt.title(<span class="string">&#x27;Total immigrant population to Canada from 1980 to 2013&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Year&quot;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;Number of immigrants&quot;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Bubble Plots</p>
 <ul>
@@ -714,58 +638,28 @@ plt.show()</code></pre>
 <ul>
 <li>Seaborn is a Python visualization library based on Matplotlib</li>
 </ul>
-<pre><code class="python">import seaborn as sns
-ax=sns.regplot(x=&#39;year&#39;,y=&#39;total&#39;,data=df_total,color=&#39;green&#39;,marker=&#39;+&#39;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line">ax=sns.regplot(x=<span class="string">&#x27;year&#x27;</span>,y=<span class="string">&#x27;total&#x27;</span>,data=df_total,color=<span class="string">&#x27;green&#x27;</span>,marker=<span class="string">&#x27;+&#x27;</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Introduction to Folium and Map Styles</p>
 <ul>
 <li>Folium is a powerful Python library that helps you create several types of Leaflet maps</li>
 <li>It enables both the binding of data to a map for choropleth visualizations as well as passing visualizations as markers on the map</li>
 </ul>
-<pre><code class="python">word_map=folium.Map() #define the world map
-world_map #display world map</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">word_map=folium.Map() <span class="comment">#define the world map</span></span><br><span class="line">world_map <span class="comment">#display world map</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>Define the world map centered around Canada with a low zoom level</li>
 </ul>
-<pre><code class="python">world_map=folium.Map(
-    location=[56.130, -106.35],
-    zoom_start=4,
-    tiles=&#39;Stamen Terrain&#39; #or &#39;Stream Toner&#39;
-)
-world_map #display</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">world_map=folium.Map(</span><br><span class="line">	location=[<span class="number">56.130</span>, -<span class="number">106.35</span>],</span><br><span class="line">	zoom_start=<span class="number">4</span>,</span><br><span class="line">    tiles=<span class="string">&#x27;Stamen Terrain&#x27;</span> <span class="comment">#or &#x27;Stream Toner&#x27;</span></span><br><span class="line">)</span><br><span class="line">world_map <span class="comment">#display</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Maps with Markers</p>
-<pre><code class="python">canada_map=folium.Map(
-    location=[56.130, -106.35],
-    zoom_start=4
-)
-ontario=folium.map.FeatureGroup() #create a feature group
-ontario.add_child(
-  folium.features.CircleMarker([51.25,-85.32],radius=5,color=&#39;red&#39;,fill_color=&#39;Red&#39;)
-) #style the feature group
-canada_map.add_child(ontario) #add the feature group to the map
-folium.Marker([51.25,-85.32],popup=&#39;Ontario&#39;).add_to(canada_map) #label the marker
-canada map</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">canada_map=folium.Map(</span><br><span class="line">	location=[<span class="number">56.130</span>, -<span class="number">106.35</span>],</span><br><span class="line">	zoom_start=<span class="number">4</span></span><br><span class="line">)</span><br><span class="line">ontario=folium.<span class="built_in">map</span>.FeatureGroup() <span class="comment">#create a feature group</span></span><br><span class="line">ontario.add_child(</span><br><span class="line">  folium.features.CircleMarker([<span class="number">51.25</span>,-<span class="number">85.32</span>],radius=<span class="number">5</span>,color=<span class="string">&#x27;red&#x27;</span>,fill_color=<span class="string">&#x27;Red&#x27;</span>)</span><br><span class="line">) <span class="comment">#style the feature group</span></span><br><span class="line">canada_map.add_child(ontario) <span class="comment">#add the feature group to the map</span></span><br><span class="line">folium.Marker([<span class="number">51.25</span>,-<span class="number">85.32</span>],popup=<span class="string">&#x27;Ontario&#x27;</span>).add_to(canada_map) <span class="comment">#label the marker</span></span><br><span class="line">canada <span class="built_in">map</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Choropleth Maps</p>
 <ul>
 <li>A choropleth map is a thematic map in which areas are shaded or patterned in proportion to the measurement of the statistical variable being displayed on the map, such as population density or per capita income.</li>
 <li>Geojson File</li>
 </ul>
-<pre><code class="python">world_map=folium.Map(
-    zoom_start=2,
-    tiles=&#39;Mapbox Bright&#39;
-)
-world_geo=r&#39;world_countries.json&#39; #geojson file
-world_map.choropleth(
-    geo_path=world_geo,
-    data=df_canada,
-    columns=[&#39;Country&#39;,&#39;Total&#39;],
-    key_on=&#39;feature.properties.name&#39;,
-    fill_color=&#39;YlOrRd&#39;,
-    legend_name=&#39;Immigration to Canada&#39;
-)
-world_map</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">world_map=folium.Map(</span><br><span class="line">	zoom_start=<span class="number">2</span>,</span><br><span class="line">    tiles=<span class="string">&#x27;Mapbox Bright&#x27;</span></span><br><span class="line">)</span><br><span class="line">world_geo=<span class="string">r&#x27;world_countries.json&#x27;</span> <span class="comment">#geojson file</span></span><br><span class="line">world_map.choropleth(</span><br><span class="line">	geo_path=world_geo,</span><br><span class="line">	data=df_canada,</span><br><span class="line">	columns=[<span class="string">&#x27;Country&#x27;</span>,<span class="string">&#x27;Total&#x27;</span>],</span><br><span class="line">	key_on=<span class="string">&#x27;feature.properties.name&#x27;</span>,</span><br><span class="line">	fill_color=<span class="string">&#x27;YlOrRd&#x27;</span>,</span><br><span class="line">	legend_name=<span class="string">&#x27;Immigration to Canada&#x27;</span></span><br><span class="line">)</span><br><span class="line">world_map</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Creating-Dashboards-with-Plotly-and-Dash"><a href="#Creating-Dashboards-with-Plotly-and-Dash" class="headerlink" title="Creating Dashboards with Plotly and Dash"></a>Creating Dashboards with Plotly and Dash</h3><ul>
@@ -793,17 +687,7 @@ world_map</code></pre>
 <li><p>Plotly Graph Objects: Low-level interface to figures, traces, and layout: <code>plotly.gragh_objects.Figure</code></p>
 </li>
 <li><p>Plotly express: High-level wrapper for Plotly </p>
-<pre><code class="python">import plotly.gragh_objects as go
-import plotly.express as px
-import numpy as np
-np.random.seed(10) #set random seed for reproducibility
-x=np.arange(12)
-y=np.random.randint(50, 500, size=12) #create random y values
-fig=go.Figure(data=go.Scatter(x=x,y=y)) #create figure and add trace (scatter)
-fig.update_layout(title=&#39;Simple Line Plot&#39;,xais_title=&#39;Month&#39;,yaxis_title=&#39;Sales&#39;)
-fig.show()
-fig=px.line(x=x,y=y,title=&#39;Simple Line Plot&#39;,labels=dict(x=&#39;Month&#39;,y=&#39;Sales&#39;)) #Entire line chart can be created in a single command
-fig.show()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> plotly.gragh_objects <span class="keyword">as</span> go</span><br><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.random.seed(<span class="number">10</span>) <span class="comment">#set random seed for reproducibility</span></span><br><span class="line">x=np.arange(<span class="number">12</span>)</span><br><span class="line">y=np.random.randint(<span class="number">50</span>, <span class="number">500</span>, size=<span class="number">12</span>) <span class="comment">#create random y values</span></span><br><span class="line">fig=go.Figure(data=go.Scatter(x=x,y=y)) <span class="comment">#create figure and add trace (scatter)</span></span><br><span class="line">fig.update_layout(title=<span class="string">&#x27;Simple Line Plot&#x27;</span>,xais_title=<span class="string">&#x27;Month&#x27;</span>,yaxis_title=<span class="string">&#x27;Sales&#x27;</span>)</span><br><span class="line">fig.show()</span><br><span class="line">fig=px.line(x=x,y=y,title=<span class="string">&#x27;Simple Line Plot&#x27;</span>,labels=<span class="built_in">dict</span>(x=<span class="string">&#x27;Month&#x27;</span>,y=<span class="string">&#x27;Sales&#x27;</span>)) <span class="comment">#Entire line chart can be created in a single command</span></span><br><span class="line">fig.show()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://images.plot.ly/plotly-documentation/images/plotly_js_cheat_sheet.pdf">Plotly cheatsheet</a></p>
 </li>
@@ -830,10 +714,7 @@ fig.show()</code></pre>
 <li><p>Callback function is a python function that is automatically called by Dash whenever an input component’s property changes</p>
 </li>
 <li><p>Callback function is decorated with <code>@app.callback</code> decorator</p>
-<pre><code class="python">@app.callback(Output, Input)
-def callback_fuction:
-    ......
-    return some_result</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@app.callback(<span class="params">Output, Input</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">callback_fuction</span>:</span><br><span class="line">    ......</span><br><span class="line">    <span class="keyword">return</span> some_result</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Callback decorator function takes two parameters: Input and Output</p>
 <ul>
@@ -842,25 +723,7 @@ def callback_fuction:
 </ul>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://dash.plotly.com/basic-callbacks">Callbacks with one input</a></p>
-<pre><code class="python">import pandas as pd
-import plotly.express as px
-import dash
-import dash_html_components as html
-import dash_core_components as dcc
-from dash.dependencies import Input, Output
-airline_data=pd.read_csv(&#39;airline.csv&#39;,encoding=&#39;ISO-8859-1&#39;,dtype=&#123;&#39;Airport&#39;:str,&#39;TailNum&#39;:str&#125;) #read the data
-app=dash.Dash()
-# Design dash app layout
-app.layout=html.Div(children=[html.H1(&#39;Airline Dashboard&#39;,style=&#123;&#39;textAlign&#39;:&#39;center&#39;,&#39;color&#39;:colors[&#39;text&#39;],&#39;font-size&#39;:40&#125;),html.Div([&#39;Input:&#39;,dcc.Input(id=&#39;input-yr&#39;,value=&#39;2010&#39;,type=&#39;number&#39;,style=&#123;&#39;height&#39;:&#39;50px&#39;,&#39;font-size&#39;:35&#125;),],style=&#123;&#39;font-size&#39;:40&#125;),html.Br(),html.Br(),html.Div(dcc.Gragh(id=&#39;bar-plot&#39;)),])
-@app.callback(Output(component_id=&#39;bar-plot&#39;,component_property=&#39;figure&#39;),Input(component_id=&#39;input-yr&#39;,component_property=&#39;value&#39;))
-def get_gragh(entered_year):
-    df=airline_data[airline_data[&#39;Year&#39;]==int(entered_year)] #select data
-    g1=df.groupby([&#39;Reporting_Airline&#39;])[&#39;Flights&#39;].sum().nlargest(10).reset_index() #top 10 airline carrier in terms of number of flights
-    fig1=px.bar(g1,x=&#39;Reporting_Airline&#39;,y=&#39;Flights&#39;,title=&#39;Top 10 airline carrier in year &#39;+str(entered_year)+&#39; in terms of number of flights&#39;) #plot the gragh
-    fig1.update_layout()
-    return fig1
-if __name__==&#39;__main__&#39;:
-    app.run_server(port=8002,host=&#39;127.0.0.1&#39;,debug=True)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> plotly.express <span class="keyword">as</span> px</span><br><span class="line"><span class="keyword">import</span> dash</span><br><span class="line"><span class="keyword">import</span> dash_html_components <span class="keyword">as</span> html</span><br><span class="line"><span class="keyword">import</span> dash_core_components <span class="keyword">as</span> dcc</span><br><span class="line"><span class="keyword">from</span> dash.dependencies <span class="keyword">import</span> Input, Output</span><br><span class="line">airline_data=pd.read_csv(<span class="string">&#x27;airline.csv&#x27;</span>,encoding=<span class="string">&#x27;ISO-8859-1&#x27;</span>,dtype=&#123;<span class="string">&#x27;Airport&#x27;</span>:<span class="built_in">str</span>,<span class="string">&#x27;TailNum&#x27;</span>:<span class="built_in">str</span>&#125;) <span class="comment">#read the data</span></span><br><span class="line">app=dash.Dash()</span><br><span class="line"><span class="comment"># Design dash app layout</span></span><br><span class="line">app.layout=html.Div(children=[html.H1(<span class="string">&#x27;Airline Dashboard&#x27;</span>,style=&#123;<span class="string">&#x27;textAlign&#x27;</span>:<span class="string">&#x27;center&#x27;</span>,<span class="string">&#x27;color&#x27;</span>:colors[<span class="string">&#x27;text&#x27;</span>],<span class="string">&#x27;font-size&#x27;</span>:<span class="number">40</span>&#125;),html.Div([<span class="string">&#x27;Input:&#x27;</span>,dcc.Input(<span class="built_in">id</span>=<span class="string">&#x27;input-yr&#x27;</span>,value=<span class="string">&#x27;2010&#x27;</span>,<span class="built_in">type</span>=<span class="string">&#x27;number&#x27;</span>,style=&#123;<span class="string">&#x27;height&#x27;</span>:<span class="string">&#x27;50px&#x27;</span>,<span class="string">&#x27;font-size&#x27;</span>:<span class="number">35</span>&#125;),],style=&#123;<span class="string">&#x27;font-size&#x27;</span>:<span class="number">40</span>&#125;),html.Br(),html.Br(),html.Div(dcc.Gragh(<span class="built_in">id</span>=<span class="string">&#x27;bar-plot&#x27;</span>)),])</span><br><span class="line"><span class="meta">@app.callback(<span class="params">Output(<span class="params">component_id=<span class="string">&#x27;bar-plot&#x27;</span>,component_property=<span class="string">&#x27;figure&#x27;</span></span>),Input(<span class="params">component_id=<span class="string">&#x27;input-yr&#x27;</span>,component_property=<span class="string">&#x27;value&#x27;</span></span>)</span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_gragh</span>(<span class="params">entered_year</span>):</span><br><span class="line">    df=airline_data[airline_data[<span class="string">&#x27;Year&#x27;</span>]==<span class="built_in">int</span>(entered_year)] <span class="comment">#select data</span></span><br><span class="line">    g1=df.groupby([<span class="string">&#x27;Reporting_Airline&#x27;</span>])[<span class="string">&#x27;Flights&#x27;</span>].<span class="built_in">sum</span>().nlargest(<span class="number">10</span>).reset_index() <span class="comment">#top 10 airline carrier in terms of number of flights</span></span><br><span class="line">    fig1=px.bar(g1,x=<span class="string">&#x27;Reporting_Airline&#x27;</span>,y=<span class="string">&#x27;Flights&#x27;</span>,title=<span class="string">&#x27;Top 10 airline carrier in year &#x27;</span>+<span class="built_in">str</span>(entered_year)+<span class="string">&#x27; in terms of number of flights&#x27;</span>) <span class="comment">#plot the gragh</span></span><br><span class="line">    fig1.update_layout()</span><br><span class="line">    <span class="keyword">return</span> fig1</span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    app.run_server(port=<span class="number">8002</span>,host=<span class="string">&#x27;127.0.0.1&#x27;</span>,debug=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Assignments"><a href="#Assignments" class="headerlink" title="Assignments"></a>Assignments</h3><ul>
@@ -882,6 +745,10 @@ if __name__==&#39;__main__&#39;:
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Data-Visualization-with-Python/>http://blog.zhuangzhihao.top/Data-Visualization-with-Python/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -897,13 +764,6 @@ if __name__==&#39;__main__&#39;:
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
-    </a>
-  </div>
-
 
         
       
@@ -920,77 +780,6 @@ if __name__==&#39;__main__&#39;:
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Data-Visualization-with-Python/&title=Data Visualization With Python - Bezhuang's Blog&summary=
-One of the key skills of a data scientist is the ability to tell a compelling story, visualizing data and findings in an approachable and stimulating way. Learning how to leverage a software tool to visualize data will helps one understand the data better, and make more effective decisions. The main goal of this Data Visualization with Python course provided by IBM is to use various techniques and several data visualization libraries in Python, namely Matplotlib, Seaborn, and Folium for presenting data visually. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Data-Visualization-with-Python/&title=Data Visualization With Python - Bezhuang's Blog&summary=
-One of the key skills of a data scientist is the ability to tell a compelling story, visualizing data and findings in an approachable and stimulating way. Learning how to leverage a software tool to visualize data will helps one understand the data better, and make more effective decisions. The main goal of this Data Visualization with Python course provided by IBM is to use various techniques and several data visualization libraries in Python, namely Matplotlib, Seaborn, and Folium for presenting data visually. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Data-Visualization-with-Python/&title=Data Visualization With Python - Bezhuang's Blog&summary=
-One of the key skills of a data scientist is the ability to tell a compelling story, visualizing data and findings in an approachable and stimulating way. Learning how to leverage a software tool to visualize data will helps one understand the data better, and make more effective decisions. The main goal of this Data Visualization with Python course provided by IBM is to use various techniques and several data visualization libraries in Python, namely Matplotlib, Seaborn, and Folium for presenting data visually. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADsklEQVR42u3ay5LbMAwEQP//Tyf3pFzkAPAKcZo3P2SRrT1MMHn9skrrhQAcOHDgLHDglsC9iuuvH/zj/dvvn753uu72+1PnBQcOHDhw4MCB2wZ3HQDD73d/793BT9e/PXjzvODAgQMHDhw4cFvhjgEw3HgKkQKn+2ufFxw4cODAgQMH7kvhbq+vBunqoBUcOHDgwIEDBw5crXieCq5TRTk4cODAgQMHDty3wcUF7SVk9+DV761t8sGBAwcOHDhw4Ibg0jVdCP/06/J5wYEDBw4cOHDglsB1123AnB6I3hbP1eL77e+CAwcOHDhw4MAtgZsaOKYbrh6sO7Bsnw8cOHDgwIEDB24ZXDoQvC2MbwNtteD+1H3eXgcOHDhw4MCBA7cE7nYwOD2QrBbdaWBPz3e8Hzhw4MCBAwcO3DK4dCPdwnoaNg2+5T8UcODAgQMHDhy4JXDpBlLYNLhOF8rVz48BGBw4cODAgQMHbglcN2DeAo4Vw8OF9HWgBwcOHDhw4MCBWwY3HTDTANsdQFYHr7fnAgcOHDhw4MCB2wZ3GyjTwFgNxF3oqfteN/ngwIEDBw4cOHAPwb2aa3pwmD7ANPi2C2xw4MCBAwcOHLjlcClIvIHi4PE26HaL6refgwMHDhw4cODALYO7DarVYvqnA3B1MBsHYHDgwIEDBw4cuIfgusHydqNpQE0fWAqZ/qGAAwcOHDhw4MBtgzvduFtcp4PJ20Cc3n9qoAoOHDhw4MCBA7cFrjvQTANy9UDd97sDU3DgwIEDBw4cuO1w8WCvGHTHCuImTPwgwIEDBw4cOHDglsF1A+7UxtPiuPsAwIEDBw4cOHDg/nW49ADVoFwN0OmDqAbo42tw4MCBAwcOHLglcN0A+lOBtlwgD+0LHDhw4MCBAwduK9x4cRsG0mrxXB2UlvcBDhw4cODAgQO3FK660e5AsTpY7Q4+44EqOHDgwIEDBw7cUrhqEf3pIrgK/Ni/HMCBAwcOHDhw4D4M111dgOkHNVWkHwMwOHDgwIEDBw7cw3DdQJgG1Nv3pweo3eIaHDhw4MCBAwduK9xU4E0Pmt7vU5+PNfngwIEDBw4cOHAPwVWL5NtgOlVsf3qBAwcOHDhw4MD9L3DVIrt7ffpA26/BgQMHDhw4cOC+DG5qMFkFmrrfER4cOHDgwIEDB24pXPXgt+DVAN39j423+zxeDw4cOHDgwIEDtwyuWth2A3QaZKcgqr8HDhw4cODAgQO3Bc4KB5wIwIEDB84CB+7Z9RtxcP41oXab7AAAAABJRU5ErkJggg==">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Data-Visualization-with-Python/&text=Data Visualization With Python - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1109,17 +898,9 @@ This Python Project mini-course provided by IBM is intended to demonstrate basic
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1245,8 +1026,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1602,29 +1381,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1663,7 +1419,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1723,20 +1479,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1949,6 +1691,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

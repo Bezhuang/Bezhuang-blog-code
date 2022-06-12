@@ -5,6 +5,8 @@
   <!-- SEO相关 -->
   
     
+      <meta name="robots" content="noindex,follow">
+    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -22,7 +24,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>计划表 - Bezhuang&#39;s Blog</title>
+  <title>归档 - Bezhuang&#39;s Blog</title>
   
 
   
@@ -104,13 +106,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur "  >
+<header id="l_header" class="l_header always shadow blur "  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
       <p class="title"></p>
       <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
         <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
       </ul>
     </div>
@@ -226,16 +230,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -358,16 +372,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -389,9 +413,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper page search' style="display: ;">
+        <div id="half" class='cover-wrapper  search' style="display: ;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -415,36 +439,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='menu navigation'>
       <div class='list-h'>
         
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
-        
       </div>
     </div>
   </div>
@@ -460,165 +454,1534 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
-<div class='l_main no_sidebar'>
-  <article class="article post white-box reveal md shadow article-type-page" id="page" itemscope itemprop="blogPost">
-  
-
-
-  
-  <div class="article-meta" id="top">
-    
-    
-    
-  </div>
-
-
-  
-  
-  <span class="p center code huge">Java 学习路线图</span>
-
-<ul>
-<li><p><input disabled type="checkbox">  入门</p>
-<ul>
-<li><input checked disabled type="checkbox"> Java SE 基础</li>
-<li><input checked disabled type="checkbox"> Java Web</li>
-</ul>
-</li>
-<li><p><input disabled type="checkbox">  中级</p>
-<ul>
-<li><input disabled type="checkbox"> Maven</li>
-<li><input checked disabled type="checkbox"> Git</li>
-<li><input disabled type="checkbox"> SSM 框架</li>
-<li><input disabled type="checkbox"> MybatisPlus</li>
-<li><input disabled type="checkbox"> Spring Boot</li>
-<li><input disabled type="checkbox"> 传智健康【项目实战】</li>
-</ul>
-</li>
-<li><p><input disabled type="checkbox">  进阶</p>
-<ul>
-<li><input disabled type="checkbox"> Spring Cloud</li>
-<li><input disabled type="checkbox"> Dubbo</li>
-<li><input disabled type="checkbox"> Zookeeper</li>
-<li><input disabled type="checkbox"> RabbitMQ</li>
-<li><input disabled type="checkbox"> RocketMQ</li>
-<li><input disabled type="checkbox"> Docker</li>
-<li><input disabled type="checkbox"> Redis</li>
-<li><input disabled type="checkbox"> MongoDB</li>
-<li><input disabled type="checkbox"> Elasticsearch</li>
-</ul>
-</li>
-<li><p><input disabled type="checkbox">  项目</p>
-<ul>
-<li><input disabled type="checkbox"> SaaSiHRM【企业服务】</li>
-<li><input disabled type="checkbox"> 好客租房【生活服务】</li>
-<li><input disabled type="checkbox"> 万信金融【金融行业】</li>
-<li><input disabled type="checkbox"> 闪聚支付【聚合支付】</li>
-<li><input disabled type="checkbox"> 权限管理一体化解决方案</li>
-<li><input disabled type="checkbox"> 短信网关平台</li>
-</ul>
-</li>
-<li><p><input disabled type="checkbox">  面试：Java大厂面试专题课</p>
-</li>
-</ul>
-<span class="p center code huge">计算机系攻略</span>
-
-<ul>
-<li><p><input disabled type="checkbox">  大一</p>
-<ul>
-<li><input checked disabled type="checkbox"> 计算机科学导论</li>
-<li><input disabled type="checkbox"> 工程图学基础</li>
-<li><input checked disabled type="checkbox"> 程序设计基础</li>
-<li><input checked disabled type="checkbox"> 面向对象程序设计基础</li>
-<li><input checked disabled type="checkbox"> 微积分</li>
-<li><input checked disabled type="checkbox"> 线性代数</li>
-<li><input disabled type="checkbox"> 大学物理</li>
-<li><input disabled type="checkbox"> 离散数学</li>
-</ul>
-</li>
-<li><p><input disabled type="checkbox">  大二</p>
-<ul>
-<li><input disabled type="checkbox"> 复变函数</li>
-<li><input disabled type="checkbox"> 形式语言与自动机</li>
-<li><input checked disabled type="checkbox"> 数据结构</li>
-<li><input disabled type="checkbox"> 汇编语言程序设计</li>
-<li><input disabled type="checkbox"> 电子学基础</li>
-<li><input disabled type="checkbox"> 人工智能导论</li>
-<li><input disabled type="checkbox"> 初等数论</li>
-<li><input disabled type="checkbox"> 数字逻辑电路</li>
-<li><input checked disabled type="checkbox"> 概率论数理统计</li>
-<li><input disabled type="checkbox"> 计算机图形学基础</li>
-<li><input disabled type="checkbox"> 随机数学方法</li>
-<li><input disabled type="checkbox"> 高性能计算导论</li>
-</ul>
-</li>
-<li><p><input disabled type="checkbox">  大三</p>
-<ul>
-<li><input disabled type="checkbox"> VLSI设计导论</li>
-<li><input disabled type="checkbox"> 人工神经网络</li>
-<li><input disabled type="checkbox"> 人机交互理论与技术</li>
-<li><input disabled type="checkbox"> 信号处理原理</li>
-<li><input disabled type="checkbox"> 数据库系统概论</li>
-<li><input disabled type="checkbox"> 编译原理</li>
-<li><input disabled type="checkbox"> 虚拟现实技术</li>
-<li><input checked disabled type="checkbox"> 计算机组成原理</li>
-<li><input checked disabled type="checkbox"> 计算机网络原理</li>
-<li><input disabled type="checkbox"> 计算机网络安全技术</li>
-<li><input disabled type="checkbox"> 软件工程</li>
-<li><input disabled type="checkbox"> 多媒体技术</li>
-<li><input disabled type="checkbox"> 存储技术基础</li>
-<li><input disabled type="checkbox"> 搜索引擎技术基础</li>
-<li><input checked disabled type="checkbox"> 操作系统</li>
-<li><input disabled type="checkbox"> 数值分析</li>
-<li><input disabled type="checkbox"> 数字图像处理</li>
-<li><input disabled type="checkbox"> 数学实验</li>
-<li><input disabled type="checkbox"> 数据库专题训练</li>
-<li><input disabled type="checkbox"> 数据挖掘</li>
-<li><input disabled type="checkbox"> 机器学习概论</li>
-<li><input disabled type="checkbox"> 模式识别</li>
-<li><input disabled type="checkbox"> 现代密码学</li>
-<li><input disabled type="checkbox"> 系统分析与控制</li>
-<li><input disabled type="checkbox"> 网络编程技术</li>
-<li><input disabled type="checkbox"> 计算机系统结构</li>
-</ul>
-</li>
-<li><p><input disabled type="checkbox">  大四</p>
-<ul>
-<li><input disabled type="checkbox"> 嵌入式系统</li>
-<li><input disabled type="checkbox"> 现代控制技术</li>
-<li><input disabled type="checkbox"> 网络安全工程与实践</li>
-</ul>
-</li>
-</ul>
-
-  
-  
-  
-    
-
-
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
-      
-    </div>
-  </div>
-
-
-  
-  
-
-  
-</article>
-
-
-
-
-
+<div class='l_main'>
+	
+	  <article id="arc" class="post article white-box reveal shadow">
+			
+			
+				
+				
+					
+						
+						<h2>2022</h2>
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E5%88%9B%E5%BB%BA%E4%B8%80%E6%9E%B6%E9%92%A2%E7%90%B4/">
+									<time>06-12</time>
+									
+										通过创建一架钢琴来学习响应式网页设计
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/CSS%E5%88%9B%E5%BB%BA%E4%B8%80%E5%B9%85%E6%AF%95%E5%8A%A0%E7%B4%A2%E7%94%BB/">
+									<time>06-11</time>
+									
+										创建一副毕加索绘画来学习中级 CSS
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Cpp%E5%BC%95%E7%94%A8/">
+									<time>06-06</time>
+									
+										C++ 的引用
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E5%A6%82%E4%BD%95%E8%AF%B4%E8%AF%9D/">
+									<time>06-01</time>
+									
+										如何说话 - How to Speak
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/CSS%E6%9E%84%E5%BB%BA%E8%B5%84%E4%BA%A7%E8%B4%9F%E5%80%BA%E8%A1%A8/">
+									<time>05-31</time>
+									
+										通过构建资产负债表了解有关 CSS 伪选择器的更多信息
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E7%BC%96%E5%86%99%E5%B0%8F%E6%B5%8B%E9%AA%8C%E5%AD%A6%E4%B9%A0%E6%97%A0%E9%9A%9C%E7%A2%8D/">
+									<time>05-26</time>
+									
+										通过编写小测验学习无障碍
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E5%BB%BA%E7%AB%8B%E8%90%A5%E5%85%BB%E6%A0%87%E7%AD%BE%E6%9D%A5%E5%AD%A6%E4%B9%A0%E6%8E%92%E7%89%88/">
+									<time>05-25</time>
+									
+										通过建立营养标签来学习排版
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/CSS%E5%88%9B%E5%BB%BA%E7%85%A7%E7%89%87%E9%9B%86/">
+									<time>05-24</time>
+									
+										通过创建照片集来学习 CSS 弹性盒子
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/CSS%E5%88%9B%E4%BD%9C%E7%BD%97%E6%96%AF%E7%A7%91%E7%BB%98%E7%94%BB/">
+									<time>05-23</time>
+									
+										通过创作罗斯科绘画学习 CSS 盒子模型
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/HTML%E7%BC%96%E5%86%99%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%8D%95/">
+									<time>05-20</time>
+									
+										通过编写注册表单学习 HTML 表单
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/CSS%E6%9E%84%E5%BB%BA%E4%B8%80%E7%BB%84%E5%BD%A9%E8%89%B2%E6%A0%87%E8%AE%B0/">
+									<time>05-19</time>
+									
+										通过构建一组彩色标记来学习 CSS 颜色
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/CSS%E5%92%96%E5%95%A1%E5%BA%97%E8%8F%9C%E5%8D%95/">
+									<time>05-17</time>
+									
+										通过编写咖啡店菜单学习基础 CSS
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/HTML%E7%8C%AB%E5%92%AA%E7%9B%B8%E5%86%8C%E5%BA%94%E7%94%A8/">
+									<time>05-15</time>
+									
+										通过编写猫咪相册应用学习 HTML
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%20typedef/">
+									<time>05-11</time>
+									
+										结构体与 typedef 的使用
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E6%B5%85%E8%B0%88%E6%8C%87%E9%92%88/">
+									<time>05-08</time>
+									
+										浅谈 C 语言指针
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/">
+									<time>05-03</time>
+									
+										gets 函数与 puts 函数
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/JSP/">
+									<time>04-20</time>
+									
+										JSP - Java Server Pages
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Request&amp;Response/">
+									<time>04-10</time>
+									
+										Request 和 Response 对象详解
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/HTTP&amp;Servlet/">
+									<time>04-05</time>
+									
+										HTTP 协议和 Servlet
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/MyBatis%E5%9F%BA%E7%A1%80/">
+									<time>03-19</time>
+									
+										MyBatis 基础知识总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Maven%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">
+									<time>03-14</time>
+									
+										Maven 项目管理知识总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E5%92%8C%E9%A2%84%E5%A4%84%E7%90%86/">
+									<time>03-13</time>
+									
+										数据操作和数据预处理
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/JDBC%E5%9F%BA%E7%A1%80/">
+									<time>03-12</time>
+									
+										Java 数据库基础知识总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E5%8A%A8%E6%89%8B%E5%AD%A6%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+									<time>03-08</time>
+									
+										机器学习和深度学习介绍及入门
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Ubuntu%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/">
+									<time>03-06</time>
+									
+										macOS + Ubuntu 实现远程开发配置
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Go%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/">
+									<time>02-13</time>
+									
+										Go 语言基础知识总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/ATM%E7%B3%BB%E7%BB%9F/">
+									<time>02-05</time>
+									
+										Java 实现银行 ATM 系统
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Accenture-Coding-Virtual-Experience/">
+									<time>01-16</time>
+									
+										Accenture Coding Virtual Experience Program
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						
+						<h2>2021</h2>
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+									<time>12-10</time>
+									
+										计算机网络
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+									<time>11-30</time>
+									
+										操作系统
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">
+									<time>11-20</time>
+									
+										计算机组成原理
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+									<time>11-10</time>
+									
+										数据结构
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E7%99%BD%E8%AF%9D%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95/">
+									<time>10-31</time>
+									
+										白话机器学习算法
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E5%BC%80%E5%8F%91%E5%9B%A2%E9%98%9F%E8%B0%83%E5%BA%A6%E8%BD%AF%E4%BB%B6/">
+									<time>10-09</time>
+									
+										开发团队调度软件实现
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E4%BB%8E2020%E7%9A%84%E8%A7%86%E8%A7%92%E7%9C%8B%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">
+									<time>09-20</time>
+									
+										从 2020 年的视角看线性代数
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E5%BE%AE%E5%88%86%E5%AD%A6%E9%87%8D%E7%82%B9/">
+									<time>09-05</time>
+									
+										微分学重点
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B9/">
+									<time>09-01</time>
+									
+										微积分重点
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/">
+									<time>08-03</time>
+									
+										基于 Python 和 OpenCV 实现人脸识别
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/">
+									<time>07-05</time>
+									
+										冒泡排序
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E5%8F%8C%E8%89%B2%E7%90%83/">
+									<time>07-01</time>
+									
+										Java 实现双色球系统
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Java%E5%9F%BA%E7%A1%80/">
+									<time>06-20</time>
+									
+										Java 基础编程总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Data-Science-Methodology/">
+									<time>05-30</time>
+									
+										Data Science Methodology
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/IDEA%E9%85%8D%E7%BD%AE/">
+									<time>05-20</time>
+									
+										IntelliJ IDEA 的配置与使用总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Tools-for-Data-Science/">
+									<time>05-15</time>
+									
+										Tools for Data Science
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAJupyter%20Notebook/">
+									<time>05-09</time>
+									
+										云上搭建基于 Anaconda 的 Jupyter 数据科学环境
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E9%98%BF%E9%87%8C%E4%BA%91%E4%BA%91%E8%AE%A1%E7%AE%97%E5%8A%A9%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88%E8%AE%A4%E8%AF%81/">
+									<time>05-04</time>
+									
+										阿里云云计算助理工程师认证
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/What-is-Data-Science/">
+									<time>05-02</time>
+									
+										What is Data Science?
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAWordPress/">
+									<time>05-01</time>
+									
+										搭建 LAMP 环境安装部署 Wordpress
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/IBM-Data-Analyst-Capstone-Project/">
+									<time>04-03</time>
+									
+										IBM Data Analyst Capstone Project
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Data-Analysis-with-Python/">
+									<time>03-27</time>
+									
+										Data Analysis With Python
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Java%E9%AB%98%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/">
+									<time>03-26</time>
+									
+										2021 阿里云 Java 训练营第三期
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Java%E4%B8%AD%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/">
+									<time>03-12</time>
+									
+										2021 阿里云 Java 训练营第二期
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Linux%E8%83%8C%E5%90%8E%E7%9A%84%E6%80%9D%E6%83%B3/">
+									<time>03-12</time>
+									
+										听林纳斯聊聊 Linux 背后的思想
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/51%E5%8D%95%E7%89%87%E6%9C%BA%E5%9F%BA%E7%A1%80/">
+									<time>03-08</time>
+									
+										51 单片机基础知识总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Data-Visualization-with-Python/">
+									<time>03-06</time>
+									
+										Data Visualization With Python
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Python-Project-for-Data-Science/">
+									<time>03-06</time>
+									
+										Python Project for Data Science
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Pikachu-rainbow-fart/">
+									<time>02-16</time>
+									
+										皮卡丘彩虹屁语音包
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Databases-and-SQL-for-Data-Science/">
+									<time>02-15</time>
+									
+										Databases and SQL for Data Science with Python
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Java%E5%88%9D%E7%BA%A7%E8%AE%AD%E7%BB%83%E8%90%A5/">
+									<time>02-04</time>
+									
+										2021 阿里云 Java 训练营第一期
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Python-for-Data-Science/">
+									<time>02-04</time>
+									
+										Python for Data Science, AI & Development
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Data-Visualization-and-Dashboards/">
+									<time>02-02</time>
+									
+										Data Visualization and Dashboards with Excel and Cognos
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Excel-Basics-%20for-Data-Analysis/">
+									<time>01-31</time>
+									
+										Excel Basics for Data Analysis
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Introduction-to-Data-Analytics/">
+									<time>01-24</time>
+									
+										Introduction to Data Analytics
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						
+						<h2>2020</h2>
+					
+						<div class='timenode'>
+								<a class="meta" href="/HODJ1000&amp;1001/">
+									<time>12-06</time>
+									
+										杭电 OJ 第 1000、1001 题思路解析
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Cpp%E5%9F%BA%E7%A1%80/">
+									<time>11-09</time>
+									
+										C++ 基础知识总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E5%BF%85%E4%BC%9A%E6%96%B0%E6%89%8B50%E9%A2%98%E9%98%B6%E6%AE%B5%E4%B8%80/">
+									<time>10-28</time>
+									
+										必会新手 50 题之阶段一
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Python%E5%9F%BA%E7%A1%80/">
+									<time>10-11</time>
+									
+										Python 基础知识总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/JavaScript%E5%9F%BA%E7%A1%80/">
+									<time>10-05</time>
+									
+										JavaScript 基础知识总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/HTML%E5%92%8CCSS%E5%9F%BA%E7%A1%80/">
+									<time>09-10</time>
+									
+										HTML 和 CSS 基础知识总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/MySQL%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/">
+									<time>09-01</time>
+									
+										MySQL 的安装和使用
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/">
+									<time>08-20</time>
+									
+										C 语言基础知识总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/SQL%E5%9F%BA%E7%A1%80/">
+									<time>07-26</time>
+									
+										SQL 语法总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Creative-Thinking-for-Success/">
+									<time>07-10</time>
+									
+										Creative Thinking：Techniques and Tools for Success
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Marketing-Analytics/">
+									<time>06-22</time>
+									
+										Marketing Analytics
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Managing-Machine-Learning-Projects/">
+									<time>06-08</time>
+									
+										Managing Machine Learning Projects with Google Cloud
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Python%E7%94%BB%E7%94%BB/">
+									<time>06-01</time>
+									
+										使用 Python 程序画画
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Data-Science-Math-Skills/">
+									<time>05-25</time>
+									
+										Data Science Math Skills
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Python-for-Everybody/">
+									<time>05-14</time>
+									
+										Python for everybody
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Sport-Related-Concussion-Training/">
+									<time>04-20</time>
+									
+										Sport-Related Concussion Training
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/Git%E7%9F%A5%E8%AF%86%E7%82%B9/">
+									<time>04-13</time>
+									
+										Git 操作指令总结
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E9%80%9F%E6%88%90%E8%AF%BE/">
+									<time>03-12</time>
+									
+										计算机科学速成课
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+				
+				
+					
+						<div class='timenode'>
+								<a class="meta" href="/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86/">
+									<time>02-01</time>
+									
+										经济学原理
+									
+									
+									
+									
+								</a>
+						</div>
+				
+			
+	  </article>
+	
 </div>
 <aside class='l_side'>
   
+  
+    
+    
+
+<section class="widget blogger shadow desktop mobile">
+  <div class='content'>
+    
+      
+        <a class='avatar flat-box rectangle' href='/about/'>
+          <img no-lazy src='/img/头像.gif'/>
+        </a>
+      
+    
+    
+      <div class='text'>
+        
+          <h2>Meine Welt</h2>
+        
+        
+          <p>ist meine welt</p>
+
+        
+        
+          <p><span id="jinrishici-sentence">Bezhuang's Blog</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="mailto:bezhuang@outlook.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://github.com/Bezhuang/"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="https://space.bilibili.com/30593492"
+              class="social fab fa-youtube flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+              
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+  
+
+  <section class="widget category shadow desktop">
+    
+  <header>
+    
+      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/C-C/" href="/categories/C-C/"
+            id="categoriesC-C"
+            ><div class='name'>C/C++</div><div class='badge'>(6)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/Java/" href="/categories/Java/"
+            id="categoriesJava"
+            ><div class='name'>Java</div><div class='badge'>(15)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/Python/" href="/categories/Python/"
+            id="categoriesPython"
+            ><div class='name'>Python</div><div class='badge'>(4)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/Web%E5%89%8D%E7%AB%AF/" href="/categories/Web%E5%89%8D%E7%AB%AF/"
+            id="categoriesWebE5898DE7ABAF"
+            ><div class='name'>Web前端</div><div class='badge'>(13)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91/" href="/categories/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91/"
+            id="categoriesE585B6E4BB96E5BC80E58F91"
+            ><div class='name'>其他开发</div><div class='badge'>(10)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%85%95%E8%AF%BEMOOC/" href="/categories/%E6%85%95%E8%AF%BEMOOC/"
+            id="categoriesE68595E8AFBEMOOC"
+            ><div class='name'>慕课MOOC</div><div class='badge'>(9)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/"
+            id="categoriesE695B0E68DAEE7A791E5ADA6"
+            ><div class='name'>数据科学</div><div class='badge'>(12)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"
+            id="categoriesE69CBAE599A8E5ADA6E4B9A0"
+            ><div class='name'>机器学习</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"
+            id="categoriesE7AE97E6B395E4B88EE695B0E68DAEE7BB93E69E84"
+            ><div class='name'>算法与数据结构</div><div class='badge'>(3)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%84%9F%E6%83%B3/" href="/categories/%E8%A7%82%E7%82%B9%E4%B8%8E%E6%84%9F%E6%83%B3/"
+            id="categoriesE8A782E782B9E4B88EE6849FE683B3"
+            ><div class='name'>观点与感想</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box"
+            title="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/"
+            id="categoriesE8AEA1E7AE97E69CBAE7A791E5ADA6E4B88EE68A80E69CAF"
+            ><div class='name'>计算机科学与技术</div><div class='badge'>(5)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
+  
+
+  <section class="widget tagcloud shadow desktop mobile">
+    
+  <header>
+    
+      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/CSS/" style="font-size: 24px; color: #555">CSS</a> <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/Gradle/" style="font-size: 14px; color: #999">Gradle</a> <a href="/tags/HTML/" style="font-size: 22px; color: #636363">HTML</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/IDEA/" style="font-size: 14px; color: #999">IDEA</a> <a href="/tags/JDBC/" style="font-size: 16px; color: #8b8b8b">JDBC</a> <a href="/tags/JSP/" style="font-size: 14px; color: #999">JSP</a> <a href="/tags/JavaScript/" style="font-size: 14px; color: #999">JavaScript</a> <a href="/tags/Jenkins/" style="font-size: 14px; color: #999">Jenkins</a> <a href="/tags/Jupyter/" style="font-size: 14px; color: #999">Jupyter</a> <a href="/tags/LintCode/" style="font-size: 14px; color: #999">LintCode</a> <a href="/tags/Linux/" style="font-size: 18px; color: #7e7e7e">Linux</a> <a href="/tags/Maven/" style="font-size: 14px; color: #999">Maven</a> <a href="/tags/MongoDB/" style="font-size: 14px; color: #999">MongoDB</a> <a href="/tags/MyBatis/" style="font-size: 14px; color: #999">MyBatis</a> <a href="/tags/MySQL/" style="font-size: 20px; color: #707070">MySQL</a> <a href="/tags/OpenCV/" style="font-size: 14px; color: #999">OpenCV</a> <a href="/tags/PyTorch/" style="font-size: 14px; color: #999">PyTorch</a> <a href="/tags/R-Language/" style="font-size: 14px; color: #999">R Language</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/SQL/" style="font-size: 18px; color: #7e7e7e">SQL</a> <a href="/tags/Servlet/" style="font-size: 18px; color: #7e7e7e">Servlet</a> <a href="/tags/Spring/" style="font-size: 14px; color: #999">Spring</a> <a href="/tags/Spring-Boot/" style="font-size: 16px; color: #8b8b8b">Spring Boot</a> <a href="/tags/Spring-Cloud/" style="font-size: 14px; color: #999">Spring Cloud</a> <a href="/tags/Tomcat/" style="font-size: 14px; color: #999">Tomcat</a> <a href="/tags/pandas/" style="font-size: 14px; color: #999">pandas</a>
+    </div>
+  </section>
+
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode shadow desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      <img src='https://tva1.sinaimg.cn/large/9150e4e5gy1g6amdgiegcj20hh0cqjux.jpg'
+      />
+    
+      <img src='/img/%E5%BE%AE%E4%BF%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg'
+      />
+    
+  </div>
+</section>
+
+  
+
 
 </aside>
-
 
 
 		  
@@ -661,17 +2024,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -797,8 +2152,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1154,29 +2507,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1215,7 +2545,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1275,20 +2605,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1501,6 +2817,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

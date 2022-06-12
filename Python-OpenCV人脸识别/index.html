@@ -109,7 +109,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -233,16 +233,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -365,16 +375,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -398,7 +418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -421,36 +441,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -484,8 +474,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/OpenCV/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>OpenCV</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Python/">Python</a>
+    </a>
+  </div>
 
 
           
@@ -528,8 +522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 <code>python-opencv</code> 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。源代码保存在 <a target="_blank" rel="noopener" href="https://github.com/Bezhuang/Learn-CS/tree/main/%E7%BB%83%E6%89%8B%E9%A1%B9%E7%9B%AE/Python-OpenCV">Github 仓库 </a>中。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h3><h4 id="人脸识别介绍"><a href="#人脸识别介绍" class="headerlink" title="人脸识别介绍"></a>人脸识别介绍</h4><p>对人类来说，人脸识别很容易：我们的大脑有专门的神经细胞针对不同的场景或运动特征作出反应，视觉皮层再以某种方式把不同的信息来源转化成可用的模型。</p>
 <p>自动人脸识别就是研究如何从一幅图像中提取有意义的特征，形成可用的模型，然后对他们进行一些分类，因此基于几何特征的人脸的人脸识别可能是最直观的识别人脸的方法。但即使是使用最先进的算法，标记点的确定也是很复杂的，单靠几何特征不能提供足够的信息用于人脸识别。</p>
 <p>特征脸方法：把面部图像看作是一个点，从高维图像空间找到它在低维空间的表示，使用主元分析（Principal Component Analysis，PCA）可以找拥有最大方差的轴，但轴的最大方差不一定包含任何有鉴别性的信息。</p>
@@ -538,9 +531,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h4 id="OpenCV-介绍"><a href="#OpenCV-介绍" class="headerlink" title="OpenCV 介绍"></a>OpenCV 介绍</h4><p>从 OpenCV 2.4 开始，加入了新的类 FaceRecognizer，可以使用它便捷地进行人脸识别实验。</p>
 <p>FaceRecognizer 类目前包含三种人脸识别方法：</p>
 <ol>
-<li> 基于 PCA 变换的人脸识别：EigenFaceRecognizer。</li>
-<li> 基于 Fisher 变换的人脸识别：FisherFaceRecognizer。</li>
-<li> 基于局部二值模式的人脸识别：LBPHFaceRecognizer。</li>
+<li>基于 PCA 变换的人脸识别：EigenFaceRecognizer。</li>
+<li>基于 Fisher 变换的人脸识别：FisherFaceRecognizer。</li>
+<li>基于局部二值模式的人脸识别：LBPHFaceRecognizer。</li>
 </ol>
 <p>特征脸（Eigenfaces）：图像表示的问题是他的高维问题，如果数据有任何差异，可以通过寻找主元来知道主要信息，把一些可能相关的变量转换成一个更小的不相关的子集。</p>
 <p>一个高维数据集经常被相关变量表示，因此只有一些的维上数据才是有意义的（包含最多的信息），PCA 方法寻找数据中拥有最大方差的方向（主成分）。计算特征值和对应的特征向量，对特征值进行递减排序，特征向量和它顺序一致。</p>
@@ -548,213 +541,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>把所有的训练数据投影到 PCA 子空间 -&gt; 把待识别图像投影到 PCA 子空间 -&gt; 找到训练数据投影后的向量和待识别图像投影后的向量最近的那个。</p>
 <p>FisherFaces：基于线性判别分析（Linear Discriminant Analysis，LDA）理论，在降维的同时考虑类别信息，基于特征脸的方法，找到使数据中最大方差的特征线性组合。在低维表示下，相同的类应该紧紧的聚在一起，而不同的类别尽量距离越远。</p>
 <p>局部二值模式直方图（Local Binary Patterns Histograms）：不把整个图像看成一个高维向量，仅用局部特征来描述一个物体，通过这种方式提取特征，获得一个低维隐式。对图像的像素和它局部周围像素进行对比后的结果进行求和，把这个像素作为中心，对相邻像素进行阈值比较。如果中心像素的亮度大于等于他的相邻像素，标记为 1，否则标记为 0（用二进制数字来表示每个像素）。</p>
-<h3 id="OpenCV-的基本使用"><a href="#OpenCV-的基本使用" class="headerlink" title="OpenCV 的基本使用"></a>OpenCV 的基本使用</h3><h4 id="读取图片"><a href="#读取图片" class="headerlink" title="读取图片"></a>读取图片</h4><pre><code class="python">#导入模块
-import cv2 as cv
-#读取图片
-img=cv.imread(&#39;lena.jpg&#39;)    #加载图片路径中不能有中文
-#显示图片
-cv.imshow(&#39;read_img&#39;,img)
-#等待键盘输入 单位毫秒  传入0 则就是无限等待
-cv.waitKey(3000)
-#释放内存  由于OpenCV底层是C++编写的
-cv.destroyAllWindows()</code></pre>
-<h4 id="图片灰度转换"><a href="#图片灰度转换" class="headerlink" title="图片灰度转换"></a>图片灰度转换</h4><pre><code class="python">import cv2 as cv
-img=cv.imread(&#39;lena.jpg&#39;)
-cv.imshow(&#39;BGR_img&#39;,img)
-#将图片灰度转换
-gray_img=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
-cv.imshow(&#39;gray_img&#39;,gray_img)
-#保存图片
-cv.imwrite(&#39;gray_lena.jpg&#39;,gray_img)
-cv.waitKey(0)
-cv.destroyAllWindows()</code></pre>
-<h4 id="修改图片尺寸"><a href="#修改图片尺寸" class="headerlink" title="修改图片尺寸"></a>修改图片尺寸</h4><pre><code class="python">import cv2 as cv
-img=cv.imread(&#39;lena.jpg&#39;)
-cv.imshow(&#39;img&#39;,img)
-print(&#39;原来图片的形状&#39;,img.shape)
-# 修改图片尺寸
-resize_img=cv.resize(img,dsize=(600,560))
-print(&#39;修改后图片的形状：&#39;,resize_img.shape)
-cv.imshow(&#39;resize_img&#39;,resize_img) 
-#输入q时退出
-while True:
-    if ord(&#39;q&#39;)==cv.waitKey(0):
-        break
-cv.destroyAllWindows()</code></pre>
-<h4 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h4><pre><code class="python">import cv2 as cv
-img=cv.imread(&#39;lena.jpg&#39;)
-#绘制矩形，左上角坐标(x,y) 矩形的宽度和高度(w,h)
-x,y,w,h=100,100,100,100
-cv.rectangle(img,(x,y,x+w,y+h),color=(0,255,255),thickness=3) #BGR
-#绘制圆形，圆点的坐标center，半径radius
-x,y,r=200,200,100
-cv.circle(img,center=(x,y),radius=r,color=(0,0,255),thickness=2)
-#显示图片
-cv.imshow(&#39;rectangle_img&#39;,img)
-cv.waitKey(0)
-cv.destroyAllWindows()</code></pre>
+<h3 id="OpenCV-的基本使用"><a href="#OpenCV-的基本使用" class="headerlink" title="OpenCV 的基本使用"></a>OpenCV 的基本使用</h3><h4 id="读取图片"><a href="#读取图片" class="headerlink" title="读取图片"></a>读取图片</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#导入模块</span></span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="comment">#读取图片</span></span><br><span class="line">img=cv.imread(<span class="string">&#x27;lena.jpg&#x27;</span>)    <span class="comment">#加载图片路径中不能有中文</span></span><br><span class="line"><span class="comment">#显示图片</span></span><br><span class="line">cv.imshow(<span class="string">&#x27;read_img&#x27;</span>,img)</span><br><span class="line"><span class="comment">#等待键盘输入 单位毫秒  传入0 则就是无限等待</span></span><br><span class="line">cv.waitKey(<span class="number">3000</span>)</span><br><span class="line"><span class="comment">#释放内存  由于OpenCV底层是C++编写的</span></span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+<h4 id="图片灰度转换"><a href="#图片灰度转换" class="headerlink" title="图片灰度转换"></a>图片灰度转换</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line">img=cv.imread(<span class="string">&#x27;lena.jpg&#x27;</span>)</span><br><span class="line">cv.imshow(<span class="string">&#x27;BGR_img&#x27;</span>,img)</span><br><span class="line"><span class="comment">#将图片灰度转换</span></span><br><span class="line">gray_img=cv.cvtColor(img,cv.COLOR_BGR2GRAY)</span><br><span class="line">cv.imshow(<span class="string">&#x27;gray_img&#x27;</span>,gray_img)</span><br><span class="line"><span class="comment">#保存图片</span></span><br><span class="line">cv.imwrite(<span class="string">&#x27;gray_lena.jpg&#x27;</span>,gray_img)</span><br><span class="line">cv.waitKey(<span class="number">0</span>)</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+<h4 id="修改图片尺寸"><a href="#修改图片尺寸" class="headerlink" title="修改图片尺寸"></a>修改图片尺寸</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line">img=cv.imread(<span class="string">&#x27;lena.jpg&#x27;</span>)</span><br><span class="line">cv.imshow(<span class="string">&#x27;img&#x27;</span>,img)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;原来图片的形状&#x27;</span>,img.shape)</span><br><span class="line"><span class="comment"># 修改图片尺寸</span></span><br><span class="line">resize_img=cv.resize(img,dsize=(<span class="number">600</span>,<span class="number">560</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;修改后图片的形状：&#x27;</span>,resize_img.shape)</span><br><span class="line">cv.imshow(<span class="string">&#x27;resize_img&#x27;</span>,resize_img) </span><br><span class="line"><span class="comment">#输入q时退出</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">ord</span>(<span class="string">&#x27;q&#x27;</span>)==cv.waitKey(<span class="number">0</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+<h4 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line">img=cv.imread(<span class="string">&#x27;lena.jpg&#x27;</span>)</span><br><span class="line"><span class="comment">#绘制矩形，左上角坐标(x,y) 矩形的宽度和高度(w,h)</span></span><br><span class="line">x,y,w,h=<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span></span><br><span class="line">cv.rectangle(img,(x,y,x+w,y+h),color=(<span class="number">0</span>,<span class="number">255</span>,<span class="number">255</span>),thickness=<span class="number">3</span>) <span class="comment">#BGR</span></span><br><span class="line"><span class="comment">#绘制圆形，圆点的坐标center，半径radius</span></span><br><span class="line">x,y,r=<span class="number">200</span>,<span class="number">200</span>,<span class="number">100</span></span><br><span class="line">cv.circle(img,center=(x,y),radius=r,color=(<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>),thickness=<span class="number">2</span>)</span><br><span class="line"><span class="comment">#显示图片</span></span><br><span class="line">cv.imshow(<span class="string">&#x27;rectangle_img&#x27;</span>,img)</span><br><span class="line">cv.waitKey(<span class="number">0</span>)</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
 <h3 id="人脸检测"><a href="#人脸检测" class="headerlink" title="人脸检测"></a>人脸检测</h3><h4 id="Haarcascades"><a href="#Haarcascades" class="headerlink" title="Haarcascades"></a>Haarcascades</h4><p>提取出图像的细节对产生稳定分类结果和跟踪结果很有用，这些提取的结果被称为特征。</p>
 <p>虽然任意像素都可以能影响多个特征，但特征应该比像素少得多，两个图像的相似程度可以通过它们对应特征的欧氏距离来度量。</p>
 <p>Haar 特征是一种用于实现实时人脸跟踪的特征，每一个 Haar 特征都描述了相邻图像区域的对比模式，如边、顶点和细线都能生成具有判别性的特征。</p>
-<h4 id="官方-demo"><a href="#官方-demo" class="headerlink" title="官方 demo"></a>官方 demo</h4><p>下载：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/opencvlibrary/files/4.5.3/opencv-4.5.3-vc14_vc15.exe/download%E3%80%82">https://sourceforge.net/projects/opencvlibrary/files/4.5.3/opencv-4.5.3-vc14_vc15.exe/download。</a></p>
+<h4 id="官方-demo"><a href="#官方-demo" class="headerlink" title="官方 demo"></a>官方 demo</h4><p>下载：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/opencvlibrary/files/4.5.3/opencv-4.5.3-vc14_vc15.exe/download。">https://sourceforge.net/projects/opencvlibrary/files/4.5.3/opencv-4.5.3-vc14_vc15.exe/download。</a></p>
 <p>build 中是 OpenCV 使用时要用到的一些库文件。</p>
 <p>sources 中是 OpenCV 官方提供的 demo 示例源码。</p>
 <p>sources/data/haarcascades 文件夹包含了所有 OpenCV 的人脸检测的 XML 文件，可用于检测静止图像、视频和摄像头所得到图像中的人脸。</p>
-<h4 id="静态人脸检测"><a href="#静态人脸检测" class="headerlink" title="静态人脸检测"></a>静态人脸检测</h4><pre><code class="python">import cv2 as cv
-def face_detect_demo():
-    #将图片转换为灰度图片
-    gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
-    #加载特征数据
-    face_detector=cv.CascadeClassifier(&#39;opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml&#39;)
-    faces=face_detector.detectMultiScale(gray)
-    for x,y,w,h in faces:
-        cv.rectangle(img,(x,y),(x+w,y+h),color=(0,255,0),thickness=2)
-    cv.imshow(&#39;result&#39;,img)
-#加载图片
-img=cv.imread(&#39;lena.jpg&#39;)
-face_detect_demo()
-cv.waitKey(0)
-cv.destroyAllWindows()</code></pre>
-<h4 id="检测多张人脸"><a href="#检测多张人脸" class="headerlink" title="检测多张人脸"></a>检测多张人脸</h4><pre><code class="python">import cv2 as cv
-def face_detect_demo():
-    #将图片灰度
-    gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
-    #加载特征数据
-    face_detector = cv.CascadeClassifier(
-        &#39;opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml&#39;)
-    faces = face_detector.detectMultiScale(gray)
-    for x,y,w,h in faces:
-        print(x,y,w,h)
-        cv.rectangle(img,(x,y),(x+w,y+h),color=(0,0,255),thickness=2)
-        cv.circle(img,center=(x+w//2,y+h//2),radius=w//2,color=(0,255,0),thickness=2)
-    #显示图片
-    cv.imshow(&#39;result&#39;,img)
-#加载图片
-img=cv.imread(&#39;face3.jpg&#39;)
-#调用人脸检测方法
-face_detect_demo()
-cv.waitKey(0)
-cv.destroyAllWindows()</code></pre>
-<h4 id="检测视频中的人脸"><a href="#检测视频中的人脸" class="headerlink" title="检测视频中的人脸"></a>检测视频中的人脸</h4><pre><code class="python">import cv2 as cv
-def face_detect_demo(img):
-    #将图片灰度
-    gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
-    #加载特征数据
-    face_detector = cv.CascadeClassifier(&#39;opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml&#39;)
-    faces = face_detector.detectMultiScale(gray)
-    for x,y,w,h in faces:
-        cv.rectangle(img,(x,y),(x+w,y+h),color=(0,0,255),thickness=2)
-        cv.circle(img,center=(x+w//2,y+h//2),radius=(w//2),color=(0,255,0),thickness=2)
-    cv.imshow(&#39;result&#39;,img)
-#读取视频
-cap=cv.VideoCapture(&#39;video.mp4&#39;)
-while True:
-    flag,frame=cap.read()
-    print(&#39;flag:&#39;,flag,&#39;frame.shape:&#39;,frame.shape)
-    if not flag:
-        break
-    face_detect_demo(frame)
-    if ord(&#39;q&#39;) == cv.waitKey(10):
-        break
-cv.destroyAllWindows()
-cap.release()</code></pre>
+<h4 id="静态人脸检测"><a href="#静态人脸检测" class="headerlink" title="静态人脸检测"></a>静态人脸检测</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">face_detect_demo</span>():</span><br><span class="line">    <span class="comment">#将图片转换为灰度图片</span></span><br><span class="line">    gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)</span><br><span class="line">    <span class="comment">#加载特征数据</span></span><br><span class="line">    face_detector=cv.CascadeClassifier(<span class="string">&#x27;opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml&#x27;</span>)</span><br><span class="line">    faces=face_detector.detectMultiScale(gray)</span><br><span class="line">    <span class="keyword">for</span> x,y,w,h <span class="keyword">in</span> faces:</span><br><span class="line">        cv.rectangle(img,(x,y),(x+w,y+h),color=(<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>),thickness=<span class="number">2</span>)</span><br><span class="line">    cv.imshow(<span class="string">&#x27;result&#x27;</span>,img)</span><br><span class="line"><span class="comment">#加载图片</span></span><br><span class="line">img=cv.imread(<span class="string">&#x27;lena.jpg&#x27;</span>)</span><br><span class="line">face_detect_demo()</span><br><span class="line">cv.waitKey(<span class="number">0</span>)</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+<h4 id="检测多张人脸"><a href="#检测多张人脸" class="headerlink" title="检测多张人脸"></a>检测多张人脸</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">face_detect_demo</span>():</span><br><span class="line">    <span class="comment">#将图片灰度</span></span><br><span class="line">    gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)</span><br><span class="line">    <span class="comment">#加载特征数据</span></span><br><span class="line">    face_detector = cv.CascadeClassifier(</span><br><span class="line">        <span class="string">&#x27;opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml&#x27;</span>)</span><br><span class="line">    faces = face_detector.detectMultiScale(gray)</span><br><span class="line">    <span class="keyword">for</span> x,y,w,h <span class="keyword">in</span> faces:</span><br><span class="line">        <span class="built_in">print</span>(x,y,w,h)</span><br><span class="line">        cv.rectangle(img,(x,y),(x+w,y+h),color=(<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>),thickness=<span class="number">2</span>)</span><br><span class="line">        cv.circle(img,center=(x+w//<span class="number">2</span>,y+h//<span class="number">2</span>),radius=w//<span class="number">2</span>,color=(<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>),thickness=<span class="number">2</span>)</span><br><span class="line">    <span class="comment">#显示图片</span></span><br><span class="line">    cv.imshow(<span class="string">&#x27;result&#x27;</span>,img)</span><br><span class="line"><span class="comment">#加载图片</span></span><br><span class="line">img=cv.imread(<span class="string">&#x27;face3.jpg&#x27;</span>)</span><br><span class="line"><span class="comment">#调用人脸检测方法</span></span><br><span class="line">face_detect_demo()</span><br><span class="line">cv.waitKey(<span class="number">0</span>)</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+<h4 id="检测视频中的人脸"><a href="#检测视频中的人脸" class="headerlink" title="检测视频中的人脸"></a>检测视频中的人脸</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">face_detect_demo</span>(<span class="params">img</span>):</span><br><span class="line">    <span class="comment">#将图片灰度</span></span><br><span class="line">    gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)</span><br><span class="line">    <span class="comment">#加载特征数据</span></span><br><span class="line">    face_detector = cv.CascadeClassifier(<span class="string">&#x27;opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml&#x27;</span>)</span><br><span class="line">    faces = face_detector.detectMultiScale(gray)</span><br><span class="line">    <span class="keyword">for</span> x,y,w,h <span class="keyword">in</span> faces:</span><br><span class="line">        cv.rectangle(img,(x,y),(x+w,y+h),color=(<span class="number">0</span>,<span class="number">0</span>,<span class="number">255</span>),thickness=<span class="number">2</span>)</span><br><span class="line">        cv.circle(img,center=(x+w//<span class="number">2</span>,y+h//<span class="number">2</span>),radius=(w//<span class="number">2</span>),color=(<span class="number">0</span>,<span class="number">255</span>,<span class="number">0</span>),thickness=<span class="number">2</span>)</span><br><span class="line">    cv.imshow(<span class="string">&#x27;result&#x27;</span>,img)</span><br><span class="line"><span class="comment">#读取视频</span></span><br><span class="line">cap=cv.VideoCapture(<span class="string">&#x27;video.mp4&#x27;</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    flag,frame=cap.read()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;flag:&#x27;</span>,flag,<span class="string">&#x27;frame.shape:&#x27;</span>,frame.shape)</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> flag:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    face_detect_demo(frame)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">ord</span>(<span class="string">&#x27;q&#x27;</span>) == cv.waitKey(<span class="number">10</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">cv.destroyAllWindows()</span><br><span class="line">cap.release()</span><br></pre></td></tr></table></figure>
 <h3 id="人脸识别"><a href="#人脸识别" class="headerlink" title="人脸识别"></a>人脸识别</h3><p>用一系列分好类的图像来训练程序，并基于这些图像来进行识别，每个识别都具有转置信（confidence）评分，因此可在实际应用中通过对其设置阈值来进行筛选。</p>
 <h4 id="训练数据"><a href="#训练数据" class="headerlink" title="训练数据"></a>训练数据</h4><p><code>train()</code> 函数中有两个参数：图像数组和标签数组，这些标签表示进行识别时候某人人脸的ID 。</p>
 <p>需要安装 <code>opencv-contrib-python</code> 模块。</p>
-<pre><code class="python">import os
-import cv2 as cv
-import sys
-from PIL import Image
-import numpy as np
-def getImageAndLabels(path):
-    facesSamples=[]
-    ids=[]
-    imagePaths=[os.path.join(path,f) for f in os.listdir(path)]
-    #检测人脸
-    face_detector = cv.CascadeClassifier(
-        &#39;opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml&#39;)
-    #遍历列表中的图片
-    for imagePath in imagePaths:
-        #打开图片
-        PIL_img=Image.open(imagePath).convert(&#39;L&#39;)
-        #将图像转换为数组
-        img_numpy=np.array(PIL_img,&#39;uint8&#39;)
-        faces = face_detector.detectMultiScale(img_numpy)
-        #获取每张图片的id
-        id=int(os.path.split(imagePath)[1].split(&#39;.&#39;)[0])
-        for x,y,w,h in faces:
-            facesSamples.append(img_numpy[y:y+h,x:x+w])
-            ids.append(id)
-    return facesSamples,ids
-if __name__ == &#39;__main__&#39;:
-    #图片路径
-    path=&#39;./data/jm/&#39;
-    #获取图像数组和id标签数组
-    faces,ids = getImageAndLabels(path)
-    #获取训练对象
-    recognizer = cv.face.LBPHFaceRecognizer_create()
-    recognizer.train(faces,np.array(ids))
-    #保存文件
-    recognizer.write(&#39;trainer/trainer.yml&#39;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getImageAndLabels</span>(<span class="params">path</span>):</span><br><span class="line">    facesSamples=[]</span><br><span class="line">    ids=[]</span><br><span class="line">    imagePaths=[os.path.join(path,f) <span class="keyword">for</span> f <span class="keyword">in</span> os.listdir(path)]</span><br><span class="line">    <span class="comment">#检测人脸</span></span><br><span class="line">    face_detector = cv.CascadeClassifier(</span><br><span class="line">        <span class="string">&#x27;opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml&#x27;</span>)</span><br><span class="line">    <span class="comment">#遍历列表中的图片</span></span><br><span class="line">    <span class="keyword">for</span> imagePath <span class="keyword">in</span> imagePaths:</span><br><span class="line">        <span class="comment">#打开图片</span></span><br><span class="line">        PIL_img=Image.<span class="built_in">open</span>(imagePath).convert(<span class="string">&#x27;L&#x27;</span>)</span><br><span class="line">        <span class="comment">#将图像转换为数组</span></span><br><span class="line">        img_numpy=np.array(PIL_img,<span class="string">&#x27;uint8&#x27;</span>)</span><br><span class="line">        faces = face_detector.detectMultiScale(img_numpy)</span><br><span class="line">        <span class="comment">#获取每张图片的id</span></span><br><span class="line">        <span class="built_in">id</span>=<span class="built_in">int</span>(os.path.split(imagePath)[<span class="number">1</span>].split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>])</span><br><span class="line">        <span class="keyword">for</span> x,y,w,h <span class="keyword">in</span> faces:</span><br><span class="line">            facesSamples.append(img_numpy[y:y+h,x:x+w])</span><br><span class="line">            ids.append(<span class="built_in">id</span>)</span><br><span class="line">    <span class="keyword">return</span> facesSamples,ids</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment">#图片路径</span></span><br><span class="line">    path=<span class="string">&#x27;./data/jm/&#x27;</span></span><br><span class="line">    <span class="comment">#获取图像数组和id标签数组</span></span><br><span class="line">    faces,ids = getImageAndLabels(path)</span><br><span class="line">    <span class="comment">#获取训练对象</span></span><br><span class="line">    recognizer = cv.face.LBPHFaceRecognizer_create()</span><br><span class="line">    recognizer.train(faces,np.array(ids))</span><br><span class="line">    <span class="comment">#保存文件</span></span><br><span class="line">    recognizer.write(<span class="string">&#x27;trainer/trainer.yml&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <h4 id="基于-LBPH-的人脸识别"><a href="#基于-LBPH-的人脸识别" class="headerlink" title="基于 LBPH 的人脸识别"></a>基于 LBPH 的人脸识别</h4><p>LBPH（Local Binary Pattern Histogram）将检测到的人脸分为小单元，并将其与模型中的对应单元进行比较，对每个区域的匹配值产生一个直方图。由于这种方法的灵活性，LBPH 是唯一允许模型样本人脸和检测到的人脸在形状、大小上可以不同的人脸识别算法。</p>
 <p>调整后的区域中调用 <code>predict()</code>函数，该函数返回两个元素的数组：第一个元素是所识别个体的标签，第二个是置信度评分。</p>
 <p>所有的算法都有一个置信度评分阈值，置信度评分用来衡量所识别人脸与原模型的差距，0 表示完全匹配，可能有时不想保留所有的识别结果，则需要进一步处理，因此可用自己的算法来估算识别的置信度评分。</p>
 <p>一个好的 LBPH 识别参考值要低于50，任何高于80的参考值都会被认为是低的置信度评分。</p>
-<pre><code class="python">import cv2 as cv
-import numpy as np
-import os
-
-# 加载训练数据集文件
-recognizer = cv.face.LBPHFaceRecognizer_create()
-recognizer.read(&#39;trainer/trainer.yml&#39;)
-# 准备识别的图片
-faceCascade = cv.CascadeClassifier(
-    &#39;opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml&#39;)
-font = cv.FONT_HERSHEY_SIMPLEX
-id = 0
-img = cv.imread(&#39;19.pgm&#39;)
-gray_img=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
-faces = faceCascade.detectMultiScale(gray_img)
-for x, y, w, h in faces:
-    cv.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
-    # 人脸识别
-    id, confidence = recognizer.predict(gray_img[y:y + h, x:x + w])
-    print(&#39;标签id:&#39;, id, &#39;置信评分：&#39;, confidence)
-cv.imshow(&#39;result&#39;, img)
-cv.waitKey(0)
-cv.destroyAllWindows()</code></pre>
-<h3 id="摄像头人脸识别"><a href="#摄像头人脸识别" class="headerlink" title="摄像头人脸识别"></a>摄像头人脸识别</h3><h4 id="摄像头调试"><a href="#摄像头调试" class="headerlink" title="摄像头调试"></a>摄像头调试</h4><pre><code class="python">#导入opencv模块
-import cv2
-#捕捉帧，笔记本摄像头设置为0即可
-capture = cv2.VideoCapture(0)
-#循环显示帧
-while(True):
-    ret, frame = capture.read()
-    #显示窗口第一个参数是窗口名，第二个参数是内容
-    cv2.imshow(&#39;frame&#39;, frame)
-    if cv2.waitKey(1) == ord(&#39;q&#39;):      #按q退出
-        break</code></pre>
-<h4 id="摄像头人脸识别-1"><a href="#摄像头人脸识别-1" class="headerlink" title="摄像头人脸识别"></a>摄像头人脸识别</h4><pre><code class="python">import cv2
-import numpy as np
-face_cascade = cv2.CascadeClassifier(    &quot;opencv\sources\data\haarcascades\haarcascade_frontalface_default.xml&quot;)
-eye_cascade = cv2.CascadeClassifier(&quot;opencv\sources\data\haarcascades\haarcascade_eye.xml&quot;)
-cap = cv2.VideoCapture(0)
-while True:
-    ret, img = cap.read()
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    faces = face_cascade.detectMultiScale(gray, 1.1, 5)
-    if len(faces) &gt; 0:
-        for faceRect in faces:
-            x, y, w, h = faceRect
-            cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
-            roi_gray = gray[y:y + h // 2, x:x + w]
-            roi_color = img[y:y + h // 2, x:x + w]
-            eyes = eye_cascade.detectMultiScale(roi_gray, 1.1, 1, cv2.CASCADE_SCALE_IMAGE, (2, 2))
-            for (ex, ey, ew, eh) in eyes:
-                cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
-    cv2.imshow(&quot;img&quot;, img)
-    if cv2.waitKey(1) &amp; 0xFF == ord(&#39;q&#39;):
-        break</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2 <span class="keyword">as</span> cv</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载训练数据集文件</span></span><br><span class="line">recognizer = cv.face.LBPHFaceRecognizer_create()</span><br><span class="line">recognizer.read(<span class="string">&#x27;trainer/trainer.yml&#x27;</span>)</span><br><span class="line"><span class="comment"># 准备识别的图片</span></span><br><span class="line">faceCascade = cv.CascadeClassifier(</span><br><span class="line">    <span class="string">&#x27;opencv/sources/data/haarcascades/haarcascade_frontalface_default.xml&#x27;</span>)</span><br><span class="line">font = cv.FONT_HERSHEY_SIMPLEX</span><br><span class="line"><span class="built_in">id</span> = <span class="number">0</span></span><br><span class="line">img = cv.imread(<span class="string">&#x27;19.pgm&#x27;</span>)</span><br><span class="line">gray_img=cv.cvtColor(img,cv.COLOR_BGR2GRAY)</span><br><span class="line">faces = faceCascade.detectMultiScale(gray_img)</span><br><span class="line"><span class="keyword">for</span> x, y, w, h <span class="keyword">in</span> faces:</span><br><span class="line">    cv.rectangle(img, (x, y), (x + w, y + h), (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">    <span class="comment"># 人脸识别</span></span><br><span class="line">    <span class="built_in">id</span>, confidence = recognizer.predict(gray_img[y:y + h, x:x + w])</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;标签id:&#x27;</span>, <span class="built_in">id</span>, <span class="string">&#x27;置信评分：&#x27;</span>, confidence)</span><br><span class="line">cv.imshow(<span class="string">&#x27;result&#x27;</span>, img)</span><br><span class="line">cv.waitKey(<span class="number">0</span>)</span><br><span class="line">cv.destroyAllWindows()</span><br></pre></td></tr></table></figure>
+<h3 id="摄像头人脸识别"><a href="#摄像头人脸识别" class="headerlink" title="摄像头人脸识别"></a>摄像头人脸识别</h3><h4 id="摄像头调试"><a href="#摄像头调试" class="headerlink" title="摄像头调试"></a>摄像头调试</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#导入opencv模块</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="comment">#捕捉帧，笔记本摄像头设置为0即可</span></span><br><span class="line">capture = cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line"><span class="comment">#循环显示帧</span></span><br><span class="line"><span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">    ret, frame = capture.read()</span><br><span class="line">    <span class="comment">#显示窗口第一个参数是窗口名，第二个参数是内容</span></span><br><span class="line">    cv2.imshow(<span class="string">&#x27;frame&#x27;</span>, frame)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) == <span class="built_in">ord</span>(<span class="string">&#x27;q&#x27;</span>):      <span class="comment">#按q退出</span></span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<h4 id="摄像头人脸识别-1"><a href="#摄像头人脸识别-1" class="headerlink" title="摄像头人脸识别"></a>摄像头人脸识别</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">face_cascade = cv2.CascadeClassifier(    <span class="string">&quot;opencv\sources\data\haarcascades\haarcascade_frontalface_default.xml&quot;</span>)</span><br><span class="line">eye_cascade = cv2.CascadeClassifier(<span class="string">&quot;opencv\sources\data\haarcascades\haarcascade_eye.xml&quot;</span>)</span><br><span class="line">cap = cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    ret, img = cap.read()</span><br><span class="line">    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</span><br><span class="line">    faces = face_cascade.detectMultiScale(gray, <span class="number">1.1</span>, <span class="number">5</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(faces) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">for</span> faceRect <span class="keyword">in</span> faces:</span><br><span class="line">            x, y, w, h = faceRect</span><br><span class="line">            cv2.rectangle(img, (x, y), (x + w, y + h), (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">            roi_gray = gray[y:y + h // <span class="number">2</span>, x:x + w]</span><br><span class="line">            roi_color = img[y:y + h // <span class="number">2</span>, x:x + w]</span><br><span class="line">            eyes = eye_cascade.detectMultiScale(roi_gray, <span class="number">1.1</span>, <span class="number">1</span>, cv2.CASCADE_SCALE_IMAGE, (<span class="number">2</span>, <span class="number">2</span>))</span><br><span class="line">            <span class="keyword">for</span> (ex, ey, ew, eh) <span class="keyword">in</span> eyes:</span><br><span class="line">                cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">2</span>)</span><br><span class="line">    cv2.imshow(<span class="string">&quot;img&quot;</span>, img)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) &amp; <span class="number">0xFF</span> == <span class="built_in">ord</span>(<span class="string">&#x27;q&#x27;</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
 
   
   
@@ -766,7 +577,7 @@ while True:
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -791,6 +602,10 @@ while True:
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/>http://blog.zhuangzhihao.top/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -806,12 +621,8 @@ while True:
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Python/">Python</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/OpenCV/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>OpenCV</p></a></div>
 
 
         
@@ -829,77 +640,6 @@ while True:
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/&title=基于 Python 和 OpenCV 实现人脸识别 - Bezhuang's Blog&summary=
-Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 python-opencv 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。源代码保存在 Github 仓库 中。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/&title=基于 Python 和 OpenCV 实现人脸识别 - Bezhuang's Blog&summary=
-Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 python-opencv 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。源代码保存在 Github 仓库 中。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/&title=基于 Python 和 OpenCV 实现人脸识别 - Bezhuang's Blog&summary=
-Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视觉库，可用于开发实时的图像处理、计算机视觉以及模式识别程序。OpenCV 用 C++ 语言编写，但本次实战项目使用的是 python-opencv 库实现的，主要是为了初步了解人脸识别的步骤和算法后面的原理。源代码保存在 Github 仓库 中。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEcElEQVR42u3aQZLbQAgFUN//0pN9UinxgW7bU693jiK1+qEFMLx+rCPrhQAsWAssWLAW2Cuwr+b63/1///s/Gw+fV92ne33sARYsWLBgwYIFC/YqbDkBLoJND5DCVO9Pf6ceYMGCBQsWLFiwYN8D233R6gulz5sWINVzrXmABQsWLFiwYMGC/QrYFHh6vVvAtBN+sGDBggULFixYsL8atpqgpweZQnQLFLBgwYIFCxYsWLDfBTttVKfgXZBTBcTHTMKABQsWLFiwYMGCLcGma5pwf/rvtgdYsGDBggULFizYK7Bbq9sQTwuFreek+5QdwIIFCxYsWLBgwV6B3RrIeEqwpwl6tyE9DXD6AYEFCxYsWLBgwYK9AzstAJ4Aq9e3Evy0QQ8WLFiwYMGCBQv2O2HTDdICIn1ut7DYhm2/F1iwYMGCBQsWLNgrsGnjuHqA9IBbgTtdeDx+IGDBggULFixYsGCvwKYHTgOwtU93sGO6T3xOsGDBggULFixYsG+B7W6YDk5MA7XdWO9+QOUCASxYsGDBggULFuwqbDqg0f09HaTYHtDYej5YsGDBggULFizY98CeTtjTBHurIEif1x0giRvdYMGCBQsWLFiwYFdgqwftNpTTAGw13LcHP8oFBViwYMGCBQsWLNiPgO0OaqSAKVT1A6h+MN3/t/YXBLBgwYIFCxYsWLAR7NYgRQqXDkKkB+0WMt0CAyxYsGDBggULFuxd2LUHHh6g6CbuW435ciECFixYsGDBggUL9grsVsO5m4h3n791//YHAhYsWLBgwYIFC/YObDexThP9FGQ6gHHquY/nAQsWLFiwYMGCBXsFdtpIrjaAbwWg2sDuFhjtSRiwYMGCBQsWLFiwq7BbiXg62NAFqAJtB6jsAhYsWLBgwYIFC/Yq7BS6m4hPA9INWLcxDhYsWLBgwYIFC/a7YKeJc3p9C7b6/t1APTa6wYIFCxYsWLBgwR6B3T7oT3OlgdsuILrwYMGCBQsWLFiwYN8D221IdwOSvuh2I7z7oYwnYcCCBQsWLFiwYMGuwnYbwukARlogdJ8/bbx39wELFixYsGDBggV7FzZNrFOIbqGwFbi0gT0d8AALFixYsGDBggV7B3Z6wBS8C1N9z27De62RDhYsWLBgwYIFC/YKbPcg04IhTeCnAZnu156EAQsWLFiwYMGCBXsENk2gp4MdaQP71D7Thvd/f4MFCxYsWLBgwYK9AjtdW4l4t2GeJvbT62DBggULFixYsGA/A/bVXGmiv9Ug3yosUrjy/WDBggULFixYsGCvwqYFwVZBsRWY7cC2fcCCBQsWLFiwYMG+BTZNiLcT8G6hMB3IWCtEwIIFCxYsWLBgwf4K2K1Bi1OBTguZx33BggULFixYsGDBfgXstHHchU0Lgu33OF4ggAULFixYsGDBgo1guwMbWwedBubU/eXCAixYsGDBggULFuxV2K3BiGljujvIMR0g6TbGHwsEsGDBggULFixYsEdgrd0FFixYCyxYsBbYo+sPvfPR9uGi1JUAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Python-OpenCV%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/&text=基于 Python 和 OpenCV 实现人脸识别 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1018,17 +758,9 @@ Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1154,8 +886,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1511,29 +1241,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1572,7 +1279,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1632,20 +1339,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1858,6 +1551,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

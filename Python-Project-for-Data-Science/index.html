@@ -107,7 +107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -231,16 +231,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -363,16 +373,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -396,7 +416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -419,36 +439,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -482,6 +472,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
+    </a>
+  </div>
+
 
           
         
@@ -500,7 +497,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：360字</p>
+      <p>字数：347字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -523,14 +520,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>This Python Project mini-course provided by IBM is intended to demonstrate basic Python skills by performing specific tasks such as extracting data, web scraping, visualizing data, and creating a dashboard. The following are the notes I took during this course.</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 
 
 	<div class="row">
     <embed src="/pdf/Coursera-Python-Project4DS.pdf" width="100%" height="550" type="application/pdf">
 	</div>
-
 
 
 
@@ -547,49 +542,22 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 <li><p>BeautifulSoup</p>
-<pre><code class="python">from bs4 import BeautifulSoup
-html=&quot;&quot;
-soup=BeautifulSoup(html, &#39;html5lib&#39;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">html=<span class="string">&quot;&quot;</span></span><br><span class="line">soup=BeautifulSoup(html, <span class="string">&#x27;html5lib&#x27;</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>BeautifulSoup: Object</p>
-<pre><code class="python">tag_object=soup.title
-tag_object=soup.h3
-tag_child=tag_object.b #HTML Tree
-parent_tag=tag_child.parent #Parent attribute
-sibling_1=tag_object.next_sibling #Next-sibling attribute
-tag_child.attrs #Show attributes
-tag_child.string #Navigable string</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tag_object=soup.title</span><br><span class="line">tag_object=soup.h3</span><br><span class="line">tag_child=tag_object.b <span class="comment">#HTML Tree</span></span><br><span class="line">parent_tag=tag_child.parent <span class="comment">#Parent attribute</span></span><br><span class="line">sibling_1=tag_object.next_sibling <span class="comment">#Next-sibling attribute</span></span><br><span class="line">tag_child.attrs <span class="comment">#Show attributes</span></span><br><span class="line">tag_child.string <span class="comment">#Navigable string</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>BeautifulSoup: <code>find_all</code></p>
-<pre><code class="python">table=BeautifulSoup(html, &#39;html5lib&#39;)
-table_row=table.find_all(name=&#39;tr&#39;) #Python iterable
-first_row=table_row[0]
-from i,row in enumerate(table_rows): #Elements
-    print(&quot;row&quot;,i)
-    cells+row.find_all(&quot;td&quot;)
-    for j,cell in enumerate(cells):
-        print(&quot;column&quot;,j,&quot;cell&quot;,cell)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">table=BeautifulSoup(html, <span class="string">&#x27;html5lib&#x27;</span>)</span><br><span class="line">table_row=table.find_all(name=<span class="string">&#x27;tr&#x27;</span>) <span class="comment">#Python iterable</span></span><br><span class="line">first_row=table_row[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">from</span> i,row <span class="keyword">in</span> <span class="built_in">enumerate</span>(table_rows): <span class="comment">#Elements</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;row&quot;</span>,i)</span><br><span class="line">    cells+row.find_all(<span class="string">&quot;td&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> j,cell <span class="keyword">in</span> <span class="built_in">enumerate</span>(cells):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;column&quot;</span>,j,<span class="string">&quot;cell&quot;</span>,cell)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Requests &amp; BeautifulSoup in real web page</p>
-<pre><code class="python">import requests
-from bs4 import BeautifulSoup
-page=requests.get(&quot;http://...&quot;).text
-soup=BeautifulSoup(page, &quot;html.parser&quot;) #Create a BeautifulSoup object
-artists=soup.find_all(&#39;a&#39;) #Pull all instances of &lt;a&gt; tag
-for artist in artists:  #Clears data of all tags
-    names=artist.contents[0]
-    fullLink=artist.get(&#39;href&#39;)
-    print(names)
-    print(fullLink)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">page=requests.get(<span class="string">&quot;http://...&quot;</span>).text</span><br><span class="line">soup=BeautifulSoup(page, <span class="string">&quot;html.parser&quot;</span>) <span class="comment">#Create a BeautifulSoup object</span></span><br><span class="line">artists=soup.find_all(<span class="string">&#x27;a&#x27;</span>) <span class="comment">#Pull all instances of &lt;a&gt; tag</span></span><br><span class="line"><span class="keyword">for</span> artist <span class="keyword">in</span> artists:  <span class="comment">#Clears data of all tags</span></span><br><span class="line">    names=artist.contents[<span class="number">0</span>]</span><br><span class="line">    fullLink=artist.get(<span class="string">&#x27;href&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(names)</span><br><span class="line">    <span class="built_in">print</span>(fullLink)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Project-Analyzing-Stock-Performance-and-Building-a-Dashboard"><a href="#Project-Analyzing-Stock-Performance-and-Building-a-Dashboard" class="headerlink" title="Project: Analyzing Stock Performance and Building a Dashboard"></a>Project: Analyzing Stock Performance and Building a Dashboard</h3><ul>
-<li><p>A stock (also known as equity) is a security that represents the ownership of a fraction of a <a target="_blank" rel="noopener" href="https://www.investopedia.com/terms/c/corporation.asp">corporation</a>.</p>
-</li>
-<li><p>The stock ticker is a report of the price of a certain stock, updated continuously throughout the trading session by the various stock market exchanges.</p>
-</li>
-<li><p>Extracting Stock Data Using a Python Library: <code>yfinance</code></p>
-</li>
+<li>A stock (also known as equity) is a security that represents the ownership of a fraction of a <a target="_blank" rel="noopener" href="https://www.investopedia.com/terms/c/corporation.asp">corporation</a>.</li>
+<li>The stock ticker is a report of the price of a certain stock, updated continuously throughout the trading session by the various stock market exchanges.</li>
+<li>Extracting Stock Data Using a Python Library: <code>yfinance</code></li>
 <li><p>Extracting Stock Data Using Web Scraping</p>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://dataplatform.cloud.ibm.com/analytics/notebooks/v2/ad8810db-e61c-4227-997d-f26c1ec0ad49/view?access_token=6a4d4d444262c5dc0cc25bee7ed55437e3bde917b8c6218d9f24f68053e99955">Project Notebook</a></p>
@@ -614,6 +582,10 @@ for artist in artists:  #Clears data of all tags
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Python-Project-for-Data-Science/>http://blog.zhuangzhihao.top/Python-Project-for-Data-Science/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -629,13 +601,6 @@ for artist in artists:  #Clears data of all tags
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
-    </a>
-  </div>
-
 
         
       
@@ -652,77 +617,6 @@ for artist in artists:  #Clears data of all tags
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Python-Project-for-Data-Science/&title=Python Project for Data Science - Bezhuang's Blog&summary=
-This Python Project mini-course provided by IBM is intended to demonstrate basic Python skills by performing specific tasks such as extracting data, web scraping, visualizing data, and creating a dashboard. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Python-Project-for-Data-Science/&title=Python Project for Data Science - Bezhuang's Blog&summary=
-This Python Project mini-course provided by IBM is intended to demonstrate basic Python skills by performing specific tasks such as extracting data, web scraping, visualizing data, and creating a dashboard. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Python-Project-for-Data-Science/&title=Python Project for Data Science - Bezhuang's Blog&summary=
-This Python Project mini-course provided by IBM is intended to demonstrate basic Python skills by performing specific tasks such as extracting data, web scraping, visualizing data, and creating a dashboard. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADvElEQVR42u3aW1LDQAwEwNz/0nAAirI0kuNNqvcPEj+2zccw8uvHitYLAThw4MBZ4MAdAvcKV/f4q+//9/mfG7/4/X+fr+0XHDhw4MCBAwfuMLhyACxuNN1A93vV86ztFxw4cODAgQMH7lC46o124aob6wbWNADH+wUHDhw4cODAgfsSuG7RWC0g7ypEwYEDBw4cOHDgwO0E4GrAvTrv9Gdw4MCBAwcOHLhPh+sOaLcKx24R2Q3mx03ywYEDBw4cOHDgluC66+5A+u7AW94vOHDgwIEDBw7cIXBbazpArgbdKlAaeC/3CQ4cOHDgwIEDdwhcWkymhWU6yO4ePx1wl/9zAAcOHDhw4MCBewhuGjjvDqrTB9sN7Jf7AQcOHDhw4MCBOxSuWyxONzAtStMA3i1gwYEDBw4cOHDgToN7VxH4ro1uD8zBgQMHDhw4cOA+HS4tFrtFZVpIpgVo+/7AgQMHDhw4cOAOg9sqIKeBtHv89Hzt64IDBw4cOHDgwB0CNy0kpwPsq+unA/PpAP2yyAQHDhw4cODAgTsELh38boGnxeV0gA0OHDhw4MCBA/fpcNUAug0wfTDV66bXi4tMcODAgQMHDhy4N8NtF4/VADp9YOkfQnuQDg4cOHDgwIEDdyhcN3h2A3AVMP19G6JbnIIDBw4cOHDgwB0CF79g1wy03QDb3Wg6yG4XqeDAgQMHDhw4cIfAbQXhbqBNXyTcGqSnDxIcOHDgwIEDB+40uK2A2i007xoop4Xr2ouF4MCBAwcOHDhwN8OVC7ylwJqePy1a14M+OHDgwIEDBw7cIXDTorEaKLcH1el5x5+DAwcOHDhw4MAdAtd9wS59Ia87MO4CbgXty+PBgQMHDhw4cOAOg+sCpd/rAk+Pmxae5YE0OHDgwIEDBw7cQ3DVIJl+r3rjWxtPC8z2JB8cOHDgwIEDB+5huK0NpoXm1XW6xWUazC/3Aw4cOHDgwIEDdzhc98bTojNd06I1DdjgwIEDBw4cOHCnwG1toBsst4Ls9AXCeCANDhw4cODAgQP3MNx6QAzPkwbctIAtF5fVST44cODAgQMHDtxDcFuBt3ojdwFvBeD2QBocOHDgwIEDB+5huDR4TovIrQe0NYiOJ/ngwIEDBw4cOHBfApcCpcXmeuAFBw4cOHDgwIH7UrjtwfTW5+nAGRw4cODAgQMH7lPhuoE1fQBd4J/h2io4wYEDBw4cOHDgToO7K7CmwXRaQKaF6mWgBgcOHDhw4MCBOwTOagZpBODAgQNngQP37PoFJMWFTGFG9PgAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Python-Project-for-Data-Science/&text=Python Project for Data Science - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -841,17 +735,9 @@ VSCode Rainbow Fart 是一个在你编程时持续夸你写的牛逼的扩展，
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -977,8 +863,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1334,29 +1218,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1395,7 +1256,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1455,20 +1316,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1681,6 +1528,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

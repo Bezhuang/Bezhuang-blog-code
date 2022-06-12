@@ -109,7 +109,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -233,16 +233,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -365,16 +375,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -398,7 +418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -421,36 +441,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -484,8 +474,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MySQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MySQL</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JDBC/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>JDBC</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/Java/">Java</a>
+    </a>
+  </div>
 
 
           
@@ -528,8 +522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>Java 数据库连接，JDBC（Java Database Connectivity），是 Java 语言编程中与数据库连接的 API，封装了各种数据库访问的 API 和基础类库，支持多种数据库连接，也是 Java Web 技术核心的第一部分，我把整个学习过程分为 MySQL 基础、MySQL 高级、JDBC 和数据连接池四个部分，便于理解。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="MySQL-基础"><a href="#MySQL-基础" class="headerlink" title="MySQL 基础"></a>MySQL 基础</h3><h4 id="SQL简介"><a href="#SQL简介" class="headerlink" title="SQL简介"></a>SQL简介</h4><ul>
 <li>英文：Structured Query Language，简称 SQL</li>
 <li>结构化查询语言，一门操作关系型数据库的编程语言</li>
@@ -561,146 +554,116 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 </ul>
 <h4 id="DDL：操作数据库"><a href="#DDL：操作数据库" class="headerlink" title="DDL：操作数据库"></a>DDL：操作数据库</h4><ul>
-<li> 查询所有的数据库</li>
+<li>查询所有的数据库</li>
 </ul>
-<pre><code class="sql">SHOW DATABASES;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> DATABASES;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>创建数据库（先判断，如果不存在则创建）</li>
 </ul>
-<pre><code class="sql">CREATE DATABASE IF NOT EXISTS 数据库名称;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> 数据库名称;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>删除数据库（先判断，如果存在则删除）</li>
 </ul>
-<pre><code class="sql">DROP DATABASE IF EXISTS 数据库名称;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> DATABASE IF <span class="keyword">EXISTS</span> 数据库名称;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>使用数据库</li>
 </ul>
-<pre><code class="sql">USE 数据库名称;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE 数据库名称;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>查看当前使用的数据库</li>
 </ul>
-<pre><code class="sql">SELECT DATABASE();</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DATABASE();</span><br></pre></td></tr></table></figure>
 <h4 id="DDL：操作表"><a href="#DDL：操作表" class="headerlink" title="DDL：操作表"></a>DDL：操作表</h4><ul>
 <li>查询当前数据库下所有表名称</li>
 </ul>
-<pre><code class="sql">SHOW TABLES;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> TABLES;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>查询表结构</li>
 </ul>
-<pre><code class="sql">DESC 表名称;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DESC</span> 表名称;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>创建表</li>
 </ul>
-<pre><code class="sql">create table tb_user (
-    id int,
-    username varchar(20),
-    password varchar(32)  -- 最后一行末尾，不能加逗号
-);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> tb_user (</span><br><span class="line">	id <span class="type">int</span>,</span><br><span class="line">    username <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    password <span class="type">varchar</span>(<span class="number">32</span>)  <span class="comment">-- 最后一行末尾，不能加逗号</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>删除表（先判断表是否存在）</li>
 </ul>
-<pre><code class="sql">DROP TABLE IF EXISTS 表名;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> 表名;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>修改表名</li>
 </ul>
-<pre><code class="sql">ALTER TABLE 表名 RENAME TO 新的表名;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 RENAME <span class="keyword">TO</span> 新的表名;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>添加一列</li>
 </ul>
-<pre><code class="sql">ALTER TABLE 表名 ADD 列名 数据类型;
-
--- 给stu表添加一列address，该字段类型是varchar(50)
-alter table stu add address varchar(50);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">ADD</span> 列名 数据类型;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 给stu表添加一列address，该字段类型是varchar(50)</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> stu <span class="keyword">add</span> address <span class="type">varchar</span>(<span class="number">50</span>);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>修改数据类型</li>
 </ul>
-<pre><code class="sql">ALTER TABLE 表名 MODIFY 列名 新数据类型;
-
--- 将stu表中的address字段的类型改为 char(50)
-alter table stu modify address char(50);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 MODIFY 列名 新数据类型;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 将stu表中的address字段的类型改为 char(50)</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> stu modify address <span class="type">char</span>(<span class="number">50</span>);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>修改列名和数据类型</li>
 </ul>
-<pre><code class="sql">ALTER TABLE 表名 CHANGE 列名 新列名 新数据类型;
-
--- 将stu表中的address字段名改为 addr，类型改为varchar(50)
-alter table stu change address addr varchar(50);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 CHANGE 列名 新列名 新数据类型;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 将stu表中的address字段名改为 addr，类型改为varchar(50)</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> stu change address addr <span class="type">varchar</span>(<span class="number">50</span>);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>删除列</li>
 </ul>
-<pre><code class="sql">ALTER TABLE 表名 DROP 列名;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">DROP</span> 列名;</span><br></pre></td></tr></table></figure>
 <h4 id="SQL-的数据类型"><a href="#SQL-的数据类型" class="headerlink" title="SQL 的数据类型"></a>SQL 的数据类型</h4><ul>
 <li><p>数值</p>
-<pre><code class="sql">tinyint : 小整数型，占一个字节
-int    ： 大整数类型，占四个字节
-    eg ： age int
-double ： 浮点类型
-    使用格式： 字段名 double(总长度,小数点后保留的位数)
-    eg ： score double(5,2)   </code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tinyint : 小整数型，占一个字节</span><br><span class="line"><span class="type">int</span>	： 大整数类型，占四个字节</span><br><span class="line">	eg ： age <span class="type">int</span></span><br><span class="line"><span class="keyword">double</span> ： 浮点类型</span><br><span class="line">	使用格式： 字段名 <span class="keyword">double</span>(总长度,小数点后保留的位数)</span><br><span class="line">	eg ： score <span class="keyword">double</span>(<span class="number">5</span>,<span class="number">2</span>)   </span><br></pre></td></tr></table></figure>
 </li>
 <li><p>日期</p>
-<pre><code class="sql">date ： 日期值。只包含年月日
-    eg ：birthday date ： 
-datetime ： 混合日期和时间值。包含年月日时分秒</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">date</span> ： 日期值。只包含年月日</span><br><span class="line">	eg ：birthday <span class="type">date</span> ： </span><br><span class="line">datetime ： 混合日期和时间值。包含年月日时分秒</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>字符串</p>
-<pre><code class="sql">char ： 定长字符串。
-    优点：存储性能高
-    缺点：浪费空间
-    eg ： name char(10)  如果存储的数据字符个数不足10个，也会占10个的空间
-varchar ： 变长字符串。
-    优点：节约空间
-    缺点：存储性能底
-    eg ： name varchar(10) 如果存储的数据字符个数不足10个，那就数据字符个数是几就占几个的空间    </code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> ： 定长字符串。</span><br><span class="line">	优点：存储性能高</span><br><span class="line">	缺点：浪费空间</span><br><span class="line">	eg ： name <span class="type">char</span>(<span class="number">10</span>)  如果存储的数据字符个数不足<span class="number">10</span>个，也会占<span class="number">10</span>个的空间</span><br><span class="line"><span class="type">varchar</span> ： 变长字符串。</span><br><span class="line">	优点：节约空间</span><br><span class="line">	缺点：存储性能底</span><br><span class="line">	eg ： name <span class="type">varchar</span>(<span class="number">10</span>) 如果存储的数据字符个数不足<span class="number">10</span>个，那就数据字符个数是几就占几个的空间	</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h4 id="DML"><a href="#DML" class="headerlink" title="DML"></a>DML</h4><ul>
 <li>查询所有数据</li>
 </ul>
-<pre><code class="sql">SELECT * FROM 表名;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>给指定列添加数据</li>
 </ul>
-<pre><code class="sql">INSERT INTO 表名(列名1,列名2,…) VALUES(值1,值2,…);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表名(列名<span class="number">1</span>,列名<span class="number">2</span>,…) <span class="keyword">VALUES</span>(值<span class="number">1</span>,值<span class="number">2</span>,…);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>给全部列添加数据</li>
 </ul>
-<pre><code class="sql">INSERT INTO 表名 VALUES(值1,值2,…);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表名 <span class="keyword">VALUES</span>(值<span class="number">1</span>,值<span class="number">2</span>,…);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>批量添加数据</li>
 </ul>
-<pre><code class="sql">INSERT INTO 表名(列名1,列名2,…) VALUES(值1,值2,…),(值1,值2,…),(值1,值2,…)…;
-INSERT INTO 表名 VALUES(值1,值2,…),(值1,值2,…),(值1,值2,…)…;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表名(列名<span class="number">1</span>,列名<span class="number">2</span>,…) <span class="keyword">VALUES</span>(值<span class="number">1</span>,值<span class="number">2</span>,…),(值<span class="number">1</span>,值<span class="number">2</span>,…),(值<span class="number">1</span>,值<span class="number">2</span>,…)…;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表名 <span class="keyword">VALUES</span>(值<span class="number">1</span>,值<span class="number">2</span>,…),(值<span class="number">1</span>,值<span class="number">2</span>,…),(值<span class="number">1</span>,值<span class="number">2</span>,…)…;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>修改表数据</li>
 </ul>
-<pre><code class="sql">UPDATE 表名 SET 列名1=值1,列名2=值2,… [WHERE 条件] ;
--- 修改语句中如果不加条件，则将所有数据都修改！</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> 表名 <span class="keyword">SET</span> 列名<span class="number">1</span><span class="operator">=</span>值<span class="number">1</span>,列名<span class="number">2</span><span class="operator">=</span>值<span class="number">2</span>,… [<span class="keyword">WHERE</span> 条件] ;</span><br><span class="line"><span class="comment">-- 修改语句中如果不加条件，则将所有数据都修改！</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>删除数据</li>
 </ul>
-<pre><code class="sql">DELETE FROM 表名 [WHERE 条件] ;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 表名 [<span class="keyword">WHERE</span> 条件] ;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>删除表中所有的数据</li>
 </ul>
-<pre><code class="sql">DELETE FROM 表名;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 表名;</span><br></pre></td></tr></table></figure>
 <h4 id="DQL"><a href="#DQL" class="headerlink" title="DQL"></a>DQL</h4><ul>
 <li>查询多个字段</li>
 </ul>
-<pre><code class="sql">SELECT 字段列表 FROM 表名;
-SELECT * FROM 表名; -- 查询所有数据</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 字段列表 <span class="keyword">FROM</span> 表名;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名; <span class="comment">-- 查询所有数据</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>去除重复记录</li>
 </ul>
-<pre><code class="sql">SELECT DISTINCT 字段列表 FROM 表名;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> 字段列表 <span class="keyword">FROM</span> 表名;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>起别名</li>
 </ul>
-<pre><code class="sql">SELECT 字段列表 AS: 别名 FROM 表名; -- AS 也可以省略</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 字段列表 <span class="keyword">AS</span>: 别名 <span class="keyword">FROM</span> 表名; <span class="comment">-- AS 也可以省略</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>条件查询</li>
 </ul>
-<pre><code class="sql">SELECT 字段列表 FROM 表名 WHERE 条件列表;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 字段列表 <span class="keyword">FROM</span> 表名 <span class="keyword">WHERE</span> 条件列表;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>模糊查询<ul>
 <li>使用 <code>LIKE</code> 关键字，可以使用通配符进行占位</li>
@@ -709,27 +672,18 @@ SELECT * FROM 表名; -- 查询所有数据</code></pre>
 </ul>
 </li>
 </ul>
-<pre><code class="sql">select * from stu where name like &#39;马%&#39;;  -- 查询姓&#39;马&#39;的学员信息
-
-select * from stu where name like &#39;_花%&#39;;  -- 查询第二个字是&#39;花&#39;的学员信息 
-
-select * from stu where name like &#39;%德%&#39;;  -- 查询名字中包含 &#39;德&#39; 的学员信息</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> stu <span class="keyword">where</span> name <span class="keyword">like</span> <span class="string">&#x27;马%&#x27;</span>;  <span class="comment">-- 查询姓&#x27;马&#x27;的学员信息</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> stu <span class="keyword">where</span> name <span class="keyword">like</span> <span class="string">&#x27;_花%&#x27;</span>;  <span class="comment">-- 查询第二个字是&#x27;花&#x27;的学员信息 </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> stu <span class="keyword">where</span> name <span class="keyword">like</span> <span class="string">&#x27;%德%&#x27;</span>;  <span class="comment">-- 查询名字中包含 &#x27;德&#x27; 的学员信息</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>排序查询</li>
 </ul>
-<pre><code class="sql">SELECT 字段列表 FROM 表名 ORDER BY 排序字段名1 [排序方式1],排序字段名2 [排序方式2] …;
-/*
-排序方式有两种，分别是：
-ASC ： 升序排列（默认值）
-DESC ： 降序排列
-如果有多个排序条件，当前边的条件值一样时，才会根据第二条件进行排序
-*/</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 字段列表 <span class="keyword">FROM</span> 表名 <span class="keyword">ORDER</span> <span class="keyword">BY</span> 排序字段名<span class="number">1</span> [排序方式<span class="number">1</span>],排序字段名<span class="number">2</span> [排序方式<span class="number">2</span>] …;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">排序方式有两种，分别是：</span></span><br><span class="line"><span class="comment">ASC ： 升序排列（默认值）</span></span><br><span class="line"><span class="comment">DESC ： 降序排列</span></span><br><span class="line"><span class="comment">如果有多个排序条件，当前边的条件值一样时，才会根据第二条件进行排序</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>聚合函数<ul>
 <li>将一列数据作为一个整体，进行纵向计算</li>
 </ul>
 </li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -737,7 +691,8 @@ DESC ： 降序排列
 <th>功能</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>count(列名)</code></td>
 <td>统计数量（一般选用不为null的列）</td>
 </tr>
@@ -757,14 +712,14 @@ DESC ： 降序排列
 <td><code>avg(列名)</code></td>
 <td>平均值</td>
 </tr>
-</tbody></table>
-<pre><code class="sql">SELECT 聚合函数名(列名) FROM 表;
--- null 值不参与所有聚合函数运算</code></pre>
+</tbody>
+</table>
+</div>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 聚合函数名(列名) <span class="keyword">FROM</span> 表;</span><br><span class="line"><span class="comment">-- null 值不参与所有聚合函数运算</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>分组查询</li>
 </ul>
-<pre><code class="sql">SELECT 字段列表 FROM 表名 [WHERE 分组前条件限定] GROUP BY 分组字段名 [HAVING 分组后条件过滤];
--- 分组之后，查询的字段为聚合函数和分组字段，查询其他字段无任何意义</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 字段列表 <span class="keyword">FROM</span> 表名 [<span class="keyword">WHERE</span> 分组前条件限定] <span class="keyword">GROUP</span> <span class="keyword">BY</span> 分组字段名 [<span class="keyword">HAVING</span> 分组后条件过滤];</span><br><span class="line"><span class="comment">-- 分组之后，查询的字段为聚合函数和分组字段，查询其他字段无任何意义</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>where 和 having 区别：</p>
 <ul>
@@ -778,12 +733,11 @@ DESC ： 降序排列
 <ul>
 <li>分页查询</li>
 </ul>
-<pre><code class="sql">SELECT 字段列表 FROM 表名 LIMIT  起始索引 , 查询条目数;
--- 起始索引是从0开始</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 字段列表 <span class="keyword">FROM</span> 表名 LIMIT  起始索引 , 查询条目数;</span><br><span class="line"><span class="comment">-- 起始索引是从0开始</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>起始索引计算公式：</li>
 </ul>
-<pre><code class="sql">起始索引 = (当前页码 - 1) * 每页显示的条数</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">起始索引 <span class="operator">=</span> (当前页码 <span class="operator">-</span> <span class="number">1</span>) <span class="operator">*</span> 每页显示的条数</span><br></pre></td></tr></table></figure>
 <h3 id="MySQL-进阶"><a href="#MySQL-进阶" class="headerlink" title="MySQL 进阶"></a>MySQL 进阶</h3><h4 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h4><ul>
 <li><p>约束是作用于表中列上的规则，用于限制加入表的数据</p>
 </li>
@@ -814,23 +768,16 @@ DESC ： 降序排列
 <li><p>用于保证列中所有数据不能有NULL值</p>
 </li>
 <li><p>添加约束</p>
-<pre><code class="sql">-- 创建表时添加非空约束
-CREATE TABLE 表名(
-   列名 数据类型 NOT NULL,
-   …
-); </code></pre>
-<pre><code class="sql">-- 建完表后添加非空约束
-ALTER TABLE 表名 MODIFY 字段名 数据类型 NOT NULL;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 创建表时添加非空约束</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名(</span><br><span class="line">   列名 数据类型 <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">   …</span><br><span class="line">); </span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 建完表后添加非空约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 MODIFY 字段名 数据类型 <span class="keyword">NOT</span> <span class="keyword">NULL</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
 <pre><code>* 删除约束
 
-  ```sql
-  ALTER TABLE 表名 MODIFY 字段名 数据类型;
-  ```</code></pre>
-<ul>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 MODIFY 字段名 数据类型;</span><br></pre></td></tr></table></figure>
+</code></pre><ul>
 <li><p>唯一约束</p>
 <ul>
 <li>用于保证列中所有数据各不相同</li>
@@ -839,32 +786,15 @@ ALTER TABLE 表名 MODIFY 字段名 数据类型 NOT NULL;</code></pre>
 </ul>
 <pre><code>* 添加约束
 
-  ```sql
-  -- 创建表时添加唯一约束
-  CREATE TABLE 表名(
-     列名 数据类型 UNIQUE [AUTO_INCREMENT],
-     -- AUTO_INCREMENT: 当不指定值时自动增长
-     …
-  ); 
-  CREATE TABLE 表名(
-     列名 数据类型,
-     …
-     [CONSTRAINT] [约束名称] UNIQUE(列名)
-  ); 
-  ```
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 创建表时添加唯一约束</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名(</span><br><span class="line">   列名 数据类型 <span class="keyword">UNIQUE</span> [AUTO_INCREMENT],</span><br><span class="line">   <span class="comment">-- AUTO_INCREMENT: 当不指定值时自动增长</span></span><br><span class="line">   …</span><br><span class="line">); </span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名(</span><br><span class="line">   列名 数据类型,</span><br><span class="line">   …</span><br><span class="line">   [<span class="keyword">CONSTRAINT</span>] [约束名称] <span class="keyword">UNIQUE</span>(列名)</span><br><span class="line">); </span><br></pre></td></tr></table></figure>
 
-  ```sql
-  -- 建完表后添加唯一约束
-  ALTER TABLE 表名 MODIFY 字段名 数据类型 UNIQUE;
-  ```
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 建完表后添加唯一约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 MODIFY 字段名 数据类型 <span class="keyword">UNIQUE</span>;</span><br></pre></td></tr></table></figure>
 
 
 * 删除约束
 
-  ```sql
-  ALTER TABLE 表名 DROP INDEX 字段名;
-  ```</code></pre>
-<ul>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">DROP</span> INDEX 字段名;</span><br></pre></td></tr></table></figure>
+</code></pre><ul>
 <li><p>主键约束</p>
 <ul>
 <li>主键是一行数据的唯一标识，要求非空且唯一</li>
@@ -872,25 +802,15 @@ ALTER TABLE 表名 MODIFY 字段名 数据类型 NOT NULL;</code></pre>
 </ul>
 <ul>
 <li><p>添加约束</p>
-<pre><code class="sql">-- 创建表时添加主键约束
-CREATE TABLE 表名(
-   列名 数据类型 PRIMARY KEY [AUTO_INCREMENT],
-   …
-); 
-CREATE TABLE 表名(
-   列名 数据类型,
-   [CONSTRAINT] [约束名称] PRIMARY KEY(列名)
-); 
-</code></pre>
-<pre><code class="sql">-- 建完表后添加主键约束
-ALTER TABLE 表名 ADD PRIMARY KEY(字段名);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 创建表时添加主键约束</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名(</span><br><span class="line">   列名 数据类型 <span class="keyword">PRIMARY</span> KEY [AUTO_INCREMENT],</span><br><span class="line">   …</span><br><span class="line">); </span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名(</span><br><span class="line">   列名 数据类型,</span><br><span class="line">   [<span class="keyword">CONSTRAINT</span>] [约束名称] <span class="keyword">PRIMARY</span> KEY(列名)</span><br><span class="line">); </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 建完表后添加主键约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">ADD</span> <span class="keyword">PRIMARY</span> KEY(字段名);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
 <ul>
 <li><p>删除约束</p>
-<pre><code class="sql">ALTER TABLE 表名 DROP PRIMARY KEY;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">DROP</span> <span class="keyword">PRIMARY</span> KEY;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
@@ -899,16 +819,11 @@ ALTER TABLE 表名 ADD PRIMARY KEY(字段名);</code></pre>
 <li><p>保存数据时，未指定值则采用默认值</p>
 </li>
 <li><p>添加约束</p>
-<pre><code class="sql">-- 创建表时添加默认约束
-CREATE TABLE 表名(
-   列名 数据类型 DEFAULT 默认值,
-   …
-); </code></pre>
-<pre><code class="sql">-- 建完表后添加默认约束
-ALTER TABLE 表名 ALTER 列名 SET DEFAULT 默认值;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 创建表时添加默认约束</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名(</span><br><span class="line">   列名 数据类型 <span class="keyword">DEFAULT</span> 默认值,</span><br><span class="line">   …</span><br><span class="line">); </span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 建完表后添加默认约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">ALTER</span> 列名 <span class="keyword">SET</span> <span class="keyword">DEFAULT</span> 默认值;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>删除约束</p>
-<pre><code class="sql">ALTER TABLE 表名 ALTER 列名 DROP DEFAULT;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">ALTER</span> 列名 <span class="keyword">DROP</span> <span class="keyword">DEFAULT</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -922,34 +837,20 @@ ALTER TABLE 表名 ALTER 列名 SET DEFAULT 默认值;</code></pre>
 <ul>
 <li>添加外键约束</li>
 </ul>
-<pre><code class="sql">-- 创建表时添加外键约束
-CREATE TABLE 表名(
-   列名 数据类型,
-   …
-   [CONSTRAINT] [外键名称] FOREIGN KEY(外键列名) REFERENCES 主表(主表列名) 
-); </code></pre>
-<pre><code class="sql">-- 建完表后添加外键约束
-ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY (外键字段名称) REFERENCES 主表名称(主表列名称);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 创建表时添加外键约束</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名(</span><br><span class="line">   列名 数据类型,</span><br><span class="line">   …</span><br><span class="line">   [<span class="keyword">CONSTRAINT</span>] [外键名称] <span class="keyword">FOREIGN</span> KEY(外键列名) <span class="keyword">REFERENCES</span> 主表(主表列名) </span><br><span class="line">); </span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 建完表后添加外键约束</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> 外键名称 <span class="keyword">FOREIGN</span> KEY (外键字段名称) <span class="keyword">REFERENCES</span> 主表名称(主表列名称);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>删除外键约束</li>
 </ul>
-<pre><code class="sql">ALTER TABLE 表名 DROP FOREIGN KEY 外键名称;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">DROP</span> <span class="keyword">FOREIGN</span> KEY 外键名称;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>添加数据</li>
 </ul>
-<pre><code class="sql">-- 添加 2 个部门
-insert into dept(dep_name,addr) values
-(&#39;研发部&#39;,&#39;广州&#39;),(&#39;销售部&#39;, &#39;深圳&#39;);
-
--- 添加员工,dep_id 表示员工所在的部门
-INSERT INTO emp (NAME, age, dep_id) VALUES 
-(&#39;张三&#39;, 20, 1),
-(&#39;李四&#39;, 20, 1),
-(&#39;王五&#39;, 20, 1),</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 添加 2 个部门</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> dept(dep_name,addr) <span class="keyword">values</span></span><br><span class="line">(<span class="string">&#x27;研发部&#x27;</span>,<span class="string">&#x27;广州&#x27;</span>),(<span class="string">&#x27;销售部&#x27;</span>, <span class="string">&#x27;深圳&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 添加员工,dep_id 表示员工所在的部门</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp (NAME, age, dep_id) <span class="keyword">VALUES</span> </span><br><span class="line">(<span class="string">&#x27;张三&#x27;</span>, <span class="number">20</span>, <span class="number">1</span>),</span><br><span class="line">(<span class="string">&#x27;李四&#x27;</span>, <span class="number">20</span>, <span class="number">1</span>),</span><br><span class="line">(<span class="string">&#x27;王五&#x27;</span>, <span class="number">20</span>, <span class="number">1</span>),</span><br></pre></td></tr></table></figure>
 <p>删除外键</p>
-<pre><code class="sql">alter table emp drop FOREIGN key fk_emp_dept;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> emp <span class="keyword">drop</span> <span class="keyword">FOREIGN</span> key fk_emp_dept;</span><br></pre></td></tr></table></figure>
 <p>重新添加外键</p>
-<pre><code class="sql">alter table emp add CONSTRAINT fk_emp_dept FOREIGN key(dep_id) REFERENCES dept(id);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> emp <span class="keyword">add</span> <span class="keyword">CONSTRAINT</span> fk_emp_dept <span class="keyword">FOREIGN</span> key(dep_id) <span class="keyword">REFERENCES</span> dept(id);</span><br></pre></td></tr></table></figure>
 <h4 id="数据库设计"><a href="#数据库设计" class="headerlink" title="数据库设计"></a>数据库设计</h4><ul>
 <li><p>数据库设计概念</p>
 <ul>
@@ -991,26 +892,7 @@ INSERT INTO emp (NAME, age, dep_id) VALUES
 <ul>
 <li>以 <code>员工表</code> 和 <code>部门表</code> 举例：在员工表中添加一列（dep_id），指向于部门表的主键（id）</li>
 </ul>
-<pre><code class="sql">-- 删除表
-DROP TABLE IF EXISTS tb_emp;
-DROP TABLE IF EXISTS tb_dept;
-
--- 部门表
-CREATE TABLE tb_dept(
-    id int primary key auto_increment,
-    dep_name varchar(20),
-    addr varchar(20)
-);
--- 员工表 
-CREATE TABLE tb_emp(
-    id int primary key auto_increment,
-    name varchar(20),
-    age int,
-    dep_id int,
-
-    -- 添加外键 dep_id,关联 dept 表的id主键
-    CONSTRAINT fk_emp_dept FOREIGN KEY(dep_id) REFERENCES tb_dept(id)    
-);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 删除表</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> tb_emp;</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> tb_dept;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 部门表</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tb_dept(</span><br><span class="line">    id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">    dep_name <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    addr <span class="type">varchar</span>(<span class="number">20</span>)</span><br><span class="line">);</span><br><span class="line"><span class="comment">-- 员工表 </span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tb_emp(</span><br><span class="line">    id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">    name <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">    age <span class="type">int</span>,</span><br><span class="line">    dep_id <span class="type">int</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">-- 添加外键 dep_id,关联 dept 表的id主键</span></span><br><span class="line">    <span class="keyword">CONSTRAINT</span> fk_emp_dept <span class="keyword">FOREIGN</span> KEY(dep_id) <span class="keyword">REFERENCES</span> tb_dept(id)	</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>表关系（多对多）</p>
 <ul>
@@ -1019,37 +901,7 @@ CREATE TABLE tb_emp(
 <ul>
 <li>以 <code>订单表</code> 和 <code>商品表</code> 举例：订单表和商品表都属于多的一方，此时需要创建一个中间表，在中间表中添加订单表的外键和商品表的外键指向两张表的主键：</li>
 </ul>
-<pre><code class="sql">  -- 删除表
-  DROP TABLE IF EXISTS tb_order_goods;
-  DROP TABLE IF EXISTS tb_order;
-  DROP TABLE IF EXISTS tb_goods;
-
-  -- 订单表
-  CREATE TABLE tb_order(
-  id int primary key auto_increment,
-  payment double(10,2),
-  payment_type TINYINT,
-  status TINYINT
-  );
-
-  -- 商品表
-  CREATE TABLE tb_goods(
-  id int primary key auto_increment,
-  title varchar(100),
-  price double(10,2)
-  );
-
-  -- 订单商品中间表
-  CREATE TABLE tb_order_goods(
-  id int primary key auto_increment,
-  order_id int,
-  goods_id int,
-  count int
-  );
-
-  -- 建完表后，添加外键
-  alter table tb_order_goods add CONSTRAINT fk_order_id FOREIGN key(order_id) REFERENCES tb_order(id);
-  alter table tb_order_goods add CONSTRAINT fk_goods_id FOREIGN key(goods_id) REFERENCES tb_goods(id);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 删除表</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> tb_order_goods;</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> tb_order;</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> tb_goods;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 订单表</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tb_order(</span><br><span class="line">id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">payment <span class="keyword">double</span>(<span class="number">10</span>,<span class="number">2</span>),</span><br><span class="line">payment_type TINYINT,</span><br><span class="line">status TINYINT</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 商品表</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tb_goods(</span><br><span class="line">id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">title <span class="type">varchar</span>(<span class="number">100</span>),</span><br><span class="line">price <span class="keyword">double</span>(<span class="number">10</span>,<span class="number">2</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 订单商品中间表</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tb_order_goods(</span><br><span class="line">id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">order_id <span class="type">int</span>,</span><br><span class="line">goods_id <span class="type">int</span>,</span><br><span class="line">count <span class="type">int</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 建完表后，添加外键</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> tb_order_goods <span class="keyword">add</span> <span class="keyword">CONSTRAINT</span> fk_order_id <span class="keyword">FOREIGN</span> key(order_id) <span class="keyword">REFERENCES</span> tb_order(id);</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> tb_order_goods <span class="keyword">add</span> <span class="keyword">CONSTRAINT</span> fk_goods_id <span class="keyword">FOREIGN</span> key(goods_id) <span class="keyword">REFERENCES</span> tb_goods(id);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>表关系（一对一）</p>
 <ul>
@@ -1060,65 +912,19 @@ CREATE TABLE tb_emp(
 <ul>
 <li>以 <code>用户表</code> 举例：在真正使用过程中发现 id、photo、nickname、age、gender 字段比较常用，此时就可以将这张表查分成两张表</li>
 </ul>
-<pre><code class="sql">create table tb_user_desc (
-    id int primary key auto_increment,
-    city varchar(20),
-    edu varchar(10),
-    income int,
-    status char(2),
-    des varchar(100)
-);
-
-create table tb_user (
-    id int primary key auto_increment,
-    photo varchar(100),
-    nickname varchar(50),
-    age int,
-    gender char(1),
-    desc_id int unique,
-    -- 添加外键
-    CONSTRAINT fk_user_desc FOREIGN KEY(desc_id) REFERENCES tb_user_desc(id)    
-);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> tb_user_desc (</span><br><span class="line">	id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">	city <span class="type">varchar</span>(<span class="number">20</span>),</span><br><span class="line">	edu <span class="type">varchar</span>(<span class="number">10</span>),</span><br><span class="line">	income <span class="type">int</span>,</span><br><span class="line">	status <span class="type">char</span>(<span class="number">2</span>),</span><br><span class="line">	des <span class="type">varchar</span>(<span class="number">100</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> tb_user (</span><br><span class="line">	id <span class="type">int</span> <span class="keyword">primary</span> key auto_increment,</span><br><span class="line">	photo <span class="type">varchar</span>(<span class="number">100</span>),</span><br><span class="line">	nickname <span class="type">varchar</span>(<span class="number">50</span>),</span><br><span class="line">	age <span class="type">int</span>,</span><br><span class="line">	gender <span class="type">char</span>(<span class="number">1</span>),</span><br><span class="line">	desc_id <span class="type">int</span> <span class="keyword">unique</span>,</span><br><span class="line">	<span class="comment">-- 添加外键</span></span><br><span class="line">	<span class="keyword">CONSTRAINT</span> fk_user_desc <span class="keyword">FOREIGN</span> KEY(desc_id) <span class="keyword">REFERENCES</span> tb_user_desc(id)	</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 <h4 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h4><ul>
 <li>多表查询顾名思义就是从多张表中一次性的查询出我们想要的数据</li>
 </ul>
-<pre><code class="sql">DROP TABLE IF EXISTS emp;
-DROP TABLE IF EXISTS dept;
-
-# 创建部门表
-    CREATE TABLE dept(
-        did INT PRIMARY KEY AUTO_INCREMENT,
-        dname VARCHAR(20)
-    );
-
-    # 创建员工表
-    CREATE TABLE emp (
-        id INT PRIMARY KEY AUTO_INCREMENT,
-        NAME VARCHAR(10),
-        gender CHAR(1), -- 性别
-        salary DOUBLE, -- 工资
-        join_date DATE, -- 入职日期
-        dep_id INT,
-        FOREIGN KEY (dep_id) REFERENCES dept(did) -- 外键，关联部门表(部门表的主键)
-    );
-    -- 添加部门数据
-    INSERT INTO dept (dNAME) VALUES (&#39;研发部&#39;),(&#39;市场部&#39;),(&#39;财务部&#39;),(&#39;销售部&#39;);
-    -- 添加员工数据
-    INSERT INTO emp(NAME,gender,salary,join_date,dep_id) VALUES
-    (&#39;孙悟空&#39;,&#39;男&#39;,7200,&#39;2013-02-24&#39;,1),
-    (&#39;猪八戒&#39;,&#39;男&#39;,3600,&#39;2010-12-02&#39;,2),
-    (&#39;唐僧&#39;,&#39;男&#39;,9000,&#39;2008-08-08&#39;,2),
-    (&#39;白骨精&#39;,&#39;女&#39;,5000,&#39;2015-10-07&#39;,3),
-    (&#39;蜘蛛精&#39;,&#39;女&#39;,4500,&#39;2011-03-14&#39;,1),
-    (&#39;小白龙&#39;,&#39;男&#39;,2500,&#39;2011-02-14&#39;,null);    </code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> emp;</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> dept;</span><br><span class="line"></span><br><span class="line"># 创建部门表</span><br><span class="line">	<span class="keyword">CREATE</span> <span class="keyword">TABLE</span> dept(</span><br><span class="line">        did <span class="type">INT</span> <span class="keyword">PRIMARY</span> KEY AUTO_INCREMENT,</span><br><span class="line">        dname <span class="type">VARCHAR</span>(<span class="number">20</span>)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">	# 创建员工表</span><br><span class="line">	<span class="keyword">CREATE</span> <span class="keyword">TABLE</span> emp (</span><br><span class="line">        id <span class="type">INT</span> <span class="keyword">PRIMARY</span> KEY AUTO_INCREMENT,</span><br><span class="line">        NAME <span class="type">VARCHAR</span>(<span class="number">10</span>),</span><br><span class="line">        gender <span class="type">CHAR</span>(<span class="number">1</span>), <span class="comment">-- 性别</span></span><br><span class="line">        salary <span class="keyword">DOUBLE</span>, <span class="comment">-- 工资</span></span><br><span class="line">        join_date <span class="type">DATE</span>, <span class="comment">-- 入职日期</span></span><br><span class="line">        dep_id <span class="type">INT</span>,</span><br><span class="line">        <span class="keyword">FOREIGN</span> KEY (dep_id) <span class="keyword">REFERENCES</span> dept(did) <span class="comment">-- 外键，关联部门表(部门表的主键)</span></span><br><span class="line">    );</span><br><span class="line">	<span class="comment">-- 添加部门数据</span></span><br><span class="line">	<span class="keyword">INSERT</span> <span class="keyword">INTO</span> dept (dNAME) <span class="keyword">VALUES</span> (<span class="string">&#x27;研发部&#x27;</span>),(<span class="string">&#x27;市场部&#x27;</span>),(<span class="string">&#x27;财务部&#x27;</span>),(<span class="string">&#x27;销售部&#x27;</span>);</span><br><span class="line">	<span class="comment">-- 添加员工数据</span></span><br><span class="line">	<span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp(NAME,gender,salary,join_date,dep_id) <span class="keyword">VALUES</span></span><br><span class="line">	(<span class="string">&#x27;孙悟空&#x27;</span>,<span class="string">&#x27;男&#x27;</span>,<span class="number">7200</span>,<span class="string">&#x27;2013-02-24&#x27;</span>,<span class="number">1</span>),</span><br><span class="line">	(<span class="string">&#x27;猪八戒&#x27;</span>,<span class="string">&#x27;男&#x27;</span>,<span class="number">3600</span>,<span class="string">&#x27;2010-12-02&#x27;</span>,<span class="number">2</span>),</span><br><span class="line">	(<span class="string">&#x27;唐僧&#x27;</span>,<span class="string">&#x27;男&#x27;</span>,<span class="number">9000</span>,<span class="string">&#x27;2008-08-08&#x27;</span>,<span class="number">2</span>),</span><br><span class="line">	(<span class="string">&#x27;白骨精&#x27;</span>,<span class="string">&#x27;女&#x27;</span>,<span class="number">5000</span>,<span class="string">&#x27;2015-10-07&#x27;</span>,<span class="number">3</span>),</span><br><span class="line">	(<span class="string">&#x27;蜘蛛精&#x27;</span>,<span class="string">&#x27;女&#x27;</span>,<span class="number">4500</span>,<span class="string">&#x27;2011-03-14&#x27;</span>,<span class="number">1</span>),</span><br><span class="line">	(<span class="string">&#x27;小白龙&#x27;</span>,<span class="string">&#x27;男&#x27;</span>,<span class="number">2500</span>,<span class="string">&#x27;2011-02-14&#x27;</span>,<span class="keyword">null</span>);	</span><br></pre></td></tr></table></figure>
 <ul>
 <li>执行下面的多表查询语句</li>
 </ul>
-<pre><code class="sql">select * from emp , dept;  -- 从emp和dept表中查询所有的字段数据</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp , dept;  <span class="comment">-- 从emp和dept表中查询所有的字段数据</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>通过限制员工表中的 <code>dep_id</code> 字段的值和部门表 <code>did</code> 字段的值相等来消除无效的数据，</li>
 </ul>
-<pre><code class="sql">select * from emp , dept where emp.dep_id = dept.did;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp , dept <span class="keyword">where</span> emp.dep_id <span class="operator">=</span> dept.did;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>连接查询 </p>
 <ul>
@@ -1135,53 +941,33 @@ DROP TABLE IF EXISTS dept;
 <ul>
 <li>内连接查询</li>
 </ul>
-<pre><code class="sql">-- 隐式内连接
-SELECT 字段列表 FROM 表1,表2… WHERE 条件;
-
--- 显示内连接
-SELECT 字段列表 FROM 表1 [INNER] JOIN 表2 ON 条件;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 隐式内连接</span></span><br><span class="line"><span class="keyword">SELECT</span> 字段列表 <span class="keyword">FROM</span> 表<span class="number">1</span>,表<span class="number">2</span>… <span class="keyword">WHERE</span> 条件;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 显示内连接</span></span><br><span class="line"><span class="keyword">SELECT</span> 字段列表 <span class="keyword">FROM</span> 表<span class="number">1</span> [<span class="keyword">INNER</span>] <span class="keyword">JOIN</span> 表<span class="number">2</span> <span class="keyword">ON</span> 条件;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>隐式内连接</li>
 </ul>
-<pre><code class="sql">SELECT * FROM emp, dept WHERE emp.dep_id = dept.did;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> emp, dept <span class="keyword">WHERE</span> emp.dep_id <span class="operator">=</span> dept.did;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>查询 emp 的 name， gender，dept 表的 dname</li>
 </ul>
-<pre><code class="sql">SELECT
-    t1. NAME,
-    t1.gender,
-    t2.dname
-FROM
-    emp t1,
-    dept t2
-WHERE
-    t1.dep_id = t2.did;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	t1. NAME,</span><br><span class="line">	t1.gender,</span><br><span class="line">	t2.dname</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	emp t1,</span><br><span class="line">	dept t2</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">	t1.dep_id <span class="operator">=</span> t2.did;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>显式内连接</li>
 </ul>
-<pre><code class="sql">select * from emp inner join dept on emp.dep_id = dept.did;
--- 上面语句中的inner可以省略，可以书写为如下语句
-select * from emp  join dept on emp.dep_id = dept.did;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">inner</span> <span class="keyword">join</span> dept <span class="keyword">on</span> emp.dep_id <span class="operator">=</span> dept.did;</span><br><span class="line"><span class="comment">-- 上面语句中的inner可以省略，可以书写为如下语句</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp  <span class="keyword">join</span> dept <span class="keyword">on</span> emp.dep_id <span class="operator">=</span> dept.did;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>外连接查询</li>
 </ul>
-<pre><code class="sql">-- 左外连接：相当于查询A表所有数据和交集部分数据
-SELECT 字段列表 FROM 表1 LEFT [OUTER] JOIN 表2 ON 条件;
-
--- 右外连接：相当于查询B表所有数据和交集部分数据
-SELECT 字段列表 FROM 表1 RIGHT [OUTER] JOIN 表2 ON 条件;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 左外连接：相当于查询A表所有数据和交集部分数据</span></span><br><span class="line"><span class="keyword">SELECT</span> 字段列表 <span class="keyword">FROM</span> 表<span class="number">1</span> <span class="keyword">LEFT</span> [<span class="keyword">OUTER</span>] <span class="keyword">JOIN</span> 表<span class="number">2</span> <span class="keyword">ON</span> 条件;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 右外连接：相当于查询B表所有数据和交集部分数据</span></span><br><span class="line"><span class="keyword">SELECT</span> 字段列表 <span class="keyword">FROM</span> 表<span class="number">1</span> <span class="keyword">RIGHT</span> [<span class="keyword">OUTER</span>] <span class="keyword">JOIN</span> 表<span class="number">2</span> <span class="keyword">ON</span> 条件;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>查询emp表所有数据和对应的部门信息（左外连接）</li>
 </ul>
-<pre><code class="sql">select * from emp left join dept on emp.dep_id = dept.did;
--- 结果显示查询到了左表（emp）中所有的数据及两张表能关联的数据</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">left</span> <span class="keyword">join</span> dept <span class="keyword">on</span> emp.dep_id <span class="operator">=</span> dept.did;</span><br><span class="line"><span class="comment">-- 结果显示查询到了左表（emp）中所有的数据及两张表能关联的数据</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>查询dept表所有数据和对应的员工信息（右外连接）</li>
 </ul>
-<pre><code class="sql">select * from emp right join dept on emp.dep_id = dept.did;
--- 结果显示查询到了右表（dept）中所有的数据及两张表能关联的数据</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">right</span> <span class="keyword">join</span> dept <span class="keyword">on</span> emp.dep_id <span class="operator">=</span> dept.did;</span><br><span class="line"><span class="comment">-- 结果显示查询到了右表（dept）中所有的数据及两张表能关联的数据</span></span><br></pre></td></tr></table></figure>
 <p>。要查询出部门表中所有的数据，也可以通过左外连接实现，只需要将两个表的位置进行互换：</p>
-<pre><code class="sql">select * from dept left join emp on emp.dep_id = dept.did;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> dept <span class="keyword">left</span> <span class="keyword">join</span> emp <span class="keyword">on</span> emp.dep_id <span class="operator">=</span> dept.did;</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>子查询</p>
 <ul>
@@ -1196,17 +982,11 @@ SELECT 字段列表 FROM 表1 RIGHT [OUTER] JOIN 表2 ON 条件;</code></pre>
 <li>子查询语句结果是多行多列，子查询语句作为虚拟表</li>
 <li>查询 ‘财务部’ 和 ‘市场部’ 所有的员工信息</li>
 </ul>
-<pre><code class="sql">-- 查询 &#39;财务部&#39; 或者 &#39;市场部&#39; 所有的员工的部门did
-select did from dept where dname = &#39;财务部&#39; or dname = &#39;市场部&#39;;
-
-select * from emp where dep_id in (select did from dept where dname = &#39;财务部&#39; or dname = &#39;市场部&#39;);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 查询 &#x27;财务部&#x27; 或者 &#x27;市场部&#x27; 所有的员工的部门did</span></span><br><span class="line"><span class="keyword">select</span> did <span class="keyword">from</span> dept <span class="keyword">where</span> dname <span class="operator">=</span> <span class="string">&#x27;财务部&#x27;</span> <span class="keyword">or</span> dname <span class="operator">=</span> <span class="string">&#x27;市场部&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> dep_id <span class="keyword">in</span> (<span class="keyword">select</span> did <span class="keyword">from</span> dept <span class="keyword">where</span> dname <span class="operator">=</span> <span class="string">&#x27;财务部&#x27;</span> <span class="keyword">or</span> dname <span class="operator">=</span> <span class="string">&#x27;市场部&#x27;</span>);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>查询入职日期是 ‘2011-11-11’ 之后的员工信息和部门信息</li>
 </ul>
-<pre><code class="sql">-- 查询入职日期是 &#39;2011-11-11&#39; 之后的员工信息
-select * from emp where join_date &gt; &#39;2011-11-11&#39; ;
--- 将上面语句的结果作为虚拟表和dept表进行内连接查询
-select * from (select * from emp where join_date &gt; &#39;2011-11-11&#39; ) t1, dept where t1.dep_id = dept.did;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 查询入职日期是 &#x27;2011-11-11&#x27; 之后的员工信息</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> join_date <span class="operator">&gt;</span> <span class="string">&#x27;2011-11-11&#x27;</span> ;</span><br><span class="line"><span class="comment">-- 将上面语句的结果作为虚拟表和dept表进行内连接查询</span></span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> (<span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> emp <span class="keyword">where</span> join_date <span class="operator">&gt;</span> <span class="string">&#x27;2011-11-11&#x27;</span> ) t1, dept <span class="keyword">where</span> t1.dep_id <span class="operator">=</span> dept.did;</span><br></pre></td></tr></table></figure>
 <h4 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h4><ul>
 <li><p>概述</p>
 <ul>
@@ -1224,19 +1004,17 @@ select * from (select * from emp where join_date &gt; &#39;2011-11-11&#39; ) t1,
 <ul>
 <li>开启事务</li>
 </ul>
-<pre><code class="sql">START TRANSACTION;
-或者  
-BEGIN;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">START</span> TRANSACTION;</span><br><span class="line">或者  </span><br><span class="line"><span class="keyword">BEGIN</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
 <li><p>提交事务</p>
-<pre><code class="sql">commit;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">commit</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
 <li><p>回滚事务</p>
-<pre><code class="sql">rollback;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">rollback</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
@@ -1244,51 +1022,17 @@ BEGIN;</code></pre>
 <ul>
 <li>环境准备</li>
 </ul>
-<pre><code class="sql">DROP TABLE IF EXISTS account;
-
--- 创建账户表
-CREATE TABLE account(
-    id int PRIMARY KEY auto_increment,
-    name varchar(10),
-    money double(10,2)
-);
-
--- 添加数据
-INSERT INTO account(name,money) values(&#39;张三&#39;,1000),(&#39;李四&#39;,1000);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> account;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建账户表</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> account(</span><br><span class="line">	id <span class="type">int</span> <span class="keyword">PRIMARY</span> KEY auto_increment,</span><br><span class="line">	name <span class="type">varchar</span>(<span class="number">10</span>),</span><br><span class="line">	money <span class="keyword">double</span>(<span class="number">10</span>,<span class="number">2</span>)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 添加数据</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> account(name,money) <span class="keyword">values</span>(<span class="string">&#x27;张三&#x27;</span>,<span class="number">1000</span>),(<span class="string">&#x27;李四&#x27;</span>,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
 <li><p>不加事务演示问题</p>
-<pre><code class="sql">-- 转账操作
--- 1. 查询李四账户金额是否大于500
-
--- 2. 李四账户 -500
-UPDATE account set money = money - 500 where name = &#39;李四&#39;;
-
-出现异常了...  -- 此处不是注释，在整体执行时会出问题，后面的sql则不执行
--- 3. 张三账户 +500
-UPDATE account set money = money + 500 where name = &#39;张三&#39;;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 转账操作</span></span><br><span class="line"><span class="comment">-- 1. 查询李四账户金额是否大于500</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 2. 李四账户 -500</span></span><br><span class="line"><span class="keyword">UPDATE</span> account <span class="keyword">set</span> money <span class="operator">=</span> money <span class="operator">-</span> <span class="number">500</span> <span class="keyword">where</span> name <span class="operator">=</span> <span class="string">&#x27;李四&#x27;</span>;</span><br><span class="line"></span><br><span class="line">出现异常了...  <span class="comment">-- 此处不是注释，在整体执行时会出问题，后面的sql则不执行</span></span><br><span class="line"><span class="comment">-- 3. 张三账户 +500</span></span><br><span class="line"><span class="keyword">UPDATE</span> account <span class="keyword">set</span> money <span class="operator">=</span> money <span class="operator">+</span> <span class="number">500</span> <span class="keyword">where</span> name <span class="operator">=</span> <span class="string">&#x27;张三&#x27;</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
 <li><p>添加事务 sql</p>
-<pre><code class="sql">-- 开启事务
-BEGIN;
--- 转账操作
--- 1. 查询李四账户金额是否大于500
-
--- 2. 李四账户 -500
-UPDATE account set money = money - 500 where name = &#39;李四&#39;;
-
-出现异常了...  -- 此处不是注释，在整体执行时会出问题，后面的sql则不执行
--- 3. 张三账户 +500
-UPDATE account set money = money + 500 where name = &#39;张三&#39;;
-
--- 提交事务
-COMMIT;
-
--- 回滚事务
-ROLLBACK;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 开启事务</span></span><br><span class="line"><span class="keyword">BEGIN</span>;</span><br><span class="line"><span class="comment">-- 转账操作</span></span><br><span class="line"><span class="comment">-- 1. 查询李四账户金额是否大于500</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 2. 李四账户 -500</span></span><br><span class="line"><span class="keyword">UPDATE</span> account <span class="keyword">set</span> money <span class="operator">=</span> money <span class="operator">-</span> <span class="number">500</span> <span class="keyword">where</span> name <span class="operator">=</span> <span class="string">&#x27;李四&#x27;</span>;</span><br><span class="line"></span><br><span class="line">出现异常了...  <span class="comment">-- 此处不是注释，在整体执行时会出问题，后面的sql则不执行</span></span><br><span class="line"><span class="comment">-- 3. 张三账户 +500</span></span><br><span class="line"><span class="keyword">UPDATE</span> account <span class="keyword">set</span> money <span class="operator">=</span> money <span class="operator">+</span> <span class="number">500</span> <span class="keyword">where</span> name <span class="operator">=</span> <span class="string">&#x27;张三&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 提交事务</span></span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 回滚事务</span></span><br><span class="line"><span class="keyword">ROLLBACK</span>;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>上面sql中的执行成功进选择执行提交事务，而出现问题则执行回滚事务的语句，以后我们肯定不可能这样操作，而是在java中进行操作，在java中可以抓取异常，没出现异常提交事务，出现异常回滚事务</li>
 </ul>
@@ -1306,12 +1050,12 @@ ROLLBACK;</code></pre>
 </ul>
 </li>
 </ul>
-<pre><code class="java">SELECT @@autocommit;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT @<span class="meta">@autocommit</span>;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p> 查询到的结果是1 则表示自动提交，结果是0表示手动提交。当然也可以通过下面语句修改提交方式</p>
+<li><p>查询到的结果是1 则表示自动提交，结果是0表示手动提交。当然也可以通过下面语句修改提交方式</p>
 </li>
 </ul>
-<pre><code class="sql">set @@autocommit = 0;</code></pre>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> @<span class="variable">@autocommit</span> <span class="operator">=</span> <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
 <h3 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h3><h4 id="JDBC-简介"><a href="#JDBC-简介" class="headerlink" title="JDBC 简介"></a>JDBC 简介</h4><ul>
 <li><p>JDBC 概念</p>
 <ul>
@@ -1341,8 +1085,7 @@ ROLLBACK;</code></pre>
 </li>
 <li><p>可随时替换底层数据库，访问数据库的Java代码基本不变</p>
 </li>
-<li><p>以后编写操作数据库的代码只需要面向JDBC（接口），操作哪儿个关系型数据库就需要导入该数据库的驱动包，如需要操作MySQL数据库，就需要再项目中导入MySQL数据库的驱动包</p>
-</li>
+<li>以后编写操作数据库的代码只需要面向JDBC（接口），操作哪儿个关系型数据库就需要导入该数据库的驱动包，如需要操作MySQL数据库，就需要再项目中导入MySQL数据库的驱动包</li>
 </ul>
 </li>
 </ul>
@@ -1359,8 +1102,8 @@ ROLLBACK;</code></pre>
 - 第三步：MySQL服务端接收到SQL语句并执行该SQL语句
 
 
-- 第四步：将SQL语句执行的结果返回给Java代码</code></pre>
-<ul>
+- 第四步：将SQL语句执行的结果返回给Java代码
+</code></pre><ul>
 <li><p>编写代码步骤</p>
 <ul>
 <li>创建工程，导入驱动 jar 包（mysql-connector-java-5.1.48.jar）</li>
@@ -1369,12 +1112,12 @@ ROLLBACK;</code></pre>
 </ul>
 <ul>
 <li><p>注册驱动</p>
-<pre><code class="sql">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
 <li><p>获取连接</p>
-<pre><code class="sql">Connection conn = DriverManager.getConnection(url, username, password);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connection conn <span class="operator">=</span> DriverManager.getConnection(url, username, password);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Java代码需要发送SQL给MySQL服务端，就需要先建立连接</li>
 </ul>
@@ -1382,7 +1125,7 @@ ROLLBACK;</code></pre>
 </ul>
 <ul>
 <li><p>定义SQL语句</p>
-<pre><code class="sql">String sql =  &quot;select * from table;&quot; ;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String <span class="keyword">sql</span> <span class="operator">=</span>  &quot;select * from table;&quot; ;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
@@ -1390,10 +1133,10 @@ ROLLBACK;</code></pre>
 <ul>
 <li>执行SQL语句需要SQL执行对象，而这个执行对象就是Statement对象</li>
 </ul>
-<pre><code class="sql">Statement stmt = conn.createStatement();</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Statement stmt <span class="operator">=</span> conn.createStatement();</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>执行SQL</p>
-<pre><code class="sql">stmt.executeUpdate(sql);  </code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stmt.executeUpdate(<span class="keyword">sql</span>);  </span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
@@ -1401,37 +1144,12 @@ ROLLBACK;</code></pre>
 <li>释放资源</li>
 <li>IDEA 中编写代码</li>
 </ul>
-<pre><code class="java">/**
- * JDBC快速入门
- */
-public class JDBCDemo &#123;
-
-    public static void main(String[] args) throws Exception &#123;
-        //1. 注册驱动
-        //Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
-        //2. 获取连接
-        String url = &quot;jdbc:mysql://127.0.0.1:3306/db1?useSSL=false&quot;;
-        String username = &quot;root&quot;;
-        String password = &quot;1234&quot;;
-        Connection conn = DriverManager.getConnection(url, username, password);
-        //3. 定义sql
-        String sql = &quot;update account set money = 2000 where id = 1&quot;;
-        //4. 获取执行sql的对象 Statement
-        Statement stmt = conn.createStatement();
-        //5. 执行sql
-        int count = stmt.executeUpdate(sql);//受影响的行数
-        //6. 处理结果
-        System.out.println(count);
-        //7. 释放资源
-        stmt.close();
-        conn.close();
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * JDBC快速入门</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JDBCDemo</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">//1. 注册驱动</span></span><br><span class="line">        <span class="comment">//Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span></span><br><span class="line">        <span class="comment">//2. 获取连接</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql://127.0.0.1:3306/db1?useSSL=false&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> <span class="string">&quot;root&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> <span class="string">&quot;1234&quot;</span>;</span><br><span class="line">        <span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> DriverManager.getConnection(url, username, password);</span><br><span class="line">        <span class="comment">//3. 定义sql</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span> <span class="string">&quot;update account set money = 2000 where id = 1&quot;</span>;</span><br><span class="line">        <span class="comment">//4. 获取执行sql的对象 Statement</span></span><br><span class="line">        <span class="type">Statement</span> <span class="variable">stmt</span> <span class="operator">=</span> conn.createStatement();</span><br><span class="line">        <span class="comment">//5. 执行sql</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> stmt.executeUpdate(sql);<span class="comment">//受影响的行数</span></span><br><span class="line">        <span class="comment">//6. 处理结果</span></span><br><span class="line">        System.out.println(count);</span><br><span class="line">        <span class="comment">//7. 释放资源</span></span><br><span class="line">        stmt.close();</span><br><span class="line">        conn.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="JDBC-API-详解"><a href="#JDBC-API-详解" class="headerlink" title="JDBC API 详解"></a>JDBC API 详解</h4><ul>
 <li><p>DriverManager（驱动管理类）</p>
 <ul>
 <li><p>注册驱动：<code>registerDriver</code> 方法是用于注册驱动的，但是我们之前做的入门案例并不是这样写的。而是如下实现</p>
-<pre><code class="sql">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在该类中的静态代码块中已经执行了 <code>DriverManager</code> 对象的 <code>registerDriver()</code> 方法进行驱动的注册了，那么我们只需要加载 <code>Driver</code> 类，该静态代码块就会执行，而 <code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</code> 就可以加载 <code>Driver</code> 类</p>
 </li>
@@ -1440,34 +1158,29 @@ public class JDBCDemo &#123;
 </ul>
 <pre><code>* 获取数据库连接
 
-  ```sql
-  Connection conn = DriverManager.getConnection(url, username, password);
-  ```
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connection conn <span class="operator">=</span> DriverManager.getConnection(url, username, password);</span><br></pre></td></tr></table></figure>
 
   * url ： `jdbc:mysql://ip地址(域名):端口号/数据库名称?参数键值对1&amp;参数键值对2…`
     * 配置 `useSSL=false` 参数，禁用安全连接方式，解决警告提示
   * user ：用户名
-  * poassword ：密码</code></pre>
-<ul>
+  * poassword ：密码
+</code></pre><ul>
 <li><p>Connection（数据库连接对象）</p>
 <ul>
 <li><p>获取执行 SQL 的对象</p>
 <ul>
 <li>普通执行SQL对象</li>
 </ul>
-<pre><code class="sql">Statement createStatement()  
--- 通过该方法获取执行对象
-Statement stmt = conn.createStatement();
-int count = stmt.executeUpdate(sql);</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Statement createStatement()  </span><br><span class="line"><span class="comment">-- 通过该方法获取执行对象</span></span><br><span class="line">Statement stmt <span class="operator">=</span> conn.createStatement();</span><br><span class="line"><span class="type">int</span> count <span class="operator">=</span> stmt.executeUpdate(<span class="keyword">sql</span>);</span><br></pre></td></tr></table></figure>
 <ul>
 <li>预编译SQL的执行SQL对象：防止SQL注入</li>
 </ul>
-<pre><code class="sql">PreparedStatement  prepareStatement(sql)</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PreparedStatement  prepareStatement(<span class="keyword">sql</span>)</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>通过这种方式获取的 <code>PreparedStatement</code> SQL语句执行对象可以防止SQL注入</p>
 </li>
 <li><p>执行存储过程的对象</p>
-<pre><code class="sql">CallableStatement prepareCall(sql)</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CallableStatement prepareCall(<span class="keyword">sql</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>通过这种方式获取的 <code>CallableStatement</code> 执行对象是用来执行存储过程的，但存储过程在MySQL中不常用</p>
 </li>
@@ -1493,24 +1206,18 @@ int count = stmt.executeUpdate(sql);</code></pre>
 
       * 开启事务
 
-        ```sql
-        setAutoCommit(boolean autoCommit)
-        ```
+        <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setAutoCommit(<span class="type">boolean</span> autoCommit)</span><br></pre></td></tr></table></figure>
 
       * 参与 `autoCommit` 表示是否自动提交事务，true表示自动提交事务，false表示手动提交事务，而开启事务需要将该参数设为为 false
 
       * 提交事务
 
-        ```sql
-        commit()
-        ```
+        <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">commit</span>()</span><br></pre></td></tr></table></figure>
 
       * 回滚事务
 
-        ```sql
-        rollback;
-        ```</code></pre>
-<ul>
+        <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">rollback</span>;</span><br></pre></td></tr></table></figure>
+</code></pre><ul>
 <li><p>Statement（声明执行对象）</p>
 <ul>
 <li>Statement对象的作用就是用来执行SQL语句，而针对不同类型的SQL语句使用的方法也不一样</li>
@@ -1519,21 +1226,17 @@ int count = stmt.executeUpdate(sql);</code></pre>
 </ul>
 <pre><code>* 执行DDL、DML语句
 
-  ```sql
-  int excuteUpdate(sql)
-  ```
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> excuteUpdate(<span class="keyword">sql</span>)</span><br></pre></td></tr></table></figure>
 
   * 返回值：DML语句影响的行数，DDL语句执行成功后可能返回0
 
 
 * 执行DQL语句
 
-  ```sql
-  ResultSet excuteQuery(sql)
-  ```
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ResultSet excuteQuery(<span class="keyword">sql</span>)</span><br></pre></td></tr></table></figure>
 
-  - 返回值： `ResultSet` 结果集对象</code></pre>
-<ul>
+  - 返回值： `ResultSet` 结果集对象
+</code></pre><ul>
 <li><p>ResultSet（结果集对象）</p>
 <ul>
 <li>封装了SQL查询语句的结果，执行DQL语句后就会返回该对象<ul>
@@ -1550,70 +1253,37 @@ int count = stmt.executeUpdate(sql);</code></pre>
 </li>
 <li><p><code>xxx  getXxx(参数)</code>：获取数据</p>
 </li>
-<li><p>xxx : 数据类型；如： <code>nt getInt(参数)</code> ；<code>String getString(参数)</code></p>
-</li>
-<li><p>int 类型的参数：列的编号，从1开始</p>
-</li>
-<li><p>String 类型的参数： 列的名称 </p>
-</li>
+<li>xxx : 数据类型；如： <code>nt getInt(参数)</code> ；<code>String getString(参数)</code></li>
+<li>int 类型的参数：列的编号，从1开始</li>
+<li>String 类型的参数： 列的名称 </li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <ul>
-<li><p>一开始光标指定于第一行前，当我们调用了 <code>next()</code> 方法后，光标就下移到第一行数据，并且方法返回 true，此时就可以通过 <code>getInt(&quot;id&quot;)</code> 获取当前行id字段的值，也可以通过 <code>getString(&quot;name&quot;)</code> 获取当前行name字段的值。如果想获取下一行的数据，继续调用 <code>next()</code>  方法，以此类推。</p>
-</li>
+<li>一开始光标指定于第一行前，当我们调用了 <code>next()</code> 方法后，光标就下移到第一行数据，并且方法返回 true，此时就可以通过 <code>getInt(&quot;id&quot;)</code> 获取当前行id字段的值，也可以通过 <code>getString(&quot;name&quot;)</code> 获取当前行name字段的值。如果想获取下一行的数据，继续调用 <code>next()</code>  方法，以此类推。</li>
+</ul>
+<ul>
 <li><p>PreparedStatement</p>
 <ul>
-<li><p>预编译SQL语句并执行：预防SQL注入问题</p>
-</li>
+<li>预编译SQL语句并执行：预防SQL注入问题</li>
 <li><p>SQL注入是通过操作输入来修改事先定义好的SQL语句，用以达到执行代码对服务器进行攻击的方法。</p>
 </li>
 <li><p>代码模拟SQL注入问题</p>
 </li>
 </ul>
-<pre><code class="java">@Test
-public void testLogin() throws  Exception &#123;
-    //2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写
-    String url = &quot;jdbc:mysql:///db1?useSSL=false&quot;;
-    String username = &quot;root&quot;;
-    String password = &quot;1234&quot;;
-    Connection conn = DriverManager.getConnection(url, username, password);
-
-    // 接收用户输入 用户名和密码
-    String name = &quot;sjdljfld&quot;;
-    String pwd = &quot;&#39; or &#39;1&#39; = &#39;1&quot;;
-    String sql = &quot;select * from tb_user where username = &#39;&quot;+name+&quot;&#39; and password = &#39;&quot;+pwd+&quot;&#39;&quot;;
-    // 获取stmt对象
-    Statement stmt = conn.createStatement();
-    // 执行sql
-    ResultSet rs = stmt.executeQuery(sql);
-    // 判断登录是否成功
-    if(rs.next())&#123;
-        System.out.println(&quot;登录成功~&quot;);
-    &#125;else&#123;
-        System.out.println(&quot;登录失败~&quot;);
-    &#125;
-
-    //7. 释放资源
-    rs.close();
-    stmt.close();
-    conn.close();
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testLogin</span><span class="params">()</span> <span class="keyword">throws</span>  Exception &#123;</span><br><span class="line">    <span class="comment">//2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql:///db1?useSSL=false&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> <span class="string">&quot;root&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> <span class="string">&quot;1234&quot;</span>;</span><br><span class="line">    <span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> DriverManager.getConnection(url, username, password);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 接收用户输入 用户名和密码</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;sjdljfld&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">pwd</span> <span class="operator">=</span> <span class="string">&quot;&#x27; or &#x27;1&#x27; = &#x27;1&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span> <span class="string">&quot;select * from tb_user where username = &#x27;&quot;</span>+name+<span class="string">&quot;&#x27; and password = &#x27;&quot;</span>+pwd+<span class="string">&quot;&#x27;&quot;</span>;</span><br><span class="line">    <span class="comment">// 获取stmt对象</span></span><br><span class="line">    <span class="type">Statement</span> <span class="variable">stmt</span> <span class="operator">=</span> conn.createStatement();</span><br><span class="line">    <span class="comment">// 执行sql</span></span><br><span class="line">    <span class="type">ResultSet</span> <span class="variable">rs</span> <span class="operator">=</span> stmt.executeQuery(sql);</span><br><span class="line">    <span class="comment">// 判断登录是否成功</span></span><br><span class="line">    <span class="keyword">if</span>(rs.next())&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;登录成功~&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;登录失败~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//7. 释放资源</span></span><br><span class="line">    rs.close();</span><br><span class="line">    stmt.close();</span><br><span class="line">    conn.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>上面代码是将用户名和密码拼接到sql语句中，拼接后的sql语句如下</li>
 </ul>
-<pre><code class="sql">select * from tb_user where username = &#39;sjdljfld&#39; and password = &#39;&#39;or &#39;1&#39; = &#39;1&#39;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tb_user <span class="keyword">where</span> username <span class="operator">=</span> <span class="string">&#x27;sjdljfld&#x27;</span> <span class="keyword">and</span> password <span class="operator">=</span> <span class="string">&#x27;&#x27;</span><span class="keyword">or</span> <span class="string">&#x27;1&#x27;</span> <span class="operator">=</span> <span class="string">&#x27;1&#x27;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>获取 PreparedStatement 对象</li>
 </ul>
 </li>
 </ul>
-<pre><code class="java">// SQL语句中的参数值，使用？占位符替代
-String sql = &quot;select * from user where username = ? and password = ?&quot;;
-// 通过Connection对象获取，并传入对应的sql语句
-PreparedStatement pstmt = conn.prepareStatement(sql);</code></pre>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SQL语句中的参数值，使用？占位符替代</span></span><br><span class="line"><span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span> <span class="string">&quot;select * from user where username = ? and password = ?&quot;</span>;</span><br><span class="line"><span class="comment">// 通过Connection对象获取，并传入对应的sql语句</span></span><br><span class="line"><span class="type">PreparedStatement</span> <span class="variable">pstmt</span> <span class="operator">=</span> conn.prepareStatement(sql);</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>设置参数值：PreparedStatement 的sql语句中参数使用 ? 进行占位，在之前之前肯定要设置这些 ?  的值</p>
 </li>
@@ -1623,8 +1293,7 @@ PreparedStatement pstmt = conn.prepareStatement(sql);</code></pre>
 </li>
 <li><p>参数：</p>
 </li>
-<li><p>参数1： ？的位置编号，从1 开始</p>
-<ul>
+<li>参数1： ？的位置编号，从1 开始<ul>
 <li>参数2： ？的值</li>
 </ul>
 </li>
@@ -1640,41 +1309,10 @@ PreparedStatement pstmt = conn.prepareStatement(sql);</code></pre>
 </ul>
 <ul>
 <li><p>使用PreparedStatement改进</p>
-<pre><code class="java">@Test
-public void testPreparedStatement() throws  Exception &#123;
-  //2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写
-  String url = &quot;jdbc:mysql:///db1?useSSL=false&quot;;
-  String username = &quot;root&quot;;
-  String password = &quot;1234&quot;;
-  Connection conn = DriverManager.getConnection(url, username, password);
-
-  // 接收用户输入 用户名和密码
-  String name = &quot;zhangsan&quot;;
-  String pwd = &quot;&#39; or &#39;1&#39; = &#39;1&quot;;
-
-  // 定义sql
-  String sql = &quot;select * from tb_user where username = ? and password = ?&quot;;
-  // 获取pstmt对象
-  PreparedStatement pstmt = conn.prepareStatement(sql);
-  // 设置？的值
-  pstmt.setString(1,name);
-  pstmt.setString(2,pwd);
-  // 执行sql
-  ResultSet rs = pstmt.executeQuery();
-  // 判断登录是否成功
-  if(rs.next())&#123;
-      System.out.println(&quot;登录成功~&quot;);
-  &#125;else&#123;
-      System.out.println(&quot;登录失败~&quot;);
-  &#125;
-  //7. 释放资源
-  rs.close();
-  pstmt.close();
-  conn.close();
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">testPreparedStatement</span><span class="params">()</span> <span class="keyword">throws</span>  Exception &#123;</span><br><span class="line">    <span class="comment">//2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">url</span> <span class="operator">=</span> <span class="string">&quot;jdbc:mysql:///db1?useSSL=false&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">username</span> <span class="operator">=</span> <span class="string">&quot;root&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">password</span> <span class="operator">=</span> <span class="string">&quot;1234&quot;</span>;</span><br><span class="line">    <span class="type">Connection</span> <span class="variable">conn</span> <span class="operator">=</span> DriverManager.getConnection(url, username, password);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 接收用户输入 用户名和密码</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">&quot;zhangsan&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">pwd</span> <span class="operator">=</span> <span class="string">&quot;&#x27; or &#x27;1&#x27; = &#x27;1&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 定义sql</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">sql</span> <span class="operator">=</span> <span class="string">&quot;select * from tb_user where username = ? and password = ?&quot;</span>;</span><br><span class="line">    <span class="comment">// 获取pstmt对象</span></span><br><span class="line">    <span class="type">PreparedStatement</span> <span class="variable">pstmt</span> <span class="operator">=</span> conn.prepareStatement(sql);</span><br><span class="line">    <span class="comment">// 设置？的值</span></span><br><span class="line">    pstmt.setString(<span class="number">1</span>,name);</span><br><span class="line">    pstmt.setString(<span class="number">2</span>,pwd);</span><br><span class="line">    <span class="comment">// 执行sql</span></span><br><span class="line">    <span class="type">ResultSet</span> <span class="variable">rs</span> <span class="operator">=</span> pstmt.executeQuery();</span><br><span class="line">    <span class="comment">// 判断登录是否成功</span></span><br><span class="line">    <span class="keyword">if</span>(rs.next())&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;登录成功~&quot;</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;登录失败~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//7. 释放资源</span></span><br><span class="line">    rs.close();</span><br><span class="line">    pstmt.close();</span><br><span class="line">    conn.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>PreparedStatement 实际上是将特殊字符进行了转义，转义的SQL如下：</p>
-<pre><code class="sql">select * from tb_user where username = &#39;sjdljfld&#39; and password = &#39;\&#39;or \&#39;1\&#39; = \&#39;1&#39;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tb_user <span class="keyword">where</span> username <span class="operator">=</span> <span class="string">&#x27;sjdljfld&#x27;</span> <span class="keyword">and</span> password <span class="operator">=</span> <span class="string">&#x27;\&#x27;</span><span class="keyword">or</span> \<span class="string">&#x27;1\&#x27;</span> <span class="operator">=</span> \<span class="string">&#x27;1&#x27;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>PreparedStatement原理</p>
 <ul>
@@ -1692,21 +1330,16 @@ public void testPreparedStatement() throws  Exception &#123;
 
   * 编译SQL语句。将SQL语句编译成可执行的函数。
   * 检查SQL和编译SQL花费的时间比执行SQL的时间还要长。如果我们只是重新设置参数，那么检查SQL语句和编译SQL语句将不需要重复执行。这样就提高了性能。
-  * 执行SQL语句</code></pre>
-<ul>
+  * 执行SQL语句
+</code></pre><ul>
 <li><p>开启预编译功能：<code>useServerPrepStmts=true</code></p>
-<pre><code class="sql">String url = &quot;jdbc:mysql:///db1?useSSL=false&amp;useServerPrepStmts=true&quot;;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String url <span class="operator">=</span> &quot;jdbc:mysql:///db1?useSSL=false&amp;useServerPrepStmts=true&quot;;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>配置MySQL执行日志（重启mysql服务后生效）</p>
 <ul>
 <li>在mysql配置文件（my.ini）中添加如下配置</li>
 </ul>
-<pre><code class="ini">log-output=FILE
-general-log=1
-general_log_file=&quot;D:\mysql.log&quot;
-slow-query-log=1
-slow_query_log_file=&quot;D:\mysql_slow.log&quot;
-long_query_time=2</code></pre>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">log-output</span>=FILE</span><br><span class="line"><span class="attr">general-log</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">general_log_file</span>=<span class="string">&quot;D:\mysql.log&quot;</span></span><br><span class="line"><span class="attr">slow-query-log</span>=<span class="number">1</span></span><br><span class="line"><span class="attr">slow_query_log_file</span>=<span class="string">&quot;D:\mysql_slow.log&quot;</span></span><br><span class="line"><span class="attr">long_query_time</span>=<span class="number">2</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
@@ -1735,7 +1368,7 @@ long_query_time=2</code></pre>
 <li><p>标准接口：DataSource</p>
 </li>
 <li><p>官方(SUN) 提供的数据库连接池标准接口，由第三方组织实现此接口。该接口提供了获取连接的功能：</p>
-<pre><code class="java">Connection getConnection()</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connection <span class="title function_">getConnection</span><span class="params">()</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
@@ -1763,255 +1396,233 @@ long_query_time=2</code></pre>
 <li>导入jar包 druid-1.1.12.jar</li>
 <li>定义配置文件：src 目录下新建 <code>druid.properties</code></li>
 </ul>
-<pre><code class="properties">driverClassName=com.mysql.jdbc.Driver
-url=jdbc:mysql:///db1?useSSL=false&amp;useServerPrepStmts=true
-username=root
-password=1234
-# 初始化连接数量
-initialSize=5
-# 最大连接数
-maxActive=10
-# 最大等待时间
-maxWait=3000</code></pre>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">driverClassName</span>=<span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line"><span class="attr">url</span>=<span class="string">jdbc:mysql:///db1?useSSL=false&amp;useServerPrepStmts=true</span></span><br><span class="line"><span class="attr">username</span>=<span class="string">root</span></span><br><span class="line"><span class="attr">password</span>=<span class="string">1234</span></span><br><span class="line"><span class="comment"># 初始化连接数量</span></span><br><span class="line"><span class="attr">initialSize</span>=<span class="string">5</span></span><br><span class="line"><span class="comment"># 最大连接数</span></span><br><span class="line"><span class="attr">maxActive</span>=<span class="string">10</span></span><br><span class="line"><span class="comment"># 最大等待时间</span></span><br><span class="line"><span class="attr">maxWait</span>=<span class="string">3000</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>加载配置文件</li>
 <li>获取数据库连接池对象</li>
 <li>获取连接</li>
 </ul>
-<pre><code class="java">/**
- * Druid数据库连接池演示
- */
-public class DruidDemo &#123;
-
-    public static void main(String[] args) throws Exception &#123;
-        // 加载配置文件
-        Properties prop = new Properties();
-        prop.load(new FileInputStream(&quot;jdbc-demo/src/druid.properties&quot;));
-        // 获取连接池对象
-        DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
-        // 获取数据库连接 Connection
-        Connection connection = dataSource.getConnection();
-        System.out.println(connection); //获取到了连接后就可以继续做其他操作了
-        //System.out.println(System.getProperty(&quot;user.dir&quot;));
-    &#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Druid数据库连接池演示</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DruidDemo</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">// 加载配置文件</span></span><br><span class="line">        <span class="type">Properties</span> <span class="variable">prop</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Properties</span>();</span><br><span class="line">        prop.load(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(<span class="string">&quot;jdbc-demo/src/druid.properties&quot;</span>));</span><br><span class="line">        <span class="comment">// 获取连接池对象</span></span><br><span class="line">        <span class="type">DataSource</span> <span class="variable">dataSource</span> <span class="operator">=</span> DruidDataSourceFactory.createDataSource(prop);</span><br><span class="line">        <span class="comment">// 获取数据库连接 Connection</span></span><br><span class="line">        <span class="type">Connection</span> <span class="variable">connection</span> <span class="operator">=</span> dataSource.getConnection();</span><br><span class="line">        System.out.println(connection); <span class="comment">//获取到了连接后就可以继续做其他操作了</span></span><br><span class="line">        <span class="comment">//System.out.println(System.getProperty(&quot;user.dir&quot;));</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>druid 配置详解</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th align="center">属性</th>
-<th align="center">说明</th>
-<th align="center">建议值</th>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">建议值</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="center">url</td>
-<td align="center">数据库的jdbc连接地址。一般为连接oracle/mysql。示例如下：</td>
-<td align="center"></td>
+<tbody>
+<tr>
+<td style="text-align:center">url</td>
+<td style="text-align:center">数据库的jdbc连接地址。一般为连接oracle/mysql。示例如下：</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">mysql : jdbc:mysql://ip:port/dbname?option1&amp;option2&amp;…</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">mysql : jdbc:mysql://ip:port/dbname?option1&amp;option2&amp;…</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">oracle : jdbc:oracle:thin:@ip:port:oracle_sid</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">oracle : jdbc:oracle:thin:@ip:port:oracle_sid</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">username</td>
-<td align="center">登录数据库的用户名</td>
-<td align="center"></td>
+<td style="text-align:center">username</td>
+<td style="text-align:center">登录数据库的用户名</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">password</td>
-<td align="center">登录数据库的用户密码</td>
-<td align="center"></td>
+<td style="text-align:center">password</td>
+<td style="text-align:center">登录数据库的用户密码</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">initialSize</td>
-<td align="center">启动程序时，在连接池中初始化多少个连接</td>
-<td align="center">10-50已足够</td>
+<td style="text-align:center">initialSize</td>
+<td style="text-align:center">启动程序时，在连接池中初始化多少个连接</td>
+<td style="text-align:center">10-50已足够</td>
 </tr>
 <tr>
-<td align="center">maxActive</td>
-<td align="center">连接池中最多支持多少个活动会话</td>
-<td align="center"></td>
+<td style="text-align:center">maxActive</td>
+<td style="text-align:center">连接池中最多支持多少个活动会话</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">maxWait</td>
-<td align="center">程序向连接池中请求连接时,超过maxWait的值后，认为本次请求失败，即连接池</td>
-<td align="center">100</td>
+<td style="text-align:center">maxWait</td>
+<td style="text-align:center">程序向连接池中请求连接时,超过maxWait的值后，认为本次请求失败，即连接池</td>
+<td style="text-align:center">100</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">没有可用连接，单位毫秒，设置-1时表示无限等待</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">没有可用连接，单位毫秒，设置-1时表示无限等待</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">minEvictableIdleTimeMillis</td>
-<td align="center">池中某个连接的空闲时长达到 N 毫秒后, 连接池在下次检查空闲连接时，将</td>
-<td align="center">见说明部分</td>
+<td style="text-align:center">minEvictableIdleTimeMillis</td>
+<td style="text-align:center">池中某个连接的空闲时长达到 N 毫秒后, 连接池在下次检查空闲连接时，将</td>
+<td style="text-align:center">见说明部分</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">回收该连接,要小于防火墙超时设置</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">回收该连接,要小于防火墙超时设置</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">net.netfilter.nf_conntrack_tcp_timeout_established的设置</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">net.netfilter.nf_conntrack_tcp_timeout_established的设置</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">timeBetweenEvictionRunsMillis</td>
-<td align="center">检查空闲连接的频率，单位毫秒, 非正整数时表示不进行检查</td>
-<td align="center"></td>
+<td style="text-align:center">timeBetweenEvictionRunsMillis</td>
+<td style="text-align:center">检查空闲连接的频率，单位毫秒, 非正整数时表示不进行检查</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">keepAlive</td>
-<td align="center">程序没有close连接且空闲时长超过 minEvictableIdleTimeMillis,则会执</td>
-<td align="center">true</td>
+<td style="text-align:center">keepAlive</td>
+<td style="text-align:center">程序没有close连接且空闲时长超过 minEvictableIdleTimeMillis,则会执</td>
+<td style="text-align:center">true</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">行validationQuery指定的SQL,以保证该程序连接不会池kill掉,其范围不超</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">行validationQuery指定的SQL,以保证该程序连接不会池kill掉,其范围不超</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">过minIdle指定的连接个数。</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">过minIdle指定的连接个数。</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">minIdle</td>
-<td align="center">回收空闲连接时，将保证至少有minIdle个连接.</td>
-<td align="center">与initialSize相同</td>
+<td style="text-align:center">minIdle</td>
+<td style="text-align:center">回收空闲连接时，将保证至少有minIdle个连接.</td>
+<td style="text-align:center">与initialSize相同</td>
 </tr>
 <tr>
-<td align="center">removeAbandoned</td>
-<td align="center">要求程序从池中get到连接后, N 秒后必须close,否则druid 会强制回收该</td>
-<td align="center">false,当发现程序有未</td>
+<td style="text-align:center">removeAbandoned</td>
+<td style="text-align:center">要求程序从池中get到连接后, N 秒后必须close,否则druid 会强制回收该</td>
+<td style="text-align:center">false,当发现程序有未</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">连接,不管该连接中是活动还是空闲, 以防止进程不会进行close而霸占连接。</td>
-<td align="center">正常close连接时设置为true</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">连接,不管该连接中是活动还是空闲, 以防止进程不会进行close而霸占连接。</td>
+<td style="text-align:center">正常close连接时设置为true</td>
 </tr>
 <tr>
-<td align="center">removeAbandonedTimeout</td>
-<td align="center">设置druid 强制回收连接的时限，当程序从池中get到连接开始算起，超过此</td>
-<td align="center">应大于业务运行最长时间</td>
+<td style="text-align:center">removeAbandonedTimeout</td>
+<td style="text-align:center">设置druid 强制回收连接的时限，当程序从池中get到连接开始算起，超过此</td>
+<td style="text-align:center">应大于业务运行最长时间</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">值后，druid将强制回收该连接，单位秒。</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">值后，druid将强制回收该连接，单位秒。</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">logAbandoned</td>
-<td align="center">当druid强制回收连接后，是否将stack trace 记录到日志中</td>
-<td align="center">true</td>
+<td style="text-align:center">logAbandoned</td>
+<td style="text-align:center">当druid强制回收连接后，是否将stack trace 记录到日志中</td>
+<td style="text-align:center">true</td>
 </tr>
 <tr>
-<td align="center">testWhileIdle</td>
-<td align="center">当程序请求连接，池在分配连接时，是否先检查该连接是否有效。(高效)</td>
-<td align="center">true</td>
+<td style="text-align:center">testWhileIdle</td>
+<td style="text-align:center">当程序请求连接，池在分配连接时，是否先检查该连接是否有效。(高效)</td>
+<td style="text-align:center">true</td>
 </tr>
 <tr>
-<td align="center">validationQuery</td>
-<td align="center">检查池中的连接是否仍可用的 SQL 语句,drui会连接到数据库执行该SQL, 如果</td>
-<td align="center"></td>
+<td style="text-align:center">validationQuery</td>
+<td style="text-align:center">检查池中的连接是否仍可用的 SQL 语句,drui会连接到数据库执行该SQL, 如果</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">正常返回，则表示连接可用，否则表示连接不可用</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">正常返回，则表示连接可用，否则表示连接不可用</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">testOnBorrow</td>
-<td align="center">程序 <strong>申请</strong> 连接时,进行连接有效性检查（低效，影响性能）</td>
-<td align="center">false</td>
+<td style="text-align:center">testOnBorrow</td>
+<td style="text-align:center">程序 <strong>申请</strong> 连接时,进行连接有效性检查（低效，影响性能）</td>
+<td style="text-align:center">false</td>
 </tr>
 <tr>
-<td align="center">testOnReturn</td>
-<td align="center">程序 <strong>返还</strong> 连接时,进行连接有效性检查（低效，影响性能）</td>
-<td align="center">false</td>
+<td style="text-align:center">testOnReturn</td>
+<td style="text-align:center">程序 <strong>返还</strong> 连接时,进行连接有效性检查（低效，影响性能）</td>
+<td style="text-align:center">false</td>
 </tr>
 <tr>
-<td align="center">poolPreparedStatements</td>
-<td align="center">缓存通过以下两个方法发起的SQL:</td>
-<td align="center">true</td>
+<td style="text-align:center">poolPreparedStatements</td>
+<td style="text-align:center">缓存通过以下两个方法发起的SQL:</td>
+<td style="text-align:center">true</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">public PreparedStatement prepareStatement(String sql)</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">public PreparedStatement prepareStatement(String sql)</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">public PreparedStatement prepareStatement(String sql,</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">public PreparedStatement prepareStatement(String sql,</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">int resultSetType, int resultSetConcurrency)</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">int resultSetType, int resultSetConcurrency)</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">maxPoolPrepareStatementPerConnectionSize</td>
-<td align="center">每个连接最多缓存多少个SQL</td>
-<td align="center">20</td>
+<td style="text-align:center">maxPoolPrepareStatementPerConnectionSize</td>
+<td style="text-align:center">每个连接最多缓存多少个SQL</td>
+<td style="text-align:center">20</td>
 </tr>
 <tr>
-<td align="center">filters</td>
-<td align="center">这里配置的是插件,常用的插件有:</td>
-<td align="center">stat,wall,slf4j</td>
+<td style="text-align:center">filters</td>
+<td style="text-align:center">这里配置的是插件,常用的插件有:</td>
+<td style="text-align:center">stat,wall,slf4j</td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">监控统计: filter:stat</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">监控统计: filter:stat</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">日志监控: filter:log4j 或者 slf4j</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">日志监控: filter:log4j 或者 slf4j</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">防御SQL注入: filter:wall</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">防御SQL注入: filter:wall</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center">connectProperties</td>
-<td align="center">连接属性。比如设置一些连接池统计方面的配置。</td>
-<td align="center"></td>
+<td style="text-align:center">connectProperties</td>
+<td style="text-align:center">连接属性。比如设置一些连接池统计方面的配置。</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center">比如设置一些数据库连接属性:</td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">比如设置一些数据库连接属性:</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
   
   
@@ -2023,7 +1634,7 @@ public class DruidDemo &#123;
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -2048,6 +1659,10 @@ public class DruidDemo &#123;
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/JDBC%E5%9F%BA%E7%A1%80/>http://blog.zhuangzhihao.top/JDBC%E5%9F%BA%E7%A1%80/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -2063,12 +1678,8 @@ public class DruidDemo &#123;
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/Java/">Java</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MySQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>MySQL</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JDBC/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>JDBC</p></a></div>
 
 
         
@@ -2086,77 +1697,6 @@ public class DruidDemo &#123;
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/JDBC%E5%9F%BA%E7%A1%80/&title=Java 数据库基础知识总结 - Bezhuang's Blog&summary=
-Java 数据库连接，JDBC（Java Database Connectivity），是 Java 语言编程中与数据库连接的 API，封装了各种数据库访问的 API 和基础类库，支持多种数据库连接，也是 Java Web 技术核心的第一部分，我把整个学习过程分为 MySQL 基础、MySQL 高级、JDBC 和数据连接池四个部分，便于理解。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/JDBC%E5%9F%BA%E7%A1%80/&title=Java 数据库基础知识总结 - Bezhuang's Blog&summary=
-Java 数据库连接，JDBC（Java Database Connectivity），是 Java 语言编程中与数据库连接的 API，封装了各种数据库访问的 API 和基础类库，支持多种数据库连接，也是 Java Web 技术核心的第一部分，我把整个学习过程分为 MySQL 基础、MySQL 高级、JDBC 和数据连接池四个部分，便于理解。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/JDBC%E5%9F%BA%E7%A1%80/&title=Java 数据库基础知识总结 - Bezhuang's Blog&summary=
-Java 数据库连接，JDBC（Java Database Connectivity），是 Java 语言编程中与数据库连接的 API，封装了各种数据库访问的 API 和基础类库，支持多种数据库连接，也是 Java Web 技术核心的第一部分，我把整个学习过程分为 MySQL 基础、MySQL 高级、JDBC 和数据连接池四个部分，便于理解。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAADBklEQVR42u3aOW7EMAwAQP//00mfBDAvOSZ21O1hiRw3BKnry/pzXQjAgAEDBgyYNTBXcf3a8Ob7n793z42el94XDBgwYMCAAbMOJlwA3fz/LoFswt3P2XzAgAEDBgwYMHthpgKvPn+XQHX/8P/BgAEDBgwYMB8LE00oWxhmG2NgwIABAwYMGDBVmCxIdcC3rsADAwYMGDBgwByDSQ+ohhKo7p8dCD42iQQDBgwYMGDAPAaTXacu+kx9LucDBgwYMGDAgFkD012nGk3RfaYXGDBgwIABA2YPTLVAqjaMpgZ50y8KDBgwYMCAAbMfpju4KgfUbDCNvRAwYMCAAQMGzBqY24s0zUSrAVYbW9F80h08MGDAgAEDBszrYLIHRQ/sFmLRArD7YsOVLxgwYMCAAQPmdTDdDacaR1no6cIODBgwYMCAAbMPprpxuGBqFmTpxJIvoj2JBAMGDBgwYMD8O0z24KlGVndQ173YdFvggQEDBgwYMGBeC5N9cPq5amLZeMLPgwEDBgwYMGDWwGQbQ9XG0lThlj0/GxcYMGDAgAEDZg/MVKDZxtOpQV518AcGDBgwYMCA2QeTbuQkE+k2jqrA2YIQDBgwYMCAAbMfJgoW/T0a6FQ82YFguYMHBgwYMGDAgPl3mOqAK9qwmh6kVRtl4TjAgAEDBgwYMGtgTjWosg2makE5fsEJDBgwYMCAAbMOZmrj6kWj6kCtWuiFB25gwIABAwYMmDUwUainEj71YtIFHhgwYMCAAQPm9TDTjanuBZ/sRaNq4wsMGDBgwIABsw+mu04VXNXBWjc+MGDAgAEDBswemKu42gEMNaiqBWZ44AYGDBgwYMCAeT3M2MAqOZirNq7unh8r8MCAAQMGDBgwa2BODdSyhVkXOpsHGDBgwIABAwbMU4O7YxeKwIABAwYMGDAfB1NtQGULvO7+jzeqwIABAwYMGDCPwWQLsWxA1QtI2UZW9gWAAQMGDBgwYPbCdAdXVZBo4ZUtQMugYMCAAQMGDJg1MBYYMGDAgAEDZtn6Bgqu4yxar0sLAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/JDBC%E5%9F%BA%E7%A1%80/&text=Java 数据库基础知识总结 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -2275,17 +1815,9 @@ Java 数据库连接，JDBC（Java Database Connectivity），是 Java 语言编
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -2411,8 +1943,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -2768,29 +2298,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -2829,7 +2336,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -2889,20 +2396,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -3115,6 +2608,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

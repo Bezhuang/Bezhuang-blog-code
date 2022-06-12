@@ -109,7 +109,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -233,16 +233,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -365,16 +375,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -398,7 +418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -421,36 +441,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -484,8 +474,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
+    </a>
+  </div>
 
 
           
@@ -511,7 +505,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fas fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>时长：13分钟</p>
+      <p>时长：12分钟</p>
     </a>
   </div>
 
@@ -528,8 +522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>Much of the world’s data resides in databases, A working knowledge of databases and SQL is a must to become a data scientist. The emphasis in this course provided by IBM is on hands-on and practical learning. So, I’ll try to record how I work with real databases, real data science tools, real-world datasets and eventually, how I create a database instance in the cloud on the following notes I took during this course.</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 
 
 	<div class="row">
@@ -538,20 +531,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-
 <h3 id="Introduction-to-Databases"><a href="#Introduction-to-Databases" class="headerlink" title="Introduction to Databases"></a>Introduction to Databases</h3><ul>
-<li><p>Structured Query Language (or SQL) is a powerful language which is used for communicating with and extracting data from databases.</p>
-</li>
-<li><p>SQL is among the top 3 skills for a Data Scientist or Data Analysts</p>
-</li>
-<li><p>A database is a repository of data, it provides the functionality for adding, modifying and querying data</p>
-</li>
-<li><p>RDBMS = Relational database management system</p>
-</li>
-<li><p>5 Basic SQL commands: Create, Insert, Select, Update, Delete</p>
-</li>
-<li><p>Cloud databases: Ease of use and access, Scalability &amp; Economics, Disaster recovery</p>
-<ul>
+<li>Structured Query Language (or SQL) is a powerful language which is used for communicating with and extracting data from databases.</li>
+<li>SQL is among the top 3 skills for a Data Scientist or Data Analysts</li>
+<li>A database is a repository of data, it provides the functionality for adding, modifying and querying data</li>
+<li>RDBMS = Relational database management system</li>
+<li>5 Basic SQL commands: Create, Insert, Select, Update, Delete</li>
+<li>Cloud databases: Ease of use and access, Scalability &amp; Economics, Disaster recovery<ul>
 <li>IBM Db2, PostgreSQL, Oracle Cloud, Microsoft Azure, Amazon RDS</li>
 </ul>
 </li>
@@ -559,14 +545,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </li>
 <li><p>Relational Model allows for data independence (key advantage)</p>
 </li>
-<li><p>Entities are independent objects which have Attributes</p>
-<ul>
+<li>Entities are independent objects which have Attributes<ul>
 <li>Entity-Relationship Model (ER-Model): used as a tool to design RDBMS</li>
 <li>Mapping Entity Diagrams to Tables: Entities become tables, Attributes get translated into columns</li>
 </ul>
 </li>
-<li><p>Primary Keys and Foreign Keys: A primary key uniquely identifies a specific row in a table and prevents duplication of data.</p>
-</li>
+<li>Primary Keys and Foreign Keys: A primary key uniquely identifies a specific row in a table and prevents duplication of data.</li>
 </ul>
 <h3 id="Basic-SQL"><a href="#Basic-SQL" class="headerlink" title="Basic SQL"></a>Basic SQL</h3><ul>
 <li><p>Data Definition Language statements (DDL) and Data Manipulation Language statements (DML)</p>
@@ -586,53 +570,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <ul>
 <li>It is quite common to issue a <code>DROP</code> before doing a <code>CREATE</code> in test and development scenarios, but if the table does not already exist and you try to drop it, you will see an error like <code>XXX.YYY</code> is an undefined name.</li>
 </ul>
-<pre><code class="mysql">drop table COUNTRY;  ## If table already exists
-create table COUNTRY(
-    ID int PRIMARY KEY NOT NULL,
-    CCODE char(2) NOT NULL,
-    NAME varchar(60)
-);</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">drop table COUNTRY;  ## If table already exists</span><br><span class="line">create table COUNTRY(</span><br><span class="line">	ID int PRIMARY KEY NOT NULL,</span><br><span class="line">	CCODE char(2) NOT NULL,</span><br><span class="line">	NAME varchar(60)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Use <code>SELECT</code> queries to retrieve data from the database</p>
-<pre><code class="mysql">select COLUMN1, COLUMN2, ... from TABLE1 ;
-##  or
-select * from COUNTRY ;
-## or
-select * from COUNTRY where ID &lt; 5 ;
-## or
-select * from COUNTRY where CCODE = &#39;CA&#39;;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">select COLUMN1, COLUMN2, ... from TABLE1 ;</span><br><span class="line">##  or</span><br><span class="line">select * from COUNTRY ;</span><br><span class="line">## or</span><br><span class="line">select * from COUNTRY where ID &lt; 5 ;</span><br><span class="line">## or</span><br><span class="line">select * from COUNTRY where CCODE = &#x27;CA&#x27;;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Use <code>COUNT</code>, <code>DISTINCT</code>, <code>LIMIT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code> to compose and run basic queries</p>
-<pre><code class="mysql">-- 0. Drop table INSTRUCTOR in case it already exists
-drop table INSTRUCTOR;
--- 1. Create table INSTRUCTOR
-CREATE TABLE INSTRUCTOR
-  (ins_id INTEGER PRIMARY KEY NOT NULL, 
-   lastname VARCHAR(15) NOT NULL, 
-   firstname VARCHAR(15) NOT NULL, 
-   city VARCHAR(15), 
-   country CHAR(2)
-  );
--- 2A. Insert single row for Rav Ahuja
-INSERT INTO INSTRUCTOR
-  (ins_id, lastname, firstname, city, country)
-  VALUES 
-  (1, &#39;Ahuja&#39;, &#39;Rav&#39;, &#39;Toronto&#39;, &#39;CA&#39;);
--- 2B. Insert the two rows for Raul and Hima
-INSERT INTO INSTRUCTOR
-  VALUES
-  (2, &#39;Chong&#39;, &#39;Raul&#39;, &#39;Toronto&#39;, &#39;CA&#39;),
-  (3, &#39;Vasudevan&#39;, &#39;Hima&#39;, &#39;Chicago&#39;, &#39;US&#39;);
--- 3. Select all rows in the table
-SELECT * FROM INSTRUCTOR;
--- 3b. Select firstname, lastname and country where city is Toronto
-SELECT firstname, lastname, country from INSTRUCTOR where city=&#39;Toronto&#39;;
--- 4. Change the city for Rav to Markham
-UPDATE INSTRUCTOR SET city=&#39;Markham&#39; where ins_id=1;
--- 5. Delete the row for Raul Chong
-DELETE FROM INSTRUCTOR where ins_id=2;
--- 5b. Retrieve all rows from the table
-SELECT * FROM INSTRUCTOR ;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">-- 0. Drop table INSTRUCTOR in case it already exists</span><br><span class="line">drop table INSTRUCTOR;</span><br><span class="line">-- 1. Create table INSTRUCTOR</span><br><span class="line">CREATE TABLE INSTRUCTOR</span><br><span class="line">  (ins_id INTEGER PRIMARY KEY NOT NULL, </span><br><span class="line">   lastname VARCHAR(15) NOT NULL, </span><br><span class="line">   firstname VARCHAR(15) NOT NULL, </span><br><span class="line">   city VARCHAR(15), </span><br><span class="line">   country CHAR(2)</span><br><span class="line">  );</span><br><span class="line">-- 2A. Insert single row for Rav Ahuja</span><br><span class="line">INSERT INTO INSTRUCTOR</span><br><span class="line">  (ins_id, lastname, firstname, city, country)</span><br><span class="line">  VALUES </span><br><span class="line">  (1, &#x27;Ahuja&#x27;, &#x27;Rav&#x27;, &#x27;Toronto&#x27;, &#x27;CA&#x27;);</span><br><span class="line">-- 2B. Insert the two rows for Raul and Hima</span><br><span class="line">INSERT INTO INSTRUCTOR</span><br><span class="line">  VALUES</span><br><span class="line">  (2, &#x27;Chong&#x27;, &#x27;Raul&#x27;, &#x27;Toronto&#x27;, &#x27;CA&#x27;),</span><br><span class="line">  (3, &#x27;Vasudevan&#x27;, &#x27;Hima&#x27;, &#x27;Chicago&#x27;, &#x27;US&#x27;);</span><br><span class="line">-- 3. Select all rows in the table</span><br><span class="line">SELECT * FROM INSTRUCTOR;</span><br><span class="line">-- 3b. Select firstname, lastname and country where city is Toronto</span><br><span class="line">SELECT firstname, lastname, country from INSTRUCTOR where city=&#x27;Toronto&#x27;;</span><br><span class="line">-- 4. Change the city for Rav to Markham</span><br><span class="line">UPDATE INSTRUCTOR SET city=&#x27;Markham&#x27; where ins_id=1;</span><br><span class="line">-- 5. Delete the row for Raul Chong</span><br><span class="line">DELETE FROM INSTRUCTOR where ins_id=2;</span><br><span class="line">-- 5b. Retrieve all rows from the table</span><br><span class="line">SELECT * FROM INSTRUCTOR ;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="String-Patterns-Ranges-Sorting-and-Grouping"><a href="#String-Patterns-Ranges-Sorting-and-Grouping" class="headerlink" title="String Patterns, Ranges, Sorting and Grouping"></a>String Patterns, Ranges, Sorting and Grouping</h3><ul>
@@ -641,16 +585,12 @@ SELECT * FROM INSTRUCTOR ;</code></pre>
 <li>The <code>WHERE</code> clause always requires a predicate, which is a condition that evaluates to true, false or unknown.</li>
 <li>Use the <code>LIKE</code> predicate with string patterns for the search：<code>WHERE &lt;columnname&gt; LIKE &lt;string pattern&gt;</code></li>
 </ul>
-<pre><code class="mysql">select F_NAME , L_NAME
-from EMPLOYEES
-where ADDRESS LIKE &#39;%Elgin,IL%&#39; ;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select F_NAME , L_NAME</span><br><span class="line">from EMPLOYEES</span><br><span class="line">where ADDRESS LIKE &#x27;%Elgin,IL%&#x27; ;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Sorting Result Sets</p>
 <ul>
 <li><p><code>ORDER BY</code>: Descending order，Specifying Column Sequence Number</p>
-<pre><code class="mysql">select F_NAME, L_NAME, DEP_ID 
-from EMPLOYEES
-order by DEP_ID desc, L_NAME desc;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select F_NAME, L_NAME, DEP_ID </span><br><span class="line">from EMPLOYEES</span><br><span class="line">order by DEP_ID desc, L_NAME desc;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -660,11 +600,7 @@ order by DEP_ID desc, L_NAME desc;</code></pre>
 <li><code>GROUP BY</code></li>
 <li><code>HAVING</code>: Restricting the result set</li>
 </ul>
-<pre><code class="mysql">select DEP_ID, COUNT(*) AS &quot;NUM_EMPLOYEES&quot;, AVG(SALARY) AS &quot;AVG_SALARY&quot;
-from EMPLOYEES
-group by DEP_ID
-having count(*) &lt; 4
-order by AVG_SALARY;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select DEP_ID, COUNT(*) AS &quot;NUM_EMPLOYEES&quot;, AVG(SALARY) AS &quot;AVG_SALARY&quot;</span><br><span class="line">from EMPLOYEES</span><br><span class="line">group by DEP_ID</span><br><span class="line">having count(*) &lt; 4</span><br><span class="line">order by AVG_SALARY;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Functions-Sub-Queries-Multiple-Tables"><a href="#Functions-Sub-Queries-Multiple-Tables" class="headerlink" title="Functions, Sub-Queries, Multiple Tables"></a>Functions, Sub-Queries, Multiple Tables</h3><ul>
@@ -675,45 +611,38 @@ order by AVG_SALARY;</code></pre>
 <li>INPUT: Collection of values (e.g. entire column), OUTPUT: Single value</li>
 <li><code>SUM()</code>, <code>MIN()</code>, <code>MAX()</code>, <code>AVG()</code></li>
 </ul>
-<pre><code class="mysql">select AVG( COST / QUANTITY ) from PETRESCUE where ANIMAL = &#39;Dog&#39;;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select AVG( COST / QUANTITY ) from PETRESCUE where ANIMAL = &#x27;Dog&#x27;;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><code>SCALAR</code> and <code>STRING</code> functions</p>
 <ul>
 <li>Perform operations on every input value</li>
 <li><code>ROUND()</code>, <code>LENGTH()</code>, <code>UCASE</code>, <code>LCASE</code></li>
 </ul>
-<pre><code class="mysql">select DISTINCT(UCASE(ANIMAL)) from PETRESCUE;
-select * from PETRESCUE where LCASE(ANIMAL) = &#39;cat&#39;;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select DISTINCT(UCASE(ANIMAL)) from PETRESCUE;</span><br><span class="line">select * from PETRESCUE where LCASE(ANIMAL) = &#x27;cat&#x27;;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Date and Time Built-in Functions</p>
 <ul>
 <li><code>YEAR()</code>, <code>MONTH()</code>, <code>DAY()</code>, <code>DAYOFWEEK()</code>, <code>DAYOFYEAR()</code>, <code>WEEK()</code>, <code>HOUR()</code>, <code>MINUTE()</code>, <code>SECOND()</code></li>
 <li>Date or Time Arithmetic</li>
 </ul>
-<pre><code class="mysql">select SUM(QUANTITY) from PETRESCUE where DAY(RESCUEDATE)=&#39;14&#39;;
-select (RESCUEDATE + 3 DAYS) from PETRESCUE;
-select (CURRENT DATE - RESCUEDATE) from PETRESCUE;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select SUM(QUANTITY) from PETRESCUE where DAY(RESCUEDATE)=&#x27;14&#x27;;</span><br><span class="line">select (RESCUEDATE + 3 DAYS) from PETRESCUE;</span><br><span class="line">select (CURRENT DATE - RESCUEDATE) from PETRESCUE;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Sub-Queries and Nested Selects</p>
 <ul>
 <li>Sub-Queries cannot evaluate Aggregate functions like <code>AVG()</code> in the <code>WHERE</code> clause,therefore,use a sub-Select expression</li>
 <li>Sub-queries in <code>FROM</code> clause substitute the <code>TABLE</code> name with a sub-query called Derived Tables or Table Expressions.</li>
 </ul>
-<pre><code class="mysql">select * from employees where salary &gt; AVG(salary)
-select EMP_ID, F_NAME, L_NAME, SALARY from employees where SALARY &gt; (select AVG(SALARY) from employees);
-select EMP_ID, SALARY, ( select AVG(SALARY) from employees ) AS AVG_SALARY from employees ;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from employees where salary &gt; AVG(salary)</span><br><span class="line">select EMP_ID, F_NAME, L_NAME, SALARY from employees where SALARY &gt; (select AVG(SALARY) from employees);</span><br><span class="line">select EMP_ID, SALARY, ( select AVG(SALARY) from employees ) AS AVG_SALARY from employees ;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Working with Multiple Tables</p>
 <ul>
 <li>Sub-queries</li>
 </ul>
-<pre><code class="mysql">select * from employees where DEP_ID IN ( select DEPT_ID_DEP from departments where LOC_ID = &#39;L0002&#39; );
-select DEPT_ID_DEP, DEP_NAME from departments where DEPT_ID_DEP IN ( select DEP_ID from employees where SALARY &gt; 70000 ) ;</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from employees where DEP_ID IN ( select DEPT_ID_DEP from departments where LOC_ID = &#x27;L0002&#x27; );</span><br><span class="line">select DEPT_ID_DEP, DEP_NAME from departments where DEPT_ID_DEP IN ( select DEP_ID from employees where SALARY &gt; 70000 ) ;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Implicit <code>JOIN</code></li>
 </ul>
-<pre><code class="mysql">select * from employees E, departments D where E.DEP_ID = D.DEPT_ID_DEP;
-select E.EMP_ID, D.DEP_NAME from employees E, departments D where E.DEP_ID = D.DEPT_ID_DEP</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from employees E, departments D where E.DEP_ID = D.DEPT_ID_DEP;</span><br><span class="line">select E.EMP_ID, D.DEP_NAME from employees E, departments D where E.DEP_ID = D.DEPT_ID_DEP</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>JOIN</code> operators（<code>INNER JOIN</code>, <code>OUTER JOIN</code>…）</li>
 </ul>
@@ -729,90 +658,19 @@ select E.EMP_ID, D.DEP_NAME from employees E, departments D where E.DEP_ID = D.D
 <li>Connection methods: <code>.cursor()</code>, <code>.commit()</code>, <code>.rollback()</code>, <code>.close()</code></li>
 <li>Cursor methods: <code>.callproc()</code>, <code>.execute()</code>, <code>.executemany()</code>, <code>.fetchone()</code>, <code>.fetchmany()</code>, <code>.fetchall()</code>, <code>.nextset()</code>, <code>.arraysize()</code>, <code>.close()</code></li>
 </ul>
-<pre><code class="python">from dbmodule import connect
-#Create connection object
-Connection = connect(&#39;databasename&#39;, &#39;username&#39;, &#39;pswd&#39;)
-#Create a cursor object
-Cursor=connection.cursor()
-#Run Queries
-Cursor.execute(&#39;select * from mytable&#39;)
-Results = cursor.fetchall()
-#Free resources
-Cursor.close()
-Connection.close()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> dbmodule <span class="keyword">import</span> connect</span><br><span class="line"><span class="comment">#Create connection object</span></span><br><span class="line">Connection = connect(<span class="string">&#x27;databasename&#x27;</span>, <span class="string">&#x27;username&#x27;</span>, <span class="string">&#x27;pswd&#x27;</span>)</span><br><span class="line"><span class="comment">#Create a cursor object</span></span><br><span class="line">Cursor=connection.cursor()</span><br><span class="line"><span class="comment">#Run Queries</span></span><br><span class="line">Cursor.execute(<span class="string">&#x27;select * from mytable&#x27;</span>)</span><br><span class="line">Results = cursor.fetchall()</span><br><span class="line"><span class="comment">#Free resources</span></span><br><span class="line">Cursor.close()</span><br><span class="line">Connection.close()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Connect to Db2 database (ibm_db API)</p>
-<pre><code class="python">import ibm_db
-#Replace the placeholder values with your actual Db2 hostname, username, and password:
-dsn_hostname = &quot;YourDb2Hostname&quot;   # e.g.: &quot;dashdb-txn-sbox-yp-dal09-04.services.dal.bluemix.net&quot;
-dsn_uid = &quot;YourDb2Username&quot;        # e.g. &quot;abc12345&quot;
-dsn_pwd = &quot;YoueDb2Password&quot;      # e.g. &quot;7dBZ3wWt9XN6$o0J&quot;
-dsn_driver = &quot;&#123;IBM DB2 ODBC DRIVER&#125;&quot;
-dsn_database = &quot;BLUDB&quot;            # e.g. &quot;BLUDB&quot;
-dsn_port = &quot;50000&quot;                # e.g. &quot;50000&quot; 
-dsn_protocol = &quot;TCPIP&quot;            # i.e. &quot;TCPIP&quot;
-#Create the dsn connection string
-dsn = (
-    &quot;DRIVER=&#123;0&#125;;&quot;
-    &quot;DATABASE=&#123;1&#125;;&quot;
-    &quot;HOSTNAME=&#123;2&#125;;&quot;
-    &quot;PORT=&#123;3&#125;;&quot;
-    &quot;PROTOCOL=&#123;4&#125;;&quot;
-    &quot;UID=&#123;5&#125;;&quot;
-    &quot;PWD=&#123;6&#125;;&quot;).format(dsn_driver, dsn_database, dsn_hostname, dsn_port, dsn_protocol, dsn_uid, dsn_pwd)
-#Create database connection
-try:
-    conn = ibm_db.connect(dsn, &quot;&quot;, &quot;&quot;)
-    print (&quot;Connected to database: &quot;, dsn_database, &quot;as user: &quot;, dsn_uid, &quot;on host: &quot;, dsn_hostname)
-except:
-    print (&quot;Unable to connect: &quot;, ibm_db.conn_errormsg() )</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ibm_db</span><br><span class="line"><span class="comment">#Replace the placeholder values with your actual Db2 hostname, username, and password:</span></span><br><span class="line">dsn_hostname = <span class="string">&quot;YourDb2Hostname&quot;</span>   <span class="comment"># e.g.: &quot;dashdb-txn-sbox-yp-dal09-04.services.dal.bluemix.net&quot;</span></span><br><span class="line">dsn_uid = <span class="string">&quot;YourDb2Username&quot;</span>        <span class="comment"># e.g. &quot;abc12345&quot;</span></span><br><span class="line">dsn_pwd = <span class="string">&quot;YoueDb2Password&quot;</span>      <span class="comment"># e.g. &quot;7dBZ3wWt9XN6$o0J&quot;</span></span><br><span class="line">dsn_driver = <span class="string">&quot;&#123;IBM DB2 ODBC DRIVER&#125;&quot;</span></span><br><span class="line">dsn_database = <span class="string">&quot;BLUDB&quot;</span>            <span class="comment"># e.g. &quot;BLUDB&quot;</span></span><br><span class="line">dsn_port = <span class="string">&quot;50000&quot;</span>                <span class="comment"># e.g. &quot;50000&quot; </span></span><br><span class="line">dsn_protocol = <span class="string">&quot;TCPIP&quot;</span>            <span class="comment"># i.e. &quot;TCPIP&quot;</span></span><br><span class="line"><span class="comment">#Create the dsn connection string</span></span><br><span class="line">dsn = (</span><br><span class="line">    <span class="string">&quot;DRIVER=&#123;0&#125;;&quot;</span></span><br><span class="line">    <span class="string">&quot;DATABASE=&#123;1&#125;;&quot;</span></span><br><span class="line">    <span class="string">&quot;HOSTNAME=&#123;2&#125;;&quot;</span></span><br><span class="line">    <span class="string">&quot;PORT=&#123;3&#125;;&quot;</span></span><br><span class="line">    <span class="string">&quot;PROTOCOL=&#123;4&#125;;&quot;</span></span><br><span class="line">    <span class="string">&quot;UID=&#123;5&#125;;&quot;</span></span><br><span class="line">    <span class="string">&quot;PWD=&#123;6&#125;;&quot;</span>).<span class="built_in">format</span>(dsn_driver, dsn_database, dsn_hostname, dsn_port, dsn_protocol, dsn_uid, dsn_pwd)</span><br><span class="line"><span class="comment">#Create database connection</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    conn = ibm_db.connect(dsn, <span class="string">&quot;&quot;</span>, <span class="string">&quot;&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;Connected to database: &quot;</span>, dsn_database, <span class="string">&quot;as user: &quot;</span>, dsn_uid, <span class="string">&quot;on host: &quot;</span>, dsn_hostname)</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    <span class="built_in">print</span> (<span class="string">&quot;Unable to connect: &quot;</span>, ibm_db.conn_errormsg() )</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Close the connection</p>
-<pre><code class="python">ibm_db.close(conn)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ibm_db.close(conn)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Creating tables, loading data and querying data</p>
-<pre><code class="python">#Lets first drop the table INSTRUCTOR in case it exists from a previous attempt
-dropQuery = &quot;drop table INSTRUCTOR&quot;
-#Now execute the drop statment
-dropStmt = ibm_db.exec_immediate(conn, dropQuery)
-#Construct the Create Table DDL statement - replace the ... with rest of the statement
-createQuery = &quot;create table INSTRUCTOR(id INTEGER PRIMARY KEY NOT NULL, fname ...)&quot;
-#Now fill in the name of the method and execute the statement
-createStmt = ibm_db.replace_with_name_of_execution_method(conn, createQuery)
-#Construct the query - replace ... with the insert statement
-insertQuery = &quot;...&quot;
-#execute the insert statement
-insertStmt = ibm_db.exec_immediate(conn, insertQuery)
-#replace ... with the insert statement that inerts the remaining two rows of data
-insertQuery2 = &quot;...&quot;
-#execute the statement
-insertStmt2 = ibm_db.exec_immediate(conn, insertQuery2)
-#Construct the query that retrieves all rows from the INSTRUCTOR table
-selectQuery = &quot;select * from INSTRUCTOR&quot;
-#Execute the statement
-selectStmt = ibm_db.exec_immediate(conn, selectQuery)
-#Fetch the Dictionary (for the first row only) - replace ... with your code
-...
-#Fetch the rest of the rows and print the ID and FNAME for those rows
-while ibm_db.fetch_row(selectStmt) != False:
-   print (&quot; ID:&quot;,  ibm_db.result(selectStmt, 0), &quot; FNAME:&quot;,  ibm_db.result(selectStmt, &quot;FNAME&quot;))
-updateQuery = &quot;update INSTRUCTOR set CITY=&#39;MOOSETOWN&#39; where FNAME=&#39;Rav&#39;&quot;
-updateStmt = ibm_db.exec_immediate(conn, updateQuery))</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Lets first drop the table INSTRUCTOR in case it exists from a previous attempt</span></span><br><span class="line">dropQuery = <span class="string">&quot;drop table INSTRUCTOR&quot;</span></span><br><span class="line"><span class="comment">#Now execute the drop statment</span></span><br><span class="line">dropStmt = ibm_db.exec_immediate(conn, dropQuery)</span><br><span class="line"><span class="comment">#Construct the Create Table DDL statement - replace the ... with rest of the statement</span></span><br><span class="line">createQuery = <span class="string">&quot;create table INSTRUCTOR(id INTEGER PRIMARY KEY NOT NULL, fname ...)&quot;</span></span><br><span class="line"><span class="comment">#Now fill in the name of the method and execute the statement</span></span><br><span class="line">createStmt = ibm_db.replace_with_name_of_execution_method(conn, createQuery)</span><br><span class="line"><span class="comment">#Construct the query - replace ... with the insert statement</span></span><br><span class="line">insertQuery = <span class="string">&quot;...&quot;</span></span><br><span class="line"><span class="comment">#execute the insert statement</span></span><br><span class="line">insertStmt = ibm_db.exec_immediate(conn, insertQuery)</span><br><span class="line"><span class="comment">#replace ... with the insert statement that inerts the remaining two rows of data</span></span><br><span class="line">insertQuery2 = <span class="string">&quot;...&quot;</span></span><br><span class="line"><span class="comment">#execute the statement</span></span><br><span class="line">insertStmt2 = ibm_db.exec_immediate(conn, insertQuery2)</span><br><span class="line"><span class="comment">#Construct the query that retrieves all rows from the INSTRUCTOR table</span></span><br><span class="line">selectQuery = <span class="string">&quot;select * from INSTRUCTOR&quot;</span></span><br><span class="line"><span class="comment">#Execute the statement</span></span><br><span class="line">selectStmt = ibm_db.exec_immediate(conn, selectQuery)</span><br><span class="line"><span class="comment">#Fetch the Dictionary (for the first row only) - replace ... with your code</span></span><br><span class="line">...</span><br><span class="line"><span class="comment">#Fetch the rest of the rows and print the ID and FNAME for those rows</span></span><br><span class="line"><span class="keyword">while</span> ibm_db.fetch_row(selectStmt) != <span class="literal">False</span>:</span><br><span class="line">   <span class="built_in">print</span> (<span class="string">&quot; ID:&quot;</span>,  ibm_db.result(selectStmt, <span class="number">0</span>), <span class="string">&quot; FNAME:&quot;</span>,  ibm_db.result(selectStmt, <span class="string">&quot;FNAME&quot;</span>))</span><br><span class="line">updateQuery = <span class="string">&quot;update INSTRUCTOR set CITY=&#x27;MOOSETOWN&#x27; where FNAME=&#x27;Rav&#x27;&quot;</span></span><br><span class="line">updateStmt = ibm_db.exec_immediate(conn, updateQuery))</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Retrieve data into Pandas</p>
-<pre><code class="python">import pandas
-import ibm_db_dbi
-#connection for pandas
-pconn = ibm_db_dbi.Connection(conn)
-#query statement to retrieve all rows in INSTRUCTOR table
-selectQuery = &quot;select * from INSTRUCTOR&quot;
-#retrieve the query results into a pandas dataframe
-pdf = pandas.read_sql(selectQuery, pconn)
-#print just the LNAME for first row in the pandas data frame
-pdf.LNAME[0]
-#print the entire data frame
-pdf
-pdf.shape</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line"><span class="keyword">import</span> ibm_db_dbi</span><br><span class="line"><span class="comment">#connection for pandas</span></span><br><span class="line">pconn = ibm_db_dbi.Connection(conn)</span><br><span class="line"><span class="comment">#query statement to retrieve all rows in INSTRUCTOR table</span></span><br><span class="line">selectQuery = <span class="string">&quot;select * from INSTRUCTOR&quot;</span></span><br><span class="line"><span class="comment">#retrieve the query results into a pandas dataframe</span></span><br><span class="line">pdf = pandas.read_sql(selectQuery, pconn)</span><br><span class="line"><span class="comment">#print just the LNAME for first row in the pandas data frame</span></span><br><span class="line">pdf.LNAME[<span class="number">0</span>]</span><br><span class="line"><span class="comment">#print the entire data frame</span></span><br><span class="line">pdf</span><br><span class="line">pdf.shape</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>SQL Magic</p>
 <ul>
@@ -823,29 +681,7 @@ pdf.shape</code></pre>
 </ul>
 </li>
 </ul>
-<h3 id="Analyzing-data-with-Python"><a href="#Analyzing-data-with-Python" class="headerlink" title="Analyzing data with Python"></a>Analyzing data with Python</h3><pre><code class="python">#Connect to the database
-%load_ext sql
-%sql ibm_db_sa://
-#Store the dataset in a Table
-import pandas
-chicago_socioeconomic_data = pandas.read_csv(&#39;https://data.cityofchicago.org/resource/jcxq-k9xf.csv&#39;)
-%sql PERSIST chicago_socioeconomic_data
-%sql SELECT * FROM chicago_socioeconomic_data limit 5;
-#How many rows are in the dataset
-%sql SELECT COUNT(*) FROM chicago_socioeconomic_data;
-#How many community areas in Chicago have a hardship index greater than 50.0
-%sql SELECT COUNT(*) FROM chicago_socioeconomic_data WHERE hardship_index &gt; 50.0;
-#What is the maximum value of hardship index in this dataset
-%sql SELECT MAX(hardship_index) FROM chicago_socioeconomic_data;
-#Which community area which has the highest hardship index
-%sql select community_area_name from chicago_socioeconomic_data where hardship_index = ( select max(hardship_index) from chicago_socioeconomic_data )
-#Create a scatter plot using the variables per_capita_income_ and hardship_index
-!pip install seaborn
-import matplotlib.pyplot as plt
-%matplotlib inline
-import seaborn as sns
-income_vs_hardship = %sql SELECT per_capita_income_, hardship_index FROM chicago_socioeconomic_data;
-plot = sns.jointplot(x=&#39;per_capita_income_&#39;,y=&#39;hardship_index&#39;, data=income_vs_hardship.DataFrame())</code></pre>
+<h3 id="Analyzing-data-with-Python"><a href="#Analyzing-data-with-Python" class="headerlink" title="Analyzing data with Python"></a>Analyzing data with Python</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Connect to the database</span></span><br><span class="line">%load_ext sql</span><br><span class="line">%sql ibm_db_sa://</span><br><span class="line"><span class="comment">#Store the dataset in a Table</span></span><br><span class="line"><span class="keyword">import</span> pandas</span><br><span class="line">chicago_socioeconomic_data = pandas.read_csv(<span class="string">&#x27;https://data.cityofchicago.org/resource/jcxq-k9xf.csv&#x27;</span>)</span><br><span class="line">%sql PERSIST chicago_socioeconomic_data</span><br><span class="line">%sql SELECT * FROM chicago_socioeconomic_data limit <span class="number">5</span>;</span><br><span class="line"><span class="comment">#How many rows are in the dataset</span></span><br><span class="line">%sql SELECT COUNT(*) FROM chicago_socioeconomic_data;</span><br><span class="line"><span class="comment">#How many community areas in Chicago have a hardship index greater than 50.0</span></span><br><span class="line">%sql SELECT COUNT(*) FROM chicago_socioeconomic_data WHERE hardship_index &gt; <span class="number">50.0</span>;</span><br><span class="line"><span class="comment">#What is the maximum value of hardship index in this dataset</span></span><br><span class="line">%sql SELECT MAX(hardship_index) FROM chicago_socioeconomic_data;</span><br><span class="line"><span class="comment">#Which community area which has the highest hardship index</span></span><br><span class="line">%sql select community_area_name <span class="keyword">from</span> chicago_socioeconomic_data where hardship_index = ( select <span class="built_in">max</span>(hardship_index) <span class="keyword">from</span> chicago_socioeconomic_data )</span><br><span class="line"><span class="comment">#Create a scatter plot using the variables per_capita_income_ and hardship_index</span></span><br><span class="line">!pip install seaborn</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">%matplotlib inline</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line">income_vs_hardship = %sql SELECT per_capita_income_, hardship_index FROM chicago_socioeconomic_data;</span><br><span class="line">plot = sns.jointplot(x=<span class="string">&#x27;per_capita_income_&#x27;</span>,y=<span class="string">&#x27;hardship_index&#x27;</span>, data=income_vs_hardship.DataFrame())</span><br></pre></td></tr></table></figure>
 <h3 id="Using-JOIN-operations-to-work-with-multiple-tables"><a href="#Using-JOIN-operations-to-work-with-multiple-tables" class="headerlink" title="Using JOIN operations to work with multiple tables"></a>Using JOIN operations to work with multiple tables</h3><ul>
 <li><p>Inner Join</p>
 </li>
@@ -857,34 +693,7 @@ plot = sns.jointplot(x=&#39;per_capita_income_&#39;,y=&#39;hardship_index&#39;, 
 </ul>
 </li>
 <li><p>HR Database example</p>
-<pre><code class="sql">--- Select the names, job start dates, and job titles of all employees who work for the department number 5 ---    
-select E.F_NAME,E.L_NAME, JH.START_DATE, J.JOB_TITLE 
-    from EMPLOYEES as E 
-    INNER JOIN JOB_HISTORY as JH on E.EMP_ID=JH.EMPL_ID 
-    INNER JOIN JOBS as J on E.JOB_ID=J.JOB_IDENT
-    where E.DEP_ID =&#39;5&#39;
-;
---- Perform a Left Outer Join on the EMPLOYEES and DEPARTMENT tables and select employee id, last name, department id and department name for all employees ---
-select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
-    from EMPLOYEES AS E 
-    LEFT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP
-;    
---- Re-write the query to have the result set include all the employees but department names for only the employees who were born before 1980. ---
-select E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME
-    from EMPLOYEES AS E 
-    LEFT OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP 
-    AND YEAR(E.B_DATE) &lt; 1980
-;
---- Perform a Full Join on the EMPLOYEES and DEPARTMENT tables and select the First name, Last name and Department name of all employees. ---
-select E.F_NAME,E.L_NAME,D.DEP_NAME
-    from EMPLOYEES AS E 
-    FULL OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP
-;
---- Re-write Query to have the result set include all employee names but department id and department names only for male employees. ---
-select E.F_NAME,E.L_NAME,D.DEPT_ID_DEP, D.DEP_NAME
-    from EMPLOYEES AS E 
-    FULL OUTER JOIN DEPARTMENTS AS D ON E.DEP_ID=D.DEPT_ID_DEP AND E.SEX = &#39;M&#39;
-;</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--- Select the names, job start dates, and job titles of all employees who work for the department number 5 ---	</span></span><br><span class="line"><span class="keyword">select</span> E.F_NAME,E.L_NAME, JH.START_DATE, J.JOB_TITLE </span><br><span class="line">	<span class="keyword">from</span> EMPLOYEES <span class="keyword">as</span> E </span><br><span class="line">	<span class="keyword">INNER</span> <span class="keyword">JOIN</span> JOB_HISTORY <span class="keyword">as</span> JH <span class="keyword">on</span> E.EMP_ID<span class="operator">=</span>JH.EMPL_ID </span><br><span class="line">	<span class="keyword">INNER</span> <span class="keyword">JOIN</span> JOBS <span class="keyword">as</span> J <span class="keyword">on</span> E.JOB_ID<span class="operator">=</span>J.JOB_IDENT</span><br><span class="line">	<span class="keyword">where</span> E.DEP_ID <span class="operator">=</span><span class="string">&#x27;5&#x27;</span></span><br><span class="line">;</span><br><span class="line"><span class="comment">--- Perform a Left Outer Join on the EMPLOYEES and DEPARTMENT tables and select employee id, last name, department id and department name for all employees ---</span></span><br><span class="line"><span class="keyword">select</span> E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME</span><br><span class="line">	<span class="keyword">from</span> EMPLOYEES <span class="keyword">AS</span> E </span><br><span class="line">	<span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> DEPARTMENTS <span class="keyword">AS</span> D <span class="keyword">ON</span> E.DEP_ID<span class="operator">=</span>D.DEPT_ID_DEP</span><br><span class="line">;	</span><br><span class="line"><span class="comment">--- Re-write the query to have the result set include all the employees but department names for only the employees who were born before 1980. ---</span></span><br><span class="line"><span class="keyword">select</span> E.EMP_ID,E.L_NAME,E.DEP_ID,D.DEP_NAME</span><br><span class="line">	<span class="keyword">from</span> EMPLOYEES <span class="keyword">AS</span> E </span><br><span class="line">	<span class="keyword">LEFT</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> DEPARTMENTS <span class="keyword">AS</span> D <span class="keyword">ON</span> E.DEP_ID<span class="operator">=</span>D.DEPT_ID_DEP </span><br><span class="line">	<span class="keyword">AND</span> <span class="keyword">YEAR</span>(E.B_DATE) <span class="operator">&lt;</span> <span class="number">1980</span></span><br><span class="line">;</span><br><span class="line"><span class="comment">--- Perform a Full Join on the EMPLOYEES and DEPARTMENT tables and select the First name, Last name and Department name of all employees. ---</span></span><br><span class="line"><span class="keyword">select</span> E.F_NAME,E.L_NAME,D.DEP_NAME</span><br><span class="line">	<span class="keyword">from</span> EMPLOYEES <span class="keyword">AS</span> E </span><br><span class="line">	<span class="keyword">FULL</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> DEPARTMENTS <span class="keyword">AS</span> D <span class="keyword">ON</span> E.DEP_ID<span class="operator">=</span>D.DEPT_ID_DEP</span><br><span class="line">;</span><br><span class="line"><span class="comment">--- Re-write Query to have the result set include all employee names but department id and department names only for male employees. ---</span></span><br><span class="line"><span class="keyword">select</span> E.F_NAME,E.L_NAME,D.DEPT_ID_DEP, D.DEP_NAME</span><br><span class="line">	<span class="keyword">from</span> EMPLOYEES <span class="keyword">AS</span> E </span><br><span class="line">	<span class="keyword">FULL</span> <span class="keyword">OUTER</span> <span class="keyword">JOIN</span> DEPARTMENTS <span class="keyword">AS</span> D <span class="keyword">ON</span> E.DEP_ID<span class="operator">=</span>D.DEPT_ID_DEP <span class="keyword">AND</span> E.SEX <span class="operator">=</span> <span class="string">&#x27;M&#x27;</span></span><br><span class="line">;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Working-with-Real-World-Datasets"><a href="#Working-with-Real-World-Datasets" class="headerlink" title="Working with Real World Datasets"></a>Working with Real World Datasets</h3><ul>
@@ -911,6 +720,10 @@ select E.F_NAME,E.L_NAME,D.DEPT_ID_DEP, D.DEP_NAME
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Databases-and-SQL-for-Data-Science/>http://blog.zhuangzhihao.top/Databases-and-SQL-for-Data-Science/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -926,12 +739,8 @@ select E.F_NAME,E.L_NAME,D.DEPT_ID_DEP, D.DEP_NAME
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SQL/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>SQL</p></a></div>
 
 
         
@@ -949,77 +758,6 @@ select E.F_NAME,E.L_NAME,D.DEPT_ID_DEP, D.DEP_NAME
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Databases-and-SQL-for-Data-Science/&title=Databases and SQL for Data Science with Python - Bezhuang's Blog&summary=
-Much of the world’s data resides in databases, A working knowledge of databases and SQL is a must to become a data scientist. The emphasis in this course provided by IBM is on hands-on and practical learning. So, I’ll try to record how I work with real databases, real data science tools, real-world datasets and eventually, how I create a database instance in the cloud on the following notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Databases-and-SQL-for-Data-Science/&title=Databases and SQL for Data Science with Python - Bezhuang's Blog&summary=
-Much of the world’s data resides in databases, A working knowledge of databases and SQL is a must to become a data scientist. The emphasis in this course provided by IBM is on hands-on and practical learning. So, I’ll try to record how I work with real databases, real data science tools, real-world datasets and eventually, how I create a database instance in the cloud on the following notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Databases-and-SQL-for-Data-Science/&title=Databases and SQL for Data Science with Python - Bezhuang's Blog&summary=
-Much of the world’s data resides in databases, A working knowledge of databases and SQL is a must to become a data scientist. The emphasis in this course provided by IBM is on hands-on and practical learning. So, I’ll try to record how I work with real databases, real data science tools, real-world datasets and eventually, how I create a database instance in the cloud on the following notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADoUlEQVR42u3awZLqMAwEQP7/p3fvr4rCkiYbhde+QYhjty+DlNeP0RovBODAgQNngAO3BO7VHP/e/2m+d9ffLjD03OrvPt4PDhw4cODAgQO3DO44ABY3nD6g7kGl9gsOHDhw4MCBA7cVrrqQ6YKmgbgKNYYHBw4cOHDgwIH7ErhqUE0dwLSQCQ4cOHDgwIEDB+4syP51oxocOHDgwIEDB+5/g+sGz3Qgrgbkx3XywYEDBw4cOHDgQnDVMYW8+3N7v+DAgQMHDhw4cEvgpuM0qKaDaDVwx/YLDhw4cODAgQO3BO60AZxu+HYb2Kf3d+eLVYDBgQMHDhw4cOAuhjsFqS7oNMCeNpa71+ONb3DgwIEDBw4cuCVw5QBYDLzVYJ1uNHfhjwuZ4MCBAwcOHDhwN8F1C33TFw2no1qIra5//M8BHDhw4MCBAwfuYrhpw/m4ANgMntOGdOo+cODAgQMHDhy4p8Klgm214JkK1rGADA4cOHDgwIEDtwRuGmDThctpkE3Ne9yQBgcOHDhw4MCBWwLXDYjVAuX0Od3C5zhogwMHDhw4cODALYVLFza70NODSRVWwYEDBw4cOHDgtsJ1G8WnG5nO022IX/XCIjhw4MCBAwcO3Da4aQGxOl+10Bnb+LSBDQ4cOHDgwIEDtwSuGjyrQbkahNPBNhW4wYEDBw4cOHDgtsFNA+4UpAt7VdBt/3MABw4cOHDgwIG7Ca4bWKdQ3cDdPbDxPsCBAwcOHDhw4JbAdQuK1VFdcPd3p+toN9zBgQMHDhw4cOCWwF1VYKxu9LShnWqEgwMHDhw4cODAPR2uOlE38HYDbipgpwql4MCBAwcOHDhwW+BOobobSzW60w3xdqMbHDhw4MCBAwduCVy1cNht/FYb3tMgXC3AHt8HDhw4cODAgQO3FO4qkG5wTgX06nxvr4MDBw4cOHDgwC2BS2841ajuBuZpwbVdAQYHDhw4cODAgftjuOmoPri68dPnpA4MHDhw4MCBAwfuKXCphvOnhaYbyNXnTguw4MCBAwcOHDhwW+G6gfeqA+gG2/SBgAMHDhw4cODAPQWuGlSnUOkDSDWk314HBw4cOHDgwIH7ErirALtBNV64BAcOHDhw4MCB+3K40xcGu3CpFxNP13X8YiE4cODAgQMHDtwSuFRDOnW9+v30gG/v5IMDBw4cOHDgwBXhUoXI1IKnz0uBfixkggMHDhw4cODA3QRnFAuoCMCBAwfOAAfu3vELxyWK8rZrz8oAAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Databases-and-SQL-for-Data-Science/&text=Databases and SQL for Data Science with Python - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1138,17 +876,9 @@ VSCode Rainbow Fart 是一个在你编程时持续夸你写的牛逼的扩展，
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1274,8 +1004,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1631,29 +1359,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1692,7 +1397,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1752,20 +1457,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1978,6 +1669,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

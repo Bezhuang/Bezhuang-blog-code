@@ -109,7 +109,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -233,16 +233,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -365,16 +375,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -398,7 +418,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -421,36 +441,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -484,8 +474,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Jupyter/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Jupyter</p></a></div>
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91/">其他开发</a>
+    </a>
+  </div>
 
 
           
@@ -505,7 +499,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fas fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>字数：631字</p>
+      <p>字数：625字</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -528,67 +522,41 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>Jupyter Notebook 是基于浏览器网页的用于交互计算的应用程序，支持 Python、R、Julia 和 Scala 等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab 是基于 web 的集成开发环境，包含了 Jupyter Notebook 所有功能的同时还支持操作终端、编辑 markdown 文本、打开交互模式、查看 csv 文件及图片等功能，最近在学习的 IBM 数据科学专项课程也都是基于 Jupyter Lab 的，在阿里云主机上部署 Jupyter 环境也能使研究和学习更加方便。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、安装Anaconda"><a href="#一、安装Anaconda" class="headerlink" title="一、安装Anaconda"></a>一、安装Anaconda</h3><p>通过清华源安装最新版本 Anaconda：</p>
-<pre><code class="bash">wget http://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2020.11-Linux-x86_64.sh
-bash Anaconda3-2020.11-Linux-x86_64.sh
-# 狂按Enter&gt;&gt;yes&gt;&gt;继续狂按Enter安装</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2020.11-Linux-x86_64.sh</span><br><span class="line">bash Anaconda3-2020.11-Linux-x86_64.sh</span><br><span class="line"><span class="comment"># 狂按Enter&gt;&gt;yes&gt;&gt;继续狂按Enter安装</span></span><br></pre></td></tr></table></figure>
 <p>Anaconda 默认安装在 <code>/root/anaconda3</code> 目录下。</p>
 <p>配置环境变量：</p>
-<pre><code class="bash">vim ~/.bashrc
-# 添加下面两行内容
-#added by Anaconda3 4.4.0 installer
-export PATH=&quot;/root/anaconda3/bin:$PATH&quot;</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br><span class="line"><span class="comment"># 添加下面两行内容</span></span><br><span class="line"><span class="comment">#added by Anaconda3 4.4.0 installer</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="string">&quot;/root/anaconda3/bin:<span class="variable">$PATH</span>&quot;</span></span><br></pre></td></tr></table></figure>
 <p>激活 Anaconda 环境并测试：</p>
-<pre><code class="bash">source ~/.bashrc
-conda --version</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line">conda --version</span><br></pre></td></tr></table></figure>
 <p>添加清华镜像源，并搜索时显示通道地址：</p>
-<pre><code class="bash">conda config --add channels &#39;https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/&#39;
-conda config --set show_channel_urls yes</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels <span class="string">&#x27;https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/&#x27;</span></span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls <span class="built_in">yes</span></span><br></pre></td></tr></table></figure>
 <p>创建 jupyter notebook 运行环境：</p>
-<pre><code class="bash">conda create -n jupyter_notebook python=3
-# source activate jupyter_notebook 激活环境
-# source deactivate 退出环境</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda create -n jupyter_notebook python=3</span><br><span class="line"><span class="comment"># source activate jupyter_notebook 激活环境</span></span><br><span class="line"><span class="comment"># source deactivate 退出环境</span></span><br></pre></td></tr></table></figure>
 <h3 id="二、安装配置Jupyter"><a href="#二、安装配置Jupyter" class="headerlink" title="二、安装配置Jupyter"></a>二、安装配置Jupyter</h3><p>通过 Anaconda 安装 Jupyter Notebook：</p>
-<pre><code class="bash">conda install jupyter notebook
-# 输入jupyter notebook --ip=127.0.0.1 --allow-root 可运行则为安装成功</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda install jupyter notebook</span><br><span class="line"><span class="comment"># 输入jupyter notebook --ip=127.0.0.1 --allow-root 可运行则为安装成功</span></span><br></pre></td></tr></table></figure>
 <p>生成 Jupyter Notebook 配置文件：</p>
-<pre><code class="bash">jupyter notebook --generate-config</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
 <p>设置 Jupyter Notebook 密码：</p>
-<pre><code class="bash">ipython
-In [1]: from notebook.auth import passwd
-In [2]: passwd()
-Enter password: 
-Verify password: 
-Out[2]: &#39;加密字符串&#39;</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ipython</span><br><span class="line">In [1]: from notebook.auth import passwd</span><br><span class="line">In [2]: passwd()</span><br><span class="line">Enter password: </span><br><span class="line">Verify password: </span><br><span class="line">Out[2]: <span class="string">&#x27;加密字符串&#x27;</span></span><br></pre></td></tr></table></figure>
 <p>修改配置文件：</p>
-<pre><code class="bash">vim /root/.jupyter/jupyter_notebook_config.py
-#修改如下行
-c.NotebookApp.ip = &#39;*&#39;
-c.NotebookApp.password = &#39;加密字符串&#39;
-c.NotebookApp.open_browser = False
-c.NotebookApp.allow_root = True</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim /root/.jupyter/jupyter_notebook_config.py</span><br><span class="line"><span class="comment">#修改如下行</span></span><br><span class="line">c.NotebookApp.ip = <span class="string">&#x27;*&#x27;</span></span><br><span class="line">c.NotebookApp.password = <span class="string">&#x27;加密字符串&#x27;</span></span><br><span class="line">c.NotebookApp.open_browser = False</span><br><span class="line">c.NotebookApp.allow_root = True</span><br></pre></td></tr></table></figure>
 <p>启动 Jupyter Notebook：</p>
-<pre><code class="bash">jupyter notebook</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
 <p>启动 Jupyter Lab：</p>
-<pre><code class="bash">jupyter lab</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter lab</span><br></pre></td></tr></table></figure>
 <p>远程访问方式：<code>公网ip地址:8888</code></p>
 <p>通过 SSH 端口映射到本地：</p>
-<pre><code class="bash">ssh -L8888:localhost:8888 root@106.15.200.147</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -L8888:localhost:8888 root@106.15.200.147</span><br></pre></td></tr></table></figure>
 <p>访问方式：<code>localhost:8888</code></p>
 <h3 id="三、注意事项"><a href="#三、注意事项" class="headerlink" title="三、注意事项"></a>三、注意事项</h3><p>Jupyter Notebook 只适用于单用户登录，如果想搭建多用户的 Jupyter 的话，要使用 JupyterHub 进行搭建。</p>
 <p>阿里云默认不打卡 8888 端口，需要在服务器管理控制台中设置开放端口。</p>
 <h3 id="添加-JAVA-环境支持"><a href="#添加-JAVA-环境支持" class="headerlink" title="添加 JAVA 环境支持"></a>添加 JAVA 环境支持</h3><p>安装 JDK（过程略），<a target="_blank" rel="noopener" href="https://github.com/SpencerPark/IJava/releases">下载</a> Java 内核压缩包 <code>ijava</code>，上传到服务器，使用 <code>unzip</code> 命令解压。</p>
 <p>安装 Java 内核：</p>
-<pre><code class="bash">python install.py --sys-prefix</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python install.py --sys-prefix</span><br></pre></td></tr></table></figure>
 <p>查看 Jupyter 内核支持：</p>
-<pre><code class="python">jupyter kernelspec list
-&#39;&#39;&#39;
-Available kernels:
-  java       /root/anaconda3/share/jupyter/kernels/java
-  python3    /root/anaconda3/share/jupyter/kernels/python3
-&#39;&#39;&#39;</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">jupyter kernelspec <span class="built_in">list</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">Available kernels:</span></span><br><span class="line"><span class="string">  java       /root/anaconda3/share/jupyter/kernels/java</span></span><br><span class="line"><span class="string">  python3    /root/anaconda3/share/jupyter/kernels/python3</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
   
   
@@ -600,7 +568,7 @@ Available kernels:
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -625,6 +593,10 @@ Available kernels:
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAJupyter%20Notebook/>http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAJupyter%20Notebook/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -640,12 +612,8 @@ Available kernels:
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91/">其他开发</a>
-    </a>
-  </div>
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Jupyter/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Jupyter</p></a></div>
 
 
         
@@ -663,77 +631,6 @@ Available kernels:
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAJupyter%20Notebook/&title=云上搭建基于 Anaconda 的 Jupyter 数据科学环境 - Bezhuang's Blog&summary=
-Jupyter Notebook 是基于浏览器网页的用于交互计算的应用程序，支持 Python、R、Julia 和 Scala 等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab 是基于 web 的集成开发环境，包含了 Jupyter Notebook 所有功能的同时还支持操作终端、编辑 markdown 文本、打开交互模式、查看 csv 文件及图片等功能，最近在学习的 IBM 数据科学专项课程也都是基于 Jupyter Lab 的，在阿里云主机上部署 Jupyter 环境也能使研究和学习更加方便。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAJupyter%20Notebook/&title=云上搭建基于 Anaconda 的 Jupyter 数据科学环境 - Bezhuang's Blog&summary=
-Jupyter Notebook 是基于浏览器网页的用于交互计算的应用程序，支持 Python、R、Julia 和 Scala 等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab 是基于 web 的集成开发环境，包含了 Jupyter Notebook 所有功能的同时还支持操作终端、编辑 markdown 文本、打开交互模式、查看 csv 文件及图片等功能，最近在学习的 IBM 数据科学专项课程也都是基于 Jupyter Lab 的，在阿里云主机上部署 Jupyter 环境也能使研究和学习更加方便。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAJupyter%20Notebook/&title=云上搭建基于 Anaconda 的 Jupyter 数据科学环境 - Bezhuang's Blog&summary=
-Jupyter Notebook 是基于浏览器网页的用于交互计算的应用程序，支持 Python、R、Julia 和 Scala 等多种语言，在数据科学相关领域有着非常大的用途。JupyterLab 是基于 web 的集成开发环境，包含了 Jupyter Notebook 所有功能的同时还支持操作终端、编辑 markdown 文本、打开交互模式、查看 csv 文件及图片等功能，最近在学习的 IBM 数据科学专项课程也都是基于 Jupyter Lab 的，在阿里云主机上部署 Jupyter 环境也能使研究和学习更加方便。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEYklEQVR42u3aQVIDMQwEwPz/03CHotYjyXZCtW8J7Fpuc5CEXl/WlvVCABasBRYsWAvsEdhXcf18/tcGi8/99fM/A1/cv/p82wMsWLBgwYIFCxbsUdhuYNWAny6k+n01jrYHWLBgwYIFCxYs2Cuw6cZpwbAKUk3g0zimLwIsWLBgwYIFCxbsZ8B2C4W0QZ4m7NX4wIIFCxYsWLBgwf5v2GrAVYjuRXTPBxYsWLBgwYIFC/Y9YasJ+FTCPgWYxvF2kzBgwYIFCxYsWLBgl2DTlTaKP+1z2QMsWLBgwYIFCxbsEdiptSsBT/fvNq7bcYAFCxYsWLBgwYI9ApsOAK8mylMJeRd4eqAkrrzAggULFixYsGDBboVdDWCqAEgHOVL46vtX37NcIIAFCxYsWLBgwYLdAtttHKcgq891L7Aad7WQAAsWLFiwYMGCBXsHNoVZDSj9vWphMQWWfg8WLFiwYMGCBQv2DuzYoEJzAKI7cFF9f7exDRYsWLBgwYIFC/YubLrhVOLfPeBrcS3DdAdFwIIFCxYsWLBgwR6BjRPg8CDdg04PaHQb9Y/7ggULFixYsGDBgj0CWz142ng+NcDRbVQ/xfEYP1iwYMGCBQsWLNgjsKsvTBPr6QvZ/Z6xCwELFixYsGDBggV7FHaqgX16QKLdmB66WLBgwYIFCxYsWLB3YVOIaejqRU8VBmkB9NjoBgsWLFiwYMGCBbsVdqoB3A04bZTvapBXCxiwYMGCBQsWLFiwZ2DjBDhMnKcT/akLSy92uYACCxYsWLBgwYIFexR2NYC0EOg2srtg1YKnPDgCFixYsGDBggUL9ghsdcChGmD3oN2BjOlBFbBgwYIFCxYsWLB3YVcT9+7Bur/fLWiONbrBggULFixYsGDBXhnYSDeY+n4qwd/daAcLFixYsGDBggV7FzbdaPoAaQKeFg4pUBrnr89gwYIFCxYsWLBgj8CeOlC3MFj9Pm3QdwdUwIIFCxYsWLBgwd6BrTaOu4n+qUZ29+dxgQEWLFiwYMGCBQv2CmxaIFQLh+rASArUTfzTPyCwYMGCBQsWLFiwZ2DLDd0i1K7Covq5O8ABFixYsGDBggUL9j1gqwdaTqCLMNWLqw5slM8BFixYsGDBggUL9gpstcHcTcDTgY6pi0gvaLzyAgsWLFiwYMGCBTsKOxVQtYHcHaSoDmRUF1iwYMGCBQsWLNizsN2VFhRp4p8WBN1Bj7GBDbBgwYIFCxYsWLBbYdsJ8XBBkTbQd72/eqFgwYIFCxYsWLBgz8JWC4L0+XQwo1tgpNBpAfT4HwSwYMGCBQsWLFiwR2CnEurpgqFaOEwPbIAFCxYsWLBgwYL9X7CrG1ef68aZFgDVhjdYsGDBggULFizYz4DtNsKrCfxq4dGNOy6QwIIFCxYsWLBgwV6B7SbUUwXB9KBHdRAELFiwYMGCBQsW7HvD7hqcmBr0qBYOKWT7wsGCBQsWLFiwYMEegbVmF1iwYC2wYMFaYLeubwnz0fb81TKLAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/%E4%BA%91%E4%B8%8A%E6%90%AD%E5%BB%BAJupyter%20Notebook/&text=云上搭建基于 Anaconda 的 Jupyter 数据科学环境 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -852,17 +749,9 @@ In this course provided by IBM, I learned about Jupyter Notebooks, JupyterLab, R
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -988,8 +877,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1345,29 +1232,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1406,7 +1270,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1466,20 +1330,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1692,6 +1542,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

@@ -107,7 +107,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -231,16 +231,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -363,16 +373,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -396,7 +416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -419,36 +439,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -482,6 +472,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
+    </a>
+  </div>
+
 
           
         
@@ -523,14 +520,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>This Data Analysis with Python course provided by IBM is designed to teach future data analysts how to prepare data for analysis, perform simple statistical analysis, create meaningful data visualizations, predict future trends from data through a number of lecture, lab, and assignments using Python libraries. The following are the notes I took during this course.</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 
 
 	<div class="row">
     <embed src="/pdf/Coursera-Data-Analysis-with-py.pdf" width="100%" height="550" type="application/pdf">
 	</div>
-
 
 
 
@@ -545,12 +540,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 </li>
 <li><p>Importing Data: Format &amp; File Path of dataset</p>
-<pre><code class="python">import pandas as pd
-url = &quot;&quot;
-df = pd.read_csv(url, header = None)  #create dataframe
-df.head(n) #shows the first n rows while df.tail(n) shows the bottom n rows
-path = &quot;&quot;
-df.to_csv(path) #exporting dataframe, you can also use df.to_json() / df.to_excel() / df.to_sql()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">url = <span class="string">&quot;&quot;</span></span><br><span class="line">df = pd.read_csv(url, header = <span class="literal">None</span>)  <span class="comment">#create dataframe</span></span><br><span class="line">df.head(n) <span class="comment">#shows the first n rows while df.tail(n) shows the bottom n rows</span></span><br><span class="line">path = <span class="string">&quot;&quot;</span></span><br><span class="line">df.to_csv(path) <span class="comment">#exporting dataframe, you can also use df.to_json() / df.to_excel() / df.to_sql()</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Data Types</p>
 <ul>
@@ -559,8 +549,7 @@ df.to_csv(path) #exporting dataframe, you can also use df.to_json() / df.to_exce
 <li><code>df.info()</code> Provides a concise summary of dataframe</li>
 </ul>
 </li>
-<li><p><a href="/Databases&SQL4Data-Science/#Accessing%20databases%20using%20Python">Accessing Databases with Python</a> (DB-API)</p>
-</li>
+<li><a href="/Databases&amp;SQL4Data-Science/#Accessing%20databases%20using%20Python">Accessing Databases with Python</a> (DB-API)</li>
 </ul>
 <h3 id="Data-Wrangling"><a href="#Data-Wrangling" class="headerlink" title="Data Wrangling"></a>Data Wrangling</h3><ul>
 <li><p>Pre-processing Data in Python = Data Cleaning = Data Wrangling</p>
@@ -573,34 +562,30 @@ df.to_csv(path) #exporting dataframe, you can also use df.to_json() / df.to_exce
 </ul>
 </li>
 <li><p>Data Formatting</p>
-<pre><code class="python">df[&quot;city-mpg&quot;] = 235/df[&quot;city-mpg&quot;]
-df.rename(columns=(&quot;city_mpg&quot;: &quot;city-L/100km&quot;), inplace=True)
-df[&quot;city-L/100km&quot;]=df[&quot;city-L/100km&quot;].astype(&quot;float&quot;) </code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&quot;city-mpg&quot;</span>] = <span class="number">235</span>/df[<span class="string">&quot;city-mpg&quot;</span>]</span><br><span class="line">df.rename(columns=(<span class="string">&quot;city_mpg&quot;</span>: <span class="string">&quot;city-L/100km&quot;</span>), inplace=<span class="literal">True</span>)</span><br><span class="line">df[<span class="string">&quot;city-L/100km&quot;</span>]=df[<span class="string">&quot;city-L/100km&quot;</span>].astype(<span class="string">&quot;float&quot;</span>) </span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>dataframe.astype()</code> Converts data type</li>
 </ul>
 </li>
 <li><p>Data Normalization</p>
 <ul>
-<li>Simple Feature scaling:  $x_{new}=\dfrac{x_{old}}{x_{max}}$</li>
+<li>Simple Feature scaling:  $x<em>{new}=\dfrac{x</em>{old}}{x_{max}}$</li>
 </ul>
-<pre><code class="python">df[&quot;length&quot;]=df[&quot;length&quot;]/df[&quot;length&quot;].max()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&quot;length&quot;</span>]=df[<span class="string">&quot;length&quot;</span>]/df[<span class="string">&quot;length&quot;</span>].<span class="built_in">max</span>()</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Min - Max:  $x_{new}=\dfrac{x_{old}-x_{min}}{x_{max}-x_{min}}$</li>
+<li>Min - Max:  $x<em>{new}=\dfrac{x</em>{old}-x<em>{min}}{x</em>{max}-x_{min}}$</li>
 </ul>
-<pre><code class="python">df[&quot;length&quot;]=(df[&quot;length&quot;]-df[&quot;length&quot;].min())/(df[&quot;length&quot;].max()-df[&quot;length&quot;].min())</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&quot;length&quot;</span>]=(df[<span class="string">&quot;length&quot;</span>]-df[<span class="string">&quot;length&quot;</span>].<span class="built_in">min</span>())/(df[<span class="string">&quot;length&quot;</span>].<span class="built_in">max</span>()-df[<span class="string">&quot;length&quot;</span>].<span class="built_in">min</span>())</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Z-score (Standard Score):  $x_{new}=\dfrac{x_{old}-\mu}{\sigma }$</li>
+<li>Z-score (Standard Score):  $x<em>{new}=\dfrac{x</em>{old}-\mu}{\sigma }$</li>
 <li>z-score values typically range between [-3,3]</li>
 </ul>
 </li>
 </ul>
-<pre><code class="python">df[&quot;length&quot;]=(df[&quot;length&quot;]-df[&quot;length&quot;].mean())/df[&quot;length&quot;].std()</code></pre>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&quot;length&quot;</span>]=(df[<span class="string">&quot;length&quot;</span>]-df[<span class="string">&quot;length&quot;</span>].mean())/df[<span class="string">&quot;length&quot;</span>].std()</span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>Binning: Converts numeric into categorical variables by Grouping them in a set of “bins”</p>
-<pre><code class="python">bins=np.linspace(min(df[&quot;price&quot;]),max(df[&quot;price&quot;]),4)
-group_names=[&quot;Low&quot;,&quot;Medium&quot;,&quot;High&quot;]
-df[&quot;price-binned&quot;]=pd.cut(df[&quot;price&quot;],bins,labels=group_names,include_lowest=True)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bins=np.linspace(<span class="built_in">min</span>(df[<span class="string">&quot;price&quot;</span>]),<span class="built_in">max</span>(df[<span class="string">&quot;price&quot;</span>]),<span class="number">4</span>)</span><br><span class="line">group_names=[<span class="string">&quot;Low&quot;</span>,<span class="string">&quot;Medium&quot;</span>,<span class="string">&quot;High&quot;</span>]</span><br><span class="line">df[<span class="string">&quot;price-binned&quot;</span>]=pd.cut(df[<span class="string">&quot;price&quot;</span>],bins,labels=group_names,include_lowest=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Turning categorical variables into quantitative variables</p>
 <ul>
@@ -618,38 +603,29 @@ df[&quot;price-binned&quot;]=pd.cut(df[&quot;price&quot;],bins,labels=group_name
 <li>Giving short summaries about the sample and measures of the data</li>
 <li><code>df.describe</code> Summarize statistics, <code>value_counts()</code> Summarize the categorical data</li>
 </ul>
-<pre><code class="python">wheels_counts=df[&quot;wheels&quot;].value_counts().to_frame()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wheels_counts=df[<span class="string">&quot;wheels&quot;</span>].value_counts().to_frame()</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Box Plot</li>
 </ul>
-<pre><code class="python">sns.boxplot(x=&quot;wheels&quot;,y=&quot;price&quot;,data=df)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sns.boxplot(x=<span class="string">&quot;wheels&quot;</span>,y=<span class="string">&quot;price&quot;</span>,data=df)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Scatter Plot</li>
 </ul>
-<pre><code class="python">y=df[&quot;price&quot;]
-x=df[&quot;engine-size&quot;]
-plt.scatter(x,y)
-plt.title(&quot;Scatterplot of Engine Size vs Price&quot;)
-plt.xlabel(&quot;Engine Size&quot;)
-plt.ylabel(&quot;Price&quot;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">y=df[<span class="string">&quot;price&quot;</span>]</span><br><span class="line">x=df[<span class="string">&quot;engine-size&quot;</span>]</span><br><span class="line">plt.scatter(x,y)</span><br><span class="line">plt.title(<span class="string">&quot;Scatterplot of Engine Size vs Price&quot;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&quot;Engine Size&quot;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&quot;Price&quot;</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>GroupBy</p>
 <ul>
 <li>The groupby method is used on categorical variables, groups the data into subsets according to the different categories of that variable.</li>
 </ul>
-<pre><code class="python">df_test=df[[&#39;drive-wheels&#39;,&#39;body-style&#39;,&#39;price&#39;]]
-df_grp=df_test.grop[by([&#39;drive-wheels&#39;,&#39;body-style&#39;], as_index= False).mean()
-df_grp</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df_test=df[[<span class="string">&#x27;drive-wheels&#x27;</span>,<span class="string">&#x27;body-style&#x27;</span>,<span class="string">&#x27;price&#x27;</span>]]</span><br><span class="line">df_grp=df_test.grop[by([<span class="string">&#x27;drive-wheels&#x27;</span>,<span class="string">&#x27;body-style&#x27;</span>], as_index= <span class="literal">False</span>).mean()</span><br><span class="line">df_grp</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Pivot table</li>
 </ul>
-<pre><code class="python">df_pivot=df_grp.pivot(index=&#39;drive-wheels&#39;,columns=&#39;body-style&#39;)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_pivot=df_grp.pivot(index=<span class="string">&#x27;drive-wheels&#x27;</span>,columns=<span class="string">&#x27;body-style&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Heatmap</li>
 </ul>
-<pre><code class="python">plt.pcolor(df_pivot,cmap=&#39;RdBu&#39;)
-plt.colorbar()
-plt.show()</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.pcolor(df_pivot,cmap=<span class="string">&#x27;RdBu&#x27;</span>)</span><br><span class="line">plt.colorbar()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Correlation</p>
 <ul>
@@ -657,9 +633,7 @@ plt.show()</code></pre>
 <li>Correlation doesn’t imply causation</li>
 <li>Linear Relationship</li>
 </ul>
-<pre><code class="python">import seaborn as sns
-sns.regplot(x=&quot;engine-size&quot;,y=&quot;price&quot;,data=df)
-plt.ylim(0,)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line">sns.regplot(x=<span class="string">&quot;engine-size&quot;</span>,y=<span class="string">&quot;price&quot;</span>,data=df)</span><br><span class="line">plt.ylim(<span class="number">0</span>,)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Correlation - Statistics</p>
 <ul>
@@ -667,7 +641,7 @@ plt.ylim(0,)</code></pre>
 <li>Correlation coefficient close to +1: Large Positive relationship, close to -1: Large Negative relationship, close to 0: No relationship</li>
 <li>P-value &lt; 0.001: Strong certainty in the result, &lt; 0.05: Moderate certainty in the result, &lt; 0.1: Weak certainty in the result, &gt; 0.1: No certainty in the result</li>
 </ul>
-<pre><code class="python">pearson_coef, p_value=stats.pearsonr(df[&#39;horsepower&#39;],df[&#39;price&#39;])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pearson_coef, p_value=stats.pearsonr(df[<span class="string">&#x27;horsepower&#x27;</span>],df[<span class="string">&#x27;price&#x27;</span>])</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Correlation-Heatmap</li>
 </ul>
@@ -677,10 +651,10 @@ plt.ylim(0,)</code></pre>
 <li>The Chi-square test is intended to test how likely it is that an observed distribution is due to chance. </li>
 <li>It measures how well the observed distribution of data fits with the distribution that is expected if the variables are independent.</li>
 <li>The Chi-square does not tell you the type of relationship that exists between both variables only that a relationship exists.</li>
-<li>$X^{2}=\sum^{n}<em>{i=1}\dfrac{\left(O</em>{i}-E_{i}\right)^{2}}{E_{i}}$</li>
+<li>$X^{2}=\sum^{n}<em>{i=1}\dfrac{\left(O</em>{i}-E<em>{i}\right)^{2}}{E</em>{i}}$</li>
 <li>Degree of freedom = (row-1) * (column-1)</li>
 </ul>
-<pre><code class="python">scipy.stats.chi2_contingency(cont_table, correction = True)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scipy.stats.chi2_contingency(cont_table, correction = <span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Model-Development"><a href="#Model-Development" class="headerlink" title="Model Development"></a>Model Development</h3><ul>
@@ -695,116 +669,81 @@ plt.ylim(0,)</code></pre>
 <li><p>Simple Linear Regression (SLR)</p>
 <ul>
 <li>The predictor (independent) variable - x, The target (dependent) variable - y</li>
-<li>$b_{0}$: the intercept, $b_{1}$: the slope</li>
-<li>$y=b_{0}+b_{1}x$</li>
-<li>Fit: $\left( b_{0},b_{1}\right)$</li>
+<li>$b<em>{0}$: the intercept, $b</em>{1}$: the slope</li>
+<li>$y=b<em>{0}+b</em>{1}x$</li>
+<li>Fit: $\left( b<em>{0},b</em>{1}\right)$</li>
 </ul>
-<pre><code class="python">from sklearn.linear_model import LinearRegression
-lm=LinearRegression() #create a linear regression object using the constructor
-x=df[[&#39;highway-mpg&#39;]] #define the predictor variable and target variable
-y=df[&#39;price&#39;]
-lm.fit(x,y) #fit the model
-Yhat=lm.predict(X) #obtain a prediction
-lm.intercept_ #view the intercept
-lm.coef_ #view the slope</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line">lm=LinearRegression() <span class="comment">#create a linear regression object using the constructor</span></span><br><span class="line">x=df[[<span class="string">&#x27;highway-mpg&#x27;</span>]] <span class="comment">#define the predictor variable and target variable</span></span><br><span class="line">y=df[<span class="string">&#x27;price&#x27;</span>]</span><br><span class="line">lm.fit(x,y) <span class="comment">#fit the model</span></span><br><span class="line">Yhat=lm.predict(X) <span class="comment">#obtain a prediction</span></span><br><span class="line">lm.intercept_ <span class="comment">#view the intercept</span></span><br><span class="line">lm.coef_ <span class="comment">#view the slope</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Multiple Linear Regression (MLR)</p>
 <ul>
 <li>One continuous target (Y) variables, Two or more predictor (X) variables</li>
-<li>$\widehat{Y}=b_{0}+b_{1}x_{1}+b_{2}x_{2}+b_{3}x_{3}+b_{4}x_{4}$</li>
-<li>$b_{0}$: interception (x=0), $b_{1}$: the coefficient or parameter of $x_{1}$, $b_{2}$: the coefficient of parameter $x_{2}$ and so on</li>
+<li>$\widehat{Y}=b<em>{0}+b</em>{1}x<em>{1}+b</em>{2}x<em>{2}+b</em>{3}x<em>{3}+b</em>{4}x_{4}$</li>
+<li>$b<em>{0}$: interception (x=0), $b</em>{1}$: the coefficient or parameter of $x<em>{1}$, $b</em>{2}$: the coefficient of parameter $x_{2}$ and so on</li>
 </ul>
-<pre><code class="python">Z=df[[&#39;horsepower&#39;,&#39;curb-weight&#39;,&#39;engine-size&#39;,&#39;highway-mpg&#39;]] #extract predictor variables and store them in the variable Z (dataframe)
-lm.fit(Z, df[&#39;price&#39;]) #train the model
-Yhat=lm.predict(X) #obtain a prediction
-lm.intercept_ #view the intercept
-lm.coef_ #view the slope</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Z=df[[<span class="string">&#x27;horsepower&#x27;</span>,<span class="string">&#x27;curb-weight&#x27;</span>,<span class="string">&#x27;engine-size&#x27;</span>,<span class="string">&#x27;highway-mpg&#x27;</span>]] <span class="comment">#extract predictor variables and store them in the variable Z (dataframe)</span></span><br><span class="line">lm.fit(Z, df[<span class="string">&#x27;price&#x27;</span>]) <span class="comment">#train the model</span></span><br><span class="line">Yhat=lm.predict(X) <span class="comment">#obtain a prediction</span></span><br><span class="line">lm.intercept_ <span class="comment">#view the intercept</span></span><br><span class="line">lm.coef_ <span class="comment">#view the slope</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Model Evaluation using Visualization</p>
 <ul>
 <li>Regression plots are a good estimate of the relationship between two variables, the strength of the correlation, and the direction of the relationship (positive or negative)</li>
 <li>Regression plot shows a combination of scatterplot and the fitted linear regression line ($\widehat{Y}$)</li>
 </ul>
-<pre><code class="python">import seaborn as sns
-sns.regplot(x=&quot;highway-mpg&quot;,y=&quot;price&quot;,data=df)
-plt.ylim(0,)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line">sns.regplot(x=<span class="string">&quot;highway-mpg&quot;</span>,y=<span class="string">&quot;price&quot;</span>,data=df)</span><br><span class="line">plt.ylim(<span class="number">0</span>,)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Residual plot represents the error between the actual value</li>
 </ul>
-<pre><code class="python">import seaborn as sns
-sns.resifplot(df[&#39;highway-mpg&#39;],df[&#39;price&#39;])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line">sns.resifplot(df[<span class="string">&#x27;highway-mpg&#x27;</span>],df[<span class="string">&#x27;price&#x27;</span>])</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Distribution plot counts the predicted value versus the actual value</li>
 <li>MLR - Distribution plots</li>
 </ul>
-<pre><code class="python">import seaborn as sns
-ax1=sns.displot(df[&#39;price&#39;],hist=False,color=&#39;r&#39;,label=&#39;Actual Value&#39;)
-sns.distplot(Yhat,hist=False,color=&#39;b&#39;,label=&#39;Fitted Values&#39;,ax=axl)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sns</span><br><span class="line">ax1=sns.displot(df[<span class="string">&#x27;price&#x27;</span>],hist=<span class="literal">False</span>,color=<span class="string">&#x27;r&#x27;</span>,label=<span class="string">&#x27;Actual Value&#x27;</span>)</span><br><span class="line">sns.distplot(Yhat,hist=<span class="literal">False</span>,color=<span class="string">&#x27;b&#x27;</span>,label=<span class="string">&#x27;Fitted Values&#x27;</span>,ax=axl)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Polynomial Regression and Pipelines</p>
 <ul>
 <li>Polynomial regression is a special case of the general linear regression model, useful for describing curvilinear relationships</li>
 <li>Curvilinear relationship: By squaring or setting higher order terms of the predictor variables</li>
-<li>Quadrac - 2nd order: $\widehat{Y}=b_{0}+b_{1}x_{1}+b_{2}(x_{1})^2$</li>
-<li>Cubic - 3rd order: $\widehat{Y}=b_{0}+b_{1}x_{1}+b_{2}(x_{1})^2+b_{3}(x_{1})^3$</li>
+<li>Quadrac - 2nd order: $\widehat{Y}=b<em>{0}+b</em>{1}x<em>{1}+b</em>{2}(x_{1})^2$</li>
+<li>Cubic - 3rd order: $\widehat{Y}=b<em>{0}+b</em>{1}x<em>{1}+b</em>{2}(x<em>{1})^2+b</em>{3}(x_{1})^3$</li>
 </ul>
-<pre><code class="python">f=np.polyfit(x,y,3) #calculate polynomial of 3rd order
-p=np.polyld(f)
-print(p) #print out the model</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f=np.polyfit(x,y,<span class="number">3</span>) <span class="comment">#calculate polynomial of 3rd order</span></span><br><span class="line">p=np.polyld(f)</span><br><span class="line"><span class="built_in">print</span>(p) <span class="comment">#print out the model</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>We could also have multi-dimensional polynomial linear regression: $\widehat{Y}=b_{0}+b_{1}x_{1}+b_{2}x_{2}+b_{3}x_{1}x_{2}+b_{4}(x_{1})^2+b_{5}(x_{3})^2+..$</li>
+<li>We could also have multi-dimensional polynomial linear regression: $\widehat{Y}=b<em>{0}+b</em>{1}x<em>{1}+b</em>{2}x<em>{2}+b</em>{3}x<em>{1}x</em>{2}+b<em>{4}(x</em>{1})^2+b<em>{5}(x</em>{3})^2+..$</li>
 </ul>
-<pre><code class="python">from sklearn.preprocessing import PolynomialFeatures
-pr=PolynomialFeatures(degree=2,include_bias=False)
-x_polly=pr.fit_transform(x[[&#39;horsepower&#39;,&#39;curb-weight&#39;]])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> PolynomialFeatures</span><br><span class="line">pr=PolynomialFeatures(degree=<span class="number">2</span>,include_bias=<span class="literal">False</span>)</span><br><span class="line">x_polly=pr.fit_transform(x[[<span class="string">&#x27;horsepower&#x27;</span>,<span class="string">&#x27;curb-weight&#x27;</span>]])</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Pre-processing</li>
 </ul>
-<pre><code class="python">from sklearn.preprocessing import StandardScaler
-SCALE=StandardScaler()
-SCALE.fit(x_data[[&#39;horsepower&#39;,&#39;curb-weight&#39;]])
-x_scale=SCALE.transform(x_data[[&#39;horsepower&#39;,&#39;curb-weight&#39;]])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line">SCALE=StandardScaler()</span><br><span class="line">SCALE.fit(x_data[[<span class="string">&#x27;horsepower&#x27;</span>,<span class="string">&#x27;curb-weight&#x27;</span>]])</span><br><span class="line">x_scale=SCALE.transform(x_data[[<span class="string">&#x27;horsepower&#x27;</span>,<span class="string">&#x27;curb-weight&#x27;</span>]])</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Pipelines: transform -&gt; prediction</li>
 </ul>
-<pre><code class="python">from sklearn.preprocessing import PolynomialFeatures
-from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import StandardScaler
-from sklearn.pipeline import Pipeline
-Input=[(&#39;Scale&#39;,StandardScaler()),(&#39;polynomial&#39;,PolynomialFeatures(degree=2),(&#39;mode&#39;,LinearRegression()))]
-Pipe.fit(df[[&#39;horsepower&#39;,&#39;curb-weight&#39;,&#39;engine-size&#39;,&#39;highway-mpg&#39;]],y) #train the pipeline object
-yhat=Pipe.predict(X[[&#39;horsepower&#39;,&#39;curb-weight&#39;,&#39;engine-size&#39;,&#39;highway-mpg&#39;]])</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> PolynomialFeatures</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line"><span class="keyword">from</span> sklearn.pipeline <span class="keyword">import</span> Pipeline</span><br><span class="line">Input=[(<span class="string">&#x27;Scale&#x27;</span>,StandardScaler()),(<span class="string">&#x27;polynomial&#x27;</span>,PolynomialFeatures(degree=<span class="number">2</span>),(<span class="string">&#x27;mode&#x27;</span>,LinearRegression()))]</span><br><span class="line">Pipe.fit(df[[<span class="string">&#x27;horsepower&#x27;</span>,<span class="string">&#x27;curb-weight&#x27;</span>,<span class="string">&#x27;engine-size&#x27;</span>,<span class="string">&#x27;highway-mpg&#x27;</span>]],y) <span class="comment">#train the pipeline object</span></span><br><span class="line">yhat=Pipe.predict(X[[<span class="string">&#x27;horsepower&#x27;</span>,<span class="string">&#x27;curb-weight&#x27;</span>,<span class="string">&#x27;engine-size&#x27;</span>,<span class="string">&#x27;highway-mpg&#x27;</span>]])</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Measures for In-Sample Evaluation</p>
 <ul>
 <li>A way to numerically determine how good the model fits on our data</li>
 <li>Mean Squared Error (MSE)</li>
 </ul>
-<pre><code class="python">from sklearn.metrics import mean_squared_error
-mean_squared_error(df[&#39;price&#39;],Y_predict_simple_fit)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> mean_squared_error</span><br><span class="line">mean_squared_error(df[<span class="string">&#x27;price&#x27;</span>],Y_predict_simple_fit)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>R-squared: The coefficient of determination</li>
 <li>R-squared is a measure to determine how close the data is to the fitted regression line</li>
 <li>R^2: the percentage of variation of the target variable (Y) that is explained by the linear model</li>
 <li>$R^{2}=\left( 1-\dfrac{MSE-of-regression-line}{MSE-of-the-average-of-the-data}\right)$</li>
 </ul>
-<pre><code class="python">lm.fit(X,Y)
-lm.score(X,y)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lm.fit(X,Y)</span><br><span class="line">lm.score(X,y)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>Generally the values of the MSE are between 0 and 1</li>
 <li>R^2 = 0 indicates your model performs worst</li>
 </ul>
 </li>
 <li><p>Prediction and Decision Making</p>
-<pre><code class="python">lm.fit(df[&#39;highway-mpg&#39;],df[&#39;prices&#39;])  #Train the model
-lm.predict(np.array(30.0).reshape(-1,1))  #Predict the price
-lm.coef_  #Value of the Slope</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lm.fit(df[<span class="string">&#x27;highway-mpg&#x27;</span>],df[<span class="string">&#x27;prices&#x27;</span>])  <span class="comment">#Train the model</span></span><br><span class="line">lm.predict(np.array(<span class="number">30.0</span>).reshape(-<span class="number">1</span>,<span class="number">1</span>))  <span class="comment">#Predict the price</span></span><br><span class="line">lm.coef_  <span class="comment">#Value of the Slope</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>Residual Plot</li>
 </ul>
-<pre><code class="python">import numpy as np
-new_input=np.arrange(1,101,1).reshape(-1,1)  #Arrange to generate sequence
-yhat=lm.predict(new_input)  #Predict new values</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">new_input=np.arrange(<span class="number">1</span>,<span class="number">101</span>,<span class="number">1</span>).reshape(-<span class="number">1</span>,<span class="number">1</span>)  <span class="comment">#Arrange to generate sequence</span></span><br><span class="line">yhat=lm.predict(new_input)  <span class="comment">#Predict new values</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>Numerical measures for Evaluation</li>
 <li>Comparing MLR and SLR: A lower Mean Square Error does not necessarily imply better fit</li>
@@ -825,12 +764,11 @@ yhat=lm.predict(new_input)  #Predict new values</code></pre>
 <li>x_data: features or independent variables, y_data: dataset target (<code>df[&#39;price&#39;]</code>)</li>
 <li>x_train, y_train: parts of available data as training set</li>
 </ul>
-<pre><code class="python">from sklearn.model_selection import train_test_split
-x_train,x_test,y_train,y_test=train_test_split(x_data,y_data,test_size=0.3,random_state=0)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">x_train,x_test,y_train,y_test=train_test_split(x_data,y_data,test_size=<span class="number">0.3</span>,random_state=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Generalization error is measure of how well our data does at predicting previously unseen data, the error we obtain using our testing data is an approximation of this error.</p>
 </li>
-<li><p> Lots of training data</p>
+<li><p>Lots of training data</p>
 </li>
 <li><p>Cross Validation</p>
 <ul>
@@ -839,16 +777,13 @@ x_train,x_test,y_train,y_test=train_test_split(x_data,y_data,test_size=0.3,rando
 </ul>
 </li>
 <li><p>Function <code>cross_val_score()</code></p>
-<pre><code class="python">from sklearn.model_selection import cross_val_score
-scores=cross_val_score(lr,x_data,y_data,cv=3)
-np.mean(scores)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> cross_val_score</span><br><span class="line">scores=cross_val_score(lr,x_data,y_data,cv=<span class="number">3</span>)</span><br><span class="line">np.mean(scores)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Function <code>cross_val_predict()</code></p>
 <ul>
 <li>It returns the prediction that was obtained for each element when it was in the test set</li>
 </ul>
-<pre><code class="python">from sklearn.model_selection import cross_val_score  #Has a similar interface to cross_cal_score()
-scores=cross_val_score(lr,x_data,y_data,cv=3)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> cross_val_score  <span class="comment">#Has a similar interface to cross_cal_score()</span></span><br><span class="line">scores=cross_val_score(lr,x_data,y_data,cv=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Model Selection: y(x)+noise</p>
 </li>
@@ -862,10 +797,7 @@ scores=cross_val_score(lr,x_data,y_data,cv=3)</code></pre>
 <li>Multicollinearity is when there is a strong relationship among the independent variables</li>
 <li>Ridge regression is very common with polynomial regression</li>
 </ul>
-<pre><code class="python">from sklearn.linear_model import Ridge
-RidgeModel=Ridge(alpha=0.1)
-RidgeModel.fit(X,y)
-Yhat=RidgeModel.predict(X)</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> Ridge</span><br><span class="line">RidgeModel=Ridge(alpha=<span class="number">0.1</span>)</span><br><span class="line">RidgeModel.fit(X,y)</span><br><span class="line">Yhat=RidgeModel.predict(X)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Grid Search allows us to scan through multiple free parameters with few lines of code.</p>
 <ul>
@@ -873,16 +805,7 @@ Yhat=RidgeModel.predict(X)</code></pre>
 <li>Scikit-learn has a means of automatically iterating over these hyperparameters using cross-validation called Grid Search</li>
 <li>Training data、Validation data、Test data</li>
 </ul>
-<pre><code class="python">from sklearn.linear_model import Ridge
-from sklearn.model_selection import GridSearchCV
-parameters1=[&#123;&#39;alpha&#39;:[0.001,0.1,1,10,100,1000,10000,100000,1000000]&#125;]
-parameters2=[&#123;&#39;alpha&#39;:[0.001,0.1,1,10,100],&#39;normalize&#39;:[True,False]&#125;]
-RR=Ridge()
-Grid1=GridSearchCV(rr,parameters1,cv=4)
-Grid1.fit(x_data[[&#39;horsepower&#39;,&#39;curb-weight&#39;,&#39;engine-size&#39;,&#39;highway-mpg&#39;]],y_data)
-Grid.best_estimator_
-scores=Grid.cv_results_
-scores[&#39;mean_test_score&#39;]</code></pre>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> Ridge</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> GridSearchCV</span><br><span class="line">parameters1=[&#123;<span class="string">&#x27;alpha&#x27;</span>:[<span class="number">0.001</span>,<span class="number">0.1</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">100</span>,<span class="number">1000</span>,<span class="number">10000</span>,<span class="number">100000</span>,<span class="number">1000000</span>]&#125;]</span><br><span class="line">parameters2=[&#123;<span class="string">&#x27;alpha&#x27;</span>:[<span class="number">0.001</span>,<span class="number">0.1</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">100</span>],<span class="string">&#x27;normalize&#x27;</span>:[<span class="literal">True</span>,<span class="literal">False</span>]&#125;]</span><br><span class="line">RR=Ridge()</span><br><span class="line">Grid1=GridSearchCV(rr,parameters1,cv=<span class="number">4</span>)</span><br><span class="line">Grid1.fit(x_data[[<span class="string">&#x27;horsepower&#x27;</span>,<span class="string">&#x27;curb-weight&#x27;</span>,<span class="string">&#x27;engine-size&#x27;</span>,<span class="string">&#x27;highway-mpg&#x27;</span>]],y_data)</span><br><span class="line">Grid.best_estimator_</span><br><span class="line">scores=Grid.cv_results_</span><br><span class="line">scores[<span class="string">&#x27;mean_test_score&#x27;</span>]</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="Project-Case"><a href="#Project-Case" class="headerlink" title="Project Case"></a>Project Case</h3><ul>
@@ -908,6 +831,10 @@ scores[&#39;mean_test_score&#39;]</code></pre>
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/Data-Analysis-with-Python/>http://blog.zhuangzhihao.top/Data-Analysis-with-Python/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -923,13 +850,6 @@ scores[&#39;mean_test_score&#39;]</code></pre>
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/">数据科学</a>
-    </a>
-  </div>
-
 
         
       
@@ -946,77 +866,6 @@ scores[&#39;mean_test_score&#39;]</code></pre>
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/Data-Analysis-with-Python/&title=Data Analysis With Python - Bezhuang's Blog&summary=
-This Data Analysis with Python course provided by IBM is designed to teach future data analysts how to prepare data for analysis, perform simple statistical analysis, create meaningful data visualizations, predict future trends from data through a number of lecture, lab, and assignments using Python libraries. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/Data-Analysis-with-Python/&title=Data Analysis With Python - Bezhuang's Blog&summary=
-This Data Analysis with Python course provided by IBM is designed to teach future data analysts how to prepare data for analysis, perform simple statistical analysis, create meaningful data visualizations, predict future trends from data through a number of lecture, lab, and assignments using Python libraries. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/Data-Analysis-with-Python/&title=Data Analysis With Python - Bezhuang's Blog&summary=
-This Data Analysis with Python course provided by IBM is designed to teach future data analysts how to prepare data for analysis, perform simple statistical analysis, create meaningful data visualizations, predict future trends from data through a number of lecture, lab, and assignments using Python libraries. The following are the notes I took during this course.
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADrklEQVR42u3awXIiMQwE0Pz/T2fv2aJQSzaI5PkGzIzt50sjzde30RpfCMCBAwfOAAduCdxXc/z3wB/fp9c9en76uTtfdb/gwIEDBw4cOHDb4MoB8AlIFXo6z+37H8KDAwcOHDhw4MAthesG0i5UehC3AnX5enDgwIEDBw4cuF8K1y0gdgPsqYIrOHDgwIEDBw7cX4V7FnDTAuQ0GKcNbXDgwIEDBw4cuE+Hixu0hzaQbrQKn97/sk4+OHDgwIEDBw7cIbh0dDe65XN7v+DAgQMHDhw4cEvgpiMtLHaDaNqwTtdTnhccOHDgwIEDB24JXDcgdjfSLWROg+t0f+DAgQMHDhw4cFvhug3laYP6VGC+dUDgwIEDBw4cOHCfAjcOiId/PxWA04Lm9U4+OHDgwIEDBw7cEC4t9E0bwt0Nnb6vfT84cODAgQMHDtxyuPT3UwXENJhWDyo9yHYABgcOHDhw4MCBezHcqcA7DaTdAF49qG5hExw4cODAgQMHbitcdUHdBd5udHevrwZncODAgQMHDhy4rXCnNlS9v7zQYTCfgrb/OYADBw4cOHDgwL0IrhsIu0H62EbCAx43sMGBAwcOHDhw4JbBTWG6Abn6fXog0wNr/3MABw4cOHDgwIFbCner0NkNzLdeTDwegMGBAwcOHDhw4C7BpYXNKcT0RcRuIXYahMGBAwcOHDhw4LbBpRtOA2p6XdowTg+4HejBgQMHDhw4cOCWwB17YAicFiZPNbSnjW5w4MCBAwcOHLgtcNVC5jSYTgP36QZ3+4DAgQMHDhw4cOCWwaUTTxvW34dG9XngwIEDBw4cOHC/DS4NkNXC5PQg0gZ09wDjhjs4cODAgQMHDtxyuGrQ7AbaNBC3G8jNA3q4DnDgwIEDBw4cuGVwU6g0kE4b4NPg3G68gwMHDhw4cODALYW7DVad79VBGxw4cODAgQMH7tPhpgXEU0EzBak2mNOGNjhw4MCBAwcO3Fa46ZhCHNtQs2GeFl7BgQMHDhw4cOC2wE0D4hS2W2iczl+Fe/rPARw4cODAgQMH7s1wtxYybgCHG5sG4KeBGhw4cODAgQMHbilct4DYfUFwet+tEQdgcODAgQMHDhy4D4XrBs80iKZBOV0/OHDgwIEDBw7cX4WbNoDTA7ndyAYHDhw4cODAgfsUuLSg+GzCLkw10HbX0W6cgwMHDhw4cODALYObNmynjezbBcxqwI0DMDhw4MCBAwcO3JvgjLDAiQAcOHDgDHDg3jv+AQOo/FNCG48fAAAAAElFTkSuQmCC">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/Data-Analysis-with-Python/&text=Data Analysis With Python - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -1188,17 +1037,9 @@ In this course provided by IBM, I will assume the role of an Associate Data Anal
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1324,8 +1165,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1681,29 +1520,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1742,7 +1558,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1802,20 +1618,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -2028,6 +1830,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 

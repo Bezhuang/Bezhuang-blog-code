@@ -108,7 +108,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow floatable blur show"  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -232,16 +232,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -364,16 +374,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                       
             
               <li>
-                <a class="menuitem flat-box faa-parent animated-hover" href=/friends/
+                <a class="menuitem flat-box faa-parent animated-hover" href=/projects
                   
                   
                   
-                    id="friends"
+                    id="projects"
                   >
-                  <i class='fas fa-link fa-fw'></i>友情链接
+                  <i class='far fa-hdd fa-fw'></i>开源库
                 </a>
                 
               </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
             
           
                     
@@ -397,7 +417,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         <div id="full" class='cover-wrapper post search' style="display: none;">
           
-            <div class='cover-bg' style='background-image:url(https://wallpapercave.com/wp/wp10474992.png)'></div>
+            <div class='cover-bg' style='background-image:url(/img/c言语入门.png)'></div>
           
           <div class='cover-body'>
   <div class='top'>
@@ -420,36 +440,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <div class='menu navigation'>
       <div class='list-h'>
-        
-          
-            <a href="/photos"
-              
-              
-              id="photos">
-              <p>相册</p>
-            </a>
-          
-            <a href="/projects"
-              
-              
-              id="projects">
-              <p>开源库</p>
-            </a>
-          
-            <a href="/todo"
-              
-              
-              id="todo">
-              <p>计划表</p>
-            </a>
-          
-            <a href="/guestbook"
-              
-              
-              id="guestbook">
-              <p>留言板</p>
-            </a>
-          
         
       </div>
     </div>
@@ -483,6 +473,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/C-C/">C/C++</a>
+    </a>
+  </div>
+
 
           
         
@@ -524,8 +521,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <blockquote>
 <p>C 语言标准输入 scanf 在通过 <code>%s</code> 读取字符串时遇到空格就认为读取结束，这样没办法把一行带有空格的字符串存入到一个字符数组中。所以当需要输入的字符串中含有空格时，我们需要使用 gets 函数进行读取，使用 puts 函数进行输出。</p>
 </blockquote>
-<a id="more"></a>
-
+<span id="more"></span>
 <h3 id="一、字符数组"><a href="#一、字符数组" class="headerlink" title="一、字符数组"></a>一、字符数组</h3><p>字符数组的定义方法一维数组、二维数组类似，例如 <code>char c[10]=&quot;hello&quot;</code>。</p>
 <p>因为 C 语言规定字符串的结束标志为 <code>\0</code>，而系统会对字符串常量自动加一个 <code>\0</code>，为了保证处理方法一致，一般会人为地在字符数组中添加 <code>\0</code>，所以字符数组存储的字符串长度必须比字符数组少 1 字节。例如 <code>char[10]</code> 最多存储 9 个字符，最后一个字符用来存储 <code>\0</code>。</p>
 <p>字符数组的数组名里存的就是字符数组的起始地址，类型是字符指针。即编译器给字符数组 c 内部存了一个值，c 中存储的值的类型是字符指针。</p>
@@ -533,76 +529,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>gets 函数从 STDIN（标准输入）读取字符并把它们加载到 str（字符串）中，直到遇到换行符（\n）或到达 EOF。gets 遇到 <code>\n</code> 后, 不会存储 <code>\n</code>，而是将其翻译为空字符 <code>\0</code>。</p>
 <p>puts 函数类似于 printf 函数，用于输出标准输出：<code>int puts(char *str);</code>。</p>
 <p>函数 puts 把 str (字符串) 写人STDOU (标准输出)。puts 执行成功时返回非负值，执行失败时返回 EOF。相对于 printf 函数，puts 只能用于输出字符串，同时多打印一个换行符。</p>
-<pre><code class="c">int main()
-&#123;
-    char c[20];
-    gets(c); //当一次读取一行时，使用gets
-    puts(c); //等价于printf(&quot;%s\n&quot;,c);
-    return 0;
-&#125;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">char</span> c[<span class="number">20</span>];</span><br><span class="line">	gets(c); <span class="comment">//当一次读取一行时，使用gets</span></span><br><span class="line">	<span class="built_in">puts</span>(c); <span class="comment">//等价于printf(&quot;%s\n&quot;,c);</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>虽然用 <code>gets()</code> 时有空格也可以直接输入，但是 gets 不检查预留存储区是否能够容纳实际输入的数据，换句话说，如果输入的字符数目大于数组的长度，gets 无法检测到这个问题，就会发生内存越界，所以编程时建议使用 <code>fgets()</code>。fgets 相对于 gets 去读取标准输入时，会把 <code>\n</code> 放到字符数组中。<code>char *fgets(char *s, int size, FILE *stream);</code>。</p>
-<pre><code class="c">int main()
-&#123;
-    char c[20];
-    fgets(c, sizeof(c), stdin);
-    int len = strlen(c);
-  c[len -1] = &#39;\0&#39;;
-    puts(c);
-  return 0;
-&#125;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">char</span> c[<span class="number">20</span>];</span><br><span class="line">	fgets(c, <span class="keyword">sizeof</span>(c), <span class="built_in">stdin</span>);</span><br><span class="line">	<span class="type">int</span> len = <span class="built_in">strlen</span>(c);</span><br><span class="line">  c[len <span class="number">-1</span>] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">	<span class="built_in">puts</span>(c);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="三、str-系列字符串操作函数"><a href="#三、str-系列字符串操作函数" class="headerlink" title="三、str 系列字符串操作函数"></a>三、str 系列字符串操作函数</h3><p>str 系列字符串操作函数主要包括 strlen、strcpy 、strcmp、strcat 等。strlen 函数用于统计字符串长度，strcpy 函数用于将某个字符串复制到字符数组中，strcmp 函数用于比较两个字符串的大小，strcat 函数用于将两个字符串连接到一起：</p>
-<pre><code class="c">#include &lt;string.h&gt;
-size_t strlen(char *str);
-char *strcpy(char *to, const char *from); //有const修饰代表此处可以放字符串常量
-int strcmp(const char *str1, const char *str2);
-char *strcat(char *str1, const char *str2);</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="type">size_t</span> <span class="title function_">strlen</span><span class="params">(<span class="type">char</span> *str)</span>;</span><br><span class="line"><span class="type">char</span> *<span class="title function_">strcpy</span><span class="params">(<span class="type">char</span> *to, <span class="type">const</span> <span class="type">char</span> *from)</span>; <span class="comment">//有const修饰代表此处可以放字符串常量</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">strcmp</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str1, <span class="type">const</span> <span class="type">char</span> *str2)</span>;</span><br><span class="line"><span class="type">char</span> *<span class="title function_">strcat</span><span class="params">(<span class="type">char</span> *str1, <span class="type">const</span> <span class="type">char</span> *str2)</span>;</span><br></pre></td></tr></table></figure>
 <p>对于传参类型 <code>char*</code>，直接放入字符数组的数组名即可。</p>
-<pre><code class="c">#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
-int main()&#123;
-    char c[20] = &quot;zhuang&quot;;
-    puts(c); //zhuang
-    printf(&quot;数组c内字符串的长度=%d\n&quot;, strlen(c));
-    char d[20];
-    strcpy(d, c); // 将c的内容复制到d中
-    puts(d); //zhuang
-    strcpy(d, &quot;study&quot;); // 将字符串study复制到d中
-    //strcmp比较字符串对应字符位置的ascii码值
-    int ret = strcmp(&quot;hello&quot;, &quot;how&quot;);
-    printf(&quot;两个字符串比较结果=%d\n&quot;, ret);  //-1
-    //strcat拼接两个字符串
-    strcat(d, &quot;!&quot;); // 将字符串!拼接到d中
-    puts(d);  //study!
-    return 0;
-&#125;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">char</span> c[<span class="number">20</span>] = <span class="string">&quot;zhuang&quot;</span>;</span><br><span class="line">    <span class="built_in">puts</span>(c); <span class="comment">//zhuang</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;数组c内字符串的长度=%d\n&quot;</span>, <span class="built_in">strlen</span>(c));</span><br><span class="line">    <span class="type">char</span> d[<span class="number">20</span>];</span><br><span class="line">    <span class="built_in">strcpy</span>(d, c); <span class="comment">// 将c的内容复制到d中</span></span><br><span class="line">    <span class="built_in">puts</span>(d); <span class="comment">//zhuang</span></span><br><span class="line">    <span class="built_in">strcpy</span>(d, <span class="string">&quot;study&quot;</span>); <span class="comment">// 将字符串study复制到d中</span></span><br><span class="line">    <span class="comment">//strcmp比较字符串对应字符位置的ascii码值</span></span><br><span class="line">    <span class="type">int</span> ret = <span class="built_in">strcmp</span>(<span class="string">&quot;hello&quot;</span>, <span class="string">&quot;how&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;两个字符串比较结果=%d\n&quot;</span>, ret);  <span class="comment">//-1</span></span><br><span class="line">    <span class="comment">//strcat拼接两个字符串</span></span><br><span class="line">    <span class="built_in">strcat</span>(d, <span class="string">&quot;!&quot;</span>); <span class="comment">// 将字符串!拼接到d中</span></span><br><span class="line">    <span class="built_in">puts</span>(d);  <span class="comment">//study!</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="四、判断回文数"><a href="#四、判断回文数" class="headerlink" title="四、判断回文数"></a>四、判断回文数</h3><p>读取一个字符串，字符串可能含有空格，将字符串逆转，原来的字符串与逆转后字符串相同，输出 0，原字符串小于逆转后字符串输出 -1，大于逆转后字符串输出 1。例如输入 hello，逆转后的字符串为 olleh，因为hello 小于 olleh，所以输出 -1。</p>
-<pre><code class="c">#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
-int main()
-&#123;
-  char c[20], d[20];
-  gets(c);
-  int i, j;
-  for (i = strlen(c) - 1, j = 0; i &gt;= 0; i--, j++)
-  &#123;
-    d[j] = c[i];
-  &#125;
-  d[j] = &#39;\0&#39;;
-  int result = strcmp(c, d);
-  if (result &lt; 0)
-  &#123;
-    printf(&quot;%d\n&quot;, -1);
-  &#125;
-  else if (result &gt; 0)
-  &#123;
-    printf(&quot;%d\n&quot;, 1);
-  &#125;
-  else
-  &#123;
-    printf(&quot;%d\n&quot;, 0);
-  &#125;
-  return 0；
-&#125;</code></pre>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="type">char</span> c[<span class="number">20</span>], d[<span class="number">20</span>];</span><br><span class="line">  gets(c);</span><br><span class="line">  <span class="type">int</span> i, j;</span><br><span class="line">  <span class="keyword">for</span> (i = <span class="built_in">strlen</span>(c) - <span class="number">1</span>, j = <span class="number">0</span>; i &gt;= <span class="number">0</span>; i--, j++)</span><br><span class="line">  &#123;</span><br><span class="line">    d[j] = c[i];</span><br><span class="line">  &#125;</span><br><span class="line">  d[j] = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">  <span class="type">int</span> result = <span class="built_in">strcmp</span>(c, d);</span><br><span class="line">  <span class="keyword">if</span> (result &lt; <span class="number">0</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="number">-1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (result &gt; <span class="number">0</span>)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   
   
@@ -614,7 +549,7 @@ int main()
             
               <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i>
             
-            <span>References</span>
+            <span>参考资料（References）：</span>
           </section>
           <section class='body'>
             <ul>
@@ -639,6 +574,10 @@ int main()
 
               
             
+              
+                <p>本文永久地址：<a href=http://blog.zhuangzhihao.top/gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/>http://blog.zhuangzhihao.top/gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/</a></p>
+              
+            
           </blockquote>
         </div>
       
@@ -654,13 +593,6 @@ int main()
       
         
           
-  <div class='new-meta-item category'>
-    <a class='notlink'>
-      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <a class="category-link" href="/categories/C-C/">C/C++</a>
-    </a>
-  </div>
-
 
         
       
@@ -677,77 +609,6 @@ int main()
       
         
           
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.zhuangzhihao.top/gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/&title=gets 函数与 puts 函数 - Bezhuang's Blog&summary=
-C 语言标准输入 scanf 在通过 %s 读取字符串时遇到空格就认为读取结束，这样没办法把一行带有空格的字符串存入到一个字符数组中。所以当需要输入的字符串中含有空格时，我们需要使用 gets 函数进行读取，使用 puts 函数进行输出。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.zhuangzhihao.top/gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/&title=gets 函数与 puts 函数 - Bezhuang's Blog&summary=
-C 语言标准输入 scanf 在通过 %s 读取字符串时遇到空格就认为读取结束，这样没办法把一行带有空格的字符串存入到一个字符数组中。所以当需要输入的字符串中含有空格时，我们需要使用 gets 函数进行读取，使用 puts 函数进行输出。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.zhuangzhihao.top/gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/&title=gets 函数与 puts 函数 - Bezhuang's Blog&summary=
-C 语言标准输入 scanf 在通过 %s 读取字符串时遇到空格就认为读取结束，这样没办法把一行带有空格的字符串存入到一个字符数组中。所以当需要输入的字符串中含有空格时，我们需要使用 gets 函数进行读取，使用 puts 函数进行输出。
-"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png">
-          
-        </a>
-      
-    
-      
-        
-        <div class='hoverbox'>
-          <a class='share'><img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png"></a>
-          <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEbUlEQVR42u3aS3LjMAwFQN//0sl+Ui4BeBBlTzV3qehDNrUgnvH6MW4ZLwRgwRpgwYI1wB6BfQ3Hv/f/ecGb66vXVd8z/f/Ve8ceYMGCBQsWLFiwYI/Clg/A4YKvwKvz6W7w1gZdPh8sWLBgwYIFCxbsI7DTgmAbdGsDtgqT8vVgwYIFCxYsWLBgvwK2en01+O4G5t0Au1tAgAULFixYsGDBgv0/YbsAVej0+ul8wYIFCxYsWLBgwX4nbDfATg/sVcDtRo80yAcLFixYsGDBggX7GbDd0Q2Kv+3vsQdYsGDBggULFizYI7Dp6B7Y00Ihbbj4uXmABQsWLFiwYMGCPQObBtPd+8aNEM2Nqm7c1gcBFixYsGDBggUL9hnY6UKnC0shtqHXgnKwYMGCBQsWLFiwR2C3Aujqwt+9d3p99+Dfha4WEGDBggULFixYsGDPwqYvar84DJy3gvd0HWDBggULFixYsGCfhW3fGDY8pMFzN9hOC5H2BwEWLFiwYMGCBQv2COx2Y0Z1gdOCY7uRY3sjwYIFCxYsWLBgwT4D2y0Quo0TdxUi3Q9gu/AACxYsWLBgwYIFexZ2awJ3NXikgXZ6XzvQBwsWLFiwYMGCBfsI7NbB/67nTN/Xfd40sAcLFixYsGDBggV7BrZ6EE4D5GnjR/X+6YcxDeTBggULFixYsGDBfibs6caM6kLTwiJtULm8HixYsGDBggULFuyjsOlEUoi0IEnX1/3QwIIFCxYsWLBgwZ6F3Qqcu/dtbWg3YO82cnQLDbBgwYIFCxYsWLBnYKcH4a0N2dqo7oG/u/7y+8GCBQsWLFiwYMEehd06MKcQW4XBXQ0hl+sECxYsWLBgwYIFewR2q2Fi68A+3YjpwX7aGNJu2AALFixYsGDBggW7CptOvLqg6oG/e93d8+oWHGDBggULFixYsGDPwE4bF7aD8a1CI31ed33loBssWLBgwYIFCxbsKmw3iE4P4NPGju680oJiCg0WLFiwYMGCBQv2LOz0wSnMdEOmwfj0eeX3gQULFixYsGDBgn0EdmthacDd3fAUKg36wYIFCxYsWLBgwZ6FTQ/EKeg0EE8Lg62gHyxYsGDBggULFuwzsNVGhDTI3jrAp8F4tzBo/yAAFixYsGDBggUL9gjsVqGQBubTYHu6sdPnggULFixYsGDBgv0s2G4A3A2I04IkDdy3G0fePhcsWLBgwYIFCxbsUdjpmG7AFCItNNLA/TIQBwsWLFiwYMGCBXsENj4Qh0F1tTAZB8/D9VRh3wbdYMGCBQsWLFiwYI/ATguC7Y2ZNlBsFzjjBhGwYMGCBQsWLFiwj8BOD/Ddg31633SjpwVEORgHCxYsWLBgwYIF+xWwWwFzuuBqwdEtMNofGFiwYMGCBQsWLNivhE0nvA3U3dDpBwMWLFiwYMGCBQv2WditF1afsw2TzuO2AgEsWLBgwYIFCxbsLbBpsDxt6OgWAOk8bi8gwIIFCxYsWLBgwR6BNXYHWLBgDbBgwRpgbx2/4hBTZ86z7g0AAAAASUVORK5CYII=">
-          </div>
-        </div>
-      
-    
-      
-        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
-          
-            target="_blank" href="https://t.me/share/url?url=http://blog.zhuangzhihao.top/gets%E5%87%BD%E6%95%B0%E4%B8%8Eputs%E5%87%BD%E6%95%B0/&text=gets 函数与 puts 函数 - Bezhuang's Blog"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png">
-          
-        </a>
-      
-    
-  </div>
-</div>
-
-
 
         
       
@@ -768,10 +629,10 @@ C 语言标准输入 scanf 在通过 %s 读取字符串时遇到空格就认为�
         </a>
       
       
-        <a class='next' href='/Request&Response/'>
-          <p class='title'>Request 和 Response 对象详解<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='next' href='/JSP/'>
+          <p class='title'>JSP - Java Server Pages<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>
-Java Web 核心第二章。在 Java Servlet 中，Request 对象是用来封装请求数据的对象，Response 对象是用来封装响应数据的对象。Web 服务器收到客户端的 HTT...</p>
+Java Web 核心第三章。JSP（Java Server Pages）是由 Sun Microsystems 公司主导创建的一种动态网页技术标准。JSP 部署于网络服务器上，可以响应客户端...</p>
         </a>
       
     </div>
@@ -866,17 +727,9 @@ Java Web 核心第二章。在 Java Servlet 中，Request 对象是用来封装�
     
       
         
-          <div><p><span id="lc-uv">本站访客数<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>人 | </span> <span id="lc-sv">总访问量<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>次</span></p>
+          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
 </div>
         
-      
-    
-      
-        <div class="aplayer-container">
-          
-
-
-        </div>
       
     
   </footer>
@@ -1002,8 +855,6 @@ var loadCSS = function( href, before, media, attributes ){
   
   
   
-  
-  loadCSS("https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/styles/solarized-light.min.css", window.volantis.loadcss);
   
 </script>
 <!-- required -->
@@ -1359,29 +1210,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-   <script type="text/javascript">
-  loadScript("https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js")
-  function pjax_scrollrebeal() {
-    ScrollReveal().reveal('.l_main .reveal', {
-      distance: '32px',
-      duration: '800',
-      interval: '20',
-      scale: '1',
-      easing: 'ease-out'
-    });
-  }
-  $(function () {
-  var checkScrollReveal = setInterval(function () {
-    if ($("#safearea").css("display")!="block") return
-    if (typeof ScrollReveal=="undefined") return
-    clearInterval(checkScrollReveal)
-	pjax_scrollrebeal();
-  }, 100)
-  });
-  volantis.pjax.push(pjax_scrollrebeal)
-</script>
-
-
 
 
 
@@ -1420,7 +1248,7 @@ var loadCSS = function( href, before, media, attributes ){
       path = defaultPath || decodeURI(window.location.pathname);
     }
     var valine = new Valine();
-    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
+    valine.init(Object.assign({"path":null,"placeholder":"快来评论吧~","appId":"SK7sx66NNd5Bw3O3jvF2MVXq-MdYXbMMI","appKey":"j5I5paEqIfWfOlCg13vU2vNq","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":true,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":true}, {
       el: '#valine_container',
       path: path,
       placeholder: pagePlaceholder,
@@ -1480,20 +1308,6 @@ function setSearchService() {
 
 
 
-
-  
-
-<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10/build/highlight.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script>
-volantis.pjax.push(()=>{
-	document.querySelectorAll('pre code').forEach((block) => {
-	  hljs.highlightBlock(block);
-	});
-},"highlightjs")
-</script>
 
 
 
@@ -1706,6 +1520,93 @@ volantis.pjax.push(()=>{
 </script>
 
 
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+var btn=$("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn");
+function bindToggleButton() {
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+volantis.pjax.push(bindToggleButton);
+volantis.pjax.send(()=>{
+	btn.unbind('click');
+},'toggle-mode-btn-unbind');
+</script>
 
 
 
