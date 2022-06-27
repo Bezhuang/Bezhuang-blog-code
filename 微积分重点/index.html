@@ -27,7 +27,7 @@
 
   
     <meta name="description" content="
-微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览，以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。
+微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览。
 ">
   
 
@@ -519,92 +519,57 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   <blockquote>
-<p>微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览，以下为所记课堂笔记，笔记以中文形式记录，方便理解，可供参考。</p>
+<p>微积分重点（Highlights of Calculus）是 MIT 数学教授 Gilbert Strang 对于微积分中的精华和重点出的一个生动、简短的课程，帮助我们重新审视微积分，课程主要涉及单变量微积分的总览。</p>
 </blockquote>
 <span id="more"></span>
-<h3 id="微积分总览"><a href="#微积分总览" class="headerlink" title="微积分总览"></a>微积分总览</h3><p>微积分是函数（1）和函数（2）之间的桥梁</p>
-<ul>
-<li><p>距离 $f\left( t\right)$ 、速度 $\dfrac{df}{dt}$</p>
+<h3 id="一、微积分总览"><a href="#一、微积分总览" class="headerlink" title="一、微积分总览"></a>一、微积分总览</h3><p>微积分是函数（1）和函数（2）之间的桥梁，例如距离<script type="math/tex">f\left( t\right)</script>和速度<script type="math/tex">\dfrac{df}{dt}</script>；高度<script type="math/tex">y\left( x\right)</script>和斜率<script type="math/tex">\dfrac{dy}{dx}</script>。</p>
+<p>匀速情况下，<script type="math/tex">速度=\dfrac{距离}{时间}</script>，即<script type="math/tex">斜率=\dfrac{垂直}{水平}</script>，即<script type="math/tex">s=\dfrac{f}{t}</script>。若要求中间一段时间或距离的速度，<script type="math/tex">s=\dfrac{\Delta f}{\Delta t}</script>。</p>
+<p>匀变速情况下，函数图像均为曲线，微分学就是已知<script type="math/tex">距离-时间</script>函数求<script type="math/tex">速度-时间</script>函数，积分学就是已知<script type="math/tex">速度-时间</script>函数求<script type="math/tex">距离-时间</script>函数。</p>
+<p><script type="math/tex">速度-时间</script>函数<script type="math/tex">s=at</script>下面积<script type="math/tex">\dfrac{1}{2}t\left( at\right)</script>就是<script type="math/tex">距离-时间</script>函数<script type="math/tex">\dfrac{1}{2}at^{2}</script>，速度<script type="math/tex">s=\dfrac{df}{dt}</script>就是<script type="math/tex">f=\int s\left( t\right) dt</script>的导数。</p>
+<h3 id="二、导数总览"><a href="#二、导数总览" class="headerlink" title="二、导数总览"></a>二、导数总览</h3><p>已知距离<script type="math/tex">f\left( t\right)</script>如何求速度<script type="math/tex">\dfrac{df}{dt}</script>，即已知高度<script type="math/tex">y\left( x\right)</script>如何求斜率 <script type="math/tex">\dfrac{dy}{dx}</script>？</p>
+<p>三个重要函数的斜率：</p>
+<ol>
+<li><p>幂函数<script type="math/tex">y=x^{n}</script>的斜率是<script type="math/tex">\dfrac{dy}{dx}=nx^{n-1}</script>；</p>
 </li>
-<li><p>高度 $y\left( x\right)$ 、斜率 $\dfrac{dy}{dx}$</p>
+<li><p>三角函数<script type="math/tex">y=\sin x</script>的斜率是<script type="math/tex">\dfrac{dy}{dx}=\cos x</script>；</p>
 </li>
-</ul>
-<p>匀速情况下，$速度=\dfrac{距离}{时间}$，即 $斜率=\dfrac{垂直}{水平}$，即 $s=\dfrac{f}{t}$</p>
-<ul>
-<li>若要求中间一段时间或距离的速度，$s=\dfrac{\Delta f}{\Delta t}$</li>
-</ul>
-<p>匀变速情况下，函数图像均为曲线</p>
-<ul>
-<li><p>微分学就是已知 $距离-时间$ 函数求 $速度-时间$ 函数</p>
+<li><p>指数函数<script type="math/tex">y=e^{x}</script>的斜率是<script type="math/tex">\dfrac{dy}{dx}=e^{x}</script>。</p>
 </li>
-<li><p>积分学就是已知 $速度-时间$ 函数求 $距离-时间$ 函数</p>
-</li>
-<li><p>$速度-时间$ 函数 $s=at$ 下面积 $\dfrac{1}{2}t\left( at\right)$ 就是 $距离-时间$ 函数 $\dfrac{1}{2}at^{2}$</p>
-</li>
-<li><p>速度 $s=\dfrac{df}{dt}$ 就是 $f=\int s\left( t\right) dt$ 的导数</p>
-</li>
-</ul>
-<h3 id="导数总览"><a href="#导数总览" class="headerlink" title="导数总览"></a>导数总览</h3><p>已知距离 $f\left( t\right)$  如何求速度 $\dfrac{df}{dt}$，即已知高度 $y\left( x\right)$  如何求斜率 $\dfrac{dy}{dx}$</p>
-<p>三个重要函数的斜率</p>
-<ul>
-<li><p>幂函数 $y=x^{n}$ ：$\dfrac{dy}{dx}=nx^{n-1}$</p>
-</li>
-<li><p>三角函数 $y=\sin x$ ：$\dfrac{dy}{dx}=\cos x$</p>
-</li>
-<li><p>指数函数 $y=e^{x}$ ：$\dfrac{dy}{dx}=e^{x}$</p>
-</li>
-</ul>
-<p>$y=x^2$ 斜率的含义</p>
-<ul>
-<li><p>$平均斜率\dfrac{\left( \Delta x\right) ^{2}}{\Delta x}$，即 $\dfrac{\Delta y}{\Delta x}$ $\rightarrow$ $瞬时斜率\dfrac{dy}{dx}$</p>
-</li>
-<li><p>$\dfrac{\Delta y}{\Delta x}=\dfrac{\left( x+\Delta x\right) ^{2}}{\Delta x}\dfrac{-x^{2}}{}=\dfrac{2xax+\left( \Delta x\right) ^{2}}{\Delta x}=2x+\Delta x$</p>
-</li>
-<li><p>求导：$\dfrac{dy}{dx}=\lim\dfrac{\Delta y}{\Delta x}=2x$</p>
-</li>
-</ul>
-<p>任意 $x$ 处，$y=\sin x 的斜率\rightarrow \dfrac{dy}{dx}=\cos x$</p>
-<h3 id="极值及二阶导数"><a href="#极值及二阶导数" class="headerlink" title="极值及二阶导数"></a>极值及二阶导数</h3><p>二阶导数：导数的导数</p>
-<ul>
-<li>一阶导数用于确认极值点，二阶导数表明曲线弯曲方向</li>
-</ul>
+</ol>
+<p><script type="math/tex">y=x^2</script>斜率的平均斜率是$\dfrac{\left( \Delta x\right) ^{2}}{\Delta x}$，即$\dfrac{\Delta y}{\Delta x}$，瞬时斜率是$\dfrac{dy}{dx}$；$\dfrac{\Delta y}{\Delta x}=\dfrac{\left( x+\Delta x\right) ^{2}}{\Delta x}\dfrac{-x^{2}}{}=\dfrac{2xax+\left( \Delta x\right) ^{2}}{\Delta x}=2x+\Delta x$。</p>
+<p>求导：$\dfrac{dy}{dx}=\lim\dfrac{\Delta y}{\Delta x}=2x$。</p>
+<p>任意 $x$ 处，$y=\sin x 的斜率\rightarrow \dfrac{dy}{dx}=\cos x$。</p>
+<h3 id="三、极值及二阶导数"><a href="#三、极值及二阶导数" class="headerlink" title="三、极值及二阶导数"></a>三、极值及二阶导数</h3><p>二阶导数：导数的导数。一阶导数用于确认极值点，二阶导数表明曲线弯曲方向。</p>
 <p>二阶导数的例子：加速度</p>
 <ul>
-<li><p>距离 $f\left( t\right)$ 、速度 $\dfrac{df}{dt}$、加速度 $\dfrac{d^{2}f}{dt^{2}}$</p>
+<li><p>距离 $f\left( t\right)$ 、速度 $\dfrac{df}{dt}$、加速度 $\dfrac{d^{2}f}{dt^{2}}$。</p>
 </li>
-<li><p>高度 $y=x^2$ 、斜率 $\dfrac{dy}{dx}=2x$、弯曲性 $\dfrac{d^{2}f}{dt^{2}}=2$</p>
+<li><p>高度 $y=x^2$ 、斜率 $\dfrac{dy}{dx}=2x$、弯曲性 $\dfrac{d^{2}f}{dt^{2}}=2$。</p>
 </li>
-<li><p>$sinx$ 的二阶导数为 $-sinx$</p>
+<li><p>$sinx$ 的二阶导数为 $-sinx$。</p>
 </li>
 </ul>
-<p>凸函数和凹函数：$f’’ &gt;0$ 为凸，表示向上弯曲，相对的凹为 $f’’ &lt;0$</p>
-<p>拐点：二阶导数为 0 的点，表示弯曲方向改变</p>
-<p>对于函数 $y=x^{3}-x^{2}$ $\rightarrow$ $y’=3x^{2}-2x$，$y’’=6x-2$</p>
+<p>凸函数和凹函数：$f’’ &gt;0$ 为凸，表示向上弯曲，相对的凹为 $f’’ &lt;0$。</p>
+<p>拐点：二阶导数为 0 的点，表示弯曲方向改变。</p>
+<p>对于函数 $y=x^{3}-x^{2}$ $\rightarrow$ $y’=3x^{2}-2x$，$y’’=6x-2$：</p>
 <ul>
-<li><p>求极值点：令 $y’=3x^{2}-2x=0$，$x= 0或x=\dfrac{2}{3}$</p>
+<li><p>求极值点：令 $y’=3x^{2}-2x=0$，$x= 0或x=\dfrac{2}{3}$。</p>
 </li>
-<li><p>$x=0$ 处，二阶导数为负，取局部最大值（极大值）</p>
+<li><p>$x=0$ 处，二阶导数为负，取局部最大值（极大值）。</p>
 </li>
-<li><p>$x=\dfrac{2}{3}$ 处，二阶导数为正，取局部最小值（极小值）</p>
+<li><p>$x=\dfrac{2}{3}$ 处，二阶导数为正，取局部最小值（极小值）。</p>
 </li>
 </ul>
-<p>应用：上班的最短时间</p>
+<p>应用：求上班的最短时间。设高速总长 $b$，家垂直上高速距离为 $a$，没走的高速距离为 $x$。</p>
+<p><img src="https://blog.zhuangzhihao.top/img/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B901.png" style="zoom: 33%;"></p>
 <ul>
-<li><p>设高速总长 $b$，家垂直上高速距离为 $a$，没走的高速距离为 $x$</p>
-</li>
-<li><p><img src="https://blog.zhuangzhihao.top/img/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B901.png" style="zoom: 33%;"></p>
-</li>
-<li><p>$时间t=\dfrac{b-x}{60}+\dfrac{\sqrt{a^{2}+x^{2}}}{30}$</p>
-</li>
-<li><p>取时间方程的导数，然后令导数为 0 来求最小值</p>
-</li>
-<li><p>$f’=-\dfrac{1}{60}+\dfrac{1}{30}\cdot \dfrac{1}{2}\cdot \dfrac{2x}{\sqrt{a^{2}+x^{2}}}=0$ $\rightarrow$ $x=\dfrac{a}{\sqrt{3}}$</p>
-</li>
+<li>$时间t=\dfrac{b-x}{60}+\dfrac{\sqrt{a^{2}+x^{2}}}{30}$，取时间方程的导数，然后令导数为 0 来求最小值。</li>
+<li>$f’=-\dfrac{1}{60}+\dfrac{1}{30}\cdot \dfrac{1}{2}\cdot \dfrac{2x}{\sqrt{a^{2}+x^{2}}}=0$ $\rightarrow$ $x=\dfrac{a}{\sqrt{3}}$。</li>
 </ul>
-<p>最值的一般求法：比较所有驻点（$f’=0$）处及边界点函数值，得到最大或最小值即函数最值</p>
-<p>$f’’$ 的符号可通过 $f’$ 的单调性求出：$x&gt;0$ 时，$f’(x)&gt;f’(0)$ ，斜率变化率为正，$f’’&gt;0$</p>
-<h3 id="指数函数-e-x"><a href="#指数函数-e-x" class="headerlink" title="指数函数 $e^x$"></a>指数函数 $e^x$</h3><p>最简单的微分方程：$y=\dfrac{dy}{dx}$</p>
-<p>指数函数：通过微积分构造的函数</p>
+<p>最值的一般求法：比较所有驻点（$f’=0$）处及边界点函数值，得到最大或最小值即函数最值。</p>
+<p>$f’’$ 的符号可通过 $f’$ 的单调性求出：$x&gt;0$ 时，$f’(x)&gt;f’(0)$ ，斜率变化率为正，$f’’&gt;0$。</p>
+<h3 id="四、指数函数-e-x"><a href="#四、指数函数-e-x" class="headerlink" title="四、指数函数 $e^x$"></a>四、指数函数 $e^x$</h3><p>最简单的微分方程：$y=\dfrac{dy}{dx}$。</p>
+<p>指数函数：通过微积分构造的函数。</p>
 <ul>
 <li><p>重要性质一：指数函数的导数就是其自身</p>
 </li>
@@ -619,44 +584,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>$e$ 等于 $x=1$ 时指数级数的值：$e=1+1+\dfrac{1}{2}+\dfrac{1}{6}+\ldots \dfrac{1}{n!}+\ldots\approx 2.71828\ldots$</p>
 </li>
 </ul>
-<p>指数函数的图像</p>
+<p>指数函数的图像：</p>
 <ul>
 <li><p>由重要性质二可得：$e^{-x}=\dfrac{1}{e^{x}}$</p>
-</li>
-<li><p><img src="https://blog.zhuangzhihao.top/img/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B902.png" style="zoom:50%;"></p>
+<p>  <img src="https://blog.zhuangzhihao.top/img/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B902.png" style="zoom:50%;"></p>
 </li>
 </ul>
-<p>应用：计算存款复利</p>
+<p>应用：计算存款复利，假设利率为 100%，1 美元存一年得到 2 美元或更多，将一年分为 n 份付利息，得到 $\left( 1+\dfrac{1}{n}\right) ^{n}$，$n\rightarrow \infty$ 时最终趋近于 $e$。</p>
 <ul>
-<li><p>假设利率为 100%，1 美元存一年得到 2 美元或更多</p>
-</li>
-<li><p>将一年分为 n 份付利息，得到 $\left( 1+\dfrac{1}{n}\right) ^{n}$，$n\rightarrow \infty$ 时最终趋近于 $e$</p>
-</li>
-<li><p>解常微分方程：$\dfrac{dy}{dx}=cy$ $\rightarrow$ $y\left( x\right) =e^{cx}$</p>
-</li>
+<li>解常微分方程：$\dfrac{dy}{dx}=cy$ $\rightarrow$ $y\left( x\right) =e^{cx}$</li>
 </ul>
-<h3 id="积分总览"><a href="#积分总览" class="headerlink" title="积分总览"></a>积分总览</h3><p>函数二 $\dfrac{dy}{dx}=nx^{n-1}$ 是函数一 $y=x^{n}$ 的导数</p>
-<p>函数一 $y=\dfrac{x^{n+1}}{n+1}$ 是函数二 $\dfrac{dy}{dx}=x^{n}$ 的积分</p>
-<p>求原函数：$y\left( x\right) =\int s\left( x\right) dx$</p>
-<p>求积分方法A：反过来看什么函数的导数能得到要积分的函数</p>
-<p>例：通过代数方法求函数一</p>
+<h3 id="五、积分总览"><a href="#五、积分总览" class="headerlink" title="五、积分总览"></a>五、积分总览</h3><p>函数二 $\dfrac{dy}{dx}=nx^{n-1}$ 是函数一 $y=x^{n}$ 的导数，函数一 $y=\dfrac{x^{n+1}}{n+1}$ 是函数二 $\dfrac{dy}{dx}=x^{n}$ 的积分。</p>
+<p>求原函数：$y\left( x\right) =\int s\left( x\right) dx$。</p>
+<p>求积分方法A：反过来看什么函数的导数能得到要积分的函数。</p>
+<p>例：通过代数方法求函数一：</p>
+<p><img src="https://blog.zhuangzhihao.top/img/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B903.png" style="zoom:67%;"></p>
+<p>相加求和：<script type="math/tex">\sum \Delta y=y_{终}-y_{始}</script>。</p>
+<p>例：通过微积分方法求函数一：同时乘除 $\Delta x$：<script type="math/tex">\sum \left( \dfrac{\Delta y}{\Delta x}\right) \Delta x=y_{终}-y_{始}</script>。</p>
 <ul>
-<li><p><img src="https://blog.zhuangzhihao.top/img/%E5%BE%AE%E7%A7%AF%E5%88%86%E9%87%8D%E7%82%B903.png" style="zoom:67%;"></p>
-</li>
-<li><p>相加求和：$\sum \Delta y=y<em>{终}-y</em>{始}$</p>
-</li>
+<li>在 $\Delta x\rightarrow 0$ 的极限情况下，求和转化为积分：$\int \dfrac{dy}{dx}dx$。</li>
 </ul>
-<p>例：通过微积分方法求函数一</p>
-<ul>
-<li><p>同时乘除 $\Delta x$：$\sum \left( \dfrac{\Delta y}{\Delta x}\right) \Delta x=y<em>{终}-y</em>{始}$</p>
-</li>
-<li><p>在 $\Delta x\rightarrow 0$ 的极限情况下，求和转化为积分：$\int \dfrac{dy}{dx}dx$</p>
-</li>
-</ul>
-<p>求积分方法B：$积分=函数一=函数二图像下的面积$</p>
-<ul>
-<li>斜率为 $s=2-2x$，对应的高度 $y=2x-x^2$</li>
-</ul>
+<p>求积分方法B：$积分=函数一=函数二图像下的面积$：斜率为 $s=2-2x$，对应的高度 $y=2x-x^2$。</p>
 
   
   
@@ -827,7 +775,7 @@ Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AE%E7%A7%AF%E5%88%86%E6%80%BB%E8%A7%88"><span class="toc-text">微积分总览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E6%95%B0%E6%80%BB%E8%A7%88"><span class="toc-text">导数总览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%81%E5%80%BC%E5%8F%8A%E4%BA%8C%E9%98%B6%E5%AF%BC%E6%95%B0"><span class="toc-text">极值及二阶导数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0-e-x"><span class="toc-text">指数函数 $e^x$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%AF%E5%88%86%E6%80%BB%E8%A7%88"><span class="toc-text">积分总览</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%BE%AE%E7%A7%AF%E5%88%86%E6%80%BB%E8%A7%88"><span class="toc-text">一、微积分总览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AF%BC%E6%95%B0%E6%80%BB%E8%A7%88"><span class="toc-text">二、导数总览</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%9E%81%E5%80%BC%E5%8F%8A%E4%BA%8C%E9%98%B6%E5%AF%BC%E6%95%B0"><span class="toc-text">三、极值及二阶导数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0-e-x"><span class="toc-text">四、指数函数 $e^x$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%A7%AF%E5%88%86%E6%80%BB%E8%A7%88"><span class="toc-text">五、积分总览</span></a></li></ol>
     </div>
   </section>
 
@@ -872,15 +820,14 @@ Open Source Computer Vision Library（OpenCV）是一个跨平台的计算机视
     
       
         
-          <div><p>Copyright © 2021 Zhihao Zhuang. All rights reserved</p>
+          <div><p>Copyright © 2020 - 2022 Zhihao Zhuang. All rights reserved</p>
 </div>
         
       
     
       
         
-          <div><p><span id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人 | <span id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</p>
-</div>
+          <div><div id="lc-uv"> 本站访客数：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人，</div> <div id="lc-sv"> 总访问量：<span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次 </div></div>
         
       
     
@@ -1416,8 +1363,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-
-  <script defer src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js" data-pjax></script>
 
 
 
